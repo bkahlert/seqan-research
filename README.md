@@ -8,7 +8,7 @@ Research Project
 
 This project is part of the [BioStore project](http://www.seqan-biostore.de/wp/) sponsored by the [Federal Ministry of Education and Research, Germany](http://www.bmbf.de).
 
-<table style="border-collapse: collapse; border: none; margin: 15px auto;>
+<table style="border-collapse: collapse; border: none; margin: 15px auto;">
     <tr>
         <td style="padding: 15px;"><a href="http://www.seqan.de"><img src="http://www.seqan-biostore.de/wp/wp-content/uploads/2012/01/seqan_logo_115x76.png"></a></td>
         <td style="padding: 15px;"><a href="http://www.fu-berlin.de"><img src="http://www.seqan-biostore.de/wp/wp-content/uploads/2012/02/fu_logo.gif"></a></td>
@@ -20,5 +20,5 @@ This project is part of the [BioStore project](http://www.seqan-biostore.de/wp/)
 License
 -------
 
-[The MIT License (MIT)](LICENCE)  
+[The MIT License (MIT)](../../LICENCE)  
 Copyright (c) 2011-2014 [Björn Kahlert, Freie Universität Berlin](http://www.mi.fu-berlin.de/w/Main/BjoernKahlert)
