@@ -1,2 +1,2 @@
-seqan-research
-==============
+seqan-usability
+===============

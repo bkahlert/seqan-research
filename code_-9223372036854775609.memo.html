@@ -1,0 +1,49 @@
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial">&Uuml;blicherweise wird in SeqAn auf Felder von Datentypen mit globalen Funktionen zugegriffen.</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial">Allerdings gibt es auch Ausnahmen (laut Manuel sogar regelm&auml;&szlig;ig, wenn es sich um ein struct handelt), wo direkt auf die Felder des Datentypen zugegriffen werden kann/muss.</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px">&nbsp;</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial">Beispiel: http://www.bounceapp.com/100499</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial">Klasse http://docs.seqan.de/seqan/dev2/files/CLASS_Vcf_Stream.html</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial">Diese Klasse bietet ein relevantes Feld namens &quot;header&quot; (welches nicht dokumentiert ist, aber in einem Tutorial auftaucht - 2013-06-13)</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial">Problem, dass OOP mit nicht-OOP gemischt werden und diese Mischung noch nicht einmal einer Regel entspricht.</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px">&nbsp;</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial">Au&szlig;erdem ist das ein Kapselungs-Versto&szlig;, da man mit Implementierungsdetails konfrontiert wird. N&auml;mlich muss man nun wissen, wann man mit Funktionen und wann man mit Membern zugreift.</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px">&nbsp;</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>Mail an Kathrin Trappe (die &auml;hnlicher Meinung ist, wie ich) und Manuel am 2013-06-27:</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>Ich habe diesbzgl. (noch) keine Ph&auml;nomene in meiner Analyse gefunden.</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>Daher hier nur meine Meinung:</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px">&nbsp;</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>- Wir vermischen hier OOP- mit nicht-OOP-Syntax.</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px">&nbsp;</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>- Die Frage ist f&uuml;r mich nicht eindeutig gekl&auml;rt, wann ich erwarten darf, auf einen Member zuzugreifen und wann mit einer Funktion.</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>Daran gekn&uuml;pft ist noch eine &auml;hnliche Beobachtung meinerseits. Die Konstruktion beispielsweise eines Align-Objekts ist mehrschrittig und so k&ouml;nnen inkonsistente Zust&auml;nde auftreten (z.B. Platz f&uuml;r 3 Rows, aber nur 2 best&uuml;ckt).</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>Dabei ergibt sich die Anzahl der rows aus der Anzahl der gesetzten, &uuml;bermittelten.</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>Ich sehe hier eine Verletzung des Prinzips der Kapselung, da wir Implementierungsdetails sichtbar machen, um die sich der &quot;Anwender&quot; von SeqAn nicht scheren sollte.</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>Damit m&ouml;chte ich dem &quot;structs&quot;-Argument vorgreifen. Es sollte den Anwender nicht interessieren, ob er es mit einer einfachen oder komplexen Datenstruktur zu tun hat.</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px">&nbsp;</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>Aus meiner aktuellen Sicht m&uuml;ssten entweder alle &quot;Felder&quot; eines Datentyps &uuml;ber Member bereitgestellt werden (vcfstream.header, align.rows[2]) oder alle &quot;Felder&quot; nur &uuml;ber eine globale Funktion zug&auml;nglich sein.&nbsp;</i></p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px">&nbsp;</p>
+
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial"><i>- .header ist in der Online-Dokumentatin nicht dokumentiert.</i></p>

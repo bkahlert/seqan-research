@@ -1,0 +1,19 @@
+<p>Von einem Funktionsnamen kann man nicht auf die tats&auml;chliche Funktion schlie&szlig;en.<br />
+Mehrere Implementierungen k&ouml;nnen existieren.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>M&ouml;gliche Ursache:</strong></p>
+
+<ul>
+	<li>Globale Interface (Meta)Functions wie <a href="http://docs.seqan.de/seqan/dev3/index.html?q=length">http://docs.seqan.de/seqan/dev3/index.html?q=length</a>&nbsp;oder&nbsp;<a href="http://docs.seqan.de/seqan/dev3/?p=globalAlignment">http://docs.seqan.de/seqan/dev3/?p=globalAlignment</a>&nbsp;geh&ouml;ren inhaltlich zwar einem Typen an, sind aber global implementiert. Wenn ich nun mit so einer Funktion arbeite, muss ich mich vergewissen (probieren oder nachlesen), wie das Verhalten bei meinen Eingaben ist.<br />
+	W&auml;re die Funktion eine echte Memberfunktion, w&uuml;rde man viel schneller auf das Verhalten schlie&szlig;en k&ouml;nnen.&nbsp;</li>
+</ul>
+
+<p><span style="line-height: 14px;">Die generischen Funktionen in SeqAn ver&auml;ndern ihr Verhalten in Abh&auml;ngigkeit ihrer Parameter.<br />
+H&auml;ufig wird durch den Template Mechanismus&nbsp;nur eine effizientere Implementierung gew&auml;hlt. Manchmal aber wird ein anderes Verhalten zu Tage gef&uuml;hrt. Auch kann sich dabei der R&uuml;ckgabewert &auml;ndern (was in C++ nicht un&uuml;blich ist):</span></p>
+
+<ul>
+	<li><span style="line-height: 14px;"><a href="http://docs.seqan.de/seqan/dev3/class_Fragment.html#Fragment%23label">http://docs.seqan.de/seqan/dev3/class_Fragment.html#Fragment%23label</a>&nbsp;gibt ein Infix zur&uuml;ck</span></li>
+	<li><span style="line-height: 14px;"><a href="http://docs.seqan.de/seqan/dev3/specialization_EdgeIterator.html#Interface_Function_Overview">http://docs.seqan.de/seqan/dev3/specialization_EdgeIterator.html#Interface_Function_Overview</a>&nbsp;gibt ein TAlphbet zur&uuml;ck</span></li>
+</ul>
