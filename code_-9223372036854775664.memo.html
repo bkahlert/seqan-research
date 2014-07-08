@@ -1,0 +1,60 @@
+<h1>Problem</h1>
+
+<p>Fehlender typedef wird von Anwender nicht gefunden.</p>
+
+<p><strong>Relevant f&uuml;r End-User Programmer</strong></p>
+
+<h1>Hergang</h1>
+
+<p>Der Compiler gibt einen Fehler aus, aus dem hervorgeht, dass eine nicht-deklarierte Variable (a) oder ein nicht deklarierter Datentyp (b) verwendet wird:</p>
+
+<p>(a)&nbsp;</p>
+
+<pre class="brush:cpp;">
+tutorial_first_examples.cpp:27:43: error: use of undeclared identifier &#39;row1&#39;
+    for(unsigned i = 0; i &lt; length(source(row1)); ++i){</pre>
+
+<p>(b)</p>
+
+<pre class="brush:bash;">
+tutorial_first_examples.cpp:24:2: error: use of undeclared identifier &#39;TRow&#39;; did you mean &#39;Row&#39;?
+        TRow &amp;row1 = row(align,0);
+        ^~~~
+        Row</pre>
+
+<p>Eine Typ-Definition wie folgt wird ben&ouml;tigt.</p>
+
+<pre class="brush:cpp;">
+typedef Row&lt;TAlign&gt;::Type TRow;</pre>
+
+<p>Sie wird im Tutorial in einem gr&ouml;&szlig;eren typedef-Block realisiert, z.B.:</p>
+
+<pre class="brush:cpp;">
+typedef String&lt;Dna&gt; TSequence;  // sequence type
+typedef Align&lt;TSequence,ArrayGaps&gt;  TAlign;     // align type
+typedef Row&lt;TAlign&gt;::Type TRow;</pre>
+
+<p>Allerdings erscheinen im selben Tutorial - aber&nbsp;in anderen Aufgaben - immer nur typedef-Bl&ouml;cke der Art: (vgl.&nbsp;<a class="special" href="trac.mi.fu-berlin.de/seqan/wiki/Tutorial/Alignments ⇅2695">trac.mi.fu-berlin.de/seqan/wiki/Tutorial/Alignments ⇅2695</a>)</p>
+
+<pre class="brush:cpp;" style="line-height: 1.3em; font-family: monospace, monospace; font-size: 1em; margin-bottom: 15px; background-color: rgb(247, 247, 247); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(215, 215, 215); border-right-color: rgb(215, 215, 215); border-bottom-color: rgb(215, 215, 215); border-left-color: rgb(215, 215, 215); overflow-x: auto; overflow-y: auto; padding-top: 0.25em; padding-right: 0.5em; padding-bottom: 0.25em; padding-left: 0.5em; white-space: pre-wrap; word-wrap: break-word; ">
+typedef String&lt;char&gt; TSequence;  // sequence type
+typedef Align&lt;TSequence,ArrayGaps&gt;  TAlign;     // align type</pre>
+
+<p>Au&szlig;erdem sind immer wieder Stellen wie folgend zu sehen: (vgl.&nbsp;<a class="special" href="trac.mi.fu-berlin.de/seqan/wiki/Tutorial/Alignments ⇅922">trac.mi.fu-berlin.de/seqan/wiki/Tutorial/Alignments ⇅922</a>)</p>
+
+<pre class="brush:cpp;">
+TRow &amp;row1 = row(align,0);
+TRow &amp;row2 = row(align,1);</pre>
+
+<p>Schlie&szlig;lich finder der Anwender den Bereich, wo das fehlende typedef zu sehen ist, z.B.&nbsp;<a class="special" href="trac.mi.fu-berlin.de/seqan/wiki/Tutorial/Alignments ⇅615">trac.mi.fu-berlin.de/seqan/wiki/Tutorial/Alignments ⇅615</a>&nbsp;</p>
+
+<h1>Erkl&auml;rung</h1>
+
+<p>Der Anwender versucht den fehlenden Datentyp zu deklarieren.<br />
+Weil &nbsp;er auf einem Online-Tutorial ist, geht er davon aus, dass er ihn im Tutorial finden w&uuml;rde.<br />
+Er scrollt also durch das Dokument und trifft st&auml;ndig auf &auml;hnliche Codesnippets, denen aber die eine gesuchte Typdefiniton fehlt.</p>
+
+<h1>Frage</h1>
+
+<p>Sollten Definitionen immer am Anfang stehen?<br />
+Sind generische Namen oder spezifische besser? (z.B. row or alignmentRow oder noch konkreter?)</p>

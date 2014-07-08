@@ -1,0 +1,16 @@
+<p>Inkrementierung von R&uuml;ckgaben von Funktionsaufrufen</p>
+
+<p>In C++ m&ouml;glich, wenn Funktion eine Referenz zur&uuml;ckgibt.</p>
+
+<p>Beispiel:&nbsp;</p>
+
+<p>Zeile 18,&nbsp;<a href="http://docs.seqan.de/seqan/dev2/files/DEMO_Iterator+_Basics.html">http://docs.seqan.de/seqan/dev2/files/DEMO_Iterator+_Basics.html</a></p>
+
+<pre class="brush:cpp;">
+seqan::Iterator&lt;seqan::String&lt;char&gt;, seqan::Rooted &gt;::Type it2 = begin(str);
+for (goBegin(it2); !atEnd(it2); goNext(it2)) 
+{
+	++value(it2);
+}</pre>
+
+<p>&nbsp;</p>
