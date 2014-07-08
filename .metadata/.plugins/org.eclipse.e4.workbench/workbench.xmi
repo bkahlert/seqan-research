@@ -22,16 +22,16 @@
           <tags>persp.perspSC:de.fu_berlin.imp.apiua.BrowsingPerspective</tags>
           <tags>persp.perspSC:de.fu_berlin.imp.apiua.MemoPerspective</tags>
           <tags>persp.perspSC:de.fu_berlin.imp.apiua.TimelinePerspective</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_hqHP0QaWEeS1vP2HgJdFzQ" selectedElement="_hqHP0gaWEeS1vP2HgJdFzQ" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_hqHP0QaWEeS1vP2HgJdFzQ" selectedElement="_hqHP1QaWEeS1vP2HgJdFzQ" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_hqHP0gaWEeS1vP2HgJdFzQ" elementId="folder_2" containerData="6400" selectedElement="_hqHP0waWEeS1vP2HgJdFzQ">
               <tags>newtablook</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_hqHP0waWEeS1vP2HgJdFzQ" elementId="de.fu_berlin.imp.apiua.timeline.ui.views.TimelineView" ref="_hp_UAAaWEeS1vP2HgJdFzQ"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_hqHP1AaWEeS1vP2HgJdFzQ" elementId="de.fu_berlin.imp.apiua.diff.views.DiffView" ref="_hqCXUAaWEeS1vP2HgJdFzQ"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_hqHP1QaWEeS1vP2HgJdFzQ" containerData="3600">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_hqHP1gaWEeS1vP2HgJdFzQ" containerData="7000" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_hqHP1QaWEeS1vP2HgJdFzQ" containerData="3600" selectedElement="_hqHP1gaWEeS1vP2HgJdFzQ">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_hqHP1gaWEeS1vP2HgJdFzQ" containerData="7000" selectedElement="_hqHP2AaWEeS1vP2HgJdFzQ" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_hqHP1waWEeS1vP2HgJdFzQ" elementId="org.eclipse.ui.editorss" toBeRendered="false" containerData="500" ref="_hp6bgAaWEeS1vP2HgJdFzQ"/>
-                <children xsi:type="basic:PartSashContainer" xmi:id="_hqHP2AaWEeS1vP2HgJdFzQ" containerData="9500">
+                <children xsi:type="basic:PartSashContainer" xmi:id="_hqHP2AaWEeS1vP2HgJdFzQ" containerData="9500" selectedElement="_hqHP3gaWEeS1vP2HgJdFzQ">
                   <children xsi:type="basic:PartSashContainer" xmi:id="_hqHP2QaWEeS1vP2HgJdFzQ" containerData="5000" horizontal="true">
                     <children xsi:type="basic:PartStack" xmi:id="_hqHP2gaWEeS1vP2HgJdFzQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesViewMStack" containerData="4600" selectedElement="_hqHP2waWEeS1vP2HgJdFzQ">
                       <tags>newtablook</tags>
@@ -87,7 +87,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_hrHVYAaWEeS1vP2HgJdFzQ" elementId="de.fu_berlin.imp.apiua.timeline.ui.views.TimelineView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -142,6 +141,7 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_iB4PkAaWEeS1vP2HgJdFzQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -174,14 +174,14 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_iF07cAaWEeS1vP2HgJdFzQ" elementId="org.eclipse.ui.edit.text.actionSet.annotationNavigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_kHRZUAaXEeSMTZJQ8JjXGQ" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_kHRZUQaXEeSMTZJQ8JjXGQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_kHRZUgaXEeSMTZJQ8JjXGQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_tvI2AAaYEeSNtpHAeqGwdg" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_tvI2AQaYEeSNtpHAeqGwdg" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_tvJdEAaYEeSNtpHAeqGwdg" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_iF7CEAaWEeS1vP2HgJdFzQ" elementId="org.eclipse.ui.edit.text.actionSet.navigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_kHRZUwaXEeSMTZJQ8JjXGQ" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_kHRZVAaXEeSMTZJQ8JjXGQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_tvJdEQaYEeSNtpHAeqGwdg" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_tvJdEgaYEeSNtpHAeqGwdg" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
       </children>
     </trimBars>
     <trimBars xmi:id="_hpBqsAaWEeS1vP2HgJdFzQ" elementId="org.eclipse.ui.trim.status" side="Bottom">
@@ -563,7 +563,7 @@
       <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
       <tags>platform:cocoa</tags>
     </bindings>
-    <bindings xmi:id="_j5Uc4QaXEeSMTZJQ8JjXGQ" keySequence="COMMAND+CTRL+F" command="_habOAwaWEeS1vP2HgJdFzQ"/>
+    <bindings xmi:id="_thSAMQaYEeSNtpHAeqGwdg" keySequence="COMMAND+CTRL+F" command="_habOAwaWEeS1vP2HgJdFzQ"/>
   </bindingTables>
   <bindingTables xmi:id="_haQ19QaWEeS1vP2HgJdFzQ" elementId="com.bkahlert.ui.browser" bindingContext="_hZvRgQaWEeS1vP2HgJdFzQ">
     <bindings xmi:id="_haQ19gaWEeS1vP2HgJdFzQ" keySequence="COMMAND+V" command="_hZrAJwaWEeS1vP2HgJdFzQ">
@@ -571,7 +571,7 @@
     </bindings>
   </bindingTables>
   <bindingTables xmi:id="_hab1FAaWEeS1vP2HgJdFzQ" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_hZFKNwaWEeS1vP2HgJdFzQ">
-    <bindings xmi:id="_j5VD8AaXEeSMTZJQ8JjXGQ" keySequence="M1+W" command="_hab1EgaWEeS1vP2HgJdFzQ"/>
+    <bindings xmi:id="_thSnQAaYEeSNtpHAeqGwdg" keySequence="M1+W" command="_hab1EgaWEeS1vP2HgJdFzQ"/>
   </bindingTables>
   <bindingTables xmi:id="_heM6wAaWEeS1vP2HgJdFzQ" bindingContext="_heMTsAaWEeS1vP2HgJdFzQ"/>
   <bindingTables xmi:id="_heNh0QaWEeS1vP2HgJdFzQ" bindingContext="_heNh0AaWEeS1vP2HgJdFzQ"/>
