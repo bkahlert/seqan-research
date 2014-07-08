@@ -1683,14 +1683,14 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_DYbyZQacEeS7QfyXZ7S3gA" elementId="org.eclipse.ui.edit.text.actionSet.annotationNavigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_3y3gkAafEeSV-JsfaDGuLA" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_3y3gkQafEeSV-JsfaDGuLA" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_3y3gkgafEeSV-JsfaDGuLA" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_7Z7JAAauEeS5xLrvBC4-hQ" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_7Z7wEAauEeS5xLrvBC4-hQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_7Z7wEQauEeS5xLrvBC4-hQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_DYbyaQacEeS7QfyXZ7S3gA" elementId="org.eclipse.ui.edit.text.actionSet.navigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_3y3gkwafEeSV-JsfaDGuLA" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_3y3glAafEeSV-JsfaDGuLA" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_7Z7wEgauEeS5xLrvBC4-hQ" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_7Z7wEwauEeS5xLrvBC4-hQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_DYbybAacEeS7QfyXZ7S3gA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1920,10 +1920,10 @@
     </bindings>
     <bindings xmi:id="_DYdniAacEeS7QfyXZ7S3gA" keySequence="F5" command="_DYomtwacEeS7QfyXZ7S3gA"/>
     <bindings xmi:id="_DYdniQacEeS7QfyXZ7S3gA" keySequence="F8" command="_DYpNxQacEeS7QfyXZ7S3gA"/>
-    <bindings xmi:id="_3kBzUQafEeSV-JsfaDGuLA" keySequence="COMMAND+CTRL+F" command="_DYompgacEeS7QfyXZ7S3gA"/>
+    <bindings xmi:id="_7BVC0AauEeS5xLrvBC4-hQ" keySequence="COMMAND+CTRL+F" command="_DYompgacEeS7QfyXZ7S3gA"/>
   </bindingTables>
   <bindingTables xmi:id="_DYdniwacEeS7QfyXZ7S3gA" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_DYe1qAacEeS7QfyXZ7S3gA">
-    <bindings xmi:id="_3kCaYAafEeSV-JsfaDGuLA" keySequence="M1+W" command="_DYomqAacEeS7QfyXZ7S3gA"/>
+    <bindings xmi:id="_7BmIkAauEeS5xLrvBC4-hQ" keySequence="M1+W" command="_DYomqAacEeS7QfyXZ7S3gA"/>
   </bindingTables>
   <bindingTables xmi:id="_DYdnjQacEeS7QfyXZ7S3gA" bindingContext="_DYe1rAacEeS7QfyXZ7S3gA"/>
   <bindingTables xmi:id="_DYdnjgacEeS7QfyXZ7S3gA" bindingContext="_DYe1rQacEeS7QfyXZ7S3gA"/>
