@@ -1,7 +1,7 @@
 SeqAn Research
 ==============
 
-This repository contains all research data generated during the usability research of the [SeqAn](http://www.seqan.de) API.
+This repository contains all research data generated during the usability research of the [SeqAn](http://www.seqan.de) API using the [API Usability Analyzer](https://github.com/bkahlert/api-usability-analyzer).
 
 Research Project
 ----------------
