@@ -10787,3 +10787,59 @@ org.eclipse.swt.SWTException: Invalid thread access
 	at de.fu_berlin.imp.apiua.survey.views.CDView$6.runNamed(CDView.java:231)
 	at com.bkahlert.nebula.utils.NamedJob.run(NamedJob.java:35)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2014-08-16 16:31:53.426 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/sua-workspace/../seqan-research -dev file:/Users/bkahlert/development/sua-workspace/.metadata/.plugins/org.eclipse.pde.core/API Usability Analyzer - SeqAn/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.ui.workbench 4 2 2014-08-16 16:32:15.622
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:96)
+	at de.fu_berlin.imp.apiua.core.model.data.impl.FileDataContainer.<init>(FileDataContainer.java:44)
+	at de.fu_berlin.imp.apiua.core.model.data.impl.FileBaseDataContainer.<init>(FileBaseDataContainer.java:27)
+	at de.fu_berlin.imp.apiua.core.model.data.impl.FileBaseDataContainer.<init>(FileBaseDataContainer.java:34)
+	at de.fu_berlin.imp.apiua.core.services.impl.DataService.loadActiveFromPreferences(DataService.java:63)
+	at de.fu_berlin.imp.apiua.core.services.impl.DataService.restoreLastDataDirectories(DataService.java:326)
+	at de.fu_berlin.imp.apiua.core.Startup.earlyStartup(Startup.java:18)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:87)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2555)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 4 2014-08-16 16:32:15.625
+!MESSAGE Unhandled Exception
+
+!ENTRY de.fu_berlin.imp.apiua.core 4 0 2014-08-16 16:32:15.626
+!MESSAGE Unable to execute early startup code for an extension
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:96)
+	at de.fu_berlin.imp.apiua.core.model.data.impl.FileDataContainer.<init>(FileDataContainer.java:44)
+	at de.fu_berlin.imp.apiua.core.model.data.impl.FileBaseDataContainer.<init>(FileBaseDataContainer.java:27)
+	at de.fu_berlin.imp.apiua.core.model.data.impl.FileBaseDataContainer.<init>(FileBaseDataContainer.java:34)
+	at de.fu_berlin.imp.apiua.core.services.impl.DataService.loadActiveFromPreferences(DataService.java:63)
+	at de.fu_berlin.imp.apiua.core.services.impl.DataService.restoreLastDataDirectories(DataService.java:326)
+	at de.fu_berlin.imp.apiua.core.Startup.earlyStartup(Startup.java:18)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:87)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2555)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2014-08-16 16:33:03.060 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/sua-workspace/../seqan-research -dev file:/Users/bkahlert/development/sua-workspace/.metadata/.plugins/org.eclipse.pde.core/API Usability Analyzer - SeqAn/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.core.jobs 2 2 2014-08-16 16:35:52.341
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$55

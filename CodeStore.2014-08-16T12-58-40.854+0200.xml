@@ -377,11 +377,6 @@
     <long>-9223372036854775434</long>
     <long>-9223372036854775433</long>
     <long>-9223372036854775432</long>
-    <long>-9223372036854775431</long>
-    <long>-9223372036854775430</long>
-    <long>-9223372036854775429</long>
-    <long>-9223372036854775428</long>
-    <long>-9223372036854775427</long>
   </createdIDs>
   <createdCodeInstanceIDs>
     <long>-9223372036854775656</long>
@@ -743,7 +738,6 @@
     <long>-9223372036854775455</long>
     <long>-9223372036854775454</long>
     <long>-9223372036854775453</long>
-    <long>-9223372036854775448</long>
   </createdCodeInstanceIDs>
   <codeTrees>
     <com.bkahlert.nebula.data.TreeNode>
@@ -5005,7 +4999,7 @@
           <data class="codes">
             <uri>apiua://code/-9223372036854775432</uri>
             <id>-9223372036854775432</id>
-            <caption>Test</caption>
+            <caption>Test2</caption>
             <color>
               <red>0.7843137254901961</red>
               <green>0.611764705882353</green>
@@ -5034,46 +5028,6 @@
         <creation>
           <calendar>
             <time>1407714225679</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </creation>
-      </data>
-    </com.bkahlert.nebula.data.TreeNode>
-    <com.bkahlert.nebula.data.TreeNode>
-      <children/>
-      <data class="codes">
-        <uri>apiua://code/-9223372036854775428</uri>
-        <id>-9223372036854775428</id>
-        <caption>A</caption>
-        <color>
-          <red>0.2235294117647059</red>
-          <green>0.792156862745098</green>
-          <blue>0.30980392156862746</blue>
-          <alpha>1.0</alpha>
-        </color>
-        <creation>
-          <calendar>
-            <time>1408411102457</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </creation>
-      </data>
-    </com.bkahlert.nebula.data.TreeNode>
-    <com.bkahlert.nebula.data.TreeNode>
-      <children/>
-      <data class="codes">
-        <uri>apiua://code/-9223372036854775427</uri>
-        <id>-9223372036854775427</id>
-        <caption>B</caption>
-        <color>
-          <red>0.7215686274509804</red>
-          <green>0.22745098039215686</green>
-          <blue>0.2823529411764706</blue>
-          <alpha>1.0</alpha>
-        </color>
-        <creation>
-          <calendar>
-            <time>1408411104536</time>
             <timezone>Europe/Berlin</timezone>
           </calendar>
         </creation>
@@ -7146,18 +7100,6 @@
       </creation>
     </instance>
     <instance>
-      <uri>apiua://codeinstance/-9223372036854775448</uri>
-      <codeInstanceId>-9223372036854775448</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:35:54.335+02:00/durability</id>
-      <creation>
-        <calendar>
-          <time>1408411213862</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
       <uri>apiua://codeinstance/-9223372036854775449</uri>
       <codeInstanceId>-9223372036854775449</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
@@ -8505,7 +8447,7 @@
       <uri>apiua://codeinstance/-9223372036854775459</uri>
       <codeInstanceId>-9223372036854775459</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
-      <id reference="../../instance[285]/id"/>
+      <id reference="../../instance[284]/id"/>
       <creation>
         <calendar>
           <time>1403303954493</time>
@@ -8576,12 +8518,12 @@
   </instances>
   <memos>
     <entry>
-      <uri>apiua://diff/0meio6dzt3eo1wj7/20/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
-      <string>Def. von TAminoAcidString vergessen zu kopieren (auf Doku ein Code-Snippet weiter oben und damit nicht im Blick, siehe Screenshot)</string>
-    </entry>
-    <entry>
       <instance reference="../../../instances/instance"/>
       <string>Entfernung von FrequencyDistribution&lt;str&gt; fd;</string>
+    </entry>
+    <entry>
+      <uri>apiua://diff/0meio6dzt3eo1wj7/20/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
+      <string>Def. von TAminoAcidString vergessen zu kopieren (auf Doku ein Code-Snippet weiter oben und damit nicht im Blick, siehe Screenshot)</string>
     </entry>
     <entry>
       <uri>apiua://episode/0meio6dzt3eo1wj7/2011-09-10T13:26:18.000+02:00/2011-09-13T11:13:17.000+02:00</uri>
@@ -8604,19 +8546,19 @@
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-24T17%3A44%3A23.899%2B02%3A00%09FOCUS%09http%3A%2F%2Ftrac.seqan.de%2F%0987.77.94.197%09-%090%090%091007%09667</uri>
-      <string></string>
-    </entry>
-    <entry>
       <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[5]/data"/>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/0meio6dzt3eo1wj7/13</uri>
+      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-24T17%3A44%3A23.899%2B02%3A00%09FOCUS%09http%3A%2F%2Ftrac.seqan.de%2F%0987.77.94.197%09-%090%090%091007%09667</uri>
       <string></string>
     </entry>
     <entry>
       <uri>apiua://diff/0meio6dzt3eo1wj7/5/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
+      <string></string>
+    </entry>
+    <entry>
+      <uri>apiua://diff/0meio6dzt3eo1wj7/13</uri>
       <string></string>
     </entry>
     <entry>
@@ -8694,11 +8636,11 @@ da Anwender versucht hat, Fehler zu beheben.</string>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://entity/fec6t5zk4j2ik4e7</uri>
+      <uri>apiua://doclog/bkahlert/2012-04-09T14%3A50%3A35.403%2B02%3A00%09TYPING-search-test%09http%3A%2F%2Fdocs.seqan.de%2Fseqan%2Fdev%2FINDEX_Concept.html%0989.247.80.27%09-%090%090%09180%091191</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/bkahlert/2012-04-09T14%3A50%3A35.403%2B02%3A00%09TYPING-search-test%09http%3A%2F%2Fdocs.seqan.de%2Fseqan%2Fdev%2FINDEX_Concept.html%0989.247.80.27%09-%090%090%09180%091191</uri>
+      <uri>apiua://entity/fec6t5zk4j2ik4e7</uri>
       <string></string>
     </entry>
     <entry>
@@ -8742,11 +8684,11 @@ da Anwender versucht hat, Fehler zu beheben.</string>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/0xigg7z3soutj46b/5</uri>
+      <uri>apiua://doclog/0meio6dzt3eo1wj7/2011-09-13T11-55-12%09scroll%09http%3A%2F%2Fwww.seqan.de%2Fdddoc%2Fhtml_devel%2FSHORTCUT_Peptide_Iterator.html%09141.14.249.178%09-%090%09103%091263%09607</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/0meio6dzt3eo1wj7/2011-09-13T11-55-12%09scroll%09http%3A%2F%2Fwww.seqan.de%2Fdddoc%2Fhtml_devel%2FSHORTCUT_Peptide_Iterator.html%09141.14.249.178%09-%090%09103%091263%09607</uri>
+      <uri>apiua://diff/0xigg7z3soutj46b/5</uri>
       <string></string>
     </entry>
     <entry>
@@ -8762,11 +8704,11 @@ da Anwender versucht hat, Fehler zu beheben.</string>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/0meio6dzt3eo1wj7/2011-09-13T11-59-15%09ready%09http%3A%2F%2Fwww.seqan.de%2Fdddoc%2Fhtml_devel%2FINDEXPAGE_Function.html%09141.14.249.178%09-%090%090%091263%09607</uri>
+      <uri>apiua://doclog/2rrhphi35g3d87kn/2012-04-09T03%3A55%3A14.000%2B02%3A00%09FOCUS%09https%3A%2F%2Fdalak.imp.fu-berlin.de%2FSUAsrv%2Fstatic%2Fregister.html%3Fid%3D2rrhphi35g3d87kn%0989.247.80.27%09-%090%090%091505%09732</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/2rrhphi35g3d87kn/2012-04-09T03%3A55%3A14.000%2B02%3A00%09FOCUS%09https%3A%2F%2Fdalak.imp.fu-berlin.de%2FSUAsrv%2Fstatic%2Fregister.html%3Fid%3D2rrhphi35g3d87kn%0989.247.80.27%09-%090%090%091505%09732</uri>
+      <uri>apiua://doclog/0meio6dzt3eo1wj7/2011-09-13T11-59-15%09ready%09http%3A%2F%2Fwww.seqan.de%2Fdddoc%2Fhtml_devel%2FINDEXPAGE_Function.html%09141.14.249.178%09-%090%090%091263%09607</uri>
       <string></string>
     </entry>
     <entry>
@@ -8974,15 +8916,11 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/0meio6dzt3eo1wj7/27/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
-      <string></string>
-    </entry>
-    <entry>
       <uri>apiua://doclog/bkahlert/2012-04-08T02%3A50%3A03.722%2B02%3A00%09TYPING-test4-Hello+B%09http%3A%2F%2Fclient.sua.bkahlert.com%2Findex.html%0989.247.67.130%09-%090%090%091436%09841</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-11T13%3A14%3A13.244%2B02%3A00%09SCROLL%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%2FGettingStarted%0987.77.94.197%09-%090%097046%091007%09667</uri>
+      <uri>apiua://diff/0meio6dzt3eo1wj7/27/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
       <string></string>
     </entry>
     <entry>
@@ -8990,11 +8928,15 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/bkahlert/2012-04-08T02%3A49%3A35.791%2B02%3A00%09FOCUS%09http%3A%2F%2Fclient.sua.bkahlert.com%2Findex.html%0989.247.67.130%09-%090%090%091436%09841</uri>
+      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-11T13%3A14%3A13.244%2B02%3A00%09SCROLL%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%2FGettingStarted%0987.77.94.197%09-%090%097046%091007%09667</uri>
       <string></string>
     </entry>
     <entry>
       <uri>apiua://diff/0meio6dzt3eo1wj7/12</uri>
+      <string></string>
+    </entry>
+    <entry>
+      <uri>apiua://doclog/bkahlert/2012-04-08T02%3A49%3A35.791%2B02%3A00%09FOCUS%09http%3A%2F%2Fclient.sua.bkahlert.com%2Findex.html%0989.247.67.130%09-%090%090%091436%09841</uri>
       <string></string>
     </entry>
     <entry>
@@ -9014,7 +8956,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/gxymtwhk6d1fehg3/24/sandbox%2Fwissmann%2Fdemos%2Ftask1.cpp</uri>
+      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-12T10%3A16%3A48.447%2B02%3A00%09FOCUS%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%2FAlignments%0987.77.94.197%09-%090%09240%091007%09667</uri>
       <string></string>
     </entry>
     <entry>
@@ -9022,7 +8964,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-12T10%3A16%3A48.447%2B02%3A00%09FOCUS%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%2FAlignments%0987.77.94.197%09-%090%09240%091007%09667</uri>
+      <uri>apiua://diff/gxymtwhk6d1fehg3/24/sandbox%2Fwissmann%2Fdemos%2Ftask1.cpp</uri>
       <string></string>
     </entry>
     <entry>
@@ -9034,12 +8976,12 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://episode/amudto8y1mzxaebv/2011-09-13T10:00:29.000+02:00/2011-09-13T11:56:53.000+02:00</uri>
-      <string>ddsds</string>
-    </entry>
-    <entry>
       <uri>apiua://diff/0meio6dzt3eo1wj7/10/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
       <string></string>
+    </entry>
+    <entry>
+      <uri>apiua://episode/amudto8y1mzxaebv/2011-09-13T10:00:29.000+02:00/2011-09-13T11:56:53.000+02:00</uri>
+      <string>ddsds</string>
     </entry>
     <entry>
       <uri>apiua://doclog/0meio6dzt3eo1wj7/2011-09-13T11-51-27%09scroll%09http%3A%2F%2Ftrac.mi.fu-berlin.de%2Fseqan%2Fwiki%2FTutorial%2FBasics%09141.14.249.178%09-%090%091117%091031%09496</uri>
@@ -9050,19 +8992,19 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/0meio6dzt3eo1wj7/9/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
-      <string></string>
-    </entry>
-    <entry>
       <uri>apiua://diff/0meio6dzt3eo1wj7/7/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/0xigg7z3soutj46b/2/sandbox%2Fkrakau%2Fapps%2Fmy_app%2FINFO</uri>
+      <uri>apiua://diff/0meio6dzt3eo1wj7/9/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
       <string></string>
     </entry>
     <entry>
       <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-27T17%3A24%3A51.727%2B02%3A00%09BLUR%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%2FGettingStarted%0987.77.94.197%09-%090%090%091007%09667</uri>
+      <string></string>
+    </entry>
+    <entry>
+      <uri>apiua://diff/0xigg7z3soutj46b/2/sandbox%2Fkrakau%2Fapps%2Fmy_app%2FINFO</uri>
       <string></string>
     </entry>
     <entry>
@@ -9074,15 +9016,15 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <string></string>
     </entry>
     <entry>
+      <uri>apiua://doclog/bkahlert/2012-04-09T14%3A50%3A35.540%2B02%3A00%09BLUR%09http%3A%2F%2Fdocs.seqan.de%2Fseqan%2Fdev%2FINDEX_Concept.html%0989.247.80.27%09-%090%090%09180%091191</uri>
+      <string></string>
+    </entry>
+    <entry>
       <instance reference="../../../instances/instance[105]"/>
       <string>instance of AminoAcid &quot;passed&quot; to String
 no template programming
 
 Analog zu showAllLetterOfMyAlphabet(AminoAcid()) Klammern ?bernommen</string>
-    </entry>
-    <entry>
-      <uri>apiua://doclog/bkahlert/2012-04-09T14%3A50%3A35.540%2B02%3A00%09BLUR%09http%3A%2F%2Fdocs.seqan.de%2Fseqan%2Fdev%2FINDEX_Concept.html%0989.247.80.27%09-%090%090%09180%091191</uri>
-      <string></string>
     </entry>
     <entry>
       <uri>apiua://diff/0meio6dzt3eo1wj7/22</uri>
@@ -9117,7 +9059,7 @@ Analog zu showAllLetterOfMyAlphabet(AminoAcid()) Klammern ?bernommen</string>
       <string></string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
+      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-27T16%3A55%3A32.105%2B02%3A00%09READY%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%0987.77.94.197%09-%090%090%091007%09667</uri>
       <string></string>
     </entry>
     <entry>
@@ -9125,11 +9067,7 @@ Analog zu showAllLetterOfMyAlphabet(AminoAcid()) Klammern ?bernommen</string>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-27T16%3A55%3A32.105%2B02%3A00%09READY%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%0987.77.94.197%09-%090%090%091007%09667</uri>
-      <string></string>
-    </entry>
-    <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
       <string></string>
     </entry>
     <entry>
@@ -9137,15 +9075,19 @@ Analog zu showAllLetterOfMyAlphabet(AminoAcid()) Klammern ?bernommen</string>
       <string></string>
     </entry>
     <entry>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
+      <string></string>
+    </entry>
+    <entry>
       <uri>apiua://diff/bkahlert/4/sandbox%2Fbkahlert%2Fapps%2Ftutorial_patternmatching%2FINFO</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://doclog/0meio6dzt3eo1wj7/2011-09-13T12-01-18%09scroll%09http%3A%2F%2Ftrac.mi.fu-berlin.de%2Fseqan%2Fwiki%2FTutorial%2FBasics%09141.14.249.178%09-%090%09907%091031%09472</uri>
+      <uri>apiua://entity/gxymtwhk6d1fehg3</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://entity/gxymtwhk6d1fehg3</uri>
+      <uri>apiua://doclog/0meio6dzt3eo1wj7/2011-09-13T12-01-18%09scroll%09http%3A%2F%2Ftrac.mi.fu-berlin.de%2Fseqan%2Fwiki%2FTutorial%2FBasics%09141.14.249.178%09-%090%09907%091031%09472</uri>
       <string></string>
     </entry>
     <entry>
@@ -9165,11 +9107,11 @@ Analog zu showAllLetterOfMyAlphabet(AminoAcid()) Klammern ?bernommen</string>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/1bmlqcp2t8t0hfjr/19/sandbox%2Farsenew%2Fdemos%2Ftask1.cpp</uri>
+      <uri>apiua://diff/0meio6dzt3eo1wj7/14</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/0meio6dzt3eo1wj7/14</uri>
+      <uri>apiua://diff/1bmlqcp2t8t0hfjr/19/sandbox%2Farsenew%2Fdemos%2Ftask1.cpp</uri>
       <string></string>
     </entry>
     <entry>
@@ -9202,15 +9144,11 @@ Analog zu showAllLetterOfMyAlphabet(AminoAcid()) Klammern ?bernommen</string>
       <string></string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[4]/data"/>
-      <string></string>
-    </entry>
-    <entry>
       <instance reference="../../../instances/instance[148]"/>
       <string></string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode/data"/>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[4]/data"/>
       <string></string>
     </entry>
     <entry>
@@ -9218,6 +9156,10 @@ Analog zu showAllLetterOfMyAlphabet(AminoAcid()) Klammern ?bernommen</string>
       <string>Will http://docs.seqan.de/seqan/dev/FUNCTION.abs_Freq_Of_Letters_In_Seq.html korrekt verwenden.
 In Doku steht Verwendung von PeptideIterator, daher Ersetzung.
 Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
+    </entry>
+    <entry>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode/data"/>
+      <string></string>
     </entry>
     <entry>
       <codes>
@@ -9233,15 +9175,11 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://entity/2rrhphi35g3d87kn</uri>
-      <string></string>
-    </entry>
-    <entry>
       <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-12T10%3A19%3A46.413%2B02%3A00%09SCROLL%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%0987.77.94.197%09-%090%09600%091007%09667</uri>
       <string></string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
+      <uri>apiua://entity/2rrhphi35g3d87kn</uri>
       <string></string>
     </entry>
     <entry>
@@ -9249,7 +9187,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string></string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data"/>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
       <string></string>
     </entry>
     <entry>
@@ -9257,7 +9195,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string></string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data"/>
       <string></string>
     </entry>
     <entry>
@@ -9265,15 +9203,19 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string></string>
     </entry>
     <entry>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
+      <string></string>
+    </entry>
+    <entry>
       <instance reference="../../../instances/instance[155]"/>
       <string></string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode/data"/>
+      <uri>apiua://diff/0xigg7z3soutj46b/2/sandbox%2Fkrakau%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/0xigg7z3soutj46b/2/sandbox%2Fkrakau%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode/data"/>
       <string></string>
     </entry>
     <entry>
@@ -9285,11 +9227,11 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://episode/0meio6dzt3eo1wj7/2011-09-13T11:55:47.000+02:00/2011-09-13T12:03:58.000+02:00</uri>
+      <uri>apiua://diff/0meio6dzt3eo1wj7/19/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://diff/0meio6dzt3eo1wj7/19/sandbox%2Fmy_sandbox%2Fapps%2Fmy_app%2Fmy_app.cpp</uri>
+      <uri>apiua://episode/0meio6dzt3eo1wj7/2011-09-13T11:55:47.000+02:00/2011-09-13T12:03:58.000+02:00</uri>
       <string></string>
     </entry>
     <entry>
@@ -9301,11 +9243,11 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string></string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[4]/data"/>
+      <uri>apiua://episode/0meio6dzt3eo1wj7/2011-09-13T11:14:57.000+02:00/2011-09-13T11:52:46.000+02:00</uri>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://episode/0meio6dzt3eo1wj7/2011-09-13T11:14:57.000+02:00/2011-09-13T11:52:46.000+02:00</uri>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[4]/data"/>
       <string></string>
     </entry>
     <entry>
@@ -9313,11 +9255,15 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string></string>
     </entry>
     <entry>
+      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-11T13%3A13%3A44.999%2B02%3A00%09READY%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%0987.77.94.197%09-%090%090%091007%09667</uri>
+      <string></string>
+    </entry>
+    <entry>
       <instance reference="../../../instances/instance[163]"/>
       <string>typedef of TAminoAcidString missing</string>
     </entry>
     <entry>
-      <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-11T13%3A13%3A44.999%2B02%3A00%09READY%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%0987.77.94.197%09-%090%090%091007%09667</uri>
+      <uri>apiua://episode/0meio6dzt3eo1wj7/2011-09-13T11:13:40.000+02:00/2011-09-13T11:15:01.000+02:00</uri>
       <string></string>
     </entry>
     <entry>
@@ -9325,15 +9271,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string></string>
     </entry>
     <entry>
-      <uri>apiua://episode/0meio6dzt3eo1wj7/2011-09-13T11:13:40.000+02:00/2011-09-13T11:15:01.000+02:00</uri>
-      <string></string>
-    </entry>
-    <entry>
       <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data"/>
-      <string></string>
-    </entry>
-    <entry>
-      <instance reference="../../../instances/instance[167]"/>
       <string></string>
     </entry>
     <entry>
@@ -9341,11 +9279,15 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string></string>
     </entry>
     <entry>
+      <instance reference="../../../instances/instance[167]"/>
+      <string></string>
+    </entry>
+    <entry>
       <instance reference="../../../instances/instance[168]"/>
       <string></string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[5]/data"/>
+      <uri>apiua://diff/0meio6dzt3eo1wj7/4</uri>
       <string></string>
     </entry>
     <entry>
@@ -9353,15 +9295,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string>Ersetzung von seqan::Iterator&lt;seqan::String&lt;AminoAcid&gt; &gt;::Type zu PeptideIterator</string>
     </entry>
     <entry>
-      <uri>apiua://diff/0meio6dzt3eo1wj7/4</uri>
-      <string></string>
-    </entry>
-    <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
-      <string></string>
-    </entry>
-    <entry>
-      <uri>apiua://diff/bkahlert/10</uri>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[5]/data"/>
       <string></string>
     </entry>
     <entry>
@@ -9369,11 +9303,19 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <string>Manuel Holtgrewe</string>
     </entry>
     <entry>
-      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data"/>
+      <uri>apiua://diff/bkahlert/10</uri>
+      <string></string>
+    </entry>
+    <entry>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
       <string></string>
     </entry>
     <entry>
       <uri>apiua://doclog/1bmlqcp2t8t0hfjr/2012-04-11T13%3A12%3A16.819%2B02%3A00%09READY%09http%3A%2F%2Ftrac.seqan.de%2Fwiki%2FTutorial%2FGettingStarted%0987.77.94.197%09-%090%090%091007%09667</uri>
+      <string></string>
+    </entry>
+    <entry>
+      <codes reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data"/>
       <string></string>
     </entry>
     <entry>
@@ -9383,28 +9325,28 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
   </memos>
   <episodes>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:01:20.000+01:00</uri>
+      <uri>apiua://episode/0meio6dzt3eo1wj7/2012-08-21T01:29:24.000+02:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
+        <id>0meio6dzt3eo1wj7</id>
       </identifier>
       <range>
         <startDate>
           <calendar>
-            <time>1315907019000</time>
-            <timezone>GMT-05:00</timezone>
+            <time>1315908517000</time>
+            <timezone>Europe/Berlin</timezone>
           </calendar>
         </startDate>
         <endDate>
           <calendar>
-            <time>1315908159000</time>
-            <timezone>GMT-05:00</timezone>
+            <time>1315916810000</time>
+            <timezone>Europe/Berlin</timezone>
           </calendar>
         </endDate>
       </range>
-      <caption></caption>
+      <caption>II Iterators</caption>
       <creation>
         <calendar>
-          <time>1358856080000</time>
+          <time>1345505364000</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -9437,262 +9379,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:56:38.764+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315915186000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315916319203</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Sequences A6 - Using Iterators</caption>
-      <creation>
-        <calendar>
-          <time>1363020998764</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-25T16:04:43.093+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315917477656</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315918034678</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Suche nach neuem Tutorial</caption>
-      <creation>
-        <calendar>
-          <time>1364223883093</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-04-02T01:03:32.032+02:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315898793295</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315905603397</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1364857412032</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:33:45.391+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315918037000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315919740000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Alignments A1 - Global Alignment</caption>
-      <creation>
-        <calendar>
-          <time>1363048425391</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:38:21.310+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[6]/range/endDate"/>
-        <endDate>
-          <calendar>
-            <time>1315921687000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Alignments A2 - Semi-Global Alignment</caption>
-      <creation>
-        <calendar>
-          <time>1363048701310</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T16:46:16.295+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315902747000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315908476000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Sequences A1 - Character Counting</caption>
-      <creation>
-        <calendar>
-          <time>1363016776295</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:59:17.000+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode/range/endDate"/>
-        <endDate>
-          <calendar>
-            <time>1315908302000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1358859557000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/0meio6dzt3eo1wj7/2012-08-21T01:29:24.000+02:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>0meio6dzt3eo1wj7</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315908517000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315916810000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>II Iterators</caption>
-      <creation>
-        <calendar>
-          <time>1345505364000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/7uqc7v3iz0sdm7d7/2013-04-04T21:42:28.957+02:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>7uqc7v3iz0sdm7d7</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315995442000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315996677000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Ursprüngliche Dateien fehlen; nur Aus- u. Einkommentieren von wenigen Zeilen</caption>
-      <creation>
-        <calendar>
-          <time>1365104548957</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:10:49.263+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315909293000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[3]/range/startDate"/>
-      </range>
-      <caption>Sequences A2 - All Strings of a given length</caption>
-      <creation>
-        <calendar>
-          <time>1363018249263</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:52:11.000+01:00</uri>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:01:20.000+01:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
         <id>20xjp6c6gjzthtye</id>
       </identifier>
@@ -9703,48 +9390,9 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
             <timezone>GMT-05:00</timezone>
           </calendar>
         </startDate>
-        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode/range/endDate"/>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1358859131000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:06:26.805+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[8]/range/endDate"/>
         <endDate>
           <calendar>
-            <time>1315909293000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Sequences A1 - Generic Character Counting</caption>
-      <creation>
-        <calendar>
-          <time>1363017986805</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T14:04:44.000+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[9]/range/endDate"/>
-        <endDate>
-          <calendar>
-            <time>1315909852000</time>
+            <time>1315908159000</time>
             <timezone>GMT-05:00</timezone>
           </calendar>
         </endDate>
@@ -9752,7 +9400,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <caption></caption>
       <creation>
         <calendar>
-          <time>1358859884000</time>
+          <time>1358856080000</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -9785,6 +9433,77 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T14:04:44.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315908302000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315909852000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358859884000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:59:17.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[3]/range/endDate"/>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[5]/range/startDate"/>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358859557000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-25T16:04:43.093+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315917477656</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315918034678</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Suche nach neuem Tutorial</caption>
+      <creation>
+        <calendar>
+          <time>1364223883093</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
       <uri>apiua://episode/0meio6dzt3eo1wj7/2012-08-06T16:18:25.000+02:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
         <id>0meio6dzt3eo1wj7</id>
@@ -9807,6 +9526,229 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <creation>
         <calendar>
           <time>1344262705000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:38:21.310+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315919740000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315921687000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Alignments A2 - Semi-Global Alignment</caption>
+      <creation>
+        <calendar>
+          <time>1363048701310</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/7uqc7v3iz0sdm7d7/2013-04-04T21:42:28.957+02:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>7uqc7v3iz0sdm7d7</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315995442000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315996677000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Ursprüngliche Dateien fehlen; nur Aus- u. Einkommentieren von wenigen Zeilen</caption>
+      <creation>
+        <calendar>
+          <time>1365104548957</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:06:26.805+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315908476000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315909293000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Sequences A1 - Generic Character Counting</caption>
+      <creation>
+        <calendar>
+          <time>1363017986805</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:33:45.391+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315918037000</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </startDate>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[9]/range/startDate"/>
+      </range>
+      <caption>Alignments A1 - Global Alignment</caption>
+      <creation>
+        <calendar>
+          <time>1363048425391</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:52:11.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315907019000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[3]/range/endDate"/>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358859131000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:56:38.764+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315915186000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315916319203</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Sequences A6 - Using Iterators</caption>
+      <creation>
+        <calendar>
+          <time>1363020998764</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T16:46:16.295+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315902747000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[11]/range/startDate"/>
+      </range>
+      <caption>Sequences A1 - Character Counting</caption>
+      <creation>
+        <calendar>
+          <time>1363016776295</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:10:49.263+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315909293000</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </startDate>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[14]/range/startDate"/>
+      </range>
+      <caption>Sequences A2 - All Strings of a given length</caption>
+      <creation>
+        <calendar>
+          <time>1363018249263</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-04-02T01:03:32.032+02:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315898793295</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315905603397</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1364857412032</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -9845,39 +9787,21 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
     </entry>
     <entry>
-      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[12]/data/uri"/>
-      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
-        <possibleValues>
-          <string>3</string>
-          <string>4</string>
-        </possibleValues>
-      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
-    </entry>
-    <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/data/uri"/>
       <null/>
-    </entry>
-    <entry>
-      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[11]/data/uri"/>
-      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
-        <possibleValues>
-          <string>1</string>
-          <string>2</string>
-        </possibleValues>
-      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
     </entry>
   </dimensions>
   <dimensionValues>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI">apiua://survey/cd/2013-09-18T17:35:54.335+02:00/usageDurationUnit</first>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Theoretisch</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI">apiua://survey/cd/2013-09-18T17:35:54.335+02:00/usageDurationUnit</first>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Theoretisch</string>
@@ -9888,13 +9812,6 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <null/>
-    </entry>
-    <entry>
-      <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI">apiua://survey/cd/2013-09-18T17:35:54.335+02:00/durability</first>
-        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[11]/data/uri"/>
-      </com.bkahlert.nebula.utils.Pair>
-      <string>1</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
@@ -9912,24 +9829,10 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../entry[4]/com.bkahlert.nebula.utils.Pair/first"/>
-        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[12]/data/uri"/>
-      </com.bkahlert.nebula.utils.Pair>
-      <string>4</string>
-    </entry>
-    <entry>
-      <com.bkahlert.nebula.utils.Pair>
         <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <null/>
-    </entry>
-    <entry>
-      <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI">apiua://survey/cd/2013-09-18T17:35:54.335+02:00/durability</first>
-        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
-      </com.bkahlert.nebula.utils.Pair>
-      <string>b</string>
     </entry>
   </dimensionValues>
   <properties>
@@ -9940,39 +9843,18 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       <list>
+        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[19]/data/uri"/>
+        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[18]/data/uri"/>
         <de.fu__berlin.imp.apiua.core.model.URI reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[4]/data/uri"/>
-        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[11]/data/uri"/>
       </list>
-    </entry>
-    <entry>
-      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
-      <list/>
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       <list/>
     </entry>
     <entry>
-      <de.fu__berlin.imp.apiua.core.model.URI>apiua://code/-9223372036854775430</de.fu__berlin.imp.apiua.core.model.URI>
-      <list>
-        <de.fu__berlin.imp.apiua.core.model.URI>apiua://code/-9223372036854775429</de.fu__berlin.imp.apiua.core.model.URI>
-      </list>
-    </entry>
-    <entry>
-      <de.fu__berlin.imp.apiua.core.model.URI>apiua://code/-9223372036854775431</de.fu__berlin.imp.apiua.core.model.URI>
-      <list>
-        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../entry[5]/de.fu__berlin.imp.apiua.core.model.URI"/>
-      </list>
-    </entry>
-    <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/data/uri"/>
       <list/>
-    </entry>
-    <entry>
-      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[11]/data/uri"/>
-      <list>
-        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[12]/data/uri"/>
-      </list>
     </entry>
   </properties>
 </codeStore>
