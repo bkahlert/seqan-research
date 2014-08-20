@@ -9733,6 +9733,16 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <null/>
     </entry>
     <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI>apiua://code/-9223372036854775432</de.fu__berlin.imp.apiua.core.model.URI>
+      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+        <possibleValues>
+          <string>a</string>
+          <string>b</string>
+          <string>c</string>
+        </possibleValues>
+      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+    </entry>
+    <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       <null/>
     </entry>
@@ -9790,10 +9800,28 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       </com.bkahlert.nebula.utils.Pair>
       <string>abc</string>
     </entry>
+    <entry>
+      <com.bkahlert.nebula.utils.Pair>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
+        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../dimensions/entry[2]/de.fu__berlin.imp.apiua.core.model.URI"/>
+      </com.bkahlert.nebula.utils.Pair>
+      <null/>
+    </entry>
+    <entry>
+      <com.bkahlert.nebula.utils.Pair>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI">apiua://survey/cd/2013-09-18T17:35:54.335+02:00/durability</first>
+        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../dimensions/entry[2]/de.fu__berlin.imp.apiua.core.model.URI"/>
+      </com.bkahlert.nebula.utils.Pair>
+      <string>b</string>
+    </entry>
   </dimensionValues>
   <properties>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
+      <list/>
+    </entry>
+    <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../dimensions/entry[2]/de.fu__berlin.imp.apiua.core.model.URI"/>
       <list/>
     </entry>
     <entry>
@@ -9813,7 +9841,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI>apiua://code/-9223372036854775431</de.fu__berlin.imp.apiua.core.model.URI>
       <list>
-        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../entry[3]/de.fu__berlin.imp.apiua.core.model.URI"/>
+        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../entry[4]/de.fu__berlin.imp.apiua.core.model.URI"/>
       </list>
     </entry>
     <entry>
