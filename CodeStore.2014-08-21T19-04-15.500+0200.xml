@@ -9734,6 +9734,15 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
   </episodes>
   <dimensions>
     <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI>apiua://code/-9223372036854775426</de.fu__berlin.imp.apiua.core.model.URI>
+      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+        <possibleValues>
+          <string>dsds</string>
+          <string>cxc</string>
+        </possibleValues>
+      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+    </entry>
+    <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
       <null/>
     </entry>
@@ -9799,8 +9808,19 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       </com.bkahlert.nebula.utils.Pair>
       <string>abc</string>
     </entry>
+    <entry>
+      <com.bkahlert.nebula.utils.Pair>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI">apiua://survey/cd/2013-09-18T17:35:54.335+02:00/typicalProducts</first>
+        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../dimensions/entry/de.fu__berlin.imp.apiua.core.model.URI"/>
+      </com.bkahlert.nebula.utils.Pair>
+      <string>dsds</string>
+    </entry>
   </dimensionValues>
   <properties>
+    <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../dimensions/entry/de.fu__berlin.imp.apiua.core.model.URI"/>
+      <list/>
+    </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
       <list/>
@@ -9822,7 +9842,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI>apiua://code/-9223372036854775431</de.fu__berlin.imp.apiua.core.model.URI>
       <list>
-        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../entry[3]/de.fu__berlin.imp.apiua.core.model.URI"/>
+        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../entry[4]/de.fu__berlin.imp.apiua.core.model.URI"/>
       </list>
     </entry>
     <entry>

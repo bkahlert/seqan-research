@@ -5023,6 +5023,86 @@
         </creation>
       </data>
     </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children/>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854775426</uri>
+        <id>-9223372036854775426</id>
+        <caption>A</caption>
+        <color>
+          <red>0.7843137254901961</red>
+          <green>0.611764705882353</green>
+          <blue>0.2196078431372549</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1408583375331</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children/>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854775425</uri>
+        <id>-9223372036854775425</id>
+        <caption>B</caption>
+        <color>
+          <red>0.2235294117647059</red>
+          <green>0.792156862745098</green>
+          <blue>0.30980392156862746</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1408639073697</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children/>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854775424</uri>
+        <id>-9223372036854775424</id>
+        <caption>C</caption>
+        <color>
+          <red>0.7215686274509804</red>
+          <green>0.22745098039215686</green>
+          <blue>0.2823529411764706</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1408639147441</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children/>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854775423</uri>
+        <id>-9223372036854775423</id>
+        <caption>B2</caption>
+        <color>
+          <red>0.7843137254901961</red>
+          <green>0.6901960784313725</green>
+          <blue>0.21568627450980393</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1408639171400</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
   </codeTrees>
   <instances>
     <instance>
@@ -7090,6 +7170,17 @@
       </creation>
     </instance>
     <instance>
+      <codeInstanceId>-9223372036854775447</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[11]/data"/>
+      <id>apiua://survey/cd/2013-09-18T17:35:54.335+02:00/typicalProducts</id>
+      <creation>
+        <calendar>
+          <time>1408639247559</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
       <uri>apiua://codeinstance/-9223372036854775450</uri>
       <codeInstanceId>-9223372036854775450</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode/data"/>
@@ -8425,7 +8516,7 @@
       <uri>apiua://codeinstance/-9223372036854775459</uri>
       <codeInstanceId>-9223372036854775459</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
-      <id reference="../../instance[283]/id"/>
+      <id reference="../../instance[284]/id"/>
       <creation>
         <calendar>
           <time>1403303954493</time>
@@ -9734,6 +9825,24 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
   </episodes>
   <dimensions>
     <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[11]/data/uri"/>
+      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+        <possibleValues>
+          <string>dsds</string>
+          <string>cxc</string>
+        </possibleValues>
+      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+    </entry>
+    <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[14]/data/uri"/>
+      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+        <possibleValues>
+          <string>b a</string>
+          <string>b b</string>
+        </possibleValues>
+      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+    </entry>
+    <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
       <null/>
     </entry>
@@ -9746,11 +9855,29 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
       <null/>
     </entry>
     <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[12]/data/uri"/>
+      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+        <possibleValues>
+          <string>a</string>
+          <string>b</string>
+        </possibleValues>
+      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+    </entry>
+    <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
         <possibleValues>
           <string>Theoretisch</string>
           <string>Empirisch</string>
+        </possibleValues>
+      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+    </entry>
+    <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[13]/data/uri"/>
+      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+        <possibleValues>
+          <string>c</string>
+          <string>d</string>
         </possibleValues>
       </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
     </entry>
@@ -9802,12 +9929,25 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
   </dimensionValues>
   <properties>
     <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[11]/data/uri"/>
+      <list>
+        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[12]/data/uri"/>
+        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[14]/data/uri"/>
+      </list>
+    </entry>
+    <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
       <list/>
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       <list/>
+    </entry>
+    <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[12]/data/uri"/>
+      <list>
+        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[13]/data/uri"/>
+      </list>
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI>apiua://code/-9223372036854775430</de.fu__berlin.imp.apiua.core.model.URI>
@@ -9822,7 +9962,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI>apiua://code/-9223372036854775431</de.fu__berlin.imp.apiua.core.model.URI>
       <list>
-        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../entry[3]/de.fu__berlin.imp.apiua.core.model.URI"/>
+        <de.fu__berlin.imp.apiua.core.model.URI reference="../../../entry[5]/de.fu__berlin.imp.apiua.core.model.URI"/>
       </list>
     </entry>
     <entry>

@@ -383,9 +383,6 @@
     <long>-9223372036854775428</long>
     <long>-9223372036854775427</long>
     <long>-9223372036854775426</long>
-    <long>-9223372036854775425</long>
-    <long>-9223372036854775424</long>
-    <long>-9223372036854775423</long>
   </createdIDs>
   <createdCodeInstanceIDs>
     <long>-9223372036854775656</long>
@@ -748,7 +745,6 @@
     <long>-9223372036854775454</long>
     <long>-9223372036854775453</long>
     <long>-9223372036854775448</long>
-    <long>-9223372036854775447</long>
   </createdCodeInstanceIDs>
   <codeTrees>
     <com.bkahlert.nebula.data.TreeNode>
@@ -5018,6 +5014,26 @@
         <creation>
           <calendar>
             <time>1407714225679</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children/>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854775426</uri>
+        <id>-9223372036854775426</id>
+        <caption>A</caption>
+        <color>
+          <red>0.7843137254901961</red>
+          <green>0.611764705882353</green>
+          <blue>0.2196078431372549</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1408583375331</time>
             <timezone>Europe/Berlin</timezone>
           </calendar>
         </creation>
@@ -9733,6 +9749,10 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
   </episodes>
   <dimensions>
+    <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[11]/data/uri"/>
+      <null/>
+    </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
       <null/>
