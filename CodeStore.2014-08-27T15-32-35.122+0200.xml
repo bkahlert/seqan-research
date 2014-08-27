@@ -387,8 +387,6 @@
     <long>-9223372036854775424</long>
     <long>-9223372036854775423</long>
     <long>-9223372036854775422</long>
-    <long>-9223372036854775421</long>
-    <long>-9223372036854775420</long>
   </createdIDs>
   <createdCodeInstanceIDs>
     <long>-9223372036854775656</long>
@@ -752,7 +750,6 @@
     <long>-9223372036854775453</long>
     <long>-9223372036854775448</long>
     <long>-9223372036854775447</long>
-    <long>-9223372036854775446</long>
   </createdCodeInstanceIDs>
   <codeTrees>
     <com.bkahlert.nebula.data.TreeNode>
@@ -5022,6 +5019,26 @@
         <creation>
           <calendar>
             <time>1407714225679</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children/>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854775422</uri>
+        <id>-9223372036854775422</id>
+        <caption>Top Level</caption>
+        <color>
+          <red>0.7843137254901961</red>
+          <green>0.611764705882353</green>
+          <blue>0.2196078431372549</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1409146338608</time>
             <timezone>Europe/Berlin</timezone>
           </calendar>
         </creation>
@@ -9756,6 +9773,12 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
           <string>Theoretisch</string>
           <string>Empirisch</string>
         </possibleValues>
+      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+    </entry>
+    <entry>
+      <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[11]/data/uri"/>
+      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+        <possibleValues/>
       </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
     </entry>
     <entry>

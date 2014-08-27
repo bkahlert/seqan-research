@@ -116,15 +116,15 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_tuxIrSlIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.survey.views.CDView" ref="_tuy97SlIEeSJuOAnrJLV2A"/>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_tuxIrilIEeSJuOAnrJLV2A" containerData="6600" selectedElement="_tuxIrylIEeSJuOAnrJLV2A">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_tuxIrylIEeSJuOAnrJLV2A" containerData="5000" selectedElement="_tuxIsClIEeSJuOAnrJLV2A" horizontal="true">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_tuxIrylIEeSJuOAnrJLV2A" containerData="5000" selectedElement="_tuxIsilIEeSJuOAnrJLV2A" horizontal="true">
                 <children xsi:type="basic:PartStack" xmi:id="_tuxIsClIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeViewMStack" containerData="3899" selectedElement="_tuxIsSlIEeSJuOAnrJLV2A">
                   <tags>newtablook</tags>
-                  <tags>active</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_tuxIsSlIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeView" ref="_tuy9silIEeSJuOAnrJLV2A"/>
                 </children>
                 <children xsi:type="basic:PartSashContainer" xmi:id="_tuxIsilIEeSJuOAnrJLV2A" containerData="6101" selectedElement="_tuxIsylIEeSJuOAnrJLV2A">
                   <children xsi:type="basic:PartStack" xmi:id="_tuxIsylIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoViewMStack" containerData="5252" selectedElement="_tuxItClIEeSJuOAnrJLV2A">
                     <tags>newtablook</tags>
+                    <tags>active</tags>
                     <children xsi:type="advanced:Placeholder" xmi:id="_tuxItClIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" ref="_tuyXRSlIEeSJuOAnrJLV2A"/>
                   </children>
                   <children xsi:type="basic:PartSashContainer" xmi:id="_tuxItSlIEeSJuOAnrJLV2A" containerData="4748" selectedElement="_tuxIuClIEeSJuOAnrJLV2A" horizontal="true">
@@ -154,7 +154,7 @@
           <tags>persp.perspSC:de.fu_berlin.imp.apiua.BrowsingPerspective</tags>
           <tags>persp.perspSC:de.fu_berlin.imp.apiua.MemoPerspective</tags>
           <tags>persp.perspSC:de.fu_berlin.imp.apiua.TimelinePerspective</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_tuxIvClIEeSJuOAnrJLV2A" selectedElement="_tuxIvylIEeSJuOAnrJLV2A" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_tuxIvClIEeSJuOAnrJLV2A" selectedElement="_tuxIvSlIEeSJuOAnrJLV2A" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_tuxIvSlIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingViewMStack" containerData="3400" selectedElement="_tuxIvilIEeSJuOAnrJLV2A">
               <tags>newtablook</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_tuxIvilIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView" ref="_tuy-FSlIEeSJuOAnrJLV2A"/>
@@ -1614,7 +1614,7 @@
       </menus>
       <toolbar xmi:id="_tuyXIylIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.core.views.TimeZoneDateRangeView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_tuyXJClIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Associated Codes: Verz&#xf6;gertes Fehlschlagen (delayed fail)" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_tuyXJClIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Associated Codes: Fehlende Dokumentation der R&#xfc;ckgabetypen" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
@@ -1740,10 +1740,12 @@
       </menus>
       <toolbar xmi:id="_tuyXRClIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_tuyXRSlIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Memo: Verz&#xf6;gertes Fehlschlagen (delayed fail)" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_tuyXRSlIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Memo: Fehlende Dokumentation der R&#xfc;ckgabetypen" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_tuyXRilIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -1754,8 +1756,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_tuy9sylIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -2130,7 +2130,7 @@
       </menus>
       <toolbar xmi:id="_tuy-GSlIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_tuy-GilIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Dimension: Verz&#xf6;gertes Fehlschlagen (delayed fail)" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_tuy-GilIEeSJuOAnrJLV2A" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Dimension: Fehlende Dokumentation der R&#xfc;ckgabetypen" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
@@ -2156,14 +2156,14 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_tuy-IylIEeSJuOAnrJLV2A" elementId="org.eclipse.ui.edit.text.actionSet.annotationNavigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Ssg7cC0fEeSjHbOPPxurbw" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Ssg7cS0fEeSjHbOPPxurbw" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Ssg7ci0fEeSjHbOPPxurbw" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_lkzrgC3tEeSmSanWQVLgzQ" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_lkzrgS3tEeSmSanWQVLgzQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_lkzrgi3tEeSmSanWQVLgzQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_tuy-JylIEeSJuOAnrJLV2A" elementId="org.eclipse.ui.edit.text.actionSet.navigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Ssg7cy0fEeSjHbOPPxurbw" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Ssg7dC0fEeSjHbOPPxurbw" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_lkzrgy3tEeSmSanWQVLgzQ" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_lkzrhC3tEeSmSanWQVLgzQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_tuy-KilIEeSJuOAnrJLV2A" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2393,10 +2393,10 @@
     </bindings>
     <bindings xmi:id="_tuzk-ylIEeSJuOAnrJLV2A" keySequence="F5" command="_tu2BYClIEeSJuOAnrJLV2A"/>
     <bindings xmi:id="_tuzk_ClIEeSJuOAnrJLV2A" keySequence="F8" command="_tu2BgClIEeSJuOAnrJLV2A"/>
-    <bindings xmi:id="_SVwoUS0fEeSjHbOPPxurbw" keySequence="COMMAND+CTRL+F" command="_tu2BTylIEeSJuOAnrJLV2A"/>
+    <bindings xmi:id="_lEGyMS3tEeSmSanWQVLgzQ" keySequence="COMMAND+CTRL+F" command="_tu2BTylIEeSJuOAnrJLV2A"/>
   </bindingTables>
   <bindingTables xmi:id="_tuzk_ilIEeSJuOAnrJLV2A" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_tu0L3ylIEeSJuOAnrJLV2A">
-    <bindings xmi:id="_SVwoUi0fEeSjHbOPPxurbw" keySequence="M1+W" command="_tu2BUSlIEeSJuOAnrJLV2A"/>
+    <bindings xmi:id="_lEGyMi3tEeSmSanWQVLgzQ" keySequence="M1+W" command="_tu2BUSlIEeSJuOAnrJLV2A"/>
   </bindingTables>
   <bindingTables xmi:id="_tuzlAClIEeSJuOAnrJLV2A" bindingContext="_tu0L4ylIEeSJuOAnrJLV2A"/>
   <bindingTables xmi:id="_tuzlASlIEeSJuOAnrJLV2A" bindingContext="_tu0L5ClIEeSJuOAnrJLV2A"/>
