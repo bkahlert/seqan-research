@@ -1,0 +1,17 @@
+<p>Template-Spezialisierung:</p>
+
+<pre class="brush:cpp;">
+String&lt;TValue, TSpec&gt;</pre>
+
+<p>Spec ist nicht nur atomar</p>
+
+<pre class="brush:cpp;">
+String&lt;Dna&gt; myGenome; // A default string of nucleotides.
+String&lt;Dna, Alloc&lt;&gt; &gt; myGenome; // The same as above.</pre>
+
+<p>sondern kann selbst ein Template sein (TODO: bessere Beispiel finden!)</p>
+
+<pre class="brush:cpp;">
+String&lt;Dna, Array&lt;100&gt; &gt; genome</pre>
+
+<p>&nbsp;</p>
