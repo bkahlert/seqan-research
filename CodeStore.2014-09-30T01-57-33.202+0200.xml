@@ -407,7 +407,6 @@
     <long>-9223372036854775404</long>
     <long>-9223372036854775403</long>
     <long>-9223372036854775402</long>
-    <long>-9223372036854775401</long>
   </createdIDs>
   <createdCodeInstanceIDs>
     <long>-9223372036854775808</long>
@@ -810,12 +809,6 @@
     <long>-9223372036854775410</long>
     <long>-9223372036854775409</long>
     <long>-9223372036854775408</long>
-    <long>-9223372036854775407</long>
-    <long>-9223372036854775406</long>
-    <long>-9223372036854775405</long>
-    <long>-9223372036854775404</long>
-    <long>-9223372036854775403</long>
-    <long>-9223372036854775402</long>
   </createdCodeInstanceIDs>
   <codeTrees>
     <com.bkahlert.nebula.data.TreeNode>
@@ -3437,6 +3430,112 @@
         </com.bkahlert.nebula.data.TreeNode>
         <com.bkahlert.nebula.data.TreeNode>
           <parent reference="../../.."/>
+          <children>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854775589</uri>
+                <id>-9223372036854775589</id>
+                <caption>STL</caption>
+                <color>
+                  <red>0.2</red>
+                  <green>0.6588235294117647</green>
+                  <blue>0.7411764705882353</blue>
+                  <alpha>0.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1394841311502</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854775588</uri>
+                <id>-9223372036854775588</id>
+                <caption>Boost</caption>
+                <color>
+                  <red>0.3686274509803922</red>
+                  <green>0.9803921568627451</green>
+                  <blue>0.7215686274509804</blue>
+                  <alpha>0.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1394841315982</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854775564</uri>
+                <id>-9223372036854775564</id>
+                <caption>cityhash</caption>
+                <color>
+                  <red>0.5647058823529412</red>
+                  <green>0.23529411764705882</green>
+                  <blue>0.3137254901960784</blue>
+                  <alpha>0.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1395330268923</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854775558</uri>
+                <id>-9223372036854775558</id>
+                <caption>Biopython</caption>
+                <color>
+                  <red>0.2196078431372549</red>
+                  <green>0.7725490196078432</green>
+                  <blue>0.6235294117647059</blue>
+                  <alpha>0.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1395669548636</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+          </children>
+          <data class="codes">
+            <uri>apiua://code/-9223372036854775590</uri>
+            <id>-9223372036854775590</id>
+            <caption>Vorwissen / Erfahrung</caption>
+            <color>
+              <red>0.7764705882352941</red>
+              <green>0.2235294117647059</green>
+              <blue>0.6588235294117647</blue>
+              <alpha>0.27450980392156865</alpha>
+            </color>
+            <creation>
+              <calendar>
+                <time>1394841235977</time>
+                <timezone>Europe/Berlin</timezone>
+              </calendar>
+            </creation>
+          </data>
+        </com.bkahlert.nebula.data.TreeNode>
+        <com.bkahlert.nebula.data.TreeNode>
+          <parent reference="../../.."/>
           <children/>
           <data class="codes">
             <uri>apiua://code/-9223372036854775554</uri>
@@ -3991,112 +4090,6 @@
                 </creation>
               </data>
             </com.bkahlert.nebula.data.TreeNode>
-            <com.bkahlert.nebula.data.TreeNode>
-              <parent reference="../../.."/>
-              <children>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children/>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854775589</uri>
-                    <id>-9223372036854775589</id>
-                    <caption>STL</caption>
-                    <color>
-                      <red>0.2</red>
-                      <green>0.6588235294117647</green>
-                      <blue>0.7411764705882353</blue>
-                      <alpha>0.0</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1394841311502</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children/>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854775588</uri>
-                    <id>-9223372036854775588</id>
-                    <caption>Boost</caption>
-                    <color>
-                      <red>0.3686274509803922</red>
-                      <green>0.9803921568627451</green>
-                      <blue>0.7215686274509804</blue>
-                      <alpha>0.0</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1394841315982</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children/>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854775564</uri>
-                    <id>-9223372036854775564</id>
-                    <caption>cityhash</caption>
-                    <color>
-                      <red>0.5647058823529412</red>
-                      <green>0.23529411764705882</green>
-                      <blue>0.3137254901960784</blue>
-                      <alpha>0.0</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1395330268923</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children/>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854775558</uri>
-                    <id>-9223372036854775558</id>
-                    <caption>Biopython</caption>
-                    <color>
-                      <red>0.2196078431372549</red>
-                      <green>0.7725490196078432</green>
-                      <blue>0.6235294117647059</blue>
-                      <alpha>0.0</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1395669548636</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-              </children>
-              <data class="codes">
-                <uri>apiua://code/-9223372036854775590</uri>
-                <id>-9223372036854775590</id>
-                <caption>Vorwissen / Erfahrung</caption>
-                <color>
-                  <red>0.7764705882352941</red>
-                  <green>0.2235294117647059</green>
-                  <blue>0.6588235294117647</blue>
-                  <alpha>0.27450980392156865</alpha>
-                </color>
-                <creation>
-                  <calendar>
-                    <time>1394841235977</time>
-                    <timezone>Europe/Berlin</timezone>
-                  </calendar>
-                </creation>
-              </data>
-            </com.bkahlert.nebula.data.TreeNode>
           </children>
           <data class="codes">
             <uri>apiua://code/-9223372036854775641</uri>
@@ -4548,7 +4541,7 @@
               <data class="codes">
                 <uri>apiua://code/-9223372036854775405</uri>
                 <id>-9223372036854775405</id>
-                <caption>Verständnis Funktionsweise</caption>
+                <caption>Verständnis Funktionsweise2</caption>
                 <color>
                   <red>0.7215686274509804</red>
                   <green>0.22745098039215686</green>
@@ -4636,7 +4629,7 @@
                   <data class="codes">
                     <uri>apiua://code/-9223372036854775581</uri>
                     <id>-9223372036854775581</id>
-                    <caption>Fehlende Anwendungsbeispiele</caption>
+                    <caption>Fehlende Anwendungsbeispiele2</caption>
                     <color>
                       <red>0.6235294117647059</red>
                       <green>0.7764705882352941</green>
@@ -4857,27 +4850,6 @@
                 <creation>
                   <calendar>
                     <time>1411414020635</time>
-                    <timezone>Europe/Berlin</timezone>
-                  </calendar>
-                </creation>
-              </data>
-            </com.bkahlert.nebula.data.TreeNode>
-            <com.bkahlert.nebula.data.TreeNode>
-              <parent reference="../../.."/>
-              <children/>
-              <data class="codes">
-                <uri>apiua://code/-9223372036854775401</uri>
-                <id>-9223372036854775401</id>
-                <caption>Gebrauchserklärung / Gebrauchsrekonstruktion</caption>
-                <color>
-                  <red>0.5372549019607843</red>
-                  <green>0.22352941176470587</green>
-                  <blue>0.7764705882352941</blue>
-                  <alpha>0.27450980392156865</alpha>
-                </color>
-                <creation>
-                  <calendar>
-                    <time>1412037000411</time>
                     <timezone>Europe/Berlin</timezone>
                   </calendar>
                 </creation>
@@ -7048,7 +7020,7 @@
     <instance>
       <uri>apiua://codeinstance/-9223372036854775614</uri>
       <codeInstanceId>-9223372036854775614</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[6]/children/com.bkahlert.nebula.data.TreeNode/data"/>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data"/>
       <id>apiua://survey/cd/2013-09-18T17:35:54.335+02:00/similiarSystems</id>
       <creation>
         <calendar>
@@ -7060,7 +7032,7 @@
     <instance>
       <uri>apiua://codeinstance/-9223372036854775613</uri>
       <codeInstanceId>-9223372036854775613</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[6]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
       <id>apiua://survey/cd/2013-09-18T17:35:54.335+02:00/similiarSystems</id>
       <creation>
         <calendar>
@@ -7264,7 +7236,7 @@
     <instance>
       <uri>apiua://codeinstance/-9223372036854775576</uri>
       <codeInstanceId>-9223372036854775576</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[6]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
       <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/similiarSystems</id>
       <creation>
         <calendar>
@@ -7276,7 +7248,7 @@
     <instance>
       <uri>apiua://codeinstance/-9223372036854775575</uri>
       <codeInstanceId>-9223372036854775575</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[6]/children/com.bkahlert.nebula.data.TreeNode[3]/data"/>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[3]/data"/>
       <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/similiarSystems</id>
       <creation>
         <calendar>
@@ -7456,7 +7428,7 @@
     <instance>
       <uri>apiua://codeinstance/-9223372036854775560</uri>
       <codeInstanceId>-9223372036854775560</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[6]/children/com.bkahlert.nebula.data.TreeNode[4]/data"/>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[4]/data"/>
       <id>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/similiarSystems</id>
       <creation>
         <calendar>
@@ -8726,6 +8698,30 @@
       </creation>
     </instance>
     <instance>
+      <uri>apiua://codeinstance/-9223372036854775419</uri>
+      <codeInstanceId>-9223372036854775419</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[7]/data"/>
+      <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/workStepUnit</id>
+      <creation>
+        <calendar>
+          <time>1411354669048</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
+      <uri>apiua://codeinstance/-9223372036854775418</uri>
+      <codeInstanceId>-9223372036854775418</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[7]/data"/>
+      <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/roleExpressiveness</id>
+      <creation>
+        <calendar>
+          <time>1411355640326</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
       <uri>apiua://codeinstance/-9223372036854775417</uri>
       <codeInstanceId>-9223372036854775417</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[9]/data"/>
@@ -8789,7 +8785,7 @@
       <uri>apiua://codeinstance/-9223372036854775410</uri>
       <codeInstanceId>-9223372036854775410</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[6]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
-      <id reference="../../instance[296]/id"/>
+      <id reference="../../instance[298]/id"/>
       <creation>
         <calendar>
           <time>1411415004388</time>
@@ -8805,78 +8801,6 @@
       <creation>
         <calendar>
           <time>1411421755961</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775407</uri>
-      <codeInstanceId>-9223372036854775407</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/workStepUnit</id>
-      <creation>
-        <calendar>
-          <time>1412035784698</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775406</uri>
-      <codeInstanceId>-9223372036854775406</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/roleExpressiveness</id>
-      <creation>
-        <calendar>
-          <time>1412035927810</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775405</uri>
-      <codeInstanceId>-9223372036854775405</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode[3]/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/roleExpressiveness</id>
-      <creation>
-        <calendar>
-          <time>1412037029273</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775404</uri>
-      <codeInstanceId>-9223372036854775404</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode[3]/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/workStepUnit</id>
-      <creation>
-        <calendar>
-          <time>1412037035032</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775403</uri>
-      <codeInstanceId>-9223372036854775403</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[3]/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/prematureCommitment</id>
-      <creation>
-        <calendar>
-          <time>1412037295371</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775402</uri>
-      <codeInstanceId>-9223372036854775402</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/personal</id>
-      <creation>
-        <calendar>
-          <time>1412037448136</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -9691,153 +9615,28 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
   </memos>
   <episodes>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:38:21.310+01:00</uri>
+      <uri>apiua://episode/7uqc7v3iz0sdm7d7/2013-04-04T21:42:28.957+02:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
+        <id>7uqc7v3iz0sdm7d7</id>
       </identifier>
       <range>
         <startDate>
           <calendar>
-            <time>1315919740000</time>
+            <time>1315995442000</time>
             <timezone>GMT+02:00</timezone>
           </calendar>
         </startDate>
         <endDate>
           <calendar>
-            <time>1315921687000</time>
+            <time>1315996677000</time>
             <timezone>GMT+02:00</timezone>
           </calendar>
         </endDate>
       </range>
-      <caption>Alignments A2 - Semi-Global Alignment</caption>
+      <caption>Ursprüngliche Dateien fehlen; nur Aus- u. Einkommentieren von wenigen Zeilen</caption>
       <creation>
         <calendar>
-          <time>1363048701310</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:56:38.764+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315915186000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315916319203</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Sequences A6 - Using Iterators</caption>
-      <creation>
-        <calendar>
-          <time>1363020998764</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:10:49.263+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315909293000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[2]/range/startDate"/>
-      </range>
-      <caption>Sequences A2 - All Strings of a given length</caption>
-      <creation>
-        <calendar>
-          <time>1363018249263</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/0meio6dzt3eo1wj7/2012-08-06T16:18:25.000+02:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>0meio6dzt3eo1wj7</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315909246000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315910694000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Sequentielle statt evolutionäre Darstellung von Lösungen (Tutorials)</caption>
-      <creation>
-        <calendar>
-          <time>1344262705000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:33:45.391+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315918037000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode/range/startDate"/>
-      </range>
-      <caption>Alignments A1 - Global Alignment</caption>
-      <creation>
-        <calendar>
-          <time>1363048425391</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T12:55:39.000+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315905604720</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315907019000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1358855739000</time>
+          <time>1365104548957</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -9870,6 +9669,60 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:56:38.764+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315915186000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315916319203</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Sequences A6 - Using Iterators</caption>
+      <creation>
+        <calendar>
+          <time>1363020998764</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/0meio6dzt3eo1wj7/2012-08-06T16:18:25.000+02:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>0meio6dzt3eo1wj7</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315909246000</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315910694000</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Sequentielle statt evolutionäre Darstellung von Lösungen (Tutorials)</caption>
+      <creation>
+        <calendar>
+          <time>1344262705000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
       <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T16:46:16.295+01:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
         <id>5lpcjqhy0b9yfech</id>
@@ -9897,131 +9750,6 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:06:26.805+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[8]/range/endDate"/>
-        <endDate>
-          <calendar>
-            <time>1315909293000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Sequences A1 - Generic Character Counting</caption>
-      <creation>
-        <calendar>
-          <time>1363017986805</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:01:20.000+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315907019000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315908159000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1358856080000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:52:11.000+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315907019000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[10]/range/endDate"/>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1358859131000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/0meio6dzt3eo1wj7/2012-08-20T23:14:00.000+02:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>0meio6dzt3eo1wj7</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315653978000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315908238000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>I Alphabets</caption>
-      <creation>
-        <calendar>
-          <time>1345497240000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T14:04:44.000+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315908302000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315909852000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1358859884000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
       <uri>apiua://episode/20xjp6c6gjzthtye/2013-04-02T01:03:32.032+02:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
         <id>20xjp6c6gjzthtye</id>
@@ -10044,6 +9772,33 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <creation>
         <calendar>
           <time>1364857412032</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:52:11.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315907019000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315908159000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358859131000</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -10081,8 +9836,13 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
         <id>20xjp6c6gjzthtye</id>
       </identifier>
       <range>
-        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[10]/range/endDate"/>
-        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[13]/range/startDate"/>
+        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[7]/range/endDate"/>
+        <endDate>
+          <calendar>
+            <time>1315908302000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </endDate>
       </range>
       <caption></caption>
       <creation>
@@ -10093,28 +9853,192 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/7uqc7v3iz0sdm7d7/2013-04-04T21:42:28.957+02:00</uri>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:33:45.391+01:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>7uqc7v3iz0sdm7d7</id>
+        <id>5lpcjqhy0b9yfech</id>
       </identifier>
       <range>
         <startDate>
           <calendar>
-            <time>1315995442000</time>
-            <timezone>GMT+02:00</timezone>
+            <time>1315918037000</time>
+            <timezone>Europe/Berlin</timezone>
           </calendar>
         </startDate>
         <endDate>
           <calendar>
-            <time>1315996677000</time>
+            <time>1315919740000</time>
             <timezone>GMT+02:00</timezone>
           </calendar>
         </endDate>
       </range>
-      <caption>Ursprüngliche Dateien fehlen; nur Aus- u. Einkommentieren von wenigen Zeilen</caption>
+      <caption>Alignments A1 - Global Alignment</caption>
       <creation>
         <calendar>
-          <time>1365104548957</time>
+          <time>1363048425391</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T14:04:44.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[9]/range/endDate"/>
+        <endDate>
+          <calendar>
+            <time>1315909852000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358859884000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:10:49.263+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315909293000</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </startDate>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[3]/range/startDate"/>
+      </range>
+      <caption>Sequences A2 - All Strings of a given length</caption>
+      <creation>
+        <calendar>
+          <time>1363018249263</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/0meio6dzt3eo1wj7/2012-08-20T23:14:00.000+02:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>0meio6dzt3eo1wj7</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315653978000</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315908238000</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>I Alphabets</caption>
+      <creation>
+        <calendar>
+          <time>1345497240000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:38:21.310+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[10]/range/endDate"/>
+        <endDate>
+          <calendar>
+            <time>1315921687000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Alignments A2 - Semi-Global Alignment</caption>
+      <creation>
+        <calendar>
+          <time>1363048701310</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:01:20.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315907019000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[7]/range/endDate"/>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358856080000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T12:55:39.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315905604720</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315907019000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358855739000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:06:26.805+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[5]/range/endDate"/>
+        <endDate>
+          <calendar>
+            <time>1315909293000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Sequences A1 - Generic Character Counting</caption>
+      <creation>
+        <calendar>
+          <time>1363017986805</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -10394,7 +10318,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[293]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[295]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[9]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Unübersichtlich</string>
@@ -10436,7 +10360,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[299]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[301]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Flach</string>
@@ -10506,14 +10430,14 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI">apiua://codeinstance/-9223372036854775419</first>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[293]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[7]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Abstrahiert</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI">apiua://codeinstance/-9223372036854775418</first>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[294]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[7]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Nicht selbsterklärend</string>
