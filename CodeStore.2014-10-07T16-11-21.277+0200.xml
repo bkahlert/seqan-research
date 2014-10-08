@@ -882,7 +882,6 @@
     <long>-9223372036854775371</long>
     <long>-9223372036854775370</long>
     <long>-9223372036854775369</long>
-    <long>-9223372036854775368</long>
   </createdCodeInstanceIDs>
   <codeTrees>
     <com.bkahlert.nebula.data.TreeNode>
@@ -9343,18 +9342,6 @@
       <creation>
         <calendar>
           <time>1412690921398</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775368</uri>
-      <codeInstanceId>-9223372036854775368</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:44:46.060+02:00/exploringPercentageTime</id>
-      <creation>
-        <calendar>
-          <time>1412691081277</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
