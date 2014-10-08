@@ -770,7 +770,6 @@
     <long>-9223372036854775371</long>
     <long>-9223372036854775370</long>
     <long>-9223372036854775369</long>
-    <long>-9223372036854775360</long>
     <long>-9223372036854775550</long>
     <long>-9223372036854775549</long>
     <long>-9223372036854775552</long>
@@ -8119,18 +8118,6 @@
       </creation>
     </instance>
     <instance>
-      <uri>apiua://codeinstance/-9223372036854775360</uri>
-      <codeInstanceId>-9223372036854775360</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/learningStyle</id>
-      <creation>
-        <calendar>
-          <time>1412770182152</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
       <uri>apiua://codeinstance/-9223372036854775363</uri>
       <codeInstanceId>-9223372036854775363</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data"/>
@@ -9310,7 +9297,7 @@
       <uri>apiua://codeinstance/-9223372036854775459</uri>
       <codeInstanceId>-9223372036854775459</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode/data"/>
-      <id reference="../../instance[321]/id"/>
+      <id reference="../../instance[320]/id"/>
       <creation>
         <calendar>
           <time>1403303954493</time>
@@ -10772,7 +10759,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[277]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[276]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Mittel</string>
@@ -10786,7 +10773,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[285]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[284]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Flach</string>
@@ -10814,21 +10801,21 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[287]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[286]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Hilfreich</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[265]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[264]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Flach</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[265]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[264]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Hilfreich</string>
@@ -10842,14 +10829,14 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[266]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[265]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[6]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Gut</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[295]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[294]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Hilfreich</string>
@@ -10877,7 +10864,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[272]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[271]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Hilfreich</string>
@@ -10891,7 +10878,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[315]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[314]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[14]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Unmöglich</string>
@@ -10912,28 +10899,28 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[297]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[296]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Flach</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[293]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[292]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[6]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Meist</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[319]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[318]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[14]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Unmöglich</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[304]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[303]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Flach</string>
@@ -10944,13 +10931,6 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Theoretisch</string>
-    </entry>
-    <entry>
-      <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[223]/uri"/>
-        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
-      </com.bkahlert.nebula.utils.Pair>
-      <string>Mittel</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
@@ -10975,7 +10955,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[264]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[263]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Hilfreich</string>
@@ -10989,7 +10969,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[280]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[279]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Hoch</string>
@@ -11010,14 +10990,14 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[275]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[274]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Gering</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[287]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[286]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[8]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Umständlich</string>
@@ -11052,7 +11032,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[278]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[277]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Mittel</string>
@@ -11066,7 +11046,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[279]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[278]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Mittel</string>
@@ -11080,7 +11060,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[288]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[287]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Hoch</string>
@@ -11094,7 +11074,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[304]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[303]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Hilfreich</string>
@@ -11115,7 +11095,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[237]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[236]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Flach</string>
@@ -11129,7 +11109,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[236]/uri"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[235]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Empirisch</string>

@@ -1,17 +1,13 @@
 <p>Template-Spezialisierung:</p>
-
 <pre class="brush:cpp;">
 String&lt;TValue, TSpec&gt;</pre>
-
 <p>Spec ist nicht nur atomar</p>
-
 <pre class="brush:cpp;">
 String&lt;Dna&gt; myGenome; // A default string of nucleotides.
 String&lt;Dna, Alloc&lt;&gt; &gt; myGenome; // The same as above.</pre>
-
 <p>sondern kann selbst ein Template sein (TODO: bessere Beispiel finden!)</p>
-
 <pre class="brush:cpp;">
 String&lt;Dna, Array&lt;100&gt; &gt; genome</pre>
-
 <p>Ganze Programmkonstruktute bleiben gr&ouml;&szlig;tenteils unver&auml;ndert, wenn String&lt;Dna&gt; nach String&lt;AminoAcid&gt; ge&auml;ndert wird.</p>
+<p>&nbsp;</p>
+<p>siehe auch&nbsp;<a href="apiua://code/-9223372036854775571" class="special">Generezit&auml;t</a>&nbsp;</p>

@@ -8119,7 +8119,6 @@
       </creation>
     </instance>
     <instance>
-      <uri>apiua://codeinstance/-9223372036854775360</uri>
       <codeInstanceId>-9223372036854775360</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data"/>
       <id>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/learningStyle</id>
@@ -10944,13 +10943,6 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Theoretisch</string>
-    </entry>
-    <entry>
-      <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[223]/uri"/>
-        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
-      </com.bkahlert.nebula.utils.Pair>
-      <string>Mittel</string>
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>

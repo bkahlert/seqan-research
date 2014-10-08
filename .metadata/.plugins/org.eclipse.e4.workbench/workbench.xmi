@@ -114,29 +114,30 @@
             <children xsi:type="basic:PartSashContainer" xmi:id="_hwHOLE6_EeSUlO_uT-CTPw" containerData="3977" selectedElement="_hwHOLU6_EeSUlO_uT-CTPw">
               <children xsi:type="basic:PartStack" xmi:id="_hwHOLU6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.survey.views.CDViewMStack" containerData="4289" selectedElement="_hwHOLk6_EeSUlO_uT-CTPw">
                 <tags>newtablook</tags>
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_hwHOLk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.survey.views.CDView" ref="_hwHQd06_EeSUlO_uT-CTPw"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_hwHOL06_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesViewMStack" containerData="5711" selectedElement="_hwHOMU6_EeSUlO_uT-CTPw">
                 <tags>newtablook</tags>
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
-                <children xsi:type="advanced:Placeholder" xmi:id="_hwHOME6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" ref="_hwHP0U6_EeSUlO_uT-CTPw"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_hwHOMU6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView" ref="_hwH1F06_EeSUlO_uT-CTPw"/>
+                <children xsi:type="advanced:Placeholder" xmi:id="_vwYdQE7fEeSoj6Yy1e4hOQ" elementId="org.eclipse.ui.views.ProgressView" ref="_hwHOjU6_EeSUlO_uT-CTPw"/>
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_hwHOMk6_EeSUlO_uT-CTPw" containerData="6023" selectedElement="_hwHOM06_EeSUlO_uT-CTPw">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_hwHOM06_EeSUlO_uT-CTPw" containerData="5000" selectedElement="_hwHONk6_EeSUlO_uT-CTPw" horizontal="true">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_hwHOM06_EeSUlO_uT-CTPw" containerData="5000" selectedElement="_hwHONE6_EeSUlO_uT-CTPw" horizontal="true">
                 <children xsi:type="basic:PartStack" xmi:id="_hwHONE6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeViewMStack" containerData="4456" selectedElement="_hwHONU6_EeSUlO_uT-CTPw">
                   <tags>newtablook</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_hwHONU6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeView" ref="_hwHQEU6_EeSUlO_uT-CTPw"/>
                 </children>
-                <children xsi:type="basic:PartSashContainer" xmi:id="_hwHONk6_EeSUlO_uT-CTPw" containerData="5544" selectedElement="_hwHON06_EeSUlO_uT-CTPw">
+                <children xsi:type="basic:PartSashContainer" xmi:id="_hwHONk6_EeSUlO_uT-CTPw" containerData="5544" selectedElement="_hwHOOU6_EeSUlO_uT-CTPw">
                   <children xsi:type="basic:PartStack" xmi:id="_hwHON06_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoViewMStack" containerData="5252" selectedElement="_hwHOOE6_EeSUlO_uT-CTPw">
                     <tags>newtablook</tags>
-                    <tags>active</tags>
                     <children xsi:type="advanced:Placeholder" xmi:id="_hwHOOE6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" ref="_hwHQCk6_EeSUlO_uT-CTPw"/>
                   </children>
                   <children xsi:type="basic:PartStack" xmi:id="_hwHOOU6_EeSUlO_uT-CTPw" elementId="PartStack@6a566f08" containerData="4748" selectedElement="_hwHOOk6_EeSUlO_uT-CTPw">
                     <children xsi:type="advanced:Placeholder" xmi:id="_hwHOOk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" ref="_hwH1LE6_EeSUlO_uT-CTPw"/>
+                    <children xsi:type="advanced:Placeholder" xmi:id="_hwHOME6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" ref="_hwHP0U6_EeSUlO_uT-CTPw"/>
                   </children>
                 </children>
               </children>
@@ -1647,7 +1648,7 @@
       </menus>
       <toolbar xmi:id="_hwHP0E6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.core.views.TimeZoneDateRangeView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_hwHP0U6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Associated Codes: Gebrauchsschwierigkeiten" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_hwHP0U6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Associated Codes: 60ba - hardMentalOperations" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
@@ -1873,16 +1874,15 @@
       </menus>
       <toolbar xmi:id="_hwHQCU6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_hwHQCk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Memo: Strategie" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_hwHQCk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Memo: 60ba - hardMentalOperations  |  &#x2192; Komplexes Zusammenspiel von Konzepten und Konstrukten" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
-      <tags>active</tags>
       <menus xmi:id="_hwHQC06_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_hwHQDE6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView"/>
+      <toolbar xmi:id="_hwHQDE6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_hwHQEU6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Codes" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
@@ -2184,7 +2184,7 @@
         <tags>menuContribution:popup</tags>
         <tags>popup:de.fu_berlin.imp.apiua.groundedtheory.views.CodeView</tags>
       </menus>
-      <toolbar xmi:id="_hwHQXk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeView"/>
+      <toolbar xmi:id="_hwHQXk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_hwHQY06_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.doclog.views.DoclogView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Doclog Explorer" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.doclog/icons/view16/doclog_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
@@ -2262,6 +2262,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_hwHQeE6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.survey.views.CDView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -2554,7 +2556,7 @@
         <tags>menuContribution:popup</tags>
         <tags>popup:de.fu_berlin.imp.apiua.survey.views.CDView</tags>
       </menus>
-      <toolbar xmi:id="_hwH1Fk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.survey.views.CDView"/>
+      <toolbar xmi:id="_hwH1Fk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.survey.views.CDView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_hwH1F06_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Axial Coding" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
@@ -2624,9 +2626,9 @@
         <tags>menuContribution:popup</tags>
         <tags>popup:de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView</tags>
       </menus>
-      <toolbar xmi:id="_hwH1KE6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView"/>
+      <toolbar xmi:id="_hwH1KE6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_hwH1LE6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Dimension: Strategie" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_hwH1LE6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Dimension: 60ba - hardMentalOperations" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
@@ -2634,7 +2636,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_hwH1Lk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView"/>
+      <toolbar xmi:id="_hwH1Lk6_EeSUlO_uT-CTPw" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" visible="false"/>
     </sharedElements>
     <trimBars xmi:id="_hwH1L06_EeSUlO_uT-CTPw" elementId="org.eclipse.ui.main.toolbar">
       <children xsi:type="menu:ToolControl" xmi:id="_hwH1ME6_EeSUlO_uT-CTPw" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
@@ -2652,14 +2654,14 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hwH1NU6_EeSUlO_uT-CTPw" elementId="org.eclipse.ui.edit.text.actionSet.annotationNavigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_hwH1Nk6_EeSUlO_uT-CTPw" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_hwH1N06_EeSUlO_uT-CTPw" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_hwH1OE6_EeSUlO_uT-CTPw" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Cri10E7XEeSoj6Yy1e4hOQ" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Cri10U7XEeSoj6Yy1e4hOQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Cri10k7XEeSoj6Yy1e4hOQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hwH1OU6_EeSUlO_uT-CTPw" elementId="org.eclipse.ui.edit.text.actionSet.navigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_hwH1Ok6_EeSUlO_uT-CTPw" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_hwH1O06_EeSUlO_uT-CTPw" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Cri1007XEeSoj6Yy1e4hOQ" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Cri11E7XEeSoj6Yy1e4hOQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hwH1PE6_EeSUlO_uT-CTPw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2889,10 +2891,10 @@
     </bindings>
     <bindings xmi:id="_hwH1j06_EeSUlO_uT-CTPw" keySequence="F5" command="_hwH4EE6_EeSUlO_uT-CTPw"/>
     <bindings xmi:id="_hwH1kE6_EeSUlO_uT-CTPw" keySequence="F8" command="_hwH4ME6_EeSUlO_uT-CTPw"/>
-    <bindings xmi:id="_hwH1kU6_EeSUlO_uT-CTPw" keySequence="COMMAND+CTRL+F" command="_hwH3_06_EeSUlO_uT-CTPw"/>
+    <bindings xmi:id="_CZWSkU7XEeSoj6Yy1e4hOQ" keySequence="COMMAND+CTRL+F" command="_hwH3_06_EeSUlO_uT-CTPw"/>
   </bindingTables>
   <bindingTables xmi:id="_hwH1kk6_EeSUlO_uT-CTPw" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_hwH11U6_EeSUlO_uT-CTPw">
-    <bindings xmi:id="_hwH1k06_EeSUlO_uT-CTPw" keySequence="M1+W" command="_hwH4AU6_EeSUlO_uT-CTPw"/>
+    <bindings xmi:id="_CZW5oE7XEeSoj6Yy1e4hOQ" keySequence="M1+W" command="_hwH4AU6_EeSUlO_uT-CTPw"/>
   </bindingTables>
   <bindingTables xmi:id="_hwH1lE6_EeSUlO_uT-CTPw" bindingContext="_hwH12U6_EeSUlO_uT-CTPw"/>
   <bindingTables xmi:id="_hwH1lU6_EeSUlO_uT-CTPw" bindingContext="_hwH12k6_EeSUlO_uT-CTPw"/>

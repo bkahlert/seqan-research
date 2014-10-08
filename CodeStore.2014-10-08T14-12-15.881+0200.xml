@@ -10708,13 +10708,7 @@ Auffällig: Keine Ersetzung von String&lt;AminoAcid&gt; durch Peptide</string>
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
-      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
-        <possibleValues>
-          <string>Hilfreich</string>
-          <string>Aufwändig</string>
-          <string>Nicht hilfreich</string>
-        </possibleValues>
-      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+      <null/>
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[6]/data/uri"/>
