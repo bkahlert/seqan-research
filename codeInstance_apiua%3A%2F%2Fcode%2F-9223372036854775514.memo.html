@@ -1,0 +1,63 @@
+<h1>Analyse:</h1>
+
+<p style="line-height: 14.559999465942383px;">Sinn &amp; Zweck von Metafunktionen&nbsp; <strong>unklar</strong> , obwohl an mehreren Stellen der Versuch, diese zu erkl&auml;ren (first steps tutorial,&nbsp; <a href="http://trac.seqan.de/wiki/Tutorial/Metafunctions)." style="line-height: 1.3em;">http://trac.seqan.de/wiki/Tutorial/Metafunctions).</a></p>
+
+<ol style="line-height: 14.559999465942383px;">
+	<li>Die Ressourcen sind verstreut. Es gibt keine zentrale Anlaufstelle mit &Uuml;berblick.</li>
+	<li>Alle bisherigen Ressourcen sind sehr verbose. Der Kern der Aussage geht im technischen Gewusel unter.<br />
+	Z.B.&nbsp; <a href="http://trac.seqan.de/wiki/Tutorial/Metafunctions">http://trac.seqan.de/wiki/Tutorial/Metafunctions</a> &nbsp;Absatz 2: &quot;What we need therefore is a mechanism that returns an output type (e.g. the value type) given an input type (e.g. the string)&quot;.<br />
+	<br />
+	Statt jetzt ein Beispiel zu geben, wie das gel&ouml;st wird, kommen 780px Text (4 Abs&auml;tze und 3 Code-Beispiele). Und dann die magische Codezeile, die mitten im Code-Beispiel untergeht: typename Value&lt;T&gt;::Type temp = str[0];&nbsp;</li>
+</ol>
+
+<p style="line-height: 14.559999465942383px;">Beispiel (f&auml;ngt mit erster relevanter Zeile an und h&ouml;rt mit letzter relevanter Zeile auf):</p>
+
+<p style="line-height: 14.559999465942383px;"><img src="webkit-fake-url://0f85d14c-ce3e-42c4-bdaf-8a6794ef846e/image.tiff" />&nbsp;​</p>
+
+<p style="line-height: 14.559999465942383px;">Dahinter steckt wahrscheinlich, dass die Autoren nie die&nbsp; <strong>Perspektive des Anwenders</strong> &nbsp;- nein: des&nbsp; <strong>End-User Programmers</strong> &nbsp;- eingenommen haben.</p>
+
+<p style="line-height: 14.559999465942383px;">Er m&ouml;chte die Library einsetzen und nicht in ihr wie in einem Framework arbeiten. (L&uuml;ge 2)</p>
+
+<p style="line-height: 14.559999465942383px;">Er braucht Heuristiken; ein hinreichend entwickeltes mentales Modell.<br />
+Z.B:&nbsp;Metafunktion statt Typ angeben (sonst m&uuml;sste man ja nachschlagen, welcher Typ hier gilt)</p>
+
+<h1>L&ouml;sung abstrakt</h1>
+
+<p style="line-height: 14.559999465942383px;">Klassen-Templates werden in SeqAn, wie in&nbsp; <a href="http://trac.seqan.de/wiki/Tutorial/Metafunctions">http://trac.seqan.de/wiki/Tutorial/Metafunctions</a> &nbsp;erkl&auml;rt, als Metafunktionen eingesetzt. Also: Es geht nicht um Generic Classes (z.B: String&lt;X&gt;), sondern um Berechnungen, deren Ergebnis meist in ::Type steckt. vgl. auch&nbsp; <a class="special" href="Template Programming">Template Programming</a> &nbsp;.</p>
+
+<p style="line-height: 14.559999465942383px;">Die f&uuml;hrt zu einer neuen Familie von Funktionen. Das Konzept - also Namensgebung, Aufgabengebiet, Funktionsumfang, &nbsp;ist&nbsp;neu und muss&nbsp;erkl&auml;rt werden.</p>
+
+<h1>L&ouml;sung konkret</h1>
+
+<p style="line-height: 14.559999465942383px;">Funktion mit ohne ohne Value&lt;...&gt;.</p>
+
+<p style="line-height: 14.559999465942383px;">&Auml;nderung hervorgehoben.</p>
+
+<p style="line-height: 14.559999465942383px;">Seitentitel: How does SeqAn differ?</p>
+
+<p style="line-height: 14.559999465942383px;">Linke Spalte:&nbsp;</p>
+
+<p style="line-height: 14.559999465942383px;">void exchangeFirstValues(String&lt;AminoAcid&gt; &amp; str)<br />
+{<br />
+&nbsp; &nbsp; if (length(str) &lt; 2) return;<br />
+&nbsp; &nbsp; AminoAcid temp = str[0];<br />
+&nbsp; &nbsp; str[0] = str[1];<br />
+&nbsp; &nbsp; str[1] = temp;<br />
+}</p>
+
+<p style="line-height: 14.559999465942383px;">Rechte Spalte:</p>
+
+<p style="line-height: 14.559999465942383px;">template &lt;typename T&gt;<br />
+void exchangeFirstValues(T &amp; str)<br />
+{<br />
+&nbsp; &nbsp; if (length(str) &lt; 2) return;<br />
+&nbsp; &nbsp; typename Value&lt;T&gt;::Type temp = str[0];<br />
+&nbsp; &nbsp; str[0] = str[1];<br />
+&nbsp; &nbsp; str[1] = temp;<br />
+}</p>
+
+<p style="line-height: 14.559999465942383px;">- Vorteil links: einfach zu schreiben<br />
+- Nachteil links: nicht generisch</p>
+
+<p style="line-height: 14.559999465942383px;">- Vorteil rechts: generisch, m&auml;chtig<br />
+- Nachteil rechts: mehr zu schreiben</p>
