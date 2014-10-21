@@ -110,10 +110,11 @@
           <tags>persp.perspSC:de.fu_berlin.imp.apiua.BrowsingPerspective</tags>
           <tags>persp.perspSC:de.fu_berlin.imp.apiua.MemoPerspective</tags>
           <tags>persp.perspSC:de.fu_berlin.imp.apiua.TimelinePerspective</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_bewiO1QMEeSKdcVTY0hkLQ" selectedElement="_bewiQlQMEeSKdcVTY0hkLQ" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_bewiO1QMEeSKdcVTY0hkLQ" selectedElement="_bewiPFQMEeSKdcVTY0hkLQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_bewiPFQMEeSKdcVTY0hkLQ" containerData="3977" selectedElement="_bewiPVQMEeSKdcVTY0hkLQ">
               <children xsi:type="basic:PartStack" xmi:id="_bewiPVQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.survey.views.CDViewMStack" containerData="4289" selectedElement="_bewiPlQMEeSKdcVTY0hkLQ">
                 <tags>newtablook</tags>
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_bewiPlQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.survey.views.CDView" ref="_bexK01QMEeSKdcVTY0hkLQ"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_bewiP1QMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesViewMStack" containerData="5711" selectedElement="_bewiQFQMEeSKdcVTY0hkLQ">
@@ -132,7 +133,6 @@
                 <children xsi:type="basic:PartSashContainer" xmi:id="_bewiRlQMEeSKdcVTY0hkLQ" containerData="5544" selectedElement="_bewiR1QMEeSKdcVTY0hkLQ">
                   <children xsi:type="basic:PartStack" xmi:id="_bewiR1QMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoViewMStack" containerData="5252" selectedElement="_bewiSFQMEeSKdcVTY0hkLQ">
                     <tags>newtablook</tags>
-                    <tags>active</tags>
                     <children xsi:type="advanced:Placeholder" xmi:id="_bewiSFQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" ref="_bexKXVQMEeSKdcVTY0hkLQ"/>
                   </children>
                   <children xsi:type="basic:PartStack" xmi:id="_bewiSVQMEeSKdcVTY0hkLQ" elementId="PartStack@6a566f08" containerData="4748" selectedElement="_bewiSlQMEeSKdcVTY0hkLQ">
@@ -1890,16 +1890,15 @@
       </menus>
       <toolbar xmi:id="_bexKXFQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_bexKXVQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Memo: Metafunktionen" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_bexKXVQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Memo: 7c79 - typicalProducts  |  &#x2192; Suche nach professioneller Alternative  |  &#x2192; Programmentwicklung" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
-      <tags>active</tags>
       <menus xmi:id="_bexKXlQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_bexKX1QMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView"/>
+      <toolbar xmi:id="_bexKX1QMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_bexKZFQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Codes" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
@@ -2237,7 +2236,7 @@
         <tags>menuContribution:popup</tags>
         <tags>popup:de.fu_berlin.imp.apiua.groundedtheory.views.CodeView</tags>
       </menus>
-      <toolbar xmi:id="_bexKulQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeView"/>
+      <toolbar xmi:id="_bexKulQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_bexKv1QMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.doclog.views.DoclogView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Doclog Explorer" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.doclog/icons/view16/doclog_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
@@ -2315,6 +2314,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_bexK1FQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.survey.views.CDView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -2643,7 +2644,7 @@
         <tags>menuContribution:popup</tags>
         <tags>popup:de.fu_berlin.imp.apiua.survey.views.CDView</tags>
       </menus>
-      <toolbar xmi:id="_bexLKFQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.survey.views.CDView"/>
+      <toolbar xmi:id="_bexLKFQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.survey.views.CDView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_bexLKVQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Axial Coding" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
@@ -2749,9 +2750,9 @@
         <tags>menuContribution:popup</tags>
         <tags>popup:de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView</tags>
       </menus>
-      <toolbar xmi:id="_bexLQ1QMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView"/>
+      <toolbar xmi:id="_bexLQ1QMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_bexLR1QMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Dimension: Metafunktionen" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_bexLR1QMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Dimension: 7c79 - typicalProducts" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
@@ -2759,7 +2760,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_bexLSVQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView"/>
+      <toolbar xmi:id="_bexLSVQMEeSKdcVTY0hkLQ" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" visible="false"/>
     </sharedElements>
     <trimBars xmi:id="_bexLSlQMEeSKdcVTY0hkLQ" elementId="org.eclipse.ui.main.toolbar">
       <children xsi:type="menu:ToolControl" xmi:id="_bexLS1QMEeSKdcVTY0hkLQ" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
@@ -2777,14 +2778,14 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_bexLUFQMEeSKdcVTY0hkLQ" elementId="org.eclipse.ui.edit.text.actionSet.annotationNavigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bexLUVQMEeSKdcVTY0hkLQ" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bexLUlQMEeSKdcVTY0hkLQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bexLU1QMEeSKdcVTY0hkLQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_f47FAFblEeSynspX7G1l5g" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_f47FAVblEeSynspX7G1l5g" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_f47FAlblEeSynspX7G1l5g" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_bexLVFQMEeSKdcVTY0hkLQ" elementId="org.eclipse.ui.edit.text.actionSet.navigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bexLVVQMEeSKdcVTY0hkLQ" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bexLVlQMEeSKdcVTY0hkLQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_f47FA1blEeSynspX7G1l5g" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_f47sEFblEeSynspX7G1l5g" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_bexLV1QMEeSKdcVTY0hkLQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -3017,10 +3018,10 @@
     </bindings>
     <bindings xmi:id="_bexLq1QMEeSKdcVTY0hkLQ" keySequence="F5" command="_bexw-FQMEeSKdcVTY0hkLQ"/>
     <bindings xmi:id="_bexLrFQMEeSKdcVTY0hkLQ" keySequence="F8" command="_bexxGFQMEeSKdcVTY0hkLQ"/>
-    <bindings xmi:id="_bexLrVQMEeSKdcVTY0hkLQ" keySequence="COMMAND+CTRL+F" command="_bexw51QMEeSKdcVTY0hkLQ"/>
+    <bindings xmi:id="_fjwGQVblEeSynspX7G1l5g" keySequence="COMMAND+CTRL+F" command="_bexw51QMEeSKdcVTY0hkLQ"/>
   </bindingTables>
   <bindingTables xmi:id="_bexLrlQMEeSKdcVTY0hkLQ" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_bexL8VQMEeSKdcVTY0hkLQ">
-    <bindings xmi:id="_bexLr1QMEeSKdcVTY0hkLQ" keySequence="M1+W" command="_bexw6VQMEeSKdcVTY0hkLQ"/>
+    <bindings xmi:id="_fjwGQlblEeSynspX7G1l5g" keySequence="M1+W" command="_bexw6VQMEeSKdcVTY0hkLQ"/>
   </bindingTables>
   <bindingTables xmi:id="_bexLsFQMEeSKdcVTY0hkLQ" bindingContext="_bexL9VQMEeSKdcVTY0hkLQ"/>
   <bindingTables xmi:id="_bexLsVQMEeSKdcVTY0hkLQ" bindingContext="_bexL9lQMEeSKdcVTY0hkLQ"/>
