@@ -4335,7 +4335,7 @@
                   <red>0.19607843137254902</red>
                   <green>0.7254901960784313</green>
                   <blue>0.7333333333333333</blue>
-                  <alpha>1.0</alpha>
+                  <alpha>0.27450980392156865</alpha>
                 </color>
                 <creation>
                   <calendar>
@@ -11356,11 +11356,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
-      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
-        <possibleValues>
-          <string>Hilfreich</string>
-        </possibleValues>
-      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+      <null/>
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[6]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
