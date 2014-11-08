@@ -6149,7 +6149,6 @@
       </creation>
     </instance>
     <instance>
-      <uri>apiua://codeinstance/-9223372036854775291</uri>
       <codeInstanceId>-9223372036854775291</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data"/>
       <id>apiua://survey/cd/2013-09-19T11:51:16.616+02:00/roleExpressiveness</id>
@@ -11672,13 +11671,6 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[42]/uri"/>
-        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
-      </com.bkahlert.nebula.utils.Pair>
-      <string>Hoch</string>
-    </entry>
-    <entry>
-      <com.bkahlert.nebula.utils.Pair>
         <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[351]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[13]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
@@ -11966,7 +11958,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../entry[49]/com.bkahlert.nebula.utils.Pair/first"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../entry[48]/com.bkahlert.nebula.utils.Pair/first"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>abc</string>
