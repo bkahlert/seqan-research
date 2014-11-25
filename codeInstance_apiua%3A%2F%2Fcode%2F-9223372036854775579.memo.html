@@ -1,29 +1,35 @@
-<p>Von einem Funktionsnamen kann man nicht auf die tats&auml;chliche Funktion schlie&szlig;en.<br />
-Mehrere Implementierungen k&ouml;nnen existieren.</p>
+<p><span style="line-height: 14.559999465942383px;">Das <strong>global interface</strong> mit seinen <strong>global interface functions</strong> ist eine SeqAn zugrunde liegende Design-Entscheidung, welches technisch durch den Einsatz von </span> <a class="special" href="apiua://code/-9223372036854775515">Template Programming</a> &nbsp;realisiert wird.</p>
 
-<p>Der Kontext (z.B. durch das Objekt) fehlt.</p>
+<p><span style="line-height: 14.559999465942383px;">Die Grundidee ist, dass es generisch benannte globale Funktionen gibt, die f&uuml;r bestimmte Eingaben spezialisiert werden k&ouml;nnen.</span></p>
 
-<p>&nbsp;</p>
-
-<p><strong>M&ouml;gliche Ursache:</strong></p>
+<p><span style="line-height: 14.559999465942383px;">Funktionen k&ouml;nnen:</span></p>
 
 <ul>
-	<li>Globale Interface (Meta)Functions wie <a href="http://docs.seqan.de/seqan/dev3/index.html?q=length">http://docs.seqan.de/seqan/dev3/index.html?q=length</a>&nbsp;oder&nbsp;<a href="http://docs.seqan.de/seqan/dev3/?p=globalAlignment">http://docs.seqan.de/seqan/dev3/?p=globalAlignment</a>&nbsp;geh&ouml;ren inhaltlich zwar einem Typen an, sind aber global implementiert. Wenn ich nun mit so einer Funktion arbeite, muss ich mich vergewissen (probieren oder nachlesen), wie das Verhalten bei meinen Eingaben ist.<br />
-	W&auml;re die Funktion eine echte Memberfunktion, w&uuml;rde man viel schneller auf das Verhalten schlie&szlig;en k&ouml;nnen.&nbsp;</li>
+	<li><span style="line-height: 14.559999465942383px;">&uuml;berhaupt ein Problem l&ouml;sen (d.h. es gibt auch ung&uuml;ltige Eingabetypen)<br />
+	Bsp.: </span> <a href="http://docs.seqan.de/seqan/dev3/index.html?q=length">http://docs.seqan.de/seqan/dev3/index.html?q=length</a> <span style="line-height: 14.559999465942383px;"> gilt f&uuml;r alle Eingaben, </span> <a href="http://docs.seqan.de/seqan/dev3/?p=globalAlignment">http://docs.seqan.de/seqan/dev3/?p=globalAlignment</a> <span style="line-height: 14.559999465942383px;"> nicht</span></li>
+	<li><span style="line-height: 14.559999465942383px;">ein Problem effizienter l&ouml;sen<br />
+	Bsp.: </span> <a href="http://docs.seqan.de/seqan/dev3/?p=globalAlignment">http://docs.seqan.de/seqan/dev3/?p=globalAlignment</a> <span style="line-height: 14.559999465942383px;"> f&auml;llt in Abh&auml;ngigkeit seiner Eingabe auch verschiedene Implementierungen mit gleichem Zweck zur&uuml;ck</span></li>
+	<li><span style="line-height: 14.559999465942383px;">verschiedene Probleme l&ouml;sen<br />
+	Bsp.: TODO</span></li>
 </ul>
 
-<p><span style="line-height: 14px;">Die generischen Funktionen in SeqAn ver&auml;ndern ihr Verhalten in Abh&auml;ngigkeit ihrer Parameter.<br />
-H&auml;ufig wird durch den Template Mechanismus&nbsp;nur eine effizientere Implementierung gew&auml;hlt. Manchmal aber wird ein anderes Verhalten zu Tage gef&uuml;hrt. Auch kann sich dabei der R&uuml;ckgabewert &auml;ndern (was in C++ nicht un&uuml;blich ist):</span></p>
+<p style="line-height: 14.559999465942383px;"><span style="line-height: 14px;">Die generischen Funktionen in SeqAn ver&auml;ndern ihr Verhalten also in Abh&auml;ngigkeit ihrer Parameter.<br />
+Auch kann sich dabei der R&uuml;ckgabewert &auml;ndern (was in C++ nicht un&uuml;blich ist, TODO: Beleg):</span></p>
 
-<ul>
+<ul style="line-height: 14.559999465942383px;">
 	<li><span style="line-height: 14px;"><a href="http://docs.seqan.de/seqan/dev3/class_Fragment.html#Fragment%23label">http://docs.seqan.de/seqan/dev3/class_Fragment.html#Fragment%23label</a>&nbsp;gibt ein Infix zur&uuml;ck</span></li>
 	<li><span style="line-height: 14px;"><a href="http://docs.seqan.de/seqan/dev3/specialization_EdgeIterator.html#Interface_Function_Overview">http://docs.seqan.de/seqan/dev3/specialization_EdgeIterator.html#Interface_Function_Overview</a>&nbsp;gibt ein TAlphbet zur&uuml;ck</span></li>
 </ul>
+
+<p>Den&nbsp;Funktionen fehlt der Kontext / das starter/primary object, wie dies in den meisten OOP-Sprachen technisch erzwungen wird. In SeqAn existiert die Zugeh&ouml;rigkeit nur inhaltlich und muss der Dokumentation entnommen werden.</p>
+
+<p>In seiner aktuellen Form f&uuml;hrt das global interface zu&nbsp;<a class="special" href="apiua://code/-9223372036854775633">Inkonsistenzen bzgl. STD/STL</a>.</p>
 
 <p><span style="line-height: 14px;">​</span></p>
 
 <h2><span style="line-height: 14px;">Gespr&auml;ch mit Martin Merl (22.09.2014):</span></h2>
 
-<p><span style="line-height: 14px;">Es gibt nicht nur das Start Object Problem, es kann auch sein, dass das Verb (also die Funktion) im Mittelpunkt steht.<br />
-Dann w&auml;re der Gebrauch von globalen Funktion f&ouml;rderlich.</span><br />
-&nbsp;</p>
+<p style="line-height: 14.559999465942383px;"><span style="line-height: 14px;">Es gibt nicht nur das Start Object Problem, es kann auch sein, dass das Verb (also die Funktion) im Mittelpunkt steht.<br />
+Dann w&auml;re der Gebrauch von globalen Funktion f&ouml;rderlich.</span></p>
+
+<p style="line-height: 14.559999465942383px;"><span style="line-height: 14px;">Abh&auml;ngig vom Background des Anwenders, kann es aber auch sein, dass der Funktionsname und nicht das Object im Mittelpunkt steht. Also als erste Frage nicht womit ich etwas mache, sondern was -&gt; verb(object) statt object.verb()</span></p>
