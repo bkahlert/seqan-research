@@ -10464,10 +10464,10 @@
       <uri>apiua://relation/medvfo5livvedudk73su8aa3g3mrq5ql</uri>
       <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[10]/data/uri"/>
       <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[18]/data/uri"/>
-      <name>erschwert</name>
+      <name>erschwert2</name>
       <timeZoneDate>
         <calendar>
-          <time>1417875078281</time>
+          <time>1417324468535</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </timeZoneDate>
@@ -10601,7 +10601,18 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/jc0a8n01ttb8vuli8saf8cti3iuuptdj</uri>
-      <relation class="relations" reference="../../../relations/relations[8]"/>
+      <relation class="relations">
+        <uri reference="../../../../relations/relations[8]/uri"/>
+        <from reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[10]/data/uri"/>
+        <to reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[18]/data/uri"/>
+        <name>erschwert</name>
+        <timeZoneDate>
+          <calendar>
+            <time>1417161487725</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </timeZoneDate>
+      </relation>
       <phenomenon>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/workStepUnit</phenomenon>
       <creation>
         <calendar>
@@ -11946,11 +11957,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
-      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
-        <possibleValues>
-          <string>Hilfreich</string>
-        </possibleValues>
-      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
+      <null/>
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[5]/data/uri"/>
@@ -11965,7 +11972,6 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
         <possibleValues>
           <string>Groß</string>
-          <string>Mittel</string>
         </possibleValues>
       </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
     </entry>

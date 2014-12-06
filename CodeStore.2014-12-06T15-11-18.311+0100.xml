@@ -10461,18 +10461,6 @@
       </timeZoneDate>
     </relations>
     <relations>
-      <uri>apiua://relation/medvfo5livvedudk73su8aa3g3mrq5ql</uri>
-      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[10]/data/uri"/>
-      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[18]/data/uri"/>
-      <name>erschwert</name>
-      <timeZoneDate>
-        <calendar>
-          <time>1417875078281</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </timeZoneDate>
-    </relations>
-    <relations>
       <uri>apiua://relation/gnc6sp2k1m6ucj6p1etnu9qkq2oc6fu5</uri>
       <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[10]/data/uri"/>
@@ -10569,7 +10557,7 @@
     <relationInstances>
       <uri>apiua://relationInstance/95lglp8cd4b04phr6pptiualibccmggj</uri>
       <relation class="relations">
-        <uri reference="../../../../relations/relations[11]/uri"/>
+        <uri reference="../../../../relations/relations[10]/uri"/>
         <from reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
         <to reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[13]/data/uri"/>
         <name>bedingt</name>
@@ -10590,7 +10578,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/o8cuq1jc4c3ijk15uir33fq2c5u28ghr</uri>
-      <relation class="relations" reference="../../../relations/relations[9]"/>
+      <relation class="relations" reference="../../../relations/relations[8]"/>
       <phenomenon reference="../../relationInstances[2]/phenomenon"/>
       <creation>
         <calendar>
@@ -10601,7 +10589,18 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/jc0a8n01ttb8vuli8saf8cti3iuuptdj</uri>
-      <relation class="relations" reference="../../../relations/relations[8]"/>
+      <relation class="relations">
+        <uri>apiua://relation/medvfo5livvedudk73su8aa3g3mrq5ql</uri>
+        <from reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[10]/data/uri"/>
+        <to reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[18]/data/uri"/>
+        <name>erschwert</name>
+        <timeZoneDate>
+          <calendar>
+            <time>1417161487725</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </timeZoneDate>
+      </relation>
       <phenomenon>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/workStepUnit</phenomenon>
       <creation>
         <calendar>
@@ -11965,7 +11964,6 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
         <possibleValues>
           <string>Groß</string>
-          <string>Mittel</string>
         </possibleValues>
       </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.NominalDimension>
     </entry>
