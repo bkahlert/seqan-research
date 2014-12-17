@@ -11397,17 +11397,6 @@
       </creation>
     </relationInstances>
     <relationInstances>
-      <uri>apiua://relationInstance/7lea6rt7bn55ht9462m0e9kr2o5rtle5</uri>
-      <relation class="relations" reference="../../../relations/relations[33]"/>
-      <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/personal</phenomenon>
-      <creation>
-        <calendar>
-          <time>1418794086362</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </relationInstances>
-    <relationInstances>
       <uri>apiua://relationInstance/cvtu2r2db0jo7cl68lsv8bj5ritdojjv</uri>
       <relation class="relations" reference="../../../relations/relations[7]"/>
       <phenomenon reference="../../relationInstances[5]/phenomenon"/>
@@ -11531,7 +11520,7 @@
     <relationInstances>
       <uri>apiua://relationInstance/se5doojn3ofs8k7amt6hotb44uql3oa5</uri>
       <relation class="relations" reference="../../../relations/relations[32]"/>
-      <phenomenon reference="../../relationInstances[19]/phenomenon"/>
+      <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/personal</phenomenon>
       <creation>
         <calendar>
           <time>1418793871669</time>
