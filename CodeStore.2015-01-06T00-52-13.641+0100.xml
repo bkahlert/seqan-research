@@ -591,7 +591,6 @@
     <long>-9223372036854775220</long>
     <long>-9223372036854775219</long>
     <long>-9223372036854775218</long>
-    <long>-9223372036854775217</long>
   </createdIDs>
   <createdCodeInstanceIDs>
     <long>-9223372036854775808</long>
@@ -1184,7 +1183,6 @@
     <long>-9223372036854775220</long>
     <long>-9223372036854775219</long>
     <long>-9223372036854775218</long>
-    <long>-9223372036854775217</long>
   </createdCodeInstanceIDs>
   <codeTrees>
     <com.bkahlert.nebula.data.TreeNode>
@@ -4053,7 +4051,7 @@
                   <red>0.27058823529411763</red>
                   <green>0.8784313725490196</green>
                   <blue>0.396078431372549</blue>
-                  <alpha>0.27450980392156865</alpha>
+                  <alpha>0.0</alpha>
                 </color>
                 <creation>
                   <calendar>
@@ -5941,7 +5939,7 @@
               <red>0.2235294117647059</red>
               <green>0.7803921568627451</green>
               <blue>0.5529411764705883</blue>
-              <alpha>0.27450980392156865</alpha>
+              <alpha>1.0</alpha>
             </color>
             <creation>
               <calendar>
@@ -10946,18 +10944,6 @@
         </calendar>
       </creation>
     </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775217</uri>
-      <codeInstanceId>-9223372036854775217</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[3]/data"/>
-      <id>apiua://relation/arvnfbd9c4guql0b483qsni9hnedgsip</id>
-      <creation>
-        <calendar>
-          <time>1420502180957</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
   </instances>
   <relations>
     <relations>
@@ -11028,18 +11014,6 @@
       <timeZoneDate>
         <calendar>
           <time>1420432730297</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </timeZoneDate>
-    </relations>
-    <relations>
-      <uri reference="../../../instances/instance[412]/id"/>
-      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[10]/data/uri"/>
-      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[5]/children/com.bkahlert.nebula.data.TreeNode[4]/data/uri"/>
-      <name>überraschend</name>
-      <timeZoneDate>
-        <calendar>
-          <time>1420502151962</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </timeZoneDate>
@@ -11417,18 +11391,6 @@
       </timeZoneDate>
     </relations>
     <relations>
-      <uri>apiua://relation/41n7lcdms22s4dnrkpa845a46llavfgk</uri>
-      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
-      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
-      <name>Strategie</name>
-      <timeZoneDate>
-        <calendar>
-          <time>1420501952436</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </timeZoneDate>
-    </relations>
-    <relations>
       <uri>apiua://relation/hmm74tdq0rg72gq7l8gmbm74sddie5v5</uri>
       <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
@@ -11448,18 +11410,6 @@
       <timeZoneDate>
         <calendar>
           <time>1420430635506</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </timeZoneDate>
-    </relations>
-    <relations>
-      <uri>apiua://relation/nfb4tms1ilpiqrjck9h7476bdp6da0eo</uri>
-      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[14]/data/uri"/>
-      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
-      <name>Strategie</name>
-      <timeZoneDate>
-        <calendar>
-          <time>1420502229498</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </timeZoneDate>
@@ -12101,18 +12051,6 @@
       </timeZoneDate>
     </relations>
     <relations>
-      <uri>apiua://relation/oo3kaqbk9gir2ge22s0klk5di8g6lpsc</uri>
-      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[4]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
-      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[4]/data/uri"/>
-      <name>bedingt</name>
-      <timeZoneDate>
-        <calendar>
-          <time>1420502308498</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </timeZoneDate>
-    </relations>
-    <relations>
       <uri>apiua://relation/s8n6bibe20mp3s27aej9vi1pdffmlnhl</uri>
       <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[12]/data/uri"/>
@@ -12440,7 +12378,7 @@
   <relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/40v1pqfpjfc52uob7hbr6v5e3jea2esu</uri>
-      <relation class="relations" reference="../../../relations/relations[78]"/>
+      <relation class="relations" reference="../../../relations/relations[75]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/learningStyle</phenomenon>
       <creation>
         <calendar>
@@ -12451,7 +12389,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/p3c5olp336qosj12il74lseqds9rj9c9</uri>
-      <relation class="relations" reference="../../../relations/relations[118]"/>
+      <relation class="relations" reference="../../../relations/relations[114]"/>
       <phenomenon>apiua://survey/cd/2013-09-19T11:51:16.616+02:00/workStepUnit</phenomenon>
       <creation>
         <calendar>
@@ -12462,7 +12400,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/o1je8d1jhko2qs9kc7f9okfckbcekt22</uri>
-      <relation class="relations" reference="../../../relations/relations[117]"/>
+      <relation class="relations" reference="../../../relations/relations[113]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:50:13.425+02:00/progressiveEvaluation</phenomenon>
       <creation>
         <calendar>
@@ -12473,7 +12411,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/q70d827cogb0neb1b7ln64cli7u9pk38</uri>
-      <relation class="relations" reference="../../../relations/relations[61]"/>
+      <relation class="relations" reference="../../../relations/relations[58]"/>
       <phenomenon reference="../../../instances/instance[187]/id"/>
       <creation>
         <calendar>
@@ -12484,7 +12422,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/di18g42c3n65l0q5phms4024apae3ihb</uri>
-      <relation class="relations" reference="../../../relations/relations[80]"/>
+      <relation class="relations" reference="../../../relations/relations[77]"/>
       <phenomenon reference="../../../instances/instance[169]/id"/>
       <creation>
         <calendar>
@@ -12495,7 +12433,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/4vap8rcqg5a49443kemd1f1gi8deb2f6</uri>
-      <relation class="relations" reference="../../../relations/relations[30]"/>
+      <relation class="relations" reference="../../../relations/relations[29]"/>
       <phenomenon reference="../../../instances/instance[331]/id"/>
       <creation>
         <calendar>
@@ -12506,7 +12444,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/qnsae6vde2u3rmptom11dg9t9crcvubk</uri>
-      <relation class="relations" reference="../../../relations/relations[38]"/>
+      <relation class="relations" reference="../../../relations/relations[37]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/progressiveEvaluation</phenomenon>
       <creation>
         <calendar>
@@ -12517,7 +12455,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/uo4s550inmbjvn4pnvjjtfghngtol0rf</uri>
-      <relation class="relations" reference="../../../relations/relations[11]"/>
+      <relation class="relations" reference="../../../relations/relations[10]"/>
       <phenomenon reference="../../../instances/instance[173]/id"/>
       <creation>
         <calendar>
@@ -12528,7 +12466,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/mu88m5prjodlp193hc62aj0volk4e4u6</uri>
-      <relation class="relations" reference="../../../relations/relations[43]"/>
+      <relation class="relations" reference="../../../relations/relations[40]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/prematureCommitment</phenomenon>
       <creation>
         <calendar>
@@ -12539,7 +12477,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/p6oa55hi4q379ilo3sdgu71gevtkrr6h</uri>
-      <relation class="relations" reference="../../../relations/relations[83]"/>
+      <relation class="relations" reference="../../../relations/relations[80]"/>
       <phenomenon reference="../../../instances/instance[149]/id"/>
       <creation>
         <calendar>
@@ -12550,7 +12488,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/cvtu2r2db0jo7cl68lsv8bj5ritdojjv</uri>
-      <relation class="relations" reference="../../../relations/relations[103]"/>
+      <relation class="relations" reference="../../../relations/relations[99]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/roleExpressiveness</phenomenon>
       <creation>
         <calendar>
@@ -12560,19 +12498,8 @@
       </creation>
     </relationInstances>
     <relationInstances>
-      <uri>apiua://relationInstance/ft8mc5ss6gsij86edmp96ue9pmc146pk</uri>
-      <relation class="relations" reference="../../../relations/relations[44]"/>
-      <phenomenon>apiua://survey/cd/2013-09-19T11:51:16.616+02:00/roleExpressiveness</phenomenon>
-      <creation>
-        <calendar>
-          <time>1420502408111</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </relationInstances>
-    <relationInstances>
       <uri>apiua://relationInstance/casjbt0qusjmbc3bts80ufll1srvtmqp</uri>
-      <relation class="relations" reference="../../../relations/relations[71]"/>
+      <relation class="relations" reference="../../../relations/relations[68]"/>
       <phenomenon reference="../../../instances/instance[217]/id"/>
       <creation>
         <calendar>
@@ -12605,7 +12532,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/lr2ap3n7b2dma0aqk374r63bva84elj0</uri>
-      <relation class="relations" reference="../../../relations/relations[33]"/>
+      <relation class="relations" reference="../../../relations/relations[32]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/personal</phenomenon>
       <creation>
         <calendar>
@@ -12616,7 +12543,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/8kor5f4nufd316rmr6vmjf8mite97onp</uri>
-      <relation class="relations" reference="../../../relations/relations[44]"/>
+      <relation class="relations" reference="../../../relations/relations[41]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/roleExpressiveness</phenomenon>
       <creation>
         <calendar>
@@ -12626,19 +12553,8 @@
       </creation>
     </relationInstances>
     <relationInstances>
-      <uri>apiua://relationInstance/7e6kovrvtqjo8psat0uab57l84buanin</uri>
-      <relation class="relations" reference="../../../relations/relations[39]"/>
-      <phenomenon reference="../../relationInstances[12]/phenomenon"/>
-      <creation>
-        <calendar>
-          <time>1420501952870</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </relationInstances>
-    <relationInstances>
       <uri>apiua://relationInstance/4t662ubl03pvul36i237sujj51rbaujo</uri>
-      <relation class="relations" reference="../../../relations/relations[94]"/>
+      <relation class="relations" reference="../../../relations/relations[91]"/>
       <phenomenon reference="../../../instances/instance[167]/id"/>
       <creation>
         <calendar>
@@ -12649,7 +12565,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/6emef84krr1djaetkata64uh1mr9f1cb</uri>
-      <relation class="relations" reference="../../../relations/relations[110]"/>
+      <relation class="relations" reference="../../../relations/relations[106]"/>
       <phenomenon reference="../../../instances/instance[176]/id"/>
       <creation>
         <calendar>
@@ -12659,19 +12575,8 @@
       </creation>
     </relationInstances>
     <relationInstances>
-      <uri>apiua://relationInstance/fs4s4p33g0h82bvoko27bpvogahr3498</uri>
-      <relation class="relations" reference="../../../relations/relations[42]"/>
-      <phenomenon reference="../../relationInstances[12]/phenomenon"/>
-      <creation>
-        <calendar>
-          <time>1420502230045</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </relationInstances>
-    <relationInstances>
       <uri>apiua://relationInstance/3kou58uu2kpjj5g10t8an0pisd7adms0</uri>
-      <relation class="relations" reference="../../../relations/relations[29]"/>
+      <relation class="relations" reference="../../../relations/relations[28]"/>
       <phenomenon>apiua://survey/cd/2013-09-19T11:51:16.616+02:00/errorProneness</phenomenon>
       <creation>
         <calendar>
@@ -12682,8 +12587,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/f06c2frntnoamrc2u8k52n6k70f1q2cs</uri>
-      <relation class="relations" reference="../../../relations/relations[102]"/>
-      <phenomenon reference="../../relationInstances[14]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[98]"/>
+      <phenomenon reference="../../relationInstances[13]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420421900631</time>
@@ -12693,8 +12598,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/3fo2a088nce2b0s1p6clrggg4nguk5kr</uri>
-      <relation class="relations" reference="../../../relations/relations[29]"/>
-      <phenomenon reference="../../relationInstances[15]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[28]"/>
+      <phenomenon reference="../../relationInstances[14]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420432322089</time>
@@ -12704,7 +12609,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/jr7t8s21m4cg9hqn2dcpum13d2946mkr</uri>
-      <relation class="relations" reference="../../../relations/relations[47]"/>
+      <relation class="relations" reference="../../../relations/relations[44]"/>
       <phenomenon reference="../../relationInstances[2]/phenomenon"/>
       <creation>
         <calendar>
@@ -12715,7 +12620,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/fkduuk8j5v941d4vsquf5j7650t85bl5</uri>
-      <relation class="relations" reference="../../../relations/relations[35]"/>
+      <relation class="relations" reference="../../../relations/relations[34]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:50:37.900+02:00/learningStyle</phenomenon>
       <creation>
         <calendar>
@@ -12726,7 +12631,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/69s0spg697fvnjkag79dtvhcqq1ibrqo</uri>
-      <relation class="relations" reference="../../../relations/relations[53]"/>
+      <relation class="relations" reference="../../../relations/relations[50]"/>
       <phenomenon reference="../../relationInstances[11]/phenomenon"/>
       <creation>
         <calendar>
@@ -12737,7 +12642,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/2flrcjnni96uo5tg629fo73ecfn2okc5</uri>
-      <relation class="relations" reference="../../../relations/relations[25]"/>
+      <relation class="relations" reference="../../../relations/relations[24]"/>
       <phenomenon reference="../../../instances/instance[215]/id"/>
       <creation>
         <calendar>
@@ -12749,7 +12654,7 @@
     <relationInstances>
       <uri>apiua://relationInstance/95lglp8cd4b04phr6pptiualibccmggj</uri>
       <relation class="relations">
-        <uri reference="../../../../relations/relations[97]/uri"/>
+        <uri reference="../../../../relations/relations[93]/uri"/>
         <from reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
         <to reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[12]/data/uri"/>
         <name>bedingt</name>
@@ -12770,7 +12675,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/loo9is72s96it7l4lplak20mi0dk8aab</uri>
-      <relation class="relations" reference="../../../relations/relations[120]"/>
+      <relation class="relations" reference="../../../relations/relations[116]"/>
       <phenomenon reference="../../../instances/instance[178]/id"/>
       <creation>
         <calendar>
@@ -12781,7 +12686,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/up1dbvh26u0pegedo65404kh5f11g9an</uri>
-      <relation class="relations" reference="../../../relations/relations[55]"/>
+      <relation class="relations" reference="../../../relations/relations[52]"/>
       <phenomenon reference="../../relationInstances[2]/phenomenon"/>
       <creation>
         <calendar>
@@ -12791,19 +12696,8 @@
       </creation>
     </relationInstances>
     <relationInstances>
-      <uri>apiua://relationInstance/ioaebtaj11gcpi3o8l5ls8d4b8nqc91u</uri>
-      <relation class="relations" reference="../../../relations/relations[96]"/>
-      <phenomenon reference="../../relationInstances[12]/phenomenon"/>
-      <creation>
-        <calendar>
-          <time>1420502308951</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </relationInstances>
-    <relationInstances>
       <uri>apiua://relationInstance/ggor521u18vr3dggmaurg8vp6m50fe29</uri>
-      <relation class="relations" reference="../../../relations/relations[99]"/>
+      <relation class="relations" reference="../../../relations/relations[95]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:05.890+02:00/personal</phenomenon>
       <creation>
         <calendar>
@@ -12814,8 +12708,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/csgsgt000gtd1cve6fp3is9frc1oq283</uri>
-      <relation class="relations" reference="../../../relations/relations[67]"/>
-      <phenomenon reference="../../relationInstances[16]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[64]"/>
+      <phenomenon reference="../../relationInstances[15]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418698208463</time>
@@ -12825,8 +12719,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/85d8ugbr90ncmae47hi9d25qt0u1e2df</uri>
-      <relation class="relations" reference="../../../relations/relations[86]"/>
-      <phenomenon reference="../../relationInstances[12]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[83]"/>
+      <phenomenon>apiua://survey/cd/2013-09-19T11:51:16.616+02:00/roleExpressiveness</phenomenon>
       <creation>
         <calendar>
           <time>1420501836527</time>
@@ -12836,7 +12730,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/jjofdeojie81ao2pknc01e5ibcrehbhs</uri>
-      <relation class="relations" reference="../../../relations/relations[34]"/>
+      <relation class="relations" reference="../../../relations/relations[33]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:50:13.425+02:00/workStepUnit</phenomenon>
       <creation>
         <calendar>
@@ -12847,7 +12741,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/7lea6rt7bn55ht9462m0e9kr2o5rtle5</uri>
-      <relation class="relations" reference="../../../relations/relations[88]"/>
+      <relation class="relations" reference="../../../relations/relations[85]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/personal</phenomenon>
       <creation>
         <calendar>
@@ -12858,7 +12752,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/j61noretnvrev1neg9m3j70kml9dct3e</uri>
-      <relation class="relations" reference="../../../relations/relations[22]"/>
+      <relation class="relations" reference="../../../relations/relations[21]"/>
       <phenomenon reference="../../../instances/instance[171]/id"/>
       <creation>
         <calendar>
@@ -12869,7 +12763,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/snu972akgn6b0i1039629oa7ruvvkja6</uri>
-      <relation class="relations" reference="../../../relations/relations[112]"/>
+      <relation class="relations" reference="../../../relations/relations[108]"/>
       <phenomenon reference="../../../instances/instance[393]/id"/>
       <creation>
         <calendar>
@@ -12880,7 +12774,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/mnntmu7oft31icrlk6j8es48cgl3um5p</uri>
-      <relation class="relations" reference="../../../relations/relations[10]"/>
+      <relation class="relations" reference="../../../relations/relations[9]"/>
       <phenomenon reference="../../../instances/instance[175]/id"/>
       <creation>
         <calendar>
@@ -12891,7 +12785,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/aouq9qvubjhhtl6eppi1mnet19pai12t</uri>
-      <relation class="relations" reference="../../../relations/relations[32]"/>
+      <relation class="relations" reference="../../../relations/relations[31]"/>
       <phenomenon reference="../../../instances/instance[327]/id"/>
       <creation>
         <calendar>
@@ -12901,19 +12795,8 @@
       </creation>
     </relationInstances>
     <relationInstances>
-      <uri>apiua://relationInstance/tmshas608pqj840bvjvcoso3f7fic5la</uri>
-      <relation class="relations" reference="../../../relations/relations[90]"/>
-      <phenomenon reference="../../relationInstances[12]/phenomenon"/>
-      <creation>
-        <calendar>
-          <time>1420502401936</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </relationInstances>
-    <relationInstances>
       <uri>apiua://relationInstance/upcdj543gengj6lqf30hjbkcdmu8vdsc</uri>
-      <relation class="relations" reference="../../../relations/relations[13]"/>
+      <relation class="relations" reference="../../../relations/relations[12]"/>
       <phenomenon>apiua://survey/cd/2013-09-19T11:51:16.616+02:00/typicalProducts</phenomenon>
       <creation>
         <calendar>
@@ -12924,7 +12807,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/hie77a9jeqq11n3r65g67dauiaugh66d</uri>
-      <relation class="relations" reference="../../../relations/relations[104]"/>
+      <relation class="relations" reference="../../../relations/relations[100]"/>
       <phenomenon>apiua://survey/cd/2013-09-19T11:51:16.616+02:00/hardMentalOperations</phenomenon>
       <creation>
         <calendar>
@@ -12935,7 +12818,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/hldv5tqqtvg03dstcae74bmkrh9custs</uri>
-      <relation class="relations" reference="../../../relations/relations[116]"/>
+      <relation class="relations" reference="../../../relations/relations[112]"/>
       <phenomenon reference="../../relationInstances[7]/phenomenon"/>
       <creation>
         <calendar>
@@ -12957,8 +12840,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/stc7188g5959b3li7kcj49mr11r0gnmm</uri>
-      <relation class="relations" reference="../../../relations/relations[48]"/>
-      <phenomenon reference="../../relationInstances[15]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[45]"/>
+      <phenomenon reference="../../relationInstances[14]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420432295075</time>
@@ -12968,7 +12851,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/m8rau8m0hqnifdqipt9rjhbm83g3i6u9</uri>
-      <relation class="relations" reference="../../../relations/relations[70]"/>
+      <relation class="relations" reference="../../../relations/relations[67]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:41:31.929+02:00/roleExpressiveness</phenomenon>
       <creation>
         <calendar>
@@ -12979,8 +12862,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/4g7bgevi914ot95qj2flvadd0rb5es16</uri>
-      <relation class="relations" reference="../../../relations/relations[109]"/>
-      <phenomenon reference="../../relationInstances[15]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[105]"/>
+      <phenomenon reference="../../relationInstances[14]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420432452573</time>
@@ -12990,7 +12873,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/o8cuq1jc4c3ijk15uir33fq2c5u28ghr</uri>
-      <relation class="relations" reference="../../../relations/relations[27]"/>
+      <relation class="relations" reference="../../../relations/relations[26]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:44:46.060+02:00/learningStyle</phenomenon>
       <creation>
         <calendar>
@@ -13001,7 +12884,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/rrgb1add8paisvsllp7hlra4qsk1dng2</uri>
-      <relation class="relations" reference="../../../relations/relations[30]"/>
+      <relation class="relations" reference="../../../relations/relations[29]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/proficiency</phenomenon>
       <creation>
         <calendar>
@@ -13012,7 +12895,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/3fgeqogd2d71dldit754atjobau42gep</uri>
-      <relation class="relations" reference="../../../relations/relations[115]"/>
+      <relation class="relations" reference="../../../relations/relations[111]"/>
       <phenomenon reference="../../relationInstances[2]/phenomenon"/>
       <creation>
         <calendar>
@@ -13023,7 +12906,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/fdq2mcqb9iil3gpcj7pmnvljnr6070pc</uri>
-      <relation class="relations" reference="../../../relations/relations[52]"/>
+      <relation class="relations" reference="../../../relations/relations[49]"/>
       <phenomenon reference="../../../instances/instance[387]/id"/>
       <creation>
         <calendar>
@@ -13034,8 +12917,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/pv5aceve0d15klp2cp5p5gh0eti8fd98</uri>
-      <relation class="relations" reference="../../../relations/relations[85]"/>
-      <phenomenon reference="../../relationInstances[15]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[82]"/>
+      <phenomenon reference="../../relationInstances[14]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420432822678</time>
@@ -13045,7 +12928,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/e98kpj251j5capqt8aerc46ngpp8uj5r</uri>
-      <relation class="relations" reference="../../../relations/relations[97]"/>
+      <relation class="relations" reference="../../../relations/relations[93]"/>
       <phenomenon reference="../../relationInstances[3]/phenomenon"/>
       <creation>
         <calendar>
@@ -13056,8 +12939,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/t59ltsaqjmc7uvj3kqo5e0cs06guu3ad</uri>
-      <relation class="relations" reference="../../../relations/relations[50]"/>
-      <phenomenon reference="../../relationInstances[33]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[47]"/>
+      <phenomenon reference="../../relationInstances[29]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418698396422</time>
@@ -13067,7 +12950,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/vno04ahd31m6q1329iu36b5riaea78d2</uri>
-      <relation class="relations" reference="../../../relations/relations[93]"/>
+      <relation class="relations" reference="../../../relations/relations[90]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/hardMentalOperations</phenomenon>
       <creation>
         <calendar>
@@ -13078,8 +12961,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/hfci9dpejjk6cpfubointdl17pfrn64f</uri>
-      <relation class="relations" reference="../../../relations/relations[114]"/>
-      <phenomenon reference="../../relationInstances[15]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[110]"/>
+      <phenomenon reference="../../relationInstances[14]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420432654488</time>
@@ -13089,7 +12972,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/966n9uqva7jm14rcj12ngcjt51n8c5vg</uri>
-      <relation class="relations" reference="../../../relations/relations[15]"/>
+      <relation class="relations" reference="../../../relations/relations[14]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/mainPurpose</phenomenon>
       <creation>
         <calendar>
@@ -13100,7 +12983,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/vu7ap6e9rmrho6b7t7n4iqsmunfru26a</uri>
-      <relation class="relations" reference="../../../relations/relations[19]"/>
+      <relation class="relations" reference="../../../relations/relations[18]"/>
       <phenomenon>apiua://survey/cd/2013-09-19T11:51:16.616+02:00/viscosity</phenomenon>
       <creation>
         <calendar>
@@ -13111,7 +12994,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/9219q6vdn1ccrklu2r754puef4ob8sgj</uri>
-      <relation class="relations" reference="../../../relations/relations[84]"/>
+      <relation class="relations" reference="../../../relations/relations[81]"/>
       <phenomenon>apiua://survey/cd/2013-09-19T11:51:16.616+02:00/errorProneness</phenomenon>
       <creation>
         <calendar>
@@ -13123,7 +13006,7 @@
     <relationInstances>
       <uri>apiua://relationInstance/5pmpimhb2b5gadhapk0b2ippn6ebs4p3</uri>
       <relation class="relations">
-        <uri reference="../../../../relations/relations[105]/uri"/>
+        <uri reference="../../../../relations/relations[101]/uri"/>
         <from reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
         <to reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
         <name>bedingt</name>
@@ -13144,8 +13027,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/i3sd14d2p7q19itg1dh57tt1r3p7va7r</uri>
-      <relation class="relations" reference="../../../relations/relations[24]"/>
-      <phenomenon reference="../../relationInstances[60]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[23]"/>
+      <phenomenon reference="../../relationInstances[55]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420423142008</time>
@@ -13155,7 +13038,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/pdl3afc7lrds2n62im0bkqu2jjr84mv3</uri>
-      <relation class="relations" reference="../../../relations/relations[100]"/>
+      <relation class="relations" reference="../../../relations/relations[96]"/>
       <phenomenon reference="../../../instances/instance[168]/id"/>
       <creation>
         <calendar>
@@ -13166,7 +13049,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/nakg1e25u9vpmhmb2887jgov3t85fbbd</uri>
-      <relation class="relations" reference="../../../relations/relations[68]"/>
+      <relation class="relations" reference="../../../relations/relations[65]"/>
       <phenomenon reference="../../../instances/instance[253]/id"/>
       <creation>
         <calendar>
@@ -13177,7 +13060,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/baetfre6cdli5ff04977q73os3nblnot</uri>
-      <relation class="relations" reference="../../../relations/relations[121]"/>
+      <relation class="relations" reference="../../../relations/relations[117]"/>
       <phenomenon reference="../../../instances/instance[164]/id"/>
       <creation>
         <calendar>
@@ -13188,7 +13071,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/2rljua5vbpcb76mt7h493gagb7fegvrb</uri>
-      <relation class="relations" reference="../../../relations/relations[79]"/>
+      <relation class="relations" reference="../../../relations/relations[76]"/>
       <phenomenon reference="../../relationInstances[2]/phenomenon"/>
       <creation>
         <calendar>
@@ -13199,7 +13082,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/j3pfqgpd2pu8hft5vt638t4jkmqe87cc</uri>
-      <relation class="relations" reference="../../../relations/relations[58]"/>
+      <relation class="relations" reference="../../../relations/relations[55]"/>
       <phenomenon reference="../../../instances/instance[151]/id"/>
       <creation>
         <calendar>
@@ -13210,7 +13093,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/8547tfean5o72ga46re9p9ki7kik43c4</uri>
-      <relation class="relations" reference="../../../relations/relations[114]"/>
+      <relation class="relations" reference="../../../relations/relations[110]"/>
       <phenomenon reference="../../relationInstances[2]/phenomenon"/>
       <creation>
         <calendar>
@@ -13221,7 +13104,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/n85i8vt3uoef1qck2aohb8bhs7e8ejch</uri>
-      <relation class="relations" reference="../../../relations/relations[26]"/>
+      <relation class="relations" reference="../../../relations/relations[25]"/>
       <phenomenon reference="../../../instances/instance[259]/id"/>
       <creation>
         <calendar>
@@ -13232,7 +13115,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/105tf18f9ivvaceli7o81ajab05tf73s</uri>
-      <relation class="relations" reference="../../../relations/relations[81]"/>
+      <relation class="relations" reference="../../../relations/relations[78]"/>
       <phenomenon reference="../../../instances/instance[183]/id"/>
       <creation>
         <calendar>
@@ -13243,7 +13126,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/2au5mctfqu9jm0iqjcen581smmfd6j5a</uri>
-      <relation class="relations" reference="../../../relations/relations[45]"/>
+      <relation class="relations" reference="../../../relations/relations[42]"/>
       <phenomenon reference="../../../instances/instance[394]/id"/>
       <creation>
         <calendar>
@@ -13254,7 +13137,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/jc0a8n01ttb8vuli8saf8cti3iuuptdj</uri>
-      <relation class="relations" reference="../../../relations/relations[16]"/>
+      <relation class="relations" reference="../../../relations/relations[15]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/workStepUnit</phenomenon>
       <creation>
         <calendar>
@@ -13265,7 +13148,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/g8brjqmq9mbvshoihom9u9771dku0k4u</uri>
-      <relation class="relations" reference="../../../relations/relations[74]"/>
+      <relation class="relations" reference="../../../relations/relations[71]"/>
       <phenomenon reference="../../../instances/instance[258]/id"/>
       <creation>
         <calendar>
@@ -13276,7 +13159,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/avb5ueevjimo1aj39la53ts5mm7nuab9</uri>
-      <relation class="relations" reference="../../../relations/relations[102]"/>
+      <relation class="relations" reference="../../../relations/relations[98]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:50:37.900+02:00/hardMentalOperations</phenomenon>
       <creation>
         <calendar>
@@ -13287,8 +13170,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/se5doojn3ofs8k7amt6hotb44uql3oa5</uri>
-      <relation class="relations" reference="../../../relations/relations[18]"/>
-      <phenomenon reference="../../relationInstances[37]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[17]"/>
+      <phenomenon reference="../../relationInstances[33]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418793871669</time>
@@ -13298,7 +13181,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/1r63quhi7to8rqm4lamtmlhdetb0ofk0</uri>
-      <relation class="relations" reference="../../../relations/relations[20]"/>
+      <relation class="relations" reference="../../../relations/relations[19]"/>
       <phenomenon reference="../../relationInstances/phenomenon"/>
       <creation>
         <calendar>
@@ -13309,7 +13192,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/le6t16spm56dpitsp5flkboe7b123bmd</uri>
-      <relation class="relations" reference="../../../relations/relations[111]"/>
+      <relation class="relations" reference="../../../relations/relations[107]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/provisionality</phenomenon>
       <creation>
         <calendar>
@@ -13320,8 +13203,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/gqu02j2lk8hrkrhc0ofq87abu4rvqfg7</uri>
-      <relation class="relations" reference="../../../relations/relations[21]"/>
-      <phenomenon reference="../../relationInstances[61]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[20]"/>
+      <phenomenon reference="../../relationInstances[56]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420434919232</time>
@@ -13331,7 +13214,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/2hkk1v1gp6d7veingpflvchouu5qe6do</uri>
-      <relation class="relations" reference="../../../relations/relations[117]"/>
+      <relation class="relations" reference="../../../relations/relations[113]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:50:13.425+02:00/viscosity</phenomenon>
       <creation>
         <calendar>
@@ -13342,7 +13225,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/3jlmbj65cqjjdkcgp9ciahdr9nmcqkb5</uri>
-      <relation class="relations" reference="../../../relations/relations[23]"/>
+      <relation class="relations" reference="../../../relations/relations[22]"/>
       <phenomenon reference="../../../instances/instance[179]/id"/>
       <creation>
         <calendar>
@@ -13353,7 +13236,7 @@
     </relationInstances>
     <relationInstances>
       <uri reference="../../../instances/instance[368]/id"/>
-      <relation class="relations" reference="../../../relations/relations[62]"/>
+      <relation class="relations" reference="../../../relations/relations[59]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:45:54.889+02:00/hardMentalOperations</phenomenon>
       <creation>
         <calendar>
@@ -13364,7 +13247,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/9696rfas8314pl82367kb04ka0op6a57</uri>
-      <relation class="relations" reference="../../../relations/relations[36]"/>
+      <relation class="relations" reference="../../../relations/relations[35]"/>
       <phenomenon reference="../../relationInstances[11]/phenomenon"/>
       <creation>
         <calendar>
@@ -13375,7 +13258,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/lu5rsujo283qgepenm8nim9p8uf245e1</uri>
-      <relation class="relations" reference="../../../relations/relations[107]"/>
+      <relation class="relations" reference="../../../relations/relations[103]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:41:31.929+02:00/roleExpressiveness</phenomenon>
       <creation>
         <calendar>
@@ -13386,8 +13269,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/ude4vfe9in3nl3svt9s3q6q05ichuap6</uri>
-      <relation class="relations" reference="../../../relations/relations[8]"/>
-      <phenomenon reference="../../relationInstances[59]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[7]"/>
+      <phenomenon reference="../../relationInstances[54]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418790109731</time>
@@ -13397,7 +13280,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/2epr1i96ji5dkuuvh4m2do371p7ihm0j</uri>
-      <relation class="relations" reference="../../../relations/relations[14]"/>
+      <relation class="relations" reference="../../../relations/relations[13]"/>
       <phenomenon reference="../../../instances/instance[180]/id"/>
       <creation>
         <calendar>
@@ -13408,8 +13291,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/jk38at4d6ht29u4pt61cf5f3hkphintr</uri>
-      <relation class="relations" reference="../../../relations/relations[63]"/>
-      <phenomenon reference="../../relationInstances[61]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[60]"/>
+      <phenomenon reference="../../relationInstances[56]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420434950316</time>
@@ -13419,8 +13302,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/ip2utjqjvpurb9uus18c3np3u16hsora</uri>
-      <relation class="relations" reference="../../../relations/relations[37]"/>
-      <phenomenon reference="../../relationInstances[26]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[36]"/>
+      <phenomenon reference="../../relationInstances[23]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420422082839</time>
@@ -13430,8 +13313,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/hfd5v77go85721q2fjkdn1m33158k549</uri>
-      <relation class="relations" reference="../../../relations/relations[64]"/>
-      <phenomenon reference="../../relationInstances[17]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[61]"/>
+      <phenomenon reference="../../relationInstances[16]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418791919033</time>
@@ -13441,7 +13324,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/og2sh4m4jrc0353bs5c5l49idgaqs26v</uri>
-      <relation class="relations" reference="../../../relations/relations[28]"/>
+      <relation class="relations" reference="../../../relations/relations[27]"/>
       <phenomenon reference="../../../instances/instance[172]/id"/>
       <creation>
         <calendar>
@@ -13452,7 +13335,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/optiav8glg0mdpd2h4bh00morjbh8lmj</uri>
-      <relation class="relations" reference="../../../relations/relations[87]"/>
+      <relation class="relations" reference="../../../relations/relations[84]"/>
       <phenomenon reference="../../../instances/instance[214]/id"/>
       <creation>
         <calendar>
@@ -13463,8 +13346,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/8tsdm08vutlup5vbof9tskdg0rnn99fk</uri>
-      <relation class="relations" reference="../../../relations/relations[91]"/>
-      <phenomenon reference="../../relationInstances[17]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[88]"/>
+      <phenomenon reference="../../relationInstances[16]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418791814242</time>
@@ -13474,7 +13357,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/avuspk6ki3ecev8spcn0b1e0kqcge3jt</uri>
-      <relation class="relations" reference="../../../relations/relations[57]"/>
+      <relation class="relations" reference="../../../relations/relations[54]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:50:13.425+02:00/hardMentalOperations</phenomenon>
       <creation>
         <calendar>
@@ -13485,8 +13368,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/j95v5oj7e6v9lvoial6ktt8ctkndu7l4</uri>
-      <relation class="relations" reference="../../../relations/relations[113]"/>
-      <phenomenon reference="../../relationInstances[75]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[109]"/>
+      <phenomenon reference="../../relationInstances[70]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420421727338</time>
@@ -13496,8 +13379,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/e32vastgkm3hrqd97j5lqnerkum44g8p</uri>
-      <relation class="relations" reference="../../../relations/relations[90]"/>
-      <phenomenon reference="../../relationInstances[50]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[87]"/>
+      <phenomenon reference="../../relationInstances[45]/phenomenon"/>
       <creation>
         <calendar>
           <time>1417074704463</time>
@@ -13507,8 +13390,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/q81l66gc1dh1b1a3rg5c30fl132jitg2</uri>
-      <relation class="relations" reference="../../../relations/relations[92]"/>
-      <phenomenon reference="../../relationInstances[60]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[89]"/>
+      <phenomenon reference="../../relationInstances[55]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420423205389</time>
@@ -13518,7 +13401,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/c8uas0sn7qt6ijq10tnqki334obmc9i9</uri>
-      <relation class="relations" reference="../../../relations/relations[54]"/>
+      <relation class="relations" reference="../../../relations/relations[51]"/>
       <phenomenon reference="../../../instances/instance[346]/id"/>
       <creation>
         <calendar>
@@ -13529,8 +13412,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/sp72b1tkf4bjdtmmenmama8uk8qj6im4</uri>
-      <relation class="relations" reference="../../../relations/relations[123]"/>
-      <phenomenon reference="../../relationInstances[80]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[119]"/>
+      <phenomenon reference="../../relationInstances[75]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418966290004</time>
@@ -13540,7 +13423,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/mb2p8ldtj2i2842kbck35oun5er93f7t</uri>
-      <relation class="relations" reference="../../../relations/relations[73]"/>
+      <relation class="relations" reference="../../../relations/relations[70]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/provisionality</phenomenon>
       <creation>
         <calendar>
@@ -13551,7 +13434,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/phbjdapc0k7loku6m29vd3f12kjv3sds</uri>
-      <relation class="relations" reference="../../../relations/relations[46]"/>
+      <relation class="relations" reference="../../../relations/relations[43]"/>
       <phenomenon reference="../../../instances/instance[287]/id"/>
       <creation>
         <calendar>
@@ -13562,7 +13445,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/uad32t3m5ahofi61dl190ud6b0l0601g</uri>
-      <relation class="relations" reference="../../../relations/relations[95]"/>
+      <relation class="relations" reference="../../../relations/relations[92]"/>
       <phenomenon reference="../../relationInstances[2]/phenomenon"/>
       <creation>
         <calendar>
@@ -13573,7 +13456,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/3pgcv1b2a8h96tqtshtu8s6abc56r51l</uri>
-      <relation class="relations" reference="../../../relations/relations[9]"/>
+      <relation class="relations" reference="../../../relations/relations[8]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/typicalProducts</phenomenon>
       <creation>
         <calendar>
@@ -13584,7 +13467,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/g97pemttv8usg56d1ugttu9sc37e8qd6</uri>
-      <relation class="relations" reference="../../../relations/relations[82]"/>
+      <relation class="relations" reference="../../../relations/relations[79]"/>
       <phenomenon reference="../../../instances/instance[184]/id"/>
       <creation>
         <calendar>
@@ -13595,8 +13478,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/mq2rkpi3v4pd3avui1en27unarfht5t0</uri>
-      <relation class="relations" reference="../../../relations/relations[115]"/>
-      <phenomenon reference="../../relationInstances[43]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[111]"/>
+      <phenomenon reference="../../relationInstances[38]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420422697297</time>
@@ -13606,7 +13489,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/n5omcmpabndvgmp1ag2o1mjn27ej69c2</uri>
-      <relation class="relations" reference="../../../relations/relations[31]"/>
+      <relation class="relations" reference="../../../relations/relations[30]"/>
       <phenomenon reference="../../relationInstances[11]/phenomenon"/>
       <creation>
         <calendar>
@@ -13617,8 +13500,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/h62kgorh41i43qhm35cohe3g0nmoou0l</uri>
-      <relation class="relations" reference="../../../relations/relations[60]"/>
-      <phenomenon reference="../../relationInstances[17]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[57]"/>
+      <phenomenon reference="../../relationInstances[16]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418792190184</time>
@@ -13628,8 +13511,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/lmjurlj08pets4q8v6ccqpp41426s2nd</uri>
-      <relation class="relations" reference="../../../relations/relations[114]"/>
-      <phenomenon reference="../../relationInstances[22]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[110]"/>
+      <phenomenon reference="../../relationInstances[19]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420434238552</time>
@@ -13639,8 +13522,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/ah91ssiuntv9pdjjbp7ohfe8vmkummh6</uri>
-      <relation class="relations" reference="../../../relations/relations[17]"/>
-      <phenomenon reference="../../relationInstances[80]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[16]"/>
+      <phenomenon reference="../../relationInstances[75]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418966021218</time>
@@ -13650,7 +13533,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/km7os53ci2lol0kpi0isjkndaa979gm5</uri>
-      <relation class="relations" reference="../../../relations/relations[49]"/>
+      <relation class="relations" reference="../../../relations/relations[46]"/>
       <phenomenon reference="../../../instances/instance[181]/id"/>
       <creation>
         <calendar>
@@ -13661,7 +13544,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/5gkl50o5ujq87u3s51hm23a9gddafcb2</uri>
-      <relation class="relations" reference="../../../relations/relations[122]"/>
+      <relation class="relations" reference="../../../relations/relations[118]"/>
       <phenomenon>apiua://survey/cd/2013-09-18T17:46:55.042+02:00/errorProneness</phenomenon>
       <creation>
         <calendar>
@@ -13672,7 +13555,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/6s8ch0teg6esqm6k034is7iimjle21b4</uri>
-      <relation class="relations" reference="../../../relations/relations[51]"/>
+      <relation class="relations" reference="../../../relations/relations[48]"/>
       <phenomenon reference="../../../instances/instance[256]/id"/>
       <creation>
         <calendar>
@@ -13683,7 +13566,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/hjhul2imhplevg5csp6639fq5bdcgnir</uri>
-      <relation class="relations" reference="../../../relations/relations[101]"/>
+      <relation class="relations" reference="../../../relations/relations[97]"/>
       <phenomenon reference="../../../instances/instance[362]/id"/>
       <creation>
         <calendar>
@@ -13705,8 +13588,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/gliqf9aofrb216f3bf50lnhn12kptfbv</uri>
-      <relation class="relations" reference="../../../relations/relations[117]"/>
-      <phenomenon reference="../../relationInstances[61]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[113]"/>
+      <phenomenon reference="../../relationInstances[56]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420435002173</time>
@@ -13716,7 +13599,7 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/c4292opquq5845cugbac3sldomgo1u0n</uri>
-      <relation class="relations" reference="../../../relations/relations[89]"/>
+      <relation class="relations" reference="../../../relations/relations[86]"/>
       <phenomenon reference="../../relationInstances/phenomenon"/>
       <creation>
         <calendar>
@@ -13727,8 +13610,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/idtr0lf0cc4nrsbc2in61jdu2bjdsmsa</uri>
-      <relation class="relations" reference="../../../relations/relations[108]"/>
-      <phenomenon reference="../../relationInstances[50]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[104]"/>
+      <phenomenon reference="../../relationInstances[45]/phenomenon"/>
       <creation>
         <calendar>
           <time>1417074685792</time>
@@ -13738,8 +13621,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/2u7h7r1v85d9v1mpq7jkrsq6ohi6ibp0</uri>
-      <relation class="relations" reference="../../../relations/relations[59]"/>
-      <phenomenon reference="../../relationInstances[80]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[56]"/>
+      <phenomenon reference="../../relationInstances[75]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418966073207</time>
@@ -13749,8 +13632,8 @@
     </relationInstances>
     <relationInstances>
       <uri>apiua://relationInstance/jbe6mte38cga839003mqvqed899oude4</uri>
-      <relation class="relations" reference="../../../relations/relations[77]"/>
-      <phenomenon reference="../../relationInstances[80]/phenomenon"/>
+      <relation class="relations" reference="../../../relations/relations[74]"/>
+      <phenomenon reference="../../relationInstances[75]/phenomenon"/>
       <creation>
         <calendar>
           <time>1418966122211</time>
@@ -13759,19 +13642,8 @@
       </creation>
     </relationInstances>
     <relationInstances>
-      <uri>apiua://relationInstance/tlduqh6foo2megls33jucqvlcesef767</uri>
-      <relation class="relations" reference="../../../relations/relations[7]"/>
-      <phenomenon reference="../../relationInstances[12]/phenomenon"/>
-      <creation>
-        <calendar>
-          <time>1420502152470</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </relationInstances>
-    <relationInstances>
       <uri>apiua://relationInstance/vt61ph6haiccbo4evdr1550r6ega6eqh</uri>
-      <relation class="relations" reference="../../../relations/relations[69]"/>
+      <relation class="relations" reference="../../../relations/relations[66]"/>
       <phenomenon reference="../../../instances/instance[242]/id"/>
       <creation>
         <calendar>
@@ -13783,7 +13655,7 @@
     <relationInstances>
       <uri>apiua://relationInstance/bptlggt1rhtm39k3r6m7but34sk4k3km</uri>
       <relation class="relations" reference="../../../relations/relations[4]"/>
-      <phenomenon reference="../../relationInstances[15]/phenomenon"/>
+      <phenomenon reference="../../relationInstances[14]/phenomenon"/>
       <creation>
         <calendar>
           <time>1420432443232</time>
@@ -15062,15 +14934,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
-      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.OrdinalDimension>
-        <ordinals class="java.util.Arrays$ArrayList">
-          <a class="string-array">
-            <string>Hoch</string>
-            <string>Mittel</string>
-            <string>Gering</string>
-          </a>
-        </ordinals>
-      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.OrdinalDimension>
+      <null/>
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>

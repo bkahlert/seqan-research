@@ -4053,7 +4053,7 @@
                   <red>0.27058823529411763</red>
                   <green>0.8784313725490196</green>
                   <blue>0.396078431372549</blue>
-                  <alpha>0.27450980392156865</alpha>
+                  <alpha>0.0</alpha>
                 </color>
                 <creation>
                   <calendar>
@@ -5941,7 +5941,7 @@
               <red>0.2235294117647059</red>
               <green>0.7803921568627451</green>
               <blue>0.5529411764705883</blue>
-              <alpha>0.27450980392156865</alpha>
+              <alpha>1.0</alpha>
             </color>
             <creation>
               <calendar>
@@ -15062,15 +15062,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
-      <de.fu__berlin.imp.apiua.groundedtheory.model.dimension.OrdinalDimension>
-        <ordinals class="java.util.Arrays$ArrayList">
-          <a class="string-array">
-            <string>Hoch</string>
-            <string>Mittel</string>
-            <string>Gering</string>
-          </a>
-        </ordinals>
-      </de.fu__berlin.imp.apiua.groundedtheory.model.dimension.OrdinalDimension>
+      <null/>
     </entry>
     <entry>
       <de.fu__berlin.imp.apiua.core.model.URI reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[10]/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>

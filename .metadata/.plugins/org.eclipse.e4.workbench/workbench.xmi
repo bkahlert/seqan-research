@@ -169,7 +169,7 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_JA5jx5AAEeSoHLezXwhvIg" elementId="org.eclipse.ui.editorss" toBeRendered="false" containerData="5000" ref="_JA5j1pAAEeSoHLezXwhvIg"/>
             </children>
           </children>
-          <windows xsi:type="basic:TrimmedWindow" xmi:id="_MbknIJSAEeS26L-nAbY9-Q" selectedElement="_JA5jvZAAEeSoHLezXwhvIg" x="17" y="-1057" width="1545" height="931">
+          <windows xsi:type="basic:TrimmedWindow" xmi:id="_MbknIJSAEeS26L-nAbY9-Q" selectedElement="_JA5jvZAAEeSoHLezXwhvIg" x="37" y="-1057" width="1545" height="931">
             <tags>shellMaximized</tags>
             <children xsi:type="basic:PartStack" xmi:id="_JA5jvZAAEeSoHLezXwhvIg" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoViewMStack" containerData="5000" selectedElement="_JA5jvpAAEeSoHLezXwhvIg">
               <tags>newtablook</tags>
@@ -493,7 +493,7 @@
       </menus>
       <toolbar xmi:id="_JA5kJZAAEeSoHLezXwhvIg" elementId="org.eclipse.ui.views.ProgressView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_JA5kJpAAEeSoHLezXwhvIg" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Associated Codes: 7c79 - roleExpressiveness" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_JA5kJpAAEeSoHLezXwhvIg" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Associated Codes: 7c79 - provisionality" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/view/code_misc.png" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
@@ -591,7 +591,7 @@
       </menus>
       <toolbar xmi:id="_JA5kP5AAEeSoHLezXwhvIg" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.CodeInstancesView"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_JA5kQJAAEeSoHLezXwhvIg" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Memo: 7c79 - roleExpressiveness  |  &#x2192; Unintuitivit&#xe4;t  |  &#x2192; Blindes Kopieren, ohne zu verstehen  |  &#x2192; Erwartete Benutzerfreundlichkeit  |  &#x2192; Frustration / Resignation  |  &#x2192; Unbekannte Konstrukte / LET  |  &#x2192; Lernkurve / Lernaufwand  |  &#x2192; Erkundungs- und Verst&#xe4;ndnisaufwand" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/ovr16/memo.png" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_JA5kQJAAEeSoHLezXwhvIg" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.PinnableMemoView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Memo: 7c79 - provisionality  |  &#x2192; Template Programming Typing -> Hard to get running / &quot;messy&quot;  |  &#x2192; Frustration / Resignation  |  &#x2192; Performanceeindruck  |  &#x2192; Experimentierm&#xf6;glichkeiten (Provisionality)" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/ovr16/memo.png" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
@@ -1335,7 +1335,7 @@
       </menus>
       <toolbar xmi:id="_JA6LFZAAEeSoHLezXwhvIg" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.AxialCodingView"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_JA6LG5AAEeSoHLezXwhvIg" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Dimension: 7c79 - roleExpressiveness" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/ovr16/dimensionalized.png" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_JA6LG5AAEeSoHLezXwhvIg" elementId="de.fu_berlin.imp.apiua.groundedtheory.views.DimensionView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Dimension: 7c79 - provisionality" iconURI="platform:/plugin/de.fu_berlin.imp.apiua.groundedtheory/icons/ovr16/dimensionalized.png" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Usability Analysis</tags>
@@ -1791,7 +1791,7 @@
       <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
       <tags>platform:cocoa</tags>
     </bindings>
-    <bindings xmi:id="_ZT_hsZSZEeShxMVL0Ra9Vw" keySequence="COMMAND+CTRL+F" command="_JA6yuJAAEeSoHLezXwhvIg"/>
+    <bindings xmi:id="_YGi-QZU1EeSDdepaXiL4-Q" keySequence="COMMAND+CTRL+F" command="_JA6yuJAAEeSoHLezXwhvIg"/>
   </bindingTables>
   <bindingTables xmi:id="_JA6Lu5AAEeSoHLezXwhvIg" elementId="org.eclipse.ui.textEditorScope" bindingContext="_JA6MAJAAEeSoHLezXwhvIg">
     <bindings xmi:id="_JA6LvJAAEeSoHLezXwhvIg" keySequence="F2" command="_JA6NNZAAEeSoHLezXwhvIg">
@@ -1963,7 +1963,7 @@
     </bindings>
   </bindingTables>
   <bindingTables xmi:id="_JA6L75AAEeSoHLezXwhvIg" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_JA6MAZAAEeSoHLezXwhvIg">
-    <bindings xmi:id="_ZUAIwJSZEeShxMVL0Ra9Vw" keySequence="M1+W" command="_JA6yupAAEeSoHLezXwhvIg"/>
+    <bindings xmi:id="_YGi-QpU1EeSDdepaXiL4-Q" keySequence="M1+W" command="_JA6yupAAEeSoHLezXwhvIg"/>
   </bindingTables>
   <bindingTables xmi:id="_JA6L8ZAAEeSoHLezXwhvIg" bindingContext="_JA6MBpAAEeSoHLezXwhvIg"/>
   <bindingTables xmi:id="_JA6L8pAAEeSoHLezXwhvIg" bindingContext="_JA6MB5AAEeSoHLezXwhvIg"/>
