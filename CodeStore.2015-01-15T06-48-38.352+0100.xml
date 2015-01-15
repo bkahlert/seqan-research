@@ -5820,6 +5820,26 @@
         </creation>
       </data>
     </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children/>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854775182</uri>
+        <id>-9223372036854775182</id>
+        <caption>XYZ</caption>
+        <color>
+          <red>0.2156509662688605</red>
+          <green>0.5796075967278906</green>
+          <blue>0.7647411905938847</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1421286485449</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
   </codeTrees>
   <instances>
     <instance>
@@ -11098,6 +11118,90 @@
       <creation>
         <calendar>
           <time>1420789143123</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
+      <uri>apiua://codeinstance/-9223372036854775180</uri>
+      <codeInstanceId>-9223372036854775180</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/data"/>
+      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/6</id>
+      <creation>
+        <calendar>
+          <time>1421294140383</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
+      <uri>apiua://codeinstance/-9223372036854775179</uri>
+      <codeInstanceId>-9223372036854775179</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/data"/>
+      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/2</id>
+      <creation>
+        <calendar>
+          <time>1421299843866</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
+      <uri>apiua://codeinstance/-9223372036854775178</uri>
+      <codeInstanceId>-9223372036854775178</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/data"/>
+      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/1</id>
+      <creation>
+        <calendar>
+          <time>1421300256907</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
+      <uri>apiua://codeinstance/-9223372036854775177</uri>
+      <codeInstanceId>-9223372036854775177</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/data"/>
+      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/0</id>
+      <creation>
+        <calendar>
+          <time>1421300485019</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
+      <uri>apiua://codeinstance/-9223372036854775176</uri>
+      <codeInstanceId>-9223372036854775176</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/data"/>
+      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/8</id>
+      <creation>
+        <calendar>
+          <time>1421300764503</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
+      <uri>apiua://codeinstance/-9223372036854775175</uri>
+      <codeInstanceId>-9223372036854775175</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[8]/data"/>
+      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/5</id>
+      <creation>
+        <calendar>
+          <time>1421300902224</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </instance>
+    <instance>
+      <uri>apiua://codeinstance/-9223372036854775174</uri>
+      <codeInstanceId>-9223372036854775174</codeInstanceId>
+      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/data"/>
+      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/5</id>
+      <creation>
+        <calendar>
+          <time>1421300907689</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
