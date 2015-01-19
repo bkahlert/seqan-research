@@ -746,10 +746,6 @@
     <long>-9223372036854775065</long>
     <long>-9223372036854775064</long>
     <long>-9223372036854775063</long>
-    <long>-9223372036854775062</long>
-    <long>-9223372036854775061</long>
-    <long>-9223372036854775060</long>
-    <long>-9223372036854775059</long>
   </createdIDs>
   <createdCodeInstanceIDs>
     <long>-9223372036854775808</long>
@@ -1497,10 +1493,6 @@
     <long>-9223372036854775065</long>
     <long>-9223372036854775064</long>
     <long>-9223372036854775063</long>
-    <long>-9223372036854775062</long>
-    <long>-9223372036854775061</long>
-    <long>-9223372036854775060</long>
-    <long>-9223372036854775059</long>
   </createdCodeInstanceIDs>
   <codeTrees>
     <com.bkahlert.nebula.data.TreeNode>
@@ -12986,60 +12978,12 @@
       </creation>
     </instance>
     <instance>
-      <uri>apiua://codeinstance/-9223372036854775063</uri>
       <codeInstanceId>-9223372036854775063</codeInstanceId>
       <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data"/>
       <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/92</id>
       <creation>
         <calendar>
           <time>1421651710701</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775062</uri>
-      <codeInstanceId>-9223372036854775062</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[6]/children/com.bkahlert.nebula.data.TreeNode[2]/data"/>
-      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/99</id>
-      <creation>
-        <calendar>
-          <time>1421651872387</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775061</uri>
-      <codeInstanceId>-9223372036854775061</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[20]/data"/>
-      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/100</id>
-      <creation>
-        <calendar>
-          <time>1421651898611</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854775060</uri>
-      <codeInstanceId>-9223372036854775060</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[20]/data"/>
-      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/101</id>
-      <creation>
-        <calendar>
-          <time>1421652019325</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
-    <instance>
-      <codeInstanceId>-9223372036854775059</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[20]/data"/>
-      <id>apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/103</id>
-      <creation>
-        <calendar>
-          <time>1421652022474</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
