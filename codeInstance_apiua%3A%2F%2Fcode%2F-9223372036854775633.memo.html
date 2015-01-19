@@ -1,0 +1,72 @@
+<p>SeqAns API entspricht nicht den Erwartungen der Anwender. Sie bem&auml;ngeln, dass die API nicht wie die STL ist.</p>
+
+<p>Obwohl STL auf Template-basiert ist.&nbsp;<a class="special" href="apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/11">7i: STL is templatized (&ldquo;main issue&rdquo;, &ldquo;expected to...</a>&nbsp;</p>
+
+<p>Geil! Wurde nur in Gruppendiskussion ermittelt. Vorteil der breiten Datenerhebung!</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<td><strong>Unterschied</strong></td>
+			<th><strong>Quelle</strong></th>
+			<th><strong>STL</strong></th>
+			<th><strong>SeqAn</strong></th>
+		</tr>
+		<tr>
+			<td>R&uuml;ckgabetyp</td>
+			<td>
+			<ul>
+				<li>Ren&eacute; Rahn</li>
+			</ul>
+			</td>
+			<td>immer gleich</td>
+			<td>variabel</td>
+		</tr>
+		<tr>
+			<td>Iterator-Syntax</td>
+			<td>
+			<ul>
+				<li>Manuel Holtgrewe</li>
+				<li>Ren&eacute; Rahn</li>
+				<li><span style="line-height: 14.559999465942383px;">&nbsp;</span><a class="special" href="apiua://code/-9223372036854775516">Arbeit mit Iteratoren</a></li>
+				<li><a href="http://www.cprogramming.com/tutorial/stl/iterators.html">http://www.cprogramming.com/tutorial/stl/iterators.html</a>&nbsp;</li>
+				<li><a class="special" href="apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/4">7i:&nbsp;terators also members</a></li>
+			</ul>
+			</td>
+			<td>MyType::Iterator</td>
+			<td>
+			<p>Iterator&lt;MyType&gt;</p>
+
+			<p>Achtung!<br />
+			Iterator ist Metafunktion&nbsp;Klasse ist Iter<br />
+			Aber: Implementierungen haben das Namensschema TypeIterator, also z.B. Dna5Iterator und hatte bessere Auffindbarkeit in Doku als Iterator</p>
+			</td>
+		</tr>
+		<tr>
+			<td>Iterator-Modifikation</td>
+			<td>
+			<ul>
+				<li><a class="special" href="apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/5">7i:&nbsp;Modification of iterators in very intuitive</a>&nbsp;</li>
+			</ul>
+			</td>
+			<td>it + 2</td>
+			<td>
+			<p>it = begin(it)<br />
+			goNext(it)<br />
+			goNext(it)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>Member-Funktionen</td>
+			<td>
+			<ul>
+				<li><a class="special" href="apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/3">7i:&nbsp;containers, &hellip;, &hellip;, &quot;You expect to have all thes...</a>&nbsp;</li>
+				<li><a class="special" href="apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/4">7i:&nbsp;terators also members</a>&nbsp;</li>
+				<li><a href="http://www.cprogramming.com/tutorial/stl/iterators.html">http://www.cprogramming.com/tutorial/stl/iterators.html</a>&nbsp;</li>
+			</ul>
+			</td>
+			<td>nur sehr wenige Ausnahmen; praktisch immer global</td>
+			<td>die meisten als Member implementiert</td>
+		</tr>
+	</tbody>
+</table>
