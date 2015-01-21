@@ -1,7 +1,24 @@
 <p>&Auml;hnliche Typen wie String, StringSet und array (z.B. SuffixArray) k&ouml;nnen nicht unterschieden werden.</p>
 
-<p>Bei&nbsp;<a class="special" href="apiua://survey/cd/2013-09-18T17:44:46.060+02:00/hardMentalOperations">d3b2 - hardMentalOperations</a>&nbsp;scheint es um Container zu gehen.</p>
-
-<p><span style="line-height: 14.559999465942383px;">Ursache:&nbsp;</span><a class="special" href="apiua://code/-9223372036854775481">Fehlendes Benennungschema</a></p>
+<p><span style="line-height: 14.559999465942383px;">Ursache:&nbsp;</span><a class="special" href="apiua://code/-9223372036854775481">Fehlendes Benennungschema</a>&nbsp;(bereits kodiert)</p>
 
 <p>Im Unterschied zur Ununterscheidbarkeit von LET geht es hier um die gleiche LET.</p>
+
+<p><span style="line-height: 14.559999465942383px;">Bei&nbsp;</span><a class="special" href="d3b2 - hardMentalOperations">d3b2 - hardMentalOperations</a><span style="line-height: 14.559999465942383px;">&nbsp;scheint es um Container zu gehen.</span></p>
+
+<h1><span style="line-height: 14.559999465942383px;">Beispiel String&lt;String&gt; vs StringSet</span></h1>
+
+<p>&ldquo;I just don&rsquo;t see the difference between StringSet and String of Strings&rdquo;,&nbsp;<a class="special" href="apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/142">Alien: &quot;I just don&#39;t see the difference between St...</a>&nbsp;</p>
+
+<p>Gleiche Person:</p>
+
+<p>- &ldquo;I opened the documentation&nbsp;[and] just didn&rsquo;t get the usage of StringSet. What you could do with StringSets you could also have done with String of Strings.&quot;</p>
+
+<p>Antworten von SeqAn-Entwicklern auch nicht deutlich. Ungef&auml;hre Zusammenfassung: An manchen Stellen braucht man sie und an manchen nicht unbedingt.</p>
+
+<p><span style="line-height: 14.559999465942383px;">Aber: Keine Standardempfehlung immer StringSets zu nehmen, denn es gibt auch Ausnahmen. Zumindest wird auf&nbsp;</span><a href="http://seqan.readthedocs.org/en/latest/Tutorial/SimpleRnaSeq.html" style="line-height: 1.3em;">http://seqan.readthedocs.org/en/latest/Tutorial/SimpleRnaSeq.html</a>&nbsp;zur Speicherung von Intervallen ein String&lt;String&gt; verwendet, was bei <a class="special" href="apiua://groupDiscussion/workshop%2712+-+Interview+Gruppendiskussion+%282012-09-06T13-01-28%2B0200%29.html/li/141">Kuchenbecker: [The latter] is not even true since ...</a>&nbsp;&nbsp;f&uuml;r Irritationen f&uuml;hrt.</p>
+
+<pre style="box-sizing: border-box; font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace; font-size: 12px; white-space: pre; margin-top: 0px; margin-bottom: 0px; padding: 12px; line-height: 1.5; color: rgb(64, 64, 64);">
+<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">String</span><span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">String</span><span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">TInterval</span><span class="o" style="box-sizing: border-box; font-weight: bold;">&gt;</span> <span class="o" style="box-sizing: border-box; font-weight: bold;">&gt;</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">intervals</span><span class="p" style="box-sizing: border-box;">;</span></pre>
+
+<p>&nbsp;</p>
