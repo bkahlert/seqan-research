@@ -10388,3 +10388,1247 @@ Caused by: java.lang.OutOfMemoryError: unable to create new native thread
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
 	... 24 more
+!SESSION 2015-02-17 13:39:11.493 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/apiua-workspace/../seqan-research -dev file:/Users/bkahlert/development/apiua-workspace/.metadata/.plugins/org.eclipse.pde.core/APIUA/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.ui 4 4 2015-02-17 13:40:30.369
+!MESSAGE Conflicting handlers for org.eclipse.compare.selectNextChange: {ActionHandler(org.eclipse.compare.contentmergeviewer.TextMergeViewer$37@e594c46)} vs {ActionHandler(org.eclipse.compare.contentmergeviewer.TextMergeViewer$37@1cd853ee)}
+
+!ENTRY org.eclipse.ui 4 4 2015-02-17 13:40:30.372
+!MESSAGE Conflicting handlers for org.eclipse.compare.selectPreviousChange: {ActionHandler(org.eclipse.compare.contentmergeviewer.TextMergeViewer$38@4d20cbb5)} vs {ActionHandler(org.eclipse.compare.contentmergeviewer.TextMergeViewer$38@74eae1e0)}
+
+!ENTRY org.eclipse.ui 4 4 2015-02-17 14:22:49.760
+!MESSAGE Conflicting handlers for org.eclipse.compare.selectNextChange: {ActionHandler(org.eclipse.compare.contentmergeviewer.TextMergeViewer$37@e594c46)} vs {ActionHandler(org.eclipse.compare.contentmergeviewer.TextMergeViewer$37@1cd853ee)}
+
+!ENTRY org.eclipse.ui 4 4 2015-02-17 14:22:49.762
+!MESSAGE Conflicting handlers for org.eclipse.compare.selectPreviousChange: {ActionHandler(org.eclipse.compare.contentmergeviewer.TextMergeViewer$38@4d20cbb5)} vs {ActionHandler(org.eclipse.compare.contentmergeviewer.TextMergeViewer$38@74eae1e0)}
+!SESSION 2015-02-25 02:16:04.378 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/apiua-workspace/../seqan-research -dev file:/Users/bkahlert/development/apiua-workspace/.metadata/.plugins/org.eclipse.pde.core/APIUA/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.037
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.038
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.039
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.039
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.039
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.039
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.039
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.039
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.039
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.040
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.040
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.040
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.040
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.040
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.040
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.040
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.040
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.041
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.041
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.041
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.041
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.041
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.041
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.041
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.041
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.041
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.042
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.042
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.042
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.042
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.042
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.042
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.043
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.043
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.043
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.043
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.043
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.043
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.044
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.044
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.044
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.044
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.044
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.044
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.045
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.045
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.045
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-02-25 02:27:40.045
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.bkahlert.nebula.widgets.editor.Editor$2
+!SESSION 2015-03-03 18:56:58.496 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/apiua-workspace/../seqan-research -dev file:/Users/bkahlert/development/apiua-workspace/.metadata/.plugins/org.eclipse.pde.core/APIUA/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 4 0 2015-03-03 18:56:59.532
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.doclog [49]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.diff 4 0 2015-03-03 18:56:59.537
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.diff [126]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.app 0 0 2015-03-03 18:56:59.941
+!MESSAGE Product de.fu_berlin.imp.apiua.product could not be found.
+
+!ENTRY de.fu_berlin.imp.apiua.entity 4 0 2015-03-03 18:56:59.961
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.entity [182]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua 4 0 2015-03-03 18:56:59.962
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua [184]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.survey 4 0 2015-03-03 18:56:59.964
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.survey [188]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 4 0 2015-03-03 18:56:59.965
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [191]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.diff 2 0 2015-03-03 18:56:59.976
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.diff [126]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.entity 2 0 2015-03-03 18:56:59.977
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.entity [182]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua 2 0 2015-03-03 18:56:59.977
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua [184]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.survey 2 0 2015-03-03 18:56:59.977
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.survey [188]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 2 0 2015-03-03 18:56:59.977
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [191]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 2 0 2015-03-03 18:56:59.978
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.doclog [49]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [191]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY org.eclipse.osgi 4 0 2015-03-03 18:56:59.979
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SESSION 2015-03-05 11:07:52.305 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/apiua-workspace/../seqan-research -dev file:/Users/bkahlert/development/apiua-workspace/.metadata/.plugins/org.eclipse.pde.core/APIUA/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 4 0 2015-03-05 11:07:53.261
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.doclog [49]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.diff 4 0 2015-03-05 11:07:53.266
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.diff [126]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.app 0 0 2015-03-05 11:07:53.707
+!MESSAGE Product de.fu_berlin.imp.apiua.product could not be found.
+
+!ENTRY de.fu_berlin.imp.apiua.entity 4 0 2015-03-05 11:07:53.727
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.entity [182]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua 4 0 2015-03-05 11:07:53.728
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua [184]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.survey 4 0 2015-03-05 11:07:53.730
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.survey [188]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 4 0 2015-03-05 11:07:53.731
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [190]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 2 0 2015-03-05 11:07:53.741
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [190]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.diff 2 0 2015-03-05 11:07:53.741
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.diff [126]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.entity 2 0 2015-03-05 11:07:53.741
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.entity [182]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua 2 0 2015-03-05 11:07:53.742
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua [184]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.survey 2 0 2015-03-05 11:07:53.742
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.survey [188]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 2 0 2015-03-05 11:07:53.742
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.doclog [49]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [190]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY org.eclipse.osgi 4 0 2015-03-05 11:07:53.744
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SESSION 2015-03-05 14:06:48.473 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/apiua-workspace2/../seqan-research -dev file:/Users/bkahlert/development/apiua-workspace2/.metadata/.plugins/org.eclipse.pde.core/APIUA/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY de.fu_berlin.imp.apiua.entity 4 0 2015-03-05 14:06:49.435
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.entity [10]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.app 0 0 2015-03-05 14:06:49.883
+!MESSAGE Product de.fu_berlin.imp.apiua.product could not be found.
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 4 0 2015-03-05 14:06:49.907
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [56]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.diff 4 0 2015-03-05 14:06:49.908
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.diff [65]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.survey 4 0 2015-03-05 14:06:49.915
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.survey [122]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 4 0 2015-03-05 14:06:49.919
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.doclog [144]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua 4 0 2015-03-05 14:06:49.920
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua [158]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.survey 2 0 2015-03-05 14:06:49.929
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.survey [122]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 2 0 2015-03-05 14:06:49.929
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [56]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.diff 2 0 2015-03-05 14:06:49.930
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.diff [65]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 2 0 2015-03-05 14:06:49.930
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.doclog [144]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua 2 0 2015-03-05 14:06:49.930
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua [158]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.entity 2 0 2015-03-05 14:06:49.930
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.entity [10]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY org.eclipse.osgi 4 0 2015-03-05 14:06:49.932
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SESSION 2015-03-05 14:08:16.368 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/apiua-workspace2/../seqan-research -dev file:/Users/bkahlert/development/apiua-workspace2/.metadata/.plugins/org.eclipse.pde.core/APIUA/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY de.fu_berlin.imp.apiua.entity 4 0 2015-03-05 14:08:16.884
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.entity [10]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.app 0 0 2015-03-05 14:08:17.227
+!MESSAGE Product de.fu_berlin.imp.apiua.product could not be found.
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 4 0 2015-03-05 14:08:17.244
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [56]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.diff 4 0 2015-03-05 14:08:17.247
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.diff [65]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.survey 4 0 2015-03-05 14:08:17.255
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.survey [122]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 4 0 2015-03-05 14:08:17.260
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.doclog [144]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua 4 0 2015-03-05 14:08:17.262
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua [158]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 2 0 2015-03-05 14:08:17.280
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [56]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua 2 0 2015-03-05 14:08:17.280
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua [158]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.diff 2 0 2015-03-05 14:08:17.281
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.diff [65]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.survey 2 0 2015-03-05 14:08:17.282
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.survey [122]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.entity 2 0 2015-03-05 14:08:17.283
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.entity [10]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 2 0 2015-03-05 14:08:17.283
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.doclog [144]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY org.eclipse.osgi 4 0 2015-03-05 14:08:17.300
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SESSION 2015-03-05 14:08:46.280 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/apiua-workspace2/../seqan-research -dev file:/Users/bkahlert/development/apiua-workspace2/.metadata/.plugins/org.eclipse.pde.core/APIUA/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY de.fu_berlin.imp.apiua.entity 4 0 2015-03-05 14:08:46.767
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.entity [10]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.app 0 0 2015-03-05 14:08:47.087
+!MESSAGE Product de.fu_berlin.imp.apiua.product could not be found.
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 4 0 2015-03-05 14:08:47.102
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [56]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.diff 4 0 2015-03-05 14:08:47.105
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.diff [65]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.survey 4 0 2015-03-05 14:08:47.111
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.survey [122]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 4 0 2015-03-05 14:08:47.115
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.doclog [144]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua 4 0 2015-03-05 14:08:47.117
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua [158]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 2 0 2015-03-05 14:08:47.127
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [56]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua 2 0 2015-03-05 14:08:47.127
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua [158]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.diff 2 0 2015-03-05 14:08:47.128
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.diff [65]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.survey 2 0 2015-03-05 14:08:47.128
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.survey [122]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.entity 2 0 2015-03-05 14:08:47.128
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.entity [10]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 2 0 2015-03-05 14:08:47.129
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.doclog [144]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [56]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY org.eclipse.osgi 4 0 2015-03-05 14:08:47.130
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SESSION 2015-03-05 14:09:54.301 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product de.fu_berlin.imp.apiua.product
+Command-line arguments:  -product de.fu_berlin.imp.apiua.product -data /Users/bkahlert/development/apiua-workspace2/../seqan-research -dev file:/Users/bkahlert/development/apiua-workspace2/.metadata/.plugins/org.eclipse.pde.core/APIUA/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY de.fu_berlin.imp.apiua.entity 4 0 2015-03-05 14:09:54.813
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.entity [10]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.app 0 0 2015-03-05 14:09:55.138
+!MESSAGE Product de.fu_berlin.imp.apiua.product could not be found.
+
+!ENTRY de.fu_berlin.imp.apiua.diff 4 0 2015-03-05 14:09:55.154
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.diff [65]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.survey 4 0 2015-03-05 14:09:55.159
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.survey [122]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 4 0 2015-03-05 14:09:55.166
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.doclog [144]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua 4 0 2015-03-05 14:09:55.166
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua [158]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 4 0 2015-03-05 14:09:55.167
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [170]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY de.fu_berlin.imp.apiua.doclog 2 0 2015-03-05 14:09:55.176
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.doclog [144]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.entity 2 0 2015-03-05 14:09:55.177
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.entity [10]
+  Unresolved requirement: Import-Package: de.fu_berlin.imp.apiua.groundedtheory.model
+    -> Export-Package: de.fu_berlin.imp.apiua.groundedtheory.model; bundle-symbolic-name="de.fu_berlin.imp.apiua.groundedtheory"; bundle-version="1.0.0.0"; version="0.0.0"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.survey 2 0 2015-03-05 14:09:55.177
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.survey [122]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.diff 2 0 2015-03-05 14:09:55.178
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.diff [65]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua 2 0 2015-03-05 14:09:55.178
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua [158]
+  Unresolved requirement: Require-Bundle: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: de.fu_berlin.imp.apiua.groundedtheory; bundle-version="1.0.0.0"; singleton:="true"
+       de.fu_berlin.imp.apiua.groundedtheory [170]
+         Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY de.fu_berlin.imp.apiua.groundedtheory 2 0 2015-03-05 14:09:55.178
+!MESSAGE Could not resolve module: de.fu_berlin.imp.apiua.groundedtheory [170]
+  Unresolved requirement: Require-Bundle: org.jsoup
+
+
+!ENTRY org.eclipse.osgi 4 0 2015-03-05 14:09:55.180
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
