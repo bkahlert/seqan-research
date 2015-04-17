@@ -7727,7 +7727,7 @@
           <data class="codes">
             <uri>apiua://code/-9223372036854774898</uri>
             <id>-9223372036854774898</id>
-            <caption>phenomenon</caption>
+            <caption>Metafunktion</caption>
             <color>
               <red>0.775</red>
               <green>0.6191666666666666</green>
@@ -7784,27 +7784,6 @@
             </creation>
           </data>
         </com.bkahlert.nebula.data.TreeNode>
-        <com.bkahlert.nebula.data.TreeNode>
-          <parent reference="../../.."/>
-          <children/>
-          <data class="codes">
-            <uri>apiua://code/-9223372036854774895</uri>
-            <id>-9223372036854774895</id>
-            <caption>Metafunktion</caption>
-            <color>
-              <red>0.775</red>
-              <green>0.22499999999999998</green>
-              <blue>0.5409226190476195</blue>
-              <alpha>1.0</alpha>
-            </color>
-            <creation>
-              <calendar>
-                <time>1429078656970</time>
-                <timezone>Europe/Berlin</timezone>
-              </calendar>
-            </creation>
-          </data>
-        </com.bkahlert.nebula.data.TreeNode>
       </children>
       <data class="codes">
         <uri>apiua://code/-9223372036854774897</uri>
@@ -7819,6 +7798,25 @@
         <creation>
           <calendar>
             <time>1429078627037</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children/>
+      <data class="codes">
+        <id>-9223372036854774895</id>
+        <caption>Metafunktion</caption>
+        <color>
+          <red>0.775</red>
+          <green>0.22499999999999998</green>
+          <blue>0.5409226190476195</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1429078656970</time>
             <timezone>Europe/Berlin</timezone>
           </calendar>
         </creation>

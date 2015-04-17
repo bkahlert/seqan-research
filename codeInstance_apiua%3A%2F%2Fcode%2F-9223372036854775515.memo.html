@@ -5,3 +5,28 @@
 <p>Er f&uuml;hrt LETs ein, die den meisten Anwendern unbekannt sind.&nbsp;<a class="special" href="apiua://code/-9223372036854775413">Unbekannte Konstrukte / LET</a></p>
 
 <p><strong>TODO: KODIEREN, Syntax schwierig. F&uuml;hrt zu schlechterem Verst&auml;ndnis </strong>\citep{BenShneiderman:gn,Shneiderman:1977jj}&nbsp;<strong>von SeqAn</strong></p>
+
+<p>\cite{Letondal:2006dy} beobachtete, dass Bioinformatik (Endanwender) nur &Auml;nderungen an Code machten, Code aber nie &uuml;berschrieben (zu anspruchsvoll). Genau das m&uuml;sste man aber bei TP tun. Zeigt sich auch in den Daten. TP-Mechanismus praktisch nie verwendet.</p>
+
+<p>Vom Bjarne Stroustrup, dem Vater von C++: C++ directly supports a variety of programming styles. In this, C++ deliberately differs from languages designed to support a single way of writing programs. <a href="http://www.stroustrup.com/oopsla.pdf">http://www.stroustrup.com/oopsla.pdf</a><br />
+- auch TP m&ouml;glich, aber unerwartet (eine (OOP) der drei Hauptl&uuml;gen)</p>
+
+<p>- H&auml;ufiges Bed&uuml;rfnis, existierendesn Tool anzupassen (spricht auch f&uuml;r SeqAn) \citep{Letondal:2006dy}<br />
+WICHTIG f&uuml;r SeqAn: D&ouml;ring hatte beabsichtigt, dass SeqAn erweitert wird (mittels Template Mechanismus). Das ist in den Daten aber nicht zu sehen. Da wird nur Glue Code geschrieben. Letondal best&auml;tigt das. Bioinformatiker bei ihr haben auch nur &Auml;nderungen an Code vorgenommen, der sie selbst kontrollieren. Selbst das &Uuml;berschreiben von Methoden kam denen nicht in den Sinn.</p>
+
+<p>C++ zu schwierig f&uuml;r Bioinformatiker&nbsp;\citep{Tisdall:2001td}</p>
+
+<div id="cke_pastebin" style="position: absolute; top: -65px; width: 1px; height: 304px; overflow: hidden; margin: 0px; padding: 0px; left: -1000px;">Vom Bjarne Stroustrup, dem Vater von C++: C++ directly supports a variety of programming styles. In this, C++ deliberately differs from languages designed to support a single way of writing programs.</div>
+
+<div id="cke_pastebin" style="position: absolute; top: -65px; width: 1px; height: 304px; overflow: hidden; margin: 0px; padding: 0px; left: -1000px;"><a href="http://www.stroustrup.com/oopsla.pdf">http://www.stroustrup.com/oopsla.pdf</a></div>
+
+<div id="cke_pastebin" style="position: absolute; top: -65px; width: 1px; height: 304px; overflow: hidden; margin: 0px; padding: 0px; left: -1000px;">- Aber Verwirrung (muss nach Interpretation der Ergebnisse - besonders, bei Schock-Zustand, den neue SeqAn-Anwender haben, wenn Sie merken, dass es gar kein OOP ist)</div>
+
+<p>Konzeptionelle Fehlentscheidung, denn&nbsp;Anwender sind auch Endanwender-Programmierer und die k&ouml;nnen kein Template Programming. TP mit der Motivation der ultimativen Erweiterbarkeit. F&uuml;r SeqAn-Entwickler super (die standen wohl im Fokus). F&uuml;r SeqAn-Endanwender ein Alptraum.&nbsp;</p>
+
+<p><strong>\citep{GogolDoring:2009vz} Diss<br />
+-- Core-Design auf einer Handvoll von Techniken<br />
+-- jede Technik &quot;limited complexity&quot;<br />
+-- &quot;our approach may be not as common for most programmers&quot; wie OOP<br />
+-- Fehlermeldungen immer noch &quot;ziemlich&quot; verst&auml;ndlich<br />
+-- Vereinfachung durch template subclassing</strong></p>

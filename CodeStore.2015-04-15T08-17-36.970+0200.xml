@@ -913,7 +913,6 @@
     <long>-9223372036854774898</long>
     <long>-9223372036854774897</long>
     <long>-9223372036854774896</long>
-    <long>-9223372036854774895</long>
   </createdIDs>
   <createdCodeInstanceIDs>
     <long>-9223372036854775808</long>
@@ -7727,7 +7726,7 @@
           <data class="codes">
             <uri>apiua://code/-9223372036854774898</uri>
             <id>-9223372036854774898</id>
-            <caption>phenomenon</caption>
+            <caption>Metafunktion</caption>
             <color>
               <red>0.775</red>
               <green>0.6191666666666666</green>
@@ -7767,7 +7766,6 @@
           <parent reference="../../.."/>
           <children/>
           <data class="codes">
-            <uri>apiua://code/-9223372036854774896</uri>
             <id>-9223372036854774896</id>
             <caption>unspezifisch</caption>
             <color>
@@ -7779,27 +7777,6 @@
             <creation>
               <calendar>
                 <time>1429078645402</time>
-                <timezone>Europe/Berlin</timezone>
-              </calendar>
-            </creation>
-          </data>
-        </com.bkahlert.nebula.data.TreeNode>
-        <com.bkahlert.nebula.data.TreeNode>
-          <parent reference="../../.."/>
-          <children/>
-          <data class="codes">
-            <uri>apiua://code/-9223372036854774895</uri>
-            <id>-9223372036854774895</id>
-            <caption>Metafunktion</caption>
-            <color>
-              <red>0.775</red>
-              <green>0.22499999999999998</green>
-              <blue>0.5409226190476195</blue>
-              <alpha>1.0</alpha>
-            </color>
-            <creation>
-              <calendar>
-                <time>1429078656970</time>
                 <timezone>Europe/Berlin</timezone>
               </calendar>
             </creation>
