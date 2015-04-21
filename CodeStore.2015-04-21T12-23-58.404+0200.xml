@@ -1788,7 +1788,6 @@
     <long>-9223372036854774940</long>
     <long>-9223372036854774939</long>
     <long>-9223372036854774938</long>
-    <long>-9223372036854774937</long>
   </createdCodeInstanceIDs>
   <codeTrees>
     <com.bkahlert.nebula.data.TreeNode>
@@ -15787,18 +15786,6 @@
         </calendar>
       </creation>
     </instance>
-    <instance>
-      <uri>apiua://codeinstance/-9223372036854774937</uri>
-      <codeInstanceId>-9223372036854774937</codeInstanceId>
-      <code class="codes" reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data"/>
-      <id>apiua://survey/cd/2013-09-18T17:44:46.060+02:00/studies</id>
-      <creation>
-        <calendar>
-          <time>1429611838404</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </instance>
   </instances>
   <relations>
     <relations>
@@ -20892,7 +20879,7 @@
     <relationInstances>
       <uri>apiua://relationInstance/j61noretnvrev1neg9m3j70kml9dct3e</uri>
       <relation class="relations" reference="../../../relations/relations[23]"/>
-      <phenomenon reference="../../../instances/instance[660]/id"/>
+      <phenomenon>apiua://survey/cd/2013-09-18T17:44:46.060+02:00/studies</phenomenon>
       <creation>
         <calendar>
           <time>1420011716619</time>
@@ -23516,13 +23503,6 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[660]/uri"/>
-        <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[3]/data/uri"/>
-      </com.bkahlert.nebula.utils.Pair>
-      <string>Informatik</string>
-    </entry>
-    <entry>
-      <com.bkahlert.nebula.utils.Pair>
         <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../instances/instance[396]/uri"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[7]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[3]/children/com.bkahlert.nebula.data.TreeNode[11]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
@@ -24307,7 +24287,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
     </entry>
     <entry>
       <com.bkahlert.nebula.utils.Pair>
-        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../entry[90]/com.bkahlert.nebula.utils.Pair/first"/>
+        <first class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../entry[89]/com.bkahlert.nebula.utils.Pair/first"/>
         <second class="de.fu_berlin.imp.apiua.core.model.URI" reference="../../../../codeTrees/com.bkahlert.nebula.data.TreeNode[8]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       </com.bkahlert.nebula.utils.Pair>
       <string>Intuitiv</string>
