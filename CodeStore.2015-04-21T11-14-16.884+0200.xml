@@ -914,7 +914,6 @@
     <long>-9223372036854774897</long>
     <long>-9223372036854774896</long>
     <long>-9223372036854774895</long>
-    <long>-9223372036854774894</long>
   </createdIDs>
   <createdCodeInstanceIDs>
     <long>-9223372036854775808</long>
@@ -7366,33 +7365,11 @@
               <children>
                 <com.bkahlert.nebula.data.TreeNode>
                   <parent reference="../../.."/>
-                  <children>
-                    <com.bkahlert.nebula.data.TreeNode>
-                      <parent reference="../../.."/>
-                      <children/>
-                      <data class="codes">
-                        <uri>apiua://code/-9223372036854774932</uri>
-                        <id>-9223372036854774932</id>
-                        <caption>A.1.1</caption>
-                        <color>
-                          <red>0.775</red>
-                          <green>0.22499999999999998</green>
-                          <blue>0.22499999999999998</blue>
-                          <alpha>0.27450980392156865</alpha>
-                        </color>
-                        <creation>
-                          <calendar>
-                            <time>1424051384066</time>
-                            <timezone>Europe/Berlin</timezone>
-                          </calendar>
-                        </creation>
-                      </data>
-                    </com.bkahlert.nebula.data.TreeNode>
-                  </children>
+                  <children/>
                   <data class="codes">
-                    <uri>apiua://code/-9223372036854774934</uri>
-                    <id>-9223372036854774934</id>
-                    <caption>A.1</caption>
+                    <uri>apiua://code/-9223372036854774932</uri>
+                    <id>-9223372036854774932</id>
+                    <caption>A.1.1</caption>
                     <color>
                       <red>0.775</red>
                       <green>0.22499999999999998</green>
@@ -7401,7 +7378,7 @@
                     </color>
                     <creation>
                       <calendar>
-                        <time>1424051373817</time>
+                        <time>1424051384066</time>
                         <timezone>Europe/Berlin</timezone>
                       </calendar>
                     </creation>
@@ -7409,9 +7386,9 @@
                 </com.bkahlert.nebula.data.TreeNode>
               </children>
               <data class="codes">
-                <uri>apiua://code/-9223372036854774936</uri>
-                <id>-9223372036854774936</id>
-                <caption>A</caption>
+                <uri>apiua://code/-9223372036854774934</uri>
+                <id>-9223372036854774934</id>
+                <caption>A.1</caption>
                 <color>
                   <red>0.775</red>
                   <green>0.22499999999999998</green>
@@ -7420,72 +7397,7 @@
                 </color>
                 <creation>
                   <calendar>
-                    <time>1424051362725</time>
-                    <timezone>Europe/Berlin</timezone>
-                  </calendar>
-                </creation>
-              </data>
-            </com.bkahlert.nebula.data.TreeNode>
-            <com.bkahlert.nebula.data.TreeNode>
-              <parent reference="../../.."/>
-              <children>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children>
-                    <com.bkahlert.nebula.data.TreeNode>
-                      <parent reference="../../.."/>
-                      <children/>
-                      <data class="codes">
-                        <uri>apiua://code/-9223372036854774931</uri>
-                        <id>-9223372036854774931</id>
-                        <caption>B.1.1</caption>
-                        <color>
-                          <red>0.22499999999999998</red>
-                          <green>0.775</green>
-                          <blue>0.775</blue>
-                          <alpha>0.27450980392156865</alpha>
-                        </color>
-                        <creation>
-                          <calendar>
-                            <time>1424051390894</time>
-                            <timezone>Europe/Berlin</timezone>
-                          </calendar>
-                        </creation>
-                      </data>
-                    </com.bkahlert.nebula.data.TreeNode>
-                  </children>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854774933</uri>
-                    <id>-9223372036854774933</id>
-                    <caption>B.1</caption>
-                    <color>
-                      <red>0.22499999999999998</red>
-                      <green>0.775</green>
-                      <blue>0.775</blue>
-                      <alpha>0.27450980392156865</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1424051378047</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-              </children>
-              <data class="codes">
-                <uri>apiua://code/-9223372036854774935</uri>
-                <id>-9223372036854774935</id>
-                <caption>B</caption>
-                <color>
-                  <red>0.22499999999999998</red>
-                  <green>0.775</green>
-                  <blue>0.775</blue>
-                  <alpha>0.27450980392156865</alpha>
-                </color>
-                <creation>
-                  <calendar>
-                    <time>1424051366954</time>
+                    <time>1424051373817</time>
                     <timezone>Europe/Berlin</timezone>
                   </calendar>
                 </creation>
@@ -7493,18 +7405,18 @@
             </com.bkahlert.nebula.data.TreeNode>
           </children>
           <data class="codes">
-            <uri>apiua://code/-9223372036854774937</uri>
-            <id>-9223372036854774937</id>
-            <caption>Test</caption>
+            <uri>apiua://code/-9223372036854774936</uri>
+            <id>-9223372036854774936</id>
+            <caption>A</caption>
             <color>
               <red>0.775</red>
               <green>0.22499999999999998</green>
-              <blue>0.740625</blue>
-              <alpha>1.0</alpha>
+              <blue>0.22499999999999998</blue>
+              <alpha>0.27450980392156865</alpha>
             </color>
             <creation>
               <calendar>
-                <time>1424051357156</time>
+                <time>1424051362725</time>
                 <timezone>Europe/Berlin</timezone>
               </calendar>
             </creation>
@@ -7520,82 +7432,18 @@
                   <parent reference="../../.."/>
                   <children/>
                   <data class="codes">
-                    <uri>apiua://code/-9223372036854774925</uri>
-                    <id>-9223372036854774925</id>
-                    <caption>A1.</caption>
-                    <color>
-                      <red>0.775</red>
-                      <green>0.22499999999999998</green>
-                      <blue>0.22499999999999998</blue>
-                      <alpha>1.0</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1426088065470</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-              </children>
-              <data class="codes">
-                <uri>apiua://code/-9223372036854774928</uri>
-                <id>-9223372036854774928</id>
-                <caption>A</caption>
-                <color>
-                  <red>0.775</red>
-                  <green>0.22499999999999998</green>
-                  <blue>0.22499999999999998</blue>
-                  <alpha>1.0</alpha>
-                </color>
-                <creation>
-                  <calendar>
-                    <time>1426088042328</time>
-                    <timezone>Europe/Berlin</timezone>
-                  </calendar>
-                </creation>
-              </data>
-            </com.bkahlert.nebula.data.TreeNode>
-            <com.bkahlert.nebula.data.TreeNode>
-              <parent reference="../../.."/>
-              <children>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children/>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854774924</uri>
-                    <id>-9223372036854774924</id>
-                    <caption>B.1</caption>
-                    <color>
-                      <red>0.5</red>
-                      <green>0.775</green>
-                      <blue>0.22499999999999998</blue>
-                      <alpha>1.0</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1426088070667</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children/>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854774923</uri>
-                    <id>-9223372036854774923</id>
-                    <caption>B.2</caption>
+                    <uri>apiua://code/-9223372036854774931</uri>
+                    <id>-9223372036854774931</id>
+                    <caption>B.1.1</caption>
                     <color>
                       <red>0.22499999999999998</red>
                       <green>0.775</green>
-                      <blue>0.5</blue>
-                      <alpha>1.0</alpha>
+                      <blue>0.775</blue>
+                      <alpha>0.27450980392156865</alpha>
                     </color>
                     <creation>
                       <calendar>
-                        <time>1426088078767</time>
+                        <time>1424051390894</time>
                         <timezone>Europe/Berlin</timezone>
                       </calendar>
                     </creation>
@@ -7603,103 +7451,18 @@
                 </com.bkahlert.nebula.data.TreeNode>
               </children>
               <data class="codes">
-                <uri>apiua://code/-9223372036854774927</uri>
-                <id>-9223372036854774927</id>
-                <caption>B</caption>
+                <uri>apiua://code/-9223372036854774933</uri>
+                <id>-9223372036854774933</id>
+                <caption>B.1</caption>
                 <color>
                   <red>0.22499999999999998</red>
                   <green>0.775</green>
-                  <blue>0.22499999999999998</blue>
-                  <alpha>1.0</alpha>
-                </color>
-                <creation>
-                  <calendar>
-                    <time>1426088048495</time>
-                    <timezone>Europe/Berlin</timezone>
-                  </calendar>
-                </creation>
-              </data>
-            </com.bkahlert.nebula.data.TreeNode>
-            <com.bkahlert.nebula.data.TreeNode>
-              <parent reference="../../.."/>
-              <children>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children/>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854774922</uri>
-                    <id>-9223372036854774922</id>
-                    <caption>C.1</caption>
-                    <color>
-                      <red>0.22499999999999998</red>
-                      <green>0.5916666666666666</green>
-                      <blue>0.775</blue>
-                      <alpha>1.0</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1426088092538</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children/>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854774921</uri>
-                    <id>-9223372036854774921</id>
-                    <caption>C.2</caption>
-                    <color>
-                      <red>0.22499999999999998</red>
-                      <green>0.22499999999999998</green>
-                      <blue>0.775</blue>
-                      <alpha>1.0</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1426088097521</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-                <com.bkahlert.nebula.data.TreeNode>
-                  <parent reference="../../.."/>
-                  <children/>
-                  <data class="codes">
-                    <uri>apiua://code/-9223372036854774920</uri>
-                    <id>-9223372036854774920</id>
-                    <caption>C.3</caption>
-                    <color>
-                      <red>0.5916666666666668</red>
-                      <green>0.22499999999999998</green>
-                      <blue>0.775</blue>
-                      <alpha>1.0</alpha>
-                    </color>
-                    <creation>
-                      <calendar>
-                        <time>1426088101245</time>
-                        <timezone>Europe/Berlin</timezone>
-                      </calendar>
-                    </creation>
-                  </data>
-                </com.bkahlert.nebula.data.TreeNode>
-              </children>
-              <data class="codes">
-                <uri>apiua://code/-9223372036854774926</uri>
-                <id>-9223372036854774926</id>
-                <caption>C</caption>
-                <color>
-                  <red>0.22499999999999998</red>
-                  <green>0.22499999999999998</green>
                   <blue>0.775</blue>
-                  <alpha>1.0</alpha>
+                  <alpha>0.27450980392156865</alpha>
                 </color>
                 <creation>
                   <calendar>
-                    <time>1426088052442</time>
+                    <time>1424051378047</time>
                     <timezone>Europe/Berlin</timezone>
                   </calendar>
                 </creation>
@@ -7707,125 +7470,18 @@
             </com.bkahlert.nebula.data.TreeNode>
           </children>
           <data class="codes">
-            <uri>apiua://code/-9223372036854774929</uri>
-            <id>-9223372036854774929</id>
-            <caption>Demo</caption>
-            <color>
-              <red>0.775</red>
-              <green>0.49410714285714263</green>
-              <blue>0.22499999999999998</blue>
-              <alpha>1.0</alpha>
-            </color>
-            <creation>
-              <calendar>
-                <time>1426088037041</time>
-                <timezone>Europe/Berlin</timezone>
-              </calendar>
-            </creation>
-          </data>
-        </com.bkahlert.nebula.data.TreeNode>
-        <com.bkahlert.nebula.data.TreeNode>
-          <parent reference="../../.."/>
-          <children>
-            <com.bkahlert.nebula.data.TreeNode>
-              <parent reference="../../.."/>
-              <children/>
-              <data class="codes">
-                <uri>apiua://code/-9223372036854774898</uri>
-                <id>-9223372036854774898</id>
-                <caption>phenomenon</caption>
-                <color>
-                  <red>0.775</red>
-                  <green>0.6191666666666666</green>
-                  <blue>0.22499999999999998</blue>
-                  <alpha>1.0</alpha>
-                </color>
-                <creation>
-                  <calendar>
-                    <time>1429078608758</time>
-                    <timezone>Europe/Berlin</timezone>
-                  </calendar>
-                </creation>
-              </data>
-            </com.bkahlert.nebula.data.TreeNode>
-          </children>
-          <data class="codes">
-            <uri>apiua://code/-9223372036854774899</uri>
-            <id>-9223372036854774899</id>
-            <caption>Templatemetaprogrammierung</caption>
+            <uri>apiua://code/-9223372036854774935</uri>
+            <id>-9223372036854774935</id>
+            <caption>B</caption>
             <color>
               <red>0.22499999999999998</red>
-              <green>0.4644791666666667</green>
+              <green>0.775</green>
               <blue>0.775</blue>
-              <alpha>1.0</alpha>
+              <alpha>0.27450980392156865</alpha>
             </color>
             <creation>
               <calendar>
-                <time>1429078592965</time>
-                <timezone>Europe/Berlin</timezone>
-              </calendar>
-            </creation>
-          </data>
-        </com.bkahlert.nebula.data.TreeNode>
-        <com.bkahlert.nebula.data.TreeNode>
-          <parent reference="../../.."/>
-          <children>
-            <com.bkahlert.nebula.data.TreeNode>
-              <parent reference="../../.."/>
-              <children/>
-              <data class="codes">
-                <uri>apiua://code/-9223372036854774896</uri>
-                <id>-9223372036854774896</id>
-                <caption>unspezifisch</caption>
-                <color>
-                  <red>0.775</red>
-                  <green>0.22499999999999998</green>
-                  <blue>0.6325892857142863</blue>
-                  <alpha>1.0</alpha>
-                </color>
-                <creation>
-                  <calendar>
-                    <time>1429078645402</time>
-                    <timezone>Europe/Berlin</timezone>
-                  </calendar>
-                </creation>
-              </data>
-            </com.bkahlert.nebula.data.TreeNode>
-            <com.bkahlert.nebula.data.TreeNode>
-              <parent reference="../../.."/>
-              <children/>
-              <data class="codes">
-                <uri>apiua://code/-9223372036854774895</uri>
-                <id>-9223372036854774895</id>
-                <caption>Metafunktion</caption>
-                <color>
-                  <red>0.775</red>
-                  <green>0.22499999999999998</green>
-                  <blue>0.5409226190476195</blue>
-                  <alpha>1.0</alpha>
-                </color>
-                <creation>
-                  <calendar>
-                    <time>1429078656970</time>
-                    <timezone>Europe/Berlin</timezone>
-                  </calendar>
-                </creation>
-              </data>
-            </com.bkahlert.nebula.data.TreeNode>
-          </children>
-          <data class="codes">
-            <uri>apiua://code/-9223372036854774897</uri>
-            <id>-9223372036854774897</id>
-            <caption>Templatemetaprogrammierung</caption>
-            <color>
-              <red>0.2082572900955254</red>
-              <green>0.7007216667775708</green>
-              <blue>0.7505662393162392</blue>
-              <alpha>1.0</alpha>
-            </color>
-            <creation>
-              <calendar>
-                <time>1429078627037</time>
+                <time>1424051366954</time>
                 <timezone>Europe/Berlin</timezone>
               </calendar>
             </creation>
@@ -7833,18 +7489,336 @@
         </com.bkahlert.nebula.data.TreeNode>
       </children>
       <data class="codes">
-        <uri>apiua://code/-9223372036854774894</uri>
-        <id>-9223372036854774894</id>
-        <caption>Kodes für Dissertation</caption>
+        <uri>apiua://code/-9223372036854774937</uri>
+        <id>-9223372036854774937</id>
+        <caption>Test</caption>
         <color>
           <red>0.775</red>
-          <green>0.354315476190476</green>
+          <green>0.22499999999999998</green>
+          <blue>0.740625</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1424051357156</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children>
+        <com.bkahlert.nebula.data.TreeNode>
+          <parent reference="../../.."/>
+          <children>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854774925</uri>
+                <id>-9223372036854774925</id>
+                <caption>A1.</caption>
+                <color>
+                  <red>0.775</red>
+                  <green>0.22499999999999998</green>
+                  <blue>0.22499999999999998</blue>
+                  <alpha>1.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1426088065470</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+          </children>
+          <data class="codes">
+            <uri>apiua://code/-9223372036854774928</uri>
+            <id>-9223372036854774928</id>
+            <caption>A</caption>
+            <color>
+              <red>0.775</red>
+              <green>0.22499999999999998</green>
+              <blue>0.22499999999999998</blue>
+              <alpha>1.0</alpha>
+            </color>
+            <creation>
+              <calendar>
+                <time>1426088042328</time>
+                <timezone>Europe/Berlin</timezone>
+              </calendar>
+            </creation>
+          </data>
+        </com.bkahlert.nebula.data.TreeNode>
+        <com.bkahlert.nebula.data.TreeNode>
+          <parent reference="../../.."/>
+          <children>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854774924</uri>
+                <id>-9223372036854774924</id>
+                <caption>B.1</caption>
+                <color>
+                  <red>0.5</red>
+                  <green>0.775</green>
+                  <blue>0.22499999999999998</blue>
+                  <alpha>1.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1426088070667</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854774923</uri>
+                <id>-9223372036854774923</id>
+                <caption>B.2</caption>
+                <color>
+                  <red>0.22499999999999998</red>
+                  <green>0.775</green>
+                  <blue>0.5</blue>
+                  <alpha>1.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1426088078767</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+          </children>
+          <data class="codes">
+            <uri>apiua://code/-9223372036854774927</uri>
+            <id>-9223372036854774927</id>
+            <caption>B</caption>
+            <color>
+              <red>0.22499999999999998</red>
+              <green>0.775</green>
+              <blue>0.22499999999999998</blue>
+              <alpha>1.0</alpha>
+            </color>
+            <creation>
+              <calendar>
+                <time>1426088048495</time>
+                <timezone>Europe/Berlin</timezone>
+              </calendar>
+            </creation>
+          </data>
+        </com.bkahlert.nebula.data.TreeNode>
+        <com.bkahlert.nebula.data.TreeNode>
+          <parent reference="../../.."/>
+          <children>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854774922</uri>
+                <id>-9223372036854774922</id>
+                <caption>C.1</caption>
+                <color>
+                  <red>0.22499999999999998</red>
+                  <green>0.5916666666666666</green>
+                  <blue>0.775</blue>
+                  <alpha>1.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1426088092538</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854774921</uri>
+                <id>-9223372036854774921</id>
+                <caption>C.2</caption>
+                <color>
+                  <red>0.22499999999999998</red>
+                  <green>0.22499999999999998</green>
+                  <blue>0.775</blue>
+                  <alpha>1.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1426088097521</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+            <com.bkahlert.nebula.data.TreeNode>
+              <parent reference="../../.."/>
+              <children/>
+              <data class="codes">
+                <uri>apiua://code/-9223372036854774920</uri>
+                <id>-9223372036854774920</id>
+                <caption>C.3</caption>
+                <color>
+                  <red>0.5916666666666668</red>
+                  <green>0.22499999999999998</green>
+                  <blue>0.775</blue>
+                  <alpha>1.0</alpha>
+                </color>
+                <creation>
+                  <calendar>
+                    <time>1426088101245</time>
+                    <timezone>Europe/Berlin</timezone>
+                  </calendar>
+                </creation>
+              </data>
+            </com.bkahlert.nebula.data.TreeNode>
+          </children>
+          <data class="codes">
+            <uri>apiua://code/-9223372036854774926</uri>
+            <id>-9223372036854774926</id>
+            <caption>C</caption>
+            <color>
+              <red>0.22499999999999998</red>
+              <green>0.22499999999999998</green>
+              <blue>0.775</blue>
+              <alpha>1.0</alpha>
+            </color>
+            <creation>
+              <calendar>
+                <time>1426088052442</time>
+                <timezone>Europe/Berlin</timezone>
+              </calendar>
+            </creation>
+          </data>
+        </com.bkahlert.nebula.data.TreeNode>
+      </children>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854774929</uri>
+        <id>-9223372036854774929</id>
+        <caption>Demo</caption>
+        <color>
+          <red>0.775</red>
+          <green>0.49410714285714263</green>
           <blue>0.22499999999999998</blue>
           <alpha>1.0</alpha>
         </color>
         <creation>
           <calendar>
-            <time>1429607656877</time>
+            <time>1426088037041</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children>
+        <com.bkahlert.nebula.data.TreeNode>
+          <parent reference="../../.."/>
+          <children/>
+          <data class="codes">
+            <uri>apiua://code/-9223372036854774898</uri>
+            <id>-9223372036854774898</id>
+            <caption>phenomenon</caption>
+            <color>
+              <red>0.775</red>
+              <green>0.6191666666666666</green>
+              <blue>0.22499999999999998</blue>
+              <alpha>1.0</alpha>
+            </color>
+            <creation>
+              <calendar>
+                <time>1429078608758</time>
+                <timezone>Europe/Berlin</timezone>
+              </calendar>
+            </creation>
+          </data>
+        </com.bkahlert.nebula.data.TreeNode>
+      </children>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854774899</uri>
+        <id>-9223372036854774899</id>
+        <caption>Templatemetaprogrammierung</caption>
+        <color>
+          <red>0.22499999999999998</red>
+          <green>0.4644791666666667</green>
+          <blue>0.775</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1429078592965</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </creation>
+      </data>
+    </com.bkahlert.nebula.data.TreeNode>
+    <com.bkahlert.nebula.data.TreeNode>
+      <children>
+        <com.bkahlert.nebula.data.TreeNode>
+          <parent reference="../../.."/>
+          <children/>
+          <data class="codes">
+            <uri>apiua://code/-9223372036854774896</uri>
+            <id>-9223372036854774896</id>
+            <caption>unspezifisch</caption>
+            <color>
+              <red>0.775</red>
+              <green>0.22499999999999998</green>
+              <blue>0.6325892857142863</blue>
+              <alpha>1.0</alpha>
+            </color>
+            <creation>
+              <calendar>
+                <time>1429078645402</time>
+                <timezone>Europe/Berlin</timezone>
+              </calendar>
+            </creation>
+          </data>
+        </com.bkahlert.nebula.data.TreeNode>
+        <com.bkahlert.nebula.data.TreeNode>
+          <parent reference="../../.."/>
+          <children/>
+          <data class="codes">
+            <uri>apiua://code/-9223372036854774895</uri>
+            <id>-9223372036854774895</id>
+            <caption>Metafunktion</caption>
+            <color>
+              <red>0.775</red>
+              <green>0.22499999999999998</green>
+              <blue>0.5409226190476195</blue>
+              <alpha>1.0</alpha>
+            </color>
+            <creation>
+              <calendar>
+                <time>1429078656970</time>
+                <timezone>Europe/Berlin</timezone>
+              </calendar>
+            </creation>
+          </data>
+        </com.bkahlert.nebula.data.TreeNode>
+      </children>
+      <data class="codes">
+        <uri>apiua://code/-9223372036854774897</uri>
+        <id>-9223372036854774897</id>
+        <caption>Templatemetaprogrammierung</caption>
+        <color>
+          <red>0.2082572900955254</red>
+          <green>0.7007216667775708</green>
+          <blue>0.7505662393162392</blue>
+          <alpha>1.0</alpha>
+        </color>
+        <creation>
+          <calendar>
+            <time>1429078627037</time>
             <timezone>Europe/Berlin</timezone>
           </calendar>
         </creation>
@@ -16712,8 +16686,8 @@
     </relations>
     <relations>
       <uri>apiua://relation/rmoopikuhp306ausmujv21s1ej4qkc0p</uri>
-      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
-      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
+      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
+      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       <name>x</name>
       <timeZoneDate>
         <calendar>
@@ -16772,8 +16746,8 @@
     </relations>
     <relations>
       <uri>apiua://relation/kljp3urrt9qq3v6ps619tq8e2tgf8h54</uri>
-      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
-      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
+      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
+      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       <name>x</name>
       <timeZoneDate>
         <calendar>
@@ -17036,8 +17010,8 @@
     </relations>
     <relations>
       <uri>apiua://relation/tadcft7rjnqhugsb19s0bdvsh0q88oln</uri>
-      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
-      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
+      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
+      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/data/uri"/>
       <name>x</name>
       <timeZoneDate>
         <calendar>
@@ -18044,8 +18018,8 @@
     </relations>
     <relations>
       <uri>apiua://relation/le1giki2qcs6i5rd5pqal0amg3ug3b1h</uri>
-      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
-      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
+      <from reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
+      <to reference="../../../codeTrees/com.bkahlert.nebula.data.TreeNode[9]/children/com.bkahlert.nebula.data.TreeNode[2]/children/com.bkahlert.nebula.data.TreeNode/data/uri"/>
       <name>x</name>
       <timeZoneDate>
         <calendar>
