@@ -1,11 +1,16 @@
 \makeatletter
 \newcommand{\codename}[1]{%
 \ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775724}=0 qualification%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774876}=0 Reste%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775723}=0 comment out code%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775725}=0 beginner%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775720}=0 basics%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774872}=0 test%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775722}=0 progress%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775600}=0 Arbeitsstil%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774875}=0 Folgen%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774870}=0 b%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774871}=0 a%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775041}=0 Non-Atomarität%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775163}=0 Konzeptverstehen%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775042}=0 Geringer Usability-Anspruch%
@@ -27,8 +32,8 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775036}=0 Raten%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775035}=0 Eigenschaftsraten%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775393}=0 Gebrauchserwartung%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775271}=0 Assignment-Verwendung%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775392}=0 Hauptfunktionalität%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775271}=0 Assignment-Verwendung%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775394}=0 End-User Programming%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775273}=0 Workshop-Erlernen%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775709}=0 missing parameters%
@@ -44,7 +49,7 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775700}=0 iterator not resetted%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775144}=0 Namenerraten%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775264}=0 Funktionsweise%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775388}=0 Uneindeutige Signaturbeschreibung (bei Funktionen)%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775388}=0 Uneindeutige Signaturbeschreibung%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775145}=0 Autovervollständigung (Punkt-Funktionssuche)%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775262}=0 Einstieg%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775378}=0 Fehlende Best Practise Beispiele%
@@ -59,14 +64,13 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774950}=0 Cognitive Dimensions%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774951}=0 Sichtweisen%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775242}=0 Schwierigkeiten%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775486}=0 NGS Toolset%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775481}=0 Fehlendes Benennungschema%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775120}=0 Raten%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774948}=0 Entwurfsentscheidungen%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774942}=0 Entscheidungsanlass%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774943}=0 Eigenschaften%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775599}=0 Motivation%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775115}=0 Sarkasmus%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775599}=0 Einsatzzweck / Erwartungen%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775598}=0 Langjährige stabile Anwendungsentwicklung%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775117}=0 Syntax%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775237}=0 Funktionen%
@@ -74,12 +78,12 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774941}=0 Entscheidungsgrundlage%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775353}=0 Refactoring%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775352}=0 Typing%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775596}=0 Ausbildung%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775596}=0 Tätigkeitsbereich%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774939}=0 Usability-Probleme%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774935}=0 B%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774936}=0 A%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774937}=0 phase3%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774938}=0 Einsatzzweck%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774938}=0 SeqAn-Einsatzform%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774931}=0 B.1.1%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774932}=0 A.1.1%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774933}=0 B.1%
@@ -99,14 +103,14 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774921}=0 C.2%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774922}=0 C.1%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774923}=0 B.2%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775456}=0 Unintuitivität%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775577}=0 Fehlende Dokumentation der Rückgabetypen%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775335}=0 Fachliche Inkorrektheit%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775577}=0 Fehlende Dokumentation der Rückgabetypen%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775456}=0 Unintuitivität%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775697}=0 undo errornous step%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775576}=0 Lernfortschritt mittels Tutorials%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775455}=0 Programmentwicklung%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775216}=0 Entwicklung in anderer Sprache/Framework%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775576}=0 Lernfortschritt mittels Tutorials%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775579}=0 Global Interface%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775216}=0 Entwicklung in anderer Sprache/Framework%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775699}=0 missing ;%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775215}=0 Framework vs. Library%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775572}=0 Fehlende Orientierung / Gesamtüberblick%
@@ -120,26 +124,22 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774913}=0 User Experience%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774914}=0 Laufzeit%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774915}=0 Struktur%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774916}=0 Dokumentation%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775328}=0 Persistenz%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775448}=0 Benennung / Benamung / Namensgebung%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774910}=0 Designbarriere%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774911}=0 Lernbarrieren%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774912}=0 Grill%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775687}=0 wrong usage of pre compiler code%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775445}=0 Wiedergabe / Tutorials (Bloom 1-2)%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775686}=0 copy code into wrong file%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775444}=0 Exploration (Bloom 3-4)%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775447}=0 Sympathie%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775568}=0 Mächtigkeitseindruck%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775446}=0 SeqAn-Anwendungskompetenz%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775447}=0 Sympathie%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775567}=0 Ununterscheidbarkeit von Typen%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775446}=0 SeqAn-Anwendungskompetenz%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775683}=0 off computer%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775441}=0 Emotionen%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775440}=0 Unverständnis / Genervt sein%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775443}=0 Anwendung (Bloom 5-6)%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775684}=0 playing around%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775442}=0 Undefinierte Funktionsbreite%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775442}=0 Bibliothekszuständigkeit%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774906}=0 Verständnisbarrieren%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774907}=0 Gebrauchsbarrieren%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774908}=0 Koordinationsbarriere%
@@ -151,13 +151,13 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775559}=0 Lernen / Vertiefen für Abschlussarbeit%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775438}=0 Anwendungswiederverwendung%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774900}=0 Anfangsklasse / starting class%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775439}=0 Schnelle Anfangserfolge%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774901}=0 Nicht-technische Modellierung%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775439}=0 Schnelle Anfangserfolge%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775434}=0 Feature%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775557}=0 Tool-Entwicklung innerhalb einer Pipeline%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775436}=0 Erwartungskonformität%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775314}=0 Frustration / Resignation%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775311}=0 Erwartete Benutzerfreundlichkeit%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775311}=0 Benutzerfreundlichkeitseindruck%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775552}=0 Performance%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775547}=0 Suche nach professioneller Alternative%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775665}=0 Programmieren mit Beispiel-Code%
@@ -175,7 +175,7 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775653}=0 automatic sandbox creation%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775532}=0 Sortierung der Suchergebnisse%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775411}=0 Ursache%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775535}=0 Schlechte Dokumentation der Anwendung von Iteratoren %
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775535}=0 Iteratorengebrauch%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775414}=0 Strategie%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775656}=0 Nicht-atomare Initialisierung%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775655}=0 IDE preparation%
@@ -188,7 +188,7 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775647}=0 automatic test creation%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775405}=0 Funktionsgebrauch%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775646}=0 manual test creation%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775404}=0 Online-Dokumentation%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775404}=0 Dokumentation%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775407}=0 Kennenlernen / Evaluation%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775528}=0 Erkundungs- und Verständnisaufwand%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775648}=0 test creation%
@@ -200,7 +200,6 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775645}=0 file creation%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775644}=0 app creation%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775402}=0 Dokumentationsstudium%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775641}=0 Anwenderhintergrund%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775640}=0 Offensichtliche Usability-Probleme%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775085}=0 Heuristik-Entwicklung%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775084}=0 Metafunktions-Heuristik ::%
@@ -243,7 +242,7 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775743}=0 tutorial%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775622}=0 String vs. Vector/List%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774897}=0 Templatemetaprogrammierung%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774892}=0 Library-Kenntnisse%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774892}=0 Library-Vorerfahrung%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774893}=0 Anwender%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775739}=0 correctly pasted snipped%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775738}=0 reorder code%
@@ -272,17 +271,22 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775609}=0 GI vs. OOP%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775729}=0 verification failed%
 \else UNKNOWN CODE%
-\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
 \makeatother
 
 \makeatletter
 \newcommand{\codecolor}[1]{%
 \ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775724}=0 \definecolor{codecolor}{HTML}{000000}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774876}=0 \definecolor{codecolor}{HTML}{C63943}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775723}=0 \definecolor{codecolor}{HTML}{000000}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775725}=0 \definecolor{codecolor}{HTML}{000000}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775720}=0 \definecolor{codecolor}{HTML}{000000}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774872}=0 \definecolor{codecolor}{HTML}{9AC639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775722}=0 \definecolor{codecolor}{HTML}{000000}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775600}=0 \definecolor{codecolor}{HTML}{C63975}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774875}=0 \definecolor{codecolor}{HTML}{C66239}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774870}=0 \definecolor{codecolor}{HTML}{C63954}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774871}=0 \definecolor{codecolor}{HTML}{3947C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775041}=0 \definecolor{codecolor}{HTML}{4EC639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775163}=0 \definecolor{codecolor}{HTML}{39C6B4}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775042}=0 \definecolor{codecolor}{HTML}{7139C6}%
@@ -304,8 +308,8 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775036}=0 \definecolor{codecolor}{HTML}{3991C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775035}=0 \definecolor{codecolor}{HTML}{3994C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775393}=0 \definecolor{codecolor}{HTML}{C68F39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775271}=0 \definecolor{codecolor}{HTML}{5DC639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775392}=0 \definecolor{codecolor}{HTML}{B439C6}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775271}=0 \definecolor{codecolor}{HTML}{5DC639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775394}=0 \definecolor{codecolor}{HTML}{C67539}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775273}=0 \definecolor{codecolor}{HTML}{39C654}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775709}=0 \definecolor{codecolor}{HTML}{000000}%
@@ -336,14 +340,13 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774950}=0 \definecolor{codecolor}{HTML}{3962C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774951}=0 \definecolor{codecolor}{HTML}{4739C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775242}=0 \definecolor{codecolor}{HTML}{7DC639}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775486}=0 \definecolor{codecolor}{HTML}{C69939}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775481}=0 \definecolor{codecolor}{HTML}{5539C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775120}=0 \definecolor{codecolor}{HTML}{39C67A}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774948}=0 \definecolor{codecolor}{HTML}{397BC6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774942}=0 \definecolor{codecolor}{HTML}{AA39C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774943}=0 \definecolor{codecolor}{HTML}{5D39C6}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775115}=0 \definecolor{codecolor}{HTML}{C65639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775599}=0 \definecolor{codecolor}{HTML}{C6C639}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775115}=0 \definecolor{codecolor}{HTML}{C65639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775598}=0 \definecolor{codecolor}{HTML}{C6B139}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775117}=0 \definecolor{codecolor}{HTML}{39C671}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775237}=0 \definecolor{codecolor}{HTML}{77C639}%
@@ -376,14 +379,14 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774921}=0 \definecolor{codecolor}{HTML}{3939C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774922}=0 \definecolor{codecolor}{HTML}{3997C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774923}=0 \definecolor{codecolor}{HTML}{39C680}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775456}=0 \definecolor{codecolor}{HTML}{C64F39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775577}=0 \definecolor{codecolor}{HTML}{61C639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775335}=0 \definecolor{codecolor}{HTML}{C6396E}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775577}=0 \definecolor{codecolor}{HTML}{61C639}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775456}=0 \definecolor{codecolor}{HTML}{C64F39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775697}=0 \definecolor{codecolor}{HTML}{000000}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775576}=0 \definecolor{codecolor}{HTML}{6DC639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775455}=0 \definecolor{codecolor}{HTML}{3CC639}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775216}=0 \definecolor{codecolor}{HTML}{39C6A8}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775576}=0 \definecolor{codecolor}{HTML}{6DC639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775579}=0 \definecolor{codecolor}{HTML}{C63991}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775216}=0 \definecolor{codecolor}{HTML}{39C6A8}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775699}=0 \definecolor{codecolor}{HTML}{000000}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775215}=0 \definecolor{codecolor}{HTML}{39C65F}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775572}=0 \definecolor{codecolor}{HTML}{5FC639}%
@@ -397,24 +400,20 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774913}=0 \definecolor{codecolor}{HTML}{4039C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774914}=0 \definecolor{codecolor}{HTML}{3940C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774915}=0 \definecolor{codecolor}{HTML}{394DC6}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774916}=0 \definecolor{codecolor}{HTML}{9CC639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775328}=0 \definecolor{codecolor}{HTML}{69C639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775448}=0 \definecolor{codecolor}{HTML}{C63991}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774910}=0 \definecolor{codecolor}{HTML}{395CC6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774911}=0 \definecolor{codecolor}{HTML}{3968C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774912}=0 \definecolor{codecolor}{HTML}{4D39C6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775687}=0 \definecolor{codecolor}{HTML}{78C639}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775445}=0 \definecolor{codecolor}{HTML}{C64039}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775686}=0 \definecolor{codecolor}{HTML}{33EC83}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775444}=0 \definecolor{codecolor}{HTML}{C63940}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775447}=0 \definecolor{codecolor}{HTML}{C64539}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775568}=0 \definecolor{codecolor}{HTML}{C6BF39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775446}=0 \definecolor{codecolor}{HTML}{C63939}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775447}=0 \definecolor{codecolor}{HTML}{C64539}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775567}=0 \definecolor{codecolor}{HTML}{C63985}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775446}=0 \definecolor{codecolor}{HTML}{C63939}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775683}=0 \definecolor{codecolor}{HTML}{FF8000}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775441}=0 \definecolor{codecolor}{HTML}{C64D39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775440}=0 \definecolor{codecolor}{HTML}{C64839}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775443}=0 \definecolor{codecolor}{HTML}{C63939}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775684}=0 \definecolor{codecolor}{HTML}{66FFCC}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775442}=0 \definecolor{codecolor}{HTML}{74C639}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774906}=0 \definecolor{codecolor}{HTML}{39AEC6}%
@@ -428,8 +427,8 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775559}=0 \definecolor{codecolor}{HTML}{C69539}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775438}=0 \definecolor{codecolor}{HTML}{39C685}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774900}=0 \definecolor{codecolor}{HTML}{3980C6}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775439}=0 \definecolor{codecolor}{HTML}{C64239}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774901}=0 \definecolor{codecolor}{HTML}{C67039}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775439}=0 \definecolor{codecolor}{HTML}{C64239}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775434}=0 \definecolor{codecolor}{HTML}{39C881}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775557}=0 \definecolor{codecolor}{HTML}{C66A39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775436}=0 \definecolor{codecolor}{HTML}{396EC6}%
@@ -477,7 +476,6 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775645}=0 \definecolor{codecolor}{HTML}{31B1B9}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775644}=0 \definecolor{codecolor}{HTML}{31B1B9}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775402}=0 \definecolor{codecolor}{HTML}{39C69D}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775641}=0 \definecolor{codecolor}{HTML}{C63939}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775640}=0 \definecolor{codecolor}{HTML}{FF6666}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775085}=0 \definecolor{codecolor}{HTML}{399DC6}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775084}=0 \definecolor{codecolor}{HTML}{39A0C6}%
@@ -549,17 +547,22 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775609}=0 \definecolor{codecolor}{HTML}{C66939}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775729}=0 \definecolor{codecolor}{HTML}{000000}%
 \else \definecolor{codecolor}{HTML}{999999}%
-\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
 \makeatother
 
 \makeatletter
 \newcommand{\codeborderalpha}[1]{%
 \ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775724}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774876}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775723}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775725}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775720}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774872}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775722}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775600}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774875}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774870}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774871}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775041}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775163}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775042}=0 \gdef\codeborderalphavalue{39}%
@@ -581,8 +584,8 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775036}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775035}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775393}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775271}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775392}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775271}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775394}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775273}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775709}=0 \gdef\codeborderalphavalue{39}%
@@ -613,14 +616,13 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774950}=0 \gdef\codeborderalphavalue{47}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774951}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775242}=0 \gdef\codeborderalphavalue{47}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775486}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775481}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775120}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774948}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774942}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774943}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775115}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775599}=0 \gdef\codeborderalphavalue{100}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775115}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775598}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775117}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775237}=0 \gdef\codeborderalphavalue{39}%
@@ -629,7 +631,7 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775353}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775352}=0 \gdef\codeborderalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775596}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774939}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774939}=0 \gdef\codeborderalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774935}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774936}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774937}=0 \gdef\codeborderalphavalue{39}%
@@ -653,14 +655,14 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774921}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774922}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774923}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775456}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775577}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775335}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775577}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775456}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775697}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775576}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775455}=0 \gdef\codeborderalphavalue{100}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775216}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775576}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775579}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775216}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775699}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775215}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775572}=0 \gdef\codeborderalphavalue{39}%
@@ -674,24 +676,20 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774913}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774914}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774915}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774916}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775328}=0 \gdef\codeborderalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775448}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774910}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774911}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774911}=0 \gdef\codeborderalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774912}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775687}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775445}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775686}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775444}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775447}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775568}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775446}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775447}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775567}=0 \gdef\codeborderalphavalue{100}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775446}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775683}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775441}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775440}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775443}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775684}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775442}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774906}=0 \gdef\codeborderalphavalue{39}%
@@ -702,11 +700,11 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774903}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774904}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774905}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775559}=0 \gdef\codeborderalphavalue{39}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775559}=0 \gdef\codeborderalphavalue{47}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775438}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774900}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775439}=0 \gdef\codeborderalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774901}=0 \gdef\codeborderalphavalue{100}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775439}=0 \gdef\codeborderalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775434}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775557}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775436}=0 \gdef\codeborderalphavalue{39}%
@@ -754,7 +752,6 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775645}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775644}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775402}=0 \gdef\codeborderalphavalue{39}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775641}=0 \gdef\codeborderalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775640}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775085}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775084}=0 \gdef\codeborderalphavalue{39}%
@@ -826,17 +823,22 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775609}=0 \gdef\codeborderalphavalue{39}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775729}=0 \gdef\codeborderalphavalue{39}%
 \else \gdef\codeborderalphavalue{39}%
-\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
 \makeatother
 
 \makeatletter
 \newcommand{\codebackgroundalpha}[1]{%
 \ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775724}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774876}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775723}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775725}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775720}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774872}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775722}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775600}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774875}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774870}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774871}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775041}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775163}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775042}=0 \gdef\codebackgroundalphavalue{27}%
@@ -858,8 +860,8 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775036}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775035}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775393}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775271}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775392}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775271}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775394}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775273}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775709}=0 \gdef\codebackgroundalphavalue{27}%
@@ -890,14 +892,13 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774950}=0 \gdef\codebackgroundalphavalue{0}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774951}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775242}=0 \gdef\codebackgroundalphavalue{0}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775486}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775481}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775120}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774948}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774942}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774943}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775115}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775599}=0 \gdef\codebackgroundalphavalue{100}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775115}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775598}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775117}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775237}=0 \gdef\codebackgroundalphavalue{27}%
@@ -906,7 +907,7 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775353}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775352}=0 \gdef\codebackgroundalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775596}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774939}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774939}=0 \gdef\codebackgroundalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774935}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774936}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774937}=0 \gdef\codebackgroundalphavalue{27}%
@@ -930,14 +931,14 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774921}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774922}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774923}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775456}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775577}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775335}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775577}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775456}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775697}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775576}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775455}=0 \gdef\codebackgroundalphavalue{100}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775216}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775576}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775579}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775216}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775699}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775215}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775572}=0 \gdef\codebackgroundalphavalue{27}%
@@ -951,24 +952,20 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774913}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774914}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774915}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774916}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775328}=0 \gdef\codebackgroundalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775448}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774910}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774911}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774911}=0 \gdef\codebackgroundalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774912}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775687}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775445}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775686}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775444}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775447}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775568}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775446}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775447}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775567}=0 \gdef\codebackgroundalphavalue{100}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775446}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775683}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775441}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775440}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775443}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775684}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775442}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774906}=0 \gdef\codebackgroundalphavalue{27}%
@@ -979,11 +976,11 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774903}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774904}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774905}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775559}=0 \gdef\codebackgroundalphavalue{27}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775559}=0 \gdef\codebackgroundalphavalue{0}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775438}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774900}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775439}=0 \gdef\codebackgroundalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854774901}=0 \gdef\codebackgroundalphavalue{100}%
+\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775439}=0 \gdef\codebackgroundalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775434}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775557}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775436}=0 \gdef\codebackgroundalphavalue{27}%
@@ -1031,7 +1028,6 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775645}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775644}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775402}=0 \gdef\codebackgroundalphavalue{27}%
-\else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775641}=0 \gdef\codebackgroundalphavalue{100}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775640}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775085}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775084}=0 \gdef\codebackgroundalphavalue{27}%
@@ -1103,5 +1099,5 @@
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775609}=0 \gdef\codebackgroundalphavalue{27}%
 \else\ifnum\pdf@strcmp{#1}{apiua://code/-9223372036854775729}=0 \gdef\codebackgroundalphavalue{27}%
 \else \gdef\codebackgroundalphavalue{27}%
-\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
 \makeatother
