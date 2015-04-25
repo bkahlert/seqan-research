@@ -2,19 +2,25 @@
 
 <ul>
 	<li>Fall 1: a(b) = c (TODO Beispiel)</li>
-	<li>Fall 2: oder a(b(c)), wobei c ge&auml;ndert wird (Beispiel:&nbsp;<a class="special" href="apiua://code/-9223372036854775057">Versteckte Parameter&uuml;bergabe</a>&nbsp;)</li>
+	<li>Fall 2: a(b(c)), wobei c ge&auml;ndert wird (Beispiel:&nbsp;<a class="special" href="apiua://code/-9223372036854775057">Versteckte Parameter&uuml;bergabe</a>&nbsp;)</li>
 </ul>
 
-<h1>Fall 1</h1>
+<p>Problem: nicht intuitiv / erwartet, nicht konsistent( siehe anderer Code)</p>
 
-<p>TODO</p>
+<h1>Fall 1: direkt</h1>
 
-<p>Frage zur Behebung:</p>
+<pre style="box-sizing: border-box; font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace; font-size: 12px; white-space: pre; margin-top: 0px; margin-bottom: 0px; padding: 12px; line-height: 1.5; color: rgb(64, 64, 64);">
+<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">infix</span><span class="p" style="box-sizing: border-box;">(</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">myString</span><span class="p" style="box-sizing: border-box;">,</span> <span class="mi" style="box-sizing: border-box; color: rgb(0, 153, 153);">1</span><span class="p" style="box-sizing: border-box;">,</span> <span class="mi" style="box-sizing: border-box; color: rgb(0, 153, 153);">1</span><span class="p" style="box-sizing: border-box;">)</span> <span class="o" style="box-sizing: border-box; font-weight: bold;">=</span> <span class="s" style="box-sizing: border-box; color: rgb(221, 17, 68);">&quot;cgt&quot;</span><span class="p" style="box-sizing: border-box;">;</span></pre>
+
+<p>Macht aus Zeichenkette&nbsp;ATTACGG -&gt;&nbsp;A<strong>CGT</strong>TTACGG<br />
+<a href="http://seqan.readthedocs.org/en/master/Tutorial/Modifiers.html">http://seqan.readthedocs.org/en/master/Tutorial/Modifiers.html</a></p>
+
+<p>Frage zur Behebung in Gruppendiskussion:</p>
 
 <p>- Klares Votum f&uuml;r mehr Konsistenz (also assign XOR =)<br />
 - Argument f&uuml;r assign von Ren&eacute;: Container-Element-Abh&auml;ngigkeiten k&ouml;nnen bei assign ber&uuml;cksichtigt werden (m&uuml;sste doch auch bei overloading gehen&hellip;?!)</p>
 
-<h1>Fall 2</h1>
+<h1>Fall 2: indirekt</h1>
 
 <p style="line-height: 14.559999465942383px; background-color: rgb(249, 249, 249);">Problem: hash(indexShape(index), &ldquo;CAT&rdquo;), hash modifiziert die R&uuml;ckgabe von indexShape</p>
 

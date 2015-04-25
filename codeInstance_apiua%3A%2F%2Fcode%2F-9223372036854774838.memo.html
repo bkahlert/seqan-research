@@ -1,0 +1,39 @@
+<p>Wie erlaube ich API-Anwendern die Modifikation von Datenstrukturen.</p>
+
+<p>Bei SeqAn:</p>
+
+<p>Zwei Eigenschaften:</p>
+
+<ul>
+	<li><strong>Direktheit</strong> (direkt, &uuml;ber Umwege)
+
+	<ul>
+		<li>direkt: x = 1, fn(x, 1), x[y] = 1</li>
+		<li>indirekt: fn(x) = 1, fn(fm(x, 1))</li>
+	</ul>
+	</li>
+	<li><strong>Explizitheit</strong> (mit Operator, mit Funktionsr&uuml;ckgabe)
+	<ul>
+		<li>explizit: x = 1,&nbsp; <span style="line-height: 14.559999465942383px;">fn(x) = 1</span></li>
+		<li>implizit: fn(x, 1),&nbsp;fn(fm(x, 1)</li>
+	</ul>
+	</li>
+</ul>
+
+<ol>
+	<li>fn(x, 1) - &auml;ndert x</li>
+	<li>fn(x) = 1 - &auml;ndert x</li>
+	<li>fn(fm(x), 1) - &auml;ndert x</li>
+	<li>x = 1 - &auml;ndert x</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>direkt, explizit: x = 1</li>
+	<li>direkt, implizit: fn(x, 1)</li>
+	<li>indirekt, explizit: fn(x) = 1</li>
+	<li>indirekt, implizit: fn(fm(x, 1)</li>
+</ul>
+
+<p>Begr&uuml;ndung von Rahn (siehe ph): Abh&auml;ngigkeiten (Technisches Wegargumentieren)</p>

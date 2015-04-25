@@ -1,4 +1,6 @@
-<p><span style="line-height: 14.559999465942383px;">Das <strong>global interface</strong> mit seinen <strong>global interface functions</strong> ist eine SeqAn zugrunde liegende Design-Entscheidung, welches technisch durch den Einsatz von </span> <a class="special" href="apiua://code/-9223372036854775515">Template Programming</a> &nbsp;realisiert wird.</p>
+<p>Grund: Erweiterbarkeit</p>
+
+<p><span style="line-height: 14.559999465942383px;">Das <strong>global interface</strong> mit seinen <strong>global interface functions</strong> ist eine SeqAn zugrunde liegende Design-Entscheidung, welches technisch durch den Einsatz von </span> <a class="special" href="apiua://code/-9223372036854775515">Templatemetaprogrammierung</a> &nbsp;realisiert wird.</p>
 
 <p><span style="line-height: 14.559999465942383px;">Die Grundidee ist, dass es generisch benannte globale Funktionen gibt, die f&uuml;r bestimmte Eingaben spezialisiert werden k&ouml;nnen.</span></p>
 
@@ -23,7 +25,7 @@ Auch kann sich dabei der R&uuml;ckgabewert &auml;ndern (was in C++ nicht un&uuml
 
 <p>Den&nbsp;Funktionen fehlt der Kontext / das starter/primary object, wie dies in den meisten OOP-Sprachen technisch erzwungen wird. In SeqAn existiert die Zugeh&ouml;rigkeit nur inhaltlich und muss der Dokumentation entnommen werden.</p>
 
-<p>In seiner aktuellen Form f&uuml;hrt das global interface zu&nbsp;<a class="special" href="apiua://code/-9223372036854775633">Inkonsistenzen bzgl. STD/STL</a>.</p>
+<p>In seiner aktuellen Form f&uuml;hrt das global interface zu&nbsp;<a class="special" href="apiua://code/-9223372036854775633">Inkonsistenzen bzgl. STL</a>.</p>
 
 <p><span style="line-height: 14px;">​</span></p>
 
