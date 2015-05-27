@@ -1,0 +1,65 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2011-09-13 10:15:21.187500000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2011-09-13 11:48:18.671875000 +0200
+@@ -1,10 +1,35 @@
++#include <seqan/sequence.h>
++#include <seqan/basic.h>
+ #include <iostream>
+-#include <seqan/sequence.h>  // CharString, ...
+-#include <seqan/file.h>      // to stream a CharString into cout
+-
++//using namespace seqan;
+ int main(int, char **) {
+-    std::cout << "Hello World!" << std::endl;
+-    seqan::CharString mySeqanString = "Hello SeqAn!";
+-    std::cout << mySeqanString << std::endl;
++
++	String<Char> str1 = "hello world";
++	String<Char> str2 = "banana";
++	String<Char> str3 = "mississippi";
++
++	countOneMers(str1);
++	countOneMers(str2);
++	countOneMers(str3);
++
+     return 1;
++}
++
++void countOneMers(str) {
++
++	std::cout << "word: " << str << std::endl;
++	String<int> letterNum;
++	
++	for(int i=0; i<length(str);i++) {
++		char thisLetter = str[i];
++		letterNum[thisLetter]++;
++	}
++	for(int i=0; i<length(letterNum);i++) {
++		int thisNum = letterNum[i];
++		if(thisNum>0){
++			std::cout << "letter " << (char)i << ": " << thisNum << std::endl;
++		}
++	}
++	
++
+ }
+\ No newline at end of file
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-04-07 17:07:50.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:14:53.187500000 +0200
+@@ -61,3 +61,15 @@
+     ret = mainWithOptions(options);
+     return ret;
+ }
++/*
++#include <iostream>
++#include <seqan/sequence.h>  // CharString, ...
++#include <seqan/file.h>      // to stream a CharString into cout
++
++int main(int, char **) {
++    std::cout << "Hello World!" << std::endl;
++    seqan::CharString mySeqanString = "Hello SeqAn!";
++    std::cout << mySeqanString << std::endl;
++    return 1;
++}
++*/

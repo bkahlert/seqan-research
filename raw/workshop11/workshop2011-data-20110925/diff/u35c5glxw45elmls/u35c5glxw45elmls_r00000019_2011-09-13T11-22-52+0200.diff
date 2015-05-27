@@ -1,0 +1,16 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 11:22:11.000000000 +0200
++++ ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 11:22:48.995727244 +0200
+@@ -68,9 +68,9 @@
+ 	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
+ 	//       tutorial page, you will find a link to a Swift HowTo page.
+ 
+-    typedef Index<TSequence, IndexQGram<UngappedShape<8> > > TQIndex;
+-    typedef Finder<TQIndex, Swift<SwiftLocal> > TFinder;
+-    typedef Pattern<TQIndex, Swift<SwiftLocal> > TPattern;
++    typedef typename Index<TSequence, IndexQGram<UngappedShape<8> > > TQIndex;
++    typedef typename Finder<TQIndex, Swift<SwiftLocal> > TFinder;
++    typedef typename Pattern<TQIndex, Swift<SwiftLocal> > TPattern;
+ 
+ 	// TODO: Define variables of your pattern and finder types, and initialize them with the
+ 	//       first sequences in the sequence sets seqs1 and seqs2.

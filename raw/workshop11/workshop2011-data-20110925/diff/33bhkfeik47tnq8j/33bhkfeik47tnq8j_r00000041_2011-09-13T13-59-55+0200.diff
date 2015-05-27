@@ -1,0 +1,30 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp and ./sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp ./sandbox/leon/apps/miniStellar/miniStellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 13:53:41.000000000 +0200
++++ ./sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 13:59:52.000000000 +0200
+@@ -132,13 +132,7 @@
+ 		    beginPosition(infix1)+clippedEndPosition(row(align,0)),
+ 		    beginPosition(infix2)+clippedEndPosition(row(align,1)));
+ 
+-	    std::cerr << "seed before extension: [" << getBeginDim0(seed) << "," << getEndDim0(seed) << "] [" 
+-		<< getBeginDim1(seed) << "," << getEndDim1(seed) << "]\n";
+-
+ 	    extendSeed(seed, seqs2[0], seqs1[0], EXTEND_BOTH, score, xDrop, GappedXDrop());
+-	    
+-	    std::cerr << "seed after extension: [" << getBeginDim0(seed) << "," << getEndDim0(seed) << "] [" 
+-		<< getBeginDim1(seed) << "," << getEndDim1(seed) << "]\n";
+ 
+ 	    // Check if the match is long enough after it was extended
+ 	    if (getEndDim1(seed)-getBeginDim1(seed) < minimalLength)
+@@ -150,6 +144,11 @@
+ 
+ 	    TInfix extendedInfix1 = infix(seqs1[0], getBeginDim0(seed), getEndDim0(seed));
+ 	    TInfix extendedInfix2 = infix(seqs2[0], getBeginDim1(seed), getEndDim1(seed));
++	    if (length(extendedInfix2) < minimalLength)
++		continue;
++
++	    std::cerr << "seed after extension: [" << getBeginDim0(seed) << "," << getEndDim0(seed) << "] [" 
++		<< getBeginDim1(seed) << "," << getEndDim1(seed) << "]\n";
+ 	
+ 	    Align<String<Dna> > globAlign;
+ 	    appendValue(rows(globAlign), extendedInfix1);

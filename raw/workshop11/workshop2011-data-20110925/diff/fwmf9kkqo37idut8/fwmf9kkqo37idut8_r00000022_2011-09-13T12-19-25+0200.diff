@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:17:01.765625000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:19:15.796875000 +0200
+@@ -41,7 +41,7 @@
+ void ass01(){
+ 	String<AminoAcid> pep = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
+ 	Iterator<String<AminoAcid>, Standard>::Type it = begin(pep);
+-	Iterator<String>AminoAcid>, Standard>::Type itEnd = end(pep);
++	Iterator<String<AminoAcid>, Standard>::Type itEnd = end(pep);
+ 
+ 	cout << pep;
+ 	while (it != itEnd)

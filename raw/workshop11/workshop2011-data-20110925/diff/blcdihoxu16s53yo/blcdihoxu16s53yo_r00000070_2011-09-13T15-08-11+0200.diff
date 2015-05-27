@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 15:06:02.109375000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 15:08:07.765625000 +0200
+@@ -109,7 +109,7 @@
+         appendValue(rows(ali), infix2);
+         
+         TScoreValue scoreValue = localAlignment(ali, score, SmithWaterman());
+-        std::cout << ali << std::endl;
++        //std::cout << ali << std::endl;
+ 
+         if (scoreValue >= minScore) {
+             // create a seed for the local alignment, and conduct gapped X-drop extension
+@@ -127,7 +127,7 @@
+             
+             extendSeed(seed, seqs1[0], seqs2[0], EXTEND_BOTH, score, xDrop, GappedXDrop());
+             
+-            if (getEndDim0(seed) - getBeginDim0(seed) >= minimalLength) {
++            if (getSeedSize(seed) >= minimalLength) {
+                 // find best global alignment of extended seed
+                 // TODO: Compute the best global alignment of extended seed and its score.
+                 // HINT: Create an align object on infixes of the sequences.

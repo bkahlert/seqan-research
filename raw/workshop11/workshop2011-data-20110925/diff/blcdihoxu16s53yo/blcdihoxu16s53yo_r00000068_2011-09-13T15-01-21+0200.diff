@@ -1,0 +1,14 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 14:59:54.500000000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 15:01:14.406250000 +0200
+@@ -136,8 +136,8 @@
+                 appendValue(rows(ali2), infix(seqs1[0], getBeginDim0(seed), getEndDim0(seed)));
+                 appendValue(rows(ali2), infix(seqs2[0], getBeginDim1(seed), getEndDim1(seed)));
+ 
+-                //TScoreValue scoreValue2 = globalAlignment(ali2, score, NeedlemanWunsch());
+-                //std::cout << ali2 << std::endl;
++                TScoreValue scoreValue2 = globalAlignment(ali2, score, NeedlemanWunsch());
++                std::cout << ali2 << std::endl;
+                 // TODO: Output the alignment as a match to the output file.
+             //}
+         }

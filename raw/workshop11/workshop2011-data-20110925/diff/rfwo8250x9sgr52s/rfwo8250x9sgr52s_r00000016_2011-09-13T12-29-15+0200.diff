@@ -1,0 +1,23 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/.ministellar.cpp.swp and ./sandbox/workshop/apps/ministellar/.ministellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp ./sandbox/workshop/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 12:28:02.000000000 +0200
++++ ./sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 12:29:14.000000000 +0200
+@@ -36,12 +36,12 @@
+ 
+ template<typename TSeed, typename TSeq>
+ void writeSeed(TSeed & seed, TSeq const & seq0, TSeq const & seq1) {
+-    std::cout << "Seed in seq1 from position " << leftPosition(seed, 0);
+-    std::cout << " to " << rightPosition(seed, 0) << ": ";
+-    std::cout << infix(seq0, leftPosition(seed, 0), rightPosition(seed, 0)) << std::endl;
+-    std::cout << "Seed in seq2 from position " << leftPosition(seed, 1);
+-    std::cout << " to " << rightPosition(seed, 1) << ": ";
+-    std::cout << infix(seq1, leftPosition(seed, 1), rightPosition(seed, 1)) << std::endl;
++    std::cout << "Seed in seq1 from position " << getBeginDim0(seed);
++    std::cout << " to " << getEndDim0(seed) << ": ";
++    std::cout << infix(seq0, getBeginDim0(seed), getEndDim0(seed)) << std::endl;
++    std::cout << "Seed in seq2 from position " << getBeginDim1(seed);
++    std::cout << " to " << GetEndDim1(seed) << ": ";
++    std::cout << infix(seq1, getBeginDim1(seed), GetEndDim1(seed)) << std::endl;
+ }
+ 
+ int main(int argc, char const ** argv) {

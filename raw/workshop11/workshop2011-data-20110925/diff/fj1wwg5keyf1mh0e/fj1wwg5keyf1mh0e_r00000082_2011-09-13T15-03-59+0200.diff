@@ -1,0 +1,36 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:53:13.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 15:03:57.000000000 +0200
+@@ -229,5 +229,12 @@
+ 		replaceAs (str_s_6,'a','X');
+ 		str_s_6 = "Hello Seqan!";
+ 		replaceAs (str_s_6,'a','X');
++		
++// 		tut Modifiers
++		CharString str_m_1="A man, a plan, a canal-Panama";
++		ModifiedString<CharString, ModReverse> mod_m_1(str_m_1);
++		std::cout << str_m_1 << "; " << mod_m_1 << std::endl;
++		infix(str_m_1, 9, 9) ="master ";
++		std::cout << str_m_1 << "; " << mod_m_1 << std::endl;
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 14:53:13.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 15:03:57.000000000 +0200
+@@ -91,13 +91,15 @@
+ 	std::cout << std::endl;
+ }
+ 
+-void replaceAs (CharString str, const char from, const char to) {
++void replaceAs (CharString& str, const char from, const char to) {
++	std::cout << str << " => ";
+ 	typedef Iterator<CharString,Rooted>::Type TIterator;
+ 	TIterator it=begin(str);
+ 	while (!atEnd(it)) {
+ 		if (value(it)==from) value(it)=to;
+ 		++it;
+ 	}
++	std::cout << str << std::endl;
+ }
+ 
+ // Program entry point

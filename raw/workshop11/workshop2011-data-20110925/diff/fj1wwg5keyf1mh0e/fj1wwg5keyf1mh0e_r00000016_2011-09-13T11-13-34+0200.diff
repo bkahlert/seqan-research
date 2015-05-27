@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h ./sandbox/my_sandbox/apps/my_app/my_app.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:12:07.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:13:29.000000000 +0200
+@@ -124,7 +124,7 @@
+ //         std::cout << "  " << *it << std::endl;
+ //     }
+     TIterator it=begin(options.texts);
+-		String<, CStyle> str1=(*it);
++		String<char, CStyle> str1=(*it);
+ 		it++;
+ 		std::cout << str1 << std::endl;
+ 		File<Sync<> > myFile1;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~ ./sandbox/my_sandbox/apps/my_app/my_app.h~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:12:07.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:13:29.000000000 +0200
+@@ -124,7 +124,7 @@
+ //         std::cout << "  " << *it << std::endl;
+ //     }
+     TIterator it=begin(options.texts);
+-		CharString str1=(*it);
++		String<, CStyle> str1=(*it);
+ 		it++;
+ 		std::cout << str1 << std::endl;
+ 		File<Sync<> > myFile1;

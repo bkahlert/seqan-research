@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 14:10:07.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 14:18:22.488733169 +0200
+@@ -81,7 +81,7 @@
+ 	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
+ 	//       tutorial page, you will find a link to a Swift HowTo page.
+ 	
+-	typedef Index<TSequence, IndexQGram<Shape<Dna5, UngappedShape<8> >, OpenAddressing> > TIndex;
++	typedef Index<TSequence, IndexQGram<Shape<Dna, UngappedShape<8> >, OpenAddressing> > TIndex;
+ 	
+ 	TIndex mt_doom( seq2[0] );
+ 	
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 14:09:22.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 14:10:07.488733299 +0200
+@@ -93,7 +93,7 @@
+ 	// call the function find to obtain a swift hit
+ 	// TODO: uncomment the following line
+ 
+-	while( find(gollum, the_ring, 0.0001, minimalLength) ){
++	while( find(gollum, the_ring, errorRate, minimalLength) ){
+ 	
+ 	    typedef Infix<TSequence>::Type TInfix;
+ 	    TInfix infix1 = infix(gollum, seq1[0]);

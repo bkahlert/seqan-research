@@ -1,0 +1,40 @@
+{
+    "machine": {
+        "machine": "AMD64", 
+        "processor": "AMD64 Family 15 Model 104 Stepping 1, AuthenticAMD", 
+        "architecture": [
+            [
+                "32bit", 
+                "WindowsPE"
+            ], 
+            "no64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_CXX_COMPILER": "cl", 
+        "CMAKE_GENERATOR": "Visual Studio 9 2008", 
+        "CMAKE_C_COMPILER": "Visual Studio 9 2008", 
+        "CMAKE_C_FLAGS": "/DWIN32 /D_WINDOWS /W3 /Zm1000", 
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "/DWIN32 /D_WINDOWS /W3 /Zm1000 /EHsc /GR", 
+        "CMAKE_MAKE_PROGRAM": "C:/PROGRA~2/MICROS~1.0/Common7/IDE/devenv.com", 
+        "CMAKE_MODULE_LINKER_FLAGS": " /STACK:10000000 /machine:X86 ", 
+        "CMAKE_LINKER": "CMAKE_LINKER-NOTFOUND"
+    }, 
+    "os": {
+        "node": "phansen-PC", 
+        "sys.platform": "win32", 
+        "system": "Windows", 
+        "platform": "Windows-7-6.1.7600", 
+        "version": "6.1.7600", 
+        "release": "7"
+    }, 
+    "id": "0meio6dzt3eo1wj7", 
+    "ip": [
+        "fe80::5d3:42c9:4463:2c2a%12", 
+        "fe80::389e:3f3f:72f1:64d%13", 
+        "2002:8d0e:f9b2::8d0e:f9b2", 
+        "141.14.249.178", 
+        "2001:0:5ef5:79fd:389e:3f3f:72f1:64d"
+    ]
+}

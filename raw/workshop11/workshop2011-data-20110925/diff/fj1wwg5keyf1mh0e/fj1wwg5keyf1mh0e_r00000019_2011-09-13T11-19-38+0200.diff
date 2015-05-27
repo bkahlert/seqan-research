@@ -1,0 +1,34 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h ./sandbox/my_sandbox/apps/my_app/my_app.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:16:58.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:19:35.000000000 +0200
+@@ -142,7 +142,7 @@
+ 			std::cout << "Could not open for reading" << std::endl;
+ 			return 1;
+ 		}
+-		CharString block2;
++		String<char,CStyle> block2;
+ 		read(myFile2, block2, sizeof(block2));
+ 		close(myFile2);
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~ ./sandbox/my_sandbox/apps/my_app/my_app.h~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:16:58.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:19:35.000000000 +0200
+@@ -137,6 +137,18 @@
+ 		write(myFile1, block1, sizeof(block1));
+ 		close(myFile1);
+ 		
++		File<Sync<> > myFile2;
++		if (!open(myFile2, str1, OPEN_RDONLY)) {
++			std::cout << "Could not open for reading" << std::endl;
++			return 1;
++		}
++		CharString block2;
++		read(myFile2, block2, sizeof(block2));
++		close(myFile2);
++
++		std::cout << block1 << std::endl;
++		std::cout << block2 << std::endl;
++		
+     return 0;
+ }
+ 

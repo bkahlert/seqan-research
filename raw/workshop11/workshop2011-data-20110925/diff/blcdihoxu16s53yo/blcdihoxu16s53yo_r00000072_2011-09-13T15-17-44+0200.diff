@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 15:16:46.906250000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 15:17:37.390625000 +0200
+@@ -144,7 +144,7 @@
+                 // TODO: Output the alignment as a match to the output file.
+                 if (scoreValue2 >= minScore) {
+                     //std::cout << ali2 << std::endl;
+-                    std::cout << getBeginDim0(seed) << ", " << getEndDim0(seed) << ", " << getBeginDim1(seed) << ", " getEndDim1(seed) << std::endl;
++                    std::cout << getBeginDim0(seed) << ", " << getEndDim0(seed) << ", " << getBeginDim1(seed) << ", " << getEndDim1(seed) << std::endl;
+                 }
+             }
+         }

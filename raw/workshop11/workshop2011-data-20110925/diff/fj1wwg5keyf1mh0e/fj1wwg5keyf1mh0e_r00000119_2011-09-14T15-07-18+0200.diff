@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-14 15:06:14.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-14 15:07:10.000000000 +0200
+@@ -149,7 +149,7 @@
+ 	typedef Graph<Alignment<TDepStringSet> > TAlignGraph;
+ 	TAlignGraph alignG(strings);
+ 	AlignConfig<true,true,true,true> ac;
+-	int score = globalAlignment(alignG, Score<int>(1,-1,-1,-1), ac, Hirschberg());
++	int score = globalAlignment(alignG, Score<int>(1,-1,-1,-1), ac, Gotoh());
+ 	std::cout << "Score = " << score << std::endl << alignG;
+ }
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-14 15:06:14.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-14 15:07:10.000000000 +0200
+@@ -148,7 +148,8 @@
+ 	typedef StringSet<TSequence, Dependent<> > TDepStringSet;
+ 	typedef Graph<Alignment<TDepStringSet> > TAlignGraph;
+ 	TAlignGraph alignG(strings);
+-	int score = globalAlignment(alignG, Score<int>(1,-1,-1,-1), AlignConfig<true,true,true,true>(), Hirschberg());
++	AlignConfig<true,true,true,true> ac;
++	int score = globalAlignment(alignG, Score<int>(1,-1,-1,-1), ac, Hirschberg());
+ 	std::cout << "Score = " << score << std::endl << alignG;
+ }
+ 

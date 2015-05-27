@@ -1,0 +1,57 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:23:39.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:26:23.000000000 +0200
+@@ -107,7 +107,7 @@
+ 		double Tstart, Tend;
+ 		int memsize=1;
+ 		std::cout << "                ";
+-		for (int i=1; i<=3; i++) {
++		for (int i=1; i<=5; i++) {
+ 			memsize=memsize*10;
+ 			std::cout << memsize << "alloc   " << memsize << "clear   ";
+ 		}
+@@ -115,7 +115,7 @@
+ 		memsize=1;
+ 		std::cout << "\nSimple Alloc    ";
+ 		char* myString_arr;
+-		for (int i=1; i<=3; i++) {
++		for (int i=1; i<=5; i++) {
+ 			memsize=memsize*10;
+ 			double t_a=0, t_c=0;
+ 			for (int r=0; r<runs; r++) {
+@@ -133,7 +133,7 @@
+ 		}
+ 		memsize=1;
+ 		std::cout << "\nMultiPool Alloc ";
+-		for (int i=1; i<=3; i++) {
++		for (int i=1; i<=5; i++) {
+ 			memsize=memsize*10;
+ 			double t_a=0, t_c=0;
+ 			for (int r=0; r<runs; r++) {
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:23:39.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:26:23.000000000 +0200
+@@ -115,12 +115,12 @@
+ 		memsize=1;
+ 		std::cout << "\nSimple Alloc    ";
+ 		char* myString_arr;
+-		for (int i=1; i<=3; i++) {
++		for (int i=1; i<=5; i++) {
+ 			memsize=memsize*10;
+ 			double t_a=0, t_c=0;
+ 			for (int r=0; r<runs; r++) {
+ 				Tstart=sysTime();
+-				allocate (mySimpleAlloc, myString_arr, memsize);
++				allocate (mySimpleAlloc, myString_arr, memsize,TagAllocateTemp());
+ 				Tend=sysTime();
+ 				t_a+=Tend-Tstart;
+ 				Tstart=sysTime();
+@@ -138,7 +138,7 @@
+ 			double t_a=0, t_c=0;
+ 			for (int r=0; r<runs; r++) {
+ 				Tstart=sysTime();
+-				allocate (myMultiPoolAlloc, myString_arr, memsize);
++				allocate (myMultiPoolAlloc, myString_arr, memsize,TagAllocateTemp());
+ 				Tend=sysTime();
+ 				t_a+=Tend-Tstart;
+ 				Tstart=sysTime();

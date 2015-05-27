@@ -1,0 +1,52 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 11:39:47.000000000 +0200
++++ ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 11:55:46.275727252 +0200
+@@ -79,31 +79,43 @@
+     TFinder finder = TFinder(seqs2[0]);
+ 
+ 	// TODO: Repeat the following steps for all hits of the finder.
+-    typedef Iterator<TFinder> TFinderIt;
++    //typedef Iterator<TFinder> TFinderIt;
++    //TFinderIt it = TFinderIt(finder);
++    
+     
+ 	// call the function find to obtain a swift hit
+ 	// TODO: uncomment the following line
+ 
+-	//find(finder, pattern, errorRate, minimalLength);
++	while (find(finder, pattern, errorRate, minimalLength)) {
+ 
+ 	// extract infixes from hit
+ 	// TODO: uncomment the following three lines
+ 
+-	//typedef Infix<TSequence>::Type TInfix;
+-	//TInfix infix1 = infix(finder, seqs1[0]);
+-	//TInfix infix2 = infix(pattern, seqs2[0]);
++	    typedef Infix<TSequence>::Type TInfix;
++	    TInfix infix1 = infix(finder, seqs1[0]);
++	    TInfix infix2 = infix(pattern, seqs2[0]);
+ 
+ 	// find best local alignment of infixes, and check for minimal score
+ 	// TODO: Define an align object and initialize it with the infixes. Find the best local
+ 	//       alignment of the infixes. Use the above defined scoring scheme. Make sure that
+ 	//       it reaches the minimal score minScore.
+ 
++        std::cout << infix1 << std::endl;
++        std::cout << infix2 << std::endl;
++        //typedef Align<TSequence> TAlign;
++        //typedef Row<TAlign> TRow;
++        //TAlign aln = TAlign()
++        //resize(rows(aln), 2);
++        //assignSource(row(aln, 0), infix1);
++        //assignSource(row(aln, 1), infix2);
++        
+ 	// create a seed for the local alignment, and conduct gapped X-drop extension
+ 	// TODO: Define a seed on the original sequences but for the subsequences of the local
+ 	//       alignment. Extend this seed in both directions using gapped X-drop extension.
+ 	//       Check that the extended seed has a length of at least minimalLength.
+ 	// HINT: Have a look at the Seed-and-Extend tutorial.
+ 
++    }
+ 	// find best global alignment of extended seed
+ 	// TODO: Compute the best global alignment of extended seed and its score.
+ 	// HINT: Create an align object on infixes of the sequences.

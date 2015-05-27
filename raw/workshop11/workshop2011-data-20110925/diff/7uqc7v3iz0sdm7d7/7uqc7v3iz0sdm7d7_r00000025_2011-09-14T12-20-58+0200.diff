@@ -1,0 +1,29 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/msplazer/msplazer.cpp ./sandbox/my_sandbox/apps/msplazer/msplazer.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/msplazer/msplazer.cpp	2011-09-09 19:26:57.000000000 +0200
++++ ./sandbox/my_sandbox/apps/msplazer/msplazer.cpp	2011-09-14 12:20:54.968633122 +0200
+@@ -310,7 +310,7 @@
+ 
+ 	std::cerr << " Initialising graph structure " << std::endl;
+ 	typedef typename EdgeDescriptor<TGraph>::Type TEdgeDescriptor;
+-	//resizeEdgeMap(graph, queryBreakpoints.slotLookupTable);
++	resizeEdgeMap(graph, queryBreakpoints.slotLookupTable);
+ 	typedef typename Iterator<String<StellarMatch<TSequence, TId > > >::Type TIterator;
+ 	typedef typename Iterator<TGraph, VertexIterator>::Type TVertexIterator;
+ 
+@@ -334,13 +334,13 @@
+ 		cargo = static_cast<int>(queryMatches.matches[i].begin2) + matchDistanceScores[i];
+ 		if(cargo < msplazerOptions.minScoreThresh){
+ 			TEdgeDescriptor edge = addEdge(graph, startVertex, i, cargo);//10u);//value(itV));
+-			//assignProperty(queryBreakpoints, edge);
++			assignProperty(queryBreakpoints, edge);
+ 			std::cerr << " Edge from start to " << i << " with cargo: " << cargo << std::endl;
+ 		}
+ 		cargo = length(source(queryMatches.matches[i].row2)) - queryMatches.matches[i].end2;
+ 		if(cargo < msplazerOptions.minScoreThresh){
+ 			TEdgeDescriptor edge = addEdge(graph, i, endVertex, cargo);
+-			//assignProperty(queryBreakpoints, edge);
++			assignProperty(queryBreakpoints, edge);
+ 			std::cerr << " Edge from: " << i << " to end with cargo: " << cargo << std::endl;
+ 		}
+ 	}
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/msplazer/.msplazer.cpp.swp and ./sandbox/my_sandbox/apps/msplazer/.msplazer.cpp.swp differ

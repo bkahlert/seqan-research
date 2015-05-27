@@ -1,0 +1,19 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fec6t5zk4j2ik4e7_stats.txt -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/userdata/fec6t5zk4j2ik4e7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:23:26.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:25:11.641995414 +0200
+@@ -45,10 +45,14 @@
+ int main(int argc, char const ** argv) {
+ 	String<AminoAcid> aaString = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
+ 
+-	for (Iterator<String<AminoAcid>> it = begin(aaString); it != end(aaString); it++) {
++	Iterator<String<AminoAcid>> it = begin(aaString);
++	Iterator<String<AminoAcid>> end = end(aaString);
++
++	while (it != end) {
+ 		if (it == 'A') {
+ 			it = 'R';
+ 		}
++		it++;
+ 	}
+ 
+ 	std::cout << aaString << std::endl;

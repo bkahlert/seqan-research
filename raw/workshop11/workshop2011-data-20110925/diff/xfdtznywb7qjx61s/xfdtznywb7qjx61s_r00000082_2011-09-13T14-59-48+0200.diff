@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:58:50.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:59:45.000000000 +0200
+@@ -6,9 +6,9 @@
+ using namespace seqan;
+ 
+ //template <typename TAlphabet>
+-//template <typename TSequence>
+-void align_sequences()
+-//void align_sequences(TSequence & seqa, TSequence & seqb)
++template <typename TSequence>
++//void align_sequences()
++void align_sequences(TSequence & seqa, TSequence & seqb)
+ {
+ 	typedef String<char> TSequence;                 // sequence type
+ 
+@@ -28,6 +28,6 @@
+ 
+ int main()
+ {
+-	align_sequences();
+-//	align_sequences("aaa", "baa");
++	//align_sequences();
++	align_sequences("aaa", "baa");
+ }
+\ No newline at end of file

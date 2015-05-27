@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:45:51.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:46:29.138734617 +0200
+@@ -30,7 +30,7 @@
+     std::cout << infix(seq1, getBeginDim1(seed), getEndDim1(seed)) << std::endl;
+ }
+ 
+-template<typename TAlign, typename TSeq>
++template<typename TAlign>
+ void
+ gffifyAlign(TAlign & the_showdown) {
+     std::cout << "Sequence 1\t" << clippedBeginPosition( row( the_showdown, 0 ) ) << "\t" << clippedEndPosition( row( the_showdown, 0 ) ) << std::endl;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:45:41.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:45:51.808734626 +0200
+@@ -118,7 +118,7 @@
+ 	    appendValue( rows( storm ), infix( seq1[0], getBeginDim0( wind ), getEndDim0( wind ) ) );
+ 	    appendValue( rows( storm ), infix( seq2[0], getBeginDim1( wind ), getEndDim1( wind ) ) );
+ 	    the_score = globalAlignment( storm, judgement_of_carrion );
+-	    gffifyAln( storm );
++	    gffifyAlign( storm );
+ 	    outFile << storm;
+ 	}
+ 

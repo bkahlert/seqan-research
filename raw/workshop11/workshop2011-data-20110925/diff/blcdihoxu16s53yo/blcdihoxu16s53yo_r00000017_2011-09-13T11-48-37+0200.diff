@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 11:46:12.750000000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 11:48:32.093750000 +0200
+@@ -64,7 +64,7 @@
+ 	
+ 	// define finder and pattern
+ 	// TODO: Define types for finder and pattern using SeqAn's find interface from the index
+-	//       module. Both should be specialized for the approproiate swift filter algorithm.
++	//       module. Both should be specialized for the appropriate swift filter algorithm.
+ 	//       The pattern will need the definition of a q-gram-index. Use q-grams of length 8
+ 	//       for now, and open addressing.
+ 	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
+@@ -77,7 +77,7 @@
+ 	// TODO: Define variables of your pattern and finder types, and initialize them with the
+ 	//       first sequences in the sequence sets seqs1 and seqs2.
+ 
+-	TIndex index(seqs2[0]);
++	TIndex index(seqs2);
+ 	TPattern pattern(seqs1[0]);
+ 	//TFinder finder(seqs2[0]);
+ 

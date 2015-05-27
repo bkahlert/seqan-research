@@ -1,0 +1,17 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/20xjp6c6gjzthtye_stats.txt -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata/20xjp6c6gjzthtye_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/mySandbox/apps/my_app/my_app.cpp ./sandbox/mySandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mySandbox/apps/my_app/my_app.cpp	2011-09-13 07:48:44.141618700 -0500
++++ ./sandbox/mySandbox/apps/my_app/my_app.cpp	2011-09-13 07:50:46.483616300 -0500
+@@ -12,9 +12,9 @@
+ int main(int argc, char const ** argv)
+ {
+ 	// create AA seq and iterate over
+-	String<char> AA = AminoAcid();
+-	//cout << AA << endl;
+-	// get siye
+-	//cout << V<AA>::Value << endl;
++	String<char> AA = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
++	cout << AA << endl;
++	// get size
++	cout << length(AA) << endl;
+     return 0;
+ }

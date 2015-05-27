@@ -1,0 +1,17 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 15:16:05.000000000 +0200
++++ ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 15:17:29.806270250 +0200
+@@ -151,7 +151,12 @@
+         
+         globalAlignment(gAln, scoring);
+ 
+-        outFile << "Local Alignment" << std::endl;
++        outFile << "Local Alignment:" 
++                << clippedBeginPosition(row(gAln, 0))
++                << clippedBeginPosition(row(gAln, 1))
++                << clippedEndPosition(row(gAln, 0))
++                << clippedEndPosition(row(gAln, 1))
++                << std::endl;
+         outFile << gAln << std::endl;
+ 	    // TODO: Output the alignment as a match to the output file.
+     }

@@ -1,0 +1,12 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp and ./sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp ./sandbox/leon/apps/miniStellar/miniStellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 09:45:55.000000000 +0200
++++ ./sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 10:09:59.000000000 +0200
+@@ -32,6 +32,7 @@
+ 	// TODO: Define a scoring scheme 'score' with linear gap costs using the above defined
+ 	//       score values for scoring matches, mismatches, and gaps.
+ 	// HINT: You can find a section on Schoring Schemes in the Alignments tutorial.
++	Score<int,Simple> score;
+ 
+ 	// read sequences from fasta files
+ 	typedef Dna5String TSequence;

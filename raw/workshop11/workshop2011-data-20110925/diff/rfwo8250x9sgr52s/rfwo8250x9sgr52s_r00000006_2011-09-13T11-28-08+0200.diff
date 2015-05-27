@@ -1,0 +1,217 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/.ministellar.cpp.swp and ./sandbox/workshop/apps/ministellar/.ministellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/CMakeLists.txt ./sandbox/workshop/apps/ministellar/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/CMakeLists.txt	2011-09-13 09:56:23.000000000 +0200
++++ ./sandbox/workshop/apps/ministellar/CMakeLists.txt	2011-09-13 11:27:38.000000000 +0200
+@@ -2,4 +2,4 @@
+ project (sandbox_workshop_apps_ministellar)
+ 
+ # Update the list of file names below if you add source files to your application.
+-seqan_add_executable(ministellar ministellar.cpp ministellar.h)
++seqan_add_executable(ministellar ministellar.cpp)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp ./sandbox/workshop/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 10:07:57.000000000 +0200
++++ ./sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 10:32:32.000000000 +0200
+@@ -9,7 +9,7 @@
+ 
+ unsigned const minimalLength = 12;
+ float const errorRate = 0.05;
+-//unsigned const qGramLength = 8;
++unsigned const qGramLength = 8;
+ CharString const filename = "ministellar.out";
+ 
+ typedef int TScoreValue;
+@@ -19,6 +19,17 @@
+ TScoreValue const minScore = 9;
+ TScoreValue const xDrop = 3;
+ 
++template <typename TSequence>
++inline bool loadFasta(StringSet<CharString>& ids, StringSet<TSequence>& sequences, char const* filename) {
++    std::ifstream streamIn1(filename, std::ios::binary);
++    RecordReader<std::ifstream, SinglePass<> > reader(streamIn);
++    if (read2(ids, sequences, reader, Fasta()) != 0) {
++        std::cerr << "Could not read file " << argv[1] << std::endl;
++        return false;
++    }
++
++    return true;
++}
+ 
+ int main(int argc, char const ** argv) {
+     if (argc != 3) {
+@@ -27,28 +38,19 @@
+         return 1;
+     }
+ 
+-    // TODO: Define a scoring scheme 'score' with linear gap costs using the above defined
+-    //       score values for scoring matches, mismatches, and gaps.
+-    // HINT: You can find a section on Schoring Schemes in the Alignments tutorial.
++    Score<int, Simple> score(maatchScore, mismatchScore, gapScore);
+ 
+     // read sequences from fasta files
+     typedef Dna5String TSequence;
++    typedef Value<TSequence>::Type TValue;
+     StringSet<CharString> ids1, ids2;
+     StringSet<TSequence> seqs1, seqs2;
+ 
+-    std::ifstream streamIn1(argv[1], std::ios::in | std::ios::binary);
+-    RecordReader<std::ifstream, SinglePass<> > reader1(streamIn1);
+-    if (read2(ids1, seqs1, reader1, Fasta()) != 0)
+-    {
+-        std::cerr << "Could not read file " << argv[1] << std::endl;
++    if (not loadFasta(ids1, seqs1, argv[1]) or not loadFasta(ids2, seqs2, argv[2]))
+         return 1;
+-    }
+-
+-    // TODO: Do the same for the second file.
+ 
+     // prepare output file
+-    std::ofstream outFile;
+-    outFile.open(toCString(filename));
++    std::ofstream outFile(toCString(filename));
+ 
+     // define finder and pattern
+     // TODO: Define types for finder and pattern using SeqAn's find interface from the index
+@@ -57,6 +59,10 @@
+     //       for now, and open addressing.
+     // HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
+     //       tutorial page, you will find a link to a Swift HowTo page.
++    
++    typedef Finder<StringSet<TSequence>, Swift<SwiftLocal> > TFinder;
++    typedef Index<StringSet<TSequence>, IndexQGram<Shape<TValue, SimpleShape>, OpenAddressing> > TIndex;
++    typedef Pattern<TQGramIndex, Swift<SwiftLocal> > TPattern;
+ 
+     // TODO: Define variables of your pattern and finder types, and initialize them with the
+     //       first sequences in the sequence sets seqs1 and seqs2.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.h ./sandbox/workshop/apps/ministellar/ministellar.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.h	2011-09-13 09:56:23.000000000 +0200
++++ ./sandbox/workshop/apps/ministellar/ministellar.h	1970-01-01 01:00:00.000000000 +0100
+@@ -1,129 +0,0 @@
+-// ==========================================================================
+-//                                ministellar
+-// ==========================================================================
+-// Copyright (c) 2006-2010, Knut Reinert, FU Berlin
+-// All rights reserved.
+-//
+-// Redistribution and use in source and binary forms, with or without
+-// modification, are permitted provided that the following conditions are met:
+-//
+-//     * Redistributions of source code must retain the above copyright
+-//       notice, this list of conditions and the following disclaimer.
+-//     * Redistributions in binary form must reproduce the above copyright
+-//       notice, this list of conditions and the following disclaimer in the
+-//       documentation and/or other materials provided with the distribution.
+-//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
+-//       its contributors may be used to endorse or promote products derived
+-//       from this software without specific prior written permission.
+-//
+-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+-// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+-// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+-// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
+-// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+-// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+-// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+-// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+-// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+-// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+-// DAMAGE.
+-//
+-// ==========================================================================
+-// Author: Konrad Rudolph <konrad.rudolph@fu-berlin.de>
+-// ==========================================================================
+-
+-#ifndef SANDBOX_WORKSHOP_APPS_MINISTELLAR_MINISTELLAR_H_
+-#define SANDBOX_WORKSHOP_APPS_MINISTELLAR_MINISTELLAR_H_
+-
+-#include <seqan/basic.h>
+-#include <seqan/sequence.h>
+-
+-#include <seqan/misc/misc_cmdparser.h>
+-
+-using namespace seqan;
+-
+-// ============================================================================
+-// Forwards
+-// ============================================================================
+-
+-// ============================================================================
+-// Tags, Classes, Enums
+-// ============================================================================
+-
+-struct Options
+-{
+-    bool showHelp;
+-    bool showVersion;
+-    int i;
+-    String<CharString> texts;
+-    
+-    Options()
+-    {
+-        // Set defaults.
+-        showHelp = false;
+-        showVersion = false;
+-        i = 0;
+-    }
+-};
+-
+-// ============================================================================
+-// Metafunctions
+-// ============================================================================
+-
+-// ============================================================================
+-// Functions
+-// ============================================================================
+-
+-void
+-setupCommandLineParser(CommandLineParser & parser, Options const & options)
+-{
+-    addVersionLine(parser, "0.1");
+-    
+-    addTitleLine(parser, "**********************");
+-    addTitleLine(parser, "* ministellar *");
+-    addTitleLine(parser, "**********************");
+-    addTitleLine(parser, "");
+-    addTitleLine(parser, "(c) 2011 by Konrad Rudolph <konrad.rudolph@fu-berlin.de>");
+-
+-    addUsageLine(parser, "[OPTIONS] TEXT+");
+-    
+-	addSection(parser, "Main Options");
+-	addOption(parser, CommandLineOption("i",  "integer",  "set an integer option", OptionType::Integer | OptionType::Label, options.i));
+-    
+-    requiredArguments(parser, 1);
+-}
+-
+-int parseCommandLineAndCheck(Options & options,
+-                             CommandLineParser & parser,
+-                             int argc,
+-                             char const ** argv)
+-{
+-    bool stop = !parse(parser, argc, argv);
+-    if (stop)
+-        return 1;
+-    if (isSetLong(parser, "help")) {
+-        options.showHelp = true;
+-        return 0;
+-    }
+-    if (isSetLong(parser, "version")) {
+-        options.showVersion = true;
+-        return 0;
+-    }
+-    
+-    options.texts = getArgumentValues(parser);
+-
+-	return 0;
+-}
+-
+-int mainWithOptions(Options & options)
+-{
+-    typedef Iterator<String<CharString> >::Type TIterator;
+-    std::cout << "Non-option Arguments:" << std::endl;
+-    for (TIterator it = begin(options.texts); it != end(options.texts); ++it) {
+-        std::cout << "  " << *it << std::endl;
+-    }
+-    
+-    return 0;
+-}
+-
+-#endif  // #ifndef SANDBOX_WORKSHOP_APPS_MINISTELLAR_MINISTELLAR_H_

@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 14:36:58.359375000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 14:38:58.093750000 +0200
+@@ -77,9 +77,9 @@
+ 	// TODO: Define variables of your pattern and finder types, and initialize them with the
+ 	//       first sequences in the sequence sets seqs1 and seqs2.
+ 
+-	TIndex index(seqs2[0]);
++	TIndex index(seqs1[0]);
+ 	TPattern pattern(index);
+-	TFinder finder(seqs1[0]);
++	TFinder finder(seqs2[0]);
+ 
+ 	// TODO: Repeat the following steps for all hits of the finder.
+ 
+@@ -92,8 +92,8 @@
+         // TODO: uncomment the following three lines
+ 
+         typedef Infix<TSequence>::Type TInfix;
+-        TInfix infix1 = infix(finder, seqs1[0]);
+-        TInfix infix2 = infix(pattern, seqs2[0]);
++        TInfix infix1 = infix(pattern, seqs1[0]);
++        TInfix infix2 = infix(finder, seqs2[0]);
+         
+         //std::cout << "infix1 = " << infix1 << std::endl;
+         //std::cout << "infix2 = " << infix2 << std::endl;

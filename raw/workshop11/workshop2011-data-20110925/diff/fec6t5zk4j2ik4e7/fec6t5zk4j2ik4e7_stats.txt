@@ -1,0 +1,36 @@
+{
+    "machine": {
+        "machine": "x86_64", 
+        "processor": "Intel(R) Core(TM) i7 CPU M 620 @ 2.67GHz", 
+        "architecture": [
+            [
+                "64bit", 
+                "ELF"
+            ], 
+            "64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "/usr/bin/gmake", 
+        "CMAKE_CXX_COMPILER": "/usr/bin/c++", 
+        "CMAKE_MODULE_LINKER_FLAGS": "", 
+        "CMAKE_GENERATOR": "Unix Makefiles", 
+        "CMAKE_C_COMPILER": "Unix Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "/usr/bin/ld"
+    }, 
+    "os": {
+        "node": "localhost", 
+        "sys.platform": "linux2", 
+        "system": "Linux", 
+        "platform": "Linux-2.6.38-tuxonice-r1-x86_64-Intel-R-_Core-TM-_i7_CPU_M_620_@_2.67GHz-with-gentoo-2.0.3", 
+        "version": "#4 SMP Thu Sep 1 13:16:15 CEST 2011", 
+        "release": "2.6.38-tuxonice-r1"
+    }, 
+    "id": "fec6t5zk4j2ik4e7", 
+    "ip": [
+        "127.0.0.1"
+    ]
+}

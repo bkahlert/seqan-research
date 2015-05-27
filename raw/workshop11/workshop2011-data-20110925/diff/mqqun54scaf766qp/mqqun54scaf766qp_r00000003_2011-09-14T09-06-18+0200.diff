@@ -1,0 +1,9 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/CMakeLists.txt ./sandbox/my_sandbox/apps/my_app/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/CMakeLists.txt	2011-04-07 17:07:50.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/CMakeLists.txt	2011-09-13 13:57:15.557447200 +0200
+@@ -2,4 +2,4 @@
+ project (sandbox_my_sandbox_apps_my_app)
+ 
+ # Update the list of file names below if you add source files to your application.
+-seqan_add_executable(my_app my_app.cpp my_app.h)
++seqan_add_executable(my_app my_app.cpp my_app.h test.h)

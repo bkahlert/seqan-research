@@ -1,0 +1,40 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 14:24:43.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 14:26:37.128733040 +0200
+@@ -115,11 +115,14 @@
+ 	    //writeSeed( wind, seq1[0], seq2[0] );
+ 	    
+ 	    Align< TSequence > storm;
+-	    appendValue( rows( storm ), infix( seq1[0], getBeginDim0( wind ), getEndDim0( wind ) ) );
+-	    appendValue( rows( storm ), infix( seq2[0], getBeginDim1( wind ), getEndDim1( wind ) ) );
++	    TInfix infix3 = infix( seq1[0], getBeginDim0( wind ), getEndDim0( wind ) );
++	    TInfix infix4 = infix( seq2[0], getBeginDim1( wind ), getEndDim1( wind ) );
++	    appendValue( rows( storm ), infix3 );
++	    appendValue( rows( storm ), infix4 );
+ 	    the_score = globalAlignment( storm, judgement_of_carrion );
+-	    std::cout << getBeginDim0( wind ) + beginPosition( rows( storm )[0] ) << " - " << endPosition( infix1 ) + endPosition( rows( storm )[0] ) << "\t";
+-	    std::cout << getBeginDim1( wind ) + beginPosition( rows( storm )[1] ) << " - " << beginPosition( infix2 ) + endPosition( rows( storm )[1] ) << std::endl;
++	    
++	    std::cout << beginPosition( infix3 ) + beginPosition( rows( storm )[0] ) << " - " << endPosition( infix4 ) + endPosition( rows( storm )[0] ) << "\t";
++	    std::cout << beginPosition( infix4 ) + beginPosition( rows( storm )[1] ) << " - " << beginPosition( infix4 ) + endPosition( rows( storm )[1] ) << std::endl;
+ 	    outFile << storm;
+ 	}
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 14:23:00.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 14:26:21.178733044 +0200
+@@ -115,9 +115,12 @@
+ 	    //writeSeed( wind, seq1[0], seq2[0] );
+ 	    
+ 	    Align< TSequence > storm;
+-	    appendValue( rows( storm ), infix( seq1[0], getBeginDim0( wind ), getEndDim0( wind ) ) );
+-	    appendValue( rows( storm ), infix( seq2[0], getBeginDim1( wind ), getEndDim1( wind ) ) );
++	    TInfix infix3 = infix( seq1[0], getBeginDim0( wind ), getEndDim0( wind ) );
++	    TInfix infix4 = infix( seq2[0], getBeginDim1( wind ), getEndDim1( wind ) );
++	    appendValue( rows( storm ),  );
++	    appendValue( rows( storm ),  );
+ 	    the_score = globalAlignment( storm, judgement_of_carrion );
++	    
+ 	    std::cout << beginPosition( infix1 ) + beginPosition( rows( storm )[0] ) << " - " << endPosition( infix1 ) + endPosition( rows( storm )[0] ) << "\t";
+ 	    std::cout << beginPosition( infix2 ) + beginPosition( rows( storm )[1] ) << " - " << beginPosition( infix2 ) + endPosition( rows( storm )[1] ) << std::endl;
+ 	    outFile << storm;

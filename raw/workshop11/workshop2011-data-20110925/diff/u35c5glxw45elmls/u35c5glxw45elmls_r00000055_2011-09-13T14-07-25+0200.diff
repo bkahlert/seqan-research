@@ -1,0 +1,16 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 14:05:57.000000000 +0200
++++ ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 14:07:23.276270251 +0200
+@@ -112,9 +112,9 @@
+         assignSource(row(aln, 1), infix2);
+         int scr = localAlignment(aln, scoring);
+         std::cout << aln <<std::endl;
+-        if (scr < minScore) {
+-            continue;
+-        }
++//        if (scr > minScore) {
++//            continue;
++//        }
+ 	// create a seed for the local alignment, and conduct gapped X-drop extension
+ 	// TODO: Define a seed on the original sequences but for the subsequences of the local
+ 	//       alignment. Extend this seed in both directions using gapped X-drop extension.

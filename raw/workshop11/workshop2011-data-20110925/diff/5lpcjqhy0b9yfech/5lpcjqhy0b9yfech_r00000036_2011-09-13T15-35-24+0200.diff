@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2011-09-13 15:31:12.500000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2011-09-13 15:35:14.187500000 +0200
+@@ -20,7 +20,7 @@
+     assignSource(row(align,0),str1);
+     assignSource(row(align,1),str2);
+ 
+-	int score = globalAlignment(align,Score<int,EditDistance>,TBottom);
++	int score = globalAlignment(align,EditDistanceScore(),TBottom);
+ 	
+ 	::std::cout << align << std::endl;
+ 	::std::cout << "Score: " << score << std::endl;

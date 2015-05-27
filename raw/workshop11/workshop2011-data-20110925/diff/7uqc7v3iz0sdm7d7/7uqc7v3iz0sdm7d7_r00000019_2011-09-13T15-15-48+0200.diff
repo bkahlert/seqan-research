@@ -1,0 +1,22 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp ./sandbox/my_sandbox/demos/samio_demo.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 15:13:11.000000000 +0200
++++ ./sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 15:15:42.123335501 +0200
+@@ -59,7 +59,7 @@
+ 		BamIOContext<TNameStore> context(refNameStore, refNameStoreCache);
+ 		int res;
+ 		BamAlignmentRecord record;
+-		record.qName = "QeryName";
++		record.qName = "QueryName";
+ 		record.flag = 0;
+ 		record.rId = 0;
+ 		record.pos = 10;
+@@ -77,7 +77,7 @@
+ 		record.cigar[2].count = 3;
+ 		record.cigar[2].operation = 'M';
+ 	
+-		record.rNextId = 0;
++		//record.rNextId = 0;
+ 		record.pNext = 0;
+ 		record.tLen = 0;
+ 		record.seq = "ACTG";
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/.samio_demo.cpp.swp and ./sandbox/my_sandbox/demos/.samio_demo.cpp.swp differ

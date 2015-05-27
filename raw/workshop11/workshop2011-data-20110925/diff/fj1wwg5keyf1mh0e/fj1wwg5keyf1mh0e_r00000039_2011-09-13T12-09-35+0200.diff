@@ -1,0 +1,50 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:05:46.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:09:29.000000000 +0200
+@@ -109,7 +109,7 @@
+ 		std::cout << "                ";
+ 		for (int i=1; i<=3; i++) {
+ 			memsize=memsize*10;
+-			std::cout << memsize << "  ";
++			std::cout << memsize << "alloc  " << memsize << "clear  ";
+ 		}
+ 		memsize=1;
+ 		std::cout << "Simple Alloc    ";
+@@ -119,11 +119,6 @@
+ 			allocate (mySimpleAlloc, memsize);
+ 			Tend=sysTime();
+ 			std::cout << Tend-Tstart << "  ";
+-		}
+-		memsize=1;
+-		std::cout << "Simple Clear    ";
+-		for (int i=1; i<=3; i++) {
+-			memsize=memsize*10;
+ 			Tstart=sysTime();
+ 			clear (mySimpleAlloc);
+ 			Tend=sysTime();
+@@ -137,11 +132,6 @@
+ 			allocate (myMultiPoolAlloc, memsize);
+ 			Tend=sysTime();
+ 			std::cout << Tend-Tstart << "  ";
+-		}
+-		memsize=1;
+-		std::cout << "MultiPool Clear ";
+-		for (int i=1; i<=3; i++) {
+-			memsize=memsize*10;
+ 			Tstart=sysTime();
+ 			clear (myMultiPoolAlloc);
+ 			Tend=sysTime();
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:05:45.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:09:29.000000000 +0200
+@@ -101,8 +101,8 @@
+ 		std::cout << std::endl;
+ 		
+ // 		tut Basics - 2
+-		Allocator<SimpleAlloc<>> mySimpleAlloc;
+-		Allocator<MultiPool<>> myMultiPoolAlloc;
++		Allocator<SimpleAlloc<> > mySimpleAlloc;
++		Allocator<MultiPool<> > myMultiPoolAlloc;
+ 		
+ 		double Tstart, Tend;
+ 		int memsize=1;

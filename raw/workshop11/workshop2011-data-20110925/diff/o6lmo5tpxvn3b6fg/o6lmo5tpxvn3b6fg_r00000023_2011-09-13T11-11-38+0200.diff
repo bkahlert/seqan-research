@@ -1,0 +1,31 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:00:35.093750000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:11:31.109375000 +0200
+@@ -2,13 +2,22 @@
+ #include <seqan/sequence.h>  // CharString, ...
+ #include <seqan/file.h>      // to stream a CharString into cout
+ 
++typedef seqan::String<seqan::Dna> DnaString;
++
++template <type A>
++int count1mers(seqan::String<A> str)
++{
++	
++	seqan::String<int> charcount;
++	seqan::resize(charcount, 26, 0);
++
++
++	return 1;
++}
+ 
+ int main(int, char **) {
+-	seqan::String<seqan::Dna> testseq = "GATTACA";
+-    std::cout << "Hello World!" << std::endl;
++	DnaString testseq = "CAGTGTGAGCGATTACATACCATCGACTAG";
+     std::cout << testseq << std::endl;
+ 
+-	seqan::resize(testseq, 20,'a');
+-	std::cout << testseq << std::endl;
+     return 1;
+ }
+\ No newline at end of file

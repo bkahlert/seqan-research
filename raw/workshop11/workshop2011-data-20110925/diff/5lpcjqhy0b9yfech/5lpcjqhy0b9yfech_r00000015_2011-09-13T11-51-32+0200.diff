@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2011-09-13 11:50:16.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2011-09-13 11:51:27.390625000 +0200
+@@ -1,7 +1,7 @@
+ #include <seqan/sequence.h>
+ #include <seqan/basic.h>
+ #include <iostream>
+-//using namespace seqan;
++using namespace seqan;
+ 
+ void countOneMers(String<char> str) {
+ 

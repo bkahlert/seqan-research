@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:33:56.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:36:54.808734767 +0200
+@@ -103,9 +103,9 @@
+ 	    }
+ 	    
+ 	    Seed< Simple > wind( clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );  
+-	    writeSeed( wind, seq1[0], seq2[0] );  	    
++	    //writeSeed( wind, seq1[0], seq2[0] );  	    
+ 	    extendSeed( wind, seq1[0], seq2[0], EXTEND_BOTH, judgement_of_carrion, xDrop, GappedXDrop() );
+-	    writeSeed( wind, seq1[0], seq2[0] );
++	    //writeSeed( wind, seq1[0], seq2[0] );
+ 	    
+ 	    Align< TSequence > storm;
+ 	    appendValue( rows( storm ), infix( seq1[0], getBeginDim0( wind ), getEndDim0( wind ) ) );
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:32:48.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:33:56.898734814 +0200
+@@ -111,6 +111,7 @@
+ 	    appendValue( rows( storm ), infix( seq1[0], getBeginDim0( wind ), getEndDim0( wind ) ) );
+ 	    appendValue( rows( storm ), infix( seq2[0], getBeginDim1( wind ), getEndDim1( wind ) ) );
+ 	    the_score = globalAlignment( storm, judgement_of_carrion );
++	    outFile << storm;
+ 	}
+ 
+ 	// find best global alignment of extended seed

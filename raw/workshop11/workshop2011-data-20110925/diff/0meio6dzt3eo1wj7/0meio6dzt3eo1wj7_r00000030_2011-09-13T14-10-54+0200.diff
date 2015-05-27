@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/0meio6dzt3eo1wj7_stats.txt -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata/0meio6dzt3eo1wj7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:03:18.577148400 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:10:53.967773400 +0200
+@@ -77,6 +77,8 @@
+ 	}
+ 	::std::cout << ::std::endl;
+ 
++	FrequencyDistribution<AminoAcid> fd;
++
+ 		
+ 	//String<AminoAcid> str = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
+ 
+@@ -93,7 +95,7 @@
+ 
+ 	//absFreqOfLettersInSeq(it);
+ 
+-	showAllLetterOfMyAlphabet(AminoAcid());
++	//showAllLetterOfMyAlphabet(AminoAcid());
+ //   showAllLetterOfMyAlphabet(Dna());
+ //	 showAllLetterOfMyAlphabet(Dna5());
+ //	showAllLetterOfMyAlphabet(Rna5());

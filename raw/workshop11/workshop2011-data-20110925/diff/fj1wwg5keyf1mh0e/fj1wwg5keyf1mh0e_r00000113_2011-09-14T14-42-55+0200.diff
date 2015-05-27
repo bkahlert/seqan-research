@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-14 14:42:32.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-14 14:42:52.000000000 +0200
+@@ -114,7 +114,7 @@
+ template <typename T>
+ void globalAlign (String<T> str1, String<T> str2) {
+ 		typedef String<T> TSequence;
+-		typedef typename Align<TSequence, ArrayGaps> TAlign;
++		typedef Align<TSequence, ArrayGaps> TAlign;
+  		typedef Row<TAlign>::Type TRow;
+ 		typedef Iterator<TRow>::Type TIterator;
+ 		TAlign align;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-14 14:42:32.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-14 14:42:52.000000000 +0200
+@@ -113,7 +113,7 @@
+ 
+ template <typename T>
+ void globalAlign (String<T> str1, String<T> str2) {
+-		typedef typename String<T> TSequence;
++		typedef String<T> TSequence;
+ 		typedef typename Align<TSequence, ArrayGaps> TAlign;
+  		typedef Row<TAlign>::Type TRow;
+ 		typedef Iterator<TRow>::Type TIterator;

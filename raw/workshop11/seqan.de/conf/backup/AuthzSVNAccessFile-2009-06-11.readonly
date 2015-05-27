@@ -1,0 +1,70 @@
+[groups]
+seqan = doering@PCPOOL.MI.FU-BERLIN.DE, weese@PCPOOL.MI.FU-BERLIN.DE, rausch@PCPOOL.MI.FU-BERLIN.DE, emde@PCPOOL.MI.FU-BERLIN.DE, gunnar@PCPOOL.MI.FU-BERLIN.DE, reinert@PCPOOL.MI.FU-BERLIN.DE, aiche@PCPOOL.MI.FU-BERLIN.DE, maschulz@PCPOOL.MI.FU-BERLIN.DE, mbauer@PCPOOL.MI.FU-BERLIN.DE, dklein@PCPOOL.MI.FU-BERLIN.DE, krudolph@PCPOOL.MI.FU-BERLIN.DE, groepl@PCPOOL.MI.FU-BERLIN.DE, ahildebr@PCPOOL.MI.FU-BERLIN.DE
+seqan_authors = doering@PCPOOL.MI.FU-BERLIN.DE, weese@PCPOOL.MI.FU-BERLIN.DE, rausch@PCPOOL.MI.FU-BERLIN.DE, reinert@PCPOOL.MI.FU-BERLIN.DE, emde@PCPOOL.MI.FU-BERLIN.DE
+seqan_book_authors = doering@PCPOOL.MI.FU-BERLIN.DE, reinert@PCPOOL.MI.FU-BERLIN.DE
+seqan_swp08 = erehman@PCPOOL.MI.FU-BERLIN.DE, sakalli@PCPOOL.MI.FU-BERLIN.DE, popko@PCPOOL.MI.FU-BERLIN.DE, mschroed@PCPOOL.MI.FU-BERLIN.DE, maerker@PCPOOL.MI.FU-BERLIN.DE, gohlke@PCPOOL.MI.FU-BERLIN.DE, balcazar@PCPOOL.MI.FU-BERLIN.DE, mendt@PCPOOL.MI.FU-BERLIN.DE, singer@PCPOOL.MI.FU-BERLIN.DE, lienhard@PCPOOL.MI.FU-BERLIN.DE, galicka@PCPOOL.MI.FU-BERLIN.DE, eweber@PCPOOL.MI.FU-BERLIN.DE
+seqan_swp09 = fheeger@PCPOOL.MI.FU-BERLIN.DE, hauswede@PCPOOL.MI.FU-BERLIN.DE, jploog@PCPOOL.MI.FU-BERLIN.DE, bethune@PCPOOL.MI.FU-BERLIN.DE, mheuser@PCPOOL.MI.FU-BERLIN.DE, mkluge@PCPOOL.MI.FU-BERLIN.DE, krakau@PCPOOL.MI.FU-BERLIN.DE, specoviu@PCPOOL.MI.FU-BERLIN.DE
+seqan_swp09_guests = goeke@PCPOOL.MI.FU-BERLIN.DE, phansen@PCPOOL.MI.FU-BERLIN.DE, patel@PCPOOL.MI.FU-BERLIN.DE
+seqan_guests = maerker@PCPOOL.MI.FU-BERLIN.DE, grunert@PCPOOL.MI.FU-BERLIN.DE, jheise@mi.fu-berlin.de, jhlim@PCPOOL.MI.FU-BERLIN.DE, kemena@PCPOOL.MI.FU-BERLIN.DE, ehrlich@PCPOOL.MI.FU-BERLIN.DE
+seqan_web = doering@PCPOOL.MI.FU-BERLIN.DE, weese@PCPOOL.MI.FU-BERLIN.DE, rausch@PCPOOL.MI.FU-BERLIN.DE, reinert@PCPOOL.MI.FU-BERLIN.DE, emde@PCPOOL.MI.FU-BERLIN.DE
+
+[/]
+@seqan_authors = r
+* = r
+
+[/trunk/seqan]
+@seqan = r
+* = r
+
+[/trunk/web]
+@seqan_web = r
+* = r
+
+[/trunk/seqan/projects/apps]
+@seqan = r
+seqan_guests = r
+* =
+
+[/trunk/seqan/book]
+* =
+
+[/trunk/seqan/core]
+@seqan_authors = r
+* =
+
+[/trunk/seqan/core/book]
+@seqan_book_authors = r
+@seqan_authors = r
+* =
+
+[/trunk/seqan/misc]
+@seqan_authors = r
+* = r
+
+[/trunk/seqan/papers]
+@seqan_authors = r
+@seqan = r
+* =
+
+[/releases/seqan1.0]
+* = 
+
+[/releases/seqan_1.1]
+* = 
+
+[/trunk/teaching]
+@seqan_authors = r
+* =
+
+[/trunk/teaching/swp08]
+@seqan_swp08 = r
+
+[/trunk/teaching/swp08/trunk]
+@seqan_swp08 = r
+
+[/trunk/teaching/swp09]
+@seqan_swp09 = r
+@seqan_swp09_guests = r
+
+[/trunk/teaching/swp09/trunk]
+@seqan_swp09 = r

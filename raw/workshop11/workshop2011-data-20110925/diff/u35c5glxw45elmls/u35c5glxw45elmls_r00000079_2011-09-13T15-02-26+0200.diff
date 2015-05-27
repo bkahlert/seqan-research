@@ -1,0 +1,44 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 14:59:54.000000000 +0200
++++ ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 15:02:23.456270251 +0200
+@@ -95,24 +95,24 @@
+ 	// TODO: uncomment the following three lines
+ 
+ 	    typedef Infix<TSequence>::Type TInfix;
+-	    TInfix infix1 = infix(finder, seqs1[0]);
+-	    TInfix infix2 = infix(pattern, seqs2[0]);
++	    TInfix fInfix = infix(finder, seqs1[0]);
++	    TInfix pInfix = infix(pattern, seqs2[0]);
+ 
+ 	// find best local alignment of infixes, and check for minimal score
+ 	// TODO: Define an align object and initialize it with the infixes. Find the best local
+ 	//       alignment of the infixes. Use the above defined scoring scheme. Make sure that
+ 	//       it reaches the minimal score minScore.
+ 
+-        //std::cout << infix1 << std::endl;
+-        //std::cout << infix2 << std::endl;
++        std::cout << fInfix << std::endl;
++        std::cout << pInfix << std::endl;
+         typedef Align<TSequence> TAlign;
+         typedef Row<TAlign> TRow;
+         TAlign aln = TAlign();
+         resize(rows(aln), 2);
+-        assignSource(row(aln, 0), infix1);
+-        assignSource(row(aln, 1), infix2);
++        assignSource(row(aln, 0), fInfix);
++        assignSource(row(aln, 1), pInfix);
+         int scr = localAlignment(aln, scoring);
+-//        std::cout << aln <<std::endl;
++        std::cout << aln <<std::endl;
+ //        std::cout << "Score:" << scr <<std::endl;
+         if (scr < minScore) {
+             continue;
+@@ -128,7 +128,7 @@
+                            beginPosition(infix1) + clippedEndPosition(row(aln, 0)),
+                            beginPosition(infix2) + clippedEndPosition(row(aln, 1)));
+         std::cout << "Seed: " << seed << std::endl;
+-        extendSeed(seed, seqs1[0], seqs2[0], EXTEND_BOTH, scoring, xDrop, GappedXDrop());
++        extendSeed(seed, seqs2[0], seqs1[0], EXTEND_BOTH, scoring, xDrop, GappedXDrop());
+         std::cout << "Extendeed Seed: " <<seed << std::endl;
+ 
+     	// find best global alignment of extended seed

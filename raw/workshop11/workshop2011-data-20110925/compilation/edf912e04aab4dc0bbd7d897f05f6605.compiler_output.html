@@ -1,0 +1,43 @@
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:11:16: warning: comparison of integers of different signs: &#39;int&#39; and &#39;typename Size&lt;const String&lt;char, Alloc&lt;void&gt;&gt; &gt;::Type&#39; (aka &#39;unsigned long&#39;) [-Wsign-compare]</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; for(int i=0; i&lt;length(str);i++) {</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~^~~~~~~~~~~~</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:15:16: warning: comparison of integers of different signs: &#39;int&#39; and &#39;typename Size&lt;const String&lt;int, Alloc&lt;void&gt;&gt; &gt;::Type&#39; (aka &#39;unsigned long&#39;) [-Wsign-compare]</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; for(int i=0; i&lt;length(letterNum);i++) {</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~^~~~~~~~~~~~~~~~~~</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">2 warnings generated.</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">Linking CXX executable tutorial_first_examples</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">Pre Build Instrumentation...</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">cd /Users/bkahlert/Dropbox/development/seqan-workspace-3.7/Debug/sandbox/bkahlert/apps/tutorial_first_examples &amp;&amp; /usr/bin/python /Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/bin/seqan_instrumentation.py pre_build /Users/bkahlert/Dropbox/development/seqan-workspace-3.7/Debug /Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk tutorial_first_examples</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">cd /Users/bkahlert/Dropbox/development/seqan-workspace-3.7/Debug/sandbox/bkahlert/apps/tutorial_first_examples &amp;&amp; /opt/local/bin/cmake -E cmake_link_script CMakeFiles/tutorial_first_examples.dir/link.txt --verbose=1</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/usr/bin/c++&nbsp; &nbsp; -W -Wall -Wno-long-long -fstrict-aliasing -Wstrict-aliasing -Wno-long-long -DSEQAN_ENABLE_TESTING=0 -g -fno-omit-frame-pointer -DSEQAN_ENABLE_DEBUG=1 -Wl,-search_paths_first -Wl,-headerpad_max_install_names &nbsp; CMakeFiles/tutorial_first_examples.dir/tutorial_first_examples.cpp.o&nbsp; -o tutorial_first_examples&nbsp; -lstdc++ /usr/lib/libz.dylib /usr/lib/libbz2.dylib&nbsp;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">Undefined symbols for architecture x86_64:</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &quot;void seqan::write&lt;std::ostream, seqan::String&lt;char, seqan::Alloc&lt;void&gt; &gt; &gt;(std::ostream&amp;, seqan::String&lt;char, seqan::Alloc&lt;void&gt; &gt; const&amp;)&quot;, referenced from:</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; std::ostream&amp; seqan::operator&lt;&lt;&lt;std::ostream, char, seqan::Alloc&lt;void&gt; &gt;(std::ostream&amp;, seqan::String&lt;char, seqan::Alloc&lt;void&gt; &gt; const&amp;) in tutorial_first_examples.cpp.o</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">ld: symbol(s) not found for architecture x86_64</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">clang: error: linker command failed with exit code 1 (use -v to see invocation)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make[2]: *** [sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples] Error 1</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make[1]: *** [sandbox/bkahlert/apps/tutorial_first_examples/CMakeFiles/tutorial_first_examples.dir/all] Error 2</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make: *** [all] Error 2</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; min-height: 15px; ">&nbsp;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(4, 51, 255); ">12:44:50 Build Finished (took 10s.359ms)</p>

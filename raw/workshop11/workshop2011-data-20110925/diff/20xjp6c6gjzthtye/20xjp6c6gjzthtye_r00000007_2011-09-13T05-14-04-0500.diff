@@ -1,0 +1,11 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/20xjp6c6gjzthtye_stats.txt -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata/20xjp6c6gjzthtye_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/mySandbox/tests/my_test/test_my_test.cpp ./sandbox/mySandbox/tests/my_test/test_my_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mySandbox/tests/my_test/test_my_test.cpp	2011-09-13 05:04:46.617732200 -0500
++++ ./sandbox/mySandbox/tests/my_test/test_my_test.cpp	2011-09-13 05:09:19.857360700 -0500
+@@ -41,6 +41,6 @@
+ SEQAN_BEGIN_TESTSUITE(test_my_test)
+ {
+     // Call tests.
+-	SEQAN_CALL_TEST(test_my_test_strings_example1);
++	SEQAN_CALL_TEST("Hello world");
+ }
+ SEQAN_END_TESTSUITE

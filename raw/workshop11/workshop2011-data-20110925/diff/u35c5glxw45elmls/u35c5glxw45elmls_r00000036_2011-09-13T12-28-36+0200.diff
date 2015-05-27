@@ -1,0 +1,18 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 12:00:45.000000000 +0200
++++ ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 12:28:34.005727249 +0200
+@@ -117,7 +117,13 @@
+ 	//       alignment. Extend this seed in both directions using gapped X-drop extension.
+ 	//       Check that the extended seed has a length of at least minimalLength.
+ 	// HINT: Have a look at the Seed-and-Extend tutorial.
+-
++        typedef Seed<Simple> TSeed;
++        TSeed seed = TSeed(beginPosition(infix1) + clippedBeginPosition(row(aln,0)),
++                           beginPosition(infix1) + clippedEndPosition(row(aln, 0))-1,
++                           beginPosition(infix2) + clippedBeginPosition(row(aln,1)),
++                           beginPosition(infix2) + clippenEndPosition(row(aln, 1))-1);
++                           
++       extendSeed(seed, xDrop, scoring, seqs1[0], seqs2[0], GappedXDrop());
+     }
+ 	// find best global alignment of extended seed
+ 	// TODO: Compute the best global alignment of extended seed and its score.

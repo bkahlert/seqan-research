@@ -1,0 +1,128 @@
+<VirtualHost 160.45.117.77:80>
+	ServerAdmin  webmaster@mi.fu-berlin.de
+	ServerName        www.seqan.de
+	ServerAlias       seqan.de
+	ServerAlias       seqan.mi.fu-berlin.de
+	DocumentRoot /web/www.seqan.de/htdocs
+	ErrorLog     /web/www.seqan.de/log/error2.log
+	CustomLog    /web/www.seqan.de/log/access2.log common
+
+	ScriptAlias /cgi-bin/ /web/www.seqan.de/cgi-bin/
+
+ 	RewriteEngine On
+
+	RewriteRule ^/trac/login$            https://trac.mi.fu-berlin.de/seqan/login/	[R,L]
+	RewriteRule ^/trac/(login/.*)        https://trac.mi.fu-berlin.de/seqan/$1	[R,L] 
+	RewriteRule ^/trac$                  http://trac.mi.fu-berlin.de/seqan/	[R,L] 
+	RewriteRule ^/trac/(.*)              http://trac.mi.fu-berlin.de/seqan/$1	[R,L] 
+	RewriteRule ^/svn$                   http://svn.mi.fu-berlin.de/seqan/		[R,L] 
+	RewriteRule ^/svn/(.*)               http://svn.mi.fu-berlin.de/seqan/$1	[R,L] 
+
+        #RewriteLog /var/log/apache/rewrite.log
+        #RewriteLogLevel 9
+	RewriteRule ^typo3$ /typo3/index_re.php [R,L]
+	# andere typo3 rewrites müssen in das <directory> bodo 2009-09-09
+
+	# Alias /dddoc/		/web/www.seqan.de/htdocs/dddoc/
+	# Alias /publications/	/web/www.seqan.de/htdocs/publications/
+	Alias /typo3/		/web/www.seqan.de/t3/typo3/
+
+	<Directory   /web/www.seqan.de/t3>
+		Order allow,deny
+		Allow from all
+		# AllowOverride FileInfo AuthConfig Limit
+		Options FollowSymLinks IncludesNoExec
+	        AddType application/x-httpd-php .php
+	        php_admin_value safe_mode on
+	        php_admin_value safe_mode_gid on
+	        php_admin_value safe_mode_include_dir /usr/share/typo3/typo3_src-4.2/
+	        php_admin_value upload_max_filesize 10M
+	        php_admin_value post_max_size 10M
+	        php_admin_value upload_tmp_dir /var/tmp/www.seqan.de/
+	        php_admin_value memory_limit 48M
+	        # php_admin_value max_execution_time 90
+	        php_admin_value include_path /web/www.seqan.de/t3/:/usr/share/typo3/typo3_src-4.2/:.
+	        php_admin_value sendmail_path "/web/www.seqan.de/t3/execdir/sendmail -t -i"
+	        php_admin_value open_basedir /var/tmp/www.seqan.de/:/web/www.seqan.de/t3/:/usr/share/typo3/:/usr/share/fonts/truetype/ttf-dejavu/:/usr/share/javascript/prototype/:/usr/share/javascript/scriptaculous/:/web/www.seqan.de/t3/typo3conf/
+	        php_admin_value safe_mode_exec_dir /web/www.seqan.de/t3/execdir/
+	        php_flag allow_call_time_pass_reference off
+	        php_flag register_globals off
+	        php_flag register_argc_argv off
+	        php_flag magic_quotes_gpc off
+	        php_value variables_order GPCS
+		RewriteBase /
+		RewriteRule ^(typo3|typo3temp|typo3conf|t3lib|tslib|fileadmin|uploads|showpic\.php)/ - [L]
+		RewriteRule ^typo3$ typo3/index_re.php [L]
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteCond %{REQUEST_FILENAME} !-l
+		RewriteRule .* /index.php [L] 
+	</Directory>
+	<Directory /web/www.seqan.de/htdocs/publications>
+		Options -Indexes
+	</Directory>
+	
+</VirtualHost>
+
+<VirtualHost 160.45.117.77:443>
+	ServerAdmin  webmaster@mi.fu-berlin.de
+	ServerName        www.seqan.de
+	ServerAlias       seqan.de
+	ServerAlias       seqan.mi.fu-berlin.de
+	DocumentRoot /web/www.seqan.de/htdocs
+	ErrorLog     /web/www.seqan.de/log/error2.log
+	CustomLog    /web/www.seqan.de/log/access2.log common
+
+	ScriptAlias /cgi-bin/ /web/www.seqan.de/cgi-bin/
+
+        SSLEngine on
+        SSLCertificateKeyFile /etc/ssl/private/www.mi.fu-berlin.de-key.pem
+        SSLCertificateFile /etc/ssl/certs/www.mi.fu-berlin.de.pem
+        SSLCACertificatePath /etc/ssl/certs
+
+ 	RewriteEngine On
+	RewriteRule ^/trac$                 https://trac.mi.fu-berlin.de/seqan/		[R,L] 
+	RewriteRule ^/trac/(.*)             https://trac.mi.fu-berlin.de/seqan/$1	[R,L]
+	RewriteRule ^/svn$                  https://svn.mi.fu-berlin.de/seqan/		[R,L] 
+	RewriteRule ^/svn/(.*)              https://svn.mi.fu-berlin.de/seqan/$1	[R,L] 
+
+        #RewriteLog /var/log/apache/rewrite.log
+        #RewriteLogLevel 9
+	RewriteRule ^typo3$ /typo3/index_re.php [R,L]
+	
+	Alias /typo3/		/web/www.seqan.de/t3/typo3/
+	<DirectoryMatch /web/www.seqan.de/t3/> 
+		Order allow,deny
+		Allow from all
+		Options FollowSymLinks IncludesNoExec
+	        AddType application/x-httpd-php .php
+	        # php_admin_value safe_mode on
+	        php_admin_value safe_mode_gid on
+	        php_admin_value safe_mode_include_dir /usr/share/typo3/typo3_src-4.2/
+	        php_admin_value upload_max_filesize 10M
+	        php_admin_value post_max_size 10M
+	        php_admin_value upload_tmp_dir /var/tmp/www.seqan.de/
+	        php_admin_value memory_limit 48M
+	        # php_admin_value max_execution_time 90
+	        php_admin_value include_path /web/www.seqan.de/t3/:/usr/share/typo3/typo3_src-4.2/:.
+	        php_admin_value sendmail_path "/web/www.seqan.de/t3/execdir/sendmail -t -i"
+	        php_admin_value open_basedir /var/tmp/www.seqan.de/:/web/www.seqan.de/t3/:/usr/share/typo3/:/usr/share/fonts/truetype/ttf-dejavu/:/usr/share/javascript/prototype/:/usr/share/javascript/scriptaculous/:/web/www.seqan.de/t3/typo3conf/
+	        php_admin_value safe_mode_exec_dir /web/www.seqan.de/t3/execdir/
+	        php_flag allow_call_time_pass_reference off
+	        php_flag register_globals off
+	        php_flag register_argc_argv off
+	        php_flag magic_quotes_gpc off
+	        php_value variables_order GPCS
+		RewriteBase /
+		RewriteRule ^(typo3|typo3temp|typo3conf|t3lib|tslib|fileadmin|uploads|showpic\.php)/ - [L]
+		RewriteRule ^typo3$ typo3/index_re.php [L]
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteCond %{REQUEST_FILENAME} !-l
+		RewriteRule .* /index.php [L]
+	</DirectoryMatch>
+	<Directory /web/www.seqan.de/htdocs/publications>
+		Options -Indexes
+	</Directory>
+</VirtualHost>
+# vim:filetype=apache

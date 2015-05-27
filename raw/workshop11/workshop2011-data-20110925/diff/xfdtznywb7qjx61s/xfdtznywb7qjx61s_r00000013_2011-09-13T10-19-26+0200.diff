@@ -1,0 +1,60 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/basics.cpp ./sandbox/my_sandbox/apps/my_app/basics.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/basics.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/my_app/basics.cpp	2011-09-13 10:19:18.000000000 +0200
+@@ -0,0 +1,31 @@
++/*
++ *  basics.cpp
++ *  seqan
++ *
++ *  Created by Roland Krause on 13.09.11.
++ *  Copyright 2011 MPI for Molecular Genetics. All rights reserved.
++ *
++ */
++
++#include <seqan/sequence.h>
++#include <seqan/basic.h>
++#include <iostream>
++using namespace seqan;
++
++template <typename TAlphabet>
++void showAllLetterOfMyAlphabet(TAlphabet const &)
++{
++    typedef typename Size<TAlphabet>::Type TSize;
++    TSize alphSize = ValueSize<TAlphabet>::VALUE;
++    for (TSize i = 0; i < alphSize; ++i)
++        std::cout << i << ',' << TAlphabet(i) << "  ";
++    std::cout << std::endl;
++}
++
++int main()
++{
++    showAllLetterOfMyAlphabet(AminoAcid());
++    showAllLetterOfMyAlphabet(Dna());
++    showAllLetterOfMyAlphabet(Dna5());
++    return 0;
++}
+\ No newline at end of file
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/basics.h ./sandbox/my_sandbox/apps/my_app/basics.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/basics.h	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/my_app/basics.h	2011-09-13 10:18:16.000000000 +0200
+@@ -0,0 +1,9 @@
++/*
++ *  basics.h
++ *  seqan
++ *
++ *  Created by Roland Krause on 13.09.11.
++ *  Copyright 2011 MPI for Molecular Genetics. All rights reserved.
++ *
++ */
++
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 09:32:23.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 10:19:25.000000000 +0200
+@@ -7,4 +7,5 @@
+     seqan::CharString mySeqanString = "Hello SeqAn!";
+     std::cout << mySeqanString << std::endl;
+     return 1;
+-}
+\ No newline at end of file
++}
++

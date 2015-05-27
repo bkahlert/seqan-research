@@ -1,0 +1,590 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/CMakeFiles/Makefile.cmake ./CMakeFiles/Makefile.cmake
+--- ./misc/seqan_instrumentation/last_revision_copy/CMakeFiles/Makefile.cmake	2011-09-13 09:42:33.625000000 +0200
++++ ./CMakeFiles/Makefile.cmake	2011-09-13 09:54:22.593750000 +0200
+@@ -108,28 +108,11 @@
+   "util/cmake/FindSeqAn.cmake"
+   "util/cmake/FindTR1.cmake"
+   "util/cmake/cuda/FindCUDA.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeCCompiler.cmake.in"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeCCompilerABI.c"
+   "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeCInformation.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXCompiler.cmake.in"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp"
+   "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
+   "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeConfigurableFile.in"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCCompiler.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCXXCompiler.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCompilerABI.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCompilerId.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineSystem.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeFindBinUtils.cmake"
+   "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeGenericSystem.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeMinGWFindMake.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeParseImplicitLinkInfo.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeSystem.cmake.in"
+   "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeTestCCompiler.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeTestCXXCompiler.cmake"
+-  "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CMakeTestCompilerCommon.cmake"
+   "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CTest.cmake"
+   "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CTestTargets.cmake"
+   "C:/Programs/Programmieren/CMake 2.8/share/cmake-2.8/Modules/CheckCSourceCompiles.cmake"
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/CMakeFiles/Makefile2 ./CMakeFiles/Makefile2
+--- ./misc/seqan_instrumentation/last_revision_copy/CMakeFiles/Makefile2	2011-09-13 09:42:33.562500000 +0200
++++ ./CMakeFiles/Makefile2	2011-09-13 09:54:22.531250000 +0200
+@@ -1062,19 +1062,19 @@
+ # Target rules for target core/apps/CMakeFiles/core_apps.dir
+ 
+ # All Build rule for target.
+-core/apps/CMakeFiles/core_apps.dir/all: core/apps/dfi/CMakeFiles/dfi.dir/all
++core/apps/CMakeFiles/core_apps.dir/all: core/apps/rabema/CMakeFiles/rabema.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/mason/CMakeFiles/mason.dir/all
+-core/apps/CMakeFiles/core_apps.dir/all: core/apps/micro_razers/CMakeFiles/micro_razers.dir/all
+-core/apps/CMakeFiles/core_apps.dir/all: core/apps/razers/CMakeFiles/razers.dir/all
++core/apps/CMakeFiles/core_apps.dir/all: core/apps/dfi/CMakeFiles/dfi.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/pair_align/CMakeFiles/pair_align.dir/all
+-core/apps/CMakeFiles/core_apps.dir/all: core/apps/rabema/CMakeFiles/rabema.dir/all
++core/apps/CMakeFiles/core_apps.dir/all: core/apps/razers/CMakeFiles/razers.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/razers2/CMakeFiles/razers2.dir/all
++core/apps/CMakeFiles/core_apps.dir/all: core/apps/micro_razers/CMakeFiles/micro_razers.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/rabema/CMakeFiles/do_search.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/sak/CMakeFiles/sak.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/seqan_tcoffee/CMakeFiles/seqan_tcoffee.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/seqcons/CMakeFiles/seqcons.dir/all
+-core/apps/CMakeFiles/core_apps.dir/all: core/apps/splazers/CMakeFiles/splazers.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/snp_store/CMakeFiles/snp_store.dir/all
++core/apps/CMakeFiles/core_apps.dir/all: core/apps/splazers/CMakeFiles/splazers.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/stellar/CMakeFiles/stellar.dir/all
+ core/apps/CMakeFiles/core_apps.dir/all: core/apps/tree_recon/CMakeFiles/tree_recon.dir/all
+ 	$(MAKE) -f core\apps\CMakeFiles\core_apps.dir\build.make core/apps/CMakeFiles/core_apps.dir/depend
+@@ -2205,45 +2205,45 @@
+ 
+ # All Build rule for target.
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/alignment.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/annotation_converter.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/file_format.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/file_readwrite.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/alignment_local.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/alignment_msa.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/allocator.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/alignment_msa.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/alphabet.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/annotation_converter.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/file_speed.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/file_readwrite.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/find_approx.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/find_exact.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/file_format.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/find_wild.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/gff2gtf.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_bfs.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_dfs.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/filter_sam.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/find_approx.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_flow_fordfulkerson.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_his.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_lcs.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_lis.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/gff2gtf.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/find_exact.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_lcs.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_path_allpairs.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_path_bellmanford.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_dfs.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_path_dijkstra.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_path_dag.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_flow_fordfulkerson.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_path_floydwarshall.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_path_transitive.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_scc.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_path_allpairs.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_tree_kruskal.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_tree_prim.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_path_dijkstra.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_hmm.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_find.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_node_predicate.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_hmm_silent.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_maxrepeats.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_find_stringset.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_scc.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_tree_kruskal.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_algo_topsort.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_mummy.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_mums.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_hmm_silent.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_node_predicate.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/graph_hmm.dir/all
++core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_find.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_sufarray.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_supermaxrepeats.dir/all
+-core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_maxrepeats.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/iterator.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/lagan.dir/all
+ core/demos/CMakeFiles/core_demos.dir/all: core/demos/CMakeFiles/index_qgram_counts.dir/all
+@@ -4077,10 +4077,10 @@
+ # Target rules for target core/demos/howto/CMakeFiles/core_demos_howto.dir
+ 
+ # All Build rule for target.
+-core/demos/howto/CMakeFiles/core_demos_howto.dir/all: core/demos/howto/CMakeFiles/howto_clip_alignments.dir/all
+-core/demos/howto/CMakeFiles/core_demos_howto.dir/all: core/demos/howto/CMakeFiles/howto_cmdparser_example.dir/all
+ core/demos/howto/CMakeFiles/core_demos_howto.dir/all: core/demos/howto/CMakeFiles/howto_efficiently_import_sequences.dir/all
++core/demos/howto/CMakeFiles/core_demos_howto.dir/all: core/demos/howto/CMakeFiles/howto_clip_alignments.dir/all
+ core/demos/howto/CMakeFiles/core_demos_howto.dir/all: core/demos/howto/CMakeFiles/howto_filter_similar_sequences.dir/all
++core/demos/howto/CMakeFiles/core_demos_howto.dir/all: core/demos/howto/CMakeFiles/howto_cmdparser_example.dir/all
+ 	$(MAKE) -f core\demos\howto\CMakeFiles\core_demos_howto.dir\build.make core/demos/howto/CMakeFiles/core_demos_howto.dir/depend
+ 	$(MAKE) -f core\demos\howto\CMakeFiles\core_demos_howto.dir\build.make core/demos/howto/CMakeFiles/core_demos_howto.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -4485,13 +4485,13 @@
+ # All Build rule for target.
+ core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_gaps.dir/all
+ core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_msa.dir/all
+-core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_pairwise_global.dir/all
++core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_msa_assignment1.dir/all
+ core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_pairwise_global2.dir/all
+-core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_pairwise_global_assignment2.dir/all
++core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_pairwise_global_assignment1.dir/all
+ core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_pairwise_local.dir/all
+-core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_msa_assignment1.dir/all
+ core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_pairwise_local_assignment1.dir/all
+-core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_pairwise_global_assignment1.dir/all
++core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_pairwise_global.dir/all
++core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/all: core/demos/tutorial/alignments/CMakeFiles/tutorial_alignment_pairwise_global_assignment2.dir/all
+ 	$(MAKE) -f core\demos\tutorial\alignments\CMakeFiles\core_demos_tutorials_alignments.dir\build.make core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/depend
+ 	$(MAKE) -f core\demos\tutorial\alignments\CMakeFiles\core_demos_tutorials_alignments.dir\build.make core/demos/tutorial/alignments/CMakeFiles/core_demos_tutorials_alignments.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -5074,13 +5074,13 @@
+ # Target rules for target core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir
+ 
+ # All Build rule for target.
+-core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_approx.dir/all
++core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_assignment2.dir/all
+ core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_assignment3.dir/all
+-core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_exact.dir/all
+-core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_assignment1.dir/all
++core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_approx.dir/all
+ core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_index.dir/all
+-core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_assignment2.dir/all
+ core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_index_multiple.dir/all
++core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_assignment1.dir/all
++core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/all: core/demos/tutorial/find/CMakeFiles/tutorial_find_exact.dir/all
+ 	$(MAKE) -f core\demos\tutorial\find\CMakeFiles\core_demos_tutorials_find.dir\build.make core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/depend
+ 	$(MAKE) -f core\demos\tutorial\find\CMakeFiles\core_demos_tutorials_find.dir\build.make core/demos/tutorial/find/CMakeFiles/core_demos_tutorials_find.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -5429,9 +5429,9 @@
+ # Target rules for target core/demos/tutorial/graph/CMakeFiles/core_demos_tutorials_graph.dir
+ 
+ # All Build rule for target.
++core/demos/tutorial/graph/CMakeFiles/core_demos_tutorials_graph.dir/all: core/demos/tutorial/graph/CMakeFiles/tutorial_graph_hmm.dir/all
+ core/demos/tutorial/graph/CMakeFiles/core_demos_tutorials_graph.dir/all: core/demos/tutorial/graph/CMakeFiles/tutorial_graph_algo_scc.dir/all
+ core/demos/tutorial/graph/CMakeFiles/core_demos_tutorials_graph.dir/all: core/demos/tutorial/graph/CMakeFiles/tutorial_graph_dijkstra.dir/all
+-core/demos/tutorial/graph/CMakeFiles/core_demos_tutorials_graph.dir/all: core/demos/tutorial/graph/CMakeFiles/tutorial_graph_hmm.dir/all
+ 	$(MAKE) -f core\demos\tutorial\graph\CMakeFiles\core_demos_tutorials_graph.dir\build.make core/demos/tutorial/graph/CMakeFiles/core_demos_tutorials_graph.dir/depend
+ 	$(MAKE) -f core\demos\tutorial\graph\CMakeFiles\core_demos_tutorials_graph.dir\build.make core/demos/tutorial/graph/CMakeFiles/core_demos_tutorials_graph.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -5610,13 +5610,13 @@
+ core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_assignment3.dir/all
+ core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_assignment4.dir/all
+ core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_assignment6.dir/all
+-core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_assignment2.dir/all
+ core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_preorder.dir/all
++core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_assignment2.dir/all
+ core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_qgram.dir/all
+ core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_search.dir/all
+ core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_assignment5.dir/all
+-core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_property_maps.dir/all
+ core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_search2.dir/all
++core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/all: core/demos/tutorial/index/CMakeFiles/tutorial_index_property_maps.dir/all
+ 	$(MAKE) -f core\demos\tutorial\index\CMakeFiles\core_demos_tutorials_index.dir\build.make core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/depend
+ 	$(MAKE) -f core\demos\tutorial\index\CMakeFiles\core_demos_tutorials_index.dir\build.make core/demos/tutorial/index/CMakeFiles/core_demos_tutorials_index.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -6232,9 +6232,9 @@
+ 
+ # All Build rule for target.
+ core/demos/tutorial/seeds/CMakeFiles/core_demos_tutorials_seeds.dir/all: core/demos/tutorial/seeds/CMakeFiles/tutorial_seeds_assignment1.dir/all
+-core/demos/tutorial/seeds/CMakeFiles/core_demos_tutorials_seeds.dir/all: core/demos/tutorial/seeds/CMakeFiles/tutorial_seeds_basics.dir/all
+-core/demos/tutorial/seeds/CMakeFiles/core_demos_tutorials_seeds.dir/all: core/demos/tutorial/seeds/CMakeFiles/tutorial_seeds_extend_bandedAlign.dir/all
+ core/demos/tutorial/seeds/CMakeFiles/core_demos_tutorials_seeds.dir/all: core/demos/tutorial/seeds/CMakeFiles/tutorial_seeds_chain.dir/all
++core/demos/tutorial/seeds/CMakeFiles/core_demos_tutorials_seeds.dir/all: core/demos/tutorial/seeds/CMakeFiles/tutorial_seeds_extend_bandedAlign.dir/all
++core/demos/tutorial/seeds/CMakeFiles/core_demos_tutorials_seeds.dir/all: core/demos/tutorial/seeds/CMakeFiles/tutorial_seeds_basics.dir/all
+ 	$(MAKE) -f core\demos\tutorial\seeds\CMakeFiles\core_demos_tutorials_seeds.dir\build.make core/demos/tutorial/seeds/CMakeFiles/core_demos_tutorials_seeds.dir/depend
+ 	$(MAKE) -f core\demos\tutorial\seeds\CMakeFiles\core_demos_tutorials_seeds.dir\build.make core/demos/tutorial/seeds/CMakeFiles/core_demos_tutorials_seeds.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -6434,10 +6434,10 @@
+ 
+ # All Build rule for target.
+ core/demos/tutorial/sequence/CMakeFiles/core_demos_tutorials_sequence.dir/all: core/demos/tutorial/sequence/CMakeFiles/tutorial_count_characters.dir/all
+-core/demos/tutorial/sequence/CMakeFiles/core_demos_tutorials_sequence.dir/all: core/demos/tutorial/sequence/CMakeFiles/tutorial_count_generic_characters.dir/all
++core/demos/tutorial/sequence/CMakeFiles/core_demos_tutorials_sequence.dir/all: core/demos/tutorial/sequence/CMakeFiles/tutorial_replace_as.dir/all
+ core/demos/tutorial/sequence/CMakeFiles/core_demos_tutorials_sequence.dir/all: core/demos/tutorial/sequence/CMakeFiles/tutorial_sequence_all_strings.dir/all
++core/demos/tutorial/sequence/CMakeFiles/core_demos_tutorials_sequence.dir/all: core/demos/tutorial/sequence/CMakeFiles/tutorial_count_generic_characters.dir/all
+ core/demos/tutorial/sequence/CMakeFiles/core_demos_tutorials_sequence.dir/all: core/demos/tutorial/sequence/CMakeFiles/tutorial_sequence_iterator_demo.dir/all
+-core/demos/tutorial/sequence/CMakeFiles/core_demos_tutorials_sequence.dir/all: core/demos/tutorial/sequence/CMakeFiles/tutorial_replace_as.dir/all
+ 	$(MAKE) -f core\demos\tutorial\sequence\CMakeFiles\core_demos_tutorials_sequence.dir\build.make core/demos/tutorial/sequence/CMakeFiles/core_demos_tutorials_sequence.dir/depend
+ 	$(MAKE) -f core\demos\tutorial\sequence\CMakeFiles\core_demos_tutorials_sequence.dir\build.make core/demos/tutorial/sequence/CMakeFiles/core_demos_tutorials_sequence.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -6736,9 +6736,9 @@
+ # Target rules for target core/tests/CMakeFiles/core_tests.dir
+ 
+ # All Build rule for target.
+-core/tests/CMakeFiles/core_tests.dir/all: core/tests/chaining/CMakeFiles/test_chaining.dir/all
+ core/tests/CMakeFiles/core_tests.dir/all: core/tests/align/CMakeFiles/test_align.dir/all
+ core/tests/CMakeFiles/core_tests.dir/all: core/tests/basic/CMakeFiles/test_basic.dir/all
++core/tests/CMakeFiles/core_tests.dir/all: core/tests/chaining/CMakeFiles/test_chaining.dir/all
+ core/tests/CMakeFiles/core_tests.dir/all: core/tests/consensus/CMakeFiles/test_consensus.dir/all
+ core/tests/CMakeFiles/core_tests.dir/all: core/tests/file/CMakeFiles/test_file.dir/all
+ core/tests/CMakeFiles/core_tests.dir/all: core/tests/find/CMakeFiles/test_find.dir/all
+@@ -8754,13 +8754,13 @@
+ 
+ # All Build rule for target.
+ extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/bamutil.dir/all
+-extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/blast_report.dir/all
+-extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/find_motif.dir/all
+-extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/bam_print_alignments.dir/all
+-extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/bam_stats.dir/all
+ extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/benchmark_stream.dir/all
+ extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/benchmark_stream_write.dir/all
++extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/bam_print_alignments.dir/all
++extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/blast_report.dir/all
+ extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/zscore.dir/all
++extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/bam_stats.dir/all
++extras/demos/CMakeFiles/extra_demos.dir/all: extras/demos/CMakeFiles/find_motif.dir/all
+ 	$(MAKE) -f extras\demos\CMakeFiles\extra_demos.dir\build.make extras/demos/CMakeFiles/extra_demos.dir/depend
+ 	$(MAKE) -f extras\demos\CMakeFiles\extra_demos.dir\build.make extras/demos/CMakeFiles/extra_demos.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -8792,13 +8792,13 @@
+ 
+ # All Build rule for target.
+ extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/bamutil.dir/all
+-extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/blast_report.dir/all
+-extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/find_motif.dir/all
+-extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/bam_print_alignments.dir/all
+-extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/bam_stats.dir/all
+ extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/benchmark_stream.dir/all
+ extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/benchmark_stream_write.dir/all
++extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/bam_print_alignments.dir/all
++extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/blast_report.dir/all
+ extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/zscore.dir/all
++extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/bam_stats.dir/all
++extras/demos/CMakeFiles/extras_demos.dir/all: extras/demos/CMakeFiles/find_motif.dir/all
+ 	$(MAKE) -f extras\demos\CMakeFiles\extras_demos.dir\build.make extras/demos/CMakeFiles/extras_demos.dir/depend
+ 	$(MAKE) -f extras\demos\CMakeFiles\extras_demos.dir\build.make extras/demos/CMakeFiles/extras_demos.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -8987,16 +8987,16 @@
+ 
+ # All Build rule for target.
+ extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_lexical_cast_example.dir/all
+-extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_mmap_string_example.dir/all
+-extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_parse_newick.dir/all
+-extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_reader_double_demo.dir/all
+ extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_parse_blastn.dir/all
+-extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_reader_single_demo.dir/all
+-extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_stream_multi_seq_file.dir/all
+-extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_stream_read2_fastq.dir/all
+ extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_parse_gff2.dir/all
++extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_reader_double_demo.dir/all
++extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_reader_single_demo.dir/all
++extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_mmap_string_example.dir/all
+ extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_stream_compression_formats.dir/all
++extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_stream_read2_fastq.dir/all
+ extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_stream_read_record_fasta.dir/all
++extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_parse_newick.dir/all
++extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/all: extras/demos/tutorial/stream/CMakeFiles/tutorial_stream_multi_seq_file.dir/all
+ 	$(MAKE) -f extras\demos\tutorial\stream\CMakeFiles\extras_demos_tutorials_stream.dir\build.make extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/depend
+ 	$(MAKE) -f extras\demos\tutorial\stream\CMakeFiles\extras_demos_tutorials_stream.dir\build.make extras/demos/tutorial/stream/CMakeFiles/extras_demos_tutorials_stream.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+@@ -9468,10 +9468,10 @@
+ # Target rules for target extras/tests/CMakeFiles/extras_tests.dir
+ 
+ # All Build rule for target.
+-extras/tests/CMakeFiles/extras_tests.dir/all: extras/tests/find_motif/CMakeFiles/test_find_motif.dir/all
+ extras/tests/CMakeFiles/extras_tests.dir/all: extras/tests/bam_io/CMakeFiles/test_bam_io.dir/all
+ extras/tests/CMakeFiles/extras_tests.dir/all: extras/tests/blast/CMakeFiles/test_blast.dir/all
+ extras/tests/CMakeFiles/extras_tests.dir/all: extras/tests/ext_lh3/CMakeFiles/test_ext_lh3.dir/all
++extras/tests/CMakeFiles/extras_tests.dir/all: extras/tests/find_motif/CMakeFiles/test_find_motif.dir/all
+ extras/tests/CMakeFiles/extras_tests.dir/all: extras/tests/statistics/CMakeFiles/test_statistics.dir/all
+ extras/tests/CMakeFiles/extras_tests.dir/all: extras/tests/stream/CMakeFiles/test_stream.dir/all
+ extras/tests/CMakeFiles/extras_tests.dir/all: extras/tests/synopsis/CMakeFiles/test_synopsis.dir/all
+@@ -10527,9 +10527,9 @@
+ # Target rules for target sandbox/tum/demos/CMakeFiles/sandbox_tum_demos.dir
+ 
+ # All Build rule for target.
+-sandbox/tum/demos/CMakeFiles/sandbox_tum_demos.dir/all: sandbox/tum/demos/CMakeFiles/find_index_approx.dir/all
+ sandbox/tum/demos/CMakeFiles/sandbox_tum_demos.dir/all: sandbox/tum/demos/CMakeFiles/index_compressed.dir/all
+ sandbox/tum/demos/CMakeFiles/sandbox_tum_demos.dir/all: sandbox/tum/demos/CMakeFiles/index_digest.dir/all
++sandbox/tum/demos/CMakeFiles/sandbox_tum_demos.dir/all: sandbox/tum/demos/CMakeFiles/find_index_approx.dir/all
+ 	$(MAKE) -f sandbox\tum\demos\CMakeFiles\sandbox_tum_demos.dir\build.make sandbox/tum/demos/CMakeFiles/sandbox_tum_demos.dir/depend
+ 	$(MAKE) -f sandbox\tum\demos\CMakeFiles\sandbox_tum_demos.dir\build.make sandbox/tum/demos/CMakeFiles/sandbox_tum_demos.dir/build
+ 	$(CMAKE_COMMAND) -E cmake_progress_report "C:\Dokumente und Einstellungen\Johannes Krugel\Eigene Dateien\Arbeit\Seqan\CMakeFiles" 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/CMakeLists.txt ./sandbox/tum/apps/ministellar/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/tum/apps/ministellar/CMakeLists.txt	2011-09-13 10:06:59.015625000 +0200
+@@ -0,0 +1,5 @@
++cmake_minimum_required (VERSION 2.6)
++project (sandbox_tum_apps_ministellar)
++
++# Update the list of file names below if you add source files to your application.
++seqan_add_executable(ministellar ministellar.cpp ministellar.h)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/INFO ./sandbox/tum/apps/ministellar/INFO
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/INFO	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/tum/apps/ministellar/INFO	2011-09-13 10:06:59.000000000 +0200
+@@ -0,0 +1,21 @@
++Name: ministellar
++Author: Johannes Krugel <krugel@in.tum.de>
++Maintainer: Johannes Krugel <krugel@in.tum.de>
++License: GPL v3
++Copyright: 2008-2011, FU Berlin
++Status: under development
++Description: One-line description for app ministellar.
++ This is the long text description for the app.  You should wrap text to 78
++ characters and you have to wrap it to 80 characters.  The lines must have one
++ leading space.  Successive lines in this format will be word-wrapped when
++ displayed.  Leading space is stripped off.
++ .
++ Use empty lines with one dot to insert an empty line / break paragraphs.
++ .
++  Start lines with two spaces to make them display verbatim.  Lines that
++  cannot be displayed horizontally will be hard-wrapped (not at word bor-
++  ders), so maybe do your own hyphenation.
++ .
++ Do not use tab characters, their effect is not predictable.
++ .
++ The INFO file format is oriented after the Debian controfields format.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 10:07:50.546875000 +0200
+@@ -0,0 +1,100 @@
++#include <seqan/stream.h>
++#include <seqan/index.h>
++#include <seqan/align.h>
++#include <seqan/seeds2.h>
++
++using namespace seqan;
++
++// set parameters
++
++unsigned const minimalLength = 12;
++float const errorRate = 0.05;
++//unsigned const qGramLength = 8;
++CharString const filename = "ministellar.out";
++
++typedef int TScoreValue;
++TScoreValue const matchScore = 1;
++TScoreValue const mismatchScore = -2;
++TScoreValue const gapScore = -2;
++TScoreValue const minScore = 9;
++TScoreValue const xDrop = 3;
++
++
++int main(int argc, char const ** argv)
++{
++	if (argc != 3)
++	{
++		std::cerr << "ERROR: Invalid argument count!" << std::endl;
++		std::cerr << "USAGE: ministallar IN1.fa IN2.fa" << std::endl;
++		return 1;
++	}
++
++	// TODO: Define a scoring scheme 'score' with linear gap costs using the above defined
++	//       score values for scoring matches, mismatches, and gaps.
++	// HINT: You can find a section on Schoring Schemes in the Alignments tutorial.
++
++	// read sequences from fasta files
++	typedef Dna5String TSequence;
++	StringSet<CharString> ids1, ids2;
++	StringSet<TSequence> seqs1, seqs2;
++
++	std::ifstream streamIn1(argv[1], std::ios::in | std::ios::binary);
++	RecordReader<std::ifstream, SinglePass<> > reader1(streamIn1);
++	if (read2(ids1, seqs1, reader1, Fasta()) != 0)
++	{
++		std::cerr << "Could not read file " << argv[1] << std::endl;
++		return 1;
++	}
++
++	// TODO: Do the same for the second file.
++
++	// prepare output file
++	std::ofstream outFile;
++	outFile.open(toCString(filename));
++
++	// define finder and pattern
++	// TODO: Define types for finder and pattern using SeqAn's find interface from the index
++	//       module. Both should be specialized for the approproiate swift filter algorithm.
++	//       The pattern will need the definition of a q-gram-index. Use q-grams of length 8
++	//       for now, and open addressing.
++	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
++	//       tutorial page, you will find a link to a Swift HowTo page.
++
++	// TODO: Define variables of your pattern and finder types, and initialize them with the
++	//       first sequences in the sequence sets seqs1 and seqs2.
++
++	// TODO: Repeat the following steps for all hits of the finder.
++
++	// call the function find to obtain a swift hit
++	// TODO: uncomment the following line
++
++	//find(finder, pattern, errorRate, minimalLength);
++
++	// extract infixes from hit
++	// TODO: uncomment the following three lines
++
++	//typedef Infix<TSequence>::Type TInfix;
++	//TInfix infix1 = infix(finder, seqs1[0]);
++	//TInfix infix2 = infix(pattern, seqs2[0]);
++
++	// find best local alignment of infixes, and check for minimal score
++	// TODO: Define an align object and initialize it with the infixes. Find the best local
++	//       alignment of the infixes. Use the above defined scoring scheme. Make sure that
++	//       it reaches the minimal score minScore.
++
++	// create a seed for the local alignment, and conduct gapped X-drop extension
++	// TODO: Define a seed on the original sequences but for the subsequences of the local
++	//       alignment. Extend this seed in both directions using gapped X-drop extension.
++	//       Check that the extended seed has a length of at least minimalLength.
++	// HINT: Have a look at the Seed-and-Extend tutorial.
++
++	// find best global alignment of extended seed
++	// TODO: Compute the best global alignment of extended seed and its score.
++	// HINT: Create an align object on infixes of the sequences.
++
++	// TODO: Output the alignment as a match to the output file.
++
++	outFile.close();
++
++	return 0;
++}
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.h ./sandbox/tum/apps/ministellar/ministellar.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.h	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/tum/apps/ministellar/ministellar.h	2011-09-13 10:06:59.000000000 +0200
+@@ -0,0 +1,129 @@
++// ==========================================================================
++//                                ministellar
++// ==========================================================================
++// Copyright (c) 2006-2010, Knut Reinert, FU Berlin
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are met:
++//
++//     * Redistributions of source code must retain the above copyright
++//       notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above copyright
++//       notice, this list of conditions and the following disclaimer in the
++//       documentation and/or other materials provided with the distribution.
++//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
++//       its contributors may be used to endorse or promote products derived
++//       from this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
++// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
++// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
++// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++// DAMAGE.
++//
++// ==========================================================================
++// Author: Johannes Krugel <krugel@in.tum.de>
++// ==========================================================================
++
++#ifndef SANDBOX_TUM_APPS_MINISTELLAR_MINISTELLAR_H_
++#define SANDBOX_TUM_APPS_MINISTELLAR_MINISTELLAR_H_
++
++#include <seqan/basic.h>
++#include <seqan/sequence.h>
++
++#include <seqan/misc/misc_cmdparser.h>
++
++using namespace seqan;
++
++// ============================================================================
++// Forwards
++// ============================================================================
++
++// ============================================================================
++// Tags, Classes, Enums
++// ============================================================================
++
++struct Options
++{
++    bool showHelp;
++    bool showVersion;
++    int i;
++    String<CharString> texts;
++    
++    Options()
++    {
++        // Set defaults.
++        showHelp = false;
++        showVersion = false;
++        i = 0;
++    }
++};
++
++// ============================================================================
++// Metafunctions
++// ============================================================================
++
++// ============================================================================
++// Functions
++// ============================================================================
++
++void
++setupCommandLineParser(CommandLineParser & parser, Options const & options)
++{
++    addVersionLine(parser, "0.1");
++    
++    addTitleLine(parser, "**********************");
++    addTitleLine(parser, "* ministellar *");
++    addTitleLine(parser, "**********************");
++    addTitleLine(parser, "");
++    addTitleLine(parser, "(c) 2011 by Johannes Krugel <krugel@in.tum.de>");
++
++    addUsageLine(parser, "[OPTIONS] TEXT+");
++    
++	addSection(parser, "Main Options");
++	addOption(parser, CommandLineOption("i",  "integer",  "set an integer option", OptionType::Integer | OptionType::Label, options.i));
++    
++    requiredArguments(parser, 1);
++}
++
++int parseCommandLineAndCheck(Options & options,
++                             CommandLineParser & parser,
++                             int argc,
++                             char const ** argv)
++{
++    bool stop = !parse(parser, argc, argv);
++    if (stop)
++        return 1;
++    if (isSetLong(parser, "help")) {
++        options.showHelp = true;
++        return 0;
++    }
++    if (isSetLong(parser, "version")) {
++        options.showVersion = true;
++        return 0;
++    }
++    
++    options.texts = getArgumentValues(parser);
++
++	return 0;
++}
++
++int mainWithOptions(Options & options)
++{
++    typedef Iterator<String<CharString> >::Type TIterator;
++    std::cout << "Non-option Arguments:" << std::endl;
++    for (TIterator it = begin(options.texts); it != end(options.texts); ++it) {
++        std::cout << "  " << *it << std::endl;
++    }
++    
++    return 0;
++}
++
++#endif  // #ifndef SANDBOX_TUM_APPS_MINISTELLAR_MINISTELLAR_H_

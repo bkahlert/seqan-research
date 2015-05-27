@@ -1,0 +1,41 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/demos/alphabet.cpp ./core/demos/alphabet.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/core/demos/alphabet.cpp	2011-08-23 09:23:38.000000000 +0200
++++ ./core/demos/alphabet.cpp	2011-09-13 10:09:54.000000000 +0200
+@@ -18,7 +18,7 @@
+ 	b = a;
+ 	::std::cout << b << ::std::endl; 
+ 
+-	Iupac c = b;
++	Iupac c = b, d = 'k';
+ 	::std::cout << c << ::std::endl; 
+ 
+ 	return 0;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/demos/alphabet.cpp~ ./core/demos/alphabet.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/core/demos/alphabet.cpp~	1970-01-01 01:00:00.000000000 +0100
++++ ./core/demos/alphabet.cpp~	2011-09-13 10:09:54.000000000 +0200
+@@ -0,0 +1,25 @@
++///A tutorial about the use of alphabets.
++#include <iostream>
++#include <seqan/basic.h>
++using namespace seqan;
++
++int main()
++{
++///The typical alphabet is convertible to $char$.
++///A conversion of a $char$ back and forth into another alphabet can, however, change the value of the $char$.
++	Dna a = 'a';
++	::std::cout << a << ::std::endl; 
++
++///'f' is not in Dna5 and hence $b$ is set to 'N'.
++	Dna5 b = 'f'; 
++	::std::cout << b << ::std::endl; 
++
++///Many SeqAn alphabet classes can be converted into each other.
++	b = a;
++	::std::cout << b << ::std::endl; 
++
++	Iupac c = b;
++	::std::cout << c << ::std::endl; 
++
++	return 0;
++}

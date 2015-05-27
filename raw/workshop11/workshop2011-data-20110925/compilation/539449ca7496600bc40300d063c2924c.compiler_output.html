@@ -1,0 +1,49 @@
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:44:2: error: no matching function for call to &#39;SEQAN_TEST_test_my_test_strings_example1&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; SEQAN_CALL_TEST(test_my_test_strings_example1);</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/core/include/seqan/basic/debug_test_system.h:2336:41: note: expanded from macro &#39;SEQAN_CALL_TEST&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">#define SEQAN_CALL_TEST(test_name) do { SEQAN_TEST_ ## test_name(); } while (false)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&lt;scratch space&gt;:86:1: note: expanded from macro &#39;SEQAN_TEST_&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">SEQAN_TEST_test_my_test_strings_example1</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/test_my_test.h:42:1: note: candidate template ignored: couldn&#39;t infer template argument &#39;speed_up_dummy_to_prevent_compilation_of_unused_tests_&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">SEQAN_DEFINE_TEST(test_my_test_strings_example1)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/core/include/seqan/basic/debug_test_system.h:1463:81: note: expanded from macro &#39;SEQAN_DEFINE_TEST&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; template &lt;bool speed_up_dummy_to_prevent_compilation_of_unused_tests_&gt; void SEQAN_TEST_ ## test_name ()</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&lt;scratch space&gt;:65:1: note: expanded from macro &#39;SEQAN_TEST_&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">SEQAN_TEST_test_my_test_strings_example1</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">1 error generated.</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make[2]: *** [sandbox/bkahlert/apps/tutorial_first_examples/CMakeFiles/tutorial_first_examples.dir/tutorial_first_examples.cpp.o] Error 1</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make[1]: *** [sandbox/bkahlert/apps/tutorial_first_examples/CMakeFiles/tutorial_first_examples.dir/all] Error 2</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make: *** [all] Error 2</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; min-height: 15px; ">&nbsp;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(4, 51, 255); ">01:18:10 Build Finished (took 3s.709ms)</p>
+
+<p>​</p>

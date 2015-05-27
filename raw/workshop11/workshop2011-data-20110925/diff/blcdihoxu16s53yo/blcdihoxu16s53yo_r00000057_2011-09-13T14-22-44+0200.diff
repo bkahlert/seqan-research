@@ -1,0 +1,23 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 14:18:03.062500000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 14:22:40.171875000 +0200
+@@ -95,8 +95,8 @@
+         TInfix infix1 = infix(finder, seqs1[0]);
+         TInfix infix2 = infix(pattern, seqs2[0]);
+         
+-        std::cout << "infix1 = " << infix1 << std::endl;
+-        std::cout << "infix2 = " << infix2 << std::endl;
++        //std::cout << "infix1 = " << infix1 << std::endl;
++        //std::cout << "infix2 = " << infix2 << std::endl;
+         
+         // find best local alignment of infixes, and check for minimal score
+         // TODO: Define an align object and initialize it with the infixes. Find the best local
+@@ -127,7 +127,7 @@
+             
+             extendSeed(seed, seqs1[0], seqs2[0], EXTEND_BOTH, score, xDrop, GappedXDrop());
+             
+-            if (minimalLength >= minimalLength) {
++            if (length(seed) >= minimalLength) {
+                 
+             }
+      

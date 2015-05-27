@@ -1,0 +1,18 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:35:28.484375000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:37:39.937500000 +0200
+@@ -67,10 +67,14 @@
+ 	String<char> str1 = "hello world";
+ 	String<char> str2 = "banana";
+ 	String<char> str3 = "mississippi";
++	String<DNA> str4 = "TATACGCTA";
++	String<AminoAcid> str5 = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
+ 
+ 	countOneMers(str1);
+ 	countOneMers(str2);
+ 	countOneMers(str3);
++	countOneMers(str4);
++	countOneMers(str5);
+ }
+ 
+ template <typename T>

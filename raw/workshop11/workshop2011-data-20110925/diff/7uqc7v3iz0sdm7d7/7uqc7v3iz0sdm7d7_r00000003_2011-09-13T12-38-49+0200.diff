@@ -1,0 +1,38 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/extras/demos/.bamutil.cpp.swp and ./extras/demos/.bamutil.cpp.swp differ
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/msplazer/.msplazer.h.swp and ./sandbox/my_sandbox/apps/msplazer/.msplazer.h.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp ./sandbox/my_sandbox/demos/samio_demo.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 11:36:17.000000000 +0200
++++ ./sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 12:38:09.542170541 +0200
+@@ -38,9 +38,28 @@
+ #include <seqan/sequence.h>
+ #include <seqan/file.h>      // For printing SeqAn Strings.
+ 
++using namespace seqan;
++
+ int main(int argc, char const ** argv)
+ {
+-    seqan::CharString x = "Hello SeqAn!";
+-    std::cout << x << std::endl;
+-    return 0;
++    std::ofstream file2;
++	CharString outfile = "demo.sam";
++    file2.open(toCString(outfile), ::std::ios_base::out | ::std::ios_base::app);
++    if (!file2.is_open()) {
++ 		std::cerr << "Could not open output file " << outfile << std::endl;
++ 	}else{
++		
++		int res;
++		CharString refNameStore;
++		NameStoreCache<CharString> refNameStoreCache(refNameStore);
++		BamIOContext context(refNameStore, refNameStoreCache);
++		BamAlignmentRecord record;
++		res = write2(file2, record, context, Sam());
++		// res == 0 on success
++		
++		std::cout << "Writing report: " << res << std:.endl;
++	}
++
++	
++	return 0;
+ }
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/.samio_demo.cpp.swp and ./sandbox/my_sandbox/demos/.samio_demo.cpp.swp differ

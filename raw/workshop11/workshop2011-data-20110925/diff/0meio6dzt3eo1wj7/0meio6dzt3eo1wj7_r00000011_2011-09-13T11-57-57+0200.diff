@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/0meio6dzt3eo1wj7_stats.txt -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata/0meio6dzt3eo1wj7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:56:37.646484300 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:57:55.533203100 +0200
+@@ -54,7 +54,7 @@
+ int main(int, char **)
+ {
+ 
+-	AminoAcid str = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
++	String<AminoAcid> str = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
+ 
+ //	showAllLetterOfMyAlphabet(AminoAcid());
+ //   showAllLetterOfMyAlphabet(Dna());

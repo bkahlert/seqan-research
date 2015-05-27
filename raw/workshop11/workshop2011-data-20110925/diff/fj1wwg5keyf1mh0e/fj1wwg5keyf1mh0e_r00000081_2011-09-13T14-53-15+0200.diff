@@ -1,0 +1,71 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:43:20.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:53:13.000000000 +0200
+@@ -91,6 +91,17 @@
+ 	std::cout << std::endl;
+ }
+ 
++void replaceAs (CharString& str, const char from, const char to) {
++	std::cout << str << " => ";
++	typedef Iterator<CharString,Rooted>::Type TIterator;
++	TIterator it=begin(str);
++	while (!atEnd(it)) {
++		if (value(it)==from) value(it)=to;
++		++it;
++	}
++	std::cout << str << std::endl;
++}
++
+ // Program entry point
+ int main(int argc, char const ** argv)
+ {
+@@ -211,5 +222,12 @@
+ 		infix(str_s_1,6,12)=input_s_1;
+ 		std::cout << str_s_1 << std::endl;
+ 
++// 		task Sequences 6
++		CharString str_s_6="abcdefghijklmnopqrstuvxyz"; 
++		replaceAs (str_s_6,'a','X');
++		str_s_6 = "Hello SeqAn!";
++		replaceAs (str_s_6,'a','X');
++		str_s_6 = "Hello Seqan!";
++		replaceAs (str_s_6,'a','X');
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 14:43:20.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 14:53:13.000000000 +0200
+@@ -91,6 +91,15 @@
+ 	std::cout << std::endl;
+ }
+ 
++void replaceAs (CharString str, const char from, const char to) {
++	typedef Iterator<CharString,Rooted>::Type TIterator;
++	TIterator it=begin(str);
++	while (!atEnd(it)) {
++		if (value(it)==from) value(it)=to;
++		++it;
++	}
++}
++
+ // Program entry point
+ int main(int argc, char const ** argv)
+ {
+@@ -208,10 +217,15 @@
+ // 		tut Sequences
+ 		CharString str_s_1="start_middle_end";
+ 		String<char, CStyle> input_s_1;
+-		std::cout << str_s_1 << std::endl << "Please enter infix string: ";
+-		std::cin >> input_s_1;
+ 		infix(str_s_1,6,12)=input_s_1;
+ 		std::cout << str_s_1 << std::endl;
+ 
++// 		task Sequences 6
++		CharString str_s_6="abcdefghijklmnopqrstuvxyz"; 
++		replaceAs (str_s_6,'a','X');
++		str_s_6 = "Hello SeqAn!";
++		replaceAs (str_s_6,'a','X');
++		str_s_6 = "Hello Seqan!";
++		replaceAs (str_s_6,'a','X');
+     return 0;
+ }

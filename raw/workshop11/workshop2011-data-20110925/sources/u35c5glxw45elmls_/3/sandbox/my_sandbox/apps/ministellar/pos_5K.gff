@@ -1,0 +1,11 @@
+# Simulated epsilon matches
+# seqLength=5000 errorRate=0.1 matchMinLength=50 matchMaxLength=200
+seq1_5K	Simulator	epsMatches	2375	2426	?	+	.	seq2_5K;seq2Range=715,766;
+seq1_5K	Simulator	epsMatches	3520	3704	?	+	.	seq2_5K;seq2Range=3644,3827;
+seq1_5K	Simulator	epsMatches	2984	3165	?	+	.	seq2_5K;seq2Range=997,1177;
+seq1_5K	Simulator	epsMatches	1581	1659	?	+	.	seq2_5K;seq2Range=4117,4197;
+seq1_5K	Simulator	epsMatches	3817	3991	?	+	.	seq2_5K;seq2Range=292,466;
+seq1_5K	Simulator	epsMatches	3318	3467	?	+	.	seq2_5K;seq2Range=1792,1941;
+seq1_5K	Simulator	epsMatches	4138	4195	?	+	.	seq2_5K;seq2Range=2988,3044;
+seq1_5K	Simulator	epsMatches	122	202	?	+	.	seq2_5K;seq2Range=1246,1325;
+seq1_5K	Simulator	epsMatches	2710	2893	?	+	.	seq

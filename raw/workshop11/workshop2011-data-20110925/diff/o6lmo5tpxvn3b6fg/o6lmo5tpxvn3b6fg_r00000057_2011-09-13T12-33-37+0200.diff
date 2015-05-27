@@ -1,0 +1,14 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:26:27.234375000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:28:38.921875000 +0200
+@@ -35,7 +35,9 @@
+ 	{
+ 		for(char c = 'a'; c <= 'z'; c++)
+ 		{
+-			allStrings_append((CharString)seqan::appendValue(s,c),restlen-1);
++			CharString temp = s;
++			seqan::appendValue(temp,c)
++			allStrings_append(temp,restlen-1);
+ 		}
+ 	}
+ }

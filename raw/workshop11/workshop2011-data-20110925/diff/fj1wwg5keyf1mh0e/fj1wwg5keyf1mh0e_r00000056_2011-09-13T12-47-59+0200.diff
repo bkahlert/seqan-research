@@ -1,0 +1,37 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:47:14.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:47:56.000000000 +0200
+@@ -51,7 +51,7 @@
+ 	std::cout << std::endl;
+ }
+ 
+-template <typename T&>
++template <type T&>
+ void countOneMers (String<T> const& str) {
+ 	typedef typename Size<T>::Type TSize;
+ 	TSize alphSize = ValueSize<T>::VALUE;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:47:14.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:47:56.000000000 +0200
+@@ -51,6 +51,21 @@
+ 	std::cout << std::endl;
+ }
+ 
++template <typename T&>
++void countOneMers (String<T> const& str) {
++	typedef typename Size<T>::Type TSize;
++	TSize alphSize = ValueSize<T>::VALUE;
++	String<int> counter;
++	resize(counter,alphSize,0);
++	typedef typename Iterator<String<T> >::Type TIterator;
++	for (TIterator it=begin(str); it!=end(str); ++it) {
++		counter[(*it)]++;
++	}
++	for (int i=0; i<alphSize; i++)
++		if (counter[i]>0) std::cout << T(i) << "," << counter[i] << "  ";
++	std::cout << std::endl;
++	
++}
+ 
+ // Program entry point
+ int main(int argc, char const ** argv)

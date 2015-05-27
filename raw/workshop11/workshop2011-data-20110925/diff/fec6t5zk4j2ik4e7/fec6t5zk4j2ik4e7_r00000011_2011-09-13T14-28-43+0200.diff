@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fec6t5zk4j2ik4e7_stats.txt -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/userdata/fec6t5zk4j2ik4e7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:28:25.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:28:39.312995362 +0200
+@@ -48,7 +48,7 @@
+ 	Iterator<String<AminoAcid> >::Type it = begin(aaString);
+ 	Iterator<String<AminoAcid> >::Type last = end(aaString);
+ 
+-	while (it != end) {
++	while (it != last) {
+ 		if (it == 'A') {
+ 			it = 'R';
+ 		}

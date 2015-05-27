@@ -1,0 +1,17 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/extras/demos/.bamutil.cpp.swp and ./extras/demos/.bamutil.cpp.swp differ
+Binary files ./misc/seqan_instrumentation/last_revision_copy/extras/include/seqan/bam_io/.bam_alignment_record.h.swp and ./extras/include/seqan/bam_io/.bam_alignment_record.h.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp ./sandbox/my_sandbox/demos/samio_demo.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 14:06:33.000000000 +0200
++++ ./sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 14:37:06.842442525 +0200
+@@ -58,6 +58,10 @@
+ 		BamIOContext<TNameStore> context(refNameStore, refNameStoreCache);
+ 		int res;
+ 		BamAlignmentRecord record;
++		record.qName = "QeryName";
++		record.rId = 1;
++		record.pos = 10;
++		record.cigar = "3M1D3M1I3M";
+ 		res = write2(file2, record, context, Sam());
+ 		// res == 0 on success
+ 		
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/.samio_demo.cpp.swp and ./sandbox/my_sandbox/demos/.samio_demo.cpp.swp differ

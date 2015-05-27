@@ -1,0 +1,13 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp ./sandbox/my_sandbox/demos/samio_demo.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 14:37:06.000000000 +0200
++++ ./sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 14:39:02.190992396 +0200
+@@ -61,7 +61,7 @@
+ 		record.qName = "QeryName";
+ 		record.rId = 1;
+ 		record.pos = 10;
+-		record.cigar = "3M1D3M1I3M";
++		//record.cigar = "3M1D3M1I3M";
+ 		res = write2(file2, record, context, Sam());
+ 		// res == 0 on success
+ 		
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/.samio_demo.cpp.swp and ./sandbox/my_sandbox/demos/.samio_demo.cpp.swp differ

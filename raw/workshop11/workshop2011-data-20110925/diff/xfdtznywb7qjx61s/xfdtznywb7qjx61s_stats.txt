@@ -1,0 +1,37 @@
+{
+    "machine": {
+        "machine": "i386", 
+        "processor": "i386", 
+        "architecture": [
+            [
+                "64bit", 
+                ""
+            ], 
+            "64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "/Applications/CMake 2.8-5.app/Contents/bin/cmakexbuild", 
+        "CMAKE_CXX_COMPILER": "/usr/bin/g++", 
+        "CMAKE_MODULE_LINKER_FLAGS": " ", 
+        "CMAKE_GENERATOR": "Xcode", 
+        "CMAKE_C_COMPILER": "Xcode", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "/usr/bin/ld"
+    }, 
+    "os": {
+        "node": "Mac-0213.local", 
+        "sys.platform": "darwin", 
+        "system": "Darwin", 
+        "platform": "Darwin-10.8.0-i386-64bit", 
+        "version": "Darwin Kernel Version 10.8.0: Tue Jun  7 16:33:36 PDT 2011; root:xnu-1504.15.3~1/RELEASE_I386", 
+        "release": "10.8.0"
+    }, 
+    "id": "xfdtznywb7qjx61s", 
+    "ip": [
+        "141.14.248.207", 
+        "fe80::129a:ddff:fea7:7b28%en0"
+    ]
+}

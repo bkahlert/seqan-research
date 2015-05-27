@@ -1,0 +1,41 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 15:30:02.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 16:03:05.000000000 +0200
+@@ -266,9 +266,9 @@
+ 		assignSource(row(align,1),seq2);
+ 		std::cout << align;
+ 		TRow &row1 = row(align,0), &row2=row(align,1);
+-		insertGap(row1,2);
+-		insertGap(row1,5);
+-		std::cout << align;
+-		
++// 		insertGap(row1,2);
++// 		insertGap(row1,5);
++		int score = globalAlignment(align,Score<int>(1,-1,-1,-1));
++		std::cout << "Score = " << score << std::endl << align;
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 15:30:02.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 16:03:05.000000000 +0200
+@@ -255,5 +255,20 @@
+ 		std::cout << str_m_2 << std::endl;
+ 		std::cout << mod_m_3 << std::endl;
+ 		
++// 		tut Alignments
++		typedef String<char> TSequence;
++		typedef Align<TSequence, ArrayGaps> TAlign;
++		typedef Row<TAlign>::Type TRow;
++		TSequence seq1="CDFGHC", seq2="CDEFGAHC";
++		TAlign align;
++		resize(rows(align),2);
++		assignSource(row(align,0),seq1);
++		assignSource(row(align,1),seq2);
++		std::cout << align;
++		TRow &row1 = row(align,0), &row2=row(align,1);
++		insertGap(row1,2);
++		insertGap(row1,5);
++		std::cout << align;
++		
+     return 0;
+ }

@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/0meio6dzt3eo1wj7_stats.txt -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata/0meio6dzt3eo1wj7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:32:18.879882800 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:33:01.737304700 +0200
+@@ -58,7 +58,7 @@
+ 	PeptideIterator itEnd = end(str);
+ 
+ 	
+-	absFreqOfLettersInSeq(FrequencyDistribution<AminoAcid>,it,itEnd);
++	absFreqOfLettersInSeq(String:FrequencyDistribution<AminoAcid>,it,itEnd);
+ 
+ 	while (it != itEnd)
+ 	{

@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/demos/alphabet.cpp ./core/demos/alphabet.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/core/demos/alphabet.cpp	2011-09-13 10:09:54.000000000 +0200
++++ ./core/demos/alphabet.cpp	2011-09-13 10:10:18.000000000 +0200
+@@ -19,7 +19,7 @@
+ 	::std::cout << b << ::std::endl; 
+ 
+ 	Iupac c = b, d = 'k';
+-	::std::cout << c << ::std::endl; 
++	::std::cout << c << " " << d << ::std::endl; 
+ 
+ 	return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/demos/alphabet.cpp~ ./core/demos/alphabet.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/core/demos/alphabet.cpp~	2011-09-13 10:09:54.000000000 +0200
++++ ./core/demos/alphabet.cpp~	2011-09-13 10:10:18.000000000 +0200
+@@ -18,7 +18,7 @@
+ 	b = a;
+ 	::std::cout << b << ::std::endl; 
+ 
+-	Iupac c = b;
++	Iupac c = b, d = 'k';
+ 	::std::cout << c << ::std::endl; 
+ 
+ 	return 0;

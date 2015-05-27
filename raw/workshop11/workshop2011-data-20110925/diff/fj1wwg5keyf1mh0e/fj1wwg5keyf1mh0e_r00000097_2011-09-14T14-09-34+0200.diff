@@ -1,0 +1,42 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-14 09:57:00.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-14 14:09:30.000000000 +0200
+@@ -115,7 +115,7 @@
+ void globalAlign (String<T> str1, String<T> str2) {
+ 		typedef String<T> TSequence;
+ 		typedef Align<TSequence, ArrayGaps> TAlign;
+-// 		typedef Row<TAlign>::Type TRow;
++ 		typedef Row<TAlign>::Type TRow;
+ 		TAlign align;
+ 		resize(rows(align),2);
+ 		assignSource(row(align,0),str1);
+@@ -126,6 +126,10 @@
+ // 		insertGap(row1,5);
+ 		int score = globalAlignment(align,Score<int>(1,-1,-1,-1));
+ 		std::cout << "Score = " << score << std::endl << align;
++		
++		for (int i=0; i<size(rows(align)); i++) {
++			
++		}
+ }
+ 
+ // Program entry point
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-14 09:57:00.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-14 14:09:30.000000000 +0200
+@@ -115,13 +115,13 @@
+ void globalAlign (String<T> str1, String<T> str2) {
+ 		typedef String<T> TSequence;
+ 		typedef Align<TSequence, ArrayGaps> TAlign;
+-		typedef Row<TAlign>::Type TRow;
++// 		typedef Row<TAlign>::Type TRow;
+ 		TAlign align;
+ 		resize(rows(align),2);
+ 		assignSource(row(align,0),str1);
+ 		assignSource(row(align,1),str2);
+ 		std::cout << align;
+-		TRow &row1 = row(align,0), &row2=row(align,1);
++// 		TRow &row1 = row(align,0), &row2=row(align,1);
+ // 		insertGap(row1,2);
+ // 		insertGap(row1,5);
+ 		int score = globalAlignment(align,Score<int>(1,-1,-1,-1));

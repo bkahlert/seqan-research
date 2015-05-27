@@ -1,0 +1,35 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:27:31.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:32:22.000000000 +0200
+@@ -68,6 +68,7 @@
+     if (options.showHelp || options.showVersion)
+         return 0;
+     
++		
+     // Finally, launch the program.
+ //     ret = mainWithOptions(options);
+ 
+@@ -75,6 +76,11 @@
+ 		showAllLettersOfMyAlphabet(Dna());
+ 		showAllLettersOfMyAlphabet(Dna5());
+ 		showAllLettersOfMyAlphabet(Iupac());
++		
++// 		task Basics - 1a
++		Peptide str_b_1="MQDRVKRPMNAFIVWSRDQRRKMALEN";
++		std::cout << str_b_1 << std::endl;
++		
+ 
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 11:27:31.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 11:32:22.000000000 +0200
+@@ -45,7 +45,7 @@
+ template <typename TAlphabet>
+ void showAllLettersOfMyAlphabet (TAlphabet const &) {
+ 	typedef typename Size<TAlphabet>::Type TSize;
+-	TSzize alphSize = ValueSize<TAlphabet>::VALUE;
++	TSize alphSize = ValueSize<TAlphabet>::VALUE;
+ 	for (TSize i=0; i<alphSize; ++i)
+ 		std::cout << i << "," << TAlphabet(i) << "  ";
+ 	std::cout << std::endl;

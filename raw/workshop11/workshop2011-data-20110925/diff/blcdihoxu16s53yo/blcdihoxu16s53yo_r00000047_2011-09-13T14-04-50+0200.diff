@@ -1,0 +1,23 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 14:02:22.593750000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 14:04:46.234375000 +0200
+@@ -118,12 +118,13 @@
+         // HINT: Have a look at the Seed-and-Extend tutorial.
+         
+         typedef Seed<int, Simple> TSeed;
+-        //TSeed seed(
+-        //    beginPosition(infix1) + clippedBeginPosition(row(ali, 0)),
+-        //    beginPosition(infix2) + clippedBeginPosition(row(ali, 1)),
+-        //    beginPosition(infix1) + clippedEndPosition(row(ali, 0)),
+-        //    beginPosition(infix2) + clippedEndPosition(row(ali, 1))
+-        //    );
++        TSeed seed(
++            beginPosition(infix1) + clippedBeginPosition(row(ali, 0)),
++            beginPosition(infix2) + clippedBeginPosition(row(ali, 1)),
++            beginPosition(infix1) + clippedEndPosition(row(ali, 0)),
++            beginPosition(infix2) + clippedEndPosition(row(ali, 1))
++            );
++        
+         //extendSeed(seed, xDrop, score, seqs1[0], seqs2[0], 2, GappedXDrop());
+         
+         if (minimalLength >= minimalLength) {

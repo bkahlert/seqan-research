@@ -1,0 +1,32 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 11:59:18.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:02:19.568735312 +0200
+@@ -92,12 +92,11 @@
+ 	        return -1;
+ 	    }
+ 	    
+-	    SeedSet< int, Seed< Simple >, Score< TScoreValue >, Scored > wind;
+-	    addSeed( wind, clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );
+-	    writeSeed( wind[0], seq1, seq2 );	    	    
+-	    extendSeed( wind[0], xDrop, judgement_of_carrion, seq1, seq2, 2, GappedXDrop() );
++	    Seed< Simple > wind( clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );
++	    writeSeed( wind, seq1, seq2 );	    	    
++	    extendSeed( wind, xDrop, judgement_of_carrion, seq1, seq2, 2, GappedXDrop() );
+ 	    std::cout << "After extension:" << std::endl;
+-	    writeSeed( wind[0], seq1, seq2 );
++	    writeSeed( wind, seq1, seq2 );
+ 	    std::cout << "---" << std::endl;
+ 	}	
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 11:58:13.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 11:59:18.428735360 +0200
+@@ -92,7 +92,7 @@
+ 	        return -1;
+ 	    }
+ 	    
+-	    SeedSet< int, Seed< Simple >, Score< TScoreValue > > wind;
++	    SeedSet< int, Seed< Simple >, Score< TScoreValue >, Scored > wind;
+ 	    addSeed( wind, clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );
+ 	    writeSeed( wind[0], seq1, seq2 );	    	    
+ 	    extendSeed( wind[0], xDrop, judgement_of_carrion, seq1, seq2, 2, GappedXDrop() );

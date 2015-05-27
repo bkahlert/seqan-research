@@ -1,0 +1,13 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp and ./sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp ./sandbox/leon/apps/miniStellar/miniStellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 12:55:16.000000000 +0200
++++ ./sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 12:57:30.000000000 +0200
+@@ -115,7 +115,7 @@
+ 	    appendValue(rows(align), infix1);
+ 	    appendValue(rows(align), infix2);
+ 
+-	    int score = localAlignment(align, score);
++	    TScoreValue score = localAlignment(align, score);
+ 	    if (score < minScore)
+ 		continue;
+ 

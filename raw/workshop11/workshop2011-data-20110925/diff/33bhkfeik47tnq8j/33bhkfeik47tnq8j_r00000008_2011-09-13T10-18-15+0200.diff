@@ -1,0 +1,24 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp and ./sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp ./sandbox/leon/apps/miniStellar/miniStellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 10:14:05.000000000 +0200
++++ ./sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 10:18:11.000000000 +0200
+@@ -49,9 +49,19 @@
+ 		std::cerr << "Could not read file " << argv[1] << std::endl;
+ 		return 1;
+ 	}
++	streamIn1.close();
+ 
+ 	// TODO: Do the same for the second file.
+ 
++	std::ifstream streamIn2(argv[2], std::ios::in | std::ios::binary);
++	RecordReader<std::ifstream, SinglePass<> > reader2(streamIn2);
++	if (read2(ids2, seqs2, reader2, Fasta()) != 0)
++	{
++		std::cerr << "Could not read file " << argv[2] << std::endl;
++		return 1;
++	}
++	streamIn2.close();
++
+ 	// prepare output file
+ 	std::ofstream outFile;
+ 	outFile.open(toCString(filename));

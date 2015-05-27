@@ -1,0 +1,59 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:13:07.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:23:41.609375000 +0200
+@@ -25,17 +25,43 @@
+ 	return 1;
+ }
+ 
++int allStrings_append(CharString s, restlen)
++{
++	if (restlen == 0)
++	{
++		std::cout << s << std::endl;
++	} 
++	else
++	{
++		for(char c = 'a'; c <= 'z'; c++)
++		{
++			allstrings_append(seqan::append(s,c),restlen-1);
++		}
++	}
++}
++
++
++int allStrings(int len)
++{
++	allStrings_append("",len);
++	return 1;
++}
++
+ int main(int, char **) {
+-	DnaString testseq = "CAGTGTGAGCGATTACATACCATCGACTAGT";
+-    std::cout << testseq << std::endl;
+-	count1mers(testseq);
+-
+-	PeptideString testpep = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
+-    std::cout << testpep << std::endl;
+-	count1mers(testpep);
+-
+-	CharString testchar = "Hello World!";
+-    std::cout << testchar << std::endl;
+-	count1mers(testchar);
++	//DnaString testseq = "CAGTGTGAGCGATTACATACCATCGACTAGT";
++ //   std::cout << testseq << std::endl;
++	//count1mers(testseq);
++
++	//PeptideString testpep = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
++ //   std::cout << testpep << std::endl;
++	//count1mers(testpep);
++
++	//CharString testchar = "Hello World!";
++ //   std::cout << testchar << std::endl;
++	//count1mers(testchar);
++
++	allStrings(3);
++
++
+     return 1;
+ }
+\ No newline at end of file

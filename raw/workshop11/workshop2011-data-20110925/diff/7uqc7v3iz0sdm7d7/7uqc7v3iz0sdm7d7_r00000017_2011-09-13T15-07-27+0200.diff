@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp ./sandbox/my_sandbox/demos/samio_demo.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 15:04:32.000000000 +0200
++++ ./sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 15:06:44.490094467 +0200
+@@ -54,6 +54,7 @@
+ 		typedef NameStoreCache<TNameStore> TNameStoreCache;
+ 
+ 		TNameStore refNameStore;
++		resize(refNameStore, 1);
+ 		TNameStoreCache refNameStoreCache(refNameStore);
+ 		BamIOContext<TNameStore> context(refNameStore, refNameStoreCache);
+ 		int res;
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/.samio_demo.cpp.swp and ./sandbox/my_sandbox/demos/.samio_demo.cpp.swp differ

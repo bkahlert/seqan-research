@@ -1,0 +1,218 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 10:04:24.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 11:55:28.528735420 +0200
+@@ -28,25 +28,29 @@
+ 		std::cerr << "USAGE: ministallar IN1.fa IN2.fa" << std::endl;
+ 		return 1;
+ 	}
+-
+-	// TODO: Define a scoring scheme 'score' with linear gap costs using the above defined
+-	//       score values for scoring matches, mismatches, and gaps.
+-	// HINT: You can find a section on Schoring Schemes in the Alignments tutorial.
+-
++	
++	Score< TScoreValue > judgement_of_carrion( matchScore, mismatchScore, gapScore );
++	
+ 	// read sequences from fasta files
+ 	typedef Dna5String TSequence;
+-	StringSet<CharString> ids1, ids2;
+-	StringSet<TSequence> seqs1, seqs2;
++	StringSet<CharString> id1, id2;
++	StringSet<TSequence> seq1, seq2;
+ 
+-	std::ifstream streamIn1(argv[1], std::ios::in | std::ios::binary);
+-	RecordReader<std::ifstream, SinglePass<> > reader1(streamIn1);
+-	if (read2(ids1, seqs1, reader1, Fasta()) != 0)
++	std::ifstream streamInPrimus(argv[1], std::ios::in | std::ios::binary);
++	RecordReader<std::ifstream, SinglePass<> > readerUno(streamInPrimus);
++	if (read2(id1, seq1, readerUno, Fasta()) != 0)
+ 	{
+ 		std::cerr << "Could not read file " << argv[1] << std::endl;
+ 		return 1;
+ 	}
+-
+-	// TODO: Do the same for the second file.
++    
++    std::ifstream streamInDeux(argv[2], std::ios::in | std::ios::binary);
++	RecordReader<std::ifstream, SinglePass<> > readerDeux(streamInDeux);
++	if (read2(id2, seq2, readerDeux, Fasta()) != 0)
++	{
++		std::cerr << "Could not read file " << argv[2] << std::endl;
++		return 1;
++	}
+ 
+ 	// prepare output file
+ 	std::ofstream outFile;
+@@ -59,28 +63,43 @@
+ 	//       for now, and open addressing.
+ 	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
+ 	//       tutorial page, you will find a link to a Swift HowTo page.
+-
+-	// TODO: Define variables of your pattern and finder types, and initialize them with the
+-	//       first sequences in the sequence sets seqs1 and seqs2.
++	
++	typedef Index<TSequence, IndexQGram<Shape<DNA5, UngappedShape<8> >, OpenAddressing> > TIndex;
++	
++	TIndex mt_doom( seq2[1] );
++	
++	Finder< TSequence, Swift< SwiftLocal > > gollum( seq1[0] );
++	Pattern< TIndex, Swift< SwiftLocal > > the_ring( mt_doom );
+ 
+ 	// TODO: Repeat the following steps for all hits of the finder.
+ 
+ 	// call the function find to obtain a swift hit
+ 	// TODO: uncomment the following line
+ 
+-	//find(finder, pattern, errorRate, minimalLength);
+-
+-	// extract infixes from hit
+-	// TODO: uncomment the following three lines
+-
+-	//typedef Infix<TSequence>::Type TInfix;
+-	//TInfix infix1 = infix(finder, seqs1[0]);
+-	//TInfix infix2 = infix(pattern, seqs2[0]);
+-
+-	// find best local alignment of infixes, and check for minimal score
+-	// TODO: Define an align object and initialize it with the infixes. Find the best local
+-	//       alignment of the infixes. Use the above defined scoring scheme. Make sure that
+-	//       it reaches the minimal score minScore.
++	while( find(gollum, the_ring, errorRate, minimalLength) ){
++	
++	    typedef Infix<TSequence>::Type TInfix;
++	    TInfix infix1 = infix(gollum, seq1[0]);
++	    TInfix infix2 = infix(the_ring, seq2[0]);
++	    
++	    Align< TSequence > the_showdown;
++	    appendValue( rows( the_showdown ), infix1 );
++	    appendValue( rows( the_showdown ), infix2 );
++	    
++	    TScoreValue the_score = localAlignment( the_showdown, judgement_of_carrion, minScore );
++    	if( the_score < minScore ){
++	        std::cerr << "DerTooooooooooooD!" << std::endl;
++	        return -1;
++	    }
++	    
++	    SeedSet< int, SimpleSeed, Score< TScoreValue > > wind;
++	    addSeed( wind, clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );
++	    writeSeed( wind[0], seq1, seq2 );	    	    
++	    extendSeed( wind[0], xDrop, judgement_of_carrion, seq1, seq2, 2, GappedXDrop() );
++	    std::cout << "After extension:" << std::endl;
++	    writeSeed( wind[0], seq1, seq2 );
++	    std::cout << "---" << std::endl;
++	}	
+ 
+ 	// create a seed for the local alignment, and conduct gapped X-drop extension
+ 	// TODO: Define a seed on the original sequences but for the subsequences of the local
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 10:04:17.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 11:54:54.048735429 +0200
+@@ -10,7 +10,7 @@
+ unsigned const minimalLength = 12;
+ float const errorRate = 0.05;
+ //unsigned const qGramLength = 8;
+-CharString const filename = "ministellar.out";
++CharString const filename = "exastellar.out";
+ 
+ typedef int TScoreValue;
+ TScoreValue const matchScore = 1;
+@@ -28,25 +28,29 @@
+ 		std::cerr << "USAGE: ministallar IN1.fa IN2.fa" << std::endl;
+ 		return 1;
+ 	}
+-
+-	// TODO: Define a scoring scheme 'score' with linear gap costs using the above defined
+-	//       score values for scoring matches, mismatches, and gaps.
+-	// HINT: You can find a section on Schoring Schemes in the Alignments tutorial.
+-
++	
++	Score< TScoreValue > judgement_of_carrion( matchScore, mismatchScore, gapScore );
++	
+ 	// read sequences from fasta files
+ 	typedef Dna5String TSequence;
+-	StringSet<CharString> ids1, ids2;
+-	StringSet<TSequence> seqs1, seqs2;
++	StringSet<CharString> id1, id2;
++	StringSet<TSequence> seq1, seq2;
+ 
+-	std::ifstream streamIn1(argv[1], std::ios::in | std::ios::binary);
+-	RecordReader<std::ifstream, SinglePass<> > reader1(streamIn1);
+-	if (read2(ids1, seqs1, reader1, Fasta()) != 0)
++	std::ifstream streamInPrimus(argv[1], std::ios::in | std::ios::binary);
++	RecordReader<std::ifstream, SinglePass<> > readerUno(streamInPrimus);
++	if (read2(id1, seq1, readerUno, Fasta()) != 0)
+ 	{
+ 		std::cerr << "Could not read file " << argv[1] << std::endl;
+ 		return 1;
+ 	}
+-
+-	// TODO: Do the same for the second file.
++    
++    std::ifstream streamInDeux(argv[2], std::ios::in | std::ios::binary);
++	RecordReader<std::ifstream, SinglePass<> > readerDeux(streamInDeux);
++	if (read2(id2, seq2, readerDeux, Fasta()) != 0)
++	{
++		std::cerr << "Could not read file " << argv[2] << std::endl;
++		return 1;
++	}
+ 
+ 	// prepare output file
+ 	std::ofstream outFile;
+@@ -59,28 +63,42 @@
+ 	//       for now, and open addressing.
+ 	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
+ 	//       tutorial page, you will find a link to a Swift HowTo page.
+-
+-	// TODO: Define variables of your pattern and finder types, and initialize them with the
+-	//       first sequences in the sequence sets seqs1 and seqs2.
++	
++	typedef Index<TSequence, IndexQGram<Shape<DNA5, UngappedShape<8> >, OpenAddressing> > TIndex;
++	
++	TIndex mt_doom( seq2[1] );
++	
++	Finder< TSequence, Swift< SwiftLocal > > gollum( seq1[0] );
++	Pattern< TIndex, Swift< SwiftLocal > > the_ring( mt_doom );
+ 
+ 	// TODO: Repeat the following steps for all hits of the finder.
+ 
+ 	// call the function find to obtain a swift hit
+ 	// TODO: uncomment the following line
+ 
+-	//find(finder, pattern, errorRate, minimalLength);
+-
+-	// extract infixes from hit
+-	// TODO: uncomment the following three lines
+-
+-	//typedef Infix<TSequence>::Type TInfix;
+-	//TInfix infix1 = infix(finder, seqs1[0]);
+-	//TInfix infix2 = infix(pattern, seqs2[0]);
+-
+-	// find best local alignment of infixes, and check for minimal score
+-	// TODO: Define an align object and initialize it with the infixes. Find the best local
+-	//       alignment of the infixes. Use the above defined scoring scheme. Make sure that
+-	//       it reaches the minimal score minScore.
++	while( find(gollum, the_ring, errorRate, minimalLength) ){
++	
++	    typedef Infix<TSequence>::Type TInfix;
++	    TInfix infix1 = infix(gollum, seq1[0]);
++	    TInfix infix2 = infix(the_ring, seq2[0]);
++	    
++	    Align< TSequence > the_showdown;
++	    appendValue( rows( the_showdown ), infix1 );
++	    appendValue( rows( the_showdown ), infix2 );
++	    
++	    TScoreValue the_score = localAlignment( the_showdown, judgement_of_carrion, minScore );
++    	if( the_score < minScore ){
++	        std::cerr << "DerTooooooooooooD!" << std::endl;
++	        return -1;
++	    }
++	    
++	    SeedSet< int, SimpleSeed, Score< TScoreValue > > wind;
++	    addSeed( wind, clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );
++	    writeSeed( wind[0], seq1, seq2 );	    	    
++	    extendSeed( wind[0], xDrop, judgement_of_carrion, seq1, seq2, 2, GappedXDrop() );
++	    std::cout << "After extension:" << std::endl;
++	    writeSeed( wind[0], seq1, seq2 );
++	}	
+ 
+ 	// create a seed for the local alignment, and conduct gapped X-drop extension
+ 	// TODO: Define a seed on the original sequences but for the subsequences of the local

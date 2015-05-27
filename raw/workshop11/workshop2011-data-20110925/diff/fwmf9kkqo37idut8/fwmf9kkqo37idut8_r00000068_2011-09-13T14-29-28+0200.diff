@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:28:11.140625000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:29:22.953125000 +0200
+@@ -72,8 +72,9 @@
+ 	countOneMers(str3);
+ }
+ 
+-void countOneMers(String<char> str){
+-	int alphSize = ValueSize<char>::VALUE;
++template <type T>
++void countOneMers(String<T> str){
++	int alphSize = ValueSize<T>::VALUE;
+ 	vector<int> dist (alphSize, 0);
+ 
+ 	for (int i=0; i<length(str); i++){
+@@ -83,7 +84,7 @@
+ 	cout << str << endl;
+ 	for (int i=0; i<dist.size(); i++){
+ 		if (dist[i] != 0)
+-			cout << char(i) << ":" << dist[i] << ", ";
++			cout << T(i) << ":" << dist[i] << ", ";
+ 	}
+ 	cout << endl;
+ }
+\ No newline at end of file

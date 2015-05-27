@@ -1,0 +1,15 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 11:38:51.234375000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 11:40:55.968750000 +0200
+@@ -71,9 +71,9 @@
+ 	//       tutorial page, you will find a link to a Swift HowTo page.
+ 
+ 	typedef Index<StringSet<TSequence>, IndexQGram<Shape<Dna5, UngappedShape<qGramLength> >, OpenAddressing> > TIndex;
+-	//typedef 
++	typedef Finder<TIndex, Swift<SwiftLocal> > TFinder;
++	typedef Pattern<TIndex, Swift<SwiftLocal> > TPattern;
+ 	
+-
+ 	// TODO: Define variables of your pattern and finder types, and initialize them with the
+ 	//       first sequences in the sequence sets seqs1 and seqs2.
+ 

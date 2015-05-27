@@ -1,0 +1,36 @@
+{
+    "machine": {
+        "machine": "x86_64", 
+        "processor": "", 
+        "architecture": [
+            [
+                "64bit", 
+                "ELF"
+            ], 
+            "64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Release", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "/usr/bin/make", 
+        "CMAKE_CXX_COMPILER": "/usr/bin/c++", 
+        "CMAKE_MODULE_LINKER_FLAGS": "", 
+        "CMAKE_GENERATOR": "Unix Makefiles", 
+        "CMAKE_C_COMPILER": "Unix Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "/usr/bin/ld"
+    }, 
+    "os": {
+        "node": "larix", 
+        "sys.platform": "linux2", 
+        "system": "Linux", 
+        "platform": "Linux-2.6.32-5-amd64-x86_64-with-debian-6.0.2", 
+        "version": "#1 SMP Mon Mar 7 21:35:22 UTC 2011", 
+        "release": "2.6.32-5-amd64"
+    }, 
+    "id": "zfahlmtml99yzy0x", 
+    "ip": [
+        "160.45.42.28"
+    ]
+}

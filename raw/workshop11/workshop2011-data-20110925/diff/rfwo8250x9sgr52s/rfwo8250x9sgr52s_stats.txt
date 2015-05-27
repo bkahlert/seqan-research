@@ -1,0 +1,37 @@
+{
+    "machine": {
+        "machine": "x86_64", 
+        "processor": "i386", 
+        "architecture": [
+            [
+                "64bit", 
+                ""
+            ], 
+            "64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "/usr/bin/make", 
+        "CMAKE_CXX_COMPILER": "/opt/local/bin/c++", 
+        "CMAKE_MODULE_LINKER_FLAGS": "", 
+        "CMAKE_GENERATOR": "Unix Makefiles", 
+        "CMAKE_C_COMPILER": "Unix Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "/usr/bin/ld"
+    }, 
+    "os": {
+        "node": "Dusk-Falcon.local", 
+        "sys.platform": "darwin", 
+        "system": "Darwin", 
+        "platform": "Darwin-11.1.0-x86_64-i386-64bit", 
+        "version": "Darwin Kernel Version 11.1.0: Tue Jul 26 16:07:11 PDT 2011; root:xnu-1699.22.81~1/RELEASE_X86_64", 
+        "release": "11.1.0"
+    }, 
+    "id": "rfwo8250x9sgr52s", 
+    "ip": [
+        "141.14.248.236", 
+        "fe80::223:6cff:fe97:6a33%en1"
+    ]
+}

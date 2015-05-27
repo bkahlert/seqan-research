@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:46:45.671875000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:55:47.640625000 +0200
+@@ -5,9 +5,10 @@
+ 
+ typedef seqan::String<seqan::Dna> DnaString;
+ 
+-int count1mers(seqan::String<char> str)
++template <typename A>
++int count1mers(seqan::String<A> str)
+ {
+-	std::vector<int> charcount (256,0);
++	std::vector<int> charcount (ValueSize<A>::VALUE,0);
+ 
+ 	for(int i = 0; i < length(str); i++)
+ 	{
+@@ -25,6 +26,6 @@
+ int main(int, char **) {
+ 	DnaString testseq = "CAGTGTGAGCGATTACATACCATCGACTAGT";
+     std::cout << testseq << std::endl;
+-	count1mers(testseq);
++	count1mers<seqan::Dna>(testseq);
+     return 1;
+ }
+\ No newline at end of file

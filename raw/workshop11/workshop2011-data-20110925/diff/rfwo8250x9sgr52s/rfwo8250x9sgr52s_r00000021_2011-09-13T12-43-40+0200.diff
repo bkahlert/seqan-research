@@ -1,0 +1,12 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/.ministellar.cpp.swp and ./sandbox/workshop/apps/ministellar/.ministellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp ./sandbox/workshop/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 12:41:54.000000000 +0200
++++ ./sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 12:42:52.000000000 +0200
+@@ -133,6 +133,7 @@
+         reserve(rows(align), 2, Exact());
+         appendValue(rows(align), infix(seqs1[0], getBeginDim0(seed), getEndDim0(seed)));
+         appendValue(rows(align), infix(seqs2[0], getBeginDim1(seed), getEndDim1(seed)));
++        localAlignment(align, score);
+ 
+         // TODO: Output the alignment as a match to the output file.
+ 

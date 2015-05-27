@@ -1,0 +1,38 @@
+{
+    "machine": {
+        "machine": "x86_64", 
+        "processor": "", 
+        "architecture": [
+            [
+                "64bit", 
+                "ELF"
+            ], 
+            "64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "/usr/bin/make", 
+        "CMAKE_CXX_COMPILER": "/usr/bin/c++", 
+        "CMAKE_MODULE_LINKER_FLAGS": "", 
+        "CMAKE_GENERATOR": "Unix Makefiles", 
+        "CMAKE_C_COMPILER": "Unix Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "/usr/bin/ld"
+    }, 
+    "os": {
+        "node": "R500", 
+        "sys.platform": "linux2", 
+        "system": "Linux", 
+        "platform": "Linux-2.6.35-30-generic-x86_64-with-Ubuntu-10.10-maverick", 
+        "version": "#56-Ubuntu SMP Mon Jul 11 20:01:08 UTC 2011", 
+        "release": "2.6.35-30-generic"
+    }, 
+    "id": "u35c5glxw45elmls", 
+    "ip": [
+        "::1", 
+        "127.0.1.1", 
+        "141.14.248.163"
+    ]
+}

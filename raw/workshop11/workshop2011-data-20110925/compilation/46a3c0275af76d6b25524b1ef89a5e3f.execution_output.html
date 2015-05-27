@@ -1,0 +1,19 @@
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">MQDRVKRPMNAFIVWSRDQRRKMALEN</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(255, 38, 0); "><span style="color: #000000">, /Users/bkahlert/Dropbox/devel</span>opment/seqan-workspace-3.7/seqan-trunk/core/include/seqan/sequence/string_base.h:240 Assertion failed : static_cast&lt;TStringPos&gt;(pos) &lt; static_cast&lt;TStringPos&gt;(length(me)) was: 77 &gt;= 27 (Trying to access an element behind the last one!)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; min-height: 15px; ">&nbsp;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(255, 38, 0); ">stack trace:</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(255, 38, 0); ">&nbsp; 0&nbsp; 0x0000000103d2700e&nbsp; seqan::ClassTest::fail() + 14</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(255, 38, 0); ">&nbsp; 1&nbsp; 0x0000000103d26caa&nbsp; seqan::Reference&lt;seqan::String&lt;char, seqan::Alloc&lt;void&gt; &gt; &gt;::Type seqan::value&lt;char, seqan::Alloc&lt;void&gt;, char&gt;(seqan::String&lt;char, seqan::Alloc&lt;void&gt; &gt;&amp;, char const&amp;) + 106</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(255, 38, 0); ">&nbsp; 2&nbsp; 0x0000000103d26c2f&nbsp; char&amp; seqan::String&lt;char, seqan::Alloc&lt;void&gt; &gt;::operator[]&lt;char&gt;(char) + 31</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(255, 38, 0); ">&nbsp; 3&nbsp; 0x0000000103d25ee9&nbsp; main + 265</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(255, 38, 0); ">&nbsp; 4&nbsp; 0x00007fff8c03a7e1&nbsp; start + 0</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; min-height: 15px; ">&nbsp;</p>

@@ -1,0 +1,36 @@
+{
+    "machine": {
+        "machine": "x86_64", 
+        "processor": "x86_64", 
+        "architecture": [
+            [
+                "64bit", 
+                "ELF"
+            ], 
+            "64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "/usr/bin/make", 
+        "CMAKE_CXX_COMPILER": "/usr/bin/c++", 
+        "CMAKE_MODULE_LINKER_FLAGS": "", 
+        "CMAKE_GENERATOR": "Unix Makefiles", 
+        "CMAKE_C_COMPILER": "Unix Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "/usr/bin/ld"
+    }, 
+    "os": {
+        "node": "Xenopus", 
+        "sys.platform": "linux2", 
+        "system": "Linux", 
+        "platform": "Linux-2.6.38-11-generic-x86_64-with-Ubuntu-11.04-natty", 
+        "version": "#48-Ubuntu SMP Fri Jul 29 19:02:55 UTC 2011", 
+        "release": "2.6.38-11-generic"
+    }, 
+    "id": "amudto8y1mzxaebv", 
+    "ip": [
+        "127.0.1.1"
+    ]
+}

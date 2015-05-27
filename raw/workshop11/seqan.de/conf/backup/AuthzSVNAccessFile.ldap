@@ -1,0 +1,216 @@
+[groups]
+seqan = doering, weese, rauscht, emde, guwek, reinert, aiche, miarcelo, mbauer, dklein, groepl, ahildebr, mriese, goeke, pyl, bkehr, holtgrew, rmaerker, siragusa, h4nn3s, arthur, krudolph, love
+seqan_authors = doering, weese, rauscht, reinert, emde, bkehr, holtgrew, andreott, esiragusa
+seqan_book_authors = doering, reinert
+seqan_swp08 = jev, sakalli, popko, schroedi, rmaerker, bogohl, balcazar, mendtste, unsecure, mali, hgalicka, eweber
+seqan_swp09 = heeger, h4nn3s, jploog, jbethune, maheuser, kluge86, sabrina7, specos
+seqan_swp09_guests = goeke, phansen, patel
+seqan_swp10 = stiele, penzla, mkrivan, spawnia
+seqan_guests = rmaerker, marvj, jheise, jhlim, kemena, ehrlich
+openms = bielow, andreott, aiche
+seqan_web = doering, weese, rauscht, reinert, emde
+p4-2010 = kdoering, christoph.standfuss, krakau, specos, homilius, heeger, ivankel, pmo, hoppe86, mendtste, hauswede, johnwie, cblasse, balcazar, dang, thieme, ici, dangad, cstandfu, moor, mariadg, annakriv, firdevs, h4nn3s, sabrina7, kluge86, mkluge, mattesf
+rmbench_students = h4nn3s, thieme
+
+[/]
+@seqan_authors = rw
+* = r
+
+[/trunk/seqan]
+@seqan = rw
+* = r
+
+[/trunk/web]
+@seqan_web = rw
+* = r
+
+[/trunk/seqan/projects/tests]
+@seqan = rw
+@seqan_authors = rw
+@seqan_guests = r
+* =
+
+[/trunk/seqan/projects/apps]
+@seqan = rw
+@seqan_guests = r
+* =
+
+[/trunk/seqan/projects/library/apps/razers3]
+@seqan_authors = rw
+mriese = rw
+* =
+
+[/trunk/seqan/projects/library/apps/fiona]
+@seqan_authors = rw
+hrichard = rw
+miarcelo = rw
+* =
+
+[/trunk/core/papers/fiona]
+@seqan_authors = rw
+hrichard = rw
+miarcelo = rw
+* =
+
+[/trunk/seqan/projects/library/apps/transquant]
+@seqan_authors = rw
+miarcelo = rw
+* =
+
+[/trunk/seqan/projects/library/apps/insegt]
+@seqan = rw
+sabrina7 = rw
+* = r
+
+[/trunk/seqan/projects/library/apps/seqan_lagan]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/projects/library/apps/read_analyzer]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/book]
+@seqan_authors = rw
+* =
+
+[/trunk/core]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/core]
+@seqan_authors = rw
+* =
+
+[/trunk/core/book]
+@seqan_book_authors = rw
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/core/book]
+@seqan_book_authors = rw
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/misc]
+@seqan_authors = rw
+@seqan = rw
+* = r
+
+[/trunk/seqan/misc/swig]
+@seqan_authors = rw
+patel = rw
+pyl = rw
+* = r
+
+[/trunk/seqan/papers]
+@seqan_authors = rw
+@seqan = r
+* =
+
+[/trunk/seqan/projects/benchmarks/read_mappers]
+krudolph = r
+miarcelo = r
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/projects/benchmarks/read_correction]
+hrichard = rw
+miarcelo = rw
+@seqan_authors = rw
+* =
+
+[/releases/seqan1.0]
+@seqan_authors = rw
+* =
+
+[/releases/seqan_1.1]
+@seqan_authors = rw
+* =
+
+[/trunk/workshop]
+@seqan_authors = rw
+* =
+
+[/trunk/workshop]
+* = r
+
+[/trunk/workshop/retreat09]
+* =
+
+[/trunk/teaching]
+@seqan_authors = rw
+* = r
+
+[/trunk/teaching/swp08]
+@seqan_swp08 = r
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/swp09]
+@seqan_swp09 = r
+@seqan_swp09_guests = r
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/swp10]
+@seqan_swp10 = r
+@seqan_authors = rw
+spawnia = rw
+* =
+
+[/trunk/teaching/master/P4-2010]
+@p4-2010 = rw
+@seqan_authors = rw
+@openms = rw
+* =
+
+[/trunk/teaching/master/hauswedell]
+h4nn3s = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/bachelor/hauswedell]
+h4nn3s = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/bachelor/krakau]
+sabrina7 = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/bachelor/heeger]
+heeger = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/bachelor/heuser]
+maheuser = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/master/pyl]
+pyl = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/master/maerker]
+rmaerker = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/master/riese]
+mriese = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/master/singer]
+unsecure = rw
+@seqan_authors = rw
+* =
+
+[/branches]
+@seqan_authors = rw
+* =
+

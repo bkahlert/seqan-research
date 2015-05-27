@@ -1,0 +1,35 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 15:07:33.000000000 +0200
++++ ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 15:09:47.746270247 +0200
+@@ -103,8 +103,8 @@
+ 	//       alignment of the infixes. Use the above defined scoring scheme. Make sure that
+ 	//       it reaches the minimal score minScore.
+ 
+-        std::cout << fInfix << std::endl;
+-        std::cout << pInfix << std::endl;
++//        std::cout << fInfix << std::endl;
++//        std::cout << pInfix << std::endl;
+         typedef Align<TSequence> TAlign;
+         typedef Row<TAlign> TRow;
+         TAlign aln = TAlign();
+@@ -112,7 +112,7 @@
+         assignSource(row(aln, 0), fInfix);
+         assignSource(row(aln, 1), pInfix);
+         int scr = localAlignment(aln, scoring);
+-        std::cout << aln <<std::endl;
++//        std::cout << aln <<std::endl;
+ //        std::cout << "Score:" << scr <<std::endl;
+         if (scr < minScore) {
+             continue;
+@@ -127,9 +127,9 @@
+                            beginPosition(pInfix) + clippedBeginPosition(row(aln, 1)),
+                            beginPosition(fInfix) + clippedEndPosition(row(aln, 0)),
+                            beginPosition(pInfix) + clippedEndPosition(row(aln, 1)));
+-//        std::cout << "Seed: " << seed << std::endl;
++        std::cout << "Seed: " << seed << std::endl;
+         extendSeed(seed, seqs2[0], seqs1[0], EXTEND_BOTH, scoring, xDrop, GappedXDrop());
+-//        std::cout << "Extendeed Seed: " <<seed << std::endl;
++        std::cout << "Extendeed Seed: " <<seed << std::endl;
+ 
+     	// find best global alignment of extended seed
+ 	    // TODO: Compute the best global alignment of extended seed and its score.

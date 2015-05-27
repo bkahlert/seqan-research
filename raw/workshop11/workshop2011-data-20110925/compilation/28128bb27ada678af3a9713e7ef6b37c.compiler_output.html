@@ -1,0 +1,81 @@
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:18:21: error: called object type &#39;int&#39; is not a function or function pointer</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; int length = length(AA);</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:20:36: error: no viable conversion from &#39;typename Iterator&lt;String&lt;char, Alloc&lt;void&gt;&gt;, typename DefaultGetIteratorSpec&lt;String&lt;char, Alloc&lt;void&gt;&gt; &gt;::Type&gt;::Type&#39; (aka &#39;Iter&lt;seqan::String&lt;char, seqan::Alloc&lt;void&gt;&gt;, AdaptorIterator&lt;TStandardIterator&gt;&gt;&#39;) to &#39;Iterator&lt;String&lt;char&gt;, Standard&gt;&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; Iterator&lt;String&lt;char&gt;, Standard &gt; itrStart = begin(AA);</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~~~</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/core/include/seqan/basic/iterator_interface.h:167:8: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from &#39;typename Iterator&lt;String&lt;char, Alloc&lt;void&gt;&gt;, typename DefaultGetIteratorSpec&lt;String&lt;char, Alloc&lt;void&gt;&gt; &gt;::Type&gt;::Type&#39; (aka &#39;Iter&lt;seqan::String&lt;char, seqan::Alloc&lt;void&gt;&gt;, AdaptorIterator&lt;TStandardIterator&gt;&gt;&#39;) to &#39;const seqan::Iterator&lt;seqan::String&lt;char, seqan::Alloc&lt;void&gt;&gt;, const seqan::Tag&lt;seqan::Standard_&gt;&gt; &amp;&#39; for 1st argument;&nbsp;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">struct Iterator : Iterator_Default_Imp&lt;T, TSpec&gt;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/core/include/seqan/basic/iterator_adaptor.h:157:5: note: candidate function</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; operator TIterator() const</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:21:22: error: a space is required between consecutive right angle brackets (use &#39;&gt; &gt;&#39;)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; Iterator&lt;String&lt;char&gt;&gt; itrEnd = end(AA);</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^~</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; &gt;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:21:25: error: no viable conversion from &#39;typename Iterator&lt;String&lt;char, Alloc&lt;void&gt;&gt;, typename DefaultGetIteratorSpec&lt;String&lt;char, Alloc&lt;void&gt;&gt; &gt;::Type&gt;::Type&#39; (aka &#39;Iter&lt;seqan::String&lt;char, seqan::Alloc&lt;void&gt;&gt;, AdaptorIterator&lt;TStandardIterator&gt;&gt;&#39;) to &#39;Iterator&lt;String&lt;char&gt;&gt;&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; Iterator&lt;String&lt;char&gt;&gt; itrEnd = end(AA);</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^&nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/core/include/seqan/basic/iterator_interface.h:167:8: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from &#39;typename Iterator&lt;String&lt;char, Alloc&lt;void&gt;&gt;, typename DefaultGetIteratorSpec&lt;String&lt;char, Alloc&lt;void&gt;&gt; &gt;::Type&gt;::Type&#39; (aka &#39;Iter&lt;seqan::String&lt;char, seqan::Alloc&lt;void&gt;&gt;, AdaptorIterator&lt;TStandardIterator&gt;&gt;&#39;) to &#39;const seqan::Iterator&lt;seqan::String&lt;char, seqan::Alloc&lt;void&gt;&gt;, const seqan::Tag&lt;seqan::Standard_&gt;&gt; &amp;&#39; for 1st argument;&nbsp;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">struct Iterator : Iterator_Default_Imp&lt;T, TSpec&gt;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/core/include/seqan/basic/iterator_adaptor.h:157:5: note: candidate function</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; operator TIterator() const</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:23:24: error: type &#39;String&lt;char&gt;&#39; does not provide a call operator</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; i &lt;&lt; &quot;, &quot; &lt;&lt; AA(i) &lt;&lt; &quot; &quot;;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^~</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:12:14: warning: unused parameter &#39;argc&#39; [-Wunused-parameter]</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">int main(int argc, char const ** argv)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:12:34: warning: unused parameter &#39;argv&#39; [-Wunused-parameter]</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">int main(int argc, char const ** argv)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">2 warnings and 5 errors generated.</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make[2]: *** [sandbox/bkahlert/apps/tutorial_first_examples/CMakeFiles/tutorial_first_examples.dir/tutorial_first_examples.cpp.o] Error 1</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make[1]: *** [sandbox/bkahlert/apps/tutorial_first_examples/CMakeFiles/tutorial_first_examples.dir/all] Error 2</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make: *** [all] Error 2</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; min-height: 15px; ">&nbsp;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(4, 51, 255); ">01:26:01 Build Finished (took 3s.882ms)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; min-height: 15px; ">&nbsp;</p>

@@ -1,0 +1,82 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp and ./sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp ./sandbox/leon/apps/miniStellar/miniStellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 11:01:24.000000000 +0200
++++ ./sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 11:22:23.000000000 +0200
+@@ -77,46 +77,51 @@
+ 	//       for now, and open addressing.
+ 	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
+ 	//       tutorial page, you will find a link to a Swift HowTo page.
++
+ 	typedef Index<TSequence, IndexQGram<Shape<Dna, UngappedShape<11> >, OpenAddressing> > TIndex;
+ 	typedef Pattern<TIndex, Swift<SwiftSemiGlobal> > TPattern;
+ 	typedef Finder<TSequence, Swift<SwiftSemiGlobal> > TFinder;
+ 
+-	TIndex index(seqs1[0]);
+-	
+-
+ 	// TODO: Define variables of your pattern and finder types, and initialize them with the
+ 	//       first sequences in the sequence sets seqs1 and seqs2.
+ 
++	TIndex index(seqs1[0]);
++	TPattern pattern(index);
++
+ 	// TODO: Repeat the following steps for all hits of the finder.
+ 
+ 	// call the function find to obtain a swift hit
+ 	// TODO: uncomment the following line
+ 
+-	//find(finder, pattern, errorRate, minimalLength);
+-
+-	// extract infixes from hit
+-	// TODO: uncomment the following three lines
++	while (find(finder, pattern, errorRate, minimalLength)) {
++	    // extract infixes from hit
++	    // TODO: uncomment the following three lines
++
++	    typedef Infix<TSequence>::Type TInfix;
++	    TInfix infix1 = infix(finder, seqs1[0]);
++	    TInfix infix2 = infix(pattern, seqs2[0]);
++
++	    // find best local alignment of infixes, and check for minimal score
++	    // TODO: Define an align object and initialize it with the infixes. Find the best local
++	    //       alignment of the infixes. Use the above defined scoring scheme. Make sure that
++	    //       it reaches the minimal score minScore.
++	    Align<String<Dna> > align;
++	    appendValue(rows(align), infix1);
++	    appendValue(rows(align), infix2);
++
++	    // create a seed for the local alignment, and conduct gapped X-drop extension
++	    // TODO: Define a seed on the original sequences but for the subsequences of the local
++	    //       alignment. Extend this seed in both directions using gapped X-drop extension.
++	    //       Check that the extended seed has a length of at least minimalLength.
++	    // HINT: Have a look at the Seed-and-Extend tutorial.
++
++	    // find best global alignment of extended seed
++	    // TODO: Compute the best global alignment of extended seed and its score.
++	    // HINT: Create an align object on infixes of the sequences.
+ 
+-	//typedef Infix<TSequence>::Type TInfix;
+-	//TInfix infix1 = infix(finder, seqs1[0]);
+-	//TInfix infix2 = infix(pattern, seqs2[0]);
+-
+-	// find best local alignment of infixes, and check for minimal score
+-	// TODO: Define an align object and initialize it with the infixes. Find the best local
+-	//       alignment of the infixes. Use the above defined scoring scheme. Make sure that
+-	//       it reaches the minimal score minScore.
+-
+-	// create a seed for the local alignment, and conduct gapped X-drop extension
+-	// TODO: Define a seed on the original sequences but for the subsequences of the local
+-	//       alignment. Extend this seed in both directions using gapped X-drop extension.
+-	//       Check that the extended seed has a length of at least minimalLength.
+-	// HINT: Have a look at the Seed-and-Extend tutorial.
+-
+-	// find best global alignment of extended seed
+-	// TODO: Compute the best global alignment of extended seed and its score.
+-	// HINT: Create an align object on infixes of the sequences.
++	    // TODO: Output the alignment as a match to the output file.
+ 
+-	// TODO: Output the alignment as a match to the output file.
++	}
+ 
+ 	outFile.close();
+ 

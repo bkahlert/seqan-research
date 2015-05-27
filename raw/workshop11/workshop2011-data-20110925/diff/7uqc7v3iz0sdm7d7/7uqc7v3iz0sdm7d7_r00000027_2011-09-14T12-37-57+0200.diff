@@ -1,0 +1,34 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/msplazer/.msplazer.cpp.swp and ./sandbox/my_sandbox/apps/msplazer/.msplazer.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/msplazer/msplazer.h ./sandbox/my_sandbox/apps/msplazer/msplazer.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/msplazer/msplazer.h	2011-09-09 18:51:28.000000000 +0200
++++ ./sandbox/my_sandbox/apps/msplazer/msplazer.h	2011-09-14 12:37:31.616103566 +0200
+@@ -256,6 +256,28 @@
+ 		appendValue(spm.objectTable, val);
+ }
+ 
++/**
++.Function.getProperty:
++..summary: Returns false if there is no object at the given position. Otherwise the object is written to the output parameter obj.
++..signature:getProperty(spm, descr, obj)
++..param.spm: SparsePropertyMap.
++...type:Class.SparsePropertyMap<TObject,TPos>
++..param.descr: Vertex or edge descriptor.
++...type:Metafunction.VertexDescriptor
++...type:Metafunction.EdgeDescriptor
++..param.obj: Output parameter (object contained in sparse property map.
++...remarks:Type must match the value type of the properties map object table.
++.include:msplazer.h
++ */
++template < typename TObject, typename TPos, typename TDescriptor >
++inline bool getProperty(SparsePropertyMap<TObject, TPos> spm, TDescriptor descr, TObject obj){
++
++	TPos index = getProperty(spm.slotLookupTable, descr);
++	if(index == -1)
++		return 0;
++	obj = getValue(spm.objectTable, index);
++	return 1;
++}
+ 
+ /**
+  * Ostream operator << for Breakpoint class
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/msplazer/.msplazer.h.swp and ./sandbox/my_sandbox/apps/msplazer/.msplazer.h.swp differ

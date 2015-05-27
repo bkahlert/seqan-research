@@ -1,0 +1,45 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:20:45.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:35:47.000000000 +0200
+@@ -13,21 +13,29 @@
+     std::cout << std::endl;
+ }
+ 
+-template <typename String> class <CharString, DnaString, Peptide>
+-void countOneMers(String const& str)
++//template <typename String> class <CharString, DnaString, Peptide>
++template <typename TString>
++void countOneMers(String const sequence)
+ {
+-	String<int> table;
+-	resize(table, 'z' - 'a' +1,0); 
+-	for(unsigned int i =0; i< length(str); i++)
++	typedef typename TSize<TString>::Type TSize;
++	typedef typename Value<TString>::Type TAlphabet;
++	
++	typedef String<TSize> TCounterString;
++	TSize alphSize = ValueSize<TAlphabet>::Type;
++	TCounterString table;
++	resize(table, alphSize,0); 
++	
++	typedef typename Iterator<TCounterString>::Type TCountIter;	
++	TCounterIter countIt = begin(table);
++    TCounterIter countItEnd = end(table);
++	for(TSize pos=0; countIt != countItEnd; ++countIt, ++pos)
+ 	{
+-		table[str[i] - 'a'] += 1;
++		if(value(countIt > 0)
++		{
++			std::cout <<TAlphabet(pos) << ':' << value(countIt) << std::endl;
++		}
+ 	}
+-	
+-	for (unsigned int i = 0; i < 'z' - 'a' + 1; ++i) {
+-        if (table[i] == 0)
+-            continue;
+-        std::cout << static_cast<char>('a' + i) << " " << table[i] << std::endl;
+-    }
++
+ }
+ 	
+ 

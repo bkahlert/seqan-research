@@ -1,0 +1,39 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:10:56.062500000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:55:35.015625000 +0200
+@@ -1,10 +1,30 @@
+ #include <iostream>
+ #include <seqan/sequence.h>  // CharString, ...
+ #include <seqan/file.h>      // to stream a CharString into cout
++#include <seqan/basic.h>
++using namespace seqan;
+ 
+ int main(int, char **) {
+-    std::cout << "Hello World!" << std::endl;
+-    seqan::CharString mySeqanString = "Hello SeqAn!";
+-    std::cout << mySeqanString << std::endl;
+-    return 1;
++	std::cout << "Hello World!" << std::endl;
++	seqan::CharString mySeqanString = "Hello SeqAn!";
++	std::cout << mySeqanString << std::endl;
++	return 1;
++}
++
++void tut01(){
++	template <typename TAlphabet>
++	void showAllLetterOfMyAlphabet(TAlphabet const &)
++	{
++		typedef typename Size<TAlphabet>::Type TSize;
++		TSize alphSize = ValueSize<TAlphabet>::VALUE;
++		for (TSize i = 0; i < alphSize; ++i)
++			std::cout << i << ',' << TAlphabet(i) << "  ";
++		std::cout << std::endl;
++	}
++
++	showAllLetterOfMyAlphabet(AminoAcid());
++	showAllLetterOfMyAlphabet(Dna());
++	showAllLetterOfMyAlphabet(Dna5());
++	return 0;
++
+ }
+\ No newline at end of file

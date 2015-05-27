@@ -1,0 +1,47 @@
+[groups]
+seqan = doering@PCPOOL.MI.FU-BERLIN.DE, weese@PCPOOL.MI.FU-BERLIN.DE, rausch@PCPOOL.MI.FU-BERLIN.DE, emde@PCPOOL.MI.FU-BERLIN.DE, gunnar@PCPOOL.MI.FU-BERLIN.DE, reinert@PCPOOL.MI.FU-BERLIN.DE, aiche@PCPOOL.MI.FU-BERLIN.DE, maschulz@PCPOOL.MI.FU-BERLIN.DE, jhlim@PCPOOL.MI.FU-BERLIN.DE, mbauer@PCPOOL.MI.FU-BERLIN.DE, kemena@PCPOOL.MI.FU-BERLIN.DE, dklein@PCPOOL.MI.FU-BERLIN.DE, ehrlich@PCPOOL.MI.FU-BERLIN.DE, krudolph@PCPOOL.MI.FU-BERLIN.DE
+seqan_authors = doering@PCPOOL.MI.FU-BERLIN.DE, weese@PCPOOL.MI.FU-BERLIN.DE, rausch@PCPOOL.MI.FU-BERLIN.DE, reinert@PCPOOL.MI.FU-BERLIN.DE
+seqan_swp08 = doering@PCPOOL.MI.FU-BERLIN.DE
+
+[/]
+@seqan_authors = rw
+* = r
+
+[/trunk/seqan]
+@seqan = rw
+* = r
+
+[/trunk/seqan/projects/apps]
+@seqan = rw
+* =
+
+[/trunk/seqan/book]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/core]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/misc]
+@seqan = r
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/papers]
+@seqan = r
+@seqan_authors = rw
+* =
+
+[/releases/seqan1.0]
+* = 
+
+[/trunk/teaching]
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/swp08]
+@seqan_swp08 = r
+
+[/trunk/teaching/swp08/trunk]
+@seqan_swp08 = rw

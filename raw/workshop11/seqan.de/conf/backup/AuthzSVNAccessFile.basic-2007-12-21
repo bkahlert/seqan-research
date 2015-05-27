@@ -1,0 +1,31 @@
+[groups]
+seqan=weese,doering,maschulz
+seqan_authors=weese,doering
+
+[/]
+* = r
+
+[/seqan]
+@seqan = rw
+* = r
+
+[/seqan/projects/apps]
+@seqan = rw
+* =
+
+[/seqan/book]
+@seqan_authors = rw
+* =
+
+[/seqan/core]
+@seqan_authors = rw
+* =
+
+[/seqan/misc]
+@seqan_authors = rw
+* =
+
+[/seqan/papers]
+@seqan_authors = rw
+* =
+

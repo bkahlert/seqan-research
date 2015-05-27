@@ -1,0 +1,216 @@
+[groups]
+seqan = doering@FU-BERLIN.DE, weese@FU-BERLIN.DE, rauscht@FU-BERLIN.DE, emde@FU-BERLIN.DE, guwek@FU-BERLIN.DE, reinert@FU-BERLIN.DE, aiche@FU-BERLIN.DE, miarcelo@FU-BERLIN.DE, mbauer@FU-BERLIN.DE, dklein@FU-BERLIN.DE, groepl@FU-BERLIN.DE, ahildebr@FU-BERLIN.DE, mriese@FU-BERLIN.DE, goeke@FU-BERLIN.DE, pyl@FU-BERLIN.DE, bkehr@FU-BERLIN.DE, holtgrew@FU-BERLIN.DE, rmaerker@FU-BERLIN.DE, siragusa@FU-BERLIN.DE, h4nn3s@FU-BERLIN.DE, arthur@FU-BERLIN.DE, krudolph@FU-BERLIN.DE, love@FU-BERLIN.DE
+seqan_authors = doering@FU-BERLIN.DE, weese@FU-BERLIN.DE, rauscht@FU-BERLIN.DE, reinert@FU-BERLIN.DE, emde@FU-BERLIN.DE, bkehr@FU-BERLIN.DE, holtgrew@FU-BERLIN.DE, andreott@FU-BERLIN.DE, esiragusa@FU-BERLIN.DE
+seqan_book_authors = doering@FU-BERLIN.DE, reinert@FU-BERLIN.DE
+seqan_swp08 = jev@FU-BERLIN.DE, sakalli@FU-BERLIN.DE, popko@FU-BERLIN.DE, schroedi@FU-BERLIN.DE, rmaerker@FU-BERLIN.DE, bogohl@FU-BERLIN.DE, balcazar@FU-BERLIN.DE, mendtste@FU-BERLIN.DE, unsecure@FU-BERLIN.DE, mali@FU-BERLIN.DE, hgalicka@FU-BERLIN.DE, eweber@FU-BERLIN.DE
+seqan_swp09 = heeger@FU-BERLIN.DE, h4nn3s@FU-BERLIN.DE, jploog@FU-BERLIN.DE, jbethune@FU-BERLIN.DE, maheuser@FU-BERLIN.DE, kluge86@FU-BERLIN.DE, sabrina7@FU-BERLIN.DE, specos@FU-BERLIN.DE
+seqan_swp09_guests = goeke@FU-BERLIN.DE, phansen@FU-BERLIN.DE, patel@FU-BERLIN.DE
+seqan_swp10 = stiele@FU-BERLIN.DE, penzla@FU-BERLIN.DE, mkrivan@FU-BERLIN.DE, spawnia@FU-BERLIN.DE
+seqan_guests = rmaerker@FU-BERLIN.DE, marvj@FU-BERLIN.DE, jheise@FU-BERLIN.DE, jhlim@FU-BERLIN.DE, kemena@FU-BERLIN.DE, ehrlich@FU-BERLIN.DE
+openms = bielow@FU-BERLIN.DE, andreott@FU-BERLIN.DE, aiche@FU-BERLIN.DE
+seqan_web = doering@FU-BERLIN.DE, weese@FU-BERLIN.DE, rauscht@FU-BERLIN.DE, reinert@FU-BERLIN.DE, emde@FU-BERLIN.DE
+p4-2010 = kdoering@FU-BERLIN.DE, christoph.standfuss@FU-BERLIN.DE, krakau@FU-BERLIN.DE, specos@FU-BERLIN.DE, homilius@FU-BERLIN.DE, heeger@FU-BERLIN.DE, ivankel@FU-BERLIN.DE, pmo@FU-BERLIN.DE, hoppe86@FU-BERLIN.DE, mendtste@FU-BERLIN.DE, hauswede@FU-BERLIN.DE, johnwie@FU-BERLIN.DE, cblasse@FU-BERLIN.DE, balcazar@FU-BERLIN.DE, dang@FU-BERLIN.DE, thieme@FU-BERLIN.DE, ici@FU-BERLIN.DE, dangad@FU-BERLIN.DE, cstandfu@FU-BERLIN.DE, moor@FU-BERLIN.DE, mariadg@FU-BERLIN.DE, annakriv@FU-BERLIN.DE, firdevs@FU-BERLIN.DE, h4nn3s@FU-BERLIN.DE, sabrina7@FU-BERLIN.DE, kluge86@FU-BERLIN.DE, mkluge@FU-BERLIN.DE, mattesf@FU-BERLIN.DE
+rmbench_students = h4nn3s@FU-BERLIN.DE, thieme@FU-BERLIN.DE
+
+[/]
+@seqan_authors = rw
+* = r
+
+[/trunk/seqan]
+@seqan = rw
+* = r
+
+[/trunk/web]
+@seqan_web = rw
+* = r
+
+[/trunk/seqan/projects/tests]
+@seqan = rw
+@seqan_authors = rw
+@seqan_guests = r
+* =
+
+[/trunk/seqan/projects/apps]
+@seqan = rw
+@seqan_guests = r
+* =
+
+[/trunk/seqan/projects/library/apps/razers3]
+@seqan_authors = rw
+mriese@FU-BERLIN.DE = rw
+* =
+
+[/trunk/seqan/projects/library/apps/fiona]
+@seqan_authors = rw
+hrichard@FU-BERLIN.DE = rw
+miarcelo@FU-BERLIN.DE = rw
+* =
+
+[/trunk/core/papers/fiona]
+@seqan_authors = rw
+hrichard@FU-BERLIN.DE = rw
+miarcelo@FU-BERLIN.DE = rw
+* =
+
+[/trunk/seqan/projects/library/apps/transquant]
+@seqan_authors = rw
+miarcelo@FU-BERLIN.DE = rw
+* =
+
+[/trunk/seqan/projects/library/apps/insegt]
+@seqan = rw
+sabrina7@FU-BERLIN.DE = rw
+* = r
+
+[/trunk/seqan/projects/library/apps/seqan_lagan]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/projects/library/apps/read_analyzer]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/book]
+@seqan_authors = rw
+* =
+
+[/trunk/core]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/core]
+@seqan_authors = rw
+* =
+
+[/trunk/core/book]
+@seqan_book_authors = rw
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/core/book]
+@seqan_book_authors = rw
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/misc]
+@seqan_authors = rw
+@seqan = rw
+* = r
+
+[/trunk/seqan/misc/swig]
+@seqan_authors = rw
+patel@FU-BERLIN.DE = rw
+pyl@FU-BERLIN.DE = rw
+* = r
+
+[/trunk/seqan/papers]
+@seqan_authors = rw
+@seqan = r
+* =
+
+[/trunk/seqan/projects/benchmarks/read_mappers]
+krudolph@FU-BERLIN.DE = r
+miarcelo@FU-BERLIN.DE = r
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/projects/benchmarks/read_correction]
+hrichard@FU-BERLIN.DE = rw
+miarcelo@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/releases/seqan1.0]
+@seqan_authors = rw
+* =
+
+[/releases/seqan_1.1]
+@seqan_authors = rw
+* =
+
+[/trunk/workshop]
+@seqan_authors = rw
+* =
+
+[/trunk/workshop]
+* = r
+
+[/trunk/workshop/retreat09]
+* =
+
+[/trunk/teaching]
+@seqan_authors = rw
+* = r
+
+[/trunk/teaching/swp08]
+@seqan_swp08 = r
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/swp09]
+@seqan_swp09 = r
+@seqan_swp09_guests = r
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/swp10]
+@seqan_swp10 = r
+@seqan_authors = rw
+spawnia@FU-BERLIN.DE = rw
+* =
+
+[/trunk/teaching/master/P4-2010]
+@p4-2010 = rw
+@seqan_authors = rw
+@openms = rw
+* =
+
+[/trunk/teaching/master/hauswedell]
+h4nn3s@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/bachelor/hauswedell]
+h4nn3s@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/bachelor/krakau]
+sabrina7@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/bachelor/heeger]
+heeger@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/bachelor/heuser]
+maheuser@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/master/pyl]
+pyl@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/master/maerker]
+rmaerker@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/master/riese]
+mriese@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/master/singer]
+unsecure@FU-BERLIN.DE = rw
+@seqan_authors = rw
+* =
+
+[/branches]
+@seqan_authors = rw
+* =
+

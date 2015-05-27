@@ -1,0 +1,28 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fec6t5zk4j2ik4e7_stats.txt -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/userdata/fec6t5zk4j2ik4e7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/thor/workspace/SeqAn/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 10:04:02.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 10:09:01.284999314 +0200
+@@ -43,20 +43,8 @@
+ 
+ // Program entry point
+ int main(int argc, char const ** argv) {
+-	// Setup command line parser.
+-	CommandLineParser parser;
+-	Options options;
+-	setupCommandLineParser(parser, options);
+-
+-	// Then, parse the command line and handle the cases where help display
+-	// is requested or erroneous parameters were given.
+-	int ret = parseCommandLineAndCheck(options, parser, argc, argv);
+-	if (ret != 0)
+-		return ret;
+-	if (options.showHelp || options.showVersion)
+-		return 0;
+-
+-	// Finally, launch the program.
+-	ret = mainWithOptions(options);
+-	return ret;
++    std::cout << "Hello World!" << std::endl;
++    seqan::CharString mySeqanString = "Hello SeqAn!";
++    std::cout << mySeqanString << std::endl;
++    return 1;
+ }

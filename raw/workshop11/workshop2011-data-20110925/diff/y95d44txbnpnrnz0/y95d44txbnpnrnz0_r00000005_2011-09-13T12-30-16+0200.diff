@@ -1,0 +1,30 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Applications/GENOME_ANALYSIS/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y95d44txbnpnrnz0_stats.txt -x /Applications/GENOME_ANALYSIS/seqan-trunk/misc/seqan_instrumentation/userdata/y95d44txbnpnrnz0_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Applications/GENOME_ANALYSIS/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Applications/GENOME_ANALYSIS/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Applications/GENOME_ANALYSIS/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/ex4_tutorial.cpp ./sandbox/my_sandbox/demos/ex4_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/ex4_tutorial.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/demos/ex4_tutorial.cpp	2011-09-13 12:20:54.000000000 +0200
+@@ -0,0 +1,26 @@
++#include <seqan/basic.h>
++#include <seqan/sequence.h>
++#include <seqan/file.h>
++#include <iostream>
++
++using namespace seqan;
++
++
++// Program entry point
++int main()
++	{
++		// Each, a string of characters, of nucleotides and of amino acids.
++		String<char> myText;
++		String<Dna> myGenome;
++		String<AminoAcid> myProtein;
++		
++		// More exotic: A string of character strings!
++		String<String<char> > myStringList;
++		
++		String<char> test = "this is ";
++		test += "a test.";
++		std::cout << test << std::endl;
++		std::cout << length(tes) << std::endl;
++		
++		return 0;
++	}

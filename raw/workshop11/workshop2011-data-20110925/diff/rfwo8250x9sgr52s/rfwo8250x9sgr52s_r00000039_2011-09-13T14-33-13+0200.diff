@@ -1,0 +1,85 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/.ministellar.cpp.swp and ./sandbox/workshop/apps/ministellar/.ministellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp ./sandbox/workshop/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 14:21:42.000000000 +0200
++++ ./sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 14:33:05.000000000 +0200
+@@ -66,41 +66,25 @@
+     std::ofstream outFile(toCString(filename));
+ 
+     // define finder and pattern
+-    // TODO: Define types for finder and pattern using SeqAn's find interface from the index
+-    //       module. Both should be specialized for the approproiate swift filter algorithm.
+-    //       The pattern will need the definition of a q-gram-index. Use q-grams of length 8
+-    //       for now, and open addressing.
+-    // HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
+-    //       tutorial page, you will find a link to a Swift HowTo page.
+     
+     typedef Finder<TSequence, Swift<SwiftLocal> > TFinder;
+     typedef Index<TSequence, IndexQGram<Shape<TValue, UngappedShape<8> >, OpenAddressing> > TIndex;
+     typedef Pattern<TIndex, Swift<SwiftLocal> > TPattern;
+ 
+-    // TODO: Define variables of your pattern and finder types, and initialize them with the
+-    //       first sequences in the sequence sets seqs1 and seqs2.
+-
+     TIndex index(seqs2[0]);
+     TPattern pattern(index);
+     TFinder finder(seqs1[0]);
+ 
+-    // TODO: Repeat the following steps for all hits of the finder.
+-
+     // call the function find to obtain a swift hit
+-    // TODO: uncomment the following line
+ 
+     while (find(finder, pattern, errorRate, static_cast<int>(minimalLength))) {
+         // extract infixes from hit
+-        // TODO: uncomment the following three lines
+ 
+         typedef Infix<TSequence>::Type TInfix;
+         TInfix infix1 = infix(finder, seqs1[0]);
+         TInfix infix2 = infix(pattern, seqs2[0]);
+ 
+         // find best local alignment of infixes, and check for minimal score
+-        // TODO: Define an align object and initialize it with the infixes. Find the best local
+-        //       alignment of the infixes. Use the above defined scoring scheme. Make sure that
+-        //       it reaches the minimal score minScore.
+ 
+         Align<TSequence> align;
+         reserve(rows(align), 2, Exact());
+@@ -110,10 +94,6 @@
+             continue;
+ 
+         // create a seed for the local alignment, and conduct gapped X-drop extension
+-        // TODO: Define a seed on the original sequences but for the subsequences of the local
+-        //       alignment. Extend this seed in both directions using gapped X-drop extension.
+-        //       Check that the extended seed has a length of at least minimalLength.
+-        // HINT: Have a look at the Seed-and-Extend tutorial.
+ 
+         typedef Seed<Simple> TSeed;
+         TSeed seed(
+@@ -121,15 +101,9 @@
+             clippedBeginPosition(row(align, 1)) + beginPosition(infix2),
+             clippedEndPosition(row(align, 0)) + beginPosition(infix1),
+             clippedEndPosition(row(align, 1)) + beginPosition(infix2));
+-        std::cout << "Before extension: " << std::endl;
+-        writeSeed(seed, seqs1[0], seqs2[0]);
+         extendSeed(seed, seqs2[0], seqs1[0], EXTEND_BOTH, score, xDrop, GappedXDrop());
+-        std::cout << "After extension: " << std::endl;
+-        writeSeed(seed, seqs1[0], seqs2[0]);
+ 
+         // find best global alignment of extended seed
+-        // TODO: Compute the best global alignment of extended seed and its score.
+-        // HINT: Create an align object on infixes of the sequences.
+ 
+         Align<TSequence> extendedAlign;
+         reserve(rows(extendedAlign), 2, Exact());
+@@ -139,10 +113,9 @@
+         appendValue(rows(extendedAlign), extendedInfix2);
+         globalAlignment(extendedAlign, score);
+ 
+-        // TODO: Output the alignment as a match to the output file.
+-
+         outFile << clippedBeginPosition(row(extendedAlign, 0)) + beginPosition(extendedInfix1)
+                 << "\t"
+                 << clippedEndPosition(row(extendedAlign, 0)) + beginPosition(extendedInfix1) << std::endl;
++        std::cout << extendedAlign << std::endl;
+     } // while(find(...))
+ }

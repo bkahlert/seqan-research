@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 12:59:11.421875000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 13:00:47.500000000 +0200
+@@ -108,7 +108,7 @@
+ 	std::cout << ali << std::endl;
+ 
+     TScoreValue scoreValue = localAlignment(ali, score, SmithWaterman());
+-    if (scoreValue > minScore) {
++    if (scoreValue >= minScore) {
+         // create a seed for the local alignment, and conduct gapped X-drop extension
+         // TODO: Define a seed on the original sequences but for the subsequences of the local
+         //       alignment. Extend this seed in both directions using gapped X-drop extension.
+@@ -117,7 +117,11 @@
+         
+         typedef Seed<int, Simple> TSeed;
+         TSeed seed(clippedBeginPosition(row(ali, 0)), clippedBeginPosition(row(ali, 1)), clippedEndPosition(row(ali, 0)), clippedEndPosition(row(ali, 1)));
+-        extendSeed(seed, xDrop, score, seq0, seq1, 2, GappedXDrop());
++        extendSeed(seed, xDrop, score, seqs1[0], seqs2[0], 2, GappedXDrop());
++        
++        if (minimalLength >= minimalLength) {
++            
++        }
+  
+         // find best global alignment of extended seed
+         // TODO: Compute the best global alignment of extended seed and its score.

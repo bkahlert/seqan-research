@@ -1,0 +1,14 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 14:47:47.000000000 +0200
++++ ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 14:48:58.026270251 +0200
+@@ -135,8 +135,8 @@
+ 	    // TODO: Compute the best global alignment of extended seed and its score.
+ 	    // HINT: Create an align object on infixes of the sequences.
+ 
+-        TInfix subseq1 = TInfix(seqs2[0], getBeginDim0(seed), getEndDim0(seed));
+-        TInfix subseq2 = TInfix(seqs1[0], getBeginDim1(seed), getEndDim1(seed));
++        TInfix subseq1 = TInfix(seqs1[0], getBeginDim0(seed), getEndDim0(seed));
++        TInfix subseq2 = TInfix(seqs2[0], getBeginDim1(seed), getEndDim1(seed));
+         
+         assignSource(row(aln, 0), infix1);
+         assignSource(row(aln, 1), infix2);

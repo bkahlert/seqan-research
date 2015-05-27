@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7uqc7v3iz0sdm7d7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/bluebelly/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp ./sandbox/my_sandbox/demos/samio_demo.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 14:47:12.000000000 +0200
++++ ./sandbox/my_sandbox/demos/samio_demo.cpp	2011-09-13 14:52:47.910611695 +0200
+@@ -64,8 +64,18 @@
+ 		record.pos = 10;
+ 		record.mapQ = 255;
+ 		record.bin = 0;
+-		record.cigar = "";
+-		//record.cigar = "3M1D3M1I3M";
++		resize(record.cigar, 5);
++		record.cigar[0].count = 10;
++		record.cigar[0].operation = 'M';
++		record.cigar[1].count = 1;
++		record.cigar[1].operation = 'D';
++		record.cigar[2].count = 7;
++		record.cigar[2].operation = 'M';
++		record.cigar[1].count = 1;
++		record.cigar[1].operation = 'I';
++		record.cigar[2].count = 3;
++		record.cigar[2].operation = 'M';
++	
+ 		record.rNextId = 0;
+ 		record.pNext = 0;
+ 		record.tLen = 0;
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/.samio_demo.cpp.swp and ./sandbox/my_sandbox/demos/.samio_demo.cpp.swp differ

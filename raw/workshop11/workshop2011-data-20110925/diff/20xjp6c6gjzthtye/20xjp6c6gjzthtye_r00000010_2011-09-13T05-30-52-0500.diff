@@ -1,0 +1,13 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/20xjp6c6gjzthtye_stats.txt -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata/20xjp6c6gjzthtye_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/mySandbox/tests/my_test/test_my_test.cpp ./sandbox/mySandbox/tests/my_test/test_my_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mySandbox/tests/my_test/test_my_test.cpp	2011-09-13 05:23:16.032187100 -0500
++++ ./sandbox/mySandbox/tests/my_test/test_my_test.cpp	2011-09-13 05:25:36.663230800 -0500
+@@ -4,7 +4,7 @@
+ 
+ int main(int, char **) {
+     std::cout << "Hello World!" << std::endl;
+-    //seqan::CharString mySeqanString = "Hello SeqAn!";
+-    //std::cout << mySeqanString << std::endl;
++    seqan::CharString mySeqanString = "Hello SeqAn!";
++    std::cout << mySeqanString << std::endl;
+     return 1;
+ }

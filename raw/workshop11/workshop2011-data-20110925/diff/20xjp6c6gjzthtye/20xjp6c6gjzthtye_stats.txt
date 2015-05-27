@@ -1,0 +1,40 @@
+{
+    "machine": {
+        "machine": "AMD64", 
+        "processor": "Intel64 Family 6 Model 37 Stepping 2, GenuineIntel", 
+        "architecture": [
+            [
+                "32bit", 
+                "WindowsPE"
+            ], 
+            "no64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "C:/MinGW/bin/mingw32-make.exe", 
+        "CMAKE_CXX_COMPILER": "C:/MinGW/bin/g++.exe", 
+        "CMAKE_MODULE_LINKER_FLAGS": " ", 
+        "CMAKE_GENERATOR": "MinGW Makefiles", 
+        "CMAKE_C_COMPILER": "MinGW Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "C:/MinGW/bin/ld.exe"
+    }, 
+    "os": {
+        "node": "schulzeNotebook", 
+        "sys.platform": "win32", 
+        "system": "Windows", 
+        "platform": "Windows-7-6.1.7600", 
+        "version": "6.1.7600", 
+        "release": "7"
+    }, 
+    "id": "20xjp6c6gjzthtye", 
+    "ip": [
+        "fe80::f9db:b135:a852:e6a6%16", 
+        "fe80::1c97:1591:72f1:655%14", 
+        "2002:8d0e:f9aa::8d0e:f9aa", 
+        "141.14.249.170", 
+        "2001:0:5ef5:79fd:1c97:1591:72f1:655"
+    ]
+}

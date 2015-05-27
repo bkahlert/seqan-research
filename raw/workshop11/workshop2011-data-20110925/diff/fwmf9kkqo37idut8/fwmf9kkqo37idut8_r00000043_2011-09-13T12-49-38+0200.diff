@@ -1,0 +1,20 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:48:54.671875000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:49:34.250000000 +0200
+@@ -47,7 +47,6 @@
+ 	Iterator<String<AminoAcid>, Standard>::Type itEnd = end(pep);
+ 
+ 	int alphSize = ValueSize<AminoAcid>::VALUE;
+-	vector<int> dist (alphSize,0);
+ 
+ 	FrequencyDistribution<AminoAcid> dist;
+ 	convertResidueToFrequencyDist(dist, AminoAcid);
+@@ -62,8 +61,4 @@
+ 		it++;
+ 	}
+ 	cout << pep << endl;
+-
+-	showAllLetterOfMyAlphabet(AminoAcid());
+-	for (int i=0; i<dist.size(); i++){
+-		cout << i << ',' << dist[i] << " ";
+ }

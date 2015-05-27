@@ -1,0 +1,53 @@
+[groups]
+seqan = doering@PCPOOL.MI.FU-BERLIN.DE, weese@PCPOOL.MI.FU-BERLIN.DE, rausch@PCPOOL.MI.FU-BERLIN.DE, emde@PCPOOL.MI.FU-BERLIN.DE, gunnar@PCPOOL.MI.FU-BERLIN.DE, reinert@PCPOOL.MI.FU-BERLIN.DE, aiche@PCPOOL.MI.FU-BERLIN.DE, maschulz@PCPOOL.MI.FU-BERLIN.DE, jhlim@PCPOOL.MI.FU-BERLIN.DE, mbauer@PCPOOL.MI.FU-BERLIN.DE, kemena@PCPOOL.MI.FU-BERLIN.DE, dklein@PCPOOL.MI.FU-BERLIN.DE, ehrlich@PCPOOL.MI.FU-BERLIN.DE, krudolph@PCPOOL.MI.FU-BERLIN.DE, groepl@PCPOOL.MI.FU-BERLIN.DE
+seqan_authors = doering@PCPOOL.MI.FU-BERLIN.DE, weese@PCPOOL.MI.FU-BERLIN.DE, rausch@PCPOOL.MI.FU-BERLIN.DE, reinert@PCPOOL.MI.FU-BERLIN.DE
+seqan_swp08 = erehman@PCPOOL.MI.FU-BERLIN.DE, sakalli@PCPOOL.MI.FU-BERLIN.DE, popko@PCPOOL.MI.FU-BERLIN.DE, mschroed@PCPOOL.MI.FU-BERLIN.DE, maerker@PCPOOL.MI.FU-BERLIN.DE, gohlke@PCPOOL.MI.FU-BERLIN.DE, balcazar@PCPOOL.MI.FU-BERLIN.DE, mendt@PCPOOL.MI.FU-BERLIN.DE, singer@PCPOOL.MI.FU-BERLIN.DE, lienhard@PCPOOL.MI.FU-BERLIN.DE, galicka@PCPOOL.MI.FU-BERLIN.DE, eweber@PCPOOL.MI.FU-BERLIN.DE
+seqan_guests = maerker@PCPOOL.MI.FU-BERLIN.DE
+
+[/]
+@seqan_authors = rw
+* = r
+
+[/trunk/seqan]
+@seqan = rw
+* = r
+
+[/trunk/seqan/projects/apps]
+@seqan = rw
+seqan_guests = r
+* =
+
+[/trunk/seqan/book]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/core]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/misc]
+@seqan = r
+@seqan_guests = r
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/papers]
+@seqan = r
+@seqan_authors = rw
+* =
+
+[/releases/seqan1.0]
+* = 
+
+[/releases/seqan_1.1]
+* = 
+
+[/trunk/teaching]
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/swp08]
+@seqan_swp08 = r
+
+[/trunk/teaching/swp08/trunk]
+@seqan_swp08 = r

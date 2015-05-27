@@ -1,0 +1,33 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp and ./sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp ./sandbox/leon/apps/miniStellar/miniStellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 12:21:08.000000000 +0200
++++ ./sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 12:34:11.000000000 +0200
+@@ -134,6 +134,9 @@
+ 	    std::cerr << "seed after extension: [" << getBeginDim0(seed) << "," << getEndDim0(seed) << "] [" 
+ 		<< getBeginDim1(seed) << "," << getEndDim1(seed) << "]\n";
+ 
++	    // Check if the match is long enough after it was extended
++	    if (getEndDim1(seed)-getBeginDim1(seed) < minimalLength)
++	       continue;	
+ 
+ 	    // find best global alignment of extended seed
+ 	    // TODO: Compute the best global alignment of extended seed and its score.
+@@ -141,13 +144,17 @@
+ 
+ 	    TInfix extendedInfix1 = infix(seqs1[0], getBeginDim0(seed), getEndDim0(seed));
+ 	    TInfix extendedInfix2 = infix(seqs2[0], getBeginDim1(seed), getEndDim1(seed));
+-
++	
+ 	    Align<String<Dna> > globAlign;
+ 	    appendValue(rows(globAlign), extendedInfix1);
+ 	    appendValue(rows(globAlign), extendedInfix2);
+ 
+ 	    globalAlignment(globAlign, score);
+ 
++	    std::cerr << globAlign << std::endl;
++
++
++
+ 	    // TODO: Output the alignment as a match to the output file.
+ 
+ 	}

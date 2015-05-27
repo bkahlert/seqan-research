@@ -1,0 +1,55 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:34:17.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:47:14.000000000 +0200
+@@ -51,6 +51,21 @@
+ 	std::cout << std::endl;
+ }
+ 
++template <typename T&>
++void countOneMers (String<T> const& str) {
++	typedef typename Size<T>::Type TSize;
++	TSize alphSize = ValueSize<T>::VALUE;
++	String<int> counter;
++	resize(counter,alphSize,0);
++	typedef typename Iterator<String<T> >::Type TIterator;
++	for (TIterator it=begin(str); it!=end(str); ++it) {
++		counter[(*it)]++;
++	}
++	for (int i=0; i<alphSize; i++)
++		if (counter[i]>0) std::cout << T(i) << "," << counter[i] << "  ";
++	std::cout << std::endl;
++	
++}
+ 
+ // Program entry point
+ int main(int argc, char const ** argv)
+@@ -151,5 +166,8 @@
+ 		}
+ 		std::cout << std::endl;
+ 		
++// 		task Sequences 1
++		char* input_list[3]={"hello world", "banana", "mississippi"};
++		for (int i=0; i<3; i++) countOneMers(input_list[i]);
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:34:17.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:47:14.000000000 +0200
+@@ -111,7 +111,7 @@
+ 			memsize=memsize*10;
+ 			std::cout << memsize << "alloc   " << memsize << "clear   ";
+ 		}
+-		int runs=100000;
++		int runs=1000000;
+ 		memsize=1;
+ 		std::cout << "\nSimple Alloc    ";
+ 		char* myString_arr;
+@@ -151,5 +151,8 @@
+ 		}
+ 		std::cout << std::endl;
+ 		
++// 		task Sequences 1
++		char* input_list[3]={"hello world", "banana", "mississippi"};
++		for (int i=0; i<3; i++) countOneMers(input_list[i]);
+     return 0;
+ }

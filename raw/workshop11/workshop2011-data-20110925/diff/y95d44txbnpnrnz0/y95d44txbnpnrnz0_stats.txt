@@ -1,0 +1,37 @@
+{
+    "machine": {
+        "machine": "i386", 
+        "processor": "i386", 
+        "architecture": [
+            [
+                "64bit", 
+                ""
+            ], 
+            "64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "/Developer/usr/bin/make", 
+        "CMAKE_CXX_COMPILER": "/Developer/usr/bin/c++", 
+        "CMAKE_MODULE_LINKER_FLAGS": "", 
+        "CMAKE_GENERATOR": "Unix Makefiles", 
+        "CMAKE_C_COMPILER": "Unix Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "/Developer/usr/bin/ld"
+    }, 
+    "os": {
+        "node": "camila-mazzonis-computer-3.local", 
+        "sys.platform": "darwin", 
+        "system": "Darwin", 
+        "platform": "Darwin-10.8.0-i386-64bit", 
+        "version": "Darwin Kernel Version 10.8.0: Tue Jun  7 16:33:36 PDT 2011; root:xnu-1504.15.3~1/RELEASE_I386", 
+        "release": "10.8.0"
+    }, 
+    "id": "y95d44txbnpnrnz0", 
+    "ip": [
+        "141.14.248.178", 
+        "fe80::fa1e:dfff:fee1:69d7%en1"
+    ]
+}

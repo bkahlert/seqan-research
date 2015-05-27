@@ -1,0 +1,94 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-14 14:52:42.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-14 15:03:00.000000000 +0200
+@@ -36,6 +36,7 @@
+ #include <seqan/sequence.h>
+ #include <seqan/file.h>
+ #include <seqan/align.h>
++#include <seqan/graph_align.h>
+ #include <iostream>
+ 
+ #include <seqan/misc/misc_cmdparser.h>
+@@ -141,6 +142,16 @@
+ 		}
+ }
+ 
++template<typename T>
++void globalAlignG (StringSet<String<T> > strings) {
++	typedef String<T> TSequence;
++	typedef StringSet<TSequence, Dependent<> > TDepStringSet;
++	typedef Graph<Alignment<TDepStringSet> > TAlignGraph;
++	TAlignGraph alignG(strings);
++	int score = globalAlignment(alignG, Score<int>(1,-1,-1,-1), AlignConfig<true,true,true,true>, Hirschberg());
++	std::cout << "Score = " << score << std::endl << alignG;
++}
++
+ // Program entry point
+ int main(int argc, char const ** argv)
+ {
+@@ -321,5 +332,13 @@
+ 		TAlignGraph alignG(sequences);
+ 		score=globalAlignment(alignG, Score<int>(1,-1,-1,-1), NeedlemanWunsch());
+ 		std::cout << "Score = " << score << std::endl << alignG;
++		
++// 		task Alignments 2
++		CharString str_a_1="blablablu", str_a_2="abab";
++		StringSet<CharString> strs_a;
++		appendValue(strs_a,str_a_1);
++		appendValue(strs_a,str_a_2);
++		globalAlignG (strs_a);
++		
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-14 14:52:42.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-14 15:03:00.000000000 +0200
+@@ -36,6 +36,7 @@
+ #include <seqan/sequence.h>
+ #include <seqan/file.h>
+ #include <seqan/align.h>
++#include <seqan/graph_align.h>
+ #include <iostream>
+ 
+ #include <seqan/misc/misc_cmdparser.h>
+@@ -141,6 +142,16 @@
+ 		}
+ }
+ 
++template<typename T>
++void globalAlignG (StringSet<String<T> > strings) {
++	typedef String<T> TSequence;
++	typedef StringSet<TSequence, Dependent<> > TDepStringSet;
++	typedef Graph<Alignment<TDepStringSet> > TAlignGraph;
++	TAlignGraph alignG(strings);
++	int score = globalAlignment(alignG, Score<int>(1,-1,-1,-1), Hirschberg());
++	std::cout << "Score = " << score << std::endl << alignG;
++}
++
+ // Program entry point
+ int main(int argc, char const ** argv)
+ {
+@@ -311,5 +322,23 @@
+ // 		task Alignments 1
+ 		DnaString dna_a_1="acgtacgtact", dna_a_2="actactacgt";
+ 		globalAlign(dna_a_1, dna_a_2);
++		
++// 		tut Alignments 2
++		StringSet<TSequence> sequences;
++		appendValue(sequences, seq1);
++		appendValue(sequences, seq2);
++		typedef StringSet<TSequence, Dependent<> > TDepStringSet;
++		typedef Graph<Alignment<TDepStringSet> > TAlignGraph;
++		TAlignGraph alignG(sequences);
++		score=globalAlignment(alignG, Score<int>(1,-1,-1,-1), NeedlemanWunsch());
++		std::cout << "Score = " << score << std::endl << alignG;
++		
++// 		task Alignments 2
++		CharString str_a_1="blablablu", str_a_2="abab";
++		StringSet<CharString> strs_a;
++		appendValue(strs_a,str_a_1);
++		appendValue(strs_a,str_a_2);
++		globalAlignG (strs_a);
++		
+     return 0;
+ }

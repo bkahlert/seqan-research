@@ -1,0 +1,36 @@
+{
+    "machine": {
+        "machine": "x86", 
+        "processor": "x86 Family 6 Model 37 Stepping 2, GenuineIntel", 
+        "architecture": [
+            [
+                "32bit", 
+                "WindowsPE"
+            ], 
+            "no64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_CXX_COMPILER": null, 
+        "CMAKE_GENERATOR": null, 
+        "CMAKE_C_COMPILER": null, 
+        "CMAKE_C_FLAGS": null, 
+        "CMAKE_BUILD_TYPE": null, 
+        "CMAKE_CXX_FLAGS": null, 
+        "CMAKE_MAKE_PROGRAM": null, 
+        "CMAKE_MODULE_LINKER_FLAGS": null, 
+        "CMAKE_LINKER": null
+    }, 
+    "os": {
+        "node": "nu-nb-06331", 
+        "sys.platform": "win32", 
+        "system": "Windows", 
+        "platform": "Windows-XP-5.1.2600-SP3", 
+        "version": "5.1.2600", 
+        "release": "XP"
+    }, 
+    "id": "fwmf9kkqo37idut8", 
+    "ip": [
+        "141.14.249.142"
+    ]
+}

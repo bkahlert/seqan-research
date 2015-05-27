@@ -1,0 +1,36 @@
+{
+    "machine": {
+        "machine": "x86_64", 
+        "processor": "i386", 
+        "architecture": [
+            [
+                "64bit", 
+                ""
+            ], 
+            "64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "/Applications/CMake 2.8-5.app/Contents/bin/cmakexbuild", 
+        "CMAKE_CXX_COMPILER": "/usr/bin/g++", 
+        "CMAKE_MODULE_LINKER_FLAGS": " ", 
+        "CMAKE_GENERATOR": "Xcode", 
+        "CMAKE_C_COMPILER": "Xcode", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "/usr/bin/ld"
+    }, 
+    "os": {
+        "node": "kleindosi.local", 
+        "sys.platform": "darwin", 
+        "system": "Darwin", 
+        "platform": "Darwin-11.1.0-x86_64-i386-64bit", 
+        "version": "Darwin Kernel Version 11.1.0: Tue Jul 26 16:07:11 PDT 2011; root:xnu-1699.22.81~1/RELEASE_X86_64", 
+        "release": "11.1.0"
+    }, 
+    "id": "oam29hzppl89z0vd", 
+    "ip": [
+        "141.14.249.198"
+    ]
+}

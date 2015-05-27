@@ -1,0 +1,278 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/CMakeLists.txt ./sandbox/my_sandbox/apps/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/CMakeLists.txt	2011-04-07 17:07:50.000000000 +0200
+@@ -0,0 +1,6 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_my_sandbox_apps)
++
++seqan_setup_apps(sandbox_my_sandbox_apps)  # Add meta target and make executables depend on it.
++
++seqan_add_all_subdirectories()  # include_directory(*)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/CMakeLists.txt ./sandbox/my_sandbox/apps/my_app/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/my_app/CMakeLists.txt	2011-04-07 17:07:50.000000000 +0200
+@@ -0,0 +1,5 @@
++cmake_minimum_required (VERSION 2.6)
++project (sandbox_my_sandbox_apps_my_app)
++
++# Update the list of file names below if you add source files to your application.
++seqan_add_executable(my_app my_app.cpp my_app.h)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/INFO ./sandbox/my_sandbox/apps/my_app/INFO
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/INFO	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/my_app/INFO	2011-04-07 17:07:50.000000000 +0200
+@@ -0,0 +1,21 @@
++Name: my_app
++Author: Your Name <your.email@example.net>
++Maintainer: Your Name <your.email@example.net>
++License: GPL v3
++Copyright: 2008-2011, FU Berlin
++Status: under development
++Description: One-line description for app my_app.
++ This is the long text description for the app.  You should wrap text to 78
++ characters and you have to wrap it to 80 characters.  The lines must have one
++ leading space.  Successive lines in this format will be word-wrapped when
++ displayed.  Leading space is stripped off.
++ .
++ Use empty lines with one dot to insert an empty line / break paragraphs.
++ .
++  Start lines with two spaces to make them display verbatim.  Lines that
++  cannot be displayed horizontally will be hard-wrapped (not at word bor-
++  ders), so maybe do your own hyphenation.
++ .
++ Do not use tab characters, their effect is not predictable.
++ .
++ The INFO file format is oriented after the Debian controfields format.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-04-07 17:07:50.000000000 +0200
+@@ -0,0 +1,63 @@
++// ==========================================================================
++//                                   my_app
++// ==========================================================================
++// Copyright (c) 2006-2011, Knut Reinert, FU Berlin
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are met:
++//
++//     * Redistributions of source code must retain the above copyright
++//       notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above copyright
++//       notice, this list of conditions and the following disclaimer in the
++//       documentation and/or other materials provided with the distribution.
++//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
++//       its contributors may be used to endorse or promote products derived
++//       from this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
++// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
++// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
++// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++// DAMAGE.
++//
++// ==========================================================================
++// Author: Your Name <your.email@example.net>
++// ==========================================================================
++
++#include <seqan/basic.h>
++#include <seqan/sequence.h>
++
++#include <seqan/misc/misc_cmdparser.h>
++
++#include "my_app.h"
++
++using namespace seqan;
++
++// Program entry point
++int main(int argc, char const ** argv)
++{
++    // Setup command line parser.
++    CommandLineParser parser;
++    Options options;
++    setupCommandLineParser(parser, options);
++    
++    // Then, parser the command line and handle the cases where help display
++    // is requested or errornoeous parameters were given.
++    int ret = parseCommandLineAndCheck(options, parser, argc, argv);
++    if (ret != 0)
++        return ret;
++    if (options.showHelp || options.showVersion)
++        return 0;
++    
++    // Finally, launch the program.
++    ret = mainWithOptions(options);
++    return ret;
++}
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h ./sandbox/my_sandbox/apps/my_app/my_app.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h	2011-04-07 17:07:50.000000000 +0200
+@@ -0,0 +1,128 @@
++// ==========================================================================
++//                                   my_app
++// ==========================================================================
++// Copyright (c) 2006-2010, Knut Reinert, FU Berlin
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are met:
++//
++//     * Redistributions of source code must retain the above copyright
++//       notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above copyright
++//       notice, this list of conditions and the following disclaimer in the
++//       documentation and/or other materials provided with the distribution.
++//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
++//       its contributors may be used to endorse or promote products derived
++//       from this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
++// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
++// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
++// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++// DAMAGE.
++//
++// ==========================================================================
++// Author: Your Name <your.email@example.net>
++// ==========================================================================
++
++#ifndef SANDBOX_MY_SANDBOX_APPS_MY_APP_MY_APP_H_
++#define SANDBOX_MY_SANDBOX_APPS_MY_APP_MY_APP_H_
++
++#include <seqan/basic.h>
++#include <seqan/sequence.h>
++
++#include <seqan/misc/misc_cmdparser.h>
++
++using namespace seqan;
++
++// ============================================================================
++// Forwards
++// ============================================================================
++
++// ============================================================================
++// Tags, Classes, Enums
++// ============================================================================
++
++struct Options
++{
++    bool showHelp;
++    bool showVersion;
++    int i;
++    String<CharString> texts;
++    
++    Options()
++    {
++        // Set defaults.
++        showHelp = true;
++        i = 0;
++    }
++};
++
++// ============================================================================
++// Metafunctions
++// ============================================================================
++
++// ============================================================================
++// Functions
++// ============================================================================
++
++void
++setupCommandLineParser(CommandLineParser & parser, Options const & options)
++{
++    addVersionLine(parser, "0.1");
++    
++    addTitleLine(parser, "**********************");
++    addTitleLine(parser, "* my_app *");
++    addTitleLine(parser, "**********************");
++    addTitleLine(parser, "");
++    addTitleLine(parser, "(c) 2011 by Your Name <your.email@example.net>");
++
++    addUsageLine(parser, "app_template [OPTIONS] TEXT+");
++    
++	addSection(parser, "Main Options");
++	addOption(parser, CommandLineOption("i",  "integer",  "set an integer option", OptionType::Integer | OptionType::Label, options.i));
++    
++    requiredArguments(parser, 1);
++}
++
++int parseCommandLineAndCheck(Options & options,
++                             CommandLineParser & parser,
++                             int argc,
++                             char const ** argv)
++{
++    bool stop = !parse(parser, argc, argv);
++    if (stop)
++        return 1;
++    if (isSetLong(parser, "help")) {
++        options.showHelp = true;
++        return 0;
++    }
++    if (isSetLong(parser, "version")) {
++        options.showVersion = true;
++        return 0;
++    }
++    
++    options.texts = getArgumentValues(parser);
++
++	return 0;
++}
++
++int mainWithOptions(Options & options)
++{
++    typedef Iterator<String<CharString> >::Type TIterator;
++    std::cout << "Non-option Arguments:" << std::endl;
++    for (TIterator it = begin(options.texts); it != end(options.texts); ++it) {
++        std::cout << "  " << *it << std::endl;
++    }
++    
++    return 0;
++}
++
++#endif  // #ifndef SANDBOX_MY_SANDBOX_APPS_MY_APP_MY_APP_H_
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/CMakeLists.txt ./sandbox/my_sandbox/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/CMakeLists.txt	2011-05-09 09:18:08.000000000 +0200
+@@ -0,0 +1,11 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_my_sandbox)
++
++# We have to register our own include directory here, though.
++seqan_setup_includes(include SeqAnSandboxMySandbox)
++# SeqAnCore is added include in ../core/CMakeLists.txt.  We only have to
++# register that we want it here, too.  Ibidem for SeqAnExtras.
++seqan_make_seqan_available(SeqAnExtras)
++seqan_make_seqan_available(SeqAnCore)
++
++seqan_add_all_subdirectories()  # include_directory(*)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/CMakeLists.txt ./sandbox/my_sandbox/demos/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/demos/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/demos/CMakeLists.txt	2011-04-07 17:07:50.000000000 +0200
+@@ -0,0 +1,6 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_my_sandbox_demos)
++
++seqan_setup_demos(sandbox_my_sandbox_demos)  # Add meta target and make executables depend on it.
++
++seqan_add_all_executables(sandbox_my_sandbox_demos)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata/mqqun54scaf766qp_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/work/workspace-cpp/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/tests/CMakeLists.txt ./sandbox/my_sandbox/tests/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/tests/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/tests/CMakeLists.txt	2011-04-07 17:07:50.000000000 +0200
+@@ -0,0 +1,6 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_my_sandbox_tests)
++
++seqan_setup_tests(sandbox_my_sandbox_tests)  # Setup flags etc, add meta target.
++
++seqan_add_all_subdirectories()  # include_directory(*)

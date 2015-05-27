@@ -1,0 +1,22 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/0meio6dzt3eo1wj7_stats.txt -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata/0meio6dzt3eo1wj7_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/peter/Documents/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:34:02.717773400 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 15:01:06.985351500 +0200
+@@ -58,7 +58,7 @@
+ 	PeptideIterator itEnd = end(str);
+ 
+ 	
+-	absFreqOfLettersInSeq(str,it,itEnd);
++	//absFreqOfLettersInSeq(str,it);
+ 
+ 	while (it != itEnd)
+ 	{
+@@ -71,7 +71,8 @@
+ 	}
+ 	::std::cout << ::std::endl;
+ 
+-	it = begin(str);
++	goBegin(it);
++	//it = begin(str);
+ 
+ 	while (it != itEnd)
+ 	{

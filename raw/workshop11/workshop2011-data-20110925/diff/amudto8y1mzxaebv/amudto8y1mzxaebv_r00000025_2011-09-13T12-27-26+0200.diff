@@ -1,0 +1,68 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:21:47.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:27:24.308734917 +0200
+@@ -22,12 +22,12 @@
+ template<typename TSeed, typename TSeq>
+ void
+ writeSeed(TSeed & seed, TSeq const & seq0, TSeq const & seq1) {
+-    std::cout << "Seed from position " << getBeginDim0(seed);
++    std::cout << "Seed in seq 1 from position " << getBeginDim0(seed);
+     std::cout << " to " << getEndDim0(seed) << ": ";
+-    std::cout << infix(seq0, getBeginDim0(seed), getEndDim0(seed) +1) << std::endl;
+-    std::cout << "Seed from position " << getBeginDim1(seed);
++    std::cout << infix(seq0, getBeginDim0(seed), getEndDim0(seed)) << std::endl;
++    std::cout << "Seed in seq 2 from position " << getBeginDim1(seed);
+     std::cout << " to " << getEndDim1(seed) << ": ";
+-    std::cout << infix(seq1, getBeginDim1(seed), getEndDim1(seed)+1) << std::endl;
++    std::cout << infix(seq1, getBeginDim1(seed), getEndDim1(seed)) << std::endl;
+ }
+ 
+ int main(int argc, char const ** argv)
+@@ -108,12 +108,6 @@
+ 	    writeSeed( wind, seq1[0], seq2[0] );
+ 	}
+ 
+-	// create a seed for the local alignment, and conduct gapped X-drop extension
+-	// TODO: Define a seed on the original sequences but for the subsequences of the local
+-	//       alignment. Extend this seed in both directions using gapped X-drop extension.
+-	//       Check that the extended seed has a length of at least minimalLength.
+-	// HINT: Have a look at the Seed-and-Extend tutorial.
+-
+ 	// find best global alignment of extended seed
+ 	// TODO: Compute the best global alignment of extended seed and its score.
+ 	// HINT: Create an align object on infixes of the sequences.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:19:46.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:27:08.138734921 +0200
+@@ -22,12 +22,12 @@
+ template<typename TSeed, typename TSeq>
+ void
+ writeSeed(TSeed & seed, TSeq const & seq0, TSeq const & seq1) {
+-    std::cout << "Seed from position " << leftDim0(seed);
+-    std::cout << " to " << rightDim0(seed) << ": ";
+-    std::cout << infix(seq0, leftDim0(seed), rightDim0(seed) +1) << std::endl;
+-    std::cout << "Seed from position " << leftDim1(seed);
+-    std::cout << " to " << rightDim1(seed) << ": ";
+-    std::cout << infix(seq1, leftDim1(seed), rightDim1(seed)+1) << std::endl;
++    std::cout << "Seed in seq 1 from position " << getBeginDim0(seed);
++    std::cout << " to " << getEndDim0(seed) << ": ";
++    std::cout << infix(seq0, getBeginDim0(seed), getEndDim0(seed)) << std::endl;
++    std::cout << "Seed in seq 2 from position " << getBeginDim1(seed);
++    std::cout << " to " << getEndDim1(seed) << ": ";
++    std::cout << infix(seq1, getBeginDim1(seed), getEndDim1(seed)) << std::endl;
+ }
+ 
+ int main(int argc, char const ** argv)
+@@ -108,12 +108,6 @@
+ 	    writeSeed( wind, seq1[0], seq2[0] );
+ 	}
+ 
+-	// create a seed for the local alignment, and conduct gapped X-drop extension
+-	// TODO: Define a seed on the original sequences but for the subsequences of the local
+-	//       alignment. Extend this seed in both directions using gapped X-drop extension.
+-	//       Check that the extended seed has a length of at least minimalLength.
+-	// HINT: Have a look at the Seed-and-Extend tutorial.
+-
+ 	// find best global alignment of extended seed
+ 	// TODO: Compute the best global alignment of extended seed and its score.
+ 	// HINT: Create an align object on infixes of the sequences.

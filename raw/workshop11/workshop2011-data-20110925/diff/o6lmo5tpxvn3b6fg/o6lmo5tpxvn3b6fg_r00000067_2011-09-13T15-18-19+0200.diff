@@ -1,0 +1,31 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata/o6lmo5tpxvn3b6fg_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/lindnerm/Desktop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:11:21.546875000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 15:18:09.921875000 +0200
+@@ -1,5 +1,7 @@
+ #include <iostream>
+ #include <vector>
++
++#include <seqan/align.h>
+ #include <seqan/sequence.h>  // CharString, ...
+ #include <seqan/file.h>      // to stream a CharString into cout
+ 
+@@ -61,6 +63,19 @@
+ 
+ }
+ 
++
++void align(DnaString s1, s2)
++{
++	typedef seqan::Align<DnaString, seqan::AlignmentGaps> TAlign;
++	TAlign align;
++	seqan::resize(seqan::rows(align),2);
++	seqan::assignSource(seqan::row(align,0),s1);
++	seqan::assignSource(seqan::row(align,1),s2);
++	int score = seqan::globalAlignment(align,seqan::Score<int>(1,-1,-1,-1), seqan::Hirschberg());
++
++	
++}
++
+ int main(int, char **) {
+ 	//DnaString testseq = "CAGTGTGAGCGATTACATACCATCGACTAGT";
+  //   std::cout << testseq << std::endl;

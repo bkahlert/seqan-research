@@ -1,0 +1,36 @@
+{
+    "machine": {
+        "machine": "x86", 
+        "processor": "x86 Family 6 Model 14 Stepping 8, GenuineIntel", 
+        "architecture": [
+            [
+                "32bit", 
+                "WindowsPE"
+            ], 
+            "no64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "C:/Programs/Programmieren/MinGW/bin/mingw32-make.exe", 
+        "CMAKE_CXX_COMPILER": "C:/Programs/Programmieren/MinGW/bin/g++.exe", 
+        "CMAKE_MODULE_LINKER_FLAGS": "", 
+        "CMAKE_GENERATOR": "MinGW Makefiles", 
+        "CMAKE_C_COMPILER": "MinGW Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "C:/Programs/Programmieren/MinGW/bin/ld.exe"
+    }, 
+    "os": {
+        "node": "Jo", 
+        "sys.platform": "win32", 
+        "system": "Windows", 
+        "platform": "Windows-XP-5.1.2600-SP3", 
+        "version": "5.1.2600", 
+        "release": "XP"
+    }, 
+    "id": "blcdihoxu16s53yo", 
+    "ip": [
+        "141.14.249.180"
+    ]
+}

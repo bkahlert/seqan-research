@@ -1,0 +1,91 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 10:11:21.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 11:26:42.000000000 +0200
+@@ -42,6 +42,16 @@
+ 
+ using namespace seqan;
+ 
++template <typename TAlphabet>
++void showAllLettersOfMyAlphabet (TAlphabet const &) {
++	typedef typename Size<TAlphabet>::Type TSize;
++	TSzize alphSize = ValueSize<TAlphabet>::VALUE;
++	for (TSize i=0; i<alphSize; ++i)
++		std::cout << i << "," << TAlphabet(i) << "  ";
++	std::cout << std::endl;
++}
++
++
+ // Program entry point
+ int main(int argc, char const ** argv)
+ {
+@@ -59,6 +69,12 @@
+         return 0;
+     
+     // Finally, launch the program.
+-    ret = mainWithOptions(options);
+-    return ret;
++//     ret = mainWithOptions(options);
++
++		showAllLettersOfMyAlphabet(AminoAcid());
++		showAllLettersOfMyAlphabet(Dna());
++		showAllLettersOfMyAlphabet(Dna5());
++		showAllLettersOfMyAlphabet(Iupac());
++
++    return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 10:11:21.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 11:26:42.000000000 +0200
+@@ -34,6 +34,7 @@
+ 
+ #include <seqan/basic.h>
+ #include <seqan/sequence.h>
++#include <seqan/file.h>
+ 
+ #include <seqan/misc/misc_cmdparser.h>
+ 
+@@ -58,6 +59,9 @@
+         return 0;
+     
+     // Finally, launch the program.
+-    ret = mainWithOptions(options);
++//     ret = mainWithOptions(options);
++
++		
++
+     return ret;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h ./sandbox/my_sandbox/apps/my_app/my_app.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:19:35.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:22:36.000000000 +0200
+@@ -137,18 +137,6 @@
+ 		write(myFile1, block1, sizeof(block1));
+ 		close(myFile1);
+ 		
+-		File<Sync<> > myFile2;
+-		if (!open(myFile2, str1, OPEN_RDONLY)) {
+-			std::cout << "Could not open for reading" << std::endl;
+-			return 1;
+-		}
+-		String<char,CStyle> block2;
+-		read(myFile2, block2, sizeof(block2));
+-		close(myFile2);
+-
+-		std::cout << block1 << std::endl;
+-		std::cout << block2 << std::endl;
+-		
+     return 0;
+ }
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~ ./sandbox/my_sandbox/apps/my_app/my_app.h~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:19:35.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:22:36.000000000 +0200
+@@ -142,7 +142,7 @@
+ 			std::cout << "Could not open for reading" << std::endl;
+ 			return 1;
+ 		}
+-		CharString block2;
++		String<char,CStyle> block2;
+ 		read(myFile2, block2, sizeof(block2));
+ 		close(myFile2);
+ 

@@ -1,0 +1,263 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 09:49:44.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 10:04:24.578737169 +0200
+@@ -1,63 +1,100 @@
+-// ==========================================================================
+-//                                 exastellar
+-// ==========================================================================
+-// Copyright (c) 2006-2011, Knut Reinert, FU Berlin
+-// All rights reserved.
+-//
+-// Redistribution and use in source and binary forms, with or without
+-// modification, are permitted provided that the following conditions are met:
+-//
+-//     * Redistributions of source code must retain the above copyright
+-//       notice, this list of conditions and the following disclaimer.
+-//     * Redistributions in binary form must reproduce the above copyright
+-//       notice, this list of conditions and the following disclaimer in the
+-//       documentation and/or other materials provided with the distribution.
+-//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
+-//       its contributors may be used to endorse or promote products derived
+-//       from this software without specific prior written permission.
+-//
+-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+-// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+-// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+-// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
+-// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+-// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+-// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+-// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+-// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+-// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+-// DAMAGE.
+-//
+-// ==========================================================================
+-// Author: Your Name <your.email@example.net>
+-// ==========================================================================
++#include <seqan/stream.h>
++#include <seqan/index.h>
++#include <seqan/align.h>
++#include <seqan/seeds2.h>
+ 
+-#include <seqan/basic.h>
+-#include <seqan/sequence.h>
++using namespace seqan;
+ 
+-#include <seqan/misc/misc_cmdparser.h>
++// set parameters
+ 
+-#include "exastellar.h"
++unsigned const minimalLength = 12;
++float const errorRate = 0.05;
++//unsigned const qGramLength = 8;
++CharString const filename = "exastellar.out";
++
++typedef int TScoreValue;
++TScoreValue const matchScore = 1;
++TScoreValue const mismatchScore = -2;
++TScoreValue const gapScore = -2;
++TScoreValue const minScore = 9;
++TScoreValue const xDrop = 3;
+ 
+-using namespace seqan;
+ 
+-// Program entry point
+ int main(int argc, char const ** argv)
+ {
+-    // Setup command line parser.
+-    CommandLineParser parser;
+-    Options options;
+-    setupCommandLineParser(parser, options);
+-    
+-    // Then, parse the command line and handle the cases where help display
+-    // is requested or erroneous parameters were given.
+-    int ret = parseCommandLineAndCheck(options, parser, argc, argv);
+-    if (ret != 0)
+-        return ret;
+-    if (options.showHelp || options.showVersion)
+-        return 0;
+-    
+-    // Finally, launch the program.
+-    ret = mainWithOptions(options);
+-    return ret;
++	if (argc != 3)
++	{
++		std::cerr << "ERROR: Invalid argument count!" << std::endl;
++		std::cerr << "USAGE: ministallar IN1.fa IN2.fa" << std::endl;
++		return 1;
++	}
++
++	// TODO: Define a scoring scheme 'score' with linear gap costs using the above defined
++	//       score values for scoring matches, mismatches, and gaps.
++	// HINT: You can find a section on Schoring Schemes in the Alignments tutorial.
++
++	// read sequences from fasta files
++	typedef Dna5String TSequence;
++	StringSet<CharString> ids1, ids2;
++	StringSet<TSequence> seqs1, seqs2;
++
++	std::ifstream streamIn1(argv[1], std::ios::in | std::ios::binary);
++	RecordReader<std::ifstream, SinglePass<> > reader1(streamIn1);
++	if (read2(ids1, seqs1, reader1, Fasta()) != 0)
++	{
++		std::cerr << "Could not read file " << argv[1] << std::endl;
++		return 1;
++	}
++
++	// TODO: Do the same for the second file.
++
++	// prepare output file
++	std::ofstream outFile;
++	outFile.open(toCString(filename));
++
++	// define finder and pattern
++	// TODO: Define types for finder and pattern using SeqAn's find interface from the index
++	//       module. Both should be specialized for the approproiate swift filter algorithm.
++	//       The pattern will need the definition of a q-gram-index. Use q-grams of length 8
++	//       for now, and open addressing.
++	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
++	//       tutorial page, you will find a link to a Swift HowTo page.
++
++	// TODO: Define variables of your pattern and finder types, and initialize them with the
++	//       first sequences in the sequence sets seqs1 and seqs2.
++
++	// TODO: Repeat the following steps for all hits of the finder.
++
++	// call the function find to obtain a swift hit
++	// TODO: uncomment the following line
++
++	//find(finder, pattern, errorRate, minimalLength);
++
++	// extract infixes from hit
++	// TODO: uncomment the following three lines
++
++	//typedef Infix<TSequence>::Type TInfix;
++	//TInfix infix1 = infix(finder, seqs1[0]);
++	//TInfix infix2 = infix(pattern, seqs2[0]);
++
++	// find best local alignment of infixes, and check for minimal score
++	// TODO: Define an align object and initialize it with the infixes. Find the best local
++	//       alignment of the infixes. Use the above defined scoring scheme. Make sure that
++	//       it reaches the minimal score minScore.
++
++	// create a seed for the local alignment, and conduct gapped X-drop extension
++	// TODO: Define a seed on the original sequences but for the subsequences of the local
++	//       alignment. Extend this seed in both directions using gapped X-drop extension.
++	//       Check that the extended seed has a length of at least minimalLength.
++	// HINT: Have a look at the Seed-and-Extend tutorial.
++
++	// find best global alignment of extended seed
++	// TODO: Compute the best global alignment of extended seed and its score.
++	// HINT: Create an align object on infixes of the sequences.
++
++	// TODO: Output the alignment as a match to the output file.
++
++	outFile.close();
++
++	return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 10:04:17.608737171 +0200
+@@ -0,0 +1,100 @@
++#include <seqan/stream.h>
++#include <seqan/index.h>
++#include <seqan/align.h>
++#include <seqan/seeds2.h>
++
++using namespace seqan;
++
++// set parameters
++
++unsigned const minimalLength = 12;
++float const errorRate = 0.05;
++//unsigned const qGramLength = 8;
++CharString const filename = "ministellar.out";
++
++typedef int TScoreValue;
++TScoreValue const matchScore = 1;
++TScoreValue const mismatchScore = -2;
++TScoreValue const gapScore = -2;
++TScoreValue const minScore = 9;
++TScoreValue const xDrop = 3;
++
++
++int main(int argc, char const ** argv)
++{
++	if (argc != 3)
++	{
++		std::cerr << "ERROR: Invalid argument count!" << std::endl;
++		std::cerr << "USAGE: ministallar IN1.fa IN2.fa" << std::endl;
++		return 1;
++	}
++
++	// TODO: Define a scoring scheme 'score' with linear gap costs using the above defined
++	//       score values for scoring matches, mismatches, and gaps.
++	// HINT: You can find a section on Schoring Schemes in the Alignments tutorial.
++
++	// read sequences from fasta files
++	typedef Dna5String TSequence;
++	StringSet<CharString> ids1, ids2;
++	StringSet<TSequence> seqs1, seqs2;
++
++	std::ifstream streamIn1(argv[1], std::ios::in | std::ios::binary);
++	RecordReader<std::ifstream, SinglePass<> > reader1(streamIn1);
++	if (read2(ids1, seqs1, reader1, Fasta()) != 0)
++	{
++		std::cerr << "Could not read file " << argv[1] << std::endl;
++		return 1;
++	}
++
++	// TODO: Do the same for the second file.
++
++	// prepare output file
++	std::ofstream outFile;
++	outFile.open(toCString(filename));
++
++	// define finder and pattern
++	// TODO: Define types for finder and pattern using SeqAn's find interface from the index
++	//       module. Both should be specialized for the approproiate swift filter algorithm.
++	//       The pattern will need the definition of a q-gram-index. Use q-grams of length 8
++	//       for now, and open addressing.
++	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
++	//       tutorial page, you will find a link to a Swift HowTo page.
++
++	// TODO: Define variables of your pattern and finder types, and initialize them with the
++	//       first sequences in the sequence sets seqs1 and seqs2.
++
++	// TODO: Repeat the following steps for all hits of the finder.
++
++	// call the function find to obtain a swift hit
++	// TODO: uncomment the following line
++
++	//find(finder, pattern, errorRate, minimalLength);
++
++	// extract infixes from hit
++	// TODO: uncomment the following three lines
++
++	//typedef Infix<TSequence>::Type TInfix;
++	//TInfix infix1 = infix(finder, seqs1[0]);
++	//TInfix infix2 = infix(pattern, seqs2[0]);
++
++	// find best local alignment of infixes, and check for minimal score
++	// TODO: Define an align object and initialize it with the infixes. Find the best local
++	//       alignment of the infixes. Use the above defined scoring scheme. Make sure that
++	//       it reaches the minimal score minScore.
++
++	// create a seed for the local alignment, and conduct gapped X-drop extension
++	// TODO: Define a seed on the original sequences but for the subsequences of the local
++	//       alignment. Extend this seed in both directions using gapped X-drop extension.
++	//       Check that the extended seed has a length of at least minimalLength.
++	// HINT: Have a look at the Seed-and-Extend tutorial.
++
++	// find best global alignment of extended seed
++	// TODO: Compute the best global alignment of extended seed and its score.
++	// HINT: Create an align object on infixes of the sequences.
++
++	// TODO: Output the alignment as a match to the output file.
++
++	outFile.close();
++
++	return 0;
++}

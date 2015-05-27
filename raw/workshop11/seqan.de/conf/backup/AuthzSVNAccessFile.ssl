@@ -1,0 +1,76 @@
+[groups]
+seqan = doering, weese, rausch, emde, gunnar, reinert, aiche, maschulz, mbauer, dklein, krudolph, groepl, ahildebr
+seqan_authors = doering, weese, rausch, reinert, emde, holtgrew
+seqan_book_authors = doering, reinert
+seqan_swp08 = erehman, sakalli, popko, mschroed, maerker, gohlke, balcazar, mendt, singer, lienhard, galicka, eweber
+seqan_swp09 = fheeger, hauswede, jploog, bethune, mheuser, mkluge, krakau, specoviu
+seqan_swp09_guests = goeke, phansen, patel
+seqan_guests = maerker, grunert, jheise@mi.fu-berlin.de, jhlim, kemena, ehrlich
+seqan_web = doering, weese, rausch, reinert, emde
+rmbench_students = h4nn3s@FU-BERLIN.DE, thieme@FU-BERLIN.DE
+
+[/]
+@seqan_authors = rw
+* = r
+
+[/trunk/seqan]
+@seqan = rw
+* = r
+
+[/trunk/web]
+@seqan_web = rw
+* = r
+
+[/trunk/seqan/projects/apps]
+@seqan = rw
+seqan_guests = r
+* =
+
+[/trunk/seqan/book]
+* =
+
+[/trunk/seqan/core]
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/core/book]
+@seqan_book_authors = rw
+@seqan_authors = rw
+* =
+
+[/trunk/seqan/misc]
+@seqan_authors = rw
+* = r
+
+[/trunk/seqan/papers]
+@seqan_authors = rw
+@seqan = r
+* =
+
+[/trunk/seqan/projects/benchmarks/read_mappers]
+@rmbench_students = r
+@seqan_authors = rw
+* =
+
+[/releases/seqan1.0]
+* = 
+
+[/releases/seqan_1.1]
+* = 
+
+[/trunk/teaching]
+@seqan_authors = rw
+* =
+
+[/trunk/teaching/swp08]
+@seqan_swp08 = r
+
+[/trunk/teaching/swp08/trunk]
+@seqan_swp08 = r
+
+[/trunk/teaching/swp09]
+@seqan_swp09 = r
+@seqan_swp09_guests = r
+
+[/trunk/teaching/swp09/trunk]
+@seqan_swp09 = rw

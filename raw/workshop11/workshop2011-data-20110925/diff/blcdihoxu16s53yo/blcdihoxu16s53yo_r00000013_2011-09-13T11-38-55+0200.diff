@@ -1,0 +1,37 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 11:36:13.796875000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 11:38:51.234375000 +0200
+@@ -9,7 +9,7 @@
+ 
+ unsigned const minimalLength = 12;
+ float const errorRate = 0.05;
+-//unsigned const qGramLength = 8;
++unsigned const qGramLength = 8;
+ CharString const filename = "ministellar.out";
+ 
+ typedef int TScoreValue;
+@@ -62,8 +62,6 @@
+ 	std::ofstream outFile;
+ 	outFile.open(toCString(filename));
+ 	
+-	Index<StringSet<TSequence>, IndexQGram<SimpleShape, OpenAddressing> > index;
+-
+ 	// define finder and pattern
+ 	// TODO: Define types for finder and pattern using SeqAn's find interface from the index
+ 	//       module. Both should be specialized for the approproiate swift filter algorithm.
+@@ -72,9 +70,15 @@
+ 	// HINT: The tutorial on Pattern Matching describes the find interface. At the end of that
+ 	//       tutorial page, you will find a link to a Swift HowTo page.
+ 
++	typedef Index<StringSet<TSequence>, IndexQGram<Shape<Dna5, UngappedShape<qGramLength> >, OpenAddressing> > TIndex;
++	//typedef 
++	
++
+ 	// TODO: Define variables of your pattern and finder types, and initialize them with the
+ 	//       first sequences in the sequence sets seqs1 and seqs2.
+ 
++	TIndex index;
++
+ 	// TODO: Repeat the following steps for all hits of the finder.
+ 
+ 	// call the function find to obtain a swift hit

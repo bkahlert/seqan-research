@@ -1,0 +1,61 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:17:48.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 14:26:14.000000000 +0200
+@@ -148,7 +148,7 @@
+ 			memsize=memsize*10;
+ 			std::cout << memsize << "alloc   " << memsize << "clear   ";
+ 		}
+-		int runs=1000000;
++		int runs=100000;
+ 		memsize=1;
+ 		std::cout << "\nSimple Alloc    ";
+ 		char* myString_arr;
+@@ -201,6 +201,15 @@
+ 		countOneMers(str3);
+ 		
+ // 		task Sequences 2
+-		printPermutations (3);
++// 		printPermutations (3);
++
++// 		tut Sequences
++		CharString str_s_1="start_middle_end";
++		std::cout << str_s_1 << std::endl;
++		infix(str_s_1,6,12)="overwrite";
++		std::cout << str_s_1 << std::endl;
++		infix(str_s_1,6,12)="Wie jetzt?";
++		std::cout << str_s_1 << std::endl;
++
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 14:17:48.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 14:26:14.000000000 +0200
+@@ -85,7 +85,7 @@
+ 	bool finished=false;
+ 	while (!finished) {
+ 		std::cout << str << " ";
+-		finished = incPerm(str,len-1);
++		finished = incPerm(str,len);
+ 	}
+ }
+ 
+@@ -148,7 +148,7 @@
+ 			memsize=memsize*10;
+ 			std::cout << memsize << "alloc   " << memsize << "clear   ";
+ 		}
+-		int runs=1000000;
++		int runs=100000;
+ 		memsize=1;
+ 		std::cout << "\nSimple Alloc    ";
+ 		char* myString_arr;
+@@ -201,6 +201,9 @@
+ 		countOneMers(str3);
+ 		
+ // 		task Sequences 2
+-		printPermutations (3);
++// 		printPermutations (3);
++
++// 		tut Sequences
++		
+     return 0;
+ }

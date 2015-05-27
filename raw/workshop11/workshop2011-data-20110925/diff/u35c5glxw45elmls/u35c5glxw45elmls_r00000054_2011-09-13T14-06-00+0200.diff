@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata/u35c5glxw45elmls_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/BioStore/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 14:05:09.000000000 +0200
++++ ./sandbox/my_sandbox/apps/ministellar/ministellar.cpp	2011-09-13 14:05:57.346270161 +0200
+@@ -86,6 +86,8 @@
+ 	// call the function find to obtain a swift hit
+ 	// TODO: uncomment the following line
+ 
++    
++
+ 	while (find(finder, pattern, errorRate, int(minimalLength))) {
+ 
+ 	// extract infixes from hit
+@@ -109,7 +111,7 @@
+         assignSource(row(aln, 0), infix1);
+         assignSource(row(aln, 1), infix2);
+         int scr = localAlignment(aln, scoring);
+-//        std::cout << aln <<std::endl;
++        std::cout << aln <<std::endl;
+         if (scr < minScore) {
+             continue;
+         }

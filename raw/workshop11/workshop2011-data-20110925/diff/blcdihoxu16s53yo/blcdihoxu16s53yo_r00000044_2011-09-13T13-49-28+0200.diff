@@ -1,0 +1,14 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 13:45:47.593750000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 13:48:39.359375000 +0200
+@@ -119,8 +119,8 @@
+         // HINT: Have a look at the Seed-and-Extend tutorial.
+         
+         typedef Seed<int, Simple> TSeed;
+-        TSeed seed(clippedBeginPosition(row(ali, 0)), clippedBeginPosition(row(ali, 1)), clippedEndPosition(row(ali, 0)), clippedEndPosition(row(ali, 1)));
+-        extendSeed(seed, xDrop, score, seqs1[0], seqs2[0], 2, GappedXDrop());
++        //TSeed seed(clippedBeginPosition(row(ali, 0)), clippedBeginPosition(row(ali, 1)), clippedEndPosition(row(ali, 0)), clippedEndPosition(row(ali, 1)));
++        //extendSeed(seed, xDrop, score, seqs1[0], seqs2[0], 2, GappedXDrop());
+         
+         if (minimalLength >= minimalLength) {
+             

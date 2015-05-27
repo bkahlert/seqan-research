@@ -1,0 +1,63 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 15:03:57.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 15:11:06.000000000 +0200
+@@ -102,6 +102,14 @@
+ 	std::cout << str << std::endl;
+ }
+ 
++struct MyFunctor : public std::unary_function<char, char> {
++	inline char operator()(char x) const {
++		if (('a'<=x) && (x<='z')) return ('z'-x+'a');
++		if (('A'<=x) && (x<='Z')) return ('Z'-x+'A');
++		return x;
++	}
++}
++
+ // Program entry point
+ int main(int argc, char const ** argv)
+ {
+@@ -233,8 +241,11 @@
+ // 		tut Modifiers
+ 		CharString str_m_1="A man, a plan, a canal-Panama";
+ 		ModifiedString<CharString, ModReverse> mod_m_1(str_m_1);
+-		std::cout << str_m_1 << "; " << mod_m_1 << std::endl;
++		ModifiedString<CharString, ModView<MyFunctor> > mod_m_2(str_m_1);
++		std::cout << str_m_1 << "; " << mod_m_1 << "; " << mod_m_2 << std::endl;
+ 		infix(str_m_1, 9, 9) ="master ";
+-		std::cout << str_m_1 << "; " << mod_m_1 << std::endl;
++		std::cout << str_m_1 << "; " << mod_m_1 << "; " << mod_m_2 << std::endl;
++		
++		
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 15:03:57.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 15:11:06.000000000 +0200
+@@ -102,6 +102,14 @@
+ 	std::cout << str << std::endl;
+ }
+ 
++struct MyFunctor : public std::unary_function<char, char> {
++	inline char operator()(char x) const {
++		if (('a'<=x) && (x<='z')) return ('z'-x+'a');
++		if (('A'<=x) && (x<='Z')) return ('Z'-x+'A');
++		return x;
++	}
++}
++
+ // Program entry point
+ int main(int argc, char const ** argv)
+ {
+@@ -229,5 +237,12 @@
+ 		replaceAs (str_s_6,'a','X');
+ 		str_s_6 = "Hello Seqan!";
+ 		replaceAs (str_s_6,'a','X');
++		
++// 		tut Modifiers
++		CharString str_m_1="A man, a plan, a canal-Panama";
++		ModifiedString<CharString, ModReverse> mod_m_1(str_m_1);
++		std::cout << str_m_1 << "; " << mod_m_1 << std::endl;
++		infix(str_m_1, 9, 9) ="master ";
++		std::cout << str_m_1 << "; " << mod_m_1 << std::endl;
+     return 0;
+ }

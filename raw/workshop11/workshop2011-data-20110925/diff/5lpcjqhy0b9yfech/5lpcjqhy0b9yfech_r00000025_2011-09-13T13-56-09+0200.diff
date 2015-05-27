@@ -1,0 +1,28 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata/5lpcjqhy0b9yfech_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/ZickmannF/Desktop/SeqAn/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2011-09-13 13:55:17.734375000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2011-09-13 13:56:07.171875000 +0200
+@@ -7,13 +7,13 @@
+ 
+ void permutations2(int len, String<char> str){
+ 	if(len==2){
+-		for(char i = 'a'; i<= 'z',i++){
++		for(char i = 'a'; i<= 'z';i++){
+ 			append(str, i);
+ 			permutations2(1,str);
+ 		}
+ 	}else{
+ 		// now want third letter
+-		for(char i = 'a'; i<= 'z',i++){
++		for(char i = 'a'; i<= 'z';i++){
+ 			std::cout << str << i << ","; 
+ 		}
+ 		std::cout << std::endl;
+@@ -22,7 +22,7 @@
+ 
+ void printPermutations(int len) {
+ 
+-	for(char i = 'a'; i<= 'z',i++){
++	for(char i = 'a'; i<= 'z';i++){
+ 		
+ 		String<char> myStr;
+ 		append(myStr,i);

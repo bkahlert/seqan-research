@@ -1,0 +1,21 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp and ./sandbox/leon/apps/miniStellar/.miniStellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata/33bhkfeik47tnq8j_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/workshop/seqan-trunk/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp ./sandbox/leon/apps/miniStellar/miniStellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 13:47:49.000000000 +0200
++++ ./sandbox/leon/apps/miniStellar/miniStellar.cpp	2011-09-13 13:49:19.000000000 +0200
+@@ -95,7 +95,7 @@
+ 	// call the function find to obtain a swift hit
+ 	// TODO: uncomment the following line
+ 
+-	while (find(finder, pattern, errorRate, minimalLength)) {
++	while (find(finder, pattern, errorRate, static_cast<int>(minimalLength))) {
+ 	    // extract infixes from hit
+ 	    // TODO: uncomment the following three lines
+ 
+@@ -118,7 +118,6 @@
+ 	    if (localAlignment(align, score) < minScore)
+ 		continue;
+ 
+-
+ 	    // create a seed for the local alignment, and conduct gapped X-drop extension
+ 	    // TODO: Define a seed on the original sequences but for the subsequences of the local
+ 	    //       alignment. Extend this seed in both directions using gapped X-drop extension.

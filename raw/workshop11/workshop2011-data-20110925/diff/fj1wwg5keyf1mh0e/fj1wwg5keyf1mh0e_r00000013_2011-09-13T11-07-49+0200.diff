@@ -1,0 +1,30 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h ./sandbox/my_sandbox/apps/my_app/my_app.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:07:01.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:07:46.000000000 +0200
+@@ -133,7 +133,7 @@
+ // 			return 1;
+ // 		}
+ 		CharString block1=(*it);
+-		std::cout << str1 << std::endl;
++		std::cout << block1 << std::endl;
+ // 		write(myFile1, block1, sizeof(block1));
+ 		close(myFile1);
+ 		
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~ ./sandbox/my_sandbox/apps/my_app/my_app.h~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:07:01.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:07:46.000000000 +0200
+@@ -125,13 +125,13 @@
+ //     }
+     TIterator it=begin(options.texts);
+ 		CharString str1=(*it);
++		it++;
+ 		std::cout << str1 << std::endl;
+ 		File<Sync<> > myFile1;
+ // 		if (!open(myFile1, str1, OPEN_WRONLY | OPEN_CREATE)) {
+ // 			std::cout << "Could not open for writing file " << str1 << std::endl;
+ // 			return 1;
+ // 		}
+-		++it;
+ 		CharString block1=(*it);
+ 		std::cout << str1 << std::endl;
+ // 		write(myFile1, block1, sizeof(block1));

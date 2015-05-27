@@ -1,0 +1,47 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:11:12.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:11:54.588735161 +0200
+@@ -92,7 +92,7 @@
+ 	    }
+ 	    
+ 	    Seed< Simple > wind( clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );    	    
+-	    extendSeed( wind, seq1[0], seq2[0], 2, judgement_of_carrion, xDrop, GappedXDrop() );
++	    extendSeed( wind, seq2[0], seq1[0], 2, judgement_of_carrion, xDrop, GappedXDrop() );
+ 	}	
+ 
+ 	// create a seed for the local alignment, and conduct gapped X-drop extension
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:10:09.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:11:12.068735172 +0200
+@@ -19,17 +19,6 @@
+ TScoreValue const minScore = 9;
+ TScoreValue const xDrop = 3;
+ 
+-template<typename TSeed, typename TSeq>
+-void
+-writeSeed(TSeed & seed, TSeq const & seq0, TSeq const & seq1) {
+-    std::cout << "Seed from position " << leftPosition(seed, 0);
+-    std::cout << " to " << rightPosition(seed, 0) << ": ";
+-    std::cout << infix(seq0, leftPosition(seed, 0), rightPosition(seed, 0)+1) << std::endl;
+-    std::cout << "Seed from position " << leftPosition(seed, 1);
+-    std::cout << " to " << rightPosition(seed, 1) << ": ";
+-    std::cout << infix(seq1, leftPosition(seed, 1), rightPosition(seed, 1)+1) << std::endl;
+-}
+-
+ int main(int argc, char const ** argv)
+ {
+ 	if (argc != 3)
+@@ -102,12 +91,8 @@
+ 	        return -1;
+ 	    }
+ 	    
+-	    Seed< Simple > wind( clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );
+-	    writeSeed( wind, seq1[0], seq2[0] );	    	    
++	    Seed< Simple > wind( clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );    	    
+ 	    extendSeed( wind, seq1[0], seq2[0], 2, judgement_of_carrion, xDrop, GappedXDrop() );
+-	    std::cout << "After extension:" << std::endl;
+-	    writeSeed( wind, seq1[0], seq2[0] );
+-	    std::cout << "---" << std::endl;
+ 	}	
+ 
+ 	// create a seed for the local alignment, and conduct gapped X-drop extension

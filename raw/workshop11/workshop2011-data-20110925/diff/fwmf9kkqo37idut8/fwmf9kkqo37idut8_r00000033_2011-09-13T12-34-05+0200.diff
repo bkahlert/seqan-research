@@ -1,0 +1,22 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:31:57.609375000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:34:03.765625000 +0200
+@@ -45,14 +45,17 @@
+ 	Iterator<String<AminoAcid>, Standard>::Type itEnd = end(pep);
+ 
+ 	const unsigned int alphSize = ValueSize<AminoAcid>::VALUE;
+-	unsigned int sizeDist[alphSize];
++	unsigned int dist[alphSize];
+ 
+ 	cout << pep << endl;
+ 	while (it != itEnd){
++		dist[AminoAcid(*it)]++;
++		
+ 		if (*it == 'R'){
+ 			*it = 'A';
+ 		}
+ 		it++;
+ 	}
+ 	cout << pep << endl;
++	cout << dist << endl;
+ }

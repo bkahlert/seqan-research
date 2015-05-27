@@ -1,0 +1,36 @@
+{
+    "machine": {
+        "machine": "i686", 
+        "processor": "", 
+        "architecture": [
+            [
+                "32bit", 
+                "ELF"
+            ], 
+            "no64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "/usr/bin/make", 
+        "CMAKE_CXX_COMPILER": "/usr/bin/c++", 
+        "CMAKE_MODULE_LINKER_FLAGS": "", 
+        "CMAKE_GENERATOR": "Unix Makefiles", 
+        "CMAKE_C_COMPILER": "Unix Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "/usr/bin/ld"
+    }, 
+    "os": {
+        "node": "iaimz024", 
+        "sys.platform": "linux2", 
+        "system": "Linux", 
+        "platform": "Linux-2.6.32-34-generic-i686-with-Ubuntu-10.04-lucid", 
+        "version": "#76-Ubuntu SMP Tue Aug 30 16:19:34 UTC 2011", 
+        "release": "2.6.32-34-generic"
+    }, 
+    "id": "fj1wwg5keyf1mh0e", 
+    "ip": [
+        "127.0.0.1"
+    ]
+}

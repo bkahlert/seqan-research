@@ -1,0 +1,58 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h ./sandbox/my_sandbox/apps/my_app/my_app.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:05:41.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h	2011-09-13 11:07:01.000000000 +0200
+@@ -119,19 +119,19 @@
+ int mainWithOptions(Options & options)
+ {
+     typedef Iterator<String<CharString> >::Type TIterator;
+-    std::cout << "Non-option Arguments:" << std::endl;
++//     std::cout << "Non-option Arguments:" << std::endl;
+ //     for (TIterator it = begin(options.texts); it != end(options.texts); ++it) {
+ //         std::cout << "  " << *it << std::endl;
+ //     }
+     TIterator it=begin(options.texts);
+ 		CharString str1=(*it);
++		it++;
+ 		std::cout << str1 << std::endl;
+ 		File<Sync<> > myFile1;
+ // 		if (!open(myFile1, str1, OPEN_WRONLY | OPEN_CREATE)) {
+ // 			std::cout << "Could not open for writing file " << str1 << std::endl;
+ // 			return 1;
+ // 		}
+-		++it;
+ 		CharString block1=(*it);
+ 		std::cout << str1 << std::endl;
+ // 		write(myFile1, block1, sizeof(block1));
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~ ./sandbox/my_sandbox/apps/my_app/my_app.h~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:05:41.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.h~	2011-09-13 11:07:01.000000000 +0200
+@@ -119,7 +119,7 @@
+ int mainWithOptions(Options & options)
+ {
+     typedef Iterator<String<CharString> >::Type TIterator;
+-    std::cout << "Non-option Arguments:" << std::endl;
++//     std::cout << "Non-option Arguments:" << std::endl;
+ //     for (TIterator it = begin(options.texts); it != end(options.texts); ++it) {
+ //         std::cout << "  " << *it << std::endl;
+ //     }
+@@ -127,13 +127,14 @@
+ 		CharString str1=(*it);
+ 		std::cout << str1 << std::endl;
+ 		File<Sync<> > myFile1;
+-		if (!open(myFile1, str1, OPEN_WRONLY | OPEN_CREATE)) {
+-			std::cout << "Could not open for writing file " << str1 << std::endl;
+-			return 1;
+-		}
++// 		if (!open(myFile1, str1, OPEN_WRONLY | OPEN_CREATE)) {
++// 			std::cout << "Could not open for writing file " << str1 << std::endl;
++// 			return 1;
++// 		}
+ 		++it;
+-		char block1[512]=(*it);
+-		write(myFile1, block1, sizeof(block1));
++		CharString block1=(*it);
++		std::cout << str1 << std::endl;
++// 		write(myFile1, block1, sizeof(block1));
+ 		close(myFile1);
+ 		
+     return 0;

@@ -1,0 +1,26 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/.ministellar.cpp.swp and ./sandbox/workshop/apps/ministellar/.ministellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp ./sandbox/workshop/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 12:56:51.000000000 +0200
++++ ./sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 13:51:56.000000000 +0200
+@@ -89,7 +89,7 @@
+     // call the function find to obtain a swift hit
+     // TODO: uncomment the following line
+ 
+-    while (find(finder, pattern, errorRate, minimalLength)) {
++    while (find(finder, pattern, errorRate, static_cast<int>(minimalLength))) {
+         // extract infixes from hit
+         // TODO: uncomment the following three lines
+ 
+@@ -117,8 +117,10 @@
+ 
+         typedef Seed<Simple> TSeed;
+         TSeed seed(
+-            clippedBeginPosition(row(align, 0)), clippedBeginPosition(row(align, 1)),
+-            clippedEndPosition(row(align, 0)), clippedEndPosition(row(align, 1)));
++            clippedBeginPosition(row(align, 0)) + beginPosition(infix1),
++            clippedBeginPosition(row(align, 1)) + beginPosition(infix2),
++            clippedEndPosition(row(align, 0)) + beginPosition(infix1),
++            clippedEndPosition(row(align, 1)) + beginPosition(infix2));
+         std::cout << "Before extension: " << std::endl;
+         writeSeed(seed, seqs1[0], seqs2[0]);
+         extendSeed(seed, seqs2[0], seqs1[0], EXTEND_BOTH, score, xDrop, GappedXDrop());

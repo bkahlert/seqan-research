@@ -1,0 +1,17 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 14:52:52.562500000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 14:57:41.156250000 +0200
+@@ -133,10 +133,10 @@
+                 // HINT: Create an align object on infixes of the sequences.
+ 
+                 Align<TInfix, ArrayGaps> ali2;
+-                appendValue(rows(ali2), infix1);
+-                appendValue(rows(ali2), infix2);
++                appendValue(rows(ali2), infix(seqs1[0], leftDim0(seed), rightDim0(seed));
++                appendValue(rows(ali2), infix(seqs2[0], leftDim1(seed), rightDim1(seed));
+ 
+-                TScoreValue scoreValue2 = globalAlignment(ali2, score, -leftDiagonal(seed) - 2, -rightDiagonal(seed) + 2, BandedNeedlemanWunsch());
++                //TScoreValue scoreValue2 = globalAlignment(ali2, score, NeedlemanWunsch());
+                 //std::cout << ali2 << std::endl;
+                 // TODO: Output the alignment as a match to the output file.
+             //}

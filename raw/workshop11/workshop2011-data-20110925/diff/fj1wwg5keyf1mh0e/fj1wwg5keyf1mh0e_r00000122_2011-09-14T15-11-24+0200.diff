@@ -1,0 +1,148 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/demos/tutorial/alignments/alignment_pairwise_global_assignment1.cpp ./core/demos/tutorial/alignments/alignment_pairwise_global_assignment1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/core/demos/tutorial/alignments/alignment_pairwise_global_assignment1.cpp	2011-08-23 09:23:37.000000000 +0200
++++ ./core/demos/tutorial/alignments/alignment_pairwise_global_assignment1.cpp	2011-09-14 15:10:51.000000000 +0200
+@@ -26,10 +26,11 @@
+ 	::std::cout << align;
+ 	
+ //FRAGMENT(iterate)
++	unsigned aliLength = _max(length(row(align, 0)), length(row(align, 1)));
+ 	for(unsigned i = 0; i < length(rows(align)); ++i)
+ 	{
+-		TIterator it = begin(row(align,i));
+-		TIterator itEnd = end(row(align,i));
++		TIterator it = iter(row(align,i), 0);
++		TIterator itEnd = iter(row(align,i), aliLength);
+ 		unsigned pos = 0;
+ 		std::cout << "Row " << i << " contains gaps at positions: ";
+ 		std::cout << std::endl;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/demos/tutorial/sequence/sequence_all_strings.cpp ./core/demos/tutorial/sequence/sequence_all_strings.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/core/demos/tutorial/sequence/sequence_all_strings.cpp	2011-09-13 09:33:50.000000000 +0200
++++ ./core/demos/tutorial/sequence/sequence_all_strings.cpp	2011-09-14 15:10:51.000000000 +0200
+@@ -17,8 +17,6 @@
+   } else {
+     std::cout << current << std::endl;
+   }
+-  
+-  //current[pos] = 'a';
+ }
+ 
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/demos/tutorial/sequence/sequence_iterator_demo.cpp ./core/demos/tutorial/sequence/sequence_iterator_demo.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/core/demos/tutorial/sequence/sequence_iterator_demo.cpp	2011-08-23 09:23:38.000000000 +0200
++++ ./core/demos/tutorial/sequence/sequence_iterator_demo.cpp	2011-09-14 15:10:51.000000000 +0200
+@@ -5,19 +5,21 @@
+ #include <seqan/sequence.h>
+ #include <seqan/file.h>
+ 
++using namespace seqan;
++
+ int main() {
+ // FRAGMENT(metafunctions)
+-	seqan::String<char> str = "admn";
+-	seqan::Iterator<seqan::String<char> >::Type it = begin(str);
+-	seqan::Iterator<seqan::String<char> >::Type itEnd = end(str);
++	String<char> str = "admn";
++	Iterator<String<char> >::Type it = begin(str);
++	Iterator<String<char> >::Type itEnd = end(str);
+ // FRAGMENT(iterators)
+ 	while (it != itEnd) {
+-		::std::cout << *it;
++		std::cout << *it;
+ 		++it;
+ 	}
+-	::std::cout << ::std::endl;
++	std::cout << std::endl;
+ // FRAGMENT(rooted-iterators)
+-	seqan::Iterator<seqan::String<char>, seqan::Rooted >::Type it2 = begin(str);
++	Iterator<String<char>, Rooted >::Type it2 = begin(str);
+ 	for (goBegin(it2); !atEnd(it2); goNext(it2)) {
+ 		++value(it2);
+ 	}
+@@ -25,12 +27,12 @@
+ 	goEnd(it2);
+ 	while (!atBegin(it2)) {
+ 		goPrevious(it2);
+-		::std::cout << getValue(it2);
++		std::cout << getValue(it2);
+ 	}
+-	::std::cout << ::std::endl;
++	std::cout << std::endl;
+ // FRAGMENT(assign-value)
+ 	assignValue(begin(str), 'X');
+-	::std::cout << str << ::std::endl;
++	std::cout << str << std::endl;
+ 	
+ 	return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/include/seqan/seeds/seed_base.h ./core/include/seqan/seeds/seed_base.h
+--- ./misc/seqan_instrumentation/last_revision_copy/core/include/seqan/seeds/seed_base.h	2011-08-23 09:23:35.000000000 +0200
++++ ./core/include/seqan/seeds/seed_base.h	2011-09-14 15:10:51.000000000 +0200
+@@ -90,7 +90,7 @@
+ ..summary:Describes a seed.
+ ..cat:Seed Handling
+ ..signature:Seed<TPosition, TSpecSeed>
+-..param.TPosition:The type number that schuld be used. Must have negative numbers (e.g. int/long).
++..param.TPosition:The type number that should be used. Must have negative numbers (e.g. int/long).
+ ..param.TSpec:The seed type used.
+ ..include:seqan/seeds.h
+ */
+@@ -101,7 +101,7 @@
+ ..cat:Seed Handling
+ ..general:Class.Seed
+ ..signature:Seed<TPosition, SimpleSeed>
+-..param.TPosition:The type number that schuld be used. Must have negative numbers (e.g. int/long).
++..param.TPosition:The type number that should be used. Must have negative numbers (e.g. int/long).
+ .Memfunc.SimpleSeed#Seed:
+ ..class:Spec.SimpleSeed
+ ..summary:Constructor
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/include/seqan/seeds/seed_multi.h ./core/include/seqan/seeds/seed_multi.h
+--- ./misc/seqan_instrumentation/last_revision_copy/core/include/seqan/seeds/seed_multi.h	2011-08-23 09:23:35.000000000 +0200
++++ ./core/include/seqan/seeds/seed_multi.h	2011-09-14 15:10:51.000000000 +0200
+@@ -46,7 +46,7 @@
+ ..cat:Seed Handling
+ ..general:Class.Seed
+ ..signature:Seed<TPosition, ChainedSeed>
+-..param.TPosition:The type of number that schuld be used. Must have negative numbers (e.g. int/long).
++..param.TPosition:The type of number that should be used. Must have negative numbers (e.g. int/long).
+ .Memfunc.ChainedSeed#Seed:
+ ..class:Spec.ChainedSeed
+ ..summary:Constructor
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/core/include/seqan/seeds2/seeds_extension.h ./core/include/seqan/seeds2/seeds_extension.h
+--- ./misc/seqan_instrumentation/last_revision_copy/core/include/seqan/seeds2/seeds_extension.h	2011-08-23 09:23:33.000000000 +0200
++++ ./core/include/seqan/seeds2/seeds_extension.h	2011-09-14 15:10:51.000000000 +0200
+@@ -76,6 +76,17 @@
+ struct GappedXDrop_;
+ typedef Tag<GappedXDrop_> const GappedXDrop;
+ 
++/**
++.Enum.Extension Direction
++..cat:Seed Handling
++..summary:The direction in which a seed should be extended.
++..value.EXTEND_LEFT:Extend the seed to the left.
++..value.EXTEND_RIGHT:Extend the seed to the right.
++..value.EXTEND_BOTH:Extend the seed in both directions.
++..value.EXTEND_NONE:Perform no extension.
++..see:Function.extendSeed
++..include:seqan/seeds.h
++*/
+ enum ExtensionDirection
+ {
+     EXTEND_LEFT,
+@@ -97,14 +108,15 @@
+ ..summary:Extends a seed.
+ ..cat:Seed Handling
+ ..signature:extendSeed(seed, query, database, direction, MatchExtend)
+-..signature:extendSeed(seed, query, database, direction, scoreDropOff, scoreMatrix, {UngappedXDrop, GappedXDrop})
++..signature:extendSeed(seed, query, database, direction, scoreMatrix, scoreDropOff, {UngappedXDrop, GappedXDrop})
+ ..param.seed: The seed to extend.
+ ...type:Class.Seed
+ ..param.query: The query sequence.
+ ...type:Class.String
+ ..param.query: The database sequence.
+ ...type:Class.String
+-..param.direction: Defines the direction in which the seed should be extended. 0 = left, 1 = right, 2 = both
++..param.direction: Defines the direction in which the seed should be extended.
++...type:Enum.Extension Direction
+ ..param.scoreDropOff: The score drop after which the extension should stop. The extension stops if this value is exceeded.
+ ...remarks:Only used for the algorithms @Tag.Seed Extension.UngappedXDrop@ and @Tag.Seed Extension.GappedXDrop@
+ ..param.scoreMatrix: The scoring scheme.

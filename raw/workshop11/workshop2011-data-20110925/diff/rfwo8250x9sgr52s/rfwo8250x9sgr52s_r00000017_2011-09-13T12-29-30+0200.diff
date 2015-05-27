@@ -1,0 +1,15 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/.ministellar.cpp.swp and ./sandbox/workshop/apps/ministellar/.ministellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp ./sandbox/workshop/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 12:29:14.000000000 +0200
++++ ./sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 12:29:29.000000000 +0200
+@@ -40,8 +40,8 @@
+     std::cout << " to " << getEndDim0(seed) << ": ";
+     std::cout << infix(seq0, getBeginDim0(seed), getEndDim0(seed)) << std::endl;
+     std::cout << "Seed in seq2 from position " << getBeginDim1(seed);
+-    std::cout << " to " << GetEndDim1(seed) << ": ";
+-    std::cout << infix(seq1, getBeginDim1(seed), GetEndDim1(seed)) << std::endl;
++    std::cout << " to " << getEndDim1(seed) << ": ";
++    std::cout << infix(seq1, getBeginDim1(seed), getEndDim1(seed)) << std::endl;
+ }
+ 
+ int main(int argc, char const ** argv) {

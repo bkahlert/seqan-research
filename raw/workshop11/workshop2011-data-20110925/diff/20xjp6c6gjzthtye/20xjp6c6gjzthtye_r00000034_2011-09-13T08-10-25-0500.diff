@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/20xjp6c6gjzthtye_stats.txt -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata/20xjp6c6gjzthtye_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/workspaceCPP/eclipse/seqan_workshop/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/mySandbox/apps/my_app/my_app.cpp ./sandbox/mySandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mySandbox/apps/my_app/my_app.cpp	2011-09-13 08:02:36.351218400 -0500
++++ ./sandbox/mySandbox/apps/my_app/my_app.cpp	2011-09-13 08:10:13.825384400 -0500
+@@ -18,7 +18,7 @@
+ 	// get size
+ 	int length = length(AA);
+ 	// create iterator
+-	typedef Iterator<String<char> >::Type TIter;
++	typedef Iterator<String<AminoAcid> >::Type TIter;
+ 	TIter itrStart = begin(AA);
+ 	TIter itrEnd = end(AA);
+ 	for(int i = itrStart; i<length; goNext(i)){

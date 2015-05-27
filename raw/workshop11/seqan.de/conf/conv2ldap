@@ -1,0 +1,4 @@
+#/bin/bash
+#
+# Creates LDAP configuration file for SVN.
+sed s/@FU-BERLIN.DE//g /web/www.seqan.de/conf/AuthzSVNAccessFile.kerberos > /web/www.seqan.de/conf/AuthzSVNAccessFile.ldap

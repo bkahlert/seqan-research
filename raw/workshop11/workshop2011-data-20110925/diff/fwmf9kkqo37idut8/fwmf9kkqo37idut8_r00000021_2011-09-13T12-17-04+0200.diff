@@ -1,0 +1,34 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata/fwmf9kkqo37idut8_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Kuhring/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:06:11.406250000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:17:01.765625000 +0200
+@@ -6,10 +6,10 @@
+ 
+ void tut01();
+ void tut02();
++void ass01();
+ 
+ int main(int, char **) {
+-	tut01();
+-	tut02();
++	ass01();
+ 
+ 	return 0;
+ }
+@@ -36,4 +36,14 @@
+ 	Iterator<String<char>, Standard>::Type it2 = begin(str);  //same as above
+ 	Iterator<String<char>, Rooted>::Type it3 = begin(str);  //a rooted iterator 
+ 	Iterator<String<char>, Rooted>::Type it4 = begin(str, Rooted());  //same as above
+-}
+\ No newline at end of file
++}
++
++void ass01(){
++	String<AminoAcid> pep = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
++	Iterator<String<AminoAcid>, Standard>::Type it = begin(pep);
++	Iterator<String>AminoAcid>, Standard>::Type itEnd = end(pep);
++
++	cout << pep;
++	while (it != itEnd)
++		if (*it == 'R') *it = 'A';
++	cout << pep;
+\ No newline at end of file

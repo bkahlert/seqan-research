@@ -1,0 +1,75 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:20:12.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:20:57.000000000 +0200
+@@ -114,7 +114,7 @@
+ 		int runs=100000;
+ 		memsize=1;
+ 		std::cout << "\nSimple Alloc    ";
+-		CharString* myString_arr;
++		char* myString_arr;
+ 		for (int i=1; i<=3; i++) {
+ 			memsize=memsize*10;
+ 			double t_a=0, t_c=0;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:20:12.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:20:57.000000000 +0200
+@@ -111,32 +111,43 @@
+ 			memsize=memsize*10;
+ 			std::cout << memsize << "alloc   " << memsize << "clear   ";
+ 		}
++		int runs=100000;
+ 		memsize=1;
+ 		std::cout << "\nSimple Alloc    ";
+ 		CharString* myString_arr;
+ 		for (int i=1; i<=3; i++) {
+ 			memsize=memsize*10;
+-			Tstart=sysTime();
+-			allocate (mySimpleAlloc, myString_arr, memsize);
+-			Tend=sysTime();
+-			std::cout << Tend-Tstart << "  ";
+-			Tstart=sysTime();
+-			clear (mySimpleAlloc);
+-			Tend=sysTime();
+-			std::cout << Tend-Tstart << "  ";
++			double t_a=0, t_c=0;
++			for (int r=0; r<runs; r++) {
++				Tstart=sysTime();
++				allocate (mySimpleAlloc, myString_arr, memsize);
++				Tend=sysTime();
++				t_a+=Tend-Tstart;
++				Tstart=sysTime();
++				clear (mySimpleAlloc);
++				Tend=sysTime();
++				t_c+=Tend-Tstart;
++			}
++			std::cout << t_a << "  ";
++			std::cout << t_c << "  ";
+ 		}
+ 		memsize=1;
+ 		std::cout << "\nMultiPool Alloc ";
+ 		for (int i=1; i<=3; i++) {
+ 			memsize=memsize*10;
+-			Tstart=sysTime();
+-			allocate (myMultiPoolAlloc, myString_arr, memsize);
+-			Tend=sysTime();
+-			std::cout << Tend-Tstart << "  ";
+-			Tstart=sysTime();
+-			clear (myMultiPoolAlloc);
+-			Tend=sysTime();
+-			std::cout << Tend-Tstart << "  ";
++			double t_a=0, t_c=0;
++			for (int r=0; r<runs; r++) {
++				Tstart=sysTime();
++				allocate (myMultiPoolAlloc, myString_arr, memsize);
++				Tend=sysTime();
++				t_a+=Tend-Tstart;
++				Tstart=sysTime();
++				clear (myMultiPoolAlloc);
++				Tend=sysTime();
++				t_c+=Tend-Tstart;
++			}
++			std::cout << t_a << "  ";
++			std::cout << t_c << "  ";
+ 		}
+ 		std::cout << std::endl;
+ 		

@@ -1,0 +1,40 @@
+{
+    "machine": {
+        "machine": "x86", 
+        "processor": "x86 Family 6 Model 28 Stepping 10, GenuineIntel", 
+        "architecture": [
+            [
+                "32bit", 
+                "WindowsPE"
+            ], 
+            "no64"
+        ]
+    }, 
+    "devenv": {
+        "CMAKE_BUILD_TYPE": "Debug", 
+        "CMAKE_CXX_FLAGS": "", 
+        "CMAKE_MAKE_PROGRAM": "c:/MinGW/bin/mingw32-make.exe", 
+        "CMAKE_CXX_COMPILER": "c:/MinGW/bin/g++.exe", 
+        "CMAKE_MODULE_LINKER_FLAGS": " ", 
+        "CMAKE_GENERATOR": "MinGW Makefiles", 
+        "CMAKE_C_COMPILER": "MinGW Makefiles", 
+        "CMAKE_C_FLAGS": "", 
+        "CMAKE_LINKER": "c:/MinGW/bin/ld.exe"
+    }, 
+    "os": {
+        "node": "bernd-eee", 
+        "sys.platform": "win32", 
+        "system": "Windows", 
+        "platform": "Windows-7-6.1.7601-SP1", 
+        "version": "6.1.7601", 
+        "release": "7"
+    }, 
+    "id": "mqqun54scaf766qp", 
+    "ip": [
+        "fe80::6199:ea6b:9367:1c2d%10", 
+        "fe80::2c05:542:72f1:63b%19", 
+        "2002:8d0e:f9c4::8d0e:f9c4", 
+        "141.14.249.196", 
+        "2001:0:5ef5:79fb:2c05:542:72f1:63b"
+    ]
+}

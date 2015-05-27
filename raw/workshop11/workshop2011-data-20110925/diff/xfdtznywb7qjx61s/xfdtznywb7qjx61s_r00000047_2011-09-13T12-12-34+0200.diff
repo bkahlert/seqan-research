@@ -1,0 +1,44 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata/xfdtznywb7qjx61s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/krause/Workspace/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:03:22.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:12:27.000000000 +0200
+@@ -12,29 +12,22 @@
+         std::cout << i << ',' << TAlphabet(i) << "  ";
+     std::cout << std::endl;
+ }
+-template <typename CharString >
+-void countOneMers(CharString str)
++void countOneMers(CharString const& str)
+ {
+-//	typedef Size<CharString>::Type TSize;
+- //   typedef CharString<TSize> TCounterString;
+-  //  TCounterString counter;
+-	Iterator<CharString>::Type it = begin(str);
+-	Iterator<CharString>::Type itEnd = end(str);
+-	::std::cout << str << ::std::endl;
+-	while(it != itEnd)
++	String<int> table;
++	resize(table, 'z' - 'a' +1,0); 
++	for(unsigned int i =0; i< length(str); i++)
+ 	{
+-		if(value(it) == 'R')
+-		{
+-			std::cout<< 'A';
+-		} else {
+-			std::cout << *it;
+-		}
+-		++it;
+-		
++		table[str[i] - 'a'] += 1;
+ 	}
+-
+ 	
++	for (unsigned int i = 0; i < 'z' - 'a' + 1; ++i) {
++        if (table[i] == 0)
++            continue;
++        std::cout << static_cast<char>('a' + i) << " " << table[i] << std::endl;
++    }
+ }
++	
+ 
+ int main()
+ {

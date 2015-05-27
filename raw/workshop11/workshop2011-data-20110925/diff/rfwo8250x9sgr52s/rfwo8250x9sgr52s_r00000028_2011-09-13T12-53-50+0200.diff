@@ -1,0 +1,25 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/.ministellar.cpp.swp and ./sandbox/workshop/apps/ministellar/.ministellar.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata/rfwo8250x9sgr52s_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/konrad/Projects/workshop11/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp ./sandbox/workshop/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 12:50:39.000000000 +0200
++++ ./sandbox/workshop/apps/ministellar/ministellar.cpp	2011-09-13 12:53:41.000000000 +0200
+@@ -108,6 +108,7 @@
+         appendValue(rows(align), infix2);
+         if (localAlignment(align, score) < minScore)
+             continue;
++        std::cout << localAlignment(align, score) << std::endl;
+ 
+         // create a seed for the local alignment, and conduct gapped X-drop extension
+         // TODO: Define a seed on the original sequences but for the subsequences of the local
+@@ -120,10 +121,10 @@
+             clippedBeginPosition(row(align, 0)), clippedBeginPosition(row(align, 1)),
+             clippedEndPosition(row(align, 0)), clippedEndPosition(row(align, 1)));
+         std::cout << "Before extension: " << std::endl;
+-        writeSeed(seed, seqs1[0], seqs2[0]);
++        //writeSeed(seed, seqs1[0], seqs2[0]);
+         extendSeed(seed, seqs2[0], seqs1[0], EXTEND_BOTH, score, xDrop, GappedXDrop());
+         std::cout << "After extension: " << std::endl;
+-        writeSeed(seed, seqs1[0], seqs2[0]);
++        //writeSeed(seed, seqs1[0], seqs2[0]);
+ 
+         // find best global alignment of extended seed
+         // TODO: Compute the best global alignment of extended seed and its score.

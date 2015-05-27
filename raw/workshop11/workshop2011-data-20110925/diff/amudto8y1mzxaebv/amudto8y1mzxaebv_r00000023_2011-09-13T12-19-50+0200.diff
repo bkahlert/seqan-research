@@ -1,0 +1,65 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp ./sandbox/mordor/apps/exastellar/exastellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:17:17.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp	2011-09-13 12:19:46.778735037 +0200
+@@ -19,6 +19,17 @@
+ TScoreValue const minScore = 9;
+ TScoreValue const xDrop = 3;
+ 
++template<typename TSeed, typename TSeq>
++void
++writeSeed(TSeed & seed, TSeq const & seq0, TSeq const & seq1) {
++    std::cout << "Seed from position " << leftDim0(seed);
++    std::cout << " to " << rightDim0(seed) << ": ";
++    std::cout << infix(seq0, leftDim0(seed), rightDim0(seed) +1) << std::endl;
++    std::cout << "Seed from position " << leftDim1(seed);
++    std::cout << " to " << rightDim1(seed) << ": ";
++    std::cout << infix(seq1, leftDim1(seed), rightDim1(seed)+1) << std::endl;
++}
++
+ int main(int argc, char const ** argv)
+ {
+ 	if (argc != 3)
+@@ -91,9 +102,11 @@
+ 	        return -1;
+ 	    }
+ 	    
+-	    Seed< Simple > wind( clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );    	    
++	    Seed< Simple > wind( clippedBeginPosition( row( the_showdown, 0 ) ), clippedBeginPosition( row( the_showdown, 1 ) ), clippedEndPosition( row( the_showdown, 0 ) ), clippedEndPosition( row( the_showdown, 1 ) ) );  
++	    writeSeed( wind, seq1[0], seq2[0] );  	    
+ 	    extendSeed( wind, seq1[0], seq2[0], EXTEND_BOTH, judgement_of_carrion, xDrop, GappedXDrop() );
+-	}	
++	    writeSeed( wind, seq1[0], seq2[0] );
++	}
+ 
+ 	// create a seed for the local alignment, and conduct gapped X-drop extension
+ 	// TODO: Define a seed on the original sequences but for the subsequences of the local
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata/amudto8y1mzxaebv_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x '/home/paul/Projects/2011 SeqAn Workshop/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~ ./sandbox/mordor/apps/exastellar/exastellar.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:16:05.000000000 +0200
++++ ./sandbox/mordor/apps/exastellar/exastellar.cpp~	2011-09-13 12:19:22.388735044 +0200
+@@ -19,6 +19,17 @@
+ TScoreValue const minScore = 9;
+ TScoreValue const xDrop = 3;
+ 
++template<typename TSeed, typename TSeq>
++void
++writeSeed(TSeed & seed, TSeq const & seq0, TSeq const & seq1) {
++    std::cout << "Seed from position " << leftDim0(seed);
++    std::cout << " to " << rightDim0(seed) << ": ";
++    std::cout << infix(seq0, leftDim0(seed), rightDim0(seed) +1) << std::endl;
++    std::cout << "Seed from position " << leftDim1(seed);
++    std::cout << " to " << rightDim1(seed) << ": ";
++    std::cout << infix(seq1, leftDim1(seed), rightDim1(seed)+1) << std::endl;
++}
++
+ int main(int argc, char const ** argv)
+ {
+ 	if (argc != 3)
+@@ -65,7 +76,7 @@
+ 	
+ 	typedef Index<TSequence, IndexQGram<Shape<Dna5, UngappedShape<8> >, OpenAddressing> > TIndex;
+ 	
+-	TIndex mt_doom( seq2[1] );
++	TIndex mt_doom( seq2[0] );
+ 	
+ 	Finder< TSequence, Swift< SwiftLocal > > gollum( seq1[0] );
+ 	Pattern< TIndex, Swift< SwiftLocal > > the_ring( mt_doom );

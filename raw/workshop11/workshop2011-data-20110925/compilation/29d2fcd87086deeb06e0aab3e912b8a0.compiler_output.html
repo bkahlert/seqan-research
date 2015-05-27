@@ -1,0 +1,43 @@
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:11:17: error: no viable conversion from &#39;void&#39; to &#39;String&lt;char&gt;&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String&lt;char&gt; newString = append(str,i);</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~~~~~~~</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/core/include/seqan/sequence/string_alloc.h:105:5: note: candidate constructor not viable: cannot convert argument of incomplete type &#39;void&#39; to &#39;const seqan::String&lt;char, seqan::Alloc&lt;void&gt;&gt; &amp;&#39;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; String(String const &amp; source)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/core/include/seqan/sequence/string_alloc.h:82:5: note: candidate template ignored: substitution failure [with TSource = void]</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; String(TSource &amp; source)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/core/include/seqan/sequence/string_alloc.h:94:5: note: candidate template ignored: substitution failure [with TSource = void]</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; String(TSource const &amp; source)</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">/Users/bkahlert/Dropbox/development/seqan-workspace-3.7/seqan-trunk/sandbox/bkahlert/apps/tutorial_first_examples/tutorial_first_examples.cpp:23:28: warning: unused parameter &#39;len&#39; [-Wunused-parameter]</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">void printPermutations(int len) {</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">1 warning and 1 error generated.</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make[2]: *** [sandbox/bkahlert/apps/tutorial_first_examples/CMakeFiles/tutorial_first_examples.dir/tutorial_first_examples.cpp.o] Error 1</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make[1]: *** [sandbox/bkahlert/apps/tutorial_first_examples/CMakeFiles/tutorial_first_examples.dir/all] Error 2</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; ">make: *** [all] Error 2</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; min-height: 15px; ">&nbsp;</p>
+
+<p style="margin: 0px; line-height: normal; font-family: Monaco; color: rgb(4, 51, 255); ">01:02:19 Build Finished (took 3s.626ms)</p>
+
+<p>​</p>

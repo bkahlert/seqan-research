@@ -1,0 +1,45 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp ./sandbox/my_sandbox/apps/my_app/my_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:33:30.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp	2011-09-13 12:34:17.000000000 +0200
+@@ -111,7 +111,7 @@
+ 			memsize=memsize*10;
+ 			std::cout << memsize << "alloc   " << memsize << "clear   ";
+ 		}
+-		int runs=100000;
++		int runs=1000000;
+ 		memsize=1;
+ 		std::cout << "\nSimple Alloc    ";
+ 		char* myString_arr;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata/fj1wwg5keyf1mh0e_stats.txt -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/tba/projects/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:33:30.000000000 +0200
++++ ./sandbox/my_sandbox/apps/my_app/my_app.cpp~	2011-09-13 12:34:17.000000000 +0200
+@@ -118,12 +118,12 @@
+ 		for (int i=1; i<=3; i++) {
+ 			memsize=memsize*10;
+ 			double t_a=0, t_c=0;
+-			for (int r=0; r<runs; r++) {
+ 				Tstart=sysTime();
++			for (int r=0; r<runs; r++) {
+ 				allocate (mySimpleAlloc, myString_arr, memsize,TagAllocateTemp());
++			}
+ 				Tend=sysTime();
+ 				t_a+=Tend-Tstart;
+-			}
+ 				Tstart=sysTime();
+ 				clear (mySimpleAlloc);
+ 				Tend=sysTime();
+@@ -136,12 +136,12 @@
+ 		for (int i=1; i<=3; i++) {
+ 			memsize=memsize*10;
+ 			double t_a=0, t_c=0;
+-			for (int r=0; r<runs; r++) {
+ 				Tstart=sysTime();
++			for (int r=0; r<runs; r++) {
+ 				allocate (myMultiPoolAlloc, myString_arr, memsize,TagAllocateTemp());
++			}
+ 				Tend=sysTime();
+ 				t_a+=Tend-Tstart;
+-			}
+ 				Tstart=sysTime();
+ 				clear (myMultiPoolAlloc);
+ 				Tend=sysTime();

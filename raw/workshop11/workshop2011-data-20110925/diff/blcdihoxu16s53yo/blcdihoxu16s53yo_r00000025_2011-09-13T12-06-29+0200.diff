@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata/blcdihoxu16s53yo_stats.txt' -x .svn -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Dokumente und Einstellungen/Johannes Krugel/Eigene Dateien/Arbeit/Seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp ./sandbox/tum/apps/ministellar/ministellar.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 12:05:27.250000000 +0200
++++ ./sandbox/tum/apps/ministellar/ministellar.cpp	2011-09-13 12:06:25.796875000 +0200
+@@ -8,7 +8,7 @@
+ // set parameters
+ 
+ unsigned const minimalLength = 12;
+-float const errorRate = 0.05;
++unsigned float const errorRate = 0.05;
+ unsigned const qGramLength = 8;
+ CharString const filename = "ministellar.out";
+ 
+@@ -91,9 +91,9 @@
+ 	// extract infixes from hit
+ 	// TODO: uncomment the following three lines
+ 
+-	//typedef Infix<TSequence>::Type TInfix;
+-	//TInfix infix1 = infix(finder, seqs1[0]);
+-	//TInfix infix2 = infix(pattern, seqs2[0]);
++	typedef Infix<TSequence>::Type TInfix;
++	TInfix infix1 = infix(finder, seqs1[0]);
++	TInfix infix2 = infix(pattern, seqs2[0]);
+ 
+ 	// find best local alignment of infixes, and check for minimal score
+ 	// TODO: Define an align object and initialize it with the infixes. Find the best local
