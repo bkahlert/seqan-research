@@ -1,0 +1,20 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-16 13:15:55.943706100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-16 13:19:34.655106100 +0200
+@@ -1249,7 +1249,7 @@
+ 	std::vector<std::vector<String<double> > > copyCompare(compare);
+ 	String<int> temp;
+ 	minDifferenceInMatrix(allPWMsLength,minDifference,compare);
+-	for(unsigned n=allPWMsLength;n>1;n--){//treshold noch bestimmen --> && minDifference[0]<2
++	for(unsigned n=allPWMsLength;n>1;--n){//treshold noch bestimmen --> && minDifference[0]<2
+ 		
+ 		
+ 		//BuildMeanOf2PWMs(seq,seq.allPWMs[int(minDifference[1])],seq.allPWMs[int(minDifference[2])]);//bildet aus 2PWMs die Mittelwerte und speichert sie in
+@@ -1285,6 +1285,7 @@
+ 		/****
+ 					Wk berechnet
+ 		****/
++		std::cout<<"n "<<allPWMsLength-n<<std::endl;
+ 		computeWk(allPWMsLength-n,cluster);
+ 		
+ 

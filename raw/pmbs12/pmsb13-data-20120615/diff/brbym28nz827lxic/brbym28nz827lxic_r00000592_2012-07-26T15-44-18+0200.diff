@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-26 15:37:19.206002900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-26 15:44:16.929002900 +0200
+@@ -716,14 +716,14 @@
+ 	unsigned j;
+ 	unsigned n=5;
+ 	for (j = 0; j < int(minDifference[1]); j++)
+-		compare[int(minDifference[1])][j] = std::max(compare[int(minDifference[2])][j],compare[int(minDifference[1])][j]);
++		compare[j][int(minDifference[1])] = std::max(compare[j][int(minDifference[2])],compare[j][int(minDifference[1])]);
+ 	for (j = int(minDifference[1])+1; j < int(minDifference[2]); j++)
+-		compare[j][int(minDifference[1])] = std::max(compare[int(minDifference[2])][j],compare[j][int(minDifference[1])]);
++		compare[int(minDifference[1])][j] = std::max(compare[j][int(minDifference[2])],compare[int(minDifference[1])][j]);
+ 	for (j = int(minDifference[2])+1; j < n; j++)
+-		compare[j][int(minDifference[1])] = std::max(compare[j][int(minDifference[2])],compare[j][int(minDifference[1])]);
+-	/*for (j = 0; j < int(minDifference[2]); j++) compare[int(minDifference[2])][j] = compare[n-1][j];
+-	for (j = int(minDifference[2])+1; j < n-1; j++) compare[j][int(minDifference[2])] = compare[n-1][j];
+-*/
++		compare[int(minDifference[1])][j] = std::max(compare[int(minDifference[2])][j],compare[int(minDifference[1])][j]);
++	for (j = 0; j < int(minDifference[2]); j++) compare[j][int(minDifference[2])] = compare[j][n-1];
++	for (j = int(minDifference[2])+1; j < n-1; j++) compare[int(minDifference[2])][j] = compare[j][n-1];
++
+ 	/*****
+ 			New Matrix:
+ 

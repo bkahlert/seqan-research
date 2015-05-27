@@ -1,0 +1,36 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-01 14:18:05.832403500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-01 14:20:35.783403500 +0200
+@@ -796,7 +796,7 @@
+ 
+ 			Für jede Spalte berechnen und durch Spaltenanzahl teilen --> im Nachhinein
+ 	****/
+-	double columnEntropy=0.;
++	double columnEntropy=0;
+ 	
+ 	
+ 	columnEntropy  = freqMatrix1['A']*log(freqMatrix1['A']/freqMatrix2['A']);
+@@ -811,13 +811,13 @@
+ 		
+ 
+ 	
+-	
++	return columnEntropy;
+ 
+ }
+ 
+ double ComparePWM(std::map<Iupac,double>  &freqMatrix1,std::map<Iupac,double>  &freqMatrix2, Euklidisch const & tag){
+ 
+-	double columnEntropy = 0.;
++	double columnEntropy = 0;
+ 
+ 	columnEntropy  = (freqMatrix1['A'] - freqMatrix2['A'])*(freqMatrix1['A'] - freqMatrix2['A']);
+ 	columnEntropy += (freqMatrix1['C'] - freqMatrix2['C'])*(freqMatrix1['C'] - freqMatrix2['C']);
+@@ -825,6 +825,7 @@
+ 	columnEntropy += (freqMatrix1['T'] - freqMatrix2['T'])*(freqMatrix1['T'] - freqMatrix2['T']);
+ 	columnEntropy  = sqrt(columnEntropy);
+ 	
++	return columnEntropy;
+ 
+ }
+ /****

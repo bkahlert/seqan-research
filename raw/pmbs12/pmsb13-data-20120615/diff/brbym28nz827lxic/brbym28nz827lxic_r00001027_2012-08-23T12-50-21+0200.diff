@@ -1,0 +1,44 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-21 22:32:00.144507000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-23 12:49:18.734941000 +0200
+@@ -260,6 +260,9 @@
+ 	clusterTraceback(sequences.allMotifs,traceback,computeGapStat(sequences.allPWMs,cluster));
+ 	
+ 	clear(cluster);
++	clear(traceback);
++	clear(sequences.allMotifs);
++	clear(sequences.allPWMs);
+ 	/***
+ 		MOTIF 1 CONSENSUS: TGAAAG
+ 		MOTIF 2 CONSENSUS: CCAGGA
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-23 12:35:54.104941000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-23 12:49:18.748941000 +0200
+@@ -1320,7 +1320,9 @@
+ 	
+ 	clear(allWk);
+ 	clear(Gap);
+-	
++	clear(l_quer_for_k);
++	clear(sk);
++	clear(traceback);
+ 
+ 	return 0;
+ 
+@@ -1342,7 +1344,7 @@
+ 		++tracebackIt;
+ 		std::cout<<allMotifs[*tracebackIt]<<std::endl;
+ 	}
+-
++	
+ }
+ 
+ void PWMClustering(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs,
+@@ -1432,6 +1434,7 @@
+ 	clear(minDifference);
+ 	clear(compare);
+ 	clear(copyCompare);
++	clear(weights);
+ 
+ 	
+ 

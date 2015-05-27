@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 16:56:31.003402900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 17:11:03.082402900 +0200
+@@ -442,8 +442,6 @@
+ 						
+ 			String<Dna5> replace;
+ 			Iterator<String<Dna5> >::Type replaceIt;
+-			Iterator<String<Dna5> >::Type replaceIttemp;//ansonsten fallen einige raus
+-			//--> bei jedem reset von tempIt auch replaceIt reseten und dann wieder reingehen, falls das alte replace noch nicht am ende ist
+ 			Iterator<String<Iupac> >::Type tempIttemp;
+ 			unsigned int posTemp=0;
+ 			char resetTemp;//bei mehr als einer wildcard, müssen die weiter hinten liegenden nach abarbeitung resetet werden, ansonsten werden diese im nächsten schritt übergangen

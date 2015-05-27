@@ -1,0 +1,31 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Indices.cpp ./sandbox/meyerclp/demos/Indices.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Indices.cpp	2012-04-12 15:57:34.110384400 +0200
++++ ./sandbox/meyerclp/demos/Indices.cpp	2012-04-12 16:01:02.162384400 +0200
+@@ -59,14 +59,24 @@
+ 	int i=0;
+ 	while(i<10){
+ 		++i;
+-		goDown(it);
++		
+ 		if(goDown(it)){
+ 			::std::cout<<representative(it)<<std::endl;
+ 			
+ 		}
+ 		else{
+-			goRight(it);
+-			::std::cout<<representative(it)<<std::endl;
++			if(goRight(it))
++				::std::cout<<representative(it)<<std::endl;
++			else{
++				while(goUp(it)){
++					if(goRight(it)){
++						::std::cout<<representative(it)<<std::endl;
++						break;
++					}
++					break;
++
++				}
++			}
+ 		}
+ 	}
+ 

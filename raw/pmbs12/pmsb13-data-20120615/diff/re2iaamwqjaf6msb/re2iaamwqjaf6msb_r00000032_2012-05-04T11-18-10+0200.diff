@@ -1,0 +1,42 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/demos/segmentaligner.cpp ./sandbox/jennyann/demos/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/demos/segmentaligner.cpp	2012-05-04 10:56:37.285321000 +0200
++++ ./sandbox/jennyann/demos/segmentaligner.cpp	2012-05-04 11:18:07.021204000 +0200
+@@ -2,6 +2,7 @@
+ #include <seqan/sequence.h>
+ #include "D:/SeqAn/core/apps/stellar/stellar.h"
+ #include "D:/SeqAn/core/apps/stellar/stellar.cpp"
++#include "../../../core/apps/stellar/stellar.h"
+ 
+ using namespace seqan;
+ 
+@@ -26,16 +27,26 @@
+ 	double epsilon;
+ 	double minLength;
+ 
+-	/*typedef Index<StringSet<TSequence, Dependent<> >, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
++	unsigned epsilon = 0.1;
++	unsigned minLength = 50;
++	unsigned maxValue = (unsigned)-1;
++    unsigned compactThresh = 1000;
++	TId id = "db";
++
++	typedef Index<StringSet<TSequence, Dependent<> >, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
+     TQGramIndex qgramIndex(queries);
+     Pattern<TQGramIndex, Swift<SwiftLocal> > swiftPattern(qgramIndex);
+ 
+ 	
+ 
+ 	typedef Finder<TSequence, Swift<SwiftLocal> > TFinder;
+-    TFinder swiftFinder(databases, 1, 1000);*/
++    TFinder swiftFinder(databases, 1, 1000);
++
++	//stellar(file1, file2, epsilon, minLength, AllLocal());
+ 
+-	stellar(file1, file2, epsilon, minLength, AllLocal());
++	stellar(swiftFinder, swiftPattern, epsilon, minLength, xDrop,
++            maxValue, compactThresh, maxValue, 0, id, true,
++            matches, AllLocal());
+ 
+ 
+ }
+\ No newline at end of file

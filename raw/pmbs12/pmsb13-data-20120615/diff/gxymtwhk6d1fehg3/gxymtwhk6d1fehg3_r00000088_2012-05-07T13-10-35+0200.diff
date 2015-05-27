@@ -1,0 +1,44 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-07 13:02:11.285414000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-07 13:10:36.582143000 +0200
+@@ -8,6 +8,15 @@
+ typedef Index<String<char>, IndexEsa<> > BowTieIndex;
+ typedef Finder<BowTieIndex> BowTieFinder;
+ 
++String<char> revert (String<char> word){
++	String<char> rWord;
++	int n = length(word)
++	for (int i = 0; i< n ; i++){
++		rWord[i] = word[n-i];
++	}
++	return rWord;
++}
++
+ /////*
+ ////template <typename T>
+ ////struct Iterator;
+@@ -272,13 +281,20 @@
+ int main(){
+ 	
+ 	String<char> text = "GTATACACAGATAGT";
+-	String<char> pattern = "CA";
++	String<char> pattern = "AGACA";
++	String<char> rText;
++	String<char> rPattern;
++
++	BowTieIndex forwardIndex(text);
++	BowTieFinder forwardFinder(forwardIndex);
++
++	rText = revert(text);
++	std::cout << rText << std::endl;
+ 
+-	BowTieIndex myIndex(text);
+-	BowTieFinder myFinder(myIndex);
++	//cutting the pattern
+ 
+ 	while (find(myFinder, pattern)) {
+-		std::cout << position(myFinder)<< std::endl;
++		std::cout << position(forwardFinder)<< std::endl;
+ 	}
+ 
+ 	std::cout << " " << std::endl;

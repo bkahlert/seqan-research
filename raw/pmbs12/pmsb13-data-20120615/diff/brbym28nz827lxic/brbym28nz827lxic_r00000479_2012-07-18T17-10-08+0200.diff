@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 17:05:19.094609500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 17:10:07.061609500 +0200
+@@ -848,7 +848,7 @@
+ 	//std::cout<<generalizedKmerSequence.size();
+ 	for(;MapI!=seq.generalizedKmer.end();++MapI,++MapIB){
+ 		
+-		if((*MapI).second > seq.SeqsNumber || (*MapIB).second > back.SeqsNumber) std::cout<<(*MapI).first<<" "<<(*MapI).second<<" "<<(*MapIB).first<<" "<<(*MapIB).second<<std::endl;
++		if((*MapI).second > seq.SeqsNumber || (*MapIB).second > back.SeqsNumber){ std::cout<<(*MapI).first<<" "<<(*MapI).second<<" "<<(*MapIB).first<<" "<<(*MapIB).second<<std::endl;}
+ 		modifyFET((*MapI).second,(*MapIB).second,seq.SeqsNumber - (*MapI).second,back.SeqsNumber - (*MapIB).second,pValue);
+ 		
+ 
+@@ -998,11 +998,11 @@
+ 		- only do the next function call, if in the last at least one pValue<treshold	
+ 		- call GeneralizeKmer in loop
+ 	*/
+-	PrintMap(seq.generalizedKmer);
++	//PrintMap(seq.generalizedKmer);
+ 	//seq.generalizedSortedPValue.insert(seq.SortedPValue.begin(),seq.SortedPValue.end());
+ 	double topPValue = FisherExactTest(seq,back,generalizedSortedPValueTemp);// lowest pValue from the first generalization
+ 	double topPValueOld =seq.SortedPValue.begin()->first;//lowest pValue before generalization
+-
++	system("PAUSE");
+ 	do{//only start a new round, if the top PValue is an improvement of the old one
+ 		
+ 		

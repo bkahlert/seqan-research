@@ -1,0 +1,180 @@
+//==========================================================================
+// rMotifGen
+// Eric C. Rouchka
+// C. Timothy Hardin
+// University of Louisville
+// (c) 2004-2007, Eric C. Rouchka and C. Timothy Hardin,
+//                University of Louisville
+//
+//    rMotifGen is free software; you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation; either version 2 of the License, or
+//    (at your option) any later version.
+//
+//    rMotifGen is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with rMotifGen; if not, write to the Free Software
+//    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+//
+//==========================================================================
+
+____________________________________________________________________________
+DESCRIPTION 
+-----------
+
+	rMotifGen is a C++ program that allows users to construct DNA 
+	sequences containing either randomly generated or user-defined
+	motif sequences.  These sequences can be useful for simulation
+	purposes, or for testing of DNA motif dectection software.
+
+____________________________________________________________________________
+
+BUILDING rMotifGen
+------------------ 
+
+	rMotifGen was developed using ANSI C++.  rMotifGen uses the Makefile
+	build system.  In order to create the executable, 
+	type:
+
+		make
+
+	This will create the executable rMotifGen
+____________________________________________________________________________
+
+RUNNING rMotifGen
+-----------------
+
+        INTERACTIVE MODE
+
+	In order to run rMotifGen in interactive mode, type:
+
+		rMotifGen
+	
+	You will be prompted to enter in the number of random sequences
+	to generate, which must be greater than 0 and less than 1001.
+	For these sequences, you will be prompted for the length of each 
+	sequence, which must be greater than 9 and less than 10001.
+	For the overall sequence compostion, you will be prompted for the 
+	overall percent A, C, G, and T.  Each of these must be between 0
+	and 100, and the sum of all four must be equal to 100. 
+
+	You will be prompted to enter in the number of motifs per sequence,
+	which must be at least 0, and less than 11.  For each individual
+	motif, the user should enter in whether the motif is (U)ser defined
+	or (R)andom.  For those motifs that are user defined, you will be
+	prompted for the motif consensus sequence.  If the motif is random,
+	you will be prompted to determine the length of the motif, whether
+	or not the motif is palindromic, and the compostion of the motif.
+	For each motif, you will then be prompted for the percent conservatiton
+	of the motif within each of the sequences, and then the percent
+	conservation of the motif consensus in each sequence.  The
+	conservation must be at least 0, and at most 100.
+
+	The consensus for each motif will then be displayed, and the user
+	will be prompted to display the sequences to the screen or to a file.
+	The resulting sequences will be in FASTA format, with the first line
+	containing a description of the sequence, followed by a space, followed
+        by the location of each of the motifs, respectively.  If a motif was 
+	not included in the sequence, it will have a position of -1.
+
+
+        FILE MODE
+
+        In order to run rMotifGen in file mode, type:
+
+              rMotifGen <residueType> -f <infile>
+  
+        Where residueType is either 'N' for nucleic acids, or 'P' for
+        proteins.
+
+        The input file format will be similar for both nucleic acids and 
+        proteins.  The included file AAinput.dat is an example input file for
+        amino acids, and the file input.dat is an example file for nucleic
+        acids.  The format for these files is LABEL=VALUE where the labels are
+        found in the following order:
+        numSeq=            // Number of random sequences to generate
+        seqLen=            // Length of each of the random sequences
+        OAPct<Residue_x>=  // Background count of residue y where
+                           // y = A, C, G, T for DNA, or 
+                           // y = A,R,N,D,C,Q,E,G,H,I,L,K,M,F,P,S,T,W,Y,V 
+                           // for amino acids (note they must appear in this
+                           // order)
+        numMotifs=         // number of motifs to generate
+        motif<X>Type=      // Where X=1..numMotifs --  the value can
+                           // be 'U' for user defined or 'R' for random
+        motif<X>Seq=       // Only Valid if Type = 'U' -- consensus motif
+        motif<X>PctSeqsContain= // Percentage of sequences that contain this 
+                                // motif 
+        motif<X>PAM=            // PAM matrix to use (only for Amino acids)
+        motif<X>PctCons=        // Percent conservation of motif consensus
+                                // (only for DNA sequences)
+        motif<X>Pct<Residue_y>= // Motif frequency for residue y where 
+                                // y is the same as described above
+        output=                 // 'F' for file, 'S' for screen
+        outFile=                // only if output='F'
+ 
+
+____________________________________________________________________________
+
+ERROR CODES
+-----------
+5 -- Invalid Usage
+7 -- Input file does not exist
+8 -- Invalid number of sequences n ( 0 < n < 1001)
+9 -- Invalid sequence length l (9 < l < 10001)
+11 -- Invalid OAPct p (-1 < p < 100)
+12 -- Invalid total overall percentage (must equal 100)
+13 -- Invalid number of motifs m (-1 < m < 11)
+14 -- Invalid character
+15 -- Invalid DNA or PROTEIN sequence
+16 -- Invalid percentage conserved p (-1 < p < 101)
+17 -- Invalid percentage motif conserved p (-1 < p < 101)
+18 -- Invalid motif length m (-1 < m < 101)
+19 -- Invalid isPalindrome token (Y or N)
+20 -- Invalid motif residue percentage p (0 < p < 100)
+21 -- Invalid total reside percentage (must sume to 100)
+22 -- Invalid output type (F for File, S for Screen)
+23 -- Invalid output file name
+24 -- Output file does not exist
+25 -- Invalid PAM (must be between 0 and 500)
+26 -- Invalid EOF
+
+ADDITIONAL FILES 
+----------------
+	
+	For authorship information, see the CREDITS file.
+	For license information, see the LICENSE file.
+	For further information, see:
+		http://kbrin.a-bldg.louisville.edu/Tools/rMotifGen/
+
+____________________________________________________________________________
+
+REFERENCES 
+----------
+	If you use rMotifGen, please cite:
+
+	Rouchka EC, Hardin CT (2007) rMotifGen: random motif generator
+	for genomic sequences.  (under review)
+
+
+____________________________________________________________________________
+
+CONTACT
+-------
+	For more information, see the website:
+		http://kbrin.a-bldg.louisville.edu/Tools/rMotifGen/
+
+        Or contact:
+		Eric C. Rouchka
+		University of Louisville
+		Speed School of Engineering
+		Department of Computer Engineering and Computer Science
+		123 JB Speed Building
+		Louisville, KY 40292
+
+		eric.rouchka@louisville.edu
+____________________________________________________________________________

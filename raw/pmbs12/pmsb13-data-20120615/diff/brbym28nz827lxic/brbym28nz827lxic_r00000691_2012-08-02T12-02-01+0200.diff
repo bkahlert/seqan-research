@@ -1,0 +1,45 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-08-02 11:51:40.935593700 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-08-02 12:01:59.784593700 +0200
+@@ -726,11 +726,12 @@
+ 		}
+ 		std::cout<<std::endl;
+ 
+-	minDifference[0]=compare[3][1][0];//3=zeile 1=spalte
+-	minDifference[1]=1;
+-	minDifference[2]=3;
++	//minDifference[0]=compare[3][1][0];//3=zeile 1=spalte
++	//minDifference[1]=1;
++	//minDifference[2]=3;
+ 	unsigned j;
+ 	unsigned n=5;
++	minDifferenceInMatrix(n,minDifference,compare);
+ 	
+ 	UpdateDistantMatrix(n,int(minDifference[1]),int(minDifference[2]),compare,CompleteLinkage());
+ 
+@@ -763,10 +764,11 @@
+ 			6	9	6	0
+ 	*****/
+ 
+-	minDifference[0]=compare[2][0][0];//3=zeile 1=spalte
+-	minDifference[1]=0;
+-	minDifference[2]=2;
++	//minDifference[0]=compare[2][0][0];//3=zeile 1=spalte
++	//minDifference[1]=0;
++	//minDifference[2]=2;
+ 	--n;
++	minDifferenceInMatrix(n,minDifference,compare);
+ 	UpdateDistantMatrix(n,int(minDifference[1]),int(minDifference[2]),compare,CompleteLinkage());
+ 
+ 	/*****
+@@ -789,6 +791,10 @@
+ 
+ }
+ 
++SEQAN_DEFINE_TEST(test_ComparePWM){
++
++}
++
+ 
+ SEQAN_BEGIN_TESTSUITE(dreme_test)
+ {

@@ -1,0 +1,28 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-18 17:13:48.919609500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-18 18:43:13.442609500 +0200
+@@ -12,7 +12,7 @@
+ 	IupacMaps IMaps;
+ 	unsigned int kmer_len=4;
+ 	unsigned int kmer_len_end=6;
+-	sequences.seed=100;
++	sequences.seed=70;
+ 	MapIupac(IMaps);//IupacMap for generalization
+ 	
+ 	if(argc !=3){
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 17:17:49.200609500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 18:42:02.717609500 +0200
+@@ -1042,10 +1042,10 @@
+ 	
+ 		}
+ 		generalizedSortedPValueTemp.clear();
+-		std::cout<<"nach for"<<std::endl;
++		//std::cout<<"nach for"<<std::endl;
+ 	topPValueOld =topPValue;
+ 	topPValue = FisherExactTest(seq,back,generalizedSortedPValueTemp);
+-	std::cout<<"nach Fisher "<<topPValue<<" "<<topPValueOld<<std::endl;
++	//std::cout<<"nach Fisher "<<topPValue<<" "<<topPValueOld<<std::endl;
+ 		
+ 	}while(topPValue<0.05 && topPValue<topPValueOld);
+ 	

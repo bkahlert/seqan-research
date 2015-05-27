@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-02 14:34:47.271198000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-02 14:37:31.942311000 +0200
+@@ -62,6 +62,8 @@
+ 	resize(sa, length(text));
+ 	createSuffixArray(sa, text, Skew7());
+ 
++	createBWTable ( bwt, text, sa );
++
+ 	//Index<String<char>, IndexEsa < EsaBwt > > index;
+ 	std::cout << "bla2" << std::endl;
+ 

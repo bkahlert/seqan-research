@@ -1,0 +1,49 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-11 13:50:02.974664900 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-11 14:09:25.434090400 +0200
+@@ -41,15 +41,13 @@
+ using namespace seqan;
+ 
+ template<typename TSequence>
+-void stellar_find_matches(TSequence & file1, TSequence & file2) {
++void stellar_find_matches(TSequence & file1, StringSet<TSequence> & file2) {
+ 	double epsilon = 0.01;
+ 	unsigned minLength = 20;
+ 	unsigned xDrop = 2;
+-	typedef String<char> TId;
+ 	
+ 	unsigned maxValue = (unsigned)-1;
+     unsigned compactThresh = 1000;
+-    TId id = "db";
+ 
+ 	 // container for eps-matches
+     StringSet<QueryMatches<StellarMatch<TSequence, TId> > > matches;
+@@ -57,7 +55,7 @@
+ 
+ 	//pattern
+ 	typedef Index<StringSet<TSequence, Dependent<> >, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
+-    TQGramIndex qgramIndex;
++    TQGramIndex qgramIndex(queries);
+ 	//qgramIndex.dir(file2);
+     //Pattern<TQGramIndex, Swift<SwiftLocal> > swiftPattern(qgramIndex);
+ 
+@@ -72,10 +70,14 @@
+ 
+ int main()
+ {
+-	typedef String<TSequence> seq;
+-	seq file1 = "AGTTGTTAGTCTACGTGGACCGACAAAGACAGATTCTTTGAGGGAGCTAAGCTCAACGTAGTTCTAACAG";
+-	seq file2 = "AGTTCTTAGTCTACGTGGACCGACAAAGAAAAATTCTTTGAGGGAGCTAAGCTCAACGATGTTCTAACAG";
++	typedef String<Dna5> TSequence;
++	StringSet<TSequence> queries;
++	TSequence file1 = "AGTTGTTAGTCTACGTGGACCGACAAAGACAGATTCTTTGAGGGAGCTAAGCTCAACGTAGTTCTAACAG";
++	TSequence file2 = "AGTTCTTAGTCTACGTGGACCGACAAAGAAAAATTCTTTGAGGGAGCTAAGCTCAACGATGTTCTAACAG";
+ 
+-	stellar_find_matches(file1,file2);
++	AppendValue(queries, file2);
++
++
++	stellar_find_matches(file1,queries);
+ 
+ }
+\ No newline at end of file

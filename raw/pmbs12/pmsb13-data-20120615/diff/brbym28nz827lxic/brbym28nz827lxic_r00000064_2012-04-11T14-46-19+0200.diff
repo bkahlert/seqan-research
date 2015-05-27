@@ -1,0 +1,37 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Quelle1.cpp ./sandbox/meyerclp/demos/Quelle1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Quelle1.cpp	2012-04-11 14:43:33.618014300 +0200
++++ ./sandbox/meyerclp/demos/Quelle1.cpp	2012-04-11 14:46:18.727014300 +0200
+@@ -28,22 +28,22 @@
+ 
+ int main(){
+ 
+-String<char> str = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
+-//Iterator<String<AminoAcid> >::Type StringIterator = begin(str);
+-//Iterator<String<AminoAcid> >::Type it2 = end(str);
+-//while(StringIterator != it2){
+-//	if(*StringIterator == 'R')
+-//		*StringIterator = 'A';
+-//	++StringIterator;
+-//}
+-//std::cout<<str;
++String<AminoAcid> str = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
++Iterator<String<AminoAcid> >::Type StringIterator = begin(str);
++Iterator<String<AminoAcid> >::Type it2 = end(str);
++while(StringIterator != it2){
++	if(*StringIterator == 'R')
++		*StringIterator = 'A';
++	++StringIterator;
++}
++std::cout<<str;
+ 
+-String<AminoAcid> test = "MAL";
++//String<AminoAcid> test = "MAL";
+ 
+ 
+ 
+ 
+-countAllLetters(AminoAcid(),test);
++countAllLetters(AminoAcid(),str);
+ 
+ 
+ /*

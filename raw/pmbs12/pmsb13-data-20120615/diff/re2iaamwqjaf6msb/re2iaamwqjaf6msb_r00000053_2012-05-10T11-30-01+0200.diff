@@ -1,0 +1,40 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 11:26:09.252465600 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 11:29:59.354023300 +0200
+@@ -6,16 +6,14 @@
+ 
+ using namespace seqan;
+ 
+-template<typename TSequence, typename TId, typename TSource>
+-void stellar_find_matches(TSequence & file1, TSequence & file2, StringSet<QueryMatches<StellarMatch<TSource, TId> > > & matches) {
++template<typename TSequence, typename TMatches, typename TSource>
++void stellar_find_matches(TSequence & file1, TSequence & file2) {
+ 	unsigned epsilon = 0.01;
+ 
+ 	//typedef typename Value<TDir>::Type TSize;
+ 
+ 	unsigned minLength = 20;
+ 
+-	typedef String<StellarMatch<TSequence, TId> matches;
+-
+ 	//typedef Index<StringSet<TSequence, Dependent<> >, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
+     //TQGramIndex qgramIndex(queries);
+     //Pattern<TQGramIndex, Swift<SwiftLocal> > swiftPattern(qgramIndex);
+@@ -23,6 +21,8 @@
+ 	//typedef Finder<TSequence, Swift<SwiftLocal> > TFinder;
+     //TFinder swiftFinder(databases, 1, 1000);
+ 
++	Tmatches matches;
++
+ 	stellar(file1, file2, epsilon, minLength, xDrop, matches, AllLocal());
+ 
+ }
+@@ -48,6 +48,6 @@
+ 	//double epsilon;
+ 	//double minLength;
+ 
+-	stellar_find_matches(file1,file2, matches);
++	stellar_find_matches(file1,file2);
+ 
+ }
+\ No newline at end of file

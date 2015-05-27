@@ -1,0 +1,9 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/CMakeLists.txt ./sandbox/jennyann/apps/segmentaligner/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/CMakeLists.txt	2012-05-10 10:42:10.352621400 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/CMakeLists.txt	2012-05-10 10:49:53.083477800 +0200
+@@ -2,4 +2,4 @@
+ project (sandbox_my_sandbox_apps_segmentaligner)
+ 
+ # Update the list of file names below if you add source files to your application.
+-seqan_add_executable(segmentaligner segmentaligner.cpp segmentaligner.h)
++seqan_add_executable(segmentaligner segmentaligner.cpp)

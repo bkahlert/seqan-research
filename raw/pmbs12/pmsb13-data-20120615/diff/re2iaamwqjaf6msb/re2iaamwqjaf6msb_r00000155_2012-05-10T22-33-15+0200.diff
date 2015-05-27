@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 22:32:56.896794100 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 22:33:14.603806900 +0200
+@@ -12,7 +12,7 @@
+ {
+ 	 CharString const filename = "test1.fasta";
+ 
+-	 std::ifstream fasta(toCString(fileName), std::ios_base::in | std::ios_base::binary);
++	 std::ifstream fasta(toCString(filename), std::ios_base::in | std::ios_base::binary);
+     if (!fasta.good())
+         return 1;
+     RecordReader<std::ifstream, SinglePass<> > reader(fasta);

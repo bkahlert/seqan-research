@@ -1,0 +1,74 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-21 14:09:26.822707000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-21 14:30:32.127707000 +0200
+@@ -257,7 +257,7 @@
+ 	String<int> traceback;
+ 	PWMClustering(sequences.allPWMs,cluster,traceback);
+ 	std::cout<<"ComputeGapStat"<<std::endl;
+-	clusterTraceback(traceback,computeGapStat(sequences.allPWMs,cluster));
++	clusterTraceback(sequences.allPWMs,traceback,computeGapStat(sequences.allPWMs,cluster));
+ 	
+ 	clear(cluster);
+ 	/***
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-21 14:18:11.320707000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-21 14:30:32.144707000 +0200
+@@ -44,6 +44,7 @@
+ 	std::map<unsigned int,std::map<Iupac,double> > weightMatrix;
+ 	std::map<unsigned int, double > seqLogoMatrix;
+ 	std::map<unsigned int, double > columnEntropy;
++	String<String<Iupac> > allMotifs;
+ 	
+ 	std::map<unsigned int,std::map<Iupac,double> > InformationContentMatrix;
+ 	FrequencyDistribution<Dna5> frequencies;
+@@ -171,7 +172,7 @@
+ void compute_l_quer(String<Cluster> &cluster, String<double> &l_quer_for_k,String<String<double> > &allWk,unsigned i,int B,	unsigned allPWMsLength);
+ void computeGap(String<double> &l_quer_for_k,String<Cluster> &observedCluster,String<double> &Gap,unsigned allPWMsLength);
+ void compute_sdk_and_sk(String<double> &sk,String<double> &l_quer_for_k,String<String<double> > &allWk,unsigned allPWMsLength,int B);
+-void clusterTraceback(String<int> &traceback, unsigned j);
++void clusterTraceback(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs,String<int> &traceback, unsigned j);
+ 
+ 
+ void readFastA(	struct Seq &seq, 
+@@ -638,6 +639,8 @@
+ 							IupacMaps &IMaps){
+ 			//std::cout<<Kmer<<std::endl;
+ 			//freqMatrix -->unsigned int = position in Kmer, position 1 in map = prob. for A, pos. 2 = prob. for C...
++			appendValue(seq.allMotifs,Kmer,Exact());
++								
+ 			String<Iupac> temp;	
+ 			
+ 			Iterator<String<Iupac> >::Type tempIt;
+@@ -691,9 +694,13 @@
+ 							IupacMaps &IMaps){
+ 			//std::cout<<Kmer<<std::endl;
+ 			//freqMatrix -->unsigned int = position in Kmer, position 1 in map = prob. for A, pos. 2 = prob. for C...
+-			String<Iupac> temp;	
+ 			
++			appendValue(seq.allMotifs,Kmer,Exact());
++								
++			String<Iupac> temp;	
+ 			Iterator<String<Iupac> >::Type tempIt;
++
++
+ 			
+ 			temp=Kmer;
+ 			tempIt = begin(temp);
+@@ -1024,7 +1031,7 @@
+ 
+ 	if(n>0){
+ 		cluster[n].Wk=cluster[n-1].Wk;
+-		std::cout<<"Wk "<<cluster[n].Wk<<" "<<n<<" "<<cluster[n].left<<" "<<cluster[n].right<<" "<<cluster[n].Dr<<std::endl;
++		//std::cout<<"Wk "<<cluster[n].Wk<<" "<<n<<" "<<cluster[n].left<<" "<<cluster[n].right<<" "<<cluster[n].Dr<<std::endl;
+ 	}
+ 	else
+ 		cluster[n].Wk=0;
+@@ -1279,7 +1286,7 @@
+ 
+ }
+ 
+-void clusterTraceback(String<int> &traceback, unsigned j){
++void clusterTraceback(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs,String<int> &traceback, unsigned j){
+ 
+ 	Iterator<String<int> >::Type tracebackIt;
+ 	if(j==0){	

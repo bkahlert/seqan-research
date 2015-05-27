@@ -1,0 +1,52 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x core -x extras -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/ChIPSeq.cpp ./sandbox/meyerclp/demos/ChIPSeq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/ChIPSeq.cpp	2012-04-17 14:52:48.653405700 +0200
++++ ./sandbox/meyerclp/demos/ChIPSeq.cpp	2012-04-17 15:13:13.360405700 +0200
+@@ -1,7 +1,45 @@
+-int main(){
++#include <fstream>
++#include <iostream>
++#include <seqan/basic.h>
++#include <seqan/file.h>
++#include <seqan/stream.h>
+ 
++using namespace seqan;
+ 
+ 
+-	return0;
++
++int main(int argc, char const ** argv){
++
++	if(argc !=2){
++		std::cerr<<"ERROR: Invalid argument count."<<std:: endl
++				 <<"Usage:" <<argv[0]<<"File"<<std::endl;
++		return 1;
++	}
++	std:: ifstream fasta(argv[1], std:: ios_base::in | std::ios_base::binary);
++	if(!fasta.good())
++		return 1;
++	RecordReader<std::ifstream, SinglePass<> > reader(fasta);
++
++	AutoSeqStreamFormat formatTag;
++	if(!checkStreamFormat(reader,formatTag)){
++		std::cerr<<"Could not determine file format!"<<std::endl;
++		return 1;
++	}
++	std::cout<<"File format is "<<getAutoSeqStreamFormatName(formatTag)<<'\n';
++
++
++	//Variable um Sequenz und ID zu speichern
++	CharString id;
++	Dna5String seq;
++
++	while(!atEnd(reader)){
++
++		if(readRecord(id,seq,reader,formatTag) !=0){
++			std::cerr<<"ERROR reading FASTA"<<std::endl;
++			return 1;
++		}
++		std::cout<<id<<"\t"<<seq<<"\n";
++	}
++	return 0;
+ 
+ }
+\ No newline at end of file

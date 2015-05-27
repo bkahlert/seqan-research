@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-09 16:25:35.660968000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-10 14:47:09.784681000 +0200
+@@ -7,6 +7,7 @@
+ using namespace seqan;
+ typedef Index<String<char>, IndexEsa<> > BowTieIndex;
+ typedef Finder<BowTieIndex> BowTieFinder;
++typedef Iterator<String<Dna5>, Rooted>::Type BowTieIterator;
+ 
+ //globale Variablen
+ 	String<char> text = "gtatacacagacagt";
+@@ -161,9 +162,9 @@
+ 	cuttedPattern= pattern;
+ 	resize (cuttedPattern, cutPos);
+ 
+-	find(forwardFinder, cuttedPattern);
+-	goDown(forwardFinder, 'a');
+-	int a = position(forwardFinder)
++	//find(forwardFinder, cuttedPattern);
++	//goDown(forwardFinder, 'a');
++	//int a = position(forwardFinder);
+ 
+ 	std::cout<< a << std::endl; 
+ 	//while(find(forwardFinder,cuttedPattern)){

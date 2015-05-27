@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-02 16:04:50.015244000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-02 16:05:26.768748000 +0200
+@@ -63,13 +63,13 @@
+ 	}
+ 
+ 	for (unsigned int i = 0; i < length(text); i++) {
+-		if ( (text[i] == 'A') || (text[i] == 'a')
++		if ( (text[i] == 'A') || (text[i] == 'a'))
+ 			cAlpha[1]+= 1;
+-		if ( (text[i] == 'C') || (text[i] == 'c')
++		if ( (text[i] == 'C') || (text[i] == 'c'))
+ 			cAlpha[2]+= 1;
+-		if ( (text[i] == 'G') || (text[i] == 'g')
++		if ( (text[i] == 'G') || (text[i] == 'g'))
+ 			cAlpha[3]+= 1;
+-		if ( (text[i] == 'T') || (text[i] == 't')
++		if ( (text[i] == 'T') || (text[i] == 't'))
+ 			cAlpha[1]+= 1;
+     }
+ 

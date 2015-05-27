@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Graphs.cpp ./sandbox/meyerclp/demos/Graphs.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Graphs.cpp	2012-04-13 10:07:59.201799200 +0200
++++ ./sandbox/meyerclp/demos/Graphs.cpp	2012-04-13 10:08:30.367799200 +0200
+@@ -21,13 +21,13 @@
+ 	TProperties cityNames;
+ 	resizeVertexMap(g,cityNames);
+ 	assignValue(cityNames,0,"a");
+-	assignProperty(cityNames,1,"b");
+-	assignProperty(cityNames,2,"c");
+-	assignProperty(cityNames,3,"d");
+-	assignProperty(cityNames,4,"e");
+-	assignProperty(cityNames,5,"f");
+-	assignProperty(cityNames,6,"g");
+-	assignProperty(cityNames,7,"h");
++	assignValue(cityNames,1,"b");
++	assignValue(cityNames,2,"c");
++	assignValue(cityNames,3,"d");
++	assignValue(cityNames,4,"e");
++	assignValue(cityNames,5,"f");
++	assignValue(cityNames,6,"g");
++	assignValue(cityNames,7,"h");
+ 
+ 	/*::std::cout << g << ::std::endl;
+ 	::std::cout << cityNames << ::std::endl;*/

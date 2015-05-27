@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/1bmlqcp2t8t0hfjr_stats.txt -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/userdata/1bmlqcp2t8t0hfjr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/arsenew/demos/arsenew_first.cpp ./sandbox/arsenew/demos/arsenew_first.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/arsenew/demos/arsenew_first.cpp	2012-04-26 23:34:20.288545400 +0200
++++ ./sandbox/arsenew/demos/arsenew_first.cpp	2012-04-26 23:35:22.450100900 +0200
+@@ -27,7 +27,7 @@
+ 
+ 	std:: cout<< "String: helloworld" << std::endl;
+ 	countOneMers("helloworld");
+-	std:: cout << "Hello du";
++	std:: cout << "Hello du"<< std::endl;
+ 	return 0;
+ }
+ 

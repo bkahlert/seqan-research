@@ -1,0 +1,57 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Alignments.cpp ./sandbox/meyerclp/demos/Alignments.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Alignments.cpp	2012-04-12 10:33:00.713801000 +0200
++++ ./sandbox/meyerclp/demos/Alignments.cpp	2012-04-12 10:59:23.749801000 +0200
+@@ -45,24 +45,40 @@
+ 	}
+ */
+ 
++	//typedef String<char> TString;
++	//TString str1 = "blablablu";
++	//TString str2 ="abab";
+ 
++	//typedef Align<TString, ArrayGaps> TAlign;
++	//TAlign align;
++	//resize(rows(align),2);
++	//assignSource(row(align,0),str1);
++	//assignSource(row(align,1),str2);
+ 
++	//
++	//int score = globalAlignment(align,Score<int>(1,-1,-1,-1),AlignConfig<true,true,false,false>(), Gotoh());
+ 
++	//::std::cout<<align;
++
++	typedef String<AminoAcid> AminoString;
++	AminoString str1 = "PNCFDAKQRTASRPL" ;
++	AminoString str2 = "CFDKQKNNRTATRDTA";
++
++	Align<AminoString> ali;
++	appendValue(rows(ali),str1);
++	appendValue(rows(ali),str2);
++
++	LocalAlignmentFinder<> finder(ali);
++	Score<int> scoring(3,-2,-1,-5);
++
++	for(int i= 0;i<3;++i){
++
++		::std::cout<<localAlignment(ali,finder,scoring,WatermanEggert());
++
++	}
+ 
+-	typedef String<char> TString;
+-	TString str1 = "blablablu";
+-	TString str2 ="abab";
+-
+-	typedef Align<TString, ArrayGaps> TAlign;
+-	TAlign align;
+-	resize(rows(align),2);
+-	assignSource(row(align,0),str1);
+-	assignSource(row(align,1),str2);
+ 
+-	
+-	int score = globalAlignment(align,Score<int>(1,-1,-1,-1),AlignConfig<true,true,false,false>(), Gotoh());
+ 
+-	::std::cout<<align;
+ 
+ 	return 0;
+ }
+\ No newline at end of file

@@ -1,0 +1,46 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-16 18:41:34.658306100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-16 18:53:47.450306100 +0200
+@@ -1110,8 +1110,14 @@
+ 					int B,
+ 					unsigned allPWMsLength){
+ 
+-		for(unsigned k=0;k<allPWMsLength-1;++k){//addiert die log(Wk's) aller B-Referenz-Daten auf --> nur die Summe wird benötigt
+-			
++		unsigned k=0;
++		for(unsigned j=0;j<allPWMsLength-1;++j){//addiert die log(Wk's) aller B-Referenz-Daten auf --> nur die Summe wird benötigt
++			/*****
++					j != anzahl der cluster -->allPWMsLength - (j+1) ist Anzahl der Cluster
++					Bei 4 Objekten entspricht k=0 dem Fall, dass 2 zusammengeclustert wurden und der Rest allein ist
++					k=allPWMsLength-2 entspricht einem großem Cluster
++			*****/
++			k=allPWMsLength-(j+1);
+ 			appendValue(allWk[i],cluster[k].Wk);
+ 			
+ 			if(i==0){
+@@ -1300,20 +1306,20 @@
+ 			appendValue(temp,clusterId[int(minDifference[2])],Exact());
+ 			
+ 		
+-		cluster[n-1].content=temp;
++		cluster[allPWMsLength-n].content=temp;
+ 		clear(temp);
+ 		/****
+ 					Dr berechnet
+ 		****/
+-		cluster[n-1].left=clusterId[int(minDifference[1])];
+-		cluster[n-1].right=clusterId[int(minDifference[2])];
+-		cluster[n-1].Dr=computeDr(cluster[n-1],copyCompare);
++		cluster[allPWMsLength-n].left=clusterId[int(minDifference[1])];
++		cluster[allPWMsLength-n].right=clusterId[int(minDifference[2])];
++		cluster[allPWMsLength-n].Dr=computeDr(cluster[allPWMsLength-n],copyCompare);
+ 		
+ 		/****
+ 					Wk berechnet
+ 		****/
+ 		
+-		computeWk(n-1,cluster);
++		computeWk(allPWMsLength-n,cluster);
+ 		
+ 
+ 		appendValue(traceback,clusterId[int(minDifference[1])]);

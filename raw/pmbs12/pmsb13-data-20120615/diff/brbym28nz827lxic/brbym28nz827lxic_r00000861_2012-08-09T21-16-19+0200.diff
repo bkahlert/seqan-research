@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-09 21:12:57.067598800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-09 21:16:15.813598800 +0200
+@@ -1119,17 +1119,17 @@
+ 	/************
+ 		l_quer berechnen
+ 	************/
+-	system("PAUSE");
++	
+ 	for(unsigned i=0;i<B;++i){
+ 
+ 		computeReferenceData( Reference,allPWMsLength, PWMLength );
+-		system("PAUSE");
++		
+ 		PWMClustering(Reference,cluster);
+ 		
+ 		for(unsigned k=0;k<allPWMsLength;++k){//addiert die log(Wk's) aller B-Referenz-Daten auf --> nur die Summe wird benötigt
+-			std::cout<<cluster[k].Wk;
++			std::cout<<i<<" "<<j<<std::endl;
+ 			appendValue(allWk[i],cluster[k].Wk);
+-			system("PAUSE");
++			
+ 			if(i==0)
+ 				l_quer=log(cluster[k].Wk)/B;
+ 			else

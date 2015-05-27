@@ -1,0 +1,61 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Indices.cpp ./sandbox/meyerclp/demos/Indices.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Indices.cpp	2012-04-12 14:52:35.179384400 +0200
++++ ./sandbox/meyerclp/demos/Indices.cpp	2012-04-12 15:33:07.028384400 +0200
+@@ -32,22 +32,44 @@
+  //       ++myIterator;
+  //   }
+ 	
++	//typedef String<char> TString;
++	//StringSet<TString> seq;
++	//appendValue(seq,"CDFGHC");
++	//appendValue(seq,"CDEFGAHC");
++
++	//typedef Index< StringSet<TString> > TMyIndex;
++	//TMyIndex myIndex(seq);
++
++	//Iterator< TMyIndex, Mums >::Type myIterator(myIndex);
++	//	while (!atEnd(myIterator))
++ //   {
++ //       std::cout << representative(myIterator) << std::endl;
++ //       ++myIterator;
++ //   }
++
++
++
++
+ 	typedef String<char> TString;
+-	StringSet<TString> seq;
+-	appendValue(seq,"CDFGHC");
+-	appendValue(seq,"CDEFGAHC");
+-
+-	typedef Index< StringSet<TString> > TMyIndex;
+-	TMyIndex myIndex(seq);
+-
+-	Iterator< TMyIndex, Mums >::Type myIterator(myIndex);
+-		while (!atEnd(myIterator))
+-    {
+-        std::cout << representative(myIterator) << std::endl;
+-        ++myIterator;
+-    }
++	TString seq = "tobeornottobe";
++
++	typedef Index<TString> TIndex;
++	TIndex myIndex(seq);
++	Iterator<TIndex, TopDown<> >::Type it(myIndex);
++
++	while(true){
++
++
++		if(!goDown(it)){
++			::std::cout<<representative(it)<<std::endl;
++			if(!goRight(it))
++				return 1;
++			goRight(it);
+ 
++		}
++		goDown(it);
+ 
++	}
+ 
+ 	return 0; 
+ 

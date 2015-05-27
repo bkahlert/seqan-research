@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-09-25 19:39:36.742321500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-09-25 19:40:51.362321500 +0200
+@@ -641,7 +641,7 @@
+ 	String<Iupac>Kmer ="ASG";
+ 	BuildFrequencyMatrix(finder,Kmer,seq,IMaps);//ASG gets masked
+ 
+-	SEQAN_ASSERT_EQ(seq.freqMatrix[0]['A'],1);
++	SEQAN_ASSERT_EQ(double(int((seq.freqMatrix[0]['A']+0.0005)*1000))/1000,0.86);
+ 	SEQAN_ASSERT_EQ(seq.freqMatrix[0]['G'],0);
+ 	SEQAN_ASSERT_EQ(seq.freqMatrix[1]['A'],0);
+ 	SEQAN_ASSERT_EQ(double(int((seq.freqMatrix[1]['G']+0.005)*100))/100,0.5);//in der hälfte der sequenzen kommt ACG und AGG vor, ACG und AGG können in der selben sequenz sein

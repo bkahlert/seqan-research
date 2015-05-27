@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 17:50:02.465402900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 17:52:20.866402900 +0200
+@@ -689,17 +689,18 @@
+ 				unsigned int d, 
+ 				double &pValue){
+ 
+-	
++	std::cout<<"modify "<<std::endl;
+ 
+ 	pValue= calcFET(a,b,c,d);
+ 	//	//std::cout<<(*MapI).first<<" "<<pValue<<"   ";
+-	//
++	std::cout<<"modify2 "<<std::endl;
+ 		while(b!=0 && c!=0){//modify to be more extrem
+ 			++a;
+ 			--b;
+ 			--c;
+ 			++d;
+ 			pValue += calcFET(a,b,c,d);
++			std::cout<<"modify3 "<<std::endl;
+ 	//		//std::cout<<pValue<<"   ";
+ 		}
+ 

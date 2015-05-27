@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-27 01:03:19.715200000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-27 01:05:48.737200000 +0200
+@@ -18,7 +18,7 @@
+ 
+ 	
+ 	
+-	if(argc !=3){
++	if(argc <2 || argc>3){
+ 		std::cerr<<"ERROR: Invalid argument count."<<std:: endl
+ 				 <<"Usage:" <<argv[0]<<"File"<<std::endl;
+ 		return 1;
+@@ -215,7 +215,7 @@
+ 		++sequences.c;
+ 		++background.c;
+ 	}
+-	while(sequences.pValue<0.05 && sequences.c<6);
++	while(sequences.pValue<0.05 && sequences.c<3);
+ 	/******
+ 			Compute the Clustering with GapStat
+ 	******/

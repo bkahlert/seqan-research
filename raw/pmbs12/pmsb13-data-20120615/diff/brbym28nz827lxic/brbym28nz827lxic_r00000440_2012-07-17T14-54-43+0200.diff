@@ -1,0 +1,50 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-17 14:43:03.379402300 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-17 14:54:41.328402300 +0200
+@@ -12,6 +12,7 @@
+ 	IupacMaps IMaps;
+ 	unsigned int kmer_len=4;
+ 	unsigned int kmer_len_end=6;
++	sequences.seed=100;
+ 	MapIupac(IMaps);//IupacMap for generalization
+ 	
+ 	if(argc !=3){
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-17 14:34:20.735402300 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-17 14:54:41.343402300 +0200
+@@ -23,7 +23,7 @@
+ 	unsigned c; // Anzahl der Motive, provisorisch
+ 	StringSet<String<Dna5> > seqs;//
+ 	Index< StringSet<String<Dna5> > > SArray;
+-	
++	unsigned seed;
+ 	unsigned int SeqsNumber;
+ 	
+ 	std::map<String<Dna5>,unsigned int > seqCounter;//maps the Sequence-Kmere to a Counter for the Sequence
+@@ -990,7 +990,7 @@
+ 	std::map<String<Iupac>,unsigned int> generalizedKmerBackgroundTemp;
+ 	unsigned int i=0;
+ 	unsigned int limit;
+-	if(seq.SortedPValue.size()>100)	limit=100;
++	if(seq.SortedPValue.size()>seq.seed)	limit=seq.seed;//seed meist = 100
+ 	else	limit = seq.SortedPValue.size();
+ 	for(MapIterator=seq.SortedPValue.begin();i<limit;++MapIterator,++i){//iterate over Top100
+ 		GeneralizeKmer((*MapIterator).second,IMaps,seq,back);
+@@ -1028,7 +1028,7 @@
+ 		back.generalizedKmer.clear();
+ 		seq.generalizedKmer.clear();
+ 	//	generalizedMapIterator= generalizedKmerTemp.begin();
+-		if(generalizedSortedPValueTemp.size()>100)	limit=100;
++		if(generalizedSortedPValueTemp.size()>seq.seed)	limit=seq.seed;
+ 		else	limit = generalizedSortedPValueTemp.size();
+ 	
+ 		i=0;//only Top100
+@@ -1263,7 +1263,7 @@
+ 
+ 	generalizedSortedPValueIt = seq.generalizedSortedPValue.begin();
+ 
+-	for(unsigned int i=0;i<100 && generalizedSortedPValueIt!=seq.generalizedSortedPValue.end() ;++i,++generalizedSortedPValueIt){
++	for(unsigned int i=0;i<seq.seed && generalizedSortedPValueIt!=seq.generalizedSortedPValue.end() ;++i,++generalizedSortedPValueIt){
+ 		//std::cout<<length(seq.generalizedSortedPValue)<<" "<<seq.generalizedSortedPValue.size()<<" ";
+ 		//std::cout<<(*generalizedSortedPValueIt).second<<" ";
+ 		if(seqCounter.find((*generalizedSortedPValueIt).second)!=seqCounter.end()) continue;

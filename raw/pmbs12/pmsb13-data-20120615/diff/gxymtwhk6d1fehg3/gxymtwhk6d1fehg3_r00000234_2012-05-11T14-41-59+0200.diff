@@ -1,0 +1,16 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-11 14:40:44.449923000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-11 14:41:53.098779000 +0200
+@@ -116,10 +116,10 @@
+ 	if (goDown(iter, c)){
+ 		std::cout << representative(iter) << std::endl;
+ 		std::cout << "j= " << i+1 << std::endl;
+-		std::cout << mypattern[i+1] << std::endl;
++		std::cout << mypattern[cutPos+i+1] << std::endl;
+ 		// from here: going down the chars exactly from pattern to verify
+ 		int j = cutPos +i +1;
+-		while (goDown(iter, mypattern[j])){		
++		while (goDown(iter, mypattern[cutPos+j])){		
+ 			std::cout << "j= " << j << std::endl;
+ 			std::cout << mypattern[j] << std::endl;
+ 			if ( j == (patternLength -1)) {

@@ -1,0 +1,88 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 13:38:39.818806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-24 16:04:36.254010200 +0200
+@@ -183,14 +183,14 @@
+ 		/***
+ 		PSSM
+ 		***/
+-		BuildWeightMatrix(sequences);
++		//BuildWeightMatrix(sequences);
+ 
+ 		/***
+ 		Information Content
+ 		***/
+-		BuildInformationContentMatrix(sequences);
++		//BuildInformationContentMatrix(sequences);
+ 	
+-		
++		appendValue(sequences.allPWMs,sequences.freqMatrix);
+ 		sequences.freqMatrix.clear();
+ 		sequences.weightMatrix.clear();
+ 		background.weightMatrix.clear();
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 16:28:42.748806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-24 16:04:36.298010200 +0200
+@@ -35,8 +35,10 @@
+ 	std::multimap<double,String<Dna5> > SortedPValue;
+ 	std::multimap<double,String<Iupac> > generalizedSortedPValue;
+ 	std::map<unsigned int,std::map<Iupac,double> > freqMatrix;
++	String< std::map<unsigned int,std::map<Iupac,double> > > allPWMs;
+ 	std::map<unsigned int,std::map<Iupac,double> > weightMatrix;
+ 	std::map<unsigned int, double > seqLogoMatrix;
++	std::map<unsigned int, double > columnEntropy;
+ 	
+ 	std::map<unsigned int,std::map<Iupac,double> > InformationContentMatrix;
+ 	FrequencyDistribution<Dna5> frequencies;
+@@ -107,6 +109,7 @@
+ void BuildFrequencyMatrix( Finder<Index<StringSet<String<Dna5> > > > &finder,String<Dna5> &Kmer,Seq &seq, IupacMaps &IMaps);
+ void BuildWeightMatrix(Seq &seq);
+ void BuildInformationContentMatrix(Seq &seq);
++void ComparePWM(Seq &seq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ 
+ 
+@@ -714,6 +717,44 @@
+ 
+ }
+ 
++void ComparePWM(Seq &seq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2){
++
++	/***
++	Matrizen müssen nicht gleich lang sein --> vorher mit fester Größe noch einmal die kMere scannen?
++											   Matrizen alignen?
++											   Im Fall der Ungleichheit --> Alle möglichen Alignments(treshold) beachten, Minimum nehmen
++	***/
++	
++	/****
++			Für jede Spalte=Position einen Eintrag für je zwei zu vergleichende PWMs
++			Eintrag ist = 0, wenn die Werte identisch sind. Je größer die Zahl, desto unterschiedlicher die Werte
++			Was wenn Wert = Hintergrundverteilung? --> Eintrag wäre = 0, obwohl das nichts mit dem Motiv zu tun hat
++
++			Für jede Spalte berechnen und durch Spaltenanzahl teilen
++	****/
++	for(unsigned int j=0;j<length(freqMatrix1);++j){
++		seq.columnEntropy[j] = freqMatrix1[j]['A']*log(freqMatrix1[j]['A']/freqMatrix2[j]['A']);
++		seq.columnEntropy[j] = freqMatrix1[j]['C']*log(freqMatrix1[j]['C']/freqMatrix2[j]['C']);
++		seq.columnEntropy[j] = freqMatrix1[j]['G']*log(freqMatrix1[j]['G']/freqMatrix2[j]['G']);
++		seq.columnEntropy[j] = freqMatrix1[j]['T']*log(freqMatrix1[j]['T']/freqMatrix2[j]['T']);
++	}
++	
++
++}
++/****
++		Speichert die jeweiligen Mittelwerte der 2 übergebenen Matrizen 
++****/
++void BuildMeanOf2PWMs(Seq &seq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2){
++
++	for(unsigned int j=0;j<length(freqMatrix1);++j){
++		freqMatrix1[j]['A'] = (freqMatrix1[j]['A']+freqMatrix2[j]['A'])/2;
++		freqMatrix1[j]['C'] = (freqMatrix1[j]['C']+freqMatrix2[j]['C'])/2;
++		freqMatrix1[j]['G'] = (freqMatrix1[j]['G']+freqMatrix2[j]['G'])/2;
++		freqMatrix1[j]['T'] = (freqMatrix1[j]['T']+freqMatrix2[j]['T'])/2;
++	}
++
++
++}
+ 
+ /*Prints the Mapping:
+ Kmer	Seq1	Seq2	...	Seqn	CumulatedCounter

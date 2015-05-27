@@ -1,0 +1,70 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 12:35:46.315806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 13:04:10.083806800 +0200
+@@ -183,18 +183,12 @@
+ 
+ 		}
+ 
+-
+-
+-	std::map<unsigned int,std::map<Iupac,double> > weightMatrix;
+-	weightMatrix[0]['A'] = log(freqMatrix[0]['A']/sequences.frequencies[0]);
+-	weightMatrix[0]['C'] = log(freqMatrix[0]['C']/sequences.frequencies[1]);
+-	weightMatrix[0]['G'] = log(freqMatrix[0]['G']/sequences.frequencies[2]);
+-	weightMatrix[0]['T'] = log(freqMatrix[0]['T']/sequences.frequencies[3]);
++		/***
++		PSSM
++		***/
++		//BuildWeightMatrix(sequences,KmerLength,freqMatrix);
+ 	
+-	std::cout<<freqMatrix[0]['A']<<" "<<freqMatrix[0]['C']<<" "<<freqMatrix[0]['G']<<" "<<freqMatrix[0]['T']<<std::endl;
+-	std::cout<<weightMatrix[0]['A']<<" "<<weightMatrix[0]['C']<<" "<<weightMatrix[0]['G']<<" "<<weightMatrix[0]['T'];
+-
+-	system("PAUSE");
++		system("PAUSE");
+ 		freqMatrix.clear();
+ 		freqMatrixB.clear();
+ 		//std::cout<<"first "<<(*sequences.generalizedSortedPValue.begin()).first<<std::endl;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 12:55:54.365806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 13:04:10.098806800 +0200
+@@ -100,6 +100,7 @@
+ void loopOverTopKmer(	Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix);
+ void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps);
+ void BuildFrequencyMatrix(  std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,Finder<Index<StringSet<String<Dna5> > > > &finder,String<Dna5> &Kmer,Seq &seq, IupacMaps &IMaps);
++void BuildWeightMatrix(Seq &seq,unsigned int Kmerlength,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ 
+ 
+@@ -671,6 +672,7 @@
+ 		std::cout<<"foreground: "<<std::endl;
+ 	else
+ 		std::cout<<"background: "<<std::endl;
++	std::cout<<Kmerlength<<" "<<length(freqMatrix);
+ 	for(unsigned int j=0;j<Kmerlength;++j){
+ 				freq=freqMatrix[j];
+ 				std::cout<<"Position: "<<j<<" A: "<<freq['A']<<std::endl;
+@@ -682,6 +684,23 @@
+ 
+ }
+ 
++void BuildWeightMatrix(Seq &seq,
++					   unsigned int Kmerlength,
++					   std::map<unsigned int,std::map<Iupac,double> > &freqMatrix){
++
++	std::map<unsigned int,std::map<Iupac,double> > weightMatrix;
++	
++	for(unsigned int j=0;j<Kmerlength;++j){
++		weightMatrix[j]['A'] = log(freqMatrix[j]['A']/seq.frequencies[0]);
++		weightMatrix[j]['C'] = log(freqMatrix[j]['C']/seq.frequencies[1]);
++		weightMatrix[j]['G'] = log(freqMatrix[j]['G']/seq.frequencies[2]);
++		weightMatrix[j]['T'] = log(freqMatrix[j]['T']/seq.frequencies[3]);
++	}
++
++
++
++
++}
+ 
+ 
+ 

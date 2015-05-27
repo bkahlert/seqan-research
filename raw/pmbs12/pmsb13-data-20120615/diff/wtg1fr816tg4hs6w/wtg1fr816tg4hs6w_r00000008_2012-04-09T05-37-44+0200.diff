@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/wtg1fr816tg4hs6w_stats.txt -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/userdata/wtg1fr816tg4hs6w_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/bkahlert/apps/knimetest/knimetest.cpp ./sandbox/bkahlert/apps/knimetest/knimetest.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/bkahlert/apps/knimetest/knimetest.cpp	2012-02-29 14:26:17.000000000 +0100
++++ ./sandbox/bkahlert/apps/knimetest/knimetest.cpp	2012-04-09 05:34:21.000000000 +0200
+@@ -29,7 +29,7 @@
+ // DAMAGE.
+ //
+ // ==========================================================================
+-// Author: Stephan Aiche <stephan.aiche@fu-berlin.de>
++// Author: Stephan Aiche <stephan.aiche@fu-berlin.de>, Björn Kahlert <bjoern.kahlert@fu-berlin.de>
+ // ==========================================================================
+ 
+ #include <seqan/basic.h>

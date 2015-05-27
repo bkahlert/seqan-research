@@ -1,0 +1,9 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-11 03:12:07.322752600 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-11 03:12:50.480221100 +0200
+@@ -1,4 +1,5 @@
+ #include <seqan/index.h>
++#include <iostream>
+ #include <seqan/misc/misc_cmdparser.h>
+ #include <seqan/stream.h>
+ 

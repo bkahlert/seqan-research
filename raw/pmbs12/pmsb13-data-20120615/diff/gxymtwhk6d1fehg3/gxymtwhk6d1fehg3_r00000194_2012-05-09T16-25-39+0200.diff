@@ -1,0 +1,111 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-09 16:20:09.351756000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-09 16:25:35.660968000 +0200
+@@ -111,21 +111,21 @@
+ }
+ 
+ // char c ist the character that is the substitute at the ith position of the right half of the pattern
+-void backtrack (BowTieFinder finder, String<char> mypattern, int i, char c){
+-	if (goDown(finder, c)){
+-		int j = cutPos +i +1;
+-		// from here: going down the chars exactly from pattern to verify
+-		while (goDown(finder, readPos (mypattern, j))){		
+-			std::cout << "j= " << j << std::endl;
+-			if ( j == (patternLength -1))
+-				std::cout << pattern << ", found at: " << position(finder)<< std::endl;
+-			j++;
+-		}
+-		for ( j ; j> cutPos ; j--)
+-			goUp(finder);
+-		std::cout << "j= " << j << std::endl;
+-	}
+-}
++//void backtrack (BowTieFinder finder, String<char> mypattern, int i, char c){
++//	if (goDown(finder, c)){
++//		int j = cutPos +i +1;
++//		// from here: going down the chars exactly from pattern to verify
++//		while (goDown(finder, readPos (mypattern, j))){		
++//			std::cout << "j= " << j << std::endl;
++//			if ( j == (patternLength -1))
++//				std::cout << pattern << ", found at: " << position(finder)<< std::endl;
++//			j++;
++//		}
++//		for ( j ; j> cutPos ; j--)
++//			goUp(finder);
++//		std::cout << "j= " << j << std::endl;
++//	}
++//}
+ 
+ 
+ 
+@@ -152,7 +152,7 @@
+ 	forwardSearch(forwardFinder);
+ 	backwardSearch(backwardFinder);	
+ 
+-	//reseting
++	//resetting
+ 	clear(forwardFinder);
+ 	clear(backwardFinder);
+ 
+@@ -161,31 +161,36 @@
+ 	cuttedPattern= pattern;
+ 	resize (cuttedPattern, cutPos);
+ 
+-	while(find(forwardFinder,cuttedPattern)){
+-		for (int i = 0; i < (patternLength- cutPos); i++){
+-			if (readPos(pattern,cutPos+i)!= 'a') {
+-				std::cout << cutPos+i << " : not 'a'" <<std::endl;
+-				backtrack(forwardFinder, pattern, i, 'a');
+-			}
+-			if (readPos(pattern,cutPos+i)!= 'c') {
+-				std::cout << cutPos+i << " : not 'c'" <<std::endl;
+-				backtrack(forwardFinder, pattern, i, 'c');
+-			}
+-			if (readPos(pattern,cutPos+i)!= 'g') {
+-				std::cout << cutPos+i << " : not 'g'" <<std::endl;
+-				backtrack(forwardFinder, pattern, i, 'g');
+-			}
+-			if (readPos(pattern,cutPos+i)!= 't') {
+-				std::cout << cutPos+i << " : not 't'" <<std::endl;
+-				backtrack(forwardFinder, pattern, i, 't');
+-			}
+-			if (readPos(pattern,cutPos+i)!= 'n') {
+-				std::cout << cutPos+i << " : not 'n'" <<std::endl;
+-				backtrack(forwardFinder, pattern, i, 'n');
+-			}
+-			goDown(forwardFinder, readPos(pattern,cutPos +i)
+-		}
+-	}
++	find(forwardFinder, cuttedPattern);
++	goDown(forwardFinder, 'a');
++	int a = position(forwardFinder)
++
++	std::cout<< a << std::endl; 
++	//while(find(forwardFinder,cuttedPattern)){
++	//	for (int i = 0; i < (patternLength- cutPos); i++){
++	//		if (readPos(pattern,cutPos+i)!= 'a') {
++	//			std::cout << cutPos+i << " : not 'a'" <<std::endl;
++	//			backtrack(forwardFinder, pattern, i, 'a');
++	//		}
++	//		if (readPos(pattern,cutPos+i)!= 'c') {
++	//			std::cout << cutPos+i << " : not 'c'" <<std::endl;
++	//			backtrack(forwardFinder, pattern, i, 'c');
++	//		}
++	//		if (readPos(pattern,cutPos+i)!= 'g') {
++	//			std::cout << cutPos+i << " : not 'g'" <<std::endl;
++	//			backtrack(forwardFinder, pattern, i, 'g');
++	//		}
++	//		if (readPos(pattern,cutPos+i)!= 't') {
++	//			std::cout << cutPos+i << " : not 't'" <<std::endl;
++	//			backtrack(forwardFinder, pattern, i, 't');
++	//		}
++	//		if (readPos(pattern,cutPos+i)!= 'n') {
++	//			std::cout << cutPos+i << " : not 'n'" <<std::endl;
++	//			backtrack(forwardFinder, pattern, i, 'n');
++	//		}
++	//		goDown(forwardFinder, readPos(pattern,cutPos +i)
++	//	}
++	//}
+ 
+ 
+ 	return 0;

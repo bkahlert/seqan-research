@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Graphs.cpp ./sandbox/meyerclp/demos/Graphs.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Graphs.cpp	2012-04-13 11:57:21.691799200 +0200
++++ ./sandbox/meyerclp/demos/Graphs.cpp	2012-04-13 12:00:37.923799200 +0200
+@@ -119,8 +119,15 @@
+ 	addEdge(hmm,intron,intron,0.9);
+ 	addEdge(hmm,intron,endState,0.1);
+ 
+-	::std::cout<<hmm;
++	::std::cout<<hmm<<::std::endl;
++
++	String<Dna> Seq;
++	String<Dna> Path;
++	Seq="CTTCATGTGAAAGCAGACGTAAGTCA";
++	LogProb<> P =viterbiAlgorithm(hmm,Seq,Path);
+ 	
++	::std::cout<<P<<" "<<Path;
++
+ 	return 0;
+ 
+ }
+\ No newline at end of file

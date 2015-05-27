@@ -1,0 +1,45 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-21 11:05:39.164712500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-21 15:19:34.329712500 +0200
+@@ -10,8 +10,8 @@
+ 	Seq sequences;
+     Seq background;
+ 	IupacMaps IMaps;
+-	unsigned int kmer_len=6;
+-	unsigned int kmer_len_end=6;
++	unsigned int kmer_len=4;
++	unsigned int kmer_len_end=8;
+ 	sequences.seed=100;
+ 	MapIupac(IMaps);//IupacMap for generalization
+ 
+@@ -160,7 +160,7 @@
+ 
+ 			foreground=false;
+ 			PrintMap(background,foreground);*/
+-			//saveData(sequences,PWM,sequences.c);
++			saveData(sequences,PWM,sequences.c);
+ 			
+ 			sequences.pValue=sequences.generalizedSortedPValue.begin()->first;
+ 		}
+@@ -181,7 +181,7 @@
+ 
+ 			foreground=false;
+ 			PrintMap(background,foreground);*/
+-			//saveData(sequences,PWM,sequences.c);
++			saveData(sequences,PWM,sequences.c);
+ 			
+ 			sequences.pValue=sequences.SortedPValue.begin()->first;
+ 
+@@ -256,9 +256,9 @@
+ 	while(sequences.pValue<0.05 && sequences.c<6);
+ 	String<Cluster> cluster;
+ 	String<int> traceback;
+-	//PWMClustering(sequences.allPWMs,cluster,traceback);
+-	//std::cout<<"ComputeGapStat"<<std::endl<<std::endl;
+-	//clusterTraceback(sequences.allMotifs,traceback,computeGapStat(sequences.allPWMs,cluster));
++	PWMClustering(sequences.allPWMs,cluster,traceback);
++	std::cout<<"ComputeGapStat"<<std::endl<<std::endl;
++	clusterTraceback(sequences.allMotifs,traceback,computeGapStat(sequences.allPWMs,cluster));
+ 	
+ 	clear(cluster);
+ 	clear(traceback);

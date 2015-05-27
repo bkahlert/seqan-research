@@ -1,0 +1,97 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-27 16:26:49.203986000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-27 16:59:17.123986000 +0200
+@@ -79,8 +79,14 @@
+ struct Entropy_;
+ typedef Tag<Entropy_> Entropy;
+ 
++struct CompleteLinkage_;
++typedef Tag<CompleteLinkage_> CompleteLinkage();
+ 
++struct SingleLinkage_;
++typedef Tag<SingleLinkage_> SingleLinkage();
+ 
++struct AverageLinkage_;
++typedef Tag<AverageLinkage_> AverageLinkage();
+ 
+ void readFastA(struct Seq &seq, CharString fname);
+ template <typename TStream>
+@@ -128,7 +134,8 @@
+ void ComparePWM(Seq &seq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2, Entropy const & tag);
+ void ComparePWM(Seq &seq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2, Euklidisch const & tag);
+ void PWMClustering(Seq &seq);
+-void CompleteLinkage(int n, int x, int y, std::vector<std::vector<double> > &compare);
++void UpdateDistantMatrix(int n, int x, int y, std::vector<std::vector<double> > &compare, CompleteLinkage const & tag);
++void UpdateDistantMatrix(int n, int x, int y, std::vector<std::vector<double> > &compare, AverageLinkage const & tag);
+ void minDifferenceInMatrix(unsigned n,String<double> &minDifference,std::vector<std::vector<double> > compare);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ void saveData(Seq &seq,std::ofstream &PWM);
+@@ -838,7 +845,7 @@
+ 
+ }
+ 
+-void CompleteLinkage(int n, int x, int y, std::vector<std::vector<double> > &compare){
++void UpdateDistantMatrix(int n, int x, int y, std::vector<std::vector<double> > &compare, CompleteLinkage const & tag ){
+ 
+ 	/****
+ 			Updates the distance with Complete Linkage
+@@ -860,6 +867,13 @@
+ 
+ }
+ 
++void UpdateDistantMatrix(int n, int x, int y, std::vector<std::vector<double> > &compare, AverageLinkage const & tag ){
++
++
++
++}
++
++
+ void minDifferenceInMatrix(unsigned n,String<double> &minDifference,std::vector<std::vector<double> > compare){
+ 
+ 	minDifference[0]=0;
+@@ -923,7 +937,7 @@
+ 		minDifferenceInMatrix(n,minDifference,compare);
+ 		BuildMeanOf2PWMs(seq,seq.allPWMs[int(minDifference[1])],seq.allPWMs[int(minDifference[2])]);//bildet aus 2PWMs die Mittelwerte und speichert sie in
+ 
+-		//Fix the distances --> complete Linkage
++		
+ 
+ 		
+ 		for(unsigned k=0;k<allPWMsLength;++k){
+@@ -936,9 +950,12 @@
+ 		}
+ 		std::cout<<std::endl;
+ 
+-		CompleteLinkage(n,int(minDifference[1]),int(minDifference[2]),compare);
+-		//UpdatePWMMatrix();
+-		//find new closest pair
++		UpdateDistantMatrix(n,int(minDifference[1]),int(minDifference[2]),compare,CompleteLinkage());
++		
++
++
++
++
+ 		appendValue(traceback,clusterId[int(minDifference[1])]);
+ 		appendValue(traceback,clusterId[int(minDifference[2])]);
+ 		std::cout<<"clusterId: "<<clusterId[0]<<" "<<clusterId[1]<<" "<<clusterId[2]<<" "<<n<<" "<<allPWMsLength<<std::endl;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-27 16:26:49.159986000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-27 16:56:13.901986000 +0200
+@@ -715,7 +715,7 @@
+ 	minDifference[2]=3;
+ 	unsigned j;
+ 	unsigned n=5;
+-	CompleteLinkage(n,int(minDifference[1]),int(minDifference[2]),compare);
++	UpdateDistantMatrix(n,int(minDifference[1]),int(minDifference[2]),compare,CompleteLinkage());
+ 
+ 
+ 	for(unsigned k=0;k<5;++k){
+@@ -750,7 +750,7 @@
+ 	minDifference[1]=0;
+ 	minDifference[2]=2;
+ 	--n;
+-	CompleteLinkage(n,int(minDifference[1]),int(minDifference[2]),compare);
++	UpdateDistantMatrix(n,int(minDifference[1]),int(minDifference[2]),compare,CompleteLinkage());
+ 
+ 	/*****
+ 			New Matrix:

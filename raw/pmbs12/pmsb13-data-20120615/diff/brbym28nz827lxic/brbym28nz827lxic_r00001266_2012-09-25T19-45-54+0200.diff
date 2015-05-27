@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-09-25 19:45:01.858321500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-09-25 19:45:53.100321500 +0200
+@@ -646,7 +646,7 @@
+ 	SEQAN_ASSERT_EQ(double(int((seq.freqMatrix[1]['A']+0.005)*100))/100,0.06);
+ 	SEQAN_ASSERT_EQ(double(int((seq.freqMatrix[1]['G']+0.005)*100))/100,0.49);//in der hälfte der sequenzen kommt ACG und AGG vor, ACG und AGG können in der selben sequenz sein
+ 	SEQAN_ASSERT_EQ(double(int((seq.freqMatrix[1]['C']+0.005)*100))/100,0.42);
+-	SEQAN_ASSERT_EQ(seq.freqMatrix[2]['G'],1);
++	SEQAN_ASSERT_EQ(double(int((seq.freqMatrix[2]['G']+0.005)*100))/100,0.89);
+ 	
+ 	for(unsigned s=0;s<seq.SeqsNumber;++s){
+ 				createIntervalTree(seq.intervalTrees[s], seq.intervals[s]);

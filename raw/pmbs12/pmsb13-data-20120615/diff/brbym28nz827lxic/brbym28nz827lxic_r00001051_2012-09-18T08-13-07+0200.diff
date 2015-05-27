@@ -1,0 +1,22 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-09-18 08:05:32.972302000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-09-18 08:13:03.092302000 +0200
+@@ -777,7 +777,8 @@
+ 	String<char> pwm;
+ 	char *buffer= new char[33];
+ 	append(pwm,"C:/Users/David/Desktop/PWM");
+-	append(pwm,sprintf(buffer,"%d",c));
++	//append(pwm,sprintf(buffer,"%d",c));
++	append(pwm,itoa(c,buffer,10));
+ 	append(pwm,".txt");
+ 	
+ 	
+@@ -786,7 +787,7 @@
+ 	for(unsigned i=0;i<length(seq.freqMatrix);++i){
+ 		PWM<<seq.freqMatrix[i]['A'];
+ 		write(PWM," ");
+-		std::cout<<seq.freqMatrix[i]['A']<<std::endl;
++		
+ 
+ 	}
+ 	write(PWM,"\r\n");// windows

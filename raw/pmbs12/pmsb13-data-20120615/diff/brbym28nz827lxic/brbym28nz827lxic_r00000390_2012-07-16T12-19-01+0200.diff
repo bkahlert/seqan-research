@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 18:39:12.548402900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-16 12:18:59.954799900 +0200
+@@ -976,7 +976,7 @@
+ 	double topPValue = FisherExactTest(seq,back,generalizedSortedPValueTemp);// lowest pValue from the first generalization
+ 	double topPValueOld =seq.SortedPValue.begin()->first;//lowest pValue before generalization
+ 
+-	while(topPValue<0.05 && topPValue<topPValueOld){//only start a new round, if the top PValue is an improvement of the old one
++	do{//only start a new round, if the top PValue is an improvement of the old one
+ 		
+ 		//std::cout<<"test";
+ 		/*
+@@ -1019,7 +1019,7 @@
+ 	topPValue = FisherExactTest(seq,back,generalizedSortedPValueTemp);
+ 	
+ 		
+-	}
++	}while(topPValue<0.05 && topPValue<topPValueOld);
+ 	
+ 	
+ }

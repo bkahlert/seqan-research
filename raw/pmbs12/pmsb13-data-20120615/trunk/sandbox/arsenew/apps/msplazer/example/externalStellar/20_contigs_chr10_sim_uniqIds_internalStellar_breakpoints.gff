@@ -1,0 +1,12 @@
+Global breakpoints found on best MSplazerChains sorted according to genome Ids
+Database file: chr10.fa
+StartSeqId	Label	SV type	sPos	sPos	.	+/-	.	Tags:ID=i;size=(-)indel;EndSeqId=;EndSeqPos=;EndSeqStrand=;Support=;SupportIds=;
+10	MSplazer	inversion	61033	68653	.	+	.	ID=0;endChr=10;endPos=68653;endStrand=-;support=1;supportIds=contig=1|group=2|reads=2|start=50899|end=58630|type=Shadow/SemiAligned_1,
+10	MSplazer	insertion	61081	61081	.	+	.	ID=1;size=-18;seq=TTTATATTTTCTATACAA;support=1;supportIds=contig=2|group=4|reads=12|start=50901|end=58625|type=InversionPair_(54760,3.266,7593,31.67)_Shadow/SemiAligned_Shadow/SemiAligned_Shadow/SemiAligned_3,
+10	MSplazer	inversion	68693	60988	.	+	.	ID=2;endChr=10;endPos=60988;endStrand=-;support=1;supportIds=contig=4|group=4|reads=3|start=50988|end=58746|type=InversionPair_(54760,3.266,7593,31.67)_Shadow/SemiAligned_Shadow/SemiAligned_Shadow/SemiAligned_7,
+10	MSplazer	deletion	68745	42761337	.	+	.	ID=3;size=42692593;support=1;supportIds=contig=6|group=6|reads=9|start=58648|end=58834|type=Shadow/SemiAligned_11,
+10	MSplazer	insertion	96521	96521	.	+	.	ID=4;size=-8;seq=GTGGGTAT;support=1;supportIds=contig=8|group=7|reads=5|start=86424|end=86737|type=Shadow/SemiAligned_15,
+10	MSplazer	insertion	97280	97280	.	+	.	ID=5;size=-11;seq=CAGCCCTGGAT;support=1;supportIds=contig=9|group=8|reads=12|start=87206|end=87354|type=Shadow/SemiAligned_17,
+10	MSplazer	insertion	120022	120022	.	+	.	ID=6;size=-8;seq=GTGAACAC;support=1;supportIds=contig=14|group=12|reads=9|start=109928|end=110225|type=Shadow/SemiAligned_27,
+10	MSplazer	insertion	121694	121694	.	+	.	ID=7;size=-4;seq=AGGC;support=1;supportIds=contig=16|group=14|reads=16|start=111604|end=111765|type=Shadow/SemiAligned_31,
+10	MSplazer	translocation	141485	141485	.	+	.	ID=8;endChr=10;endPos=145279;endStrand=+;support=2;supportIds=contig=17|group=15|reads=4|start=131411|end=131529|type=Shadow/SemiAligned_33,contig=18|group=16|reads=5|start=131431|end=131547|type=Shadow/SemiAligned_35,

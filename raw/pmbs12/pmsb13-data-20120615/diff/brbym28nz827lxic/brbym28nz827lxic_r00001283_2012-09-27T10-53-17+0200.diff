@@ -1,0 +1,111 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-27 10:45:22.406117500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-27 10:53:05.995117500 +0200
+@@ -12,31 +12,8 @@
+ 	IupacMaps IMaps;
+ 	MapIupac(IMaps);//IupacMap for generalization
+ 	char setting;
+-	std::cout<<"-------------DREME-Settings-------------"<<std::endl;
+-	std::cout<<"----------------------------------------"<<std::endl;
+-	std::cout<<"Standard-Settings are: mink(6), maxk(6), Seed(100), pValue(0.05), NumberOfMotifs(5)"<<std::endl;
+-	while(true){
+-		std::cout<<"Alter the Settings? (Y) (N)"<<std::endl;
+-		std::cin>>setting;
+-		if(setting =='Y' || setting=='N') break;
+-		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
+-	}
+-	
+-
+-	unsigned int kmer_len=6;
+-	unsigned int kmer_len_end=6;
+-	sequences.seed=100;
+-	
+-
+ 
+ 
+-	/****
+-
+-	Mit cin die kmer Länge, Seed-Zahl, wie viele Sequenzen gefunden werden sollen, pValueSchwelle
+-	am Anfang abfrage ob standard oder nicht
+-
+-	****/
+-	
+ 	if(argc <2 || argc>3){
+ 		std::cerr<<"ERROR: Invalid argument count."<<std:: endl
+ 				 <<"Usage:" <<argv[0]<<"File"<<std::endl;
+@@ -63,6 +40,43 @@
+ 	}
+ 	
+ 	background.SeqsNumber=length(background.seqs);//number of sequences
++
++
++	std::cout<<"-------------DREME-Settings-------------"<<std::endl;
++	std::cout<<"----------------------------------------"<<std::endl;
++	std::cout<<"Standard-Settings are: mink(6), maxk(6), Seed(100), pValueTreshold(0.05), NumberOfMotifs(5)"<<std::endl;
++	while(true){
++		std::cout<<"Alter the Settings? (Y) (N)"<<std::endl;
++		std::cin>>setting;
++		if(setting =='Y' || setting=='N') break;
++		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
++	}
++	if(setting=='Y'){
++	}
++
++	else{
++		unsigned int kmer_len=6;
++		unsigned int kmer_len_end=6;
++		sequences.seed=100;
++		sequences.NumberOfMotifs=6;
++		sequences.treshold=0.05;
++		
++	}
++	
++
++	
++	
++
++
++
++	/****
++
++	Mit cin die kmer Länge, Seed-Zahl, wie viele Sequenzen gefunden werden sollen, pValueSchwelle
++	am Anfang abfrage ob standard oder nicht
++
++	****/
++	
++	
+ 	
+ 
+ 	/*std::ofstream outfile;
+@@ -79,7 +93,6 @@
+ 	resize(background.intervals, background.SeqsNumber);
+ 	resize(sequences.intervalTrees, sequences.SeqsNumber);
+ 	resize(background.intervalTrees, background.SeqsNumber);
+-
+ 	sequences.c=1;
+ 	background.c=1;
+ 	initST(sequences);
+@@ -237,7 +250,7 @@
+ 		++sequences.c;
+ 		++background.c;
+ 	}
+-	while(sequences.pValue<0.05 && sequences.c<3);
++	while(sequences.pValue<sequences.treshold && sequences.c<sequences.NumberOfMotifs);
+ 	/******
+ 			Compute the Clustering with GapStat
+ 	******/
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-09-27 00:48:36.881200000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-09-27 10:53:06.522117500 +0200
+@@ -28,9 +28,11 @@
+ {
+ 	
+ 	unsigned c; 
++	unsigned NumberOfMotifs;
+ 	unsigned seed;
+ 	unsigned SeqsNumber;
+ 	double pValue;
++	double treshold;
+ 
+ 	StringSet<String<Dna5> > seqs;
+ 	StringSet<CharString> ids;

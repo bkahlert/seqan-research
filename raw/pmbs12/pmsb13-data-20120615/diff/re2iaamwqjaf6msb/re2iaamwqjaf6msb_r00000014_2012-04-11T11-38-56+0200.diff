@@ -1,0 +1,11 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/demos/CMakeLists.txt ./sandbox/jennyann/demos/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/demos/CMakeLists.txt	2012-04-11 10:53:39.022683600 +0200
++++ ./sandbox/jennyann/demos/CMakeLists.txt	2012-04-11 11:38:32.908765000 +0200
+@@ -1,6 +1,6 @@
+ cmake_minimum_required (VERSION 2.6)
+ project (seqan_sandbox_jennyann_demos)
+ 
+-seqan_setup_demos(sandbox_jennyann_demos)  # Add meta target and make executables depend on it.
++#seqan_setup_demos(sandbox_jennyann_demos)  # Add meta target and make executables depend on it.
+ 
+ seqan_add_all_executables(sandbox_jennyann_demos)

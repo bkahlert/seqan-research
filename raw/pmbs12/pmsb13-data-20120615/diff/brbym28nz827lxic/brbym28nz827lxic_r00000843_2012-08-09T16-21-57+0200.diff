@@ -1,0 +1,80 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-08 18:19:04.108401900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-09 16:21:44.365598800 +0200
+@@ -941,7 +941,7 @@
+ }
+ 
+ 
+-void computesDistantMatrix(Seq &seq,std::vector<std::vector<String<double> > > &compare, unsigned allPWMsLength){
++void computesDistantMatrix(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs,std::vector<std::vector<String<double> > > &compare, unsigned allPWMsLength){
+ 
+ 	unsigned j;
+ 	unsigned i;
+@@ -950,7 +950,7 @@
+ 		for( j=i+1;j<allPWMsLength;++j){
+ 
+ 			
+-			compare[j][i]=AlignPWMs(seq.allPWMs[i],seq.allPWMs[j]);
++			compare[j][i]=AlignPWMs(allPWMs[i],allPWMs[j]);
+ 			
+ 			
+ 
+@@ -1056,18 +1056,6 @@
+ 	Rng<MersenneTwister> rng(SEED);
+ 	
+ 
+-	
+-	//std::cout<<ACGT[pos];
+-	
+-	//std::cout<<" Länge: "<<length(ACGT)<<" "<<ACGT;
+-	
+-	
+-	
+-	
+-	
+-	//std::cout<<"zufall: "<<;
+-	
+-
+ 	double uniDouble;
+ 	
+ 
+@@ -1093,11 +1081,9 @@
+ 	//		ReferenzFreq[j]["A"]="zufallvon 0 bis 1-[zufallACGT]-[zufallACG]-[zufallAC]";
+ 
+ 		} 
+-		system("PAUSE");
+-		std::cout<<length(ReferenzFreq)<<" "<<length(ReferenzFreq[1])<<" "<<ReferenzFreq[0]['A'];
+-
++		
+ 		appendValue(Referenz,ReferenzFreq,Exact());
+-		system("PAUSE");
++		
+ 		clear(ReferenzFreq);
+ 	}
+ 
+@@ -1115,8 +1101,8 @@
+ //
+ //}
+ 
+-void PWMClustering(Seq &seq){
+-	unsigned allPWMsLength=length(seq.allPWMs);
++void PWMClustering(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs){
++	unsigned allPWMsLength=length(allPWMs);
+ 	
+ 	String<Cluster> cluster;
+ 	resize(cluster,allPWMsLength);
+@@ -1137,11 +1123,12 @@
+ 	***/
+ 	std::vector<unsigned> weights(allPWMsLength,1);
+ 	
+-	computeReferenceData(allPWMsLength,length(seq.allPWMs[0]));
++	computeReferenceData(allPWMsLength,length(allPWMs[0]));
+ 
+ 
+ 	//vorher per local alignment feststellen wo die beste Überlappung ist!
+-	computesDistantMatrix(seq,compare,allPWMsLength);
++	computesDistantMatrix(allPWMs,compare,allPWMsLength);
++
+ 	std::vector<std::vector<String<double> > > copyCompare(compare);
+ 	String<int> temp;
+ 	minDifferenceInMatrix(allPWMsLength,minDifference,compare);

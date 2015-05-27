@@ -1,0 +1,19 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-05 12:52:56.806803900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-05 12:55:23.313803900 +0200
+@@ -1018,8 +1018,13 @@
+ 		//einmalige kopie von compare anlegen --> alle paarweisen abstände enthalten -->ist schon halbiert--> formel abändern
+ 		//nicht left right, sondern liste mit den clustern --> liste in funktion auslesen
+ 		UpdateDistantMatrix(n,int(minDifference[1]),int(minDifference[2]),compare,weights,AverageLinkage());
+-	
+-		
++		std::vector<int> a;
++		int bn = allPWMsLength-n;
++		system("PAUSE");
++		a.push_back(bn);
++		system("PAUSE");
++		a.push_back( allPWMsLength-n);
++		system("PAUSE");
+ 		/***
+ 				cluster[0] = 1  2 --> clusterId=-1
+ 				cluster[1] = -1 3 --> clusterId=-2  --> traceback: -(-1)-1: 0 -->cluster[0]

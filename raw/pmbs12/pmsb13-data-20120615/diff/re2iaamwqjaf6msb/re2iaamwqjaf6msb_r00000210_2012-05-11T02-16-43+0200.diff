@@ -1,0 +1,34 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-11 02:10:40.076854200 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-11 02:16:41.900549400 +0200
+@@ -20,11 +20,8 @@
+     TFinder swiftFinder(file1, 1000, 1);
+ 
+ 	// pattern
+-    typedef Index<StringSet<TSequence, Dependent<> >, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
+-    TQGramIndex qgramIndex(file2);
+-    resize(indexShape(qgramIndex), 3);
+-    //cargo(qgramIndex).abundanceCut = 1;
+-    Pattern<TQGramIndex, Swift<SwiftLocal> > swiftPattern(qgramIndex);
++
++    Pattern<TIndex, Swift<SwiftLocal> > swiftPattern(file2);
+ 
+ 	StringSet<QueryMatches<StellarMatch<TSequence, TId> > > matches;
+ 
+@@ -38,14 +35,11 @@
+ 	typedef CharString TId;
+ 	TSequence file1 = "AGTTGTTAGTCTACGTGGACCGACAAAGACAGATTCTTTGAGGGAGCTAAGCTCAACGTAGTTCTAACAG";
+ 	TId databaseid = "db";
+-	StringSet<TSequence> queries;
+ 	TSequence file2 = "AGTTGTTAGTAAACGTGGACCGACAAAGACAGATTCTTTTTGGGAGCTAAGCTCAACGTAGTTCAAACAG";
+ 
+-	appendValue(queries, file2);
+-
+ 	TId queryid = "qr";
+ 
+ 
+-	stellar_find_matches(file1, databaseid ,queries, queryid);
++	stellar_find_matches(file1, databaseid ,file2, queryid);
+ 
+ }
+\ No newline at end of file

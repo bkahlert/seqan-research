@@ -1,0 +1,18 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-01 16:46:53.187403500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-01 17:24:28.383403500 +0200
+@@ -1766,12 +1766,12 @@
+ 			std::cout<<M[i][j]<<" ";
+ 			
+ 				
+-			if((i==freqL1  && M[i][j]/j>Mmax[0]) ||Mmax[0]==0){//auf die Länge der Überlappung normalisieren --> /j
++			if((i==freqL1 && j>freqL1/2  && M[i][j]/j>Mmax[0]) ||Mmax[0]==0){//auf die Länge der Überlappung normalisieren --> /j
+ 				Mmax[0]=M[i][j]/j;
+ 				Mmax[1]=i;
+ 				Mmax[2]=j;
+ 			}
+-			else if((j==freqL2 && M[i][j]/i>Mmax[0])||Mmax[0]==0){
++			else if((j==freqL2 &&i>freqL2/2 && M[i][j]/i>Mmax[0])||Mmax[0]==0){
+ 				Mmax[0]=M[i][j]/i;
+ 				Mmax[1]=i;
+ 				Mmax[2]=j;

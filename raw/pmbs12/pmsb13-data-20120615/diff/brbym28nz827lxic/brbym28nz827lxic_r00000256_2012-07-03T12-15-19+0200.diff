@@ -1,0 +1,2065 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/CMakeLists.txt ./CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/CMakeLists.txt	2012-04-10 16:25:43.102398800 +0200
++++ ./CMakeLists.txt	2012-06-21 11:41:22.900886000 +0200
+@@ -90,11 +90,11 @@
+ 	endif (NOT DEFINED SEQAN_CONTRIB_BASE)
+ 
+ 	# Debug help.
+-	if (NOT DEFINED SEQAN_CONTRIB_BASE)
+-		message("SEQAN_CONTRIB_BASE is undefined!")
+-	else (NOT DEFINED SEQAN_CONTRIB_BASE)
+-		message("SEQAN_CONTRIB_BASE is ${SEQAN_CONTRIB_BASE}")
+-	endif (NOT DEFINED SEQAN_CONTRIB_BASE)
++    #if (NOT DEFINED SEQAN_CONTRIB_BASE)
++    #	message("SEQAN_CONTRIB_BASE is undefined!")
++    #else (NOT DEFINED SEQAN_CONTRIB_BASE)
++    #	message("SEQAN_CONTRIB_BASE is ${SEQAN_CONTRIB_BASE}")
++    #endif (NOT DEFINED SEQAN_CONTRIB_BASE)
+ 	
+ 	# Try to figure out the generator.
+ 	if (IS_DIRECTORY ${SEQAN_CONTRIB_BASE})
+@@ -105,8 +105,8 @@
+ 			set (SEQAN_CONTRIB_VARIANT mingw)
+ 		endif (CMAKE_GENERATOR MATCHES "^Visual Studio .*")
+ 		
+-		message(STATUS "SEQAN_CONTRIB_BASE    is ${SEQAN_CONTRIB_BASE}")
+-		message(STATUS "SEQAN_CONTRIB_VARIANT is ${SEQAN_CONTRIB_VARIANT}")
++        #message(STATUS "SEQAN_CONTRIB_BASE    is ${SEQAN_CONTRIB_BASE}")
++        #message(STATUS "SEQAN_CONTRIB_VARIANT is ${SEQAN_CONTRIB_VARIANT}")
+ 
+ 		# Compose contrib path.
+ 		set(SEQAN_CONTRIB_PATH "${SEQAN_CONTRIB_BASE}/${SEQAN_CONTRIB_VARIANT}")
+@@ -117,7 +117,7 @@
+ 		endif (IS_DIRECTORY ${SEQAN_CONTRIB_PATH})
+ 	endif (IS_DIRECTORY ${SEQAN_CONTRIB_BASE})
+ 
+-	message(STATUS "CMAKE_FIND_ROOT_PATH is \"${CMAKE_FIND_ROOT_PATH}\".")
++    #message(STATUS "CMAKE_FIND_ROOT_PATH is \"${CMAKE_FIND_ROOT_PATH}\".")
+ endif (WIN32)
+ 
+ # ===========================================================================
+@@ -173,3 +173,9 @@
+ # ===========================================================================
+ 
+ include(${CMAKE_CURRENT_SOURCE_DIR}/util/cmake/package.cmake)
++
++# ===========================================================================
++# Check Optional Libraries, Print Usage
++# ===========================================================================
++
++include(FeatureSummary)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/CMakeLists.txt ./sandbox/meyerclp/apps/dreme/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/apps/dreme/CMakeLists.txt	2012-07-02 12:09:05.129200100 +0200
+@@ -0,0 +1,8 @@
++cmake_minimum_required (VERSION 2.6)
++project (sandbox_meyerclp_apps_dreme)
++
++# Update the list of file names below if you add source files to your application.
++seqan_add_executable(dreme dreme.cpp dreme.h)
++
++# Tests for DREME code.
++seqan_add_test_executable(dreme_test dreme_test.cpp)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-03 12:15:07.734592600 +0200
+@@ -0,0 +1,161 @@
++
++#include "dreme.h"
++
++using namespace seqan;
++
++
++
++int main(int argc, char const ** argv){
++	
++	Seq sequences;
++    Seq background;
++	IupacMaps IMaps;
++	unsigned int kmer_len=4;
++	unsigned int kmer_len_end=6;
++	MapIupac(IMaps);//IupacMap for generalization
++	
++	if(argc !=3){
++		std::cerr<<"ERROR: Invalid argument count."<<std:: endl
++				 <<"Usage:" <<argv[0]<<"File"<<std::endl;
++		return 1;
++	}
++
++	//�arhg
++	
++	readFastA(sequences,argv[1]);
++	//PrintFastA(sequences);//Debug
++	background.seqs=sequences.seqs;
++	sequences.SeqsNumber=length(sequences.seqs);//number of sequences
++	background.SeqsNumber=length(background.seqs);//number of sequences
++	
++	for(unsigned int i=0;i<sequences.SeqsNumber-1;++i){
++	
++		std::random_shuffle(begin(background.seqs[i]),end(background.seqs[i]));
++		std::random_shuffle(begin(background.seqs[i]),end(background.seqs[i]));
++	}
++	
++	/*std::ofstream outfile;
++	outfile.open("test.fasta");
++	write2(outfile,sequences.ids,background.seqs,Fasta());
++
++	outfile.close();
++*/
++	
++
++
++	//readFastA(background,argv[2]);
++	//PrintFastA(background);//Debug
++	
++
++	do{
++		std::cout<<"new "<<std::endl;
++	initST(sequences);
++	initST(background);
++	std::cout<<"init done"<<std::endl;
++	sequences.generalizedSortedPValue.clear();
++	/*****
++		- Bruteforce --> gets alls possible motifs form length 3 to 8 and counts them.
++		- Only one occurence per sequence allowed
++	*****/
++	initExactKmer(sequences,background,kmer_len,kmer_len_end);
++
++	std::cout<<"Exact done"<<std::endl;
++
++	/*****
++		- Computes the pValue of each motif due to the counter and saves it in SortedPValue
++	*****/
++	logFactorial(sequences.SeqsNumber+background.SeqsNumber);//save all relevant factorial numbers
++	FisherExactTest(sequences,background);
++
++	std::cout<<"Fisher done"<<std::endl;
++
++	/*****
++		- initiate by repeatedly picking the top motifs from SortedPValue
++		- calls GeneralizeKmer and adds one wildcard to the Kmer and estimates the counter
++		- after one generalization-round(top 100 motifs) the FisherExactTest is called, to compute the new SortedPValue-Map
++		- if there is a pValue<treshold start again by picking the new top motifs
++	*****/
++	//PrintMap(sequences.SortedPValue);
++	InitGeneralization(IMaps,sequences,background);
++	std::cout<<"Generalize done"<<std::endl;
++	PrintMap(sequences.generalizedSortedPValue);
++	sequences.seqCounter.clear();
++	background.seqCounter.clear();
++	sequences.SortedPValueReversed.clear();
++
++	/*****
++		- if there is not a single pValue<treshold exit the programm
++	*****/
++	if(sequences.generalizedSortedPValue.size()==0){
++		std::cout<<"Could not find a pValue<treshold";
++		std::exit(1);
++	
++	}
++	//PrintMap(sequences.generalizedSortedPValue);
++
++	std::map<String<Iupac>,unsigned int > seqCounter;
++	std::map<String<Iupac>,unsigned int > backCounter;
++	Finder<Index<StringSet<String<Dna5> > > > finder(sequences.SArray);
++	Finder<Index<StringSet<String<Dna5> > > > finderB(background.SArray);//finder ins struct
++	
++	/*****
++		- gets the top 100(generalized) motifs and computes the exact counter and pValue
++	*****/
++	
++	exactGeneralizeCount(seqCounter,backCounter, finder, finderB,sequences,background, IMaps);
++	std::cout<<"exactGeneralize done"<<std::endl;
++
++	//PrintFastA(sequences);
++
++
++
++	//std::cout<<sequences.generalizedSortedPValue.begin()->second;
++	
++	std::map<unsigned int,std::map<Iupac,double> > freqMatrix;
++	std::map<unsigned int,std::map<Iupac,double> > freqMatrixB;
++
++	/*****
++		- Computes the probability of each nucleotide to appear at each position (from the top motif)
++		- first output
++	*****/
++	String<unsigned int> replaceString;
++	String<unsigned int> replaceStringB;
++	BuildFrequencyMatrix(freqMatrix,seqCounter, finder, (*sequences.generalizedSortedPValue.begin()).second,sequences,IMaps, replaceString);
++	BuildFrequencyMatrix(freqMatrixB,backCounter, finderB, (*sequences.generalizedSortedPValue.begin()).second,background,IMaps,replaceStringB);
++	
++	std::cout<<(*sequences.generalizedSortedPValue.begin()).second<<std::endl;
++	unsigned int KmerLength = length((*sequences.generalizedSortedPValue.begin()).second);
++	bool foreground = true;
++	PrintMap(freqMatrix,KmerLength,foreground);
++
++	foreground=false;
++	PrintMap(freqMatrixB,KmerLength,foreground);
++
++	freqMatrix.clear();
++	freqMatrixB.clear();
++
++	sequences.generalizedKmer.clear();
++	sequences.seqCounter.clear();
++	sequences.SortedPValue.clear();
++	sequences.SortedPValueReversed.clear();
++	background.seqCounter.clear();
++
++	replaceKmer(sequences,replaceString);
++	replaceKmer(background,replaceStringB);
++	clear(replaceString);
++	clear(replaceStringB);
++
++	//PrintFastA(sequences);
++	clear(sequences.SArray);
++	clear(background.SArray);
++	//std::cout<<sequences.generalizedSortedPValue.begin()->first<<std::endl;
++
++	}
++	while(sequences.generalizedSortedPValue.begin()->first<0.05);
++
++
++	return 0;
++
++}
++
++
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-02 16:57:52.451200100 +0200
+@@ -0,0 +1,1162 @@
++#ifndef SANDBOX_MEYERCLP_APPS_DREME_H_
++#define SANDBOX_MEYERCLP_APPS_DREME_H_
++
++#include <fstream>
++#include <iostream>
++#include <map>
++#include <vector>
++#include <math.h>
++#include <seqan/basic.h>
++#include <seqan/file.h>
++#include <seqan/find.h>
++#include <seqan/stream.h>
++#include <seqan/index.h>
++#include <seqan/sequence.h>
++
++using namespace seqan;
++
++
++struct Seq
++{
++	StringSet<CharString> ids;
++	
++	StringSet<String<Dna5> > seqs;//
++	Index< StringSet<String<Dna5> > > SArray;
++	
++	unsigned int SeqsNumber;
++	
++	std::map<String<Dna5>,unsigned int > seqCounter;//maps the Sequence-Kmere to a Counter for the Sequence
++	std::map<String<Iupac>,unsigned int> generalizedKmer;
++
++	std::map<String<Iupac>,double > SortedPValueReversed;
++	
++	std::multimap<double,String<Dna5> > SortedPValue;
++	std::multimap<double,String<Iupac> > generalizedSortedPValue;
++};
++
++struct IupacMaps
++{
++	std::map<unsigned int,char> IupacMap;
++	std::map<char,unsigned int> IupacMapReversed;
++	std::map<char,String<Iupac> > IupacMapReplace; //stores the replacement-chars
++	std::map<char,String<Dna5> > IupacMapReplaceReversed;
++};
++
++
++void readFastA(struct Seq &seq, CharString fname);
++template <typename TStream>
++void PrintFastA(TStream & stream, Seq &seq);
++void initST(Seq &seq);
++void PrintST(Seq &seq);
++void initExactKmer(Seq &seq,Seq &back,unsigned int kmer_len,unsigned int kmer_len_end);
++void CountKmer(Seq &seq, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Dna5> &Kmer);
++void CountKmer(std::map<String<Iupac>,unsigned int > &Dna5CounterMap, Finder<Index<StringSet<String<Iupac> > > > &finder, String<Iupac> &Kmer,Seq &seq,IupacMaps &IMap);
++void PrintMap(std::map<String<Dna5>,unsigned int > &Dna5CounterMap,unsigned int SeqsNumber);
++void PrintMap(std::map<String<Iupac>,unsigned int > &Dna5CounterMap,unsigned int SeqsNumber);
++void PrintMap(std::multimap<double,String<Dna5> > &pValueMap);
++void PrintMap(std::map<String<Iupac>,unsigned int> &generalizedKmer);
++void PrintMap(std::map<unsigned int,std::map<Iupac,double> > freqMatrix,unsigned int Kmerlength,bool foreground);
++void DebugMap(Seq &seq,Seq &back,std::map<String<Dna5>,unsigned int > &sequencesCounter,std::map<String<Dna5>,unsigned int > &backgroundCounter);
++void DebugMultiMap(std::map<String<Dna5>,unsigned int > &sequencesCounter,std::multimap<double,String<Dna5> > &SortedPValue);
++double* logFac;
++void logFactorial(unsigned int len);
++double calcFET(unsigned int a,unsigned int b,unsigned int c,unsigned int d);
++void modifyFET(unsigned int a,unsigned int b,unsigned int c,unsigned int d, double &pValue);
++void DebugFisherExact(unsigned int a,unsigned int b,unsigned int c,unsigned int d);
++void FisherExactTest(Seq &seq, Seq &back);
++
++void FisherExactTest(std::map<String<Iupac>,unsigned int > &SequenceCounter,std::map<String<Iupac>,unsigned int > &BackgroundCounter, Seq &seq, Seq &back);
++double FisherExactTest(Seq &seq, Seq &back,std::multimap<double,String<Dna5> > &GeneralizedSortedPValueTemp);
++void MapIupac(IupacMaps &IMaps);
++
++void InitGeneralization(IupacMaps &IMaps,Seq &seq, Seq &back);
++void loopOverKmer(Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap);
++void FindKmer(Seq &seq,String<Iupac> &temp,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV);
++void GeneralizeKmer(String<Dna5> Kmer, IupacMaps &IMaps,Seq &seq, Seq &back);
++void GeneralizeKmer(String<Iupac> Kmer,std::map<String<Iupac>,unsigned int> &generalizedKmerTemp,std::map<String<Iupac>,unsigned int> &generalizedKmerBackgroundTemp,IupacMaps &IMaps,Seq &seq, Seq &back);
++
++void estimateCounter(Seq &seq,String<Iupac> temp,String<Iupac> temp2,unsigned int &counter);
++void estimateCounter(Seq &seq,std::map<String<Iupac>,unsigned int> &generalizedKmer,String<Iupac> temp,String<Iupac> temp2,unsigned int &counter);
++void exactGeneralizeCount(std::multimap<double,String<Iupac> > &SortedPValueG,std::map<String<Iupac>,unsigned int > &seqCounter,std::map<String<Iupac>,unsigned int > &backCounter,Finder<Index<StringSet<String<Dna5> > > > finder,Finder<Index<StringSet<String<Dna5> > > > finderB,Seq &seq, Seq &back,IupacMaps &IMap);
++void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,std::map<String<Iupac>,unsigned int > &seqCounter, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps,String<unsigned int> &replaceString);
++void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
++
++
++
++void readFastA( struct Seq &seq, 
++				CharString fname){
++
++	//########### einlesen in ids und seqs
++	//Variable um Sequenz und ID zu speichern
++	std::fstream fasta(toCString(fname), std:: ios_base::in | std::ios_base::binary);
++	if(!fasta.good()){
++		std::cerr << "Could not open file: \"" << fname << "\"" << std::endl;
++		std::exit(1);
++	}
++	typedef String<char,MMap<> > TMMapString;
++	TMMapString mmapString;
++	if(!open(mmapString, toCString(fname), OPEN_RDONLY))
++		std::exit(1);
++	RecordReader<TMMapString, DoublePass<Mapped> > reader(mmapString);
++
++
++	AutoSeqStreamFormat formatTag;
++	if(!checkStreamFormat(reader,formatTag)){
++		std::cerr<<"Could not determine file format!"<<std::endl;
++		std::exit(1);
++	}
++	std::cout<<"File format is "<<getAutoSeqStreamFormatName(formatTag)<<'\n';
++
++
++	StringSet<CharString> ids;
++	StringSet<String<Dna5> > seqs;//
++
++	if(read2(ids,seqs,reader,formatTag) !=0){
++				std::cerr<<"ERROR reading FASTA"<<std::endl;
++				std::exit(1);
++	}
++	
++	seq.ids = ids;
++	seq.seqs = seqs;
++}
++
++
++template <typename TStream>
++void PrintFastA(TStream & stream, 
++				Seq &seq){
++
++	SEQAN_ASSERT_EQ(length(seq.ids), length(seq.seqs));
++
++	typedef Iterator<StringSet<CharString>, Rooted>::Type TIdIter;
++	typedef Iterator<StringSet<String<Dna5> >, Standard>::Type TSeqIter;//Dna5Q
++	TIdIter idIt =begin(seq.ids, Rooted());
++	TSeqIter seqIt=begin(seq.seqs, Standard());
++	for(;!atEnd(idIt);++idIt,++seqIt){
++
++		
++		stream <<*idIt<<'\t'<<*seqIt<<std::endl;
++
++	}
++
++	
++}
++
++void initST(Seq &seq){
++	//creates a index based on an enhanced suffix array 
++	indexText(seq.SArray) = seq.seqs;
++}
++
++void PrintST(Seq &seq){
++
++	typedef Index<StringSet<String<Dna5> > > TMyIndex;//Dna5Q
++	Iterator<TMyIndex, BottomUp<> >::Type myIterator(seq.SArray);
++	for(;!atEnd(myIterator);++myIterator){
++		std::cout<<representative(myIterator)<<std::endl;
++		
++	}
++
++}
++//iniate Search in Fore- and Background
++void initExactKmer( Seq &seq,
++					Seq &back,
++					unsigned int kmer_len,
++					unsigned int kmer_len_end){
++
++	Finder<Index<StringSet<String<Dna5> > > > finder(seq.SArray);
++	Finder<Index<StringSet<String<Dna5> > > > finderB(back.SArray);//finder background
++	typedef Index< StringSet<String<Dna5> > > TMyIndex;
++	//kmer_len= 3;//minimal kmer-length
++	//kmer_len_end=8;//maximal length
++	if(kmer_len<1) kmer_len=3;
++	if(kmer_len_end<kmer_len) kmer_len_end=kmer_len+1;
++	//std::cout<<"kmer: "<<kmer_len<<std::endl;
++	//std::cout<<"end: "<<kmer_len_end<<std::endl;
++
++	typedef Iterator<StringSet<String<Dna5> > >::Type TStringSetIterator;
++	unsigned int slen=0;
++	String<Dna5> Kmer;//current Kmer
++	
++
++	std::cout<<std::endl<<std::endl;
++	for(;kmer_len<=kmer_len_end;++kmer_len){//loop over all possible Kmer-length -->3-8
++		for(TStringSetIterator it=begin(seq.seqs);it!=end(seq.seqs);++it){//loop over all sequences
++			slen=length(value(it));//length of the current seq
++			if(slen==0) continue;
++			else if(slen<kmer_len) continue;
++			//std::cout<<"Sequence: "<<value(it)<<std::endl;
++		
++		
++			for(unsigned int i=0;i<slen-kmer_len+1;++i){//loop over all Kmere in the current sequence
++			
++				Kmer=infix(value(it),i,i+kmer_len);//optimieren
++				//std::cout<<Kmer<<" ";
++				//if(Kmer[kmer_len-1]=='N'){//'AAAN'AAAA ---> AAA'NAAA'A --> after continue AAAN'AAAA'
++				//	i+=kmer_len;
++				//	continue;
++				//}
++				
++				if(seq.seqCounter.find(Kmer)!=seq.seqCounter.end()) continue;// if Kmer is in the Map -->nothing to do
++	//			//Pattern<String<Dna5> > pattern(Kmer);
++			//	std::cout<<"count";
++				CountKmer(back,finderB,Kmer);
++				CountKmer(seq,finder,Kmer);
++				
++			}
++		}
++
++	}
++
++		
++	//}
++}
++
++//gets the current Kmer and searches it in the index
++//max(cumulated sum of the counter)=SeqsNumber --> counts number of sequences containing the motif
++void CountKmer( Seq &seq, 
++				Finder<Index<StringSet<String<Dna5> > > > &finder, 
++				String<Dna5> &Kmer){
++	
++			std::vector<int> CounterV(seq.SeqsNumber+1,0);//counter for storing 1 or 0 for each Seq + the cumulated sum of the counter in the last field
++			//std::cout<<"vor while  ";
++			clear(finder);
++			while(find(finder,Kmer)){//search the current Kmer in all sequences
++				//std::cout<<'[' <<beginPosition(finder)<<','<<endPosition(finder)<<")\t"<<infix(finder)<<std::endl;//Debug
++			
++				
++				
++				if(CounterV[beginPosition(finder).i1] == 0){//count number of sequences containing the motif, not the occurrences to avoid problems with self-overlapping
++					++CounterV[beginPosition(finder).i1];
++					++CounterV[seq.SeqsNumber];//last Position in CounterV is cumulated sum
++				}
++			
++			}
++			seq.seqCounter[Kmer]=CounterV[seq.SeqsNumber];
++			CounterV.clear();
++
++
++}
++
++
++
++void loopOverKmer(  Seq &seq,
++					String<Iupac> &temp,
++					String<Iupac> &Kmer,
++					Iterator<String<Iupac> >::Type &tempIt,
++					Finder<Index<StringSet<String<Dna5> > > > &finder,
++					unsigned int &counter,
++					std::vector<int> &CounterV,
++					IupacMaps &IMap){
++	
++	String<Dna5> replace;
++	Iterator<String<Dna5> >::Type replaceIt;
++	Iterator<String<Iupac> >::Type tempIttemp;
++	//std::cout<<Kmer;
++	
++	//for(;tempIt!=end(temp);++tempIt){//loop over each position in kmer
++				//std::cout<<std::endl;
++				//std::cout<<" 0. "<<temp<<" "<<tempIt<<" ";
++				if(tempIt==end(temp)) return;
++				if(*tempIt == 'A' || *tempIt == 'C' ||*tempIt == 'G' ||*tempIt == 'T') loopOverKmer(seq,temp,temp,++tempIt,finder,counter,CounterV,IMap);//only replace the position with a wildcard
++				replace=IMap.IupacMapReplaceReversed[*tempIt];
++				replaceIt = begin(replace);	
++				//std::cout<<" 1. "<<temp<<" "<<tempIt<<" ";
++				for(;replaceIt!=end(replace);++replaceIt){
++					temp = Kmer;// reset temp
++					*tempIt = *replaceIt;
++					//if not end call fkt. with temp 
++					// if end call find --> &counter
++					tempIttemp=tempIt;
++					if(tempIt+1!=end(temp)){
++						//++tempIt;
++						//std::cout<<" if "<<tempIt<<" "<<end(temp)<<std::endl;
++						loopOverKmer(seq,temp,temp,++tempIttemp,finder,counter,CounterV,IMap);
++
++					}
++					//std::cout<<" 2. "<<*replaceIt<<" "<<temp<<" "<<tempIt<<std::endl;
++					FindKmer(seq,temp,finder,counter,CounterV);
++
++				
++					
++					
++				}
++				
++			//}
++
++
++
++}
++
++void FindKmer(  Seq &seq,
++				String<Iupac> &temp,
++				Finder<Index<StringSet<String<Dna5> > > > &finder,
++				unsigned int &counter,
++				std::vector<int> &CounterV){
++
++
++
++					clear(finder);
++					while(find(finder,temp)){//search the current Kmer in all sequences
++						//std::cout<<'[' <<beginPosition(finder)<<','<<endPosition(finder)<<")\t"<<infix(finder)<<std::endl;//Debug
++						
++						if(CounterV[beginPosition(finder).i1] == 0){//count number of sequences containing the motif, not the occurrences to avoid problems with self-overlapping
++							//ansonsten müsste das array noch einmal durch gegangen werden und an jeder stellt !=0 ++
++							++CounterV[beginPosition(finder).i1];
++							++CounterV[seq.SeqsNumber];//last Position in CounterV is cumulated sum
++							++counter;
++						}
++			
++					}
++
++
++}
++
++
++
++
++
++/*
++	for counting the top 100 generalizedKmere exact
++	todo -->template
++*/
++void CountKmer( std::map<String<Iupac>,
++				unsigned int > &seqCounter, 
++				Finder<Index<StringSet<String<Dna5> > > > &finder, 
++				String<Iupac> &Kmer,
++				Seq &seq,
++				IupacMaps &IMap){
++			
++	
++			
++			String<Iupac> temp;	
++			
++			Iterator<String<Iupac> >::Type tempIt;
++			
++			temp=Kmer;
++			tempIt = begin(temp);
++			unsigned int counter=0;
++			std::vector<int> CounterV(seq.SeqsNumber+1,0);//counter for storing 1 or 0 for each Seq + the cumulated sum of the counter in the last field
++			
++			
++			loopOverKmer(seq,temp,Kmer,tempIt,finder,counter,CounterV,IMap);
++
++			
++			
++			seqCounter[Kmer]=counter;
++			//std::cout<<temp<<" "<<CounterV[SeqsNumber]<<std::endl;
++			CounterV.clear();
++			
++			/*
++				Der clear hier bewirkt, dass bei ASG entweder ACG oder AGG vorkommen darf,
++				falls beide vorkommen(in einer Sequenz) wird der counter trotzdem nur um 1 erhöht
++				-->Counter für AGG ist falsch, ASG stimmt jedoch wieder. Counter[AGG] --> irrelevant
++				-->AGG wird jedes mal wenns benötigt wird neu berechnet-->optimieren
++			*/
++		
++
++}
++
++
++
++void replaceKmer(   Seq &seq,
++					String<unsigned int> &replaceString){
++
++	unsigned int beg =0;
++	unsigned int endP =0;
++	unsigned int Snumber =0;
++
++	//std::cout<<stringNumber<<" "<<begin<<" "<<end<<std::endl;
++	Iterator<String<unsigned int> >::Type StringIt;
++	StringIt = begin(replaceString);
++	for(;StringIt!=end(replaceString);++StringIt){
++		Snumber = *StringIt;
++		++StringIt;
++		beg		= *StringIt;
++		++StringIt;
++		endP		= *StringIt;
++		//std::cout<<Snumber<<" "<<beg<<" "<<endP<<std::endl;
++		for(;beg<endP;++beg)
++		{
++			seq.seqs[Snumber][beg]='N';
++		}
++			//replace(seq.seqs[*StringIt],*(++StringIt),*(++StringIt),'N');
++	}
++
++
++}
++
++void BuildFrequencyMatrix(  std::map<unsigned int,
++							std::map<Iupac,double> > &freqMatrix,
++							std::map<String<Iupac>,unsigned int > &seqCounter,
++							Finder<Index<StringSet<String<Dna5> > > > &finder,
++							String<Iupac> &Kmer,
++							Seq &seq, 
++							IupacMaps &IMaps,
++							String<unsigned int> &replaceString){
++			//std::cout<<Kmer<<std::endl;
++			//freqMatrix -->unsigned int = position in Kmer, position 1 in map = prob. for A, pos. 2 = prob. for C...
++			String<Iupac> temp;	
++			String<Dna5> replace;
++			Iterator<String<Iupac> >::Type tempIt;
++			Iterator<String<Dna5> >::Type replaceIt;
++			temp=Kmer;
++			tempIt = begin(temp);
++			unsigned int counter=0;
++			unsigned int pos = 0;
++			
++			std::map<Iupac,double> freq;//4= ACGT
++			for(;tempIt!=end(temp);++tempIt,++pos){//loop over each position in kmer
++				freq[*tempIt]=1;
++				freqMatrix[pos]=freq;
++				freq.clear();
++				if(*tempIt == 'A' || *tempIt == 'C' ||*tempIt == 'G' ||*tempIt == 'T') continue;//only replace the position with a wildcard
++				
++				//std::cout<<temp<<" "<<Kmer<<" "<<IupacMapReplaceReversed[*tempIt]<<" ";
++				replace=IMaps.IupacMapReplaceReversed[*tempIt];
++				replaceIt = begin(replace);	
++				for(;replaceIt!=end(replace);++replaceIt){
++					std::vector<int> CounterV(seq.SeqsNumber+1,0);//counter for storing 1 or 0 for each Seq + the cumulated sum of the counter in the last field
++					temp = Kmer;// reset temp
++					//std::cout<<" "<<temp<<" "<<Kmer<<" "<<*replaceIt<<std::endl;
++					*tempIt = *replaceIt;
++					
++
++					//2vector für expression
++					clear(finder);
++					while(find(finder,temp)){//search the current Kmer in all sequences
++						//std::cout<<" "<<temp<<" "<<Kmer<<" "<<*replaceIt<<std::endl;
++						//std::cout<<'[' <<beginPosition(finder)<<','<<endPosition(finder)<<")\t"<<infix(finder)<<std::endl;//Debug
++						//replaceKmer(seq,beginPosition(finder).i1, beginPosition(finder).i2, endPosition(finder).i2);
++						appendValue(replaceString,beginPosition(finder).i1);
++						appendValue(replaceString,beginPosition(finder).i2);
++						appendValue(replaceString,endPosition(finder).i2);
++						if(CounterV[beginPosition(finder).i1] == 0){//count number of sequences containing the motif, not the occurrences to avoid problems with self-overlapping
++							++CounterV[beginPosition(finder).i1];
++							++CounterV[seq.SeqsNumber];//last Position in CounterV is cumulated sum
++							++counter;
++						}
++			
++					}
++					//Durch die wildcards mehrere Vorkommen pro Sequence möglich:
++					seqCounter[temp]=CounterV[seq.SeqsNumber];
++					
++					//std::cout<<temp<<" "<<*replaceIt<<" ";
++					freq[*tempIt]=CounterV[seq.SeqsNumber];
++					
++					
++					CounterV.clear();
++				}
++				if(counter>0){
++				freq['A']=freq['A']/counter;
++				freq['C']=freq['C']/counter;
++				freq['G']=freq['G']/counter;
++				freq['T']=freq['T']/counter;
++				}
++				else{
++					freqMatrix.clear();
++				}
++				freqMatrix[pos]=freq;
++				freq.clear();
++			}
++
++			
++
++				
++
++}
++//FreqMatrix output
++void PrintMap(  std::map<unsigned int,std::map<Iupac,double> > freqMatrix,
++				unsigned int Kmerlength,
++				bool foreground){
++	std::map<Iupac,double> freq;
++	std::cout<<std::endl;
++	if(foreground)
++		std::cout<<"foreground: "<<std::endl;
++	else
++		std::cout<<"background: "<<std::endl;
++	for(unsigned int j=0;j<Kmerlength;++j){
++				freq=freqMatrix[j];
++				std::cout<<"Position: "<<j<<" A: "<<freq['A']<<std::endl;
++				std::cout<<"Position: "<<j<<" C: "<<freq['C']<<std::endl;
++				std::cout<<"Position: "<<j<<" G: "<<freq['G']<<std::endl;
++				std::cout<<"Position: "<<j<<" T: "<<freq['T']<<std::endl;
++				std::cout<<std::endl;
++			}
++
++}
++
++
++
++/*Prints the Mapping:
++Kmer	Seq1	Seq2	...	Seqn	CumulatedCounter
++-->Template
++
++*/
++void PrintMap(  std::map<String<Dna5>,unsigned int> &Dna5CounterMap,
++				unsigned int SeqsNumber){
++	std::cout<<std::endl;
++	std::map<String<Dna5>,unsigned int>::iterator MapIterator;
++	for(MapIterator=Dna5CounterMap.begin(); MapIterator !=Dna5CounterMap.end();++MapIterator){
++		std::cout<<(*MapIterator).first<<"   ";
++		
++			std::cout<<(*MapIterator).second<<" ";
++		std::cout<<std::endl;
++	}
++}
++
++void PrintMap(  std::map<String<Iupac>,unsigned int > &Dna5CounterMap,
++				unsigned int SeqsNumber){
++	std::cout<<std::endl;
++	std::map<String<Iupac>,unsigned int >::iterator MapIterator;
++	for(MapIterator=Dna5CounterMap.begin(); MapIterator !=Dna5CounterMap.end();++MapIterator){
++		std::cout<<(*MapIterator).first<<"   ";
++		
++			std::cout<<(*MapIterator).second<<" ";
++		std::cout<<std::endl;
++	}
++}
++
++void PrintMap(std::multimap<double,String<Dna5> > &pValueMap){
++	std::multimap<double,String<Dna5> >::iterator MapIterator;
++	for(MapIterator=pValueMap.begin();MapIterator !=pValueMap.end();++MapIterator){
++		std::cout<<(*MapIterator).first<<" ";
++		std::cout<<(*MapIterator).second<<std::endl;
++	}
++}
++
++void PrintMap(std::multimap<double,String<Iupac> > &pValueMap){
++	std::multimap<double,String<Iupac> >::iterator MapIterator;
++	//std::cout<<pValueMap.size()<<std::endl;
++	int i=0;
++	for(MapIterator=pValueMap.begin();MapIterator !=pValueMap.end() && i<10;++MapIterator,++i){
++		std::cout<<(*MapIterator).first<<" ";
++		std::cout<<(*MapIterator).second<<std::endl;
++	}
++}
++
++//to print the generalizedKmerMap
++void PrintMap(std::map<String<Iupac>,unsigned int> &generalizedKmer){
++	std::map<String<Iupac>, unsigned int>::iterator MapIterator;
++	int i=0;
++	for(MapIterator=generalizedKmer.begin();MapIterator!=generalizedKmer.end() && i<20;++MapIterator,++i){
++		std::cout<<(*MapIterator).first<<" ";
++		std::cout<<(*MapIterator).second<<"    ";
++	}
++}
++
++
++//Test the Map-lengths match eachother and with the sequences
++void DebugMap(  Seq &seq,
++				Seq &back,
++				std::map<String<Dna5>,std::vector<int> > &sequencesCounter,
++				std::map<String<Dna5>,std::vector<int> > &backgroundCounter){
++
++	typedef std::map<String<Dna5>,std::vector<int> > Dna5CounterMap;
++	Dna5CounterMap::iterator MapIterator;
++	MapIterator=sequencesCounter.begin();
++	Dna5CounterMap::iterator MapIteratorB;
++	MapIteratorB=backgroundCounter.begin();
++
++	
++	SEQAN_ASSERT_EQ(length(sequencesCounter),length(backgroundCounter));
++	SEQAN_ASSERT_EQ(length((*MapIterator).second),(length(seq.ids)+1));//+1, because of the last field in vector 
++	SEQAN_ASSERT_EQ(length((*MapIteratorB).second),(length(back.ids)+1));
++
++	//std::cout<<length(sequencesCounter)<<std::endl;
++	//std::cout<<length((*MapIterator).second)<<std::endl;
++	//std::cout<<length(backgroundCounter)<<std::endl;
++	//std::cout<<length((*MapIteratorB).second)<<std::endl;
++	//std::cout<<length(seq.ids)<<std::endl;
++	//std::cout<<length(back.ids)<<std::endl;
++}
++
++void DebugMultiMap( std::map<String<Dna5>,std::vector<int> > &sequencesCounter,
++					std::multimap<double,String<Dna5> > &SortedPValue){
++	SEQAN_ASSERT_EQ(length(sequencesCounter),SortedPValue.size());
++
++}
++
++void logFactorial(unsigned int len){
++	double* p;
++	unsigned int i=1;
++	p = (double*)malloc(sizeof(double)*(len+1));
++	p[0]=0;
++		for(;i<=len;++i){
++			p[i]= p[i-1] + log(i);
++		}
++
++	
++
++	logFac =p;
++}
++
++double calcFET( unsigned int a,
++				unsigned int b,
++				unsigned int c,
++				unsigned int d){
++
++	return exp(logFac[a+b] + logFac[c+d] + logFac[a+c] + logFac[b+d] - 
++		(logFac[a+b+c+d] + logFac[a]+ logFac[b] + logFac[c] +logFac[d]));
++}
++
++
++void modifyFET( unsigned int a,
++				unsigned int b,
++				unsigned int c,
++				unsigned int d, 
++				double &pValue){
++
++	
++
++	pValue= calcFET(a,b,c,d);
++	//	//std::cout<<(*MapI).first<<" "<<pValue<<"   ";
++	//
++		while(b!=0 && c!=0){//modify to be more extrem
++			++a;
++			--b;
++			--c;
++			++d;
++			pValue += calcFET(a,b,c,d);
++	//		//std::cout<<pValue<<"   ";
++		}
++
++
++
++}
++
++
++
++
++/***************************
++
++log((a+b)!(c+d)!(a+c)!(b+d)!/a!b!c!d!n!) = logFactorial(a+b) + logFactorial(c+d) +
++										   logFactorial(a+c) + logFactorial(b+d) -
++										   (logFactorial(a+b+c+d) + logFactorial(a)+
++										   logFactorial(b) + logFactorial(c) +
++										   logFactorial(d))
++
++pValue = exp(log((a+b)!(c+d)!(a+c)!(b+d)!/a!b!c!d!n!))
++
++a=In Sequenz gefunden	b=In Background gefunden
++c=In Sequenz !gefunden	d=In Background !gefunden
++
++a = sequenceCounter		b= backgroundCounter
++a+c=SeqsNumber			b+d=backgroundNumber
++--> c= SeqsNumber - cumulated(sequenceCounter)
++	d= backgroundNumber - cumulated(backgroundCounter)
++
++Für den einseitigen Test zusätzlich:
++	++a und --c
++Für den zweiseitigen Test:
++	++a und --c
++	--a und ++c
++
++
++
++****************************/
++
++
++void FisherExactTest(Seq &seq, 
++					 Seq &back){
++
++	
++	
++
++	double pValue=0;
++	typedef std::map<String<Dna5>,unsigned int >::iterator MapIterator;
++	MapIterator MapI=seq.seqCounter.begin();
++	MapIterator MapIB=back.seqCounter.begin();
++	//std::cout<<(*MapI).first<<" "<<(*MapI).second.back()<<std::endl;
++	//std::cout<<(*MapIB).first<<" "<<(*MapIB).second.back()<<std::endl;
++	for(;MapI!=seq.seqCounter.end();++MapI,++MapIB){
++		
++
++		modifyFET((*MapI).second,(*MapIB).second,(seq.SeqsNumber - (*MapI).second),(back.SeqsNumber - (*MapIB).second),pValue);
++	
++	
++		//std::cout<<pValue<<std::endl;
++		//SortedPValue[pValue]=(*MapI).first;
++		seq.SortedPValue.insert(std::pair<double,String<Dna5> > (pValue, (*MapI).first));
++		seq.SortedPValueReversed.insert(std::pair<String<Iupac>,double > ((*MapI).first,pValue));
++	}
++
++
++}
++//--> templates verwenden
++void FisherExactTest(std::map<String<Iupac>,unsigned int > &SequenceCounter,
++					 std::map<String<Iupac>,unsigned int > &BackgroundCounter,
++					 Seq &seq, 
++					 Seq &back){
++
++	
++	
++
++	double pValue=0;
++	typedef std::map<String<Iupac>,unsigned int >::iterator MapIterator;
++	MapIterator MapI=SequenceCounter.begin();
++	MapIterator MapIB=BackgroundCounter.begin();
++	//std::cout<<(*MapI).first<<" "<<(*MapI).second.back()<<std::endl;
++	//std::cout<<(*MapIB).first<<" "<<(*MapIB).second.back()<<std::endl;
++	for(;MapI!=SequenceCounter.end();++MapI,++MapIB){
++		
++	
++		modifyFET((*MapI).second,(*MapIB).second,(seq.SeqsNumber - (*MapI).second),(back.SeqsNumber - (*MapIB).second),pValue);
++	
++	
++		
++		seq.generalizedSortedPValue.insert(std::pair<double,String<Iupac> > (pValue, (*MapI).first));
++		seq.SortedPValueReversed.insert(std::pair< String<Iupac>,double> ((*MapI).first,pValue));
++	}
++
++
++}
++
++/*
++	Fisher-Exact-Test for generalized Kmere
++*/
++double FisherExactTest( Seq &seq,
++						Seq &back,
++						std::multimap<double,String<Iupac> > &GeneralizedSortedPValueTemp){
++	
++	
++	
++
++	//std::cout<<"begin"<<std::endl;
++	if(seq.generalizedKmer.size()==0)	
++		return 2;
++
++	typedef std::map<String<Iupac>,unsigned int >::iterator MapIterator;
++	
++	std::multimap<double,String<Iupac> >::iterator MapIterator2;
++	MapIterator MapI = seq.generalizedKmer.begin();
++	MapIterator MapIB= back.generalizedKmer.begin();
++	double pValue=0;
++	//std::cout<<generalizedKmerSequence.size();
++	for(;MapI!=seq.generalizedKmer.end();++MapI,++MapIB){
++		
++
++		modifyFET((*MapI).second,(*MapIB).second,seq.SeqsNumber - (*MapI).second,back.SeqsNumber - (*MapIB).second,pValue);
++		
++
++		GeneralizedSortedPValueTemp.insert(std::pair<double,String<Iupac> > (pValue, (*MapI).first));//not seq.generalizedSortedPValue, because this is the temp one
++		seq.SortedPValueReversed.insert(std::pair<String<Iupac>,double > ((*MapI).first,pValue));
++		}
++	
++	
++	
++	return GeneralizedSortedPValueTemp.begin()->first;
++}
++
++
++
++
++//void DebugFisherExact(unsigned int a,unsigned int b,unsigned int c,unsigned int d){
++//	
++//	double pValue=0;
++//	if(c<a || d < b){
++//		std::cerr<<"Cumulated Counter too large";
++//		exit(1);
++//	}
++//	c=c-a;
++//	d=d-b;
++//	SEQAN_ASSERT_EQ((logFactorial(2+1+4+2)),(logFactorial(9)));
++//	
++//	std::cout<<"a: "<<a<<" b: "<<b<<" c: "<<c<<" d: "<<d<<std::endl;
++//	pValue= logFactorial(a+b) + logFactorial(c+d) + logFactorial(a+c) + logFactorial(b+d) - (logFactorial(a+b+c+d) + logFactorial(a)+ logFactorial(b) + logFactorial(c) +logFactorial(d));
++//	std::cout<<"log(pValue) "<<pValue<<std::endl;
++//	pValue=logFactorial(a+b) + logFactorial(c+d) + logFactorial(a+c) + logFactorial(b+d) ;
++//	std::cout<<"the dividend: "<<pValue<<std::endl;
++//	pValue=- (logFactorial(2+1+4+2) + logFactorial(2)+ logFactorial(1) + logFactorial(4) +logFactorial(2));
++//	std::cout<<"the divisor: "<<pValue<<std::endl;
++//	pValue= (logFactorial(1));
++//	std::cout<<"logFactorial(1): "<<pValue<<std::endl;
++//	pValue= (logFactorial(0));
++//	std::cout<<"logFactorial(0): "<<pValue<<std::endl;
++//
++//
++//}
++
++void MapIupac(IupacMaps &IMaps ){
++
++	IMaps.IupacMap.get_allocator().allocate(16);
++	IMaps.IupacMap[0]='U';
++	IMaps.IupacMap[1]='T';
++	IMaps.IupacMap[2]='A';
++	IMaps.IupacMap[3]='W';
++	IMaps.IupacMap[4]='C';
++	IMaps.IupacMap[5]='Y';
++	IMaps.IupacMap[6]='M';
++	IMaps.IupacMap[7]='H';
++	IMaps.IupacMap[8]='G';
++	IMaps.IupacMap[9]='K';
++	IMaps.IupacMap[10]='R';
++	IMaps.IupacMap[11]='D';
++	IMaps.IupacMap[12]='S';
++	IMaps.IupacMap[13]='B';
++	IMaps.IupacMap[14]='V';
++	IMaps.IupacMap[15]='N';
++
++	IMaps.IupacMapReversed.get_allocator().allocate(16);
++
++	IMaps.IupacMapReversed['U']=0;
++	IMaps.IupacMapReversed['T']=1;
++	IMaps.IupacMapReversed['A']=2;
++	IMaps.IupacMapReversed['W']=3;
++	IMaps.IupacMapReversed['C']=4;
++	IMaps.IupacMapReversed['Y']=5;
++	IMaps.IupacMapReversed['M']=6;
++	IMaps.IupacMapReversed['H']=7;
++	IMaps.IupacMapReversed['G']=8;
++	IMaps.IupacMapReversed['K']=9;
++	IMaps.IupacMapReversed['R']=10;
++	IMaps.IupacMapReversed['D']=11;
++	IMaps.IupacMapReversed['S']=12;
++	IMaps.IupacMapReversed['B']=13;
++	IMaps.IupacMapReversed['V']=14;
++	IMaps.IupacMapReversed['N']=15;
++
++	
++
++	IMaps.IupacMapReplace.get_allocator().allocate(14);
++	IMaps.IupacMapReplace['R']="CT";//in Iupac-notation R=AG --> CT left
++	IMaps.IupacMapReplace['Y']="AG";
++	IMaps.IupacMapReplace['S']="AT";
++	IMaps.IupacMapReplace['W']="CG";
++	IMaps.IupacMapReplace['K']="AC";
++	IMaps.IupacMapReplace['M']="GT";
++	IMaps.IupacMapReplace['D']="C";
++	IMaps.IupacMapReplace['H']="G";
++	IMaps.IupacMapReplace['B']="A";
++	IMaps.IupacMapReplace['V']="T";
++	IMaps.IupacMapReplace['A']="CGT";
++	IMaps.IupacMapReplace['C']="AGT";
++	IMaps.IupacMapReplace['G']="ACT";
++	IMaps.IupacMapReplace['T']="ACG";
++	
++	IMaps.IupacMapReplaceReversed.get_allocator().allocate(11);
++	IMaps.IupacMapReplaceReversed['R']="AG";
++	IMaps.IupacMapReplaceReversed['Y']="CT";
++	IMaps.IupacMapReplaceReversed['S']="CG";
++	IMaps.IupacMapReplaceReversed['W']="AT";
++	IMaps.IupacMapReplaceReversed['K']="GT";
++	IMaps.IupacMapReplaceReversed['M']="AC";
++	IMaps.IupacMapReplaceReversed['D']="AGT";
++	IMaps.IupacMapReplaceReversed['H']="ACT";
++	IMaps.IupacMapReplaceReversed['B']="CGT";
++	IMaps.IupacMapReplaceReversed['V']="ACG";
++	IMaps.IupacMapReplaceReversed['N']="ACGT";
++		
++
++
++
++}
++/*	- initiate by repeatedly picking the top motifs from SortedPValue
++	- calls GeneralizeKmer and the EstimateFunction
++*/
++void InitGeneralization(IupacMaps &IMaps,
++						Seq &seq,
++						Seq &back){
++	std::multimap<double,String<Dna5> >::iterator MapIterator;
++	std::multimap<double,String<Iupac> >::iterator MapIteratorT;	
++	std::multimap<double,String<Iupac> > generalizedSortedPValueTemp;
++	std::map<String<Iupac>,unsigned int> generalizedKmerTemp;
++	std::map<String<Iupac>,unsigned int> generalizedKmerBackgroundTemp;
++	unsigned int i=0;
++	unsigned int limit;
++	if(seq.SortedPValue.size()>100)	limit=100;
++	else	limit = seq.SortedPValue.size();
++	for(MapIterator=seq.SortedPValue.begin();i<limit;++MapIterator,++i){//iterate over Top100
++		GeneralizeKmer((*MapIterator).second,IMaps,seq,back);
++	}
++	/*
++		- only do the next function call, if in the last at least one pValue<treshold	
++		- call GeneralizeKmer in loop
++	*/
++	PrintMap(seq.generalizedKmer);
++	//seq.generalizedSortedPValue.insert(seq.SortedPValue.begin(),seq.SortedPValue.end());
++	double topPValue = FisherExactTest(seq,back,generalizedSortedPValueTemp);// lowest pValue from the first generalization
++	double topPValueOld =seq.SortedPValue.begin()->first;//lowest pValue before generalization
++
++	while(topPValue<0.05 && topPValue<topPValueOld){//only start a new round, if the top PValue is an improvement of the old one
++		
++		//std::cout<<"test";
++		/*
++			while wird das erste mal mit generalizedKmer aufgerufen und dem temporären mapping der pValues
++			das temporäre mapping wird in das richtige mapping gemerged und gecleant, damit geschaut werden kann, ob bei den neuen pValues ein wert
++			über dem treshold ist --> falls nicht bricht die while ab
++			falls doch wird generalizedKmer kopiert und gecleant aus dem gleichen grund, damit, nur die neuen generalisierten Kmere untersucht werden
++			--> das Temp hier, um über alle alten zu gehen, um diese weiter zu generalisieren
++
++		*/
++
++		seq.generalizedSortedPValue.insert(generalizedSortedPValueTemp.begin(),generalizedSortedPValueTemp.end());
++
++	
++		
++	
++		generalizedKmerTemp.clear();
++		generalizedKmerBackgroundTemp.clear();
++		generalizedKmerTemp=seq.generalizedKmer;
++		generalizedKmerBackgroundTemp=back.generalizedKmer;
++		back.generalizedKmer.clear();
++		seq.generalizedKmer.clear();
++	//	generalizedMapIterator= generalizedKmerTemp.begin();
++		if(generalizedSortedPValueTemp.size()>100)	limit=100;
++		else	limit = generalizedSortedPValueTemp.size();
++	
++		i=0;//only Top100
++		for(MapIteratorT=generalizedSortedPValueTemp.begin();i<limit;++MapIteratorT,++i){//iterate over Top100
++		
++			//Temp ums zu finden, aber das normale auch übergeben, zum neu befüllen
++			
++			GeneralizeKmer((*MapIteratorT).second,generalizedKmerTemp,generalizedKmerBackgroundTemp,IMaps,seq,back);
++			
++			                                                                        
++	
++		}
++		generalizedSortedPValueTemp.clear();
++
++	topPValueOld =topPValue;
++	topPValue = FisherExactTest(seq,back,generalizedSortedPValueTemp);
++	
++		
++	}
++	
++	
++}
++/*	- gets a Kmer and replaces each position successively with each possible ambiguity Code(Iupac)
++	- only one wildcard per String at one time
++	- the unsigned int corresponds to the estimated counter
++	- String<Dna5> for initialization
++ */
++void GeneralizeKmer(String<Dna5> Kmer,
++					IupacMaps &IMaps,
++					Seq &seq,
++					Seq &back){
++	
++	String<Iupac> temp;//temporary String --> generalizedKmer[temp]
++	String<Iupac> temp2;//Kmer with replaced position--> relevant for estimateCounter
++	Iterator<String<Iupac> >::Type tempIt;//Iterator over temp --> same length as Kmer
++	String<Dna5> replace = "ACGT";//replace the current position with each possible ambiguity code --> A,C,G or T
++	Iterator<String<Dna5> >::Type replaceIt;
++	unsigned int counter =0;
++	char tempChar;
++	//replaceIt = begin(replace);	
++	temp = Kmer;
++	temp2=Kmer;
++	tempIt = begin(temp);
++	
++	for(;tempIt!=end(temp);++tempIt){//loop over each position in kmer
++		replaceIt = begin(replace);	
++		for(;replaceIt!=end(replace);++replaceIt){// loop over ACGT
++			temp = Kmer;// reset temp
++		
++			if(*tempIt == *replaceIt) continue; // there is no Iupac for "AA", in return "AG" = "R"
++			//std::cout<<temp<<" ";
++			tempChar =*tempIt;//stores the current char because of temp2
++			*tempIt=*replaceIt;
++			temp2=temp;
++			*tempIt=tempChar;
++			*tempIt =IMaps.IupacMap[IMaps.IupacMapReversed[*tempIt] + IMaps.IupacMapReversed[*replaceIt]];//compute Iupac-letter--> A + G = R and replace the current location in temp
++			//std::cout<<Kmer<<" "<<temp<<" "<<temp2<<std::endl;
++			if(seq.generalizedKmer.find(temp)!=seq.generalizedKmer.end()) continue;// if Kmer is in the Map -->nothing to do
++			//estimateCounter mit Kmer und temp2 aufrufen
++			estimateCounter(seq,Kmer,temp2,counter);
++			//std::cout<<temp<<" ";
++			seq.generalizedKmer[temp]=counter;
++			estimateCounter(back,Kmer,temp2,counter);
++			back.generalizedKmer[temp]=counter;
++		}
++	}
++
++	//PrintMap(seq.generalizedKmer);
++	
++
++}
++
++/*	- the same as above except that each String has already a wildcard
++*/
++void GeneralizeKmer(String<Iupac> Kmer,
++					std::map<String<Iupac>,unsigned int> &generalizedKmerTemp,
++					std::map<String<Iupac>,unsigned int> &generalizedKmerBackgroundTemp,
++					IupacMaps &IMaps,
++					Seq &seq, 
++					Seq &back){
++	String<Iupac> temp;//temporary String --> generalizedKmer[temp]
++	String<Iupac> temp2;//Kmer with replaced position--> relevant for estimateCounter
++	Iterator<String<Iupac> >::Type tempIt;//Iterator over temp --> same length as Kmer
++	String<Iupac> replace;
++	Iterator<String<Iupac> >::Type replaceIt;
++	unsigned int counter =0;
++	char tempChar;
++	
++	temp = Kmer;
++	tempIt = begin(temp);
++	//std::cout<<temp<<" ";
++	for(;tempIt!=end(temp);++tempIt){//loop over each position in kmer
++		//if(*tempIt == 'A' || *tempIt == 'C' ||*tempIt == 'G' ||*tempIt == 'T') continue;//only replace the position with a wildcard
++		
++		
++		
++		replace=IMaps.IupacMapReplace[*tempIt];
++		replaceIt = begin(replace);	
++		for(;replaceIt!=end(replace);++replaceIt){// loop over the replacement-chars
++			temp = Kmer;// reset temp
++			//std::cout<<*replaceIt<<std::endl;
++			tempChar =*tempIt;//stores the current char because of temp2
++			*tempIt=*replaceIt;//replace the current char for temp2
++			temp2=temp;
++			*tempIt=tempChar;
++
++			*tempIt =IMaps.IupacMap[IMaps.IupacMapReversed[*tempIt] + IMaps.IupacMapReversed[*replaceIt]];
++			
++			if(seq.SortedPValueReversed[Kmer] >= 0.05 || seq.SortedPValueReversed[temp2] >= 0.05) continue;//only if Kmer and temp2 are significant estimate the counter
++			if(generalizedKmerTemp.find(temp)!=generalizedKmerTemp.end()) continue;
++			estimateCounter(seq,generalizedKmerTemp,Kmer,temp2,counter);
++			seq.generalizedKmer[temp]=counter;
++			estimateCounter(back,generalizedKmerBackgroundTemp,Kmer,temp2,counter);
++			back.generalizedKmer[temp]=counter;
++			//std::cout<<temp<<" "<<counter<<std::endl;
++		}
++
++		}
++		/**
++		- gehe über Kmer --> if ACGT continue
++		- else rufe IupacMapReplace auf
++		- -->for(;replaceIt!=end(replace);++replaceIt) --> loop über den String aus IupacMapReplace
++		- temp ist das neue Kmer und temp2 die neue wildcard--> estimateCounter aufrufen --> für fore- und background
++
++		- funktion wird in for-schleife aufgerufen --> geht über alle
++		- clear generaliedKmer vor der for-schleife
++		- --> wird neu befüllt und kann mit FisherExact aufgerufen werden
++		- SortedPValue wird berechnet (in temp) und überprüft ob noch ein wert drunter ist-->falls ja insertiere temp in den rest
++		- falls nein nehme die top100 und rufe exactSearch auf
++
++
++
++
++	**/
++
++
++
++
++}
++
++
++//void loopOverRecplacement(String<Iupac> &temp,String<Iupac> &temp2,String<Iupac> Kmer,Iterator<String<Iupac> >::Type tempIt,unsigned int counter){
++//	char tempChar;
++//	String<Iupac> replace;
++//	Iterator<String<Iupac> >::Type replaceIt;
++//
++//	replace=IupacMapReplace[*tempIt];
++//	replaceIt = begin(replace);	
++//
++//	for(;replaceIt!=end(replace);++replaceIt){// loop over the replacement-chars
++//			temp = Kmer;// reset temp
++//			tempChar =*tempIt;//stores the current char because of temp2
++//			*tempIt=*replaceIt;//replace the current char for temp2
++//			temp2=temp;
++//			*tempIt=tempChar;
++//
++//			*tempIt =IupacMap[IupacMapReversed[*tempIt] + IupacMapReversed[*replaceIt]];
++//			//only if Kmer and temp2 are significant estimate the counter
++//			if(generalizedKmerTemp.find(temp)!=generalizedKmerTemp.end()) continue;
++//			estimateCounter(SequenceCounter,generalizedKmerTemp,Kmer,temp2,counter,SeqsNumber);
++//			generalizedKmer[temp]=counter;
++//			estimateCounter(BackgroundCounter,generalizedKmerBackgroundTemp,Kmer,temp2,counter,BackgroundNumber);
++//			generalizedKmerBackground[temp]=counter;
++//			//std::cout<<temp<<" "<<counter<<std::endl;
++//		}
++//
++//}
++
++
++
++
++/*
++	- estimates the Counter for the initial wildcard-Kmere
++	- SequencesCounter and BackgroundCounter
++*/
++void estimateCounter(Seq &seq,
++					 String<Iupac> temp,String<Iupac> temp2,
++					 unsigned int &counter){
++	//std::cout<<temp<<"  "<<temp2<<std::endl;
++	unsigned int RE1=seq.seqCounter.find(temp)->second;
++	unsigned int RE2=0;//counter for the second regular expression(Kmer)-->may be new
++	if(seq.seqCounter.find(temp2)!=seq.seqCounter.end()){
++		counter= RE1+ seq.seqCounter.find(temp2)->second - (RE1*seq.seqCounter.find(temp2)->second)/seq.SeqsNumber;
++			//std::cout<<temp<<" "<<temp2<<" "<<RE1<<"  "<<SequenceCounter.find(temp2)->second.back()<<" "<<counter<<std::endl;
++	}
++	else{
++		counter=RE1 + RE2;
++		//std::cout<<"else "<<counter<<std::endl;
++	}
++	
++}
++/*
++	- estimated the Counter for the next Kmer
++*/
++void estimateCounter(Seq &seq,
++					 std::map<String<Iupac>,unsigned int> &generalizedKmer,
++					 String<Iupac> temp,
++					 String<Iupac> temp2,
++					 unsigned int &counter){
++	if(generalizedKmer.find(temp)== generalizedKmer.end()){
++		std::cerr<<"Error, could not find "<<temp<<" in generalizedKmer"<<std::endl;
++		std::exit(1);
++	}
++	unsigned int RE1=(*generalizedKmer.find(temp)).second;//the new seed RE is a Kmer with wildcard
++	unsigned int RE2=0;//temp2 may be in generalizedKmer or in SequenceCounter
++	if(seq.seqCounter.find(temp2)!=seq.seqCounter.end()){// if temp2 is in SequenceCounter do the same as above --> has no wildcard
++		counter= RE1+ seq.seqCounter.find(temp2)->second- (RE1*seq.seqCounter.find(temp2)->second)/seq.SeqsNumber;
++		//std::cout<<temp<<" "<<temp2<<" "<<RE1<<"  "<<SequenceCounter.find(temp2)->second.back()<<" "<<counter<<std::endl;
++		
++	}
++		
++	else if(generalizedKmer.find(temp2)!=generalizedKmer.end()){//if temp2 has a wildcard and is found in generalizedKmer
++		counter= RE1+ generalizedKmer.find(temp2)->second - (RE1*generalizedKmer.find(temp2)->second)/seq.SeqsNumber;
++		//std::cout<<temp<<" "<<temp2<<" "<<RE1<<"  "<<generalizedKmer.find(temp2)->second<<" "<<counter<<std::endl;
++	}
++	else{//if temp2 is not found
++		counter= RE1 + RE2;
++	}
++}
++
++
++void exactGeneralizeCount(  std::map<String<Iupac>,unsigned int > &seqCounter,
++							std::map<String<Iupac>,unsigned int > &backCounter,
++							Finder<Index<StringSet<String<Dna5> > > > finder,
++							Finder<Index<StringSet<String<Dna5> > > > finderB,
++							Seq &seq,
++							Seq &back,
++							IupacMaps &IMap){
++
++	std::multimap<double,String<Iupac> >::iterator generalizedSortedPValueIt;
++	//std::map<String<Iupac>,double > generalizedSortedPValueReversed;
++
++	generalizedSortedPValueIt = seq.generalizedSortedPValue.begin();
++
++	for(unsigned int i=0;i<100 && generalizedSortedPValueIt!=seq.generalizedSortedPValue.end() ;++i,++generalizedSortedPValueIt){
++		//std::cout<<length(seq.generalizedSortedPValue)<<" "<<seq.generalizedSortedPValue.size()<<" ";
++		//std::cout<<(*generalizedSortedPValueIt).second<<" ";
++		if(seqCounter.find((*generalizedSortedPValueIt).second)!=seqCounter.end()) continue;
++		
++		CountKmer(seqCounter,finder,(*generalizedSortedPValueIt).second,seq,IMap);
++		CountKmer(backCounter,finderB,(*generalizedSortedPValueIt).second,back,IMap);
++		
++	}
++
++	seq.generalizedSortedPValue.clear();
++	
++	//PrintMap(seqCounter,seq.SeqsNumber);
++	
++	FisherExactTest(seqCounter,backCounter,seq,back);//computes the pValue of each Motif due to the counter
++	std::cout<<std::endl;
++	//PrintMap(seq.generalizedSortedPValue);
++	seqCounter.clear();
++	backCounter.clear();
++
++
++
++}
++
++#endif  // #ifndef SANDBOX_MEYERCLP_APPS_DREME_H_
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-02 12:09:05.110200100 +0200
+@@ -0,0 +1,518 @@
++#define SEQAN_ENABLE_TESTING 1
++
++#include <seqan/basic.h>
++
++#include "dreme.h"
++
++SEQAN_DEFINE_TEST(test_ChIPSeq_fasta_print){
++
++	using namespace seqan;
++	Seq sequences;
++
++	char buffer[1023];
++    strcpy(buffer, SEQAN_PATH_TO_ROOT());
++    strcat(buffer, "/sandbox/meyerclp/tests/ChIPSeq/example.fasta");
++    
++	readFastA(sequences, buffer);
++
++	SEQAN_ASSERT_EQ(length(sequences.ids), length(sequences.seqs));
++
++    SEQAN_ASSERT_EQ(sequences.ids[0], "first sequence");
++    SEQAN_ASSERT_EQ(sequences.ids[1], "second sequence");
++    SEQAN_ASSERT_EQ(sequences.ids[2], "third sequence");
++    SEQAN_ASSERT_EQ(sequences.ids[3], "fourth sequence");
++    SEQAN_ASSERT_EQ(sequences.ids[4], "fifth sequence");
++    SEQAN_ASSERT_EQ(sequences.ids[5], "sixth sequence");
++
++    SEQAN_ASSERT_EQ(sequences.seqs[0], "AAATTTTTTTTT");
++    SEQAN_ASSERT_EQ(sequences.seqs[1], "CCCGGGA");
++    SEQAN_ASSERT_EQ(sequences.seqs[2], "");
++    SEQAN_ASSERT_EQ(sequences.seqs[3], "AAAAAA");
++    SEQAN_ASSERT_EQ(sequences.seqs[4], "CGA");
++    SEQAN_ASSERT_EQ(sequences.seqs[5], "TTTT");
++}
++
++SEQAN_DEFINE_TEST(test_ChIPSeq_suffixArray){
++	using namespace seqan;
++
++	Seq seq;
++	
++	StringSet<String<Dna5> > test;
++	appendValue(test,"ACGTACGT");
++	appendValue(test,"TTTTTxxx");
++	seq.seqs=test;
++
++
++    StringSet<String<Dna5> > expected;
++    appendValue(expected, "ACGTACGT");
++    appendValue(expected, "ACGT");
++    appendValue(expected, "CGTACGT");
++    appendValue(expected, "CGT");
++    appendValue(expected, "GTACGT");
++    appendValue(expected, "GT");
++    appendValue(expected, "TACGT");
++    appendValue(expected, "TTTTTNNN");
++    appendValue(expected, "TTTTNNN");
++    appendValue(expected, "TTTT");
++    appendValue(expected, "TTTNNN");
++    appendValue(expected, "TTT");
++    appendValue(expected, "TTNNN");
++    appendValue(expected, "TT");
++    appendValue(expected, "TNNN");
++    appendValue(expected, "T");
++    appendValue(expected, "NNN");
++    appendValue(expected, "NN");
++    appendValue(expected, "N");
++
++	initST(seq);
++
++
++	typedef Index<StringSet<String<Dna5> > > TMyIndex;//Dna5Q
++	Iterator<TMyIndex, BottomUp<> >::Type myIterator(seq.SArray);
++	for(;!atEnd(myIterator);++myIterator){
++		std::cout<<representative(myIterator)<<std::endl;
++		
++	}
++	clear(seq.SArray);
++	clear(seq.seqs);
++
++}
++
++
++SEQAN_DEFINE_TEST(test_ChIPSeq_initExactKmer){
++	using namespace seqan;
++
++	Seq seq;
++	Seq back;
++	
++	
++	StringSet<String<Dna5> > test;
++	appendValue(test,"ACGTACGT");
++	appendValue(test,"TTTTTTTT");
++	appendValue(test,"ACCTACGTTT");
++	appendValue(test,"");
++
++	StringSet<String<Dna5> > test2;
++	appendValue(test2,"ACG");
++	appendValue(test2,"ACGT");
++	appendValue(test2,"TTT");
++
++	seq.seqs=test;
++	back.seqs=test2;
++
++	seq.SeqsNumber=length(seq.seqs);
++	back.SeqsNumber=length(back.seqs);
++
++	SEQAN_ASSERT_EQ(seq.SeqsNumber,4);
++
++	SEQAN_ASSERT_EQ(back.SeqsNumber, 3);
++
++
++	/*typedef std::map<String<Dna5>,std::vector<int> > DnaCounterMap;
++	DnaCounterMap seqCount;
++	DnaCounterMap backCount;*/
++	std::map<String<Dna5>,unsigned int > testMap;
++	testMap["ACG"]=2;
++	testMap["CGT"]=2;
++	testMap["GTA"]=1;
++	testMap["TAC"]=2;
++	testMap["TTT"]=2;
++	testMap["ACC"]=1;
++	testMap["CCT"]=1;
++	testMap["CTA"]=1;
++	testMap["GTT"]=1;
++
++	initST(seq);
++	initST(back);
++	initExactKmer(seq,back,3,3);
++
++	std::map<String<Dna5>,unsigned int >::iterator MapIterator;
++	std::map<String<Dna5>,unsigned int >::iterator MapIterator2;
++	MapIterator=seq.seqCounter.begin();
++	MapIterator2=testMap.begin();
++	SEQAN_ASSERT_EQ(length(seq.seqCounter), length(testMap));
++	for(;MapIterator != seq.seqCounter.end();++MapIterator,++MapIterator2){
++		
++		SEQAN_ASSERT_EQ((*MapIterator).first,(*MapIterator2).first);
++		SEQAN_ASSERT_EQ((*MapIterator).second,(*MapIterator2).second);
++	}
++
++
++	clear(seq.seqs);
++	clear(back.seqs);
++	clear(seq.SArray);
++	clear(back.SArray);
++	
++}
++
++SEQAN_DEFINE_TEST(test_ChIPSeq_fact){
++	using namespace seqan;
++	logFactorial(22);
++	SEQAN_ASSERT_EQ(int(exp(logFac[5])+0.5),120);
++	SEQAN_ASSERT_EQ(int(exp(logFac[0])+0.5),1);
++	SEQAN_ASSERT_EQ(int(exp(logFac[1])+0.5),1);
++	SEQAN_ASSERT_EQ(int(exp(logFac[3])+0.5),6);
++	SEQAN_ASSERT_EQ(int(exp(logFac[10])+0.5),3628800);
++
++	SEQAN_ASSERT_EQ(calcFET(0,0,0,0),1);
++
++	SEQAN_ASSERT_EQ(double(int((calcFET(3,1,1,1)+0.005)*100))/100,0.53);//auf zwei nachkommastellen runden
++	SEQAN_ASSERT_EQ(double(int((calcFET(1,1,1,1)+0.005)*100))/100,0.67);
++	SEQAN_ASSERT_EQ(double(int((calcFET(10,0,11,1)+0.005)*100))/100,0.55);
++
++}
++
++SEQAN_DEFINE_TEST(test_ChIPSeq_modifyFET){
++	using namespace seqan;
++	unsigned int a,b,c,d;
++	double pValue=0;
++
++	a=0,b=0,c=0,d=0;
++	modifyFET(a,b,c,d,pValue);
++	SEQAN_ASSERT_EQ(double(int((pValue+0.005)*100))/100,1.00);
++
++	a=1,b=1,c=1,d=1;
++	modifyFET(a,b,c,d,pValue);
++	SEQAN_ASSERT_EQ(double(int((pValue+0.005)*100))/100,0.83);
++
++	a=3;
++	b=2,c=2,d=2;
++	modifyFET(a,b,c,d,pValue);
++	
++	SEQAN_ASSERT_EQ(double(int((pValue+0.005)*100))/100,0.64);
++
++	a=4;
++	b=3;
++	c=2;
++	d=1;
++	modifyFET(a,b,c,d,pValue);
++	SEQAN_ASSERT_EQ(double(int((pValue+0.005)*100))/100,0.83);
++}
++
++
++SEQAN_DEFINE_TEST(test_ChIPSeq_generalize){
++
++	using namespace seqan;
++	Seq seq;
++	Seq back;
++	
++	
++	StringSet<String<Dna5> > test;
++	appendValue(test,"ACGTACGT");
++	appendValue(test,"TTTTTTTT");
++	appendValue(test,"ACCTACGTTT");
++	appendValue(test,"");
++
++	StringSet<String<Dna5> > test2;
++	appendValue(test2,"ACG");
++	appendValue(test2,"ACGT");
++	appendValue(test2,"TTT");
++
++	seq.seqs=test;
++	back.seqs=test2;
++
++	/*typedef std::map<String<Dna5>,std::vector<int> > DnaCounterMap;
++	DnaCounterMap seqCount;
++	DnaCounterMap backCount;*/
++
++	seq.SeqsNumber=length(seq.seqs);
++	back.SeqsNumber=length(back.seqs);
++
++	initST(seq);
++	initST(back);
++	initExactKmer(seq,back,3,3);
++
++	//std::map<unsigned int,char> IupacMap;
++	//std::map<char,unsigned int> IupacMapReversed;
++	//std::map<char,String<Iupac> > IupacMapReplace; 
++	//std::map<char,String<Dna5> > IupacMapReplaceReversed;
++	//MapIupac(IupacMap, IupacMapReversed, IupacMapReplace,IupacMapReplaceReversed);//IupacMap for generalization
++
++	//std::map<String<Iupac>,unsigned int> generalizedKmer;//unsigned int = estimated counter
++	//std::map<String<Iupac>,unsigned int> generalizedKmerBackground;
++	//std::map<String<Iupac>,double > generalizedSortedPValueReversed;
++	IupacMaps IMaps;
++	MapIupac(IMaps);
++	GeneralizeKmer("ACG",IMaps,seq,back);
++	PrintMap(seq.generalizedKmer);
++	SEQAN_ASSERT_EQ(length(seq.generalizedKmer),length(back.generalizedKmer));
++	SEQAN_ASSERT_EQ(length(seq.generalizedKmer),9);
++	/*
++		ACG --> WCG,MCG,RCG
++				AYG,AMG,ASG
++				ACK,ACR,ACS
++	*/
++
++	
++	std::map<String<Iupac>,unsigned int > testMap;
++	testMap["WCG"]=2;
++	testMap["MCG"]=2;
++	testMap["RCG"]=2;
++	testMap["AYG"]=2;
++	testMap["AMG"]=2;
++	testMap["ASG"]=2;
++	testMap["ACK"]=2;
++	testMap["ACR"]=2;
++	testMap["ACS"]=3;
++	std::map<String<Iupac>,unsigned int >::iterator MapIterator;
++	std::map<String<Iupac>,unsigned int >::iterator MapIterator2;
++	
++	MapIterator = seq.generalizedKmer.begin();
++	MapIterator2=testMap.begin();
++	SEQAN_ASSERT_EQ(length(seq.generalizedKmer), length(testMap));
++	for(;MapIterator != seq.generalizedKmer.end();++MapIterator,++MapIterator2){
++		std::cout<<(*MapIterator).first<<" "<<(*MapIterator2).first<<std::endl;
++		SEQAN_ASSERT_EQ((*MapIterator).first,(*MapIterator2).first);
++		SEQAN_ASSERT_EQ((*MapIterator).second,(*MapIterator2).second);
++
++	}
++	std::map<String<Iupac>,unsigned int> generalizedKmerTemp;
++	std::map<String<Iupac>,unsigned int> generalizedKmerBackgroundTemp;
++	generalizedKmerTemp =seq.generalizedKmer;
++	generalizedKmerBackgroundTemp=back.generalizedKmer;
++	seq.generalizedKmer.clear();
++	back.generalizedKmer.clear();
++	//Kmer zum rübergehen, Temp zum neubefüllen
++	GeneralizeKmer("ACS",generalizedKmerTemp,generalizedKmerBackgroundTemp, IMaps, seq, back);
++	/*
++		ACS -->ACB, ACV, AMS, AYS, ASS, RCS, WCS, MCS
++	*/
++	SEQAN_ASSERT_EQ(length(generalizedKmerTemp),length(generalizedKmerBackgroundTemp));
++	SEQAN_ASSERT_EQ(length(seq.generalizedKmer),8);// ACB,ACV,AMS,AYS,ASS,RCS,WCS,MCS
++	SEQAN_ASSERT_EQ(length(generalizedKmerTemp),9);// WCG,MCG,RCG,AYG,AMG,ASG,ACK,ACR,ACS
++	PrintMap(generalizedKmerTemp);
++
++	generalizedKmerTemp=seq.generalizedKmer;
++	generalizedKmerBackgroundTemp=back.generalizedKmer;
++	seq.generalizedKmer.clear();
++	back.generalizedKmer.clear();
++	//umgekehrt
++	GeneralizeKmer("ACB",generalizedKmerTemp,generalizedKmerBackgroundTemp,IMaps, seq, back);
++	PrintMap(seq.generalizedKmer);
++
++	
++	clear(seq.seqs);
++	clear(back.seqs);
++	clear(seq.SArray);
++	clear(back.SArray);
++	clear(seq.generalizedKmer);
++	clear(back.generalizedKmer);
++	clear(generalizedKmerTemp);
++	clear(generalizedKmerBackgroundTemp);
++	
++
++}
++
++SEQAN_DEFINE_TEST(test_ChIPSeq_initGeneralize){
++
++	using namespace seqan;
++	Seq seq;
++	Seq back;
++	
++	
++	StringSet<String<Dna5> > test;
++	appendValue(test,"ACGT");
++	appendValue(test,"AGGT");
++	appendValue(test,"ACCT");
++	appendValue(test,"");
++
++	StringSet<String<Dna5> > test2;
++	appendValue(test2,"CCGT");
++	appendValue(test2,"TTTT");
++	appendValue(test2,"AACT");
++
++	seq.seqs=test;
++	back.seqs=test2;
++
++	//typedef std::map<String<Dna5>,std::vector<int> > DnaCounterMap;
++	//DnaCounterMap seqCount;
++	//DnaCounterMap backCount;
++
++	seq.SeqsNumber=length(seq.seqs);
++	back.SeqsNumber=length(back.seqs);
++
++	initST(seq);
++	initST(back);
++	initExactKmer(seq,back,3,3);
++	PrintMap(seq.seqCounter,seq.SeqsNumber);
++	std::cout<<std::endl;
++	PrintMap(back.seqCounter,back.SeqsNumber);
++	/*std::map<String<Iupac>,double > generalizedSortedPValueReversed;
++	typedef std::multimap<double,String<Dna5> > pValueMap;
++	pValueMap SortedPValue;*/
++	logFactorial(seq.SeqsNumber+back.SeqsNumber);//save all relevant factorial numbers
++	FisherExactTest(seq,back);//computes the pValue of each Motif due to the counter
++	std::cout<<std::endl;
++	PrintMap(seq.SortedPValue);
++	std::multimap<double,String<Dna5> >::iterator SortedPValueIterator;
++	SortedPValueIterator = seq.SortedPValue.begin();
++
++	
++	SEQAN_ASSERT_EQ(double(int(((*SortedPValueIterator).first+0.005)*100))/100,0.57);
++	SEQAN_ASSERT_EQ((*SortedPValueIterator).second,"ACC");
++	++SortedPValueIterator;
++	SEQAN_ASSERT_EQ(double(int(((*SortedPValueIterator).first+0.005)*100))/100,0.57);
++	SEQAN_ASSERT_EQ((*SortedPValueIterator).second,"ACG");
++	++SortedPValueIterator;
++	SEQAN_ASSERT_EQ(double(int(((*SortedPValueIterator).first+0.005)*100))/100,0.57);
++	SEQAN_ASSERT_EQ((*SortedPValueIterator).second,"AGG");
++	++SortedPValueIterator;
++	SEQAN_ASSERT_EQ(double(int(((*SortedPValueIterator).first+0.005)*100))/100,0.57);
++	SEQAN_ASSERT_EQ((*SortedPValueIterator).second,"CCT");
++	++SortedPValueIterator;
++	SEQAN_ASSERT_EQ(double(int(((*SortedPValueIterator).first+0.005)*100))/100,0.57);
++	SEQAN_ASSERT_EQ((*SortedPValueIterator).second,"GGT");
++	++SortedPValueIterator;
++	SEQAN_ASSERT_EQ(double(int(((*SortedPValueIterator).first+0.005)*100))/100,0.86);
++	SEQAN_ASSERT_EQ((*SortedPValueIterator).second,"CGT");
++	++SortedPValueIterator;
++	
++
++	//std::map<unsigned int,char> IupacMap;
++	//std::map<char,unsigned int> IupacMapReversed;
++	//std::map<char,String<Iupac> > IupacMapReplace; //stores the replacement-chars
++	//std::map<char,String<Dna5> > IupacMapReplaceReversed;
++	//MapIupac(IupacMap, IupacMapReversed, IupacMapReplace,IupacMapReplaceReversed);//IupacMap for generalization
++
++	//std::map<String<Iupac>,unsigned int> generalizedKmer;//unsigned int = estimated counter
++	//std::map<String<Iupac>,unsigned int> generalizedKmerBackground;
++	//std::multimap<double,String<Iupac> > generalizedSortedPValue;
++	IupacMaps IMaps;
++	InitGeneralization(IMaps,seq,back);
++	std::cout<<seq.generalizedSortedPValue.size()<<std::endl;
++	PrintMap(seq.generalizedSortedPValue);
++
++
++	clear(seq.seqs);
++	clear(back.seqs);
++	clear(seq.SArray);
++	clear(back.SArray);
++	clear(seq.generalizedKmer);
++	clear(back.generalizedKmer);
++	seq.generalizedSortedPValue.clear();
++
++}
++
++
++
++
++SEQAN_DEFINE_TEST(test_ChIPSeq_CounterGeneralize){
++
++	using namespace seqan;
++	Seq seq;
++	Seq back;
++	
++	StringSet<String<Dna5> > test;
++	appendValue(test,"ACGACGTAGG");
++	appendValue(test,"AGGT");
++	appendValue(test,"AAGTGGG");
++	appendValue(test,"AC");
++	appendValue(test,"");
++
++	StringSet<String<Dna5> > test2;
++	appendValue(test2,"AAACCCGGG");
++	appendValue(test2,"ATATATATAT");
++	appendValue(test2,"CCTAAT");
++	appendValue(test2,"GT");
++	appendValue(test2,"");
++
++
++	seq.seqs=test;
++	back.seqs=test2;
++	seq.SeqsNumber=length(seq.seqs);
++	back.SeqsNumber=length(back.seqs);
++	initST(seq);
++	initST(back);
++
++	//std::map<unsigned int,char> IupacMap;
++	//std::map<char,unsigned int> IupacMapReversed;
++	//std::map<char,String<Iupac> > IupacMapReplace; //stores the replacement-chars
++	//std::map<char,String<Dna5> > IupacMapReplaceReversed;
++	//MapIupac(IupacMap, IupacMapReversed, IupacMapReplace,IupacMapReplaceReversed);//IupacMap for generalization
++	IupacMaps IMaps;
++	MapIupac(IMaps);
++	std::map<String<Iupac>,unsigned int > seqCounter;
++	std::map<String<Iupac>,unsigned int > backCounter;
++	Finder<Index<StringSet<String<Dna5> > > > finder(seq.SArray);
++	Finder<Index<StringSet<String<Dna5> > > > finderB(back.SArray);//finder background
++	String<Iupac> Kmer = "ASG";
++	
++	CountKmer(seqCounter,finder,Kmer,seq,IMaps);
++	CountKmer(backCounter,finderB,Kmer,back,IMaps);
++	Kmer="SGT";
++	CountKmer(seqCounter,finder,Kmer,seq,IMaps);
++	CountKmer(backCounter,finderB,Kmer,back,IMaps);
++	Kmer="RGG";
++	CountKmer(seqCounter,finder,Kmer,seq,IMaps);
++	CountKmer(backCounter,finderB,Kmer,back,IMaps);
++	Kmer="GGK";
++	CountKmer(seqCounter,finder,Kmer,seq,IMaps);
++	CountKmer(backCounter,finderB,Kmer,back,IMaps);
++	Kmer="NGT";
++	CountKmer(seqCounter,finder,Kmer,seq,IMaps);
++	CountKmer(backCounter,finderB,Kmer,back,IMaps);
++	Kmer="AAA";
++	std::cout<<Kmer;
++	CountKmer(seqCounter,finder,Kmer,seq,IMaps);
++	CountKmer(backCounter,finderB,Kmer,back,IMaps);
++	Kmer="ACGACGTAGR";
++	std::cout<<Kmer;
++	CountKmer(seqCounter,finder,Kmer,seq,IMaps);
++	CountKmer(backCounter,finderB,Kmer,back,IMaps);
++	Kmer="";
++	CountKmer(seqCounter,finder,Kmer,seq,IMaps);
++	CountKmer(backCounter,finderB,Kmer,back,IMaps);
++	std::cout<<std::endl;
++	std::cout<<std::endl;
++	std::cout<<Kmer;
++	PrintMap(seqCounter,seq.SeqsNumber);
++	std::cout<<std::endl;
++	PrintMap(backCounter,back.SeqsNumber);
++
++
++	
++		
++	
++	SEQAN_ASSERT_EQ(seqCounter[""],0);//should not appear in real data--> at least one wildcard
++	SEQAN_ASSERT_EQ(seqCounter["AAA"],0);//should not appear in real data--> at least one wildcard
++	SEQAN_ASSERT_EQ(seqCounter["ASG"],2);
++	SEQAN_ASSERT_EQ(seqCounter["SGT"],2);
++	SEQAN_ASSERT_EQ(seqCounter["RGG"],3);
++	SEQAN_ASSERT_EQ(seqCounter["GGK"],2);
++	SEQAN_ASSERT_EQ(seqCounter["NGT"],3);
++	SEQAN_ASSERT_EQ(seqCounter["ACGACGTAGR"],1);
++
++	
++	SEQAN_ASSERT_EQ(backCounter[""],0);
++	SEQAN_ASSERT_EQ(backCounter["AAA"],0);
++	SEQAN_ASSERT_EQ(backCounter["ASG"],0);
++	SEQAN_ASSERT_EQ(backCounter["SGT"],0);
++	SEQAN_ASSERT_EQ(backCounter["RGG"],1);
++	SEQAN_ASSERT_EQ(backCounter["GGK"],1);
++	SEQAN_ASSERT_EQ(backCounter["NGT"],0);
++	SEQAN_ASSERT_EQ(backCounter["ACGACGTAGR"],0);
++
++	clear(seq.seqs);
++	clear(back.seqs);
++	clear(seq.SArray);
++	clear(back.SArray);
++	clear(seq.generalizedKmer);
++	clear(back.generalizedKmer);
++	seq.generalizedSortedPValue.clear();
++
++}
++
++SEQAN_BEGIN_TESTSUITE(dreme_test)
++{
++    // Call tests.
++    SEQAN_CALL_TEST(test_ChIPSeq_fasta_print);
++    SEQAN_CALL_TEST(test_ChIPSeq_suffixArray);
++    SEQAN_CALL_TEST(test_ChIPSeq_initExactKmer);
++    SEQAN_CALL_TEST(test_ChIPSeq_fact);
++    SEQAN_CALL_TEST(test_ChIPSeq_modifyFET);
++    SEQAN_CALL_TEST(test_ChIPSeq_generalize);
++    SEQAN_CALL_TEST(test_ChIPSeq_initGeneralize);
++    SEQAN_CALL_TEST(test_ChIPSeq_CounterGeneralize);
++}
++SEQAN_END_TESTSUITE
++
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/INFO ./sandbox/meyerclp/apps/dreme/INFO
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/INFO	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/apps/dreme/INFO	2012-07-02 12:09:05.090200100 +0200
+@@ -0,0 +1,21 @@
++Name: dreme
++Author: Your Name <your.email@example.net>
++Maintainer: Your Name <your.email@example.net>
++License: GPL v3
++Copyright: 2008-2012, FU Berlin
++Status: under development
++Description: One-line description for app dreme.
++ This is the long text description for the app.  You should wrap text to 78
++ characters and you have to wrap it to 80 characters.  The lines must have one
++ leading space.  Successive lines in this format will be word-wrapped when
++ displayed.  Leading space is stripped off.
++ .
++ Use empty lines with one dot to insert an empty line / break paragraphs.
++ .
++  Start lines with two spaces to make them display verbatim.  Lines that
++  cannot be displayed horizontally will be hard-wrapped (not at word bor-
++  ders), so maybe do your own hyphenation.
++ .
++ Do not use tab characters, their effect is not predictable.
++ .
++ The INFO file format is oriented after the Debian controfields format.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/ChIPSeq.cpp ./sandbox/meyerclp/demos/ChIPSeq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/ChIPSeq.cpp	2012-05-29 00:24:12.878604700 +0200
++++ ./sandbox/meyerclp/demos/ChIPSeq.cpp	2012-06-06 10:51:56.116822200 +0200
+@@ -49,18 +49,18 @@
+ 	
+ 
+ 	do{
+-		//std::cout<<"new "<<std::endl;
++
+ 	initST(sequences);
+ 	initST(background);
+-	//std::cout<<"init done"<<std::endl;
+ 	sequences.generalizedSortedPValue.clear();
++
++
+ 	/*****
+ 		- Bruteforce --> gets alls possible motifs form length 3 to 8 and counts them.
+ 		- Only one occurence per sequence allowed
+ 	*****/
+ 	initExactKmer(sequences,background,kmer_len,kmer_len_end);
+ 
+-	//std::cout<<"Exact done"<<std::endl;
+ 
+ 	/*****
+ 		- Computes the pValue of each motif due to the counter and saves it in SortedPValue
+@@ -68,7 +68,9 @@
+ 	logFactorial(sequences.SeqsNumber+background.SeqsNumber);//save all relevant factorial numbers
+ 	FisherExactTest(sequences,background);
+ 
+-	//std::cout<<"Fisher done"<<std::endl;
++
++
++
+ 
+ 	/*****
+ 		- initiate by repeatedly picking the top motifs from SortedPValue
+@@ -76,14 +78,13 @@
+ 		- after one generalization-round(top 100 motifs) the FisherExactTest is called, to compute the new SortedPValue-Map
+ 		- if there is a pValue<treshold start again by picking the new top motifs
+ 	*****/
+-	//PrintMap(sequences.SortedPValue);
+ 	InitGeneralization(IMaps,sequences,background);
+-	//std::cout<<"Generalize done"<<std::endl;
+-	//PrintMap(sequences.generalizedSortedPValue);
+ 	sequences.seqCounter.clear();
+ 	background.seqCounter.clear();
+ 	sequences.SortedPValueReversed.clear();
+ 
++
++
+ 	/*****
+ 		- if there is not a single pValue<treshold exit the programm
+ 	*****/
+@@ -92,7 +93,9 @@
+ 		std::exit(1);
+ 	
+ 	}
+-	//PrintMap(sequences.generalizedSortedPValue);
++
++
++
+ 
+ 	std::map<String<Iupac>,unsigned int > seqCounter;
+ 	std::map<String<Iupac>,unsigned int > backCounter;
+@@ -102,16 +105,8 @@
+ 	/*****
+ 		- gets the top 100(generalized) motifs and computes the exact counter and pValue
+ 	*****/
+-	
+ 	exactGeneralizeCount(seqCounter,backCounter, finder, finderB,sequences,background, IMaps);
+-	//std::cout<<"exactGeneralize done"<<std::endl;
+-
+-	//PrintFastA(sequences);
+-
+ 
+-
+-	//std::cout<<sequences.generalizedSortedPValue.begin()->second;
+-	
+ 	std::map<unsigned int,std::map<Iupac,double> > freqMatrix;
+ 	std::map<unsigned int,std::map<Iupac,double> > freqMatrixB;
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/ChIPSeq.h ./sandbox/meyerclp/demos/ChIPSeq.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/ChIPSeq.h	2012-05-29 00:24:12.878604700 +0200
++++ ./sandbox/meyerclp/demos/ChIPSeq.h	2012-07-02 12:01:08.865200100 +0200
+@@ -227,7 +227,14 @@
+ 
+ 
+ 
+-void loopOverKmer(Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap){
++void loopOverKmer(Seq &seq,
++				  String<Iupac> &temp,
++				  String<Iupac> &Kmer,
++				  Iterator<String<Iupac> >::Type &tempIt,
++				  Finder<Index<StringSet<String<Dna5> > > > &finder,
++				  unsigned int &counter,
++				  std::vector<int> &CounterV,
++				  IupacMaps &IMap){
+ 	
+ 	String<Dna5> replace;
+ 	Iterator<String<Dna5> >::Type replaceIt;
+@@ -248,6 +255,7 @@
+ 					//if not end call fkt. with temp 
+ 					// if end call find --> &counter
+ 					tempIttemp=tempIt;
++					//std::cout<<tempIt<<" "<<tempIt+1<<" "<<end(temp);
+ 					if(tempIt+1!=end(temp)){
+ 						//++tempIt;
+ 						//std::cout<<" if "<<tempIt<<" "<<end(temp)<<std::endl;
+@@ -813,14 +821,14 @@
+ 		- only do the next function call, if in the last at least one pValue<treshold	
+ 		- call GeneralizeKmer in loop
+ 	*/
+-	//PrintMap(seq.generalizedKmer);
++	
+ 	seq.generalizedSortedPValue.insert(seq.SortedPValue.begin(),seq.SortedPValue.end());
+ 	double topPValue = FisherExactTest(seq,back,generalizedSortedPValueTemp);// lowest pValue from the first generalization
+ 	double topPValueOld =seq.generalizedSortedPValue.begin()->first;//lowest pValue before generalization
+ 
+ 	while(topPValue<0.05 && topPValue<topPValueOld){//only start a new round, if the top PValue is an improvement of the old one
+ 		
+-		//std::cout<<"test";
++		
+ 		/*
+ 			while wird das erste mal mit generalizedKmer aufgerufen und dem tempor�ren mapping der pValues
+ 			das tempor�re mapping wird in das richtige mapping gemerged und gecleant, damit geschaut werden kann, ob bei den neuen pValues ein wert

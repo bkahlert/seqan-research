@@ -1,0 +1,34 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-26 22:06:49.306002900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-26 22:11:03.394002900 +0200
+@@ -868,11 +868,7 @@
+ 
+ 			ComparePWM(seq,seq.allPWMs[i],seq.allPWMs[j],Euklidisch());
+ 			 compare[j][i]=seq.columnEntropy[0];
+-			if(minDifference[0]==0 || minDifference[0]>seq.columnEntropy[0]){
+-				minDifference[0]=seq.columnEntropy[0];
+-				minDifference[1]=j;
+-				minDifference[2]=i;
+-			}
++			
+ 			
+ 
+ 		}
+@@ -886,7 +882,7 @@
+ 
+ 	for(unsigned n=allPWMsLength;n>1 && minDifference[0]<1;--n){//treshold noch bestimmen
+ 
+-
++		minDifferenceInMatrix(n,minDifference,compare);
+ 		BuildMeanOf2PWMs(seq,seq.allPWMs[int(minDifference[1])],seq.allPWMs[int(minDifference[2])]);//bildet aus 2PWMs die Mittelwerte und speichert sie in
+ 
+ 		//Fix the distances --> complete Linkage
+@@ -919,7 +915,7 @@
+ 		std::cout<<"clusterId: "<<clusterId[0]<<" "<<clusterId[1]<<" "<<clusterId[2]<<std::endl;
+ 		
+ 		
+-		minDifferenceInMatrix(n-1,minDifference,compare);
++		
+ 		//Update ClusterIds
+ 		
+ 		for(unsigned k=0;k<allPWMsLength;++k){

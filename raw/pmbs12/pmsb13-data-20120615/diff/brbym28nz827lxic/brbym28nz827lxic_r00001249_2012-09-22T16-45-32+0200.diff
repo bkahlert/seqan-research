@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-09-22 11:11:01.205915300 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-09-22 16:45:30.260015300 +0200
+@@ -2187,7 +2187,7 @@
+ 	for(unsigned i=1;i<=freqL1;++i){
+ 		for(unsigned j=1;j<=freqL2;++j){
+ 
+-			M[i][j]=M[i-1][j-1]+ComparePWM(freqMatrix1[i-1],freqMatrix2[j-1],Entropy());//je größer, desto unterschiedlicher --> Problem: je weniger abgezogen wird, desto größer
++			M[i][j]=M[i-1][j-1]+ComparePWM(freqMatrix1[i-1],freqMatrix2[j-1],Euklid());//je größer, desto unterschiedlicher --> Problem: je weniger abgezogen wird, desto größer
+ 			
+ 			
+ 				

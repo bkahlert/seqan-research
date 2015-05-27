@@ -1,0 +1,58 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-27 11:19:28.003117500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-27 11:46:56.076117500 +0200
+@@ -48,12 +48,12 @@
+ 	while(true){
+ 		std::cout<<"Alter the Settings? (Y) (N)"<<std::endl;
+ 		std::cin>>setting;
+-		if(setting =='Y' || setting=='N') break;
++		if(setting =='Y' || setting=='N' ||setting =='y' ||setting =='n') break;
+ 		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
+ 	}
+ 	unsigned kmer_len;
+ 	unsigned kmer_len_end;
+-	if(setting=='Y'){
++	if(setting=='Y' || setting =='y'){
+ 		std::cout<<"Enter in mink(should be >=3) "<<std::endl;
+ 		std::cin>>kmer_len;
+ 		std::cout<<"Enter in maxk(a value>8 could slow down the program) "<<std::endl;
+@@ -65,6 +65,8 @@
+ 		std::cout<<"Enter in NumberOfMotifs(5) "<<std::endl;
+ 		std::cin>>sequences.NumberOfMotifs;
+ 		++sequences.NumberOfMotifs;
++
++
+ 	}
+ 
+ 	else{
+@@ -76,8 +78,19 @@
+ 		
+ 	}
+ 	
+-
+-	
++	while(true){
++		std::cout<<"Save the data (PWMs) to a file? (Y) (N)"<<std::endl;
++		std::cin>>setting;
++		if(setting =='Y' || setting=='N' ||setting =='y' ||setting =='n') break;
++		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
++	}
++	bool save=false;
++	if(setting=='Y' || setting =='y'){
++		save=true;
++		String<char> pwm;
++		std::cout<<"Enter in the path, where the data should be saved:"<<std::endl;
++		std::cin>>pwm;
++	}
+ 	
+ 
+ 	/*std::ofstream outfile;
+@@ -247,7 +260,7 @@
+ 		seqan::clear(sequences.intervals);
+ 		seqan::clear(background.intervals);
+ 		
+-		
++		std::cout<<std::endl;
+ 		++sequences.c;
+ 		++background.c;
+ 	}

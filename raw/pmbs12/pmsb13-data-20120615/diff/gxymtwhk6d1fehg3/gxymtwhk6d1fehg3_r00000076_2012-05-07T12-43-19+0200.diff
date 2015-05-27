@@ -1,0 +1,524 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-02 18:11:52.819506000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-07 12:43:14.435463000 +0200
+@@ -6,266 +6,271 @@
+ 
+ using namespace seqan;
+ 
+-///*
+-//template <typename T>
+-//struct Iterator;
+-//
+-//template <typename TElement>
+-//struct Iterator<String<TElement> >
+-//{
+-//    typedef Iter<String<TElement>, StringIterator> Type;
+-//}
+-//
+-//Iterator<String<TElement> >::Type;
+-//
+-//class A {
+-//  class B {
+-//    typedef int X;
+-//  };
+-//};
++/////*
++////template <typename T>
++////struct Iterator;
++////
++////template <typename TElement>
++////struct Iterator<String<TElement> >
++////{
++////    typedef Iter<String<TElement>, StringIterator> Type;
++////}
++////
++////Iterator<String<TElement> >::Type;
++////
++////class A {
++////  class B {
++////    typedef int X;
++////  };
++////};
++////
++////A::B::X y;
++////*/
++////
++////String<AminoAcid> sequenz = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
++////Iterator<String<AminoAcid> >::Type ende = end(sequenz);
++////
++////
++////int main() {
++////	
++////	for ( Iterator<String<AminoAcid> >::Type it = begin(sequenz) ; it != ende ; goNext(it))
++////	{
++////		if (value(it) == 'R')
++////			value(it) = 'A';
++////	}
++////	
++////	std::cout << sequenz << std::endl << std::endl;
++////
++////	String<Size<String<AminoAcid> >::Type> counter;
++////	Size<String<AminoAcid> >::Type alphSize = ValueSize<AminoAcid>::VALUE;
++////
++////	std::cout << ValueSize<AminoAcid>::VALUE << " " << alphSize << std::endl;
++////
++////	resize(counter, alphSize, 0);
++////
++////	std::cout << ValueSize<AminoAcid>::VALUE << " " << alphSize << std::endl;
++////
++////	return 0;
++////
++////}
++//typedef Iterator<String<unsigned> >::Type bwtIterator;
+ //
+-//A::B::X y;
+-//*/
+-//
+-//String<AminoAcid> sequenz = "MQDRVKRPMNAFIVWSRDQRRKMALEN";
+-//Iterator<String<AminoAcid> >::Type ende = end(sequenz);
+ //
+ //
+ //int main() {
+-//	
+-//	for ( Iterator<String<AminoAcid> >::Type it = begin(sequenz) ; it != ende ; goNext(it))
+-//	{
+-//		if (value(it) == 'R')
+-//			value(it) = 'A';
++//	String<char> text = "GTATACACAGATAGT$";
++//	String<char> rText;
++//	String<char> pattern = "TA";
++//	String<unsigned> sa;
++//	String<unsigned> rSa;
++//	String<unsigned> cAlpha;
++//	String<char> bwt;
++//	String<char> rBwt;
++//	String<unsigned> occurence$;
++//	String<unsigned> occurenceA;
++//	String<unsigned> occurenceC;
++//	String<unsigned> occurenceG;
++//	String<unsigned> occurenceT;
++//	String<unsigned> rOccurence$;
++//	String<unsigned> rOccurenceA;
++//	String<unsigned> rOccurenceC;
++//	String<unsigned> rOccurenceG;
++//	String<unsigned> rOccurenceT;
++//	unsigned a;
++//	unsigned b;
++//
++//
++//	resize(sa, length(text));
++//	resize(bwt, length(text));
++//	resize(rBwt, length(text));
++//	resize(rText, length(text));
++//	resize(cAlpha, 5);
++//	resize(occurence$, length(text)+1);
++//	resize(occurenceA, length(text)+1);
++//	resize(occurenceC, length(text)+1);
++//	resize(occurenceG, length(text)+1);
++//	resize(occurenceT, length(text)+1);
++//
++//			//Invertierter Text
++//	for (int i = 0; i< length(text) ; i++){
++//		rText[i] = text[length(text)-i-1];
++//		std::cout << rText[i]<< " ";
++//	}
++//	std::cout << std::endl;
++//			//Die Tabelle cAlpha
++//			//	erste  Spalte	: Anzahl der Zeichen kleiner als '$'
++//			//	zweite Spalte	: Anzahl der Zeichen kleiner als 'A'
++//			//	dritte Spalte	: Anzahl der Zeichen kleiner als 'C'
++//			//	vierte Spalte	: Anzahl der Zeichen kleiner als 'G'
++//			//	fünfte Spalte	: Anzahl der Zeichen kleiner als 'T'
++//	for (unsigned int i = 0; i< length(cAlpha); i++){
++//		cAlpha[i] = 1;
+ //	}
+-//	
+-//	std::cout << sequenz << std::endl << std::endl;
++//	cAlpha[0] = 0;
++//	for (unsigned int i = 0; i < length(text); i++) {
++//		if ( (text[i] == 'A') || (text[i] == 'a')){
++//			cAlpha[2]+= 1;
++//			cAlpha[3]+= 1;
++//			cAlpha[4]+= 1;
++//		}
++//		if ( (text[i] == 'C') || (text[i] == 'c')){
++//			cAlpha[3]+= 1;
++//			cAlpha[4]+= 1;
++//		}
++//		if ( (text[i] == 'G') || (text[i] == 'g'))
++//			cAlpha[4]+= 1;
++//    }
++//			// AUSGABE : cAlpha
++//	for (unsigned int i = 0; i< length(cAlpha); i++){
++//		std::cout << cAlpha[i] << " ";
++//	}
++//	std::cout << std::endl;
+ //
+-//	String<Size<String<AminoAcid> >::Type> counter;
+-//	Size<String<AminoAcid> >::Type alphSize = ValueSize<AminoAcid>::VALUE;
++//			//Erstellung des SuffixArrays sa
++//	createSuffixArray(sa, text, Skew7());
++//			//AUSGABE SuffixArray
++//	for ( int i = 0 ; i<length(sa) ; i++){
++//		std::cout << sa[i]+1 << " ";
++//	}
++//	std::cout << std::endl;
+ //
+-//	std::cout << ValueSize<AminoAcid>::VALUE << " " << alphSize << std::endl;
+ //
+-//	resize(counter, alphSize, 0);
+ //
+-//	std::cout << ValueSize<AminoAcid>::VALUE << " " << alphSize << std::endl;
+ //
+-//	return 0;
++//	// **************************** Fehler bei Invertierung des SA
+ //
+-//}
+-typedef Iterator<String<unsigned> >::Type bwtIterator;
+-
+-
+-
+-int main() {
+-	String<char> text = "GTATACACAGATAGT$";
+-	String<char> rText;
+-	String<char> pattern = "TA";
+-	String<unsigned> sa;
+-	String<unsigned> rSa;
+-	String<unsigned> cAlpha;
+-	String<char> bwt;
+-	String<char> rBwt;
+-	String<unsigned> occurence$;
+-	String<unsigned> occurenceA;
+-	String<unsigned> occurenceC;
+-	String<unsigned> occurenceG;
+-	String<unsigned> occurenceT;
+-	String<unsigned> rOccurence$;
+-	String<unsigned> rOccurenceA;
+-	String<unsigned> rOccurenceC;
+-	String<unsigned> rOccurenceG;
+-	String<unsigned> rOccurenceT;
+-	unsigned a;
+-	unsigned b;
+-
+-
+-	resize(sa, length(text));
+-	resize(bwt, length(text));
+-	resize(rBwt, length(text));
+-	resize(rText, length(text));
+-	resize(cAlpha, 5);
+-	resize(occurence$, length(text)+1);
+-	resize(occurenceA, length(text)+1);
+-	resize(occurenceC, length(text)+1);
+-	resize(occurenceG, length(text)+1);
+-	resize(occurenceT, length(text)+1);
+-
+-			//Invertierter Text
+-	for (int i = 0; i< length(text) ; i++){
+-		rText[i] = text[length(text)-i-1];
+-		std::cout << rText[i]<< " ";
+-	}
+-	std::cout << std::endl;
+-			//Die Tabelle cAlpha
+-			//	erste  Spalte	: Anzahl der Zeichen kleiner als '$'
+-			//	zweite Spalte	: Anzahl der Zeichen kleiner als 'A'
+-			//	dritte Spalte	: Anzahl der Zeichen kleiner als 'C'
+-			//	vierte Spalte	: Anzahl der Zeichen kleiner als 'G'
+-			//	fünfte Spalte	: Anzahl der Zeichen kleiner als 'T'
+-	for (unsigned int i = 0; i< length(cAlpha); i++){
+-		cAlpha[i] = 1;
+-	}
+-	cAlpha[0] = 0;
+-	for (unsigned int i = 0; i < length(text); i++) {
+-		if ( (text[i] == 'A') || (text[i] == 'a')){
+-			cAlpha[2]+= 1;
+-			cAlpha[3]+= 1;
+-			cAlpha[4]+= 1;
+-		}
+-		if ( (text[i] == 'C') || (text[i] == 'c')){
+-			cAlpha[3]+= 1;
+-			cAlpha[4]+= 1;
+-		}
+-		if ( (text[i] == 'G') || (text[i] == 'g'))
+-			cAlpha[4]+= 1;
+-    }
+-			// AUSGABE : cAlpha
+-	for (unsigned int i = 0; i< length(cAlpha); i++){
+-		std::cout << cAlpha[i] << " ";
+-	}
+-	std::cout << std::endl;
+-
+-			//Erstellung des SuffixArrays sa
+-	createSuffixArray(sa, text, Skew7());
+-			//AUSGABE SuffixArray
+-	for ( int i = 0 ; i<length(sa) ; i++){
+-		std::cout << sa[i]+1 << " ";
+-	}
+-	std::cout << std::endl;
+-
+-
+-
+-
+-	// **************************** Fehler bei Invertierung des SA
+-
+-
+-
+-
+-
+-	//		//Erstellung des invertierten SuffixArrays rSa
+-	//createSuffixArray(rSa, rText, Skew7());
+-	//		//AUSGABE des invertierten SuffixArrays
+-	//for ( int i = 0 ; i<length(rSa) ; i++){
+-	//	std::cout << rSa[i]+1 << " ";
+-	//}
+-	//std::cout << std::endl;
+-			//Erstellung der BWT
+-	createBWTable ( bwt, text, sa );
+-			//AUSGABE BWT
+-	for ( int i = 0 ; i<length(bwt) ; i++){
+-		std::cout << bwt[i] << " ";
+-	}
+-	std::cout << std::endl;
+-
+-	//		//Erstellung der BWT des invertierten Textes
+-	//createBWTable ( rBwt, rText, rSa );
+-	//		//AUSGABE BWT des invertierten Textes
+-	//for ( int i = 0 ; i<length(rBwt) ; i++){
+-	//	std::cout << rBwt[i] << " ";
+-	//}
+-
+-	//std::cout << std::endl;
+-
+-			//Erstellung der Occurence-Tabelle
+-	for ( int i = 0 ; i<(length(bwt)+1) ; i++){
+-		occurence$[i]= 0;
+-		occurenceA[i]= 0;
+-		occurenceC[i]= 0;
+-		occurenceG[i]= 0;
+-		occurenceT[i]= 0;
+-	}
+-	for ( int i = 1 ; i<(length(bwt)+1) ; i++){
+-		if( bwt[i-1] == 0) {
+-			occurence$[i]= occurence$[i-1]+1;
+-			occurenceA[i]= occurenceA[i-1];
+-			occurenceC[i]= occurenceC[i-1];
+-			occurenceG[i]= occurenceG[i-1];
+-			occurenceT[i]= occurenceT[i-1];
+-		}
+-		if( (bwt[i-1] == 'A') || (bwt[i-1] == 'a')){
+-			occurence$[i]= occurence$[i-1];
+-			occurenceA[i]= occurenceA[i-1]+1;
+-			occurenceC[i]= occurenceC[i-1];
+-			occurenceG[i]= occurenceG[i-1];
+-			occurenceT[i]= occurenceT[i-1];
+-		}
+-		if( (bwt[i-1] == 'C') || (bwt[i-1] == 'c')){
+-			occurence$[i]= occurence$[i-1];
+-			occurenceA[i]= occurenceA[i-1];
+-			occurenceC[i]= occurenceC[i-1]+1;
+-			occurenceG[i]= occurenceG[i-1];
+-			occurenceT[i]= occurenceT[i-1];
+-		}
+-		if( (bwt[i-1] == 'G') || (bwt[i-1] == 'g')){
+-			occurence$[i]= occurence$[i-1];
+-			occurenceA[i]= occurenceA[i-1];
+-			occurenceC[i]= occurenceC[i-1];
+-			occurenceG[i]= occurenceG[i-1]+1;
+-			occurenceT[i]= occurenceT[i-1];
+-		}
+-		if( (bwt[i-1] == 'T') || (bwt[i-1] == 't')){
+-			occurence$[i]= occurence$[i-1];
+-			occurenceA[i]= occurenceA[i-1];
+-			occurenceC[i]= occurenceC[i-1];
+-			occurenceG[i]= occurenceG[i-1];
+-			occurenceT[i]= occurenceT[i-1]+1;
+-		}
+-			
+-	}
+-
+-	for ( int i = 0 ; i<length(occurence$) ; i++){
+-		std::cout << occurence$[i] << " ";
+-	}
+-	std::cout << std::endl;
+-
+-	for ( int i = 0 ; i<length(occurenceA) ; i++){
+-		std::cout << occurenceA[i] << " ";
+-	}
+-	std::cout << std::endl;
+-
+-	for ( int i = 0 ; i<length(occurenceC) ; i++){
+-		std::cout << occurenceC[i] << " ";
+-	}
+-	std::cout << std::endl;
+-
+-	for ( int i = 0 ; i<length(occurenceG) ; i++){
+-		std::cout << occurenceG[i] << " ";
+-	}
+-	std::cout << std::endl;
+-
+-	for ( int i = 0 ; i<length(occurenceT) ; i++){
+-		std::cout << occurenceT[i] << " ";
+-	}
+-	std::cout << std::endl;
+-
+-			//Exakte Suche  (Backward-Suche im Intervall [a..b]
+-	a = 1;
+-	b = length(text);
+-	for (int i = length(pattern); ((i>0) && (a <= b)) ; i--){
+-		if ((pattern[i-1] == 'A')||(pattern[i-1] == 'a')){
+-			a = cAlpha[1] + occurenceA[a-1] +1;
+-			b = cAlpha[1] + occurenceA[b];
+-		}
+-		if ((pattern[i-1] == 'C')||(pattern[i-1] == 'c')){
+-			a = cAlpha[2] + occurenceC[a-1] +1;
+-			b = cAlpha[2] + occurenceC[b];
+-		}
+-		if ((pattern[i-1] == 'G')||(pattern[i-1] == 'g')){
+-			a = cAlpha[3] + occurenceG[a-1] +1;
+-			b = cAlpha[3] + occurenceG[b];
+-		}
+-		if ((pattern[i-1] == 'T')||(pattern[i-1] == 't')){
+-			a = cAlpha[4] + occurenceT[a-1] +1;
+-			b = cAlpha[4] + occurenceT[b];
+-		}
+-	}
+-
+-	std::cout << "a = " << a << "  b = " << b << std::endl;
+-
+-	for (int i = a; i <= b; i++){
++//
++//
++//
++//
++//	//		//Erstellung des invertierten SuffixArrays rSa
++//	//createSuffixArray(rSa, rText, Skew7());
++//	//		//AUSGABE des invertierten SuffixArrays
++//	//for ( int i = 0 ; i<length(rSa) ; i++){
++//	//	std::cout << rSa[i]+1 << " ";
++//	//}
++//	//std::cout << std::endl;
++//			//Erstellung der BWT
++//	createBWTable ( bwt, text, sa );
++//			//AUSGABE BWT
++//	for ( int i = 0 ; i<length(bwt) ; i++){
++//		std::cout << bwt[i] << " ";
++//	}
++//	std::cout << std::endl;
++//
++//	//		//Erstellung der BWT des invertierten Textes
++//	//createBWTable ( rBwt, rText, rSa );
++//	//		//AUSGABE BWT des invertierten Textes
++//	//for ( int i = 0 ; i<length(rBwt) ; i++){
++//	//	std::cout << rBwt[i] << " ";
++//	//}
++//
++//	//std::cout << std::endl;
++//
++//			//Erstellung der Occurence-Tabelle
++//	for ( int i = 0 ; i<(length(bwt)+1) ; i++){
++//		occurence$[i]= 0;
++//		occurenceA[i]= 0;
++//		occurenceC[i]= 0;
++//		occurenceG[i]= 0;
++//		occurenceT[i]= 0;
++//	}
++//	for ( int i = 1 ; i<(length(bwt)+1) ; i++){
++//		if( bwt[i-1] == 0) {
++//			occurence$[i]= occurence$[i-1]+1;
++//			occurenceA[i]= occurenceA[i-1];
++//			occurenceC[i]= occurenceC[i-1];
++//			occurenceG[i]= occurenceG[i-1];
++//			occurenceT[i]= occurenceT[i-1];
++//		}
++//		if( (bwt[i-1] == 'A') || (bwt[i-1] == 'a')){
++//			occurence$[i]= occurence$[i-1];
++//			occurenceA[i]= occurenceA[i-1]+1;
++//			occurenceC[i]= occurenceC[i-1];
++//			occurenceG[i]= occurenceG[i-1];
++//			occurenceT[i]= occurenceT[i-1];
++//		}
++//		if( (bwt[i-1] == 'C') || (bwt[i-1] == 'c')){
++//			occurence$[i]= occurence$[i-1];
++//			occurenceA[i]= occurenceA[i-1];
++//			occurenceC[i]= occurenceC[i-1]+1;
++//			occurenceG[i]= occurenceG[i-1];
++//			occurenceT[i]= occurenceT[i-1];
++//		}
++//		if( (bwt[i-1] == 'G') || (bwt[i-1] == 'g')){
++//			occurence$[i]= occurence$[i-1];
++//			occurenceA[i]= occurenceA[i-1];
++//			occurenceC[i]= occurenceC[i-1];
++//			occurenceG[i]= occurenceG[i-1]+1;
++//			occurenceT[i]= occurenceT[i-1];
++//		}
++//		if( (bwt[i-1] == 'T') || (bwt[i-1] == 't')){
++//			occurence$[i]= occurence$[i-1];
++//			occurenceA[i]= occurenceA[i-1];
++//			occurenceC[i]= occurenceC[i-1];
++//			occurenceG[i]= occurenceG[i-1];
++//			occurenceT[i]= occurenceT[i-1]+1;
++//		}
++//			
++//	}
++//
++//	for ( int i = 0 ; i<length(occurence$) ; i++){
++//		std::cout << occurence$[i] << " ";
++//	}
++//	std::cout << std::endl;
++//
++//	for ( int i = 0 ; i<length(occurenceA) ; i++){
++//		std::cout << occurenceA[i] << " ";
++//	}
++//	std::cout << std::endl;
++//
++//	for ( int i = 0 ; i<length(occurenceC) ; i++){
++//		std::cout << occurenceC[i] << " ";
++//	}
++//	std::cout << std::endl;
++//
++//	for ( int i = 0 ; i<length(occurenceG) ; i++){
++//		std::cout << occurenceG[i] << " ";
++//	}
++//	std::cout << std::endl;
++//
++//	for ( int i = 0 ; i<length(occurenceT) ; i++){
++//		std::cout << occurenceT[i] << " ";
++//	}
++//	std::cout << std::endl;
++//
++//			//Exakte Suche  (Backward-Suche im Intervall [a..b]
++//	a = 1;
++//	b = length(text);
++//	for (int i = length(pattern); ((i>0) && (a <= b)) ; i--){
++//		if ((pattern[i-1] == 'A')||(pattern[i-1] == 'a')){
++//			a = cAlpha[1] + occurenceA[a-1] +1;
++//			b = cAlpha[1] + occurenceA[b];
++//		}
++//		if ((pattern[i-1] == 'C')||(pattern[i-1] == 'c')){
++//			a = cAlpha[2] + occurenceC[a-1] +1;
++//			b = cAlpha[2] + occurenceC[b];
++//		}
++//		if ((pattern[i-1] == 'G')||(pattern[i-1] == 'g')){
++//			a = cAlpha[3] + occurenceG[a-1] +1;
++//			b = cAlpha[3] + occurenceG[b];
++//		}
++//		if ((pattern[i-1] == 'T')||(pattern[i-1] == 't')){
++//			a = cAlpha[4] + occurenceT[a-1] +1;
++//			b = cAlpha[4] + occurenceT[b];
++//		}
++//	}
++//
++//	std::cout << "a = " << a << "  b = " << b << std::endl;
++//
++//	for (int i = a; i <= b; i++){
++//
++//		std::cout << " Treffer an pos " << sa[i-1] << std::endl;
++//	}
++int main(){
++	
++	String<char> text = "GTATACACAGATAGT"
++	String<char> pattern = "AGACA"
+ 
+-		std::cout << " Treffer an pos " << sa[i-1] << std::endl;
+-	}
+ 	return 0;
+ }

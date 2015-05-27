@@ -1,0 +1,39 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-27 11:35:48.918208600 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-27 11:44:47.886208600 +0200
+@@ -724,7 +724,7 @@
+ 
+ void saveData(Seq &seq,std::ofstream &PWM){
+ 
+-	PWM.open("PWM",std::ios::out|std::ios::app);
++	PWM.open("PWM",std::ios::out);
+ 	write(PWM,"A ");
+ 	for(unsigned i=0;i<length(seq.freqMatrix);++i){
+ 		write(PWM,seq.freqMatrix[i]['A']);
+@@ -732,7 +732,7 @@
+ 
+ 	}
+ 	PWM.close();
+-	PWM.open("PWM",std::ios::out|std::ios::app);
++	PWM.open("PWM",std::ios::out);
+ 	write(PWM,"C ");
+ 	for(unsigned i=0;i<length(seq.freqMatrix);++i){
+ 		write(PWM,seq.freqMatrix[i]['T']);
+@@ -740,7 +740,7 @@
+ 
+ 	}
+ 	PWM.close();
+-	PWM.open("PWM",std::ios::out|std::ios::app);
++	PWM.open("PWM",std::ios::out);
+ 	write(PWM,"G ");
+ 	for(unsigned i=0;i<length(seq.freqMatrix);++i){
+ 		write(PWM,seq.freqMatrix[i]['G']);
+@@ -748,7 +748,7 @@
+ 
+ 	}
+ 	PWM.close();
+-	PWM.open("PWM",std::ios::out|std::ios::app);
++	PWM.open("PWM",std::ios::out);
+ 	write(PWM,"T ");
+ 	for(unsigned i=0;i<length(seq.freqMatrix);++i){
+ 		write(PWM,seq.freqMatrix[i]['T']);

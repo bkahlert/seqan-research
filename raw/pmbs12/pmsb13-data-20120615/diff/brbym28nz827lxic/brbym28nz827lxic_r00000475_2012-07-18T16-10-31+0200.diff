@@ -1,0 +1,29 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 14:46:36.943609500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 16:10:29.086609500 +0200
+@@ -1139,7 +1139,9 @@
+ 			
+ 			if(seq.SortedPValueReversed[Kmer] >= 0.05 || seq.SortedPValueReversed[temp2] >= 0.05) continue;//only if Kmer and temp2 are significant estimate the counter
+ 			if(generalizedKmerTemp.find(temp)!=generalizedKmerTemp.end()) continue;
++			std::cout<<Kmer<<" "<<temp<<" "<<temp2<<std::endl;
+ 			estimateCounter(seq,generalizedKmerTemp,Kmer,temp2,counter);
++			if(counter>= seq.SeqsNumber) std::cout<<temp<<" "<<counter<<std::endl;
+ 			seq.generalizedKmer[temp]=counter;
+ 			estimateCounter(back,generalizedKmerBackgroundTemp,Kmer,temp2,counter);
+ 			back.generalizedKmer[temp]=counter;
+@@ -1228,10 +1230,15 @@
+ 					 String<Iupac> temp,
+ 					 String<Iupac> temp2,
+ 					 unsigned int &counter){
++
++
+ 	if(generalizedKmer.find(temp)== generalizedKmer.end()){
+ 		std::cerr<<"Error, could not find "<<temp<<" in generalizedKmer"<<std::endl;
+ 		std::exit(1);
+ 	}
++
++	String<Iupac>="AAWR";
++	if
+ 	unsigned int RE1=(*generalizedKmer.find(temp)).second;//the new seed RE is a Kmer with wildcard
+ 	unsigned int RE2=0;//temp2 may be in generalizedKmer or in SequenceCounter
+ 	if(seq.seqCounter.find(temp2)!=seq.seqCounter.end()){// if temp2 is in SequenceCounter do the same as above --> has no wildcard

@@ -1,0 +1,115 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-16 15:43:41.529706100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-16 15:50:12.743706100 +0200
+@@ -161,7 +161,7 @@
+ void computeGapStat(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs, String<Cluster> &observedCluster);
+ void compute_l_quer(String< std::map<unsigned int,std::map<Iupac,double> > > &Reference, String<Cluster> &cluster, String<double> &l_quer_for_k,String<String<double> > &allWk,int B,unsigned allPWMsLength, unsigned PWMLength);
+ void computeGap(String<double> &l_quer_for_k,String<Cluster> &observedCluster,String<double> &Gap,unsigned allPWMsLength);
+-
++void compute_sdk_and_sk(String<double> &sk,String<double> &l_quer_for_k,String<String<double> > &allWk,unsigned allPWMsLength,int B);
+ 
+ 
+ void readFastA( struct Seq &seq, 
+@@ -1141,13 +1141,45 @@
+ 	}
+ 
+ }
++
++void compute_sdk_and_sk(String<double> &sk,String<double> &l_quer_for_k,String<String<double> > &allWk,unsigned allPWMsLength,int B){
++
++	String<double> sdk;//Standard-Abweichungen
++	resize(sdk,allPWMsLength);
++
++	for(unsigned i=0;i<B;++i){
++
++		for(unsigned k=0;k<allPWMsLength-1;++k){
++			
++			if(i==0)
++				sdk[k]=(log(allWk[i][k])-l_quer_for_k[allPWMsLength-1])*(log(allWk[i][k])-l_quer_for_k[allPWMsLength-1]);
++			else
++				sdk[k]+=(log(allWk[i][k])-l_quer_for_k[allPWMsLength-1])*(log(allWk[i][k])-l_quer_for_k[allPWMsLength-1]);
++		}
++	}
++	
++
++	/*******************
++		sk berechnen
++	********************/
++
++	double x=1+1/B;
++	for(unsigned k=0;k<allPWMsLength-1;++k){
++
++		sdk[k]=sqrt(sdk[k]/B);
++		sk[k]=sdk[k]*sqrt(x);
++
++	}
++	clear(sdk);
++
++}
++
+ void computeGapStat(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs, String<Cluster> &observedCluster){
+ 
+ 	String<Cluster> cluster;
+ 	String<String<double> > allWk;
+ 	String<double> Gap;
+ 	String<double> l_quer_for_k;
+-	String<double> sdk;//Standard-Abweichungen
+ 	String<double> sk;
+ 	int B=5;//B Referenz-Datensätze werden erstellt
+ 	
+@@ -1157,7 +1189,7 @@
+ 	unsigned PWMLength=length(allPWMs[0]);
+ 	
+ 	resize(allWk,B);
+-	resize(sdk,allPWMsLength);
++	
+ 	resize(sk,allPWMsLength);
+ 	resize(Gap,allPWMsLength);
+ 	resize(l_quer_for_k,allPWMsLength);
+@@ -1175,35 +1207,10 @@
+ 
+ 
+ 	/******************
+-		sdk berechnen
++		sdk && sk berechnen
+ 	******************/
+ 
+-	for(unsigned i=0;i<B;++i){
+-
+-		for(unsigned k=0;k<allPWMsLength-1;++k){
+-			
+-			if(i==0)
+-				sdk[k]=(log(allWk[i][k])-l_quer_for_k[allPWMsLength-1])*(log(allWk[i][k])-l_quer_for_k[allPWMsLength-1]);
+-			else
+-				sdk[k]+=(log(allWk[i][k])-l_quer_for_k[allPWMsLength-1])*(log(allWk[i][k])-l_quer_for_k[allPWMsLength-1]);
+-		}
+-
+-		
+-
+-	}
+-	
+-
+-	/*******************
+-		sk berechnen
+-	********************/
+-
+-	double x=1+1/B;
+-	for(unsigned k=0;k<allPWMsLength-1;++k){
+-
+-		sdk[k]=sqrt(sdk[k]/B);
+-		sk[k]=sdk[k]*sqrt(x);
+-
+-	}
++	compute_sdk_and_sk(sk,l_quer_for_k,allWk,allPWMsLength,B);
+ 
+ 	/*******************
+ 		kleinstes k für die Gap berechnen
+@@ -1218,7 +1225,7 @@
+ 	}
+ 
+ 
+-	clear(sdk);
++	
+ 	clear(allWk);
+ 	clear(Gap);
+ 	

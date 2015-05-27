@@ -1,0 +1,18 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-11 15:13:38.803675000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-11 15:17:09.327637000 +0200
+@@ -197,10 +197,10 @@
+ 		goDown(forwardIter, readPos(pattern,cutPos +i));
+ 	}
+ 
+-	//goDown(forwardIter, "ag");
+-	//for (unsigned i = 0; i < length(getOccurrences(forwardIter));i++){
+-	//	std::cout << getOccurrences(forwardIter)[i] << std::endl;
+-	//}
++	goRoot(forwardIter);
++	goDown(forwardIter, "ATCCA");
++	std::cout << getOccurrences(forwardIter)[0]<< std::endl;
++
+ 
+ 
+ 	return 0;

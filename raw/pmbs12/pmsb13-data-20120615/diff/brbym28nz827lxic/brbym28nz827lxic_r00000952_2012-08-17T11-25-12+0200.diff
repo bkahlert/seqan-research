@@ -1,0 +1,15 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-17 11:13:17.150926200 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-17 11:25:10.283926200 +0200
+@@ -1247,9 +1247,9 @@
+ 	for(unsigned k=1;k<allPWMsLength-1;++k){
+ 		j=allPWMsLength-(k+1);
+ 		std::cout<<"gap "<<Gap[j]<<" "<<Gap[j+1]<<" "<<sk[j+1]<<std::endl;
+-		if(Gap[j]>=Gap[j+1]-sk[j+1]){
++		if(Gap[j]<=Gap[j+1]-sk[j+1]){
+ 			std::cout<<"j "<<j<<std::endl;
+-			//break;
++			break;
+ 		}
+ 
+ 	}

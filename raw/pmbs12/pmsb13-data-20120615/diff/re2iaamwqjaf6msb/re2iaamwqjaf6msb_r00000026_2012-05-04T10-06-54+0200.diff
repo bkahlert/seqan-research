@@ -1,0 +1,13 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/demos/segmentaligner.cpp ./sandbox/jennyann/demos/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/demos/segmentaligner.cpp	2012-05-04 10:06:08.014076500 +0200
++++ ./sandbox/jennyann/demos/segmentaligner.cpp	2012-05-04 10:06:53.006649900 +0200
+@@ -1,7 +1,7 @@
+ #include <iostream>
+ #include <seqan/sequence.h>
+-#include "stellar.h"
+-#include "stellar.cpp"
++#include <stellar.h>
++#include <stellar.cpp>
+ 
+ using namespace seqan;
+ 

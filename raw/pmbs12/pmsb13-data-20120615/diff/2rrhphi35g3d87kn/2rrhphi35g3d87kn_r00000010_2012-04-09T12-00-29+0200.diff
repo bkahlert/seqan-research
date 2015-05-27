@@ -1,0 +1,10 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x 'C:/Documents and Settings/bkahlert/workspace/seqan/misc/seqan_instrumentation/userdata/id.txt' -x misc/seqan_instrumentation/userdata/2rrhphi35g3d87kn_stats.txt -x 'C:/Documents and Settings/bkahlert/workspace/seqan/misc/seqan_instrumentation/userdata/2rrhphi35g3d87kn_stats.txt' -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x 'C:/Documents and Settings/bkahlert/workspace/seqan/misc/seqan_instrumentation/bin' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Documents and Settings/bkahlert/workspace/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/last_revision_copy -x 'C:/Documents and Settings/bkahlert/workspace/seqan/misc/seqan_instrumentation/last_revision_copy' -x misc/seqan_instrumentation/userdata -x 'C:/Documents and Settings/bkahlert/workspace/seqan/misc/seqan_instrumentation/userdata' -x misc/seqan_instrumentation/userdata -x 'C:/Documents and Settings/bkahlert/workspace/seqan/misc/seqan_instrumentation/userdata' ./misc/seqan_instrumentation/last_revision_copy/CHANGELOG ./CHANGELOG
+--- ./misc/seqan_instrumentation/last_revision_copy/CHANGELOG	2012-04-09 01:37:49.828614600 +0200
++++ ./CHANGELOG	2012-04-09 11:58:53.488663900 +0200
+@@ -1,5 +1,5 @@
+ = SeqAn Changelog =
+-
++dd
+ Add a new list item '''AT THE TOP''' for each change (excluding trivial things like changes to whitespace and comments).
+ Link to changsets with `[CHANGESET-NUMBER]` and tickets with `#TICKET-NUMBER` whenever possible.
+ You can use Trac wiki syntax.

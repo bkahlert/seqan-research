@@ -1,0 +1,69 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 17:22:14.679402900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 17:34:17.855402900 +0200
+@@ -253,40 +253,35 @@
+ 	String<Dna5> replace;
+ 	Iterator<String<Dna5> >::Type replaceIt;
+ 	Iterator<String<Iupac> >::Type tempIttemp;
+-	//std::cout<<Kmer;
+-	
+-	//for(;tempIt!=end(temp);++tempIt){//loop over each position in kmer
+-				//std::cout<<std::endl;
+-				//std::cout<<" 0. "<<temp<<" "<<tempIt<<" ";
+-				if(tempIt==end(temp)) return;//&&(tempIt+1!=end(temp))
+-				if((*tempIt == 'A' || *tempIt == 'C' ||*tempIt == 'G' ||*tempIt == 'T')) loopOverKmer(seq,temp,temp,++tempIt,finder,counter,CounterV,IMap);//only replace the position with a wildcard
+-				//else if((*tempIt == 'A' || *tempIt == 'C' ||*tempIt == 'G' ||*tempIt == 'T') && (tempIt+1 ==end(temp))){ 
+-				//	FindKmer(seq,temp,finder,counter,CounterV);//wenn der letzte ACGT danns suche auch
+-				//	return;
+-				//}
+-				replace=IMap.IupacMapReplaceReversed[*tempIt];
+-				replaceIt = begin(replace);	
+-				//std::cout<<" 1. "<<temp<<" "<<tempIt<<" ";
+-				for(;replaceIt!=end(replace);++replaceIt){
+-					temp = Kmer;// reset temp
+-					*tempIt = *replaceIt;
+-					//if not end call fkt. with temp 
+-					// if end call find --> &counter
+-					tempIttemp=tempIt;//der rekursive aufruf mit diesem, da die schleife mit tempIt weitergehen soll
+-					if(tempIt+1!=end(temp)){
+-						//++tempIt;
+-						//std::cout<<tempIttemp<<" "<<tempIttemp+1<<" "<<tempIt<<" "<<end(temp)<<std::endl;
+-						loopOverKmer(seq,temp,temp,++tempIttemp,finder,counter,CounterV,IMap);
++	char resetTemp;
+ 
+-					}
+-					//std::cout<<" 2. "<<*replaceIt<<" "<<temp<<" "<<tempIt<<std::endl;
+-					//std::cout<<temp<<" finder"<<std::endl;
+-					FindKmer(seq,temp,finder,counter,CounterV);
++	if(tempIt==end(temp)) return;//&&(tempIt+1!=end(temp))
++	if((*tempIt == 'A' || *tempIt == 'C' ||*tempIt == 'G' ||*tempIt == 'T')){
++		loopOverKmer(seq,temp,temp,++tempIt,finder,counter,CounterV,IMap);//only replace the position with a wildcard
++		return;
++	}
++	replace=IMap.IupacMapReplaceReversed[*tempIt];
++	replaceIt = begin(replace);	
++			
++	for(;replaceIt!=end(replace);++replaceIt){
++		temp = Kmer;// reset temp
++		resetTemp = IMap.IupacMapInversed[replace];
++		*tempIt = *replaceIt;
++		//if not end call fkt. with temp 
++		// if end call find --> &counter
++		tempIttemp=tempIt;//der rekursive aufruf mit diesem, da die schleife mit tempIt weitergehen soll
++		if(tempIt+1!=end(temp)){
++			loopOverKmer(seq,temp,temp,++tempIttemp,finder,counter,CounterV,IMap);
+ 
++		}
++		if((*tempIttemp == 'A' || *tempIttemp == 'C' || *tempIttemp == 'G' || *tempIttemp == 'T' || tempIttemp == end(temp))){
++			std::vector<int> CounterV(seq.SeqsNumber+1,0);					
++			FindKmer(seq,temp,finder,counter,CounterV);
++		}
+ 				
++		*tempIt=resetTemp;			
+ 					
+-					
+-				}
++	}
+ 				
+ 			//}
+ 

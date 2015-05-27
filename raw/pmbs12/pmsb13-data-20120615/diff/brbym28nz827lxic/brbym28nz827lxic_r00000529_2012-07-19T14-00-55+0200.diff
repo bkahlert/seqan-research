@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-19 13:58:50.700797200 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-19 14:00:54.149797200 +0200
+@@ -238,7 +238,7 @@
+ 	IupacMaps IMaps;
+ 	MapIupac(IMaps);
+ 	GeneralizeKmer("ACG",IMaps,seq,back);
+-	PrintMap(seq.generalizedKmer);
++	//PrintMap(seq.generalizedKmer);
+ 	SEQAN_ASSERT_EQ(length(seq.generalizedKmer),length(back.generalizedKmer));
+ 	SEQAN_ASSERT_EQ(length(seq.generalizedKmer),9);
+ 	/*
+@@ -351,7 +351,7 @@
+ 	logFactorial(seq.SeqsNumber+back.SeqsNumber);//save all relevant factorial numbers
+ 	FisherExactTest(seq,back);//computes the pValue of each Motif due to the counter
+ 	//std::cout<<std::endl;
+-	PrintMap(seq.SortedPValue);
++	//PrintMap(seq.SortedPValue);
+ 	std::multimap<double,String<Dna5> >::iterator SortedPValueIterator;
+ 	SortedPValueIterator = seq.SortedPValue.begin();
+ 

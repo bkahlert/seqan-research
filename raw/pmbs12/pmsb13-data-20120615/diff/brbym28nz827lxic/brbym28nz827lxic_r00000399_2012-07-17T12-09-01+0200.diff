@@ -1,0 +1,46 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-17 12:00:22.835595100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-17 12:09:00.404595100 +0200
+@@ -155,7 +155,7 @@
+ 	sequences.SortedPValue.clear();
+ 	sequences.SortedPValueReversed.clear();
+ 	background.seqCounter.clear();
+-
++	std::cout<<replaceString[0]<<" "<<replaceString[1]<<" "<<replaceString[2]<<" "<<sequences.intervals[replaceString[0]];
+ 	replaceKmer(sequences,replaceString);
+ 	replaceKmer(background,replaceStringB);
+ 	clear(replaceString);
+@@ -168,7 +168,7 @@
+ 	
+ 	++c;
+ 	}
+-	while(sequences.generalizedSortedPValue.begin()->first<0.05 && c<4);
++	while(sequences.generalizedSortedPValue.begin()->first<0.05 && c<1);
+ 
+ 
+ 	return 0;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-17 12:01:54.826595100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-17 12:06:14.410595100 +0200
+@@ -408,7 +408,7 @@
+ 				std::vector<int> &CounterV,
+ 				String<unsigned int> &replaceString,
+ 				std::map<unsigned int,std::map<Iupac,double> > &freqMatrix){
+-					
++	typedef IntervalAndCargo<unsigned, unsigned> TInterval;				
+ 	clear(finder);
+ 	//std::cout<<temp<<" vor-while"<<std::endl;
+ 	while(find(finder,temp)){//search the current Kmer in all sequences
+@@ -416,10 +416,11 @@
+ 		//std::cout<<'[' <<beginPosition(finder)<<','<<endPosition(finder)<<")\t"<<infix(finder)<<std::endl;//Debug
+ 		//replaceKmer(seq,beginPosition(finder).i1, beginPosition(finder).i2, endPosition(finder).i2);
+ 		//std::cout<<temp<<" while"<<std::endl;
+-		std::cout<<beginPosition(finder).i1<<" "<<beginPosition(finder).i2<<" "<<endPosition(finder).i1<<" "<<endPosition(finder).i2<<std::endl;
++		//std::cout<<beginPosition(finder).i1<<" "<<beginPosition(finder).i2<<" "<<endPosition(finder).i1<<" "<<endPosition(finder).i2<<std::endl;
+ 		appendValue(replaceString,beginPosition(finder).i1);//i1 = Sequenz nummer, i2= stelle in der Sequenz
+ 		appendValue(replaceString,beginPosition(finder).i2);
+ 		appendValue(replaceString,endPosition(finder).i2);
++		appendValue(seq.intervals[beginPosition(finder).i1], TInterval(beginPosition(finder).i2, endPosition(finder).i2, 0)); 
+ 		if(CounterV[beginPosition(finder).i1] == 0){//count number of sequences containing the motif, not the occurrences to avoid problems with self-overlapping
+ 			++CounterV[beginPosition(finder).i1];
+ 			++CounterV[seq.SeqsNumber];//last Position in CounterV is cumulated sum

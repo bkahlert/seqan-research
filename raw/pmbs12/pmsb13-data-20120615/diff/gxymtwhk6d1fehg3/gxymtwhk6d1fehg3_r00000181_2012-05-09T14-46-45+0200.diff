@@ -1,0 +1,152 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-09 14:28:39.231278000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-09 14:46:44.275516000 +0200
+@@ -8,6 +8,18 @@
+ typedef Index<String<char>, IndexEsa<> > BowTieIndex;
+ typedef Finder<BowTieIndex> BowTieFinder;
+ 
++
++	String<char> text = "acgttacgcacgtatcggtatacgcacgttacattccgtcaaacgttctccagctgactgactacgatcagctacggatgtgtcatgcttagctagctacgatagctacgtccgacgatcacgttagcacgtatcggtatacgcacgttacgcacgtatcggtatacgcacgttacattccgtcaaacgttttagcacgtatcggtatacgcacgttacgcacgtatcggtatacgcacgttacattccgtcaaacgttctccagctgactgactacgatcagctatccgacgatcacgttagcacgtatcggtatacgcacgttacgcacgtatcggtatacgcacgttacattccgtcaaacgttttagcacgtatcggtatacgc";
++	String<char> pattern = "acgtat";
++	String<char> rText;
++	String<char> rPattern;
++	String<char> cuttedPattern;
++	String<char> rightHalf;
++	unsigned textLength = length(text); // == length(rText)
++	unsigned patternLength = length(pattern); // == length(rPattern)
++	unsigned cutPos = patternLength / 2;
++
++// returns a string backwards from input
+ String<char> revert (String<char> word){
+ 	String<char> rWord;
+ 	resize(rWord, length(word));
+@@ -18,6 +30,7 @@
+ 	return rWord;
+ }
+ 
++// exactly verifies a string in a text based on a position of a finder (stringmatching)
+ bool verify (String<char> text , String<char> ver, unsigned pos){
+ 	if ( (pos + length(ver)) > length(text))
+ 			return false;
+@@ -31,24 +44,45 @@
+ 	return isVerified;
+ }
+ 
++// finds all patterns with no missmatches
+ void exactSearch (BowTieFinder finder,String<char> pattern){
+ 	while (find(finder, pattern)) {
+ 	std::cout << pattern << ", found: " << pattern << " at position "<< position(finder) << std::endl;
+ 	}
+ }
+ 
++// finds all patterns with one missmatch within the second half of the pattern
++void forwardSearch (BowTieFinder finder, String<char> pattern) {
++	for (int i = 0; i < (patternLength- cutPos); i++){
++
++		cuttedPattern= pattern;
++		resize (cuttedPattern, cutPos + i);
++		//std::cout << cuttedPattern;
++
++		rightHalf = rPattern;
++		resize(rightHalf, patternLength - cutPos - i - 1 );
++		rightHalf = revert(rightHalf);
++		//std::cout << " " << rightHalf << std::endl;
++
++		clear(finder);
++
++		while (find(finder, cuttedPattern)) {
++
++			//std::cout << rightHalf << std::endl;
++			//std::cout << position(forwardFinder)<< std::endl;
++			if ((position(finder)+ patternLength <= textLength)&&(text[position(finder) + length(cuttedPattern)]!= pattern[i+ cutPos]) && ((length(cuttedPattern)) == (patternLength-1))){
++				std::cout << pattern << ", found: " << cuttedPattern << text[position(finder)+ length(cuttedPattern)] << rightHalf << " at position "<< position(finder) << std::endl;
++			}else if ((position(finder)+ patternLength <= textLength)&&(text[position(finder) + length(cuttedPattern)] != pattern[i+ cutPos]) && (verify ( text , rightHalf , position(finder) + length(cuttedPattern)+ 1 ))){ 
++				std::cout << pattern << ", found: " << cuttedPattern << text[position(finder)+ length(cuttedPattern)] << rightHalf << " at position "<< position(finder) << std::endl;
++			}
++		}
++	}
++}
++
+ 
+ int main(){
+ 	
+-	String<char> text = "acgttacgcacgtatcggtatacgcacgttacattccgtcaaacgttctccagctgactgactacgatcagctacggatgtgtcatgcttagctagctacgatagctacgtccgacgatcacgttagcacgtatcggtatacgcacgttacgcacgtatcggtatacgcacgttacattccgtcaaacgttttagcacgtatcggtatacgcacgttacgcacgtatcggtatacgcacgttacattccgtcaaacgttctccagctgactgactacgatcagctatccgacgatcacgttagcacgtatcggtatacgcacgttacgcacgtatcggtatacgcacgttacattccgtcaaacgttttagcacgtatcggtatacgc";
+-	String<char> pattern = "acgtat";
+-	String<char> rText;
+-	String<char> rPattern;
+-	String<char> cuttedPattern;
+-	String<char> rightHalf;
+-	unsigned cutPos;
+-	unsigned textLength = length(text); // == length(rText)
+-	unsigned patternLength = length(pattern); // == length(rPattern)
++
+ 
+ 	resize(rText, length(text));
+ 	resize(rPattern, patternLength);
+@@ -64,41 +98,35 @@
+ 	BowTieIndex backwardIndex(rText);
+ 	BowTieFinder backwardFinder(backwardIndex);
+ 
+-	//exact Search
+-	//while (find(forwardFinder, pattern)) {
+-	//std::cout << pattern << ", found: " << pattern << " at position "<< position(forwardFinder) << std::endl;
+-	//}
++	//textverification search
+ 	exactSearch(forwardFinder, pattern);
+-
+-
+-	//cutting the pattern
+-	cutPos = patternLength / 2;
++	forwardSearch(forwardFinder, pattern);
+ 
+ 	//ForwardIndex-Suche
+-	for (int i = 0; i < (patternLength- cutPos); i++){
+-
+-		cuttedPattern= pattern;
+-		resize (cuttedPattern, cutPos + i);
+-		//std::cout << cuttedPattern;
+-
+-		rightHalf = rPattern;
+-		resize(rightHalf, patternLength - cutPos - i - 1 );
+-		rightHalf = revert(rightHalf);
+-		//std::cout << " " << rightHalf << std::endl;
+-
+-		clear(forwardFinder);
++	//for (int i = 0; i < (patternLength- cutPos); i++){
+ 
+-		while (find(forwardFinder, cuttedPattern)) {
+-
+-			//std::cout << rightHalf << std::endl;
+-			//std::cout << position(forwardFinder)<< std::endl;
+-			if ((position(forwardFinder)+ patternLength <= textLength)&&(text[position(forwardFinder) + length(cuttedPattern)]!= pattern[i+ cutPos]) && ((length(cuttedPattern)) == (patternLength-1))){
+-				std::cout << pattern << ", found: " << cuttedPattern << text[position(forwardFinder)+ length(cuttedPattern)] << rightHalf << " at position "<< position(forwardFinder) << std::endl;
+-			}else if ((position(forwardFinder)+ patternLength <= textLength)&&(text[position(forwardFinder) + length(cuttedPattern)] != pattern[i+ cutPos]) && (verify ( text , rightHalf , position(forwardFinder) + length(cuttedPattern)+ 1 ))){ 
+-				std::cout << pattern << ", found: " << cuttedPattern << text[position(forwardFinder)+ length(cuttedPattern)] << rightHalf << " at position "<< position(forwardFinder) << std::endl;
+-			}
+-		}
+-	}
++	//	cuttedPattern= pattern;
++	//	resize (cuttedPattern, cutPos + i);
++	//	//std::cout << cuttedPattern;
++
++	//	rightHalf = rPattern;
++	//	resize(rightHalf, patternLength - cutPos - i - 1 );
++	//	rightHalf = revert(rightHalf);
++	//	//std::cout << " " << rightHalf << std::endl;
++
++	//	clear(forwardFinder);
++
++	//	while (find(forwardFinder, cuttedPattern)) {
++
++	//		//std::cout << rightHalf << std::endl;
++	//		//std::cout << position(forwardFinder)<< std::endl;
++	//		if ((position(forwardFinder)+ patternLength <= textLength)&&(text[position(forwardFinder) + length(cuttedPattern)]!= pattern[i+ cutPos]) && ((length(cuttedPattern)) == (patternLength-1))){
++	//			std::cout << pattern << ", found: " << cuttedPattern << text[position(forwardFinder)+ length(cuttedPattern)] << rightHalf << " at position "<< position(forwardFinder) << std::endl;
++	//		}else if ((position(forwardFinder)+ patternLength <= textLength)&&(text[position(forwardFinder) + length(cuttedPattern)] != pattern[i+ cutPos]) && (verify ( text , rightHalf , position(forwardFinder) + length(cuttedPattern)+ 1 ))){ 
++	//			std::cout << pattern << ", found: " << cuttedPattern << text[position(forwardFinder)+ length(cuttedPattern)] << rightHalf << " at position "<< position(forwardFinder) << std::endl;
++	//		}
++	//	}
++	//}
+ 
+ 	//BackwardIndex-Suche
+ 	for (int i = 0; i < cutPos; i++){

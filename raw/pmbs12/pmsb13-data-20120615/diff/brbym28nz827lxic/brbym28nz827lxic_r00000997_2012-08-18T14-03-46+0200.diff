@@ -1,0 +1,135 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-18 13:49:17.736110100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-18 14:03:44.415710100 +0200
+@@ -15,8 +15,7 @@
+ 	sequences.seed=100;
+ 	MapIupac(IMaps);//IupacMap for generalization
+ 
+-	std::cout<<IMaps.IupacMapReversed['C']<<" "<<IMaps.IupacMapReversed['C'];
+-	system("PAUSE");
++	
+ 	
+ 	if(argc !=3){
+ 		std::cerr<<"ERROR: Invalid argument count."<<std:: endl
+@@ -107,8 +106,7 @@
+ 			- if there is a pValue<treshold start again by picking the new top motifs
+ 		*****/
+ 		//PrintMap(sequences.SortedPValue);
+-		std::cout<<IMaps.IupacMapReversed['C']<<" "<<IMaps.IupacMapReversed['C'];
+-		system("PAUSE");
++		
+ 		InitGeneralization(IMaps,sequences,background);
+ 		std::cout<<"Generalize done"<<std::endl;
+ 		//PrintMap(sequences.generalizedSortedPValue);
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-18 13:59:22.401510100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-18 14:03:44.430710100 +0200
+@@ -62,17 +62,17 @@
+ 
+ struct IupacMaps
+ {
+-	Map<Pair<unsigned int,char> > IupacMap;
++	/*Map<Pair<unsigned int,char> > IupacMap;
+ 	Map<Pair<char,unsigned int> > IupacMapReversed;
+ 	Map<Pair<char,String<Iupac> > > IupacMapReplace;
+ 	Map<Pair<char,String<Dna5> > > IupacMapReplaceReversed;
+ 	Map<Pair<String<Dna5>, char > > IupacMapInversed;
+-
+-	//std::map<unsigned int,char> IupacMap;
+-	//std::map<char,unsigned int> IupacMapReversed;
+-	//std::map<char,String<Iupac> > IupacMapReplace; //stores the replacement-chars
+-	//std::map<char,String<Dna5> > IupacMapReplaceReversed;
+-	//std::map<String<Dna5>, char > IupacMapInversed;
++*/
++	std::map<unsigned int,char> IupacMap;
++	std::map<char,unsigned int> IupacMapReversed;
++	std::map<char,String<Iupac> > IupacMapReplace; //stores the replacement-chars
++	std::map<char,String<Dna5> > IupacMapReplaceReversed;
++	std::map<String<Dna5>, char > IupacMapInversed;
+ };
+ 
+ 
+@@ -1669,7 +1669,7 @@
+ 
+ void MapIupac(IupacMaps &IMaps ){
+ 
+-	//IMaps.IupacMap.get_allocator().allocate(16);
++	IMaps.IupacMap.get_allocator().allocate(16);
+ 	IMaps.IupacMap[0]='U';
+ 	IMaps.IupacMap[1]='T';
+ 	IMaps.IupacMap[2]='A';
+@@ -1687,7 +1687,7 @@
+ 	IMaps.IupacMap[14]='V';
+ 	IMaps.IupacMap[15]='N';
+ 
+-	//IMaps.IupacMapReversed.get_allocator().allocate(16);
++	IMaps.IupacMapReversed.get_allocator().allocate(16);
+ 
+ 	IMaps.IupacMapReversed['U']=0;
+ 	IMaps.IupacMapReversed['T']=1;
+@@ -1708,7 +1708,7 @@
+ 
+ 	
+ 
+-	//IMaps.IupacMapReplace.get_allocator().allocate(14);
++	IMaps.IupacMapReplace.get_allocator().allocate(14);
+ 	IMaps.IupacMapReplace['R']="CT";//in Iupac-notation R=AG --> CT left
+ 	IMaps.IupacMapReplace['Y']="AG";
+ 	IMaps.IupacMapReplace['S']="AT";
+@@ -1724,7 +1724,7 @@
+ 	IMaps.IupacMapReplace['G']="ACT";
+ 	IMaps.IupacMapReplace['T']="ACG";
+ 	
+-	//IMaps.IupacMapReplaceReversed.get_allocator().allocate(11);
++	IMaps.IupacMapReplaceReversed.get_allocator().allocate(11);
+ 	IMaps.IupacMapReplaceReversed['R']="AG";
+ 	IMaps.IupacMapReplaceReversed['Y']="CT";
+ 	IMaps.IupacMapReplaceReversed['S']="CG";
+@@ -1737,7 +1737,7 @@
+ 	IMaps.IupacMapReplaceReversed['V']="ACG";
+ 	IMaps.IupacMapReplaceReversed['N']="ACGT";
+ 		
+-	//IMaps.IupacMapInversed.get_allocator().allocate(11);
++	IMaps.IupacMapInversed.get_allocator().allocate(11);
+ 	IMaps.IupacMapInversed["AG"]='R';
+ 	IMaps.IupacMapInversed["CT"]='Y';
+ 	IMaps.IupacMapInversed["CG"]='S';
+@@ -1768,8 +1768,7 @@
+ 	if(seq.SortedPValue.size()>seq.seed)	limit=seq.seed;//seed meist = 100
+ 	else if(seq.SortedPValue.size()==0) return;
+ 	else	limit = seq.SortedPValue.size();
+-	std::cout<<IMaps.IupacMapReversed['C']<<" "<<IMaps.IupacMapReversed['C'];
+-		system("PAUSE");
++	
+ 	for(MapIterator=seq.SortedPValue.begin();i<limit;++MapIterator,++i){//iterate over Top100
+ 		GeneralizeKmer((*MapIterator).second,IMaps,seq,back);
+ 	}
+@@ -1851,25 +1850,20 @@
+ 	temp = Kmer;
+ 	temp2=Kmer;
+ 	tempIt = begin(temp);
+-	std::cout<<IMaps.IupacMapReversed['A']<<" "<<IMaps.IupacMapReversed['C'];
+-		system("PAUSE");
++	
+ 	
+ 	for(;tempIt!=end(temp);++tempIt){//loop over each position in kmer
+ 		replaceIt = begin(replace);	
+ 		for(;replaceIt!=end(replace);++replaceIt){// loop over ACGT
+ 			temp = Kmer;// reset temp
+-			std::cout<<IMaps.IupacMapReversed['C']<<" "<<IMaps.IupacMapReversed['C'];
+-			system("PAUSE");
++			
+ 			if(*tempIt == *replaceIt) continue; // there is no Iupac for "AA", in return "AG" = "R"
+ 			//std::cout<<temp<<" "; 
+ 			tempChar =*tempIt;//stores the current char because of temp2
+ 			*tempIt=*replaceIt;
+ 			temp2=temp;//temp2 ist nun das mit dem char für die neue wildcard
+ 			*tempIt=tempChar;//temp wieder das alte, wird aber im nächsten schritt mit einer neuen wildcard ergänzt
+-			std::cout<<IMaps.IupacMapReversed['C']<<" "<<IMaps.IupacMapReversed['C'];
+-			system("PAUSE");//what the?
+-			std::cout<<temp<<" "<<*tempIt<<" "<<*replaceIt<<" te "<<IMaps.IupacMapReversed[*tempIt]<<" re "<<IMaps.IupacMapReversed['C']<<" "<<mapValue(IMaps.IupacMapReversed,*replaceIt)<<" "<<*replaceIt<<" "<<IMaps.IupacMapReversed['C']<<" "<<IMaps.IupacMapReversed['G']<<" "<<IMaps.IupacMapReversed['N']<<" "<<IMaps.IupacMap[IMaps.IupacMapReversed[*tempIt] + IMaps.IupacMapReversed[*replaceIt]];
+-			system("PAUSE");
++			
+ 			*tempIt =IMaps.IupacMap[IMaps.IupacMapReversed[*tempIt] + IMaps.IupacMapReversed[*replaceIt]];//compute Iupac-letter--> A + G = R and replace the current location in temp
+ 			//std::cout<<Kmer<<" "<<temp<<" "<<temp2<<std::endl;
+ 			if(seq.generalizedKmer.find(temp)!=seq.generalizedKmer.end()) continue;// if Kmer is in the Map -->nothing to do

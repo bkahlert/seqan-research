@@ -1,0 +1,82 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-07 15:14:33.367798500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-07 15:18:20.832798500 +0200
+@@ -1026,42 +1026,42 @@
+ }
+ 
+ void computeReferenceData(unsigned allPWMsLength,unsigned PWMLength ){
+-//
+-//	/***
+-//			Für jede Spalte eines PWMs Normalverteilte Zufallszahlen
+-//			So viele PWMs wie auch gemessen
+-//
+-//			Spalten:
+-//			Zufällig zwischen ACGT auswählen --> x von 0 bis 0.99
+-//			Nächste aus ACGT --> y von 0 bis (1-x)
+-//			Nächstes --> z von 0 bis (1-x-y)
+-//
+-//			PWMLength = Länge der Motive
+-//
+-//	***/
+-//	
+-//	String< std::map<unsigned int,std::map<Iupac,double> > > Referenz;
+-//	resize(Referenz,allPWMsLength);
+-//
+-//	std::map<unsigned int,std::map<Iupac,double> > ReferenzFreq;
+-//	resize(ReferenzFreq,PWMLength);
+-//
+-//	//for(unsigned i=0;i<allPWMsLength;++i){//genauso viele Referenz-Daten erstellen, wie PWMs vorhanden
+-//	//	for(unsigned j=0;j<PWMLength;++j){
+-//	//		ReferenzFreq[j]["zufallACGT"]="zufallvon 0 bis 0.99";
+-//	//		ReferenzFreq[j]["zufallACG"]="zufallvon 0 bis 1-[zufallACGT]";
+-//	//		ReferenzFreq[j]["zufallAC"]="zufallvon 0 bis 1-[zufallACGT]-[zufallACG]";
+-//	//		ReferenzFreq[j]["A"]="zufallvon 0 bis 1-[zufallACGT]-[zufallACG]-[zufallAC]";
+-//
+-//	//	}
+-//
+-//
+-//	//	append(Referenz,ReferenzFreq);
+-//	//	clear(ReferenzFreq);
+-//	//}
+-//
+-//
+-//
++
++	/***
++			Für jede Spalte eines PWMs Normalverteilte Zufallszahlen
++			So viele PWMs wie auch gemessen
++
++			Spalten:
++			Zufällig zwischen ACGT auswählen --> x von 0 bis 0.99
++			Nächste aus ACGT --> y von 0 bis (1-x)
++			Nächstes --> z von 0 bis (1-x-y)
++
++			PWMLength = Länge der Motive
++
++	***/
++	
++	String< std::map<unsigned int,std::map<Iupac,double> > > Referenz;
++
++
++	std::map<unsigned int,std::map<Iupac,double> > ReferenzFreq;
++	
++
++	//for(unsigned i=0;i<allPWMsLength;++i){//genauso viele Referenz-Daten erstellen, wie PWMs vorhanden
++	//	for(unsigned j=0;j<PWMLength;++j){
++	//		ReferenzFreq[j]["zufallACGT"]="zufallvon 0 bis 0.99";
++	//		ReferenzFreq[j]["zufallACG"]="zufallvon 0 bis 1-[zufallACGT]";
++	//		ReferenzFreq[j]["zufallAC"]="zufallvon 0 bis 1-[zufallACGT]-[zufallACG]";
++	//		ReferenzFreq[j]["A"]="zufallvon 0 bis 1-[zufallACGT]-[zufallACG]-[zufallAC]";
++
++	//	}
++
++
++	//	append(Referenz,ReferenzFreq);
++	//	clear(ReferenzFreq);
++	//}
++
++
++
+ }
+ 
+ 

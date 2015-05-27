@@ -1,0 +1,161 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-27 12:21:41.319117500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-09-27 12:26:19.784117500 +0200
+@@ -11,7 +11,7 @@
+     Seq background;
+ 	IupacMaps IMaps;
+ 	MapIupac(IMaps);//IupacMap for generalization
+-	char setting;
++	
+ 
+ 
+ 	if(argc <2 || argc>3){
+@@ -41,65 +41,9 @@
+ 	
+ 	background.SeqsNumber=length(background.seqs);//number of sequences
+ 
+-
+-	std::cout<<"-------------DREME-Settings-------------"<<std::endl;
+-	std::cout<<"----------------------------------------"<<std::endl;
+-	std::cout<<"Standard-Settings are: mink(6), maxk(6), Seed(100), pValueTreshold(0.05), NumberOfMotifs(5)"<<std::endl;
+-	while(true){
+-		std::cout<<"Alter the Settings? (Y) (N)"<<std::endl;
+-		std::cin>>setting;
+-		if(setting =='Y' || setting=='N' ||setting =='y' ||setting =='n') break;
+-		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
+-	}
+ 	unsigned kmer_len;
+ 	unsigned kmer_len_end;
+-	if(setting=='Y' || setting =='y'){
+-		std::cout<<"Enter in mink(should be >=3) "<<std::endl;
+-		std::cin>>kmer_len;
+-		std::cout<<"Enter in maxk(a value>8 could slow down the program) "<<std::endl;
+-		std::cin>>kmer_len_end;
+-		std::cout<<"Enter in Seed(100) "<<std::endl;
+-		std::cin>>sequences.seed;
+-		std::cout<<"Enter in pValueTreshold(0.05) "<<std::endl;
+-		std::cin>>sequences.treshold;
+-		std::cout<<"Enter in NumberOfMotifs(5) "<<std::endl;
+-		std::cin>>sequences.NumberOfMotifs;
+-		++sequences.NumberOfMotifs;
+-
+-
+-	}
+-
+-	else{
+-		kmer_len=6;
+-		kmer_len_end=6;
+-		sequences.seed=100;
+-		sequences.treshold=0.05;
+-		sequences.NumberOfMotifs=6;
+-		
+-	}
+-	bool save=false;
+-	while(true){
+-		std::cout<<"Save the data (PWMs) to a file? (Y) (N)"<<std::endl;//path hardcoded--> ToDo
+-		std::cin>>setting;
+-		if(setting =='Y' || setting=='y'){
+-			save=true;
+-			break;
+-		}
+-		else if(setting =='N' ||setting =='n') break;
+-		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
+-	}
+-	bool clusterData=false;
+-	while(true){
+-		std::cout<<"Should the data be clustered? (Y)(N)"<<std::endl;
+-		std::cin>>setting;
+-		if(setting =='Y' || setting=='y'){
+-			clusterData=true;
+-			break;
+-		}
+-		else if(setting =='N' ||setting =='n') break;
+-		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
+-
+-	}
++	computeSettings(sequences,kmer_len,kmer_len_end);
+ 	
+ 
+ 	/*std::ofstream outfile;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-09-27 12:03:40.207117500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-09-27 12:26:19.799117500 +0200
+@@ -114,6 +114,7 @@
+ void PrintFastA(TStream & stream, Seq &seq);
+ void initST(Seq &seq);
+ void PrintST(Seq &seq);
++void computeSettings(Seq &sequences, unsigned kmer_len, unsigned kmer_len_end);
+ void priorFreq(Seq &seq);
+ void initExactKmer(Seq &seq,Seq &back,unsigned int kmer_len,unsigned int kmer_len_end);
+ void CountKmer(Seq &seq, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Dna5> &Kmer);
+@@ -246,6 +247,70 @@
+ 	}
+ 
+ }
++/***
++		Command-Line settings 
++		ToDo: Error-Handling, Cluster-Settings
++***/
++void computeSettings(Seq &sequences, unsigned kmer_len, unsigned kmer_len_end){
++	char setting;
++	std::cout<<"-------------DREME-Settings-------------"<<std::endl;
++	std::cout<<"----------------------------------------"<<std::endl;
++	std::cout<<"Standard-Settings are: mink(6), maxk(6), Seed(100), pValueTreshold(0.05), NumberOfMotifs(5)"<<std::endl;
++	while(true){
++		std::cout<<"Alter the Settings? (Y) (N)"<<std::endl;
++		std::cin>>setting;
++		if(setting =='Y' || setting=='N' ||setting =='y' ||setting =='n') break;
++		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
++	}
++	
++	if(setting=='Y' || setting =='y'){
++		std::cout<<"Enter in mink(should be >=3) "<<std::endl;
++		std::cin>>kmer_len;
++		std::cout<<"Enter in maxk(a value>8 could slow down the program) "<<std::endl;
++		std::cin>>kmer_len_end;
++		std::cout<<"Enter in Seed(100) "<<std::endl;
++		std::cin>>sequences.seed;
++		std::cout<<"Enter in pValueTreshold(0.05) "<<std::endl;
++		std::cin>>sequences.treshold;
++		std::cout<<"Enter in NumberOfMotifs(5) "<<std::endl;
++		std::cin>>sequences.NumberOfMotifs;
++		++sequences.NumberOfMotifs;
++
++
++	}
++
++	else{
++		kmer_len=6;
++		kmer_len_end=6;
++		sequences.seed=100;
++		sequences.treshold=0.05;
++		sequences.NumberOfMotifs=6;
++		
++	}
++	bool save=false;
++	while(true){
++		std::cout<<"Save the data (PWMs) to a file? (Y) (N)"<<std::endl;//path hardcoded--> ToDo
++		std::cin>>setting;
++		if(setting =='Y' || setting=='y'){
++			save=true;
++			break;
++		}
++		else if(setting =='N' ||setting =='n') break;
++		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
++	}
++	bool clusterData=false;
++	while(true){
++		std::cout<<"Should the data be clustered? (Y)(N)"<<std::endl;
++		std::cin>>setting;
++		if(setting =='Y' || setting=='y'){
++			clusterData=true;
++			break;
++		}
++		else if(setting =='N' ||setting =='n') break;
++		std::cout<<"**** ERROR: MUST BE Y OR N ****"<<std::endl;
++
++	}
++}
+ 
+ /***
+ 	Berechnet relative Hintergrund-Wahrscheinlichkeit von ACGT

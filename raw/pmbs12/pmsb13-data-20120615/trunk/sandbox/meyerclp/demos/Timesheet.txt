@@ -1,0 +1,30 @@
+25.-26.04:	Einlesen der FastA-Dateien, Erstellung vom Index
+26.-27.04:	Erstellen der Funktionen: InitGeneralizeKmer und des FisherExactTests,
+			sowie die dafür benötigten Hilfsfunktionen logFactorial und MapIupac.
+			Einige Print-Funktionen zum testen, sowie der erste Schritt des Generalisierends.
+28.-30.04: 	Mehrere Print und Debug-Funktionen
+30.04	 :	Treffen in der Charite
+30.-31.04:	Einarbeiten ins Seqan-Testen
+04.-08.05:	Test-Funktionen, dafür Auslagerung der Funktionen in den Header. Vollständige 
+			Generalisierung und exakte Suche der Top100(mit dem geringsten pValue)
+09.05	 :	BuildFrequencyMatrix für erste Ausgabe auf der Kommandozeile.
+10.05	 :	Treffen in der Charite
+10.-11.05:	Beheben des Problems, dass nur Motive mit einer Wildcard erstellt werden,
+			sowie Optimierung der Generalisierung
+13.05	 :	Korrektur der initGeneralize-Test-Funktion und Erstellen eines Tests für modifyFET.
+			Erstellen der Funktion exactGeneralizeCount und Beschleunigung der Heuristik, 
+			indem nur noch dann der Counter geschätzt wird, wenn beide notwendigen Strings einen pValue < treshold besitzen
+14.05	 :	Überarbeitung des Codes, sodass jetzt die meisten Parameter über das Struct übergeben werden
+15.05	 :	Anpassen der Tests, sowie Aufteilung und Anpassung der CountKmer-Funktion, sodass nun auch Motive mit mehr als 
+			einer Wildcard gesucht werden.
+16.05	 :	While-loop für die Suche nach mehr als einem Top-Motiv. Problem beim replacen nach Besprechung mit Manuel behoben.
+			-->speichert replace-Positions nun erst in einem String<unsigned int> und ersetzt sie nach der BuildFrequencyMatrix-Funktion
+			--> danach Neu-Aufbau des Index
+			Erster kompletter Durchlauf des Algorithmus möglich. Momentan wird als zweites Motiv(auf meinem Datensatz) jedoch TTTW ausgegeben, 
+			wobei für W eine 100%Wahrscheinlichkeit für T besteht.
+21.05	  :	Beheben kleinerer Fehler, schreiben eines Pseudo-Codes
+22.-23.05 : Speicher-Optimierung, Shuffeln der Eingabe-Sequenzen für den Background. Laufzeit-Optimierung des FET.  Testlauf auf echten Datensatz.
+			-->Testlauf bricht nach erstem generalisierem ab, da kein Kmer einen pValue<treshold hat --> möglicherweise zu geringes shufflen, da Tests weiterhin korrekt
+			arbeiten.
+			Schreiben des Berichts.
+24.-25.05 : Einarbeiten in Latex und schreiben des Berichts. Testen des Programms auf GalGal13 Datensatz.

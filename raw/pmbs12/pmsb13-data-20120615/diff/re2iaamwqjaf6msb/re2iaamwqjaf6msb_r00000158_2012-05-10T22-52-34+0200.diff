@@ -1,0 +1,73 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 22:42:42.528945900 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 22:52:32.153419800 +0200
+@@ -1,26 +1,52 @@
+ #include <iostream>
+-#include <fstream>
++#include <seqan/sequence.h>
++#include "../../../core/apps/stellar/stellar.h"
++#include "../../../core/apps/stellar/stellar_types.h"
++#include "../../../core/apps/stellar/stellar_extension.h"
++#include "../../../core/apps/stellar/stellar_output.h"
+ 
+-#include <seqan/basic.h>
+-#include <seqan/file.h>
++using namespace seqan;
+ 
+-#include <seqan/stream.h>
++template<typename TSequence>
++void stellar_find_matches(TSequence & file1, TSequence & file2) {
++	double epsilon = 0.01;
++	unsigned minLength = 20;
++	unsigned xDrop = 2;
++	typedef String<char> TId;
++	
++	unsigned maxValue = (unsigned)-1;
++    unsigned compactThresh = 1000;
++    TId id = "db";
+ 
+-using namespace seqan;
++	 // container for eps-matches
++    StringSet<QueryMatches<StellarMatch<TSequence, TId> > > matches;
++    //resize(matches, length(queries));
++
++
++	//typedef Index<StringSet<TSequence, Dependent<> >, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
++    //TQGramIndex qgramIndex(queries);
++    //Pattern<TQGramIndex, Swift<SwiftLocal> > swiftPattern(qgramIndex);
++
++	typedef Finder<TSequence, Swift<SwiftLocal> > TFinder;
++    TFinder swiftFinder(file1, 1000, 1);
++
++	// pattern
++	typedef Index<StringSet<TSequence, Dependent<> >, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
++    typedef Pattern<TQGramIndex, Swift<SwiftLocal> > TPattern;
++	TPattern swiftPattern(file2);
++
++	//Tmatches matches;
++
++	stellar(swiftFinder, swiftPattern, epsilon, minLength, xDrop, matches, AllLocal());
+ 
+-int main()
+-{
+-	 char const * filename = "test1.fasta";
++}
+ 
+-	 std::ifstream fasta(toCString(filename), std::ios_base::in | std::ios_base::binary);
+-    if (!fasta.good())
+-        return 1;
+-    RecordReader<std::ifstream, SinglePass<> > reader(fasta);
++int main() {
+ 
+-	CharString id;
+-    Dna5String seq;
++	typedef String<Dna5> TSequence;
++	TSequence file1 = "AGTTGTTAGTCTACGTGGACCGACAAAGACAGATTCTTTGAGGGAGCTAAGCTCAACGTAGTTCTAACAG";
++	TSequence file2 = "AGTTGTTAGTAAACGTGGACCGACAAAGACAGATTCTTTTTGGGAGCTAAGCTCAACGTAGTTCAAACAG";
+ 
+-	readRecord(id, seq, reader, Fasta());
++	stellar_find_matches(file1,file2);
+ 
+-	std::cout << id << "\t" << seq << "\n";
+ }
+\ No newline at end of file

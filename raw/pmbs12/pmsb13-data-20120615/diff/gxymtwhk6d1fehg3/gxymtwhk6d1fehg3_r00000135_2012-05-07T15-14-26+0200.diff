@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-07 15:09:33.162740000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-07 15:14:30.064595000 +0200
+@@ -341,7 +341,7 @@
+ 			std::cout << position(forwardFinder)<< std::endl;
+ 			if ((length(cuttedPattern)) == (length(pattern)-1)){
+ 				std::cout << "found at " << position(forwardFinder) << std::endl;
+-			}else if (verify ( text , rightHalf , cutPos + i +1)){
++			}else if (verify ( text , rightHalf , length(pattern)- cutPos +i )){
+ 				std::cout << "found at " << position(forwardFinder) << std::endl;
+ 			}
+ 		}

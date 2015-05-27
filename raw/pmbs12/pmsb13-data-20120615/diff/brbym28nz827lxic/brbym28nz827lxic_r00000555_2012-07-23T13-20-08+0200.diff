@@ -1,0 +1,35 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 13:19:04.017806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 13:20:06.749806800 +0200
+@@ -191,8 +191,8 @@
+ 		***/
+ 	
+ 		
+-		freqMatrix.clear();
+-		freqMatrixB.clear();
++		sequences.freqMatrix.clear();
++		background.freqMatrix.clear();
+ 		//std::cout<<"first "<<(*sequences.generalizedSortedPValue.begin()).first<<std::endl;
+ 		/*****
+ 			- Computes the probability of each nucleotide to appear at each position (from the top motif)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 13:19:04.035806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 13:20:06.764806800 +0200
+@@ -609,7 +609,7 @@
+ 
+ 				}
+ 			else
+-				freqMatrix.clear();
++				seq.freqMatrix.clear();
+ 				
+ 				
+ 				
+@@ -671,7 +671,7 @@
+ 	else
+ 		std::cout<<"background: "<<std::endl;
+ 	for(unsigned int j=0;j<length(seq.freqMatrix);++j){
+-				freq=freqMatrix[j];
++				freq=seq.freqMatrix[j];
+ 				std::cout<<"Position: "<<j<<" A: "<<freq['A']<<std::endl;
+ 				std::cout<<"Position: "<<j<<" C: "<<freq['C']<<std::endl;
+ 				std::cout<<"Position: "<<j<<" G: "<<freq['G']<<std::endl;

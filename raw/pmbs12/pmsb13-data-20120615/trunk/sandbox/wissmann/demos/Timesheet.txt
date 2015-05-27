@@ -1,0 +1,21 @@
+02.05-04.05	Erstellung des Suffixarrays, Erstellung der BWT, exakte Suche in der BWT
+		allerdings verworfen, da ESa-Index nicht verwendet worden war
+
+07.05 Mo	Erstellung des ESa-Index mitsamt entsprechenden Finder
+		Implementierung der Vorwärts-Index Suche mit direkter Überprüfung im Text (gut für wenige Treffer des Patterns)
+
+08.05 Di	Implentierung der Rückwärts-Index Suche mit direkter Textüberprüfung
+		Damit Implentierung des Doppelindex mit direkter Textüberprüfung abgeschlossen
+
+09.05 Mi	erster Entwurf der Vorwärtssuche mit Backtracking-Überprüfung (gut für viele Treffer des Patterns)
+		Fehler da, Backtracking nicht effizient mit Finder umsetzbar ist
+
+10.05 Do	Erstellung eines Index-Iterators für das Backtracking
+		Umschreiben der Backtracking-Überprüfung auf den Iterator (statt Finder)
+
+11.05 Fr	Implentierung des Doppelindex mit Backtracking-Überprüfung (beide Richtungen)
+		Ergebnis zum Teil fehlerhaft (fehlen Treffer), da Iterator machmal unerwartetes Verhalten zeigt
+
+14.05 Mo	Korrektur und Fertigstellung der Backtracking-Überprüfung
+		gelegentliche kleine Fehler in Rückwärtsrichtung des Backtrackings
+		

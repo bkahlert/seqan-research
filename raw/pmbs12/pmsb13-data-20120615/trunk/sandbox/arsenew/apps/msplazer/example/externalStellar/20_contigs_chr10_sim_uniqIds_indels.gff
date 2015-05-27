@@ -1,0 +1,8 @@
+Global breakpoints found on best MSplazerChains sorted according to genome Ids
+Database file: chr10.fa
+StartSeqId	Label	SV type	sPos	sPos	.	+/-	.	Tags:ID=i;size=(-)indel;EndSeqId=;EndSeqPos=;EndSeqStrand=;Support=;SupportIds=;
+10	MSplazer	insertion	68745	68745	.	+	.	ID=0;size=-1;seq=T;support=1;supportIds=contig=6|group=6|reads=9|start=58648|end=58834|type=Shadow/SemiAligned_11,
+10	MSplazer	deletion	97279	97279	.	+	.	ID=1;size=1;support=1;supportIds=contig=9|group=8|reads=12|start=87206|end=87354|type=Shadow/SemiAligned_17,
+10	MSplazer	deletion	111748	111749	.	+	.	ID=2;size=2;support=1;supportIds=contig=11|group=9|reads=2|start=101731|end=102056|type=Shadow/SemiAligned_21,
+10	MSplazer	deletion	111963	111963	.	+	.	ID=3;size=1;support=1;supportIds=contig=12|group=10|reads=14|start=101964|end=102149|type=Shadow/SemiAligned_23,
+10	MSplazer	deletion	141483	141484	.	+	.	ID=4;size=2;support=1;supportIds=contig=20|group=18|reads=2|start=131469|end=135168|type=Shadow/SemiAligned_39,

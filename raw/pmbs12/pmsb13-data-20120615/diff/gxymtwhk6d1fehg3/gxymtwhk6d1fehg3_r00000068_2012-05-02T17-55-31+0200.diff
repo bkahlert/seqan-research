@@ -1,0 +1,74 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-02 17:43:08.713627000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-02 17:55:06.929719000 +0200
+@@ -59,21 +59,31 @@
+ 
+ int main() {
+ 	String<char> text = "GTATACACAGATAGT$";
++	String<char> rText;
+ 	String<char> pattern = "TA";
+ 	String<unsigned> sa;
++	String<unsigned> rSa;
+ 	String<unsigned> cAlpha;
+ 	String<char> bwt;
++	String<char> rBwt;
+ 	String<unsigned> occurence$;
+ 	String<unsigned> occurenceA;
+ 	String<unsigned> occurenceC;
+ 	String<unsigned> occurenceG;
+ 	String<unsigned> occurenceT;
++	String<unsigned> rOccurence$;
++	String<unsigned> rOccurenceA;
++	String<unsigned> rOccurenceC;
++	String<unsigned> rOccurenceG;
++	String<unsigned> rOccurenceT;
+ 	unsigned a;
+ 	unsigned b;
+ 
+ 
+ 	resize(sa, length(text));
+ 	resize(bwt, length(text));
++	resize(rBwt, length(text));
++	resize(rText, length(text));
+ 	resize(cAlpha, 5);
+ 	resize(occurence$, length(text)+1);
+ 	resize(occurenceA, length(text)+1);
+@@ -81,7 +91,10 @@
+ 	resize(occurenceG, length(text)+1);
+ 	resize(occurenceT, length(text)+1);
+ 
+-
++			//Invertierter Text
++	for (int i = 0; i< length(text) ; i++){
++		rtext[i] = text[length(text)-i];
++	}
+ 			//Die Tabelle cAlpha
+ 			//	erste  Spalte	: Anzahl der Zeichen kleiner als '$'
+ 			//	zweite Spalte	: Anzahl der Zeichen kleiner als 'A'
+@@ -117,7 +130,12 @@
+ 	for ( int i = 0 ; i<length(sa) ; i++){
+ 		std::cout << sa[i]+1 << " ";
+ 	}
+-
++			//Erstellung des invertierten SuffixArrays rSa
++	createSuffixArray(rSa, rText, Skew7());
++			//AUSGABE des invertierten SuffixArrays
++	for ( int i = 0 ; i<length(rSa) ; i++){
++		std::cout << rSa[i]+1 << " ";
++	}
+ 	std::cout << std::endl;
+ 			//Erstellung der BWT
+ 	createBWTable ( bwt, text, sa );
+@@ -125,6 +143,12 @@
+ 	for ( int i = 0 ; i<length(bwt) ; i++){
+ 		std::cout << bwt[i] << " ";
+ 	}
++			//Erstellung der BWT des invertierten Textes
++	createBWTable ( rBwt, rText, rSa );
++			//AUSGABE BWT des invertierten Textes
++	for ( int i = 0 ; i<length(rBwt) ; i++){
++		std::cout << rBwt[i] << " ";
++	}
+ 
+ 	std::cout << std::endl;
+ 

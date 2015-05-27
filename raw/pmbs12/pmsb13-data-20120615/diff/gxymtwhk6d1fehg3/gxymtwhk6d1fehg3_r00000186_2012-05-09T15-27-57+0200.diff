@@ -1,0 +1,43 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-09 14:57:52.133505000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-09 15:27:55.208759000 +0200
+@@ -104,6 +104,10 @@
+ 	}
+ }
+ 
++char readPos (unsigned pos, string<char> mypattern){
++	return (mypattern[pos]);
++}
++
+ 
+ int main(){
+ 	
+@@ -122,11 +126,27 @@
+ 	BowTieIndex backwardIndex(rText);
+ 	BowTieFinder backwardFinder(backwardIndex);
+ 
+-	//textverification search
++	//direct text verification search:
+ 	exactSearch(forwardFinder);
+ 	forwardSearch(forwardFinder);
+ 	backwardSearch(backwardFinder);	
+ 
++	//reseting
++	clear(forwardFinder);
++	clear(backwardFinder);
++
++	//backtracking verification search:
++
++	cuttedPattern= pattern;
++	resize (cuttedPattern, cutPos + i);
++
++	while(find(forwardFinder,cuttedPattern)){
++		for (int i = 0; i < (patternLength- cutPos); i++){
++			//
++		}
++	}
++
++
+ 	return 0;
+ }
+ 

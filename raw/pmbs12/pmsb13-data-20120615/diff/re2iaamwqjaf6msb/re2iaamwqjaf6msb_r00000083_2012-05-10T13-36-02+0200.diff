@@ -1,0 +1,20 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 13:29:57.489818000 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 13:36:00.284027700 +0200
+@@ -15,6 +15,7 @@
+ void stellar_find_matches(TSequence & file1, TSequence & file2) {
+ 	unsigned epsilon = 0.01;
+ 	unsigned minLength = 20;
++	unsigned xDrop = 2;
+ 	typedef String<char> TId;
+ 	TId id = "db";
+ 	
+@@ -40,7 +41,7 @@
+ 
+ 	typedef String<Dna> TSequence;
+ 	TSequence file1 = "AGTTGTTAGTCTACGTGGACCGACAAAGACAGATTCTTTGAGGGAGCTAAGCTCAACGTAGTTCTAACAG";
+-	TSequence file2 = "AGTTATTAGTCTACGTGGACCGACAAAGAAAGATTCTTTGAGGGAGCTAAGCTCACAATAGTTCTAACAG";
++	TSequence file2 = "AGTTAATAGTCTACGTGGACCGACAAAGAAAGATTCTTTGAGGGAGCTAAGCTCACAATAGTTCTAACAG";
+ 
+ 	stellar_find_matches(file1,file2);
+ 

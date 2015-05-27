@@ -1,0 +1,59 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /media/disk/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/CMakeLists.txt ./CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/CMakeLists.txt	2012-04-10 16:33:40.000000000 +0200
++++ ./CMakeLists.txt	2012-04-11 09:56:23.000000000 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.8.3)
++cmake_minimum_required (VERSION 2.8.2)
+ 
+ # ===========================================================================
+ # Iff the file INST or SUA exists in the source root
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /media/disk/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/apps/CMakeLists.txt ./sandbox/wissmann/apps/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/apps/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/wissmann/apps/CMakeLists.txt	2012-04-11 09:53:59.000000000 +0200
+@@ -0,0 +1,6 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_wissmann_apps)
++
++seqan_setup_apps(sandbox_wissmann_apps)  # Add meta target and make executables depend on it.
++
++seqan_add_all_subdirectories()  # include_directory(*)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /media/disk/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/CMakeLists.txt ./sandbox/wissmann/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/wissmann/CMakeLists.txt	2012-04-11 09:53:59.000000000 +0200
+@@ -0,0 +1,11 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_wissmann)
++
++# We have to register our own include directory here, though.
++seqan_setup_includes(include SeqAnSandboxWissmann)
++# SeqAnCore is added include in ../core/CMakeLists.txt.  We only have to
++# register that we want it here, too.  Same for SeqAnExtras.
++seqan_make_seqan_available(SeqAnCore)
++seqan_make_seqan_available(SeqAnExtras)
++
++seqan_add_all_subdirectories()  # include_directory(*)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /media/disk/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/CMakeLists.txt ./sandbox/wissmann/demos/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/wissmann/demos/CMakeLists.txt	2012-04-11 09:53:59.000000000 +0200
+@@ -0,0 +1,6 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_wissmann_demos)
++
++seqan_setup_demos(sandbox_wissmann_demos)  # Add meta target and make executables depend on it.
++
++seqan_add_all_executables(sandbox_wissmann_demos)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /media/disk/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/wissmann_first.cpp ./sandbox/wissmann/demos/wissmann_first.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/wissmann_first.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/wissmann/demos/wissmann_first.cpp	2012-04-11 09:55:04.000000000 +0200
+@@ -0,0 +1 @@
++int main() { return 0; }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x /media/disk/Seqan/misc/seqan_instrumentation/userdata/htmxqbiaql5ugt3l_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x /media/disk/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /media/disk/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /media/disk/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/tests/CMakeLists.txt ./sandbox/wissmann/tests/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/tests/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/wissmann/tests/CMakeLists.txt	2012-04-11 09:53:59.000000000 +0200
+@@ -0,0 +1,6 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_wissmann_tests)
++
++seqan_setup_tests(sandbox_wissmann_tests)  # Setup flags etc, add meta target.
++
++seqan_add_all_subdirectories()  # include_directory(*)

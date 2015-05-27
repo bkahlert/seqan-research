@@ -1,0 +1,14 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/wtg1fr816tg4hs6w_stats.txt -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/userdata/wtg1fr816tg4hs6w_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/bkahlert/apps/tutorial_basics/tutorial_basics.h ./sandbox/bkahlert/apps/tutorial_basics/tutorial_basics.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/bkahlert/apps/tutorial_basics/tutorial_basics.h	2012-04-11 09:45:50.000000000 +0200
++++ ./sandbox/bkahlert/apps/tutorial_basics/tutorial_basics.h	2012-04-11 10:40:35.000000000 +0200
+@@ -88,8 +88,8 @@
+     addUsageLine(parser, "[OPTIONS] TEXT+");
+     
+ 	addSection(parser, "Main Options");
+-	addOption(parser, CommandLineOption("if",  "input-file",  "Input file.", OptionType::String | OptionType::Label, options.inputFileName));
+-	addOption(parser, CommandLineOption("of",  "output-file", "Output file.", OptionType::String | OptionType::Label, options.outputFileName));
++	//addOption(parser, CommandLineOption("if",  "input-file",  "Input file.", OptionType::String | OptionType::Label, options.inputFileName));
++	//addOption(parser, CommandLineOption("of",  "output-file", "Output file.", OptionType::String | OptionType::Label, options.outputFileName));
+     
+     requiredArguments(parser, 1);
+ }

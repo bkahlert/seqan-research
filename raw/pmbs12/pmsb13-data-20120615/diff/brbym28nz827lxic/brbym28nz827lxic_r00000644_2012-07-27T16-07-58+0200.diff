@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-27 15:46:10.583986000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-27 16:07:56.069986000 +0200
+@@ -128,7 +128,7 @@
+ void ComparePWM(Seq &seq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2, Entropy const & tag);
+ void ComparePWM(Seq &seq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2, Euklidisch const & tag);
+ void PWMClustering(Seq &seq);
+-void UpdatePWMMatrix(int n, int x, int y, std::vector<std::vector<double> > compare);
++void UpdatePWMMatrix(int n, int x, int y, std::vector<std::vector<double> > &compare);
+ void minDifferenceInMatrix(unsigned n,String<double> &minDifference,std::vector<std::vector<double> > compare);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ void saveData(Seq &seq,std::ofstream &PWM);
+@@ -838,7 +838,7 @@
+ 
+ }
+ 
+-void UpdatePWMMatrix(int n, int x, int y, std::vector<std::vector<double> > compare){
++void UpdatePWMMatrix(int n, int x, int y, std::vector<std::vector<double> > &compare){
+ 
+ 	/****
+ 			Updates the distance with Complete Linkage

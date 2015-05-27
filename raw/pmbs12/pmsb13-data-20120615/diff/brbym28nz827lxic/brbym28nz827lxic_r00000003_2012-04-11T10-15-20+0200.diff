@@ -1,0 +1,51 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/CMakeLists.txt ./sandbox/meyerclp/apps/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/apps/CMakeLists.txt	2012-04-11 10:14:16.388207900 +0200
+@@ -0,0 +1,6 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_meyerclp_apps)
++
++seqan_setup_apps(sandbox_meyerclp_apps)  # Add meta target and make executables depend on it.
++
++seqan_add_all_subdirectories()  # include_directory(*)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/CMakeLists.txt ./sandbox/meyerclp/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/CMakeLists.txt	2012-04-11 10:14:16.374207900 +0200
+@@ -0,0 +1,11 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_meyerclp)
++
++# We have to register our own include directory here, though.
++seqan_setup_includes(include SeqAnSandboxMeyerclp)
++# SeqAnCore is added include in ../core/CMakeLists.txt.  We only have to
++# register that we want it here, too.  Same for SeqAnExtras.
++seqan_make_seqan_available(SeqAnCore)
++seqan_make_seqan_available(SeqAnExtras)
++
++seqan_add_all_subdirectories()  # include_directory(*)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/CMakeLists.txt ./sandbox/meyerclp/demos/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/demos/CMakeLists.txt	2012-04-11 10:14:16.431207900 +0200
+@@ -0,0 +1,6 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_meyerclp_demos)
++
++seqan_setup_demos(sandbox_meyerclp_demos)  # Add meta target and make executables depend on it.
++
++seqan_add_all_executables(sandbox_meyerclp_demos)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/meyerclp_first.cpp.txt ./sandbox/meyerclp/demos/meyerclp_first.cpp.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/meyerclp_first.cpp.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/demos/meyerclp_first.cpp.txt	2012-04-11 10:15:56.869207900 +0200
+@@ -0,0 +1 @@
++int main() { return 0; }
+\ No newline at end of file
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/tests/CMakeLists.txt ./sandbox/meyerclp/tests/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/tests/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/meyerclp/tests/CMakeLists.txt	2012-04-11 10:14:16.401207900 +0200
+@@ -0,0 +1,6 @@
++cmake_minimum_required (VERSION 2.6)
++project (seqan_sandbox_meyerclp_tests)
++
++seqan_setup_tests(sandbox_meyerclp_tests)  # Setup flags etc, add meta target.
++
++seqan_add_all_subdirectories()  # include_directory(*)

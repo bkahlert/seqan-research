@@ -1,0 +1,37 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-03 11:56:39.874198400 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-03 12:06:52.214198400 +0200
+@@ -6,6 +6,7 @@
+ #include <map>
+ #include <vector>
+ #include <math.h>
++#include <stdlib.h>
+ #include <seqan/basic.h>
+ #include <seqan/file.h>
+ #include <seqan/find.h>
+@@ -21,7 +22,7 @@
+ struct Seq
+ {
+ 	StringSet<CharString> ids;
+-	unsigned c; // Anzahl der Motive, provisorisch
++	int c; // Anzahl der Motive, provisorisch
+ 	StringSet<String<Dna5> > seqs;//
+ 	Index< StringSet<String<Dna5> > > SArray;
+ 	unsigned seed;
+@@ -734,14 +735,14 @@
+ 
+ }
+ 
+-void saveData(Seq &seq,std::ofstream &PWM,unsigned c){
++void saveData(Seq &seq,std::ofstream &PWM,int c){
+ 
+ 	String<char> pwm;
+ 	char *buffer= new char[33];
+ 	append(pwm,"PWM");
+ 	append(pwm,itoa(c,buffer,10));
+ 	append(pwm,buffer);
+-	std::cout<<toCString(pwm);
++	
+ 	PWM.open(toCString(pwm),std::ios::out|std::ios::app);
+ 	
+ 	for(unsigned i=0;i<length(seq.freqMatrix);++i){

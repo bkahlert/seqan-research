@@ -1,0 +1,30 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-17 13:57:59.707402300 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-17 14:02:13.417402300 +0200
+@@ -54,9 +54,10 @@
+ 	resize(sequences.intervals, sequences.SeqsNumber);
+ 	resize(background.intervals, background.SeqsNumber);
+ 	resize(sequences.intervalTrees, sequences.SeqsNumber);
++	resize(background.intervalTrees, background.SeqsNumber);
+ 
+ 	sequences.c=1;
+-	background.c=0;
++	background.c=1;
+ 	initST(sequences);
+ 	initST(background);
+ 
+@@ -175,9 +176,13 @@
+ 		for(unsigned s=0;s<sequences.SeqsNumber;++s){
+ 			createIntervalTree(sequences.intervalTrees[s], sequences.intervals[s]);
+ 		}
++		for(unsigned b=0;b<background.SeqsNumber;++b){
++			createIntervalTree(background.intervalTrees[b], background.intervals[b]);
++		}
+ 	}
+ 
+-	
++	clear(sequences.intervals);
++	clear(background.intervals);
+ 
+ 	++sequences.c;
+ 	}

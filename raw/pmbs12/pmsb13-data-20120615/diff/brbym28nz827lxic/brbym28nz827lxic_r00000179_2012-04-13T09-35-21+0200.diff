@@ -1,0 +1,19 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Graphs.cpp ./sandbox/meyerclp/demos/Graphs.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Graphs.cpp	2012-04-13 09:32:36.975799200 +0200
++++ ./sandbox/meyerclp/demos/Graphs.cpp	2012-04-13 09:35:20.107799200 +0200
+@@ -11,10 +11,10 @@
+ 	TGraph g;
+ 	TVertexDescriptor edges[]={1,0,0,4,2,1,4,1,5,1,6,2,3,2,2,3,7,3,5,4,6,5,5,6,7,6,7,7};
+ 	addEdges(g,edges,14);
+-	FILE* strmWrite = fopen("graph.dot", "w");
+-    write(strmWrite, g, DotDrawing());
+-    fclose(strmWrite);
+-
++	//FILE* strmWrite = fopen("graph.dot", "w");
++ //   write(strmWrite, g, DotDrawing());
++ //   fclose(strmWrite);
++	::std::cout << g << ::std::endl
+ 	return 0;
+ 
+ }
+\ No newline at end of file

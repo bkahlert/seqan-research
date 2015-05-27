@@ -1,0 +1,28 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x core -x extras -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/ChIPSeq.cpp ./sandbox/meyerclp/demos/ChIPSeq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/ChIPSeq.cpp	2012-04-17 17:04:15.773405700 +0200
++++ ./sandbox/meyerclp/demos/ChIPSeq.cpp	2012-04-17 17:05:00.157405700 +0200
+@@ -49,18 +49,18 @@
+ 				return 1;
+ 	}
+ 			
+-	/*typedef Iterator<StringSet<CharString>, Rooted>::Type TIdIter;
+-	typedef Iterator<StringSet<String<Dna5Q> >, Standard>::Type TSeqIter;*/
+-	/*TIdIter idIt =begin(ids, Rooted());
+-	TSeqIter seqIt=begin(seqs, Standard());*/
++	typedef Iterator<StringSet<CharString>, Rooted>::Type TIdIter;
++	typedef Iterator<StringSet<String<Dna5Q> >, Standard>::Type TSeqIter;
++	TIdIter idIt =begin(ids, Rooted());
++	TSeqIter seqIt=begin(seqs, Standard());
+ 	
+-	/*for(;!atEnd(idIt);++idIt,++seqIt){
++	for(;!atEnd(idIt);++idIt,++seqIt){
+ 
+ 		
+ 		std::cout<<*idIt<<'\t'<<*seqIt<<std::endl;
+ 
+ 	}
+-*/
++
+ 	//Index<Dna5String> index(seq);
+ 	//Dna5String needle = "A";
+ 	//Finder<Index<Dna5String> > finder(index);

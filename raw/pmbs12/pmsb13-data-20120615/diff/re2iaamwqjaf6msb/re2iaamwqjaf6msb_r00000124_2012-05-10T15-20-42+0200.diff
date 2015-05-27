@@ -1,0 +1,39 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 15:18:02.859452800 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 15:20:40.243587000 +0200
+@@ -5,12 +5,10 @@
+ #include "../../../core/apps/stellar/stellar_extension.h"
+ #include "../../../core/apps/stellar/stellar_output.h"
+ #include <seqan/align.h>
+-#include <iostream>
+ #include <seqan/index.h>
+ #include <seqan/seeds2.h>
+ 
+ #include <fstream>
+-#include <iostream>
+ 
+ #include <seqan/basic.h>
+ #include <seqan/file.h>
+@@ -56,7 +54,7 @@
+ int main() {
+ 
+ 	typedef String<Dna5> TSequence;
+-	const char * file1 = "test1.fasta";
++	const char * file1 = "examples\test1.fasta";
+ 	String<char> file2 = "test2.fasta";
+ 
+ 	std::fstream fasta(file1, std::ios_base::in | std::ios_base::binary);
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/test1.fasta ./sandbox/jennyann/apps/segmentaligner/test1.fasta
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/test1.fasta	2012-05-10 14:05:12.695399100 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/test1.fasta	1970-01-01 01:00:00.000000000 +0100
+@@ -1,2 +0,0 @@
+->gi|158976983|ref|NC_001474.2| Dengue virus type 2, complete genome
+-AGTTGTTAGTCTACGTGGACCGACAAAGACAGATTCTTTGAGGGAGCTAAGCTCAACGTAGTTCTAACAG
+\ No newline at end of file
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/test2.fasta ./sandbox/jennyann/apps/segmentaligner/test2.fasta
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/test2.fasta	2012-05-10 14:07:10.550349900 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/test2.fasta	1970-01-01 01:00:00.000000000 +0100
+@@ -1,2 +0,0 @@
+->gi|9626685|ref|NC_001477.1| Dengue virus type 1, complete genome
+-AGTTGTTAGAATACGTGGACCGACAAAGACAGTTTCTTTGAGGGAGCTAAGCTCAATTTAGTTCTAACAG
+\ No newline at end of file

@@ -1,0 +1,197 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-13 16:41:38.156389500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-14 14:49:46.761399400 +0200
+@@ -78,6 +78,8 @@
+ void estimateCounter(Seq &seq,String<Iupac> temp,String<Iupac> temp2,unsigned int &counter);
+ void estimateCounter(Seq &seq,std::map<String<Iupac>,unsigned int> &generalizedKmer,String<Iupac> temp,String<Iupac> temp2,unsigned int &counter);
+ void exactGeneralizeCount(std::multimap<double,String<Iupac> > &SortedPValueG,std::map<String<Iupac>,unsigned int > &seqCounter,std::map<String<Iupac>,unsigned int > &backCounter,Finder<Index<StringSet<String<Dna5> > > > &finder,Finder<Index<StringSet<String<Dna5> > > > &finderB,Seq &seq, Seq &back,IupacMaps &IMap);
++void FindTopKmer(Seq &seq,String<Iupac> &temp,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,String<unsigned int> &replaceString);
++void loopOverTopKmer(	Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,unsigned int &pos,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap,std::map<Iupac,double> &freq,String<unsigned int> &replaceString);
+ void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,std::map<String<Iupac>,unsigned int > &seqCounter, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps,String<unsigned int> &replaceString);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ 
+@@ -388,8 +390,84 @@
+ 
+ }
+ 
+-void BuildFrequencyMatrix(  std::map<unsigned int,
+-							std::map<Iupac,double> > &freqMatrix,
++
++///////////////////////////////////
++void FindTopKmer(Seq &seq,
++				String<Iupac> &temp,
++				Finder<Index<StringSet<String<Dna5> > > > &finder,
++				unsigned int &counter,
++				std::vector<int> &CounterV,
++				String<unsigned int> &replaceString){
++
++	clear(finder);
++	std::cout<<temp<<" vor-while"<<std::endl;
++	while(find(finder,temp)){//search the current Kmer in all sequences
++		//std::cout<<" "<<temp<<" "<<Kmer<<" "<<*replaceIt<<std::endl;
++		//std::cout<<'[' <<beginPosition(finder)<<','<<endPosition(finder)<<")\t"<<infix(finder)<<std::endl;//Debug
++		//replaceKmer(seq,beginPosition(finder).i1, beginPosition(finder).i2, endPosition(finder).i2);
++		std::cout<<temp<<" while"<<std::endl;
++		appendValue(replaceString,beginPosition(finder).i1);
++		appendValue(replaceString,beginPosition(finder).i2);
++		appendValue(replaceString,endPosition(finder).i2);
++		if(CounterV[beginPosition(finder).i1] == 0){//count number of sequences containing the motif, not the occurrences to avoid problems with self-overlapping
++			++CounterV[beginPosition(finder).i1];
++			++CounterV[seq.SeqsNumber];//last Position in CounterV is cumulated sum
++			++counter;
++		}
++			
++	}
++
++
++}
++
++
++
++void loopOverTopKmer(	Seq &seq,
++						String<Iupac> &temp,
++						String<Iupac> &Kmer,
++						unsigned int &pos,
++						Iterator<String<Iupac> >::Type &tempIt,
++						Finder<Index<StringSet<String<Dna5> > > > &finder,
++						unsigned int &counter,
++						std::vector<int> &CounterV,
++						IupacMaps &IMap,
++						std::map<Iupac,double> &freq,
++						String<unsigned int> &replaceString){
++
++						
++			String<Dna5> replace;
++			Iterator<String<Dna5> >::Type replaceIt;
++			Iterator<String<Iupac> >::Type tempIttemp;
++			unsigned int posTemp=0;
++
++
++			if(tempIt==end(temp)) return;//&&(tempIt+1!=end(temp))
++			freq[*tempIt]=1;
++			freqMatrix[pos]=freq;
++			freq.clear();
++				
++			if(*tempIt == 'A' || *tempIt == 'C' ||*tempIt == 'G' ||*tempIt == 'T') continue;//only replace the position with a wildcard
++				
++				//std::cout<<temp<<" "<<Kmer<<" "<<IupacMapReplaceReversed[*tempIt]<<" ";
++				replace=IMaps.IupacMapReplaceReversed[*tempIt];
++				replaceIt = begin(replace);	
++				for(;replaceIt!=end(replace);++replaceIt){
++					temp = Kmer;// reset temp
++					//std::cout<<" "<<temp<<" "<<Kmer<<" "<<*replaceIt<<std::endl;
++					*tempIt = *replaceIt;
++					tempIttemp=tempIt;//der rekursive aufruf mit diesem, da die schleife mit tempIt weitergehen soll
++					posTemp= pos;
++					if(tempIt+1!=end(temp)){
++						loopOverKmer(seq,temp,temp,++posTemp,++tempIttemp,finder,counter,CounterV,IMap,freq,replaceString);
++					}
++					FindTopKmer(seq,temp,finder,counter,CounterV,replaceString);
++}
++
++
++
++
++
++void BuildFrequencyMatrix(  std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,
+ 							std::map<String<Iupac>,unsigned int > &seqCounter,
+ 							Finder<Index<StringSet<String<Dna5> > > > &finder,
+ 							String<Iupac> &Kmer,
+@@ -399,78 +477,45 @@
+ 			//std::cout<<Kmer<<std::endl;
+ 			//freqMatrix -->unsigned int = position in Kmer, position 1 in map = prob. for A, pos. 2 = prob. for C...
+ 			String<Iupac> temp;	
+-			String<Dna5> replace;
++			
+ 			Iterator<String<Iupac> >::Type tempIt;
+-			Iterator<String<Dna5> >::Type replaceIt;
++			
+ 			temp=Kmer;
+ 			tempIt = begin(temp);
+ 			unsigned int counter=0;
+ 			unsigned int pos = 0;
+-			
++			std::vector<int> CounterV(seq.SeqsNumber+1,0);
+ 			std::map<Iupac,double> freq;//4= ACGT
+-			for(;tempIt!=end(temp);++tempIt,++pos){//loop over each position in kmer
+-				freq[*tempIt]=1;
+-				freqMatrix[pos]=freq;
+-				freq.clear();
+-				if(*tempIt == 'A' || *tempIt == 'C' ||*tempIt == 'G' ||*tempIt == 'T') continue;//only replace the position with a wildcard
+-				
+-				//std::cout<<temp<<" "<<Kmer<<" "<<IupacMapReplaceReversed[*tempIt]<<" ";
+-				replace=IMaps.IupacMapReplaceReversed[*tempIt];
+-				replaceIt = begin(replace);	
+-				for(;replaceIt!=end(replace);++replaceIt){
+-					std::vector<int> CounterV(seq.SeqsNumber+1,0);//counter for storing 1 or 0 for each Seq + the cumulated sum of the counter in the last field
+-					temp = Kmer;// reset temp
+-					//std::cout<<" "<<temp<<" "<<Kmer<<" "<<*replaceIt<<std::endl;
+-					*tempIt = *replaceIt;
+-					
+-
+-					//2vector für expression
+-					clear(finder);
+-					std::cout<<temp<<" vor-while"<<std::endl;
+-					while(find(finder,temp)){//search the current Kmer in all sequences
+-						//std::cout<<" "<<temp<<" "<<Kmer<<" "<<*replaceIt<<std::endl;
+-						//std::cout<<'[' <<beginPosition(finder)<<','<<endPosition(finder)<<")\t"<<infix(finder)<<std::endl;//Debug
+-						//replaceKmer(seq,beginPosition(finder).i1, beginPosition(finder).i2, endPosition(finder).i2);
+-						std::cout<<temp<<" while"<<std::endl;
+-						appendValue(replaceString,beginPosition(finder).i1);
+-						appendValue(replaceString,beginPosition(finder).i2);
+-						appendValue(replaceString,endPosition(finder).i2);
+-						if(CounterV[beginPosition(finder).i1] == 0){//count number of sequences containing the motif, not the occurrences to avoid problems with self-overlapping
+-							++CounterV[beginPosition(finder).i1];
+-							++CounterV[seq.SeqsNumber];//last Position in CounterV is cumulated sum
+-							++counter;
+-						}
+ 			
+-					}
+-					//Durch die wildcards mehrere Vorkommen pro Sequence möglich:
+-					seqCounter[temp]=CounterV[seq.SeqsNumber];
++			loopOverTopKmer(seq,temp,Kmer,pos,tempIt,finder,counter,CounterV,IMap,freq,replaceString);
++			
+ 					
+-					//std::cout<<temp<<" "<<*replaceIt<<" ";
+-					freq[*tempIt]=CounterV[seq.SeqsNumber];
++			//Durch die wildcards mehrere Vorkommen pro Sequence möglich:
++			seqCounter[temp]=CounterV[seq.SeqsNumber];
+ 					
++			//std::cout<<temp<<" "<<*replaceIt<<" ";
++			freq[*tempIt]=CounterV[seq.SeqsNumber];
+ 					
+-					CounterV.clear();
+-				}
+-				if(counter>0){
+-					std::cout<<freq['A']<< " "<<freq['C']<< " "<<freq['G']<< " "<<freq['T']<<" "<<counter<<std::endl;
++					
++			CounterV.clear();
++				
++			if(counter>0){
++				std::cout<<freq['A']<< " "<<freq['C']<< " "<<freq['G']<< " "<<freq['T']<<" "<<counter<<std::endl;
+ 				freq['A']=freq['A']/counter;
+ 				freq['C']=freq['C']/counter;
+ 				freq['G']=freq['G']/counter;
+ 				freq['T']=freq['T']/counter;
+ 				}
+-				else{
+-					std::cout<<freq['A']<< " "<<freq['C']<< " "<<freq['G']<< " "<<freq['T']<<" "<<counter<<std::endl;
+-					freqMatrix.clear();
++			else{
++				std::cout<<freq['A']<< " "<<freq['C']<< " "<<freq['G']<< " "<<freq['T']<<" "<<counter<<std::endl;
++				freqMatrix.clear();
+ 				}
+ 				freqMatrix[pos]=freq;
+ 				freq.clear();
+-			}
+-
+ 			
+-
+-				
+-
+ }
++//////////////////////////////////////
++
+ //FreqMatrix output
+ void PrintMap(  std::map<unsigned int,std::map<Iupac,double> > freqMatrix,
+ 				unsigned int Kmerlength,

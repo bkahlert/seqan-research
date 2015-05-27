@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-26 15:58:34.400002900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-26 15:59:47.705002900 +0200
+@@ -725,9 +725,9 @@
+ 	for (j = int(minDifference[2])+1; j < n-1; j++) compare[j][int(minDifference[2])] = compare[n-1][j];
+ 
+ 	SEQAN_ASSERT_EQ(compare[0][0],0);
+-	SEQAN_ASSERT_EQ(compare[1][0],2);
++	SEQAN_ASSERT_EQ(compare[1][0],4);
+ 	SEQAN_ASSERT_EQ(compare[1][1],0);
+-	SEQAN_ASSERT_EQ(compare[2][0],2);
++	SEQAN_ASSERT_EQ(compare[2][0],3);
+ 	SEQAN_ASSERT_EQ(compare[2][1],7);
+ 	SEQAN_ASSERT_EQ(compare[2][2],0);
+ 	SEQAN_ASSERT_EQ(compare[3][0],6);
+@@ -738,8 +738,8 @@
+ 			New Matrix:
+ 
+ 			0
+-			2	0
+-			2	7	0
++			4	0
++			3	7	0
+ 			6	9	6	0
+ 	*****/
+ 

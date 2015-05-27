@@ -1,0 +1,73 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-08 17:29:33.603201900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-08 17:36:37.641801900 +0200
+@@ -1046,42 +1046,51 @@
+ 			PWMLength = Länge der Motive
+ 
+ 	***/
+-	String<Dna> ACGT ="ACGT";
++	String< std::map<unsigned int,std::map<Iupac,double> > > Referenz;
++	std::map<unsigned int,std::map<Iupac,double> > ReferenzFreq;
++
++	String<Dna> ACGT;
+ 	int pos;
+ 	const int SEED = 7;
+ 	Rng<MersenneTwister> rng(SEED);
+-	Pdf<Uniform<int> > uniformInt(0, length(ACGT)-1);
+-	pos=pickRandomNumber(rng, uniformInt);
+-	std::cout<<ACGT[pos];
+-	erase(ACGT,pos);
+-	std::cout<<" Länge: "<<length(ACGT)<<" "<<ACGT;
+ 	
++
+ 	
++	//std::cout<<ACGT[pos];
+ 	
+-	Pdf<Uniform<double> > uniformDouble(0, 1);
++	//std::cout<<" Länge: "<<length(ACGT)<<" "<<ACGT;
+ 	
+-	std::cout<<"zufall: "<<pickRandomNumber(rng, uniformDouble);
++	
++	
++	
++	
++	//std::cout<<"zufall: "<<;
+ 	
+ 
+-	String< std::map<unsigned int,std::map<Iupac,double> > > Referenz;
+-
+-
+-	std::map<unsigned int,std::map<Iupac,double> > ReferenzFreq;
++	double uniDouble=0;
+ 	
+ 
+-	//for(unsigned i=0;i<allPWMsLength;++i){//genauso viele Referenz-Daten erstellen, wie PWMs vorhanden
+-	//	for(unsigned j=0;j<PWMLength;++j){
++	for(unsigned i=0;i<allPWMsLength;++i){//genauso viele Referenz-Daten erstellen, wie PWMs vorhanden
++		ACGT= ="ACGT";
++		for(unsigned j=0;j<PWMLength;++j){
++			Pdf<Uniform<int> > uniformInt(0, length(ACGT)-1);
++			
++			Pdf<Uniform<double> > uniformDouble(0, 0.99-uniDouble);
++			pos=pickRandomNumber(rng, uniformInt);
++			ReferenzFreq[j][ACGT[pos]]=pickRandomNumber(rng, uniformDouble);
++			uniDouble+=ReferenzFreq[j][ACGT[pos]];
++			erase(ACGT,pos);
+ 	//		ReferenzFreq[j]["zufallACGT"]="zufallvon 0 bis 0.99";
+ 	//		ReferenzFreq[j]["zufallACG"]="zufallvon 0 bis 1-[zufallACGT]";
+ 	//		ReferenzFreq[j]["zufallAC"]="zufallvon 0 bis 1-[zufallACGT]-[zufallACG]";
+ 	//		ReferenzFreq[j]["A"]="zufallvon 0 bis 1-[zufallACGT]-[zufallACG]-[zufallAC]";
+ 
+-	//	} 
++		} 
+ 
+ 
+-	//	append(Referenz,ReferenzFreq);
+-	//	clear(ReferenzFreq);
+-	//}
++		append(Referenz,ReferenzFreq);
++		clear(ReferenzFreq);
++	}
+ 
+ 
+ 

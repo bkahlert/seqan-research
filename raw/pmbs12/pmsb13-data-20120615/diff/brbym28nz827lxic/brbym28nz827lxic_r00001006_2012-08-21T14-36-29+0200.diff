@@ -1,0 +1,54 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-21 14:30:32.127707000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-21 14:36:28.130707000 +0200
+@@ -257,7 +257,7 @@
+ 	String<int> traceback;
+ 	PWMClustering(sequences.allPWMs,cluster,traceback);
+ 	std::cout<<"ComputeGapStat"<<std::endl;
+-	clusterTraceback(sequences.allPWMs,traceback,computeGapStat(sequences.allPWMs,cluster));
++	clusterTraceback(sequences.allMotifs,traceback,computeGapStat(sequences.allPWMs,cluster));
+ 	
+ 	clear(cluster);
+ 	/***
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-21 14:30:32.144707000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-21 14:36:28.146707000 +0200
+@@ -172,7 +172,7 @@
+ void compute_l_quer(String<Cluster> &cluster, String<double> &l_quer_for_k,String<String<double> > &allWk,unsigned i,int B,	unsigned allPWMsLength);
+ void computeGap(String<double> &l_quer_for_k,String<Cluster> &observedCluster,String<double> &Gap,unsigned allPWMsLength);
+ void compute_sdk_and_sk(String<double> &sk,String<double> &l_quer_for_k,String<String<double> > &allWk,unsigned allPWMsLength,int B);
+-void clusterTraceback(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs,String<int> &traceback, unsigned j);
++void clusterTraceback(String<String<Iupac> > &allMotifs,String<int> &traceback, unsigned j);
+ 
+ 
+ void readFastA(	struct Seq &seq, 
+@@ -1142,7 +1142,7 @@
+ 			appendValue(allWk[i],cluster[j].Wk);
+ 			
+ 			l_quer_for_k[0]+=log(cluster[j].Wk)/B;
+-			std::cout<<l_quer_for_k[0]<<std::endl;
++			//std::cout<<l_quer_for_k[0]<<std::endl;
+ 
+ 			if(i==0){
+ 				l_quer_for_k[k]=log(cluster[j].Wk)/B;
+@@ -1286,7 +1286,7 @@
+ 
+ }
+ 
+-void clusterTraceback(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs,String<int> &traceback, unsigned j){
++void clusterTraceback(String<String<Iupac> > &allMotifs,String<int> &traceback, unsigned j){
+ 
+ 	Iterator<String<int> >::Type tracebackIt;
+ 	if(j==0){	
+@@ -1297,9 +1297,9 @@
+ 	unsigned o=0;
+ 	for(tracebackIt=begin(traceback);tracebackIt!=end(traceback) && o<j;++tracebackIt, ++o){
+ 
+-		std::cout<<*tracebackIt<<" ";
++		std::cout<<allMotifs[*tracebackIt]<<" ";
+ 		++tracebackIt;
+-		std::cout<<*tracebackIt<<std::endl;
++		std::cout<<allMotifs[*tracebackIt]<<std::endl;
+ 	}
+ 
+ }

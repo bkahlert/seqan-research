@@ -1,0 +1,520 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-05 18:07:48.788003600 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-06 13:58:40.255632000 +0200
+@@ -96,8 +96,8 @@
+ 
+ 	std::map<String<Iupac>,unsigned int > seqCounter;
+ 	std::map<String<Iupac>,unsigned int > backCounter;
+-	Finder<Index<StringSet<String<Dna5> > > > finder(sequences.SArray);
+-	Finder<Index<StringSet<String<Dna5> > > > finderB(background.SArray);//finder ins struct
++	Finder<Index<StringSet<String<Dna> > > > finder(sequences.SArray);
++	Finder<Index<StringSet<String<Dna> > > > finderB(background.SArray);//finder ins struct
+ 	
+ 	/*****
+ 		- gets the top 100(generalized) motifs and computes the exact counter and pValue
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-05 18:13:07.402203600 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-06 13:58:40.279632000 +0200
+@@ -20,17 +20,17 @@
+ {
+ 	StringSet<CharString> ids;
+ 	
+-	StringSet<String<Dna5> > seqs;//
+-	Index< StringSet<String<Dna5> > > SArray;
++	StringSet<String<Dna> > seqs;//
++	Index< StringSet<String<Dna> > > SArray;
+ 	
+ 	unsigned int SeqsNumber;
+ 	
+-	std::map<String<Dna5>,unsigned int > seqCounter;//maps the Sequence-Kmere to a Counter for the Sequence
++	std::map<String<Dna>,unsigned int > seqCounter;//maps the Sequence-Kmere to a Counter for the Sequence
+ 	std::map<String<Iupac>,unsigned int> generalizedKmer;
+ 
+ 	std::map<String<Iupac>,double > SortedPValueReversed;
+ 	
+-	std::multimap<double,String<Dna5> > SortedPValue;
++	std::multimap<double,String<Dna> > SortedPValue;
+ 	std::multimap<double,String<Iupac> > generalizedSortedPValue;
+ };
+ 
+@@ -39,7 +39,7 @@
+ 	std::map<unsigned int,char> IupacMap;
+ 	std::map<char,unsigned int> IupacMapReversed;
+ 	std::map<char,String<Iupac> > IupacMapReplace; //stores the replacement-chars
+-	std::map<char,String<Dna5> > IupacMapReplaceReversed;
++	std::map<char,String<Dna> > IupacMapReplaceReversed;
+ };
+ 
+ 
+@@ -49,15 +49,15 @@
+ void initST(Seq &seq);
+ void PrintST(Seq &seq);
+ void initExactKmer(Seq &seq,Seq &back,unsigned int kmer_len,unsigned int kmer_len_end);
+-void CountKmer(Seq &seq, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Dna5> &Kmer);
++void CountKmer(Seq &seq, Finder<Index<StringSet<String<Dna> > > > &finder, String<Dna> &Kmer);
+ void CountKmer(std::map<String<Iupac>,unsigned int > &Dna5CounterMap, Finder<Index<StringSet<String<Iupac> > > > &finder, String<Iupac> &Kmer,Seq &seq,IupacMaps &IMap);
+-void PrintMap(std::map<String<Dna5>,unsigned int > &Dna5CounterMap,unsigned int SeqsNumber);
++void PrintMap(std::map<String<Dna>,unsigned int > &Dna5CounterMap,unsigned int SeqsNumber);
+ void PrintMap(std::map<String<Iupac>,unsigned int > &Dna5CounterMap,unsigned int SeqsNumber);
+-void PrintMap(std::multimap<double,String<Dna5> > &pValueMap);
++void PrintMap(std::multimap<double,String<Dna> > &pValueMap);
+ void PrintMap(std::map<String<Iupac>,unsigned int> &generalizedKmer);
+ void PrintMap(std::map<unsigned int,std::map<Iupac,double> > freqMatrix,unsigned int Kmerlength,bool foreground);
+-void DebugMap(Seq &seq,Seq &back,std::map<String<Dna5>,unsigned int > &sequencesCounter,std::map<String<Dna5>,unsigned int > &backgroundCounter);
+-void DebugMultiMap(std::map<String<Dna5>,unsigned int > &sequencesCounter,std::multimap<double,String<Dna5> > &SortedPValue);
++void DebugMap(Seq &seq,Seq &back,std::map<String<Dna>,unsigned int > &sequencesCounter,std::map<String<Dna>,unsigned int > &backgroundCounter);
++void DebugMultiMap(std::map<String<Dna>,unsigned int > &sequencesCounter,std::multimap<double,String<Dna> > &SortedPValue);
+ double* logFac;
+ void logFactorial(unsigned int len);
+ double calcFET(unsigned int a,unsigned int b,unsigned int c,unsigned int d);
+@@ -66,19 +66,19 @@
+ void FisherExactTest(Seq &seq, Seq &back);
+ 
+ void FisherExactTest(std::map<String<Iupac>,unsigned int > &SequenceCounter,std::map<String<Iupac>,unsigned int > &BackgroundCounter, Seq &seq, Seq &back);
+-double FisherExactTest(Seq &seq, Seq &back,std::multimap<double,String<Dna5> > &GeneralizedSortedPValueTemp);
++double FisherExactTest(Seq &seq, Seq &back,std::multimap<double,String<Dna> > &GeneralizedSortedPValueTemp);
+ void MapIupac(IupacMaps &IMaps);
+ 
+ void InitGeneralization(IupacMaps &IMaps,Seq &seq, Seq &back);
+-void loopOverKmer(Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap);
+-void FindKmer(Seq &seq,String<Iupac> &temp,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV);
+-void GeneralizeKmer(String<Dna5> Kmer, IupacMaps &IMaps,Seq &seq, Seq &back);
++void loopOverKmer(Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap);
++void FindKmer(Seq &seq,String<Iupac> &temp,Finder<Index<StringSet<String<Dna> > > > &finder,unsigned int &counter,std::vector<int> &CounterV);
++void GeneralizeKmer(String<Dna> Kmer, IupacMaps &IMaps,Seq &seq, Seq &back);
+ void GeneralizeKmer(String<Iupac> Kmer,std::map<String<Iupac>,unsigned int> &generalizedKmerTemp,std::map<String<Iupac>,unsigned int> &generalizedKmerBackgroundTemp,IupacMaps &IMaps,Seq &seq, Seq &back);
+ 
+ void estimateCounter(Seq &seq,String<Iupac> temp,String<Iupac> temp2,unsigned int &counter);
+ void estimateCounter(Seq &seq,std::map<String<Iupac>,unsigned int> &generalizedKmer,String<Iupac> temp,String<Iupac> temp2,unsigned int &counter);
+-void exactGeneralizeCount(std::multimap<double,String<Iupac> > &SortedPValueG,std::map<String<Iupac>,unsigned int > &seqCounter,std::map<String<Iupac>,unsigned int > &backCounter,Finder<Index<StringSet<String<Dna5> > > > &finder,Finder<Index<StringSet<String<Dna5> > > > &finderB,Seq &seq, Seq &back,IupacMaps &IMap);
+-void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,std::map<String<Iupac>,unsigned int > &seqCounter, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps,String<unsigned int> &replaceString);
++void exactGeneralizeCount(std::multimap<double,String<Iupac> > &SortedPValueG,std::map<String<Iupac>,unsigned int > &seqCounter,std::map<String<Iupac>,unsigned int > &backCounter,Finder<Index<StringSet<String<Dna> > > > &finder,Finder<Index<StringSet<String<Dna> > > > &finderB,Seq &seq, Seq &back,IupacMaps &IMap);
++void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,std::map<String<Iupac>,unsigned int > &seqCounter, Finder<Index<StringSet<String<Dna> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps,String<unsigned int> &replaceString);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ 
+ 
+@@ -109,7 +109,7 @@
+ 
+ 
+ 	StringSet<CharString> ids;
+-	StringSet<String<Dna5> > seqs;//
++	StringSet<String<Dna> > seqs;//
+ 
+ 	if(read2(ids,seqs,reader,formatTag) !=0){
+ 				std::cerr<<"ERROR reading FASTA"<<std::endl;
+@@ -128,7 +128,7 @@
+ 	SEQAN_ASSERT_EQ(length(seq.ids), length(seq.seqs));
+ 
+ 	typedef Iterator<StringSet<CharString>, Rooted>::Type TIdIter;
+-	typedef Iterator<StringSet<String<Dna5> >, Standard>::Type TSeqIter;//Dna5Q
++	typedef Iterator<StringSet<String<Dna> >, Standard>::Type TSeqIter;//Dna5Q
+ 	TIdIter idIt =begin(seq.ids, Rooted());
+ 	TSeqIter seqIt=begin(seq.seqs, Standard());
+ 	for(;!atEnd(idIt);++idIt,++seqIt){
+@@ -148,7 +148,7 @@
+ 
+ void PrintST(Seq &seq){
+ 
+-	typedef Index<StringSet<String<Dna5> > > TMyIndex;//Dna5Q
++	typedef Index<StringSet<String<Dna> > > TMyIndex;//Dna5Q
+ 	Iterator<TMyIndex, BottomUp<> >::Type myIterator(seq.SArray);
+ 	for(;!atEnd(myIterator);++myIterator){
+ 		std::cout<<representative(myIterator)<<std::endl;
+@@ -162,9 +162,9 @@
+ 					unsigned int kmer_len,
+ 					unsigned int kmer_len_end){
+ 
+-	Finder<Index<StringSet<String<Dna5> > > > finder(seq.SArray);
+-	Finder<Index<StringSet<String<Dna5> > > > finderB(back.SArray);//finder background
+-	typedef Index< StringSet<String<Dna5> > > TMyIndex;
++	Finder<Index<StringSet<String<Dna> > > > finder(seq.SArray);
++	Finder<Index<StringSet<String<Dna> > > > finderB(back.SArray);//finder background
++	typedef Index< StringSet<String<Dna> > > TMyIndex;
+ 	//kmer_len= 3;//minimal kmer-length
+ 	//kmer_len_end=8;//maximal length
+ 	if(kmer_len<1) kmer_len=3;
+@@ -172,9 +172,9 @@
+ 	//std::cout<<"kmer: "<<kmer_len<<std::endl;
+ 	//std::cout<<"end: "<<kmer_len_end<<std::endl;
+ 
+-	typedef Iterator<StringSet<String<Dna5> > >::Type TStringSetIterator;
++	typedef Iterator<StringSet<String<Dna> > >::Type TStringSetIterator;
+ 	unsigned int slen=0;
+-	String<Dna5> Kmer;//current Kmer
++	String<Dna> Kmer;//current Kmer
+ 	
+ 
+ 	std::cout<<std::endl<<std::endl;
+@@ -196,7 +196,7 @@
+ 				//}
+ 				
+ 				if(seq.seqCounter.find(Kmer)!=seq.seqCounter.end()) continue;// if Kmer is in the Map -->nothing to do
+-	//			//Pattern<String<Dna5> > pattern(Kmer);
++	//			//Pattern<String<Dna> > pattern(Kmer);
+ 			//	std::cout<<"count";
+ 				CountKmer(back,finderB,Kmer);
+ 				CountKmer(seq,finder,Kmer);
+@@ -213,8 +213,8 @@
+ //gets the current Kmer and searches it in the index
+ //max(cumulated sum of the counter)=SeqsNumber --> counts number of sequences containing the motif
+ void CountKmer( Seq &seq, 
+-				Finder<Index<StringSet<String<Dna5> > > > &finder, 
+-				String<Dna5> &Kmer){
++				Finder<Index<StringSet<String<Dna> > > > &finder, 
++				String<Dna> &Kmer){
+ 	
+ 			std::vector<int> CounterV(seq.SeqsNumber+1,0);//counter for storing 1 or 0 for each Seq + the cumulated sum of the counter in the last field
+ 			//std::cout<<"vor while  ";
+@@ -242,13 +242,13 @@
+ 					String<Iupac> &temp,
+ 					String<Iupac> &Kmer,
+ 					Iterator<String<Iupac> >::Type &tempIt,
+-					Finder<Index<StringSet<String<Dna5> > > > &finder,
++					Finder<Index<StringSet<String<Dna> > > > &finder,
+ 					unsigned int &counter,
+ 					std::vector<int> &CounterV,
+ 					IupacMaps &IMap){
+ 	
+-	String<Dna5> replace;
+-	Iterator<String<Dna5> >::Type replaceIt;
++	String<Dna> replace;
++	Iterator<String<Dna> >::Type replaceIt;
+ 	Iterator<String<Iupac> >::Type tempIttemp;
+ 	//std::cout<<Kmer;
+ 	
+@@ -292,7 +292,7 @@
+ 
+ void FindKmer(  Seq &seq,
+ 				String<Iupac> &temp,
+-				Finder<Index<StringSet<String<Dna5> > > > &finder,
++				Finder<Index<StringSet<String<Dna> > > > &finder,
+ 				unsigned int &counter,
+ 				std::vector<int> &CounterV){
+ 
+@@ -323,7 +323,7 @@
+ 	todo -->template
+ */
+ void CountKmer( std::map<String<Iupac>,unsigned int > &seqCounter, 
+-				Finder<Index<StringSet<String<Dna5> > > > &finder, 
++				Finder<Index<StringSet<String<Dna> > > > &finder, 
+ 				String<Iupac> &Kmer,
+ 				Seq &seq,
+ 				IupacMaps &IMap){
+@@ -390,7 +390,7 @@
+ void BuildFrequencyMatrix(  std::map<unsigned int,
+ 							std::map<Iupac,double> > &freqMatrix,
+ 							std::map<String<Iupac>,unsigned int > &seqCounter,
+-							Finder<Index<StringSet<String<Dna5> > > > &finder,
++							Finder<Index<StringSet<String<Dna> > > > &finder,
+ 							String<Iupac> &Kmer,
+ 							Seq &seq, 
+ 							IupacMaps &IMaps,
+@@ -398,9 +398,9 @@
+ 			//std::cout<<Kmer<<std::endl;
+ 			//freqMatrix -->unsigned int = position in Kmer, position 1 in map = prob. for A, pos. 2 = prob. for C...
+ 			String<Iupac> temp;	
+-			String<Dna5> replace;
++			String<Dna> replace;
+ 			Iterator<String<Iupac> >::Type tempIt;
+-			Iterator<String<Dna5> >::Type replaceIt;
++			Iterator<String<Dna> >::Type replaceIt;
+ 			temp=Kmer;
+ 			tempIt = begin(temp);
+ 			unsigned int counter=0;
+@@ -494,10 +494,10 @@
+ -->Template
+ 
+ */
+-void PrintMap(  std::map<String<Dna5>,unsigned int> &Dna5CounterMap,
++void PrintMap(  std::map<String<Dna>,unsigned int> &Dna5CounterMap,
+ 				unsigned int SeqsNumber){
+ 	std::cout<<std::endl;
+-	std::map<String<Dna5>,unsigned int>::iterator MapIterator;
++	std::map<String<Dna>,unsigned int>::iterator MapIterator;
+ 	for(MapIterator=Dna5CounterMap.begin(); MapIterator !=Dna5CounterMap.end();++MapIterator){
+ 		std::cout<<(*MapIterator).first<<"   ";
+ 		
+@@ -518,8 +518,8 @@
+ 	}
+ }
+ 
+-void PrintMap(std::multimap<double,String<Dna5> > &pValueMap){
+-	std::multimap<double,String<Dna5> >::iterator MapIterator;
++void PrintMap(std::multimap<double,String<Dna> > &pValueMap){
++	std::multimap<double,String<Dna> >::iterator MapIterator;
+ 	for(MapIterator=pValueMap.begin();MapIterator !=pValueMap.end();++MapIterator){
+ 		std::cout<<(*MapIterator).first<<" ";
+ 		std::cout<<(*MapIterator).second<<std::endl;
+@@ -550,10 +550,10 @@
+ //Test the Map-lengths match eachother and with the sequences
+ void DebugMap(  Seq &seq,
+ 				Seq &back,
+-				std::map<String<Dna5>,std::vector<int> > &sequencesCounter,
+-				std::map<String<Dna5>,std::vector<int> > &backgroundCounter){
++				std::map<String<Dna>,std::vector<int> > &sequencesCounter,
++				std::map<String<Dna>,std::vector<int> > &backgroundCounter){
+ 
+-	typedef std::map<String<Dna5>,std::vector<int> > Dna5CounterMap;
++	typedef std::map<String<Dna>,std::vector<int> > Dna5CounterMap;
+ 	Dna5CounterMap::iterator MapIterator;
+ 	MapIterator=sequencesCounter.begin();
+ 	Dna5CounterMap::iterator MapIteratorB;
+@@ -572,8 +572,8 @@
+ 	//std::cout<<length(back.ids)<<std::endl;
+ }
+ 
+-void DebugMultiMap( std::map<String<Dna5>,std::vector<int> > &sequencesCounter,
+-					std::multimap<double,String<Dna5> > &SortedPValue){
++void DebugMultiMap( std::map<String<Dna>,std::vector<int> > &sequencesCounter,
++					std::multimap<double,String<Dna> > &SortedPValue){
+ 	SEQAN_ASSERT_EQ(length(sequencesCounter),SortedPValue.size());
+ 
+ }
+@@ -665,7 +665,7 @@
+ 	
+ 
+ 	double pValue=0;
+-	typedef std::map<String<Dna5>,unsigned int >::iterator MapIterator;
++	typedef std::map<String<Dna>,unsigned int >::iterator MapIterator;
+ 	MapIterator MapI=seq.seqCounter.begin();
+ 	MapIterator MapIB=back.seqCounter.begin();
+ 	//std::cout<<(*MapI).first<<" "<<(*MapI).second.back()<<std::endl;
+@@ -678,7 +678,7 @@
+ 	
+ 		//std::cout<<pValue<<std::endl;
+ 		//SortedPValue[pValue]=(*MapI).first;
+-		seq.SortedPValue.insert(std::pair<double,String<Dna5> > (pValue, (*MapI).first));
++		seq.SortedPValue.insert(std::pair<double,String<Dna> > (pValue, (*MapI).first));
+ 		seq.SortedPValueReversed.insert(std::pair<String<Iupac>,double > ((*MapI).first,pValue));
+ 	}
+ 
+@@ -858,7 +858,7 @@
+ void InitGeneralization(IupacMaps &IMaps,
+ 						Seq &seq,
+ 						Seq &back){
+-	std::multimap<double,String<Dna5> >::iterator MapIterator;
++	std::multimap<double,String<Dna> >::iterator MapIterator;
+ 	std::multimap<double,String<Iupac> >::iterator MapIteratorT;	
+ 	std::multimap<double,String<Iupac> > generalizedSortedPValueTemp;
+ 	std::map<String<Iupac>,unsigned int> generalizedKmerTemp;
+@@ -929,9 +929,9 @@
+ /*	- gets a Kmer and replaces each position successively with each possible ambiguity Code(Iupac)
+ 	- only one wildcard per String at one time
+ 	- the unsigned int corresponds to the estimated counter
+-	- String<Dna5> for initialization
++	- String<Dna> for initialization
+  */
+-void GeneralizeKmer(String<Dna5> Kmer,
++void GeneralizeKmer(String<Dna> Kmer,
+ 					IupacMaps &IMaps,
+ 					Seq &seq,
+ 					Seq &back){
+@@ -939,8 +939,8 @@
+ 	String<Iupac> temp;//temporary String --> generalizedKmer[temp]
+ 	String<Iupac> temp2;//Kmer with replaced position--> relevant for estimateCounter
+ 	Iterator<String<Iupac> >::Type tempIt;//Iterator over temp --> same length as Kmer
+-	String<Dna5> replace = "ACGT";//replace the current position with each possible ambiguity code --> A,C,G or T
+-	Iterator<String<Dna5> >::Type replaceIt;
++	String<Dna> replace = "ACGT";//replace the current position with each possible ambiguity code --> A,C,G or T
++	Iterator<String<Dna> >::Type replaceIt;
+ 	unsigned int counter =0;
+ 	char tempChar;
+ 	//replaceIt = begin(replace);	
+@@ -1127,8 +1127,8 @@
+ 
+ void exactGeneralizeCount(  std::map<String<Iupac>,unsigned int > &seqCounter,
+ 							std::map<String<Iupac>,unsigned int > &backCounter,
+-							Finder<Index<StringSet<String<Dna5> > > > &finder,
+-							Finder<Index<StringSet<String<Dna5> > > > &finderB,
++							Finder<Index<StringSet<String<Dna> > > > &finder,
++							Finder<Index<StringSet<String<Dna> > > > &finderB,
+ 							Seq &seq,
+ 							Seq &back,
+ 							IupacMaps &IMap){
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-05 16:13:11.246203600 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-06 13:58:40.194632000 +0200
+@@ -37,13 +37,13 @@
+ 
+ 	Seq seq;
+ 	
+-	StringSet<String<Dna5> > test;
++	StringSet<String<Dna> > test;
+ 	appendValue(test,"ACGTACGT");
+ 	appendValue(test,"TTTTTxxx");
+ 	seq.seqs=test;
+ 
+ 
+-    StringSet<String<Dna5> > expected;
++    StringSet<String<Dna> > expected;
+     appendValue(expected, "ACGTACGT");
+     appendValue(expected, "ACGT");
+     appendValue(expected, "CGTACGT");
+@@ -67,7 +67,7 @@
+ 	initST(seq);
+ 
+ 
+-	typedef Index<StringSet<String<Dna5> > > TMyIndex;//Dna5Q
++	typedef Index<StringSet<String<Dna> > > TMyIndex;//Dna5Q
+ 	Iterator<TMyIndex, BottomUp<> >::Type myIterator(seq.SArray);
+ 	for(;!atEnd(myIterator);++myIterator){
+ 		std::cout<<representative(myIterator)<<std::endl;
+@@ -86,13 +86,13 @@
+ 	Seq back;
+ 	
+ 	
+-	StringSet<String<Dna5> > test;
++	StringSet<String<Dna> > test;
+ 	appendValue(test,"ACGTACGT");
+ 	appendValue(test,"TTTTTTTT");
+ 	appendValue(test,"ACCTACGTTT");
+ 	appendValue(test,"");
+ 
+-	StringSet<String<Dna5> > test2;
++	StringSet<String<Dna> > test2;
+ 	appendValue(test2,"ACG");
+ 	appendValue(test2,"ACGT");
+ 	appendValue(test2,"TTT");
+@@ -108,10 +108,10 @@
+ 	SEQAN_ASSERT_EQ(back.SeqsNumber, 3);
+ 
+ 
+-	/*typedef std::map<String<Dna5>,std::vector<int> > DnaCounterMap;
++	/*typedef std::map<String<Dna>,std::vector<int> > DnaCounterMap;
+ 	DnaCounterMap seqCount;
+ 	DnaCounterMap backCount;*/
+-	std::map<String<Dna5>,unsigned int > testMap;
++	std::map<String<Dna>,unsigned int > testMap;
+ 	testMap["ACG"]=2;
+ 	testMap["CGT"]=2;
+ 	testMap["GTA"]=1;
+@@ -126,8 +126,8 @@
+ 	initST(back);
+ 	initExactKmer(seq,back,3,3);
+ 
+-	std::map<String<Dna5>,unsigned int >::iterator MapIterator;
+-	std::map<String<Dna5>,unsigned int >::iterator MapIterator2;
++	std::map<String<Dna>,unsigned int >::iterator MapIterator;
++	std::map<String<Dna>,unsigned int >::iterator MapIterator2;
+ 	MapIterator=seq.seqCounter.begin();
+ 	MapIterator2=testMap.begin();
+ 	SEQAN_ASSERT_EQ(length(seq.seqCounter), length(testMap));
+@@ -197,13 +197,13 @@
+ 	Seq back;
+ 	
+ 	
+-	StringSet<String<Dna5> > test;
++	StringSet<String<Dna> > test;
+ 	appendValue(test,"ACGTACGT");
+ 	appendValue(test,"TTTTTTTT");
+ 	appendValue(test,"ACCTACGTTT");
+ 	appendValue(test,"");
+ 
+-	StringSet<String<Dna5> > test2;
++	StringSet<String<Dna> > test2;
+ 	appendValue(test2,"ACG");
+ 	appendValue(test2,"ACGT");
+ 	appendValue(test2,"TTT");
+@@ -211,7 +211,7 @@
+ 	seq.seqs=test;
+ 	back.seqs=test2;
+ 
+-	/*typedef std::map<String<Dna5>,std::vector<int> > DnaCounterMap;
++	/*typedef std::map<String<Dna>,std::vector<int> > DnaCounterMap;
+ 	DnaCounterMap seqCount;
+ 	DnaCounterMap backCount;*/
+ 
+@@ -225,7 +225,7 @@
+ 	//std::map<unsigned int,char> IupacMap;
+ 	//std::map<char,unsigned int> IupacMapReversed;
+ 	//std::map<char,String<Iupac> > IupacMapReplace; 
+-	//std::map<char,String<Dna5> > IupacMapReplaceReversed;
++	//std::map<char,String<Dna> > IupacMapReplaceReversed;
+ 	//MapIupac(IupacMap, IupacMapReversed, IupacMapReplace,IupacMapReplaceReversed);//IupacMap for generalization
+ 
+ 	//std::map<String<Iupac>,unsigned int> generalizedKmer;//unsigned int = estimated counter
+@@ -310,13 +310,13 @@
+ 	Seq back;
+ 	
+ 	
+-	StringSet<String<Dna5> > test;
++	StringSet<String<Dna> > test;
+ 	appendValue(test,"ACGT");
+ 	appendValue(test,"AGGT");
+ 	appendValue(test,"ACCT");
+ 	appendValue(test,"");
+ 
+-	StringSet<String<Dna5> > test2;
++	StringSet<String<Dna> > test2;
+ 	appendValue(test2,"CCGT");
+ 	appendValue(test2,"TTTT");
+ 	appendValue(test2,"AACT");
+@@ -324,7 +324,7 @@
+ 	seq.seqs=test;
+ 	back.seqs=test2;
+ 
+-	//typedef std::map<String<Dna5>,std::vector<int> > DnaCounterMap;
++	//typedef std::map<String<Dna>,std::vector<int> > DnaCounterMap;
+ 	//DnaCounterMap seqCount;
+ 	//DnaCounterMap backCount;
+ 
+@@ -338,13 +338,13 @@
+ 	std::cout<<std::endl;
+ 	PrintMap(back.seqCounter,back.SeqsNumber);
+ 	/*std::map<String<Iupac>,double > generalizedSortedPValueReversed;
+-	typedef std::multimap<double,String<Dna5> > pValueMap;
++	typedef std::multimap<double,String<Dna> > pValueMap;
+ 	pValueMap SortedPValue;*/
+ 	logFactorial(seq.SeqsNumber+back.SeqsNumber);//save all relevant factorial numbers
+ 	FisherExactTest(seq,back);//computes the pValue of each Motif due to the counter
+ 	std::cout<<std::endl;
+ 	PrintMap(seq.SortedPValue);
+-	std::multimap<double,String<Dna5> >::iterator SortedPValueIterator;
++	std::multimap<double,String<Dna> >::iterator SortedPValueIterator;
+ 	SortedPValueIterator = seq.SortedPValue.begin();
+ 
+ 	
+@@ -371,7 +371,7 @@
+ 	//std::map<unsigned int,char> IupacMap;
+ 	//std::map<char,unsigned int> IupacMapReversed;
+ 	//std::map<char,String<Iupac> > IupacMapReplace; //stores the replacement-chars
+-	//std::map<char,String<Dna5> > IupacMapReplaceReversed;
++	//std::map<char,String<Dna> > IupacMapReplaceReversed;
+ 	//MapIupac(IupacMap, IupacMapReversed, IupacMapReplace,IupacMapReplaceReversed);//IupacMap for generalization
+ 
+ 	//std::map<String<Iupac>,unsigned int> generalizedKmer;//unsigned int = estimated counter
+@@ -407,14 +407,14 @@
+ 	Seq seq;
+ 	Seq back;
+ 	
+-	StringSet<String<Dna5> > test;
++	StringSet<String<Dna> > test;
+ 	appendValue(test,"ACGACGTAGG");
+ 	appendValue(test,"AGGT");
+ 	appendValue(test,"AAGTGGG");
+ 	appendValue(test,"AC");
+ 	appendValue(test,"");
+ 
+-	StringSet<String<Dna5> > test2;
++	StringSet<String<Dna> > test2;
+ 	appendValue(test2,"AAACCCGGG");
+ 	appendValue(test2,"ATATATATAT");
+ 	appendValue(test2,"CCTAAT");
+@@ -432,14 +432,14 @@
+ 	//std::map<unsigned int,char> IupacMap;
+ 	//std::map<char,unsigned int> IupacMapReversed;
+ 	//std::map<char,String<Iupac> > IupacMapReplace; //stores the replacement-chars
+-	//std::map<char,String<Dna5> > IupacMapReplaceReversed;
++	//std::map<char,String<Dna> > IupacMapReplaceReversed;
+ 	//MapIupac(IupacMap, IupacMapReversed, IupacMapReplace,IupacMapReplaceReversed);//IupacMap for generalization
+ 	IupacMaps IMaps;
+ 	MapIupac(IMaps);
+ 	std::map<String<Iupac>,unsigned int > seqCounter;
+ 	std::map<String<Iupac>,unsigned int > backCounter;
+-	Finder<Index<StringSet<String<Dna5> > > > finder(seq.SArray);
+-	Finder<Index<StringSet<String<Dna5> > > > finderB(back.SArray);//finder background
++	Finder<Index<StringSet<String<Dna> > > > finder(seq.SArray);
++	Finder<Index<StringSet<String<Dna> > > > finderB(back.SArray);//finder background
+ 	String<Iupac> Kmer = "ASG";
+ 	
+ 	CountKmer(seqCounter,finder,Kmer,seq,IMaps);

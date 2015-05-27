@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/wtg1fr816tg4hs6w_stats.txt -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/userdata/wtg1fr816tg4hs6w_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/Dropbox/Development/seqan-workspace-3.7/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/bkahlert/apps/tutorial_basics/tutorial_basics.h ./sandbox/bkahlert/apps/tutorial_basics/tutorial_basics.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/bkahlert/apps/tutorial_basics/tutorial_basics.h	2012-04-11 11:21:01.000000000 +0200
++++ ./sandbox/bkahlert/apps/tutorial_basics/tutorial_basics.h	2012-04-11 11:25:33.000000000 +0200
+@@ -29,7 +29,7 @@
+ // DAMAGE.
+ //
+ // ==========================================================================
+-// Author: Your Name <your.email@example.net>
++// Author: Björn Kahlert <bjoern.kahlert@fu-berlin.de>
+ // ==========================================================================
+ 
+ #ifndef SANDBOX_BKAHLERT_APPS_TUTORIAL_BASICS_TUTORIAL_BASICS_H_

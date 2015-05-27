@@ -1,0 +1,114 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-27 13:14:54.621191300 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-27 15:45:14.921986000 +0200
+@@ -128,6 +128,7 @@
+ void ComparePWM(Seq &seq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2, Entropy const & tag);
+ void ComparePWM(Seq &seq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2, Euklidisch const & tag);
+ void PWMClustering(Seq &seq);
++void UpdatePWMMatrix(int n, int x, int y, std::vector<std::vector<double> > compare);
+ void minDifferenceInMatrix(unsigned n,String<double> &minDifference,std::vector<std::vector<double> > compare);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ void saveData(Seq &seq,std::ofstream &PWM);
+@@ -837,34 +838,26 @@
+ 
+ }
+ 
+-void UpdatePWMMatrix(Seq &seq, int x, int y, std::vector<std::vector<double> > compare){
++void UpdatePWMMatrix(int n, int x, int y, std::vector<std::vector<double> > compare){
+ 
+ 	/****
+-			Updates the distance with Single Linkage
+-			Clears PWM y and replaces PWM x with the new one
++			Updates the distance with Complete Linkage
++			Replaces PWM x with the new one
+ 			
+ 	****/
+ 
++	for (j = 0; j < x; j++)
++		compare[x][j] = std::max(compare[y][j],compare[x][j]);
++	for (j = x+1; j < y; j++)
++		compare[j][x] = std::max(compare[y][j],compare[j][x]);
++	for (j = y+1; j < n; j++)
++		compare[j][x] = std::max(compare[j][y],compare[j][x]);
++	for (j = 0; j < y; j++) compare[y][j] = compare[n-1][j];
++	for (j = y+1; j < n-1; j++) compare[j][y] = compare[n-1][j];
+ 
+ 
+ 
+ 
+-	for(int i=0;i<length(compare);++i){
+-
+-		if(length(compare[i].empty())) continue;
+-
+-		for(int j=0;j<length(compare[i]);++j){
+-
+-			
+-			/*wenn i == x update, oder wenn j ==x
+-		    wenn i == y ignoriere, oder wenn j ==y*/
+-
+-		}
+-
+-	}
+-
+-
+-
+ }
+ 
+ void minDifferenceInMatrix(unsigned n,String<double> &minDifference,std::vector<std::vector<double> > compare){
+@@ -935,14 +928,7 @@
+ 		}
+ 		std::cout<<std::endl;
+ 
+-		for (j = 0; j < int(minDifference[1]); j++)
+-			compare[int(minDifference[1])][j] = std::max(compare[int(minDifference[2])][j],compare[int(minDifference[1])][j]);
+-		for (j = int(minDifference[1])+1; j < int(minDifference[2]); j++)
+-			compare[j][int(minDifference[1])] = std::max(compare[int(minDifference[2])][j],compare[j][int(minDifference[1])]);
+-		for (j = int(minDifference[2])+1; j < n; j++)
+-			compare[j][int(minDifference[1])] = std::max(compare[j][int(minDifference[2])],compare[j][int(minDifference[1])]);
+-		for (j = 0; j < int(minDifference[2]); j++) compare[int(minDifference[2])][j] = compare[n-1][j];
+-		for (j = int(minDifference[2])+1; j < n-1; j++) compare[j][int(minDifference[2])] = compare[n-1][j];
++		UpdatePWMMatrix(n,int(minDifference[1]),int(minDifference[2]),compare);
+ 		//UpdatePWMMatrix();
+ 		//find new closest pair
+ 		appendValue(traceback,clusterId[int(minDifference[1])]);
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-26 21:38:32.591002900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-27 15:45:09.055986000 +0200
+@@ -715,7 +715,8 @@
+ 	minDifference[2]=3;
+ 	unsigned j;
+ 	unsigned n=5;
+-	for (j = 0; j < int(minDifference[1]); j++)
++	UpdatePWMMatrix(n,int(minDifference[1]),int(minDifference[2]),compare);
++	/*for (j = 0; j < int(minDifference[1]); j++)
+ 		compare[int(minDifference[1])][j] = std::max(compare[int(minDifference[2])][j],compare[int(minDifference[1])][j]);
+ 	for (j = int(minDifference[1])+1; j < int(minDifference[2]); j++)
+ 		compare[j][int(minDifference[1])] = std::max(compare[int(minDifference[2])][j],compare[j][int(minDifference[1])]);
+@@ -723,7 +724,7 @@
+ 		compare[j][int(minDifference[1])] = std::max(compare[j][int(minDifference[2])],compare[j][int(minDifference[1])]);
+ 	for (j = 0; j < int(minDifference[2]); j++) compare[int(minDifference[2])][j] = compare[n-1][j];
+ 	for (j = int(minDifference[2])+1; j < n-1; j++) compare[j][int(minDifference[2])] = compare[n-1][j];
+-
++*/
+ 	SEQAN_ASSERT_EQ(compare[0][0],0);
+ 	SEQAN_ASSERT_EQ(compare[1][0],4);
+ 	SEQAN_ASSERT_EQ(compare[1][1],0);
+@@ -747,7 +748,8 @@
+ 	minDifference[1]=0;
+ 	minDifference[2]=2;
+ 	--n;
+-	for (j = 0; j < int(minDifference[1]); j++)
++	UpdatePWMMatrix(n,int(minDifference[1]),int(minDifference[2]),compare);
++	/*for (j = 0; j < int(minDifference[1]); j++)
+ 		compare[int(minDifference[1])][j] = std::max(compare[int(minDifference[2])][j],compare[int(minDifference[1])][j]);
+ 	for (j = int(minDifference[1])+1; j < int(minDifference[2]); j++)
+ 		compare[j][int(minDifference[1])] = std::max(compare[int(minDifference[2])][j],compare[j][int(minDifference[1])]);
+@@ -755,7 +757,7 @@
+ 		compare[j][int(minDifference[1])] = std::max(compare[j][int(minDifference[2])],compare[j][int(minDifference[1])]);
+ 	for (j = 0; j < int(minDifference[2]); j++) compare[int(minDifference[2])][j] = compare[n-1][j];
+ 	for (j = int(minDifference[2])+1; j < n-1; j++) compare[j][int(minDifference[2])] = compare[n-1][j];
+-
++*/
+ 	/*****
+ 			New Matrix:
+ 

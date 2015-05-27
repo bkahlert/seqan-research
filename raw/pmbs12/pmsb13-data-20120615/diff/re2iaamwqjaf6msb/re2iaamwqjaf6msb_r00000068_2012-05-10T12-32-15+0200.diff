@@ -1,0 +1,47 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 11:50:09.252902400 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 12:32:11.828124900 +0200
+@@ -1,6 +1,5 @@
+ #include <iostream>
+ #include <seqan/sequence.h>
+-//#include "D:/SeqAn/core/apps/stellar/stellar.cpp"
+ #include "../../../core/apps/stellar/stellar.h"
+ #include "../../../core/apps/stellar/stellar_types.h"
+ #include "../../../core/apps/stellar/stellar_extension.h"
+@@ -9,14 +8,13 @@
+ 
+ using namespace seqan;
+ 
+-template<typename TSequence>
+-void stellar_find_matches(TSequence & file1, TSequence & file2) {
++template<typename TSequence, typename TId>
++void stellar_find_matches(TSequence & file1, TSequence & file2, StringSet<QueryMatches<StellarMatch<TSequence, TId> > > & matches) {
+ 	unsigned epsilon = 0.01;
+-
+-	//typedef typename Value<TDir>::Type TSize;
+-
+ 	unsigned minLength = 20;
+ 
++	typedef StellarMatch<TSequence, TId> TMatch;
++
+ 	//typedef Index<StringSet<TSequence, Dependent<> >, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
+     //TQGramIndex qgramIndex(queries);
+     //Pattern<TQGramIndex, Swift<SwiftLocal> > swiftPattern(qgramIndex);
+@@ -26,8 +24,6 @@
+ 
+ 	//Tmatches matches;
+ 
+-	StringSet<QueryMatches<StellarMatch<TSequence, TId> > > matches;
+-
+ 	stellar(file1, file2, epsilon, minLength, xDrop, matches, AllLocal());
+ 
+ }
+@@ -48,7 +44,7 @@
+ 	// import database sequence
+     //StringSet<TSequence > databases;
+     //StringSet<CharString> databaseIDs;
+-    //if (!_importSequences(file2, "database", databases, databaseIDs)) return 1;
++    if (!_importSequences(file2, "database", databases, databaseIDs)) return 1;
+ 
+ 	//double epsilon;
+ 	//double minLength;

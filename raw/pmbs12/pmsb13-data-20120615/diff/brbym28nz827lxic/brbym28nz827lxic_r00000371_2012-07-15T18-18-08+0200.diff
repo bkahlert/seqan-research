@@ -1,0 +1,29 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 18:16:01.855402900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 18:18:06.655402900 +0200
+@@ -280,7 +280,7 @@
+ 			
+ 			FindKmer(seq,temp,finder,counter,CounterV);
+ 		}
+-				std::cout<<std::endl;
++				
+ 		*tempIt=resetTemp;			
+ 					
+ 	}
+@@ -1237,14 +1237,14 @@
+ 
+ 	for(unsigned int i=0;i<100 && generalizedSortedPValueIt!=seq.generalizedSortedPValue.end() ;++i,++generalizedSortedPValueIt){
+ 		//std::cout<<length(seq.generalizedSortedPValue)<<" "<<seq.generalizedSortedPValue.size()<<" ";
+-		std::cout<<(*generalizedSortedPValueIt).second<<" ";
++		//std::cout<<(*generalizedSortedPValueIt).second<<" ";
+ 		if(seqCounter.find((*generalizedSortedPValueIt).second)!=seqCounter.end()) continue;
+ 		
+ 		CountKmer(seqCounter,finder,(*generalizedSortedPValueIt).second,seq,IMap);
+ 		CountKmer(backCounter,finderB,(*generalizedSortedPValueIt).second,back,IMap);
+ 		
+ 	}
+-	std::cout<<"vor fisher "<<seqCounter.size()<<std::endl;
++	
+ 	seq.generalizedSortedPValue.clear();
+ 	
+ 	//PrintMap(seqCounter,seq.SeqsNumber);

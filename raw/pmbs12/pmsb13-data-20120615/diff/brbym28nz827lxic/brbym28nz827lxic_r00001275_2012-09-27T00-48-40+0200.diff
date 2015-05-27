@@ -1,0 +1,77 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-09-27 00:36:11.611600000 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-09-27 00:48:36.881200000 +0200
+@@ -2094,7 +2094,9 @@
+ 	}
+ }
+ 
+-
++/****
++		count the generalized Kmer exact
++****/
+ void exactGeneralizeCount(  std::map<String<Iupac>,unsigned int > &seqCounter,
+ 							std::map<String<Iupac>,unsigned int > &backCounter,
+ 							Finder<Index<StringSet<String<Dna5> > > > &finder,
+@@ -2104,13 +2106,10 @@
+ 							IupacMaps &IMap){
+ 
+ 	std::multimap<double,String<Iupac> >::iterator generalizedSortedPValueIt;
+-	//std::map<String<Iupac>,double > generalizedSortedPValueReversed;
+ 
+ 	generalizedSortedPValueIt = seq.generalizedSortedPValue.begin();
+ 
+ 	for(unsigned int i=0;i<seq.seed && generalizedSortedPValueIt!=seq.generalizedSortedPValue.end() ;++i,++generalizedSortedPValueIt){
+-		//std::cout<<length(seq.generalizedSortedPValue)<<" "<<seq.generalizedSortedPValue.size()<<" ";
+-		//std::cout<<(*generalizedSortedPValueIt).second<<" ";
+ 		if(seqCounter.find((*generalizedSortedPValueIt).second)!=seqCounter.end()) continue;
+ 		
+ 		CountKmer(seqCounter,finder,(*generalizedSortedPValueIt).second,seq,IMap);
+@@ -2120,11 +2119,7 @@
+ 	
+ 	seq.generalizedSortedPValue.clear();
+ 	
+-	//PrintMap(seqCounter,seq.SeqsNumber);
+-	
+ 	FisherExactTest(seqCounter,backCounter,seq,back);//computes the pValue of each Motif due to the counter
+-	std::cout<<std::endl;
+-	//PrintMap(seq.generalizedSortedPValue);
+ 	seqCounter.clear();
+ 	backCounter.clear();
+ 
+@@ -2133,8 +2128,11 @@
+ }
+ 
+ 
+-
+-String<double> AlignPWMs(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2){
++/****
++		computes the alginment of two pwms with a slightly modified Smith-Waterman-Algorithm
++****/
++String<double> AlignPWMs(	std::map<unsigned int,std::map<Iupac,double> > &freqMatrix1,
++							std::map<unsigned int,std::map<Iupac,double> > &freqMatrix2){
+ 
+   int freqL1 = length(freqMatrix1);                     
+   int freqL2 = length(freqMatrix2);
+@@ -2147,7 +2145,7 @@
+   } 
+  
+   
+-	//traceback wird nicht benötigt, da zwischen den anfangs- und end-gaps keine erlaubt sind
++	//no traceback needed-->no gaps allowed, except for the opening-gaps
+ 	String<double> Mmax;
+ 	appendValue(Mmax,100);
+ 	appendValue(Mmax,0);
+@@ -2157,11 +2155,11 @@
+ 	for(unsigned i=1;i<=freqL1;++i){
+ 		for(unsigned j=1;j<=freqL2;++j){
+ 
+-			M[i][j]=M[i-1][j-1]+ComparePWM(freqMatrix1[i-1],freqMatrix2[j-1],Entropy());//je größer, desto unterschiedlicher --> Problem: je weniger abgezogen wird, desto größer
++			M[i][j]=M[i-1][j-1]+ComparePWM(freqMatrix1[i-1],freqMatrix2[j-1],Entropy());//the more different, the bigger is the value
+ 			
+ 			
+ 				
+-			if((i==freqL1 && j>freqL2*0.5  && M[i][j]/j<Mmax[0])){//auf die Länge der Überlappung normalisieren --> /j --> über die Hälfte des Kmers soll überlappen
++			if((i==freqL1 && j>freqL2*0.5  && M[i][j]/j<Mmax[0])){//normalize to the length of the overlap--> /j --> Overlap must be greater than 0.5
+ 				Mmax[0]=M[i][j]/j;
+ 				Mmax[1]=i;
+ 				Mmax[2]=j;

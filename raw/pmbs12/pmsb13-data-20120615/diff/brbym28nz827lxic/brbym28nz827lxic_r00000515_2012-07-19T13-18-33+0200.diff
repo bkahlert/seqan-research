@@ -1,0 +1,118 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-18 18:57:25.701609500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-19 13:18:09.802797200 +0200
+@@ -142,8 +142,8 @@
+ 		*****/
+ 		//String<unsigned int> replaceString;
+ 		//String<unsigned int> replaceStringB;
+-		BuildFrequencyMatrix(freqMatrix,seqCounter, finder, (*sequences.generalizedSortedPValue.begin()).second,sequences,IMaps);
+-		BuildFrequencyMatrix(freqMatrixB,backCounter, finderB, (*sequences.generalizedSortedPValue.begin()).second,background,IMaps);
++		BuildFrequencyMatrix(freqMatrix, finder, (*sequences.generalizedSortedPValue.begin()).second,sequences,IMaps);
++		BuildFrequencyMatrix(freqMatrixB, finderB, (*sequences.generalizedSortedPValue.begin()).second,background,IMaps);
+ 	
+ 		std::cout<<(*sequences.generalizedSortedPValue.begin()).second<<std::endl;
+ 		unsigned int KmerLength = length((*sequences.generalizedSortedPValue.begin()).second);
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-19 12:24:41.843797200 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-19 13:18:09.914797200 +0200
+@@ -93,7 +93,7 @@
+ void exactGeneralizeCount(std::multimap<double,String<Iupac> > &SortedPValueG,std::map<String<Iupac>,unsigned int > &seqCounter,std::map<String<Iupac>,unsigned int > &backCounter,Finder<Index<StringSet<String<Dna5> > > > &finder,Finder<Index<StringSet<String<Dna5> > > > &finderB,Seq &seq, Seq &back,IupacMaps &IMap);
+ void FindTopKmer(Seq &seq,String<Iupac> &temp,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix);
+ void loopOverTopKmer(	Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix);
+-void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,std::map<String<Iupac>,unsigned int > &seqCounter, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps);
++void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ 
+ 
+@@ -522,7 +522,6 @@
+ 
+ 
+ void BuildFrequencyMatrix(  std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,
+-							std::map<String<Iupac>,unsigned int > &seqCounter,
+ 							Finder<Index<StringSet<String<Dna5> > > > &finder,
+ 							String<Iupac> &Kmer,
+ 							Seq &seq, 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-19 13:02:51.469797200 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-19 13:18:28.429797200 +0200
+@@ -379,7 +379,7 @@
+ 	***/
+ 	IupacMaps IMaps;
+ 	MapIupac(IMaps);
+-	/*std::multimap<double,String<Dna5> >::iterator MapIterator;
++	std::multimap<double,String<Dna5> >::iterator MapIterator;
+ 	unsigned int i=0;
+ 	unsigned int limit;
+ 	if(seq.SortedPValue.size()>seq.seed)	limit=seq.seed;//seed meist = 100
+@@ -396,15 +396,15 @@
+ 	SEQAN_ASSERT_EQ(seq.generalizedKmer.size(),50);
+ 	SEQAN_ASSERT_EQ(seq.generalizedKmer["ACS"],2);
+ 	SEQAN_ASSERT_EQ(seq.generalizedKmer["SCT"],1);
+-	SEQAN_ASSERT_EQ(seq.generalizedKmer["SGT"],2);*/
++	SEQAN_ASSERT_EQ(seq.generalizedKmer["SGT"],2);
+ 	//std::map<String<Iupac>,unsigned int> generalizedKmer;//unsigned int = estimated counter
+ 	//std::map<String<Iupac>,unsigned int> generalizedKmerBackground;
+ 	//std::multimap<double,String<Iupac> > generalizedSortedPValue;
+-	
++	/*
+ 	InitGeneralization(IMaps,seq,back);
+ 	std::cout<<seq.generalizedSortedPValue.size()<<std::endl;
+ 	PrintMap(seq.generalizedSortedPValue);
+-
++	*/
+ 
+ 	clear(seq.seqs);
+ 	clear(back.seqs);
+@@ -597,7 +597,44 @@
+ 
+ }
+ 
++SEQAN_DEFINE_TEST(test_ChIPSeq_BuildFrequency){
+ 
++	using namespace seqan;
++	Seq seq;
++	Seq back;
++	seq.seed=100;
++	seq.c=1;
++	back.c=1;
++	
++	StringSet<String<Dna5> > test;
++	appendValue(test,"ACGACGTAGG");
++	appendValue(test,"AGGT");
++	appendValue(test,"AAGTGGG");
++	appendValue(test,"ACGAG");
++	appendValue(test,"");
++
++	StringSet<String<Dna5> > test2;
++	appendValue(test2,"AAACCCGGG");
++	appendValue(test2,"ATATATATAT");
++	appendValue(test2,"CCTAAT");
++	appendValue(test2,"GTGTGT");
++	appendValue(test2,"");
++
++
++	seq.seqs=test;
++	back.seqs=test2;
++	seq.SeqsNumber=length(seq.seqs);
++	back.SeqsNumber=length(back.seqs);
++	initST(seq);
++	initST(back);
++	IupacMaps IMaps;
++	MapIupac(IMaps);
++
++	std::map<unsigned int,std::map<Iupac,double> > freqMatrix;
++	Finder<Index<StringSet<String<Dna5> > > > finder(sequences.SArray);
++
++	BuildFrequencyMatrix(freqMatrix, finder, "ASG",seq,IMaps);//ASG gets masked
++}
+ 
+ 
+ SEQAN_BEGIN_TESTSUITE(dreme_test)
+@@ -612,6 +649,7 @@
+     SEQAN_CALL_TEST(test_ChIPSeq_initGeneralize);
+     SEQAN_CALL_TEST(test_ChIPSeq_CounterGeneralize);
+ 	SEQAN_CALL_TEST(test_ChIPSeq_estimateCounter);
++	SEQAN_CALL_TEST(test_ChIPSeq_BuildFrequency);
+ }
+ SEQAN_END_TESTSUITE
+ 

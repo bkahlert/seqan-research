@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-18 13:37:14.114910100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-18 13:40:40.568510100 +0200
+@@ -63,9 +63,9 @@
+ struct IupacMaps
+ {
+ 	Map<Pair<unsigned int,char> > IupacMap;
+-	Map<Pair<Iupac,unsigned int> > IupacMapReversed;
+-	Map<Pair<Iupac,String<Iupac> > > IupacMapReplace;
+-	Map<Pair<Iupac,String<Dna5> > > IupacMapReplaceReversed;
++	Map<Pair<char,unsigned int> > IupacMapReversed;
++	Map<Pair<char,String<Iupac> > > IupacMapReplace;
++	Map<Pair<char,String<Dna5> > > IupacMapReplaceReversed;
+ 	Map<Pair<String<Dna5>, char > > IupacMapInversed;
+ 
+ 	//std::map<unsigned int,char> IupacMap;
+@@ -1856,7 +1856,7 @@
+ 			temp = Kmer;// reset temp
+ 			
+ 			if(*tempIt == *replaceIt) continue; // there is no Iupac for "AA", in return "AG" = "R"
+-			//std::cout<<temp<<" ";
++			//std::cout<<temp<<" "; 
+ 			tempChar =*tempIt;//stores the current char because of temp2
+ 			*tempIt=*replaceIt;
+ 			temp2=temp;//temp2 ist nun das mit dem char für die neue wildcard

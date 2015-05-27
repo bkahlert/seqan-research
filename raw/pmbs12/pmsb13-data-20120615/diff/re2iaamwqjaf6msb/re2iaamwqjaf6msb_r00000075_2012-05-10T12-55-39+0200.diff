@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 12:40:50.971800700 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 12:55:37.116920000 +0200
+@@ -41,21 +41,6 @@
+ 	TSequence file1 = "AGTTGTTAGTCTACGTGGACCGACAAAGACAGATTCTTTGAGGGAGCTAAGCTCAACGTAGTTCTAACAG";
+ 	TSequence file2 = "AGTTATTAGTCTACGTGGACCGACAAAGAAAGATTCTTTGAGGGAGCTAAGCTCACAATAGTTCTAACAG";
+ 
+-	//typedef String<Dna5> TSequence;
+-
+-	// import query sequences
+-	//StringSet<TSequence> queries;
+-	//StringSet<CharString> queryIDs;
+-    //if (!_importSequences(file1, "query", queries, queryIDs)) return 1;
+-
+-	// import database sequence
+-    //StringSet<TSequence > databases;
+-    //StringSet<CharString> databaseIDs;
+-    //if (!_importSequences(file2, "database", databases, databaseIDs)) return 1;
+-
+-	//double epsilon;
+-	//double minLength;
+-
+ 	stellar_find_matches(file1,file2);
+ 
+ }
+\ No newline at end of file

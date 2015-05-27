@@ -1,0 +1,101 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-25 12:27:44.866807300 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-26 12:02:37.648002900 +0200
+@@ -795,6 +795,36 @@
+ 		freqMatrix1[j]['G'] = (freqMatrix1[j]['G']+freqMatrix2[j]['G']);
+ 		freqMatrix1[j]['T'] = (freqMatrix1[j]['T']+freqMatrix2[j]['T']);
+ 	}
++	
++
++}
++
++void UpdatePWMMatrix(Seq &seq, int x, int y, std::vector<std::vector<double> > compare){
++
++	/****
++			Updates the distance with Single Linkage
++			Clears PWM y and replaces PWM x with the new one
++			
++	****/
++
++
++
++
++
++	for(int i=0;i<length(compare);++i){
++
++		if(length(compare[i].empty())) continue;
++
++		for(int j=0;j<length(compare[i]);++j){
++
++			
++			wenn i == x update, oder wenn j ==x
++		    wenn i == y ignoriere, oder wenn j ==y
++
++		}
++
++	}
++
+ 
+ 
+ }
+@@ -806,15 +836,17 @@
+ 	resize(minDifference,3);
+ 	minDifference[0]=0;
+ 	unsigned allPWMsLength=length(seq.allPWMs); 
+-	String<String<double > > compare;
+-	String<double> compareTemp;
+-
+-	for(unsigned int i=0;i<allPWMsLength-1;++i){
++	std::vector<std::vector<double> > compare(allPWMsLength, std::vector<double>(allPWMsLength));
++	std::vector<int> clusterId(allPWMsLength);
++	unsigned j;
++	for (j = 0; j < allPWMsLength; j++) clusterId[j] = j;//to assign which PWM is in which cluster
++	
++	for(unsigned int i=0;i<allPWMsLength-1;++i){//computes distances with ComparePWM and saves it in the matrix compare
+ 
+-		for(unsigned int j=i+1;j<allPWMsLength;++j){
++		for( j=i+1;j<allPWMsLength;++j){
+ 
+ 			ComparePWM(seq,seq.allPWMs[i],seq.allPWMs[j],Euklidisch());
+-			appendValue(compareTemp,seq.columnEntropy[0]);
++			 compare[i][j]=seq.columnEntropy[0];
+ 			if(minDifference[0]==0 || minDifference[0]>seq.columnEntropy[0]){
+ 				minDifference[0]=seq.columnEntropy[0];
+ 				minDifference[1]=i;
+@@ -823,8 +855,7 @@
+ 			
+ 
+ 		}
+-		appendValue(compare,compareTemp);
+-		clear(compareTemp);
++		
+ 
+ 	}
+ 	std::cout<<length(compare)<<" "<<length(compare[0])<<" "<<length(compare[1])<<std::endl;
+@@ -832,12 +863,25 @@
+ 
+ 	
+ 
+-	while(minDifference[0]<1){
++	for(unsigned n=allPWMsLength;n>1 && minDifference[0]<1;--n){
++
+ 
+ 		BuildMeanOf2PWMs(seq,seq.allPWMs[int(minDifference[1])],seq.allPWMs[int(minDifference[2])]);//bildet aus 2PWMs die Mittelwerte und speichert sie in
+ 
++		//Fix the distances --> complete Linkage
++
++		for (j = 0; j < int(minDifference[1]); j++)
++			compare[int(minDifference[1])][j] = std::max(compare[int(minDifference[2])][j],compare[int(minDifference[1])][j]);
++		for (j = int(minDifference[1])+1; j < int(minDifference[2]); j++)
++			compare[j][int(minDifference[1])] = std::max(compare[int(minDifference[2])][j],compare[j][int(minDifference[1])]);
++		for (j = int(minDifference[2])+1; j < n; j++)
++			compare[j][int(minDifference[1])] = std::max(compare[j][int(minDifference[2])],compare[j][int(minDifference[1])]);
++		for (j = 0; j < int(minDifference[2]); j++) compare[int(minDifference[2])][j] = compare[n-1][j];
++		for (j = int(minDifference[2])+1; j < n-1; j++) compare[j][int(minDifference[2])] = compare[n-1][j];
+ 		//UpdatePWMMatrix();
+ 
++		//Update ClusterIds
++		//find new closest pair
+ 
+ 	}
+ 	

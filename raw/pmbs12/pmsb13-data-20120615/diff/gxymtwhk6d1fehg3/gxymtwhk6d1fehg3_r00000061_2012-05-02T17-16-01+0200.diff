@@ -1,0 +1,39 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-02 17:12:19.997743000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-02 17:15:42.357986000 +0200
+@@ -173,11 +173,30 @@
+ 			
+ 	}
+ 
+-	std::cout<< occurence$ << std::endl;
+-	std::cout<< occurenceA << std::endl;
+-	std::cout<< occurenceC << std::endl;
+-	std::cout<< occurenceG << std::endl;
+-	std::cout<< occurenceT << std::endl;
++	for ( int i = 0 ; i<occurence$ ; i++){
++		std::cout << occurence$[i] << " ";
++	}
++	std::cout << std::endl;
++
++	for ( int i = 0 ; i<occurenceA ; i++){
++		std::cout << occurenceA[i] << " ";
++	}
++	std::cout << std::endl;
++
++	for ( int i = 0 ; i<occurenceC ; i++){
++		std::cout << occurenceC[i] << " ";
++	}
++	std::cout << std::endl;
++
++	for ( int i = 0 ; i<occurenceG ; i++){
++		std::cout << occurenceG[i] << " ";
++	}
++	std::cout << std::endl;
++
++	for ( int i = 0 ; i<occurenceT ; i++){
++		std::cout << occurenceT[i] << " ";
++	}
++	std::cout << std::endl;
+ 
+ 	return 0;
+ }

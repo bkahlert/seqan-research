@@ -1,0 +1,122 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-02 16:25:37.706638000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-02 16:58:09.045816000 +0200
+@@ -63,13 +63,29 @@
+ 	String<unsigned> sa;
+ 	String<unsigned> cAlpha;
+ 	String<char> bwt;
+-	String< String <unsigned>> occurence;
++	String<unsigned> occurence$;
++	String<unsigned> occurenceA;
++	String<unsigned> occurenceC;
++	String<unsigned> occurenceG;
++	String<unsigned> occurenceT;
+ 
+ 
+ 	resize(sa, length(text));
+ 	resize(bwt, length(text));
+ 	resize(cAlpha, 5);
++	resize(occurence$, length(text)+1);
++	resize(occurenceA, length(text)+1);
++	resize(occurenceC, length(text)+1);
++	resize(occurenceG, length(text)+1);
++	resize(occurenceT, length(text)+1);
+ 
++
++			//Die Tabelle cAlpha
++			//	erste Spalte	: Anzahl der Zeichen kleiner als '$' (bzw '0')
++			//	zweite Spalte	: Anzahl der Zeichen kleiner als 'A'
++			//	dritte Spalte	: Anzahl der Zeichen kleiner als 'C'
++			//	vierte Spalte	: Anzahl der Zeichen kleiner als 'G'
++			//	fünfte Spalte	: Anzahl der Zeichen kleiner als 'T'
+ 	for (unsigned int i = 0; i< length(cAlpha); i++){
+ 		cAlpha[i] = 1;
+ 	}
+@@ -87,12 +103,13 @@
+ 		if ( (text[i] == 'G') || (text[i] == 'g'))
+ 			cAlpha[4]+= 1;
+     }
+-
++			// AUSGABE : cAlpha
+ 	for (unsigned int i = 0; i< length(cAlpha); i++){
+ 		std::cout << cAlpha[i] << " ";
+ 	}
+ 	std::cout << std::endl;
+ 
++			//Erstellung des SuffixArrays sa
+ 	createSuffixArray(sa, text, Skew7());
+ 
+ 	for ( int i = 0 ; i<length(sa) ; i++){
+@@ -101,13 +118,6 @@
+ 
+ 	std::cout << std::endl;
+ 
+-	//Pair<unsigned> hitRange;
+-	//hitRange = equalRangeSA(text, sa, pattern);
+-
+-	//for(unsigned i = hitRange.i1; i < hitRange.i2; ++i)
+-	//::std::cout << sa[i] << " ";
+-	//::std::cout << ::std::endl;
+-
+ 	createBWTable ( bwt, text, sa );
+ 
+ 	for ( int i = 0 ; i<length(bwt) ; i++){
+@@ -116,12 +126,52 @@
+ 
+ 	std::cout << std::endl;
+ 
+-
+-	//it = begin(sa);
+-
+-	//for ( goBegin(it) ; !atEnd(it) ; goNext(it)){
+-	//	std::cout << *it << " ";
+-	//}
++			//Erstellung der Occurence-Tabelle
++	for ( int i = 0 ; i<(length(bwt)+1) ; i++){
++		occurence$[i]= 0;
++		occurenceA[i]= 0;
++		occurenceC[i]= 0;
++		occurenceG[i]= 0;
++		occurenceT[i]= 0;
++	}
++	for ( int i = 1 ; i<(length(bwt)+1) ; i++){
++		if( bwt[i] == '0') {
++			occurence$[i]= occurence$[i-1]+1;
++			occurenceA[i]= occurenceA[i-1];
++			occurenceC[i]= occurenceC[i-1];
++			occurenceG[i]= occurenceG[i-1];
++			occurenceT[i]= occurenceT[i-1];
++		}
++		if( (bwt[i] == 'A') || (bwt[i] == 'a')){
++			occurence$[i]= occurence$[i-1];
++			occurenceA[i]= occurenceA[i-1]+1;
++			occurenceC[i]= occurenceC[i-1];
++			occurenceG[i]= occurenceG[i-1];
++			occurenceT[i]= occurenceT[i-1];
++		}
++		if( (bwt[i] == 'C') || (bwt[i] == 'c')){
++			occurence$[i]= occurence$[i-1];
++			occurenceA[i]= occurenceA[i-1];
++			occurenceC[i]= occurenceC[i-1]+1;
++			occurenceG[i]= occurenceG[i-1];
++			occurenceT[i]= occurenceT[i-1];
++		}
++		if( (bwt[i] == 'G') || (bwt[i] == 'g')){
++			occurence$[i]= occurence$[i-1];
++			occurenceA[i]= occurenceA[i-1];
++			occurenceC[i]= occurenceC[i-1];
++			occurenceG[i]= occurenceG[i-1]+1;
++			occurenceT[i]= occurenceT[i-1];
++		}
++		if( (bwt[i] == 'T') || (bwt[i] == 't')){
++			occurence$[i]= occurence$[i-1];
++			occurenceA[i]= occurenceA[i-1];
++			occurenceC[i]= occurenceC[i-1];
++			occurenceG[i]= occurenceG[i-1];
++			occurenceT[i]= occurenceT[i-1]+1;
++		}
++			
++	}
+ 
+ 	return 0;
+ }

@@ -1,0 +1,16 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-08-16 19:36:39.563706100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-08-16 19:39:23.457706100 +0200
+@@ -1129,9 +1129,9 @@
+ 	l_quer_for_k[2]=-1.318;
+ 	l_quer_for_k[3]=-0.946;
+ 
+-	observedCluster[0]=0.976;
+-	observedCluster[1]=0.364;
+-	observedCluster[2]=0.782;
++	observedCluster[0].Wk=0.976;
++	observedCluster[1].Wk=0.364;
++	observedCluster[2].Wk=0.782;
+ 
+ 	computeGap(l_quer_for_k,observedCluster,Gap,allPWMsLength);
+ 

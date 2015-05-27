@@ -1,0 +1,20 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-11 14:41:53.098779000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-11 14:44:01.539981000 +0200
+@@ -115,7 +115,7 @@
+ void backtrack (BowTieIterator iter, String<char> mypattern, int i, char c){
+ 	if (goDown(iter, c)){
+ 		std::cout << representative(iter) << std::endl;
+-		std::cout << "j= " << i+1 << std::endl;
++		std::cout << "j= " << cutPos+i+1 << std::endl;
+ 		std::cout << mypattern[cutPos+i+1] << std::endl;
+ 		// from here: going down the chars exactly from pattern to verify
+ 		int j = cutPos +i +1;
+@@ -127,6 +127,7 @@
+ 				for (int k = 0; k < length(getOccurrences(iter));k++){
+ 					std::cout << pattern << ", found at: " << getOccurrences(iter)[k] << std::endl;
+ 				}
++				break;
+ 			}
+ 			j++;
+ 		}

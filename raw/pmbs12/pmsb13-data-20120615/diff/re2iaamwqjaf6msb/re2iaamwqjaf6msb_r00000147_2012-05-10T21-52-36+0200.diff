@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/demos/stream_read_record_fasta.cpp ./sandbox/jennyann/demos/stream_read_record_fasta.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/demos/stream_read_record_fasta.cpp	2012-05-10 21:52:12.083875600 +0200
++++ ./sandbox/jennyann/demos/stream_read_record_fasta.cpp	2012-05-10 21:52:35.699556600 +0200
+@@ -23,7 +23,7 @@
+     std::fstream fasta(argv[1], std::ios_base::in | std::ios_base::binary);
+     if (!fasta.good())
+         return 1;
+-    RecordReader<std::fstream, DoublePass > reader(fasta);
++    RecordReader<std::fstream, DoublePass<> > reader(fasta);
+     
+     // Define variables for storing the sequences and sequence ids.
+     CharString id;

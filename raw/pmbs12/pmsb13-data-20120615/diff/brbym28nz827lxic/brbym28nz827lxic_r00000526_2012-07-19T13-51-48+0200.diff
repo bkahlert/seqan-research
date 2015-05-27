@@ -1,0 +1,18 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-19 13:44:40.139797200 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-07-19 13:51:47.284797200 +0200
+@@ -647,8 +647,12 @@
+ 	for(unsigned s=0;s<seq.SeqsNumber;++s){
+ 				createIntervalTree(seq.intervalTrees[s], seq.intervals[s]);
+ 			}
+-			
+-
++	
++	
++	appendValue(test,"ACGACGTAGG");
++	appendValue(test,"AGGT");
++	appendValue(test,"AAGTGGG");
++	appendValue(test,"ACGAG");
+ 	++seq.c;
+ 	initExactKmer(seq,back,3,3);
+ 	PrintMap(seq.seqCounter,seq.SeqsNumber);

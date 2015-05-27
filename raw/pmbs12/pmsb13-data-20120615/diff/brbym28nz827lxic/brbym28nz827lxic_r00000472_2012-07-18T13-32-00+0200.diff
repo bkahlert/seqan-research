@@ -1,0 +1,28 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 11:41:37.120609500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 13:31:55.068609500 +0200
+@@ -1003,7 +1003,7 @@
+ 
+ 	do{//only start a new round, if the top PValue is an improvement of the old one
+ 		
+-		//std::cout<<"test";
++		std::cout<<"test";
+ 		/*
+ 			while wird das erste mal mit generalizedKmer aufgerufen und dem temporären mapping der pValues
+ 			das temporäre mapping wird in das richtige mapping gemerged und gecleant, damit geschaut werden kann, ob bei den neuen pValues ein wert
+@@ -1026,13 +1026,14 @@
+ 		seq.generalizedKmer.clear();
+ 	//	generalizedMapIterator= generalizedKmerTemp.begin();
+ 		if(generalizedSortedPValueTemp.size()>seq.seed)	limit=seq.seed;
++		else if(generalizedSortedPValueTemp.size()==0) return;
+ 		else	limit = generalizedSortedPValueTemp.size();
+ 	
+ 		i=0;//only Top100
+ 		for(MapIteratorT=generalizedSortedPValueTemp.begin();i<limit;++MapIteratorT,++i){//iterate over Top100
+ 		
+ 			//Temp ums zu finden, aber das normale auch übergeben, zum neu befüllen
+-			
++			std::cout<<"for";
+ 			GeneralizeKmer((*MapIteratorT).second,generalizedKmerTemp,generalizedKmerBackgroundTemp,IMaps,seq,back);
+ 			
+ 			                                                                        

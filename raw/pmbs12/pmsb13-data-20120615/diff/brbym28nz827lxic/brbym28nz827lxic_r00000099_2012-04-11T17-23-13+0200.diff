@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Sequences.cpp ./sandbox/meyerclp/demos/Sequences.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Sequences.cpp	2012-04-11 17:19:27.547014300 +0200
++++ ./sandbox/meyerclp/demos/Sequences.cpp	2012-04-11 17:23:12.842014300 +0200
+@@ -45,14 +45,18 @@
+ int main(){
+ 
+ 	String<char> str = "hello Seqan!";
++	char arr[12] = "hallo welt!";
+ 	//countOneMers(str);
+ 	//replaceAs(str);
+ 	//std::cout<<str;
+ 
+-	Iterator<String<char> >::Type it = begin(str);
+-	Iterator<String<char> >::Type it2 = end(str);
++	Iterator<String<char> >::Type it = begin(arr);
++	Iterator<String<char> >::Type it2 = end(arr);
+ 	int a=int(it);
+ 	int b=int(it2);
+ 	std::cout<<a<<" "<<b;
++	//Length --> b-a
++	//Access --> it+i
++
+ 	return 0;
+ }
+\ No newline at end of file

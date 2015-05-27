@@ -1,0 +1,40 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-07 14:07:22.515798500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-07 14:20:56.391798500 +0200
+@@ -1017,7 +1017,7 @@
+ 		if(cluster[n].right<0)
+ 			cluster[n].Wk=cluster[n-1].Wk - cluster[-cluster[n].right-1].Wk;	
+ 
+-		cluster[n].Wk= cluster[n].Wk+ cluster[n].Dr/length(cluster[n].content);
++		cluster[n].Wk= cluster[n].Wk + cluster[n].Dr/length(cluster[n].content);
+ 	}
+ 
+ 	return cluster[n].Wk;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-08-07 14:07:24.251798500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-08-07 14:20:56.371798500 +0200
+@@ -1006,6 +1006,24 @@
+ 
+ 	using namespace seqan;
+ 
++	String<Cluster> cluster;
++	int n=0;
++
++	cluster[n].left=1;
++	cluster[n].right=2;
++	cluster[n].content=[1,2];
++	cluster[n].Dr=2.99;
++	
++	SEQAN_ASSERT_EQ(computeWk(n,cluster),1.495);
++	SEQAN_ASSERT_EQ(cluster[n].Wk,1.495);
++	++n;
++	cluster[n].left=-1;
++	cluster[n].right=3;
++	cluster[n].content=[1,2,3];
++	cluster[n].Dr=3.33;
++	SEQAN_ASSERT_EQ(computeWk(n,cluster),1.11);
++	SEQAN_ASSERT_EQ(cluster[n].Wk,1.11);
++
+ }
+ 
+ 

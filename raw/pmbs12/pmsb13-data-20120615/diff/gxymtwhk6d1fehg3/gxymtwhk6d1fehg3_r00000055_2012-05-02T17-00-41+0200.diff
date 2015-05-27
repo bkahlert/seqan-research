@@ -1,0 +1,44 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-02 16:58:09.045816000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-02 17:00:22.396953000 +0200
+@@ -135,35 +135,35 @@
+ 		occurenceT[i]= 0;
+ 	}
+ 	for ( int i = 1 ; i<(length(bwt)+1) ; i++){
+-		if( bwt[i] == '0') {
++		if( bwt[i-1] == '0') {
+ 			occurence$[i]= occurence$[i-1]+1;
+ 			occurenceA[i]= occurenceA[i-1];
+ 			occurenceC[i]= occurenceC[i-1];
+ 			occurenceG[i]= occurenceG[i-1];
+ 			occurenceT[i]= occurenceT[i-1];
+ 		}
+-		if( (bwt[i] == 'A') || (bwt[i] == 'a')){
++		if( (bwt[i-1] == 'A') || (bwt[i] == 'a')){
+ 			occurence$[i]= occurence$[i-1];
+ 			occurenceA[i]= occurenceA[i-1]+1;
+ 			occurenceC[i]= occurenceC[i-1];
+ 			occurenceG[i]= occurenceG[i-1];
+ 			occurenceT[i]= occurenceT[i-1];
+ 		}
+-		if( (bwt[i] == 'C') || (bwt[i] == 'c')){
++		if( (bwt[i-1] == 'C') || (bwt[i] == 'c')){
+ 			occurence$[i]= occurence$[i-1];
+ 			occurenceA[i]= occurenceA[i-1];
+ 			occurenceC[i]= occurenceC[i-1]+1;
+ 			occurenceG[i]= occurenceG[i-1];
+ 			occurenceT[i]= occurenceT[i-1];
+ 		}
+-		if( (bwt[i] == 'G') || (bwt[i] == 'g')){
++		if( (bwt[i-1] == 'G') || (bwt[i] == 'g')){
+ 			occurence$[i]= occurence$[i-1];
+ 			occurenceA[i]= occurenceA[i-1];
+ 			occurenceC[i]= occurenceC[i-1];
+ 			occurenceG[i]= occurenceG[i-1]+1;
+ 			occurenceT[i]= occurenceT[i-1];
+ 		}
+-		if( (bwt[i] == 'T') || (bwt[i] == 't')){
++		if( (bwt[i-1] == 'T') || (bwt[i] == 't')){
+ 			occurence$[i]= occurence$[i-1];
+ 			occurenceA[i]= occurenceA[i-1];
+ 			occurenceC[i]= occurenceC[i-1];

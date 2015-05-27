@@ -1,0 +1,17 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 17:48:17.204402900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 17:50:02.465402900 +0200
+@@ -781,10 +781,11 @@
+ 	MapIterator MapIB=BackgroundCounter.begin();
+ 	//std::cout<<(*MapI).first<<" "<<(*MapI).second.back()<<std::endl;
+ 	//std::cout<<(*MapIB).first<<" "<<(*MapIB).second.back()<<std::endl;
+-	std::cout<<" letztes "<<(*--seq.seqCounter.end()).first;
++	int k =0;
+ 	for(;MapI!=SequenceCounter.end();++MapI,++MapIB){
+ 		
+-		std::cout<<(*MapI).first<<" ";
++		std::cout<<(*MapI).first<<" "<<k<<" ";
++		++k;
+ 		modifyFET((*MapI).second,(*MapIB).second,(seq.SeqsNumber - (*MapI).second),(back.SeqsNumber - (*MapIB).second),pValue);
+ 	
+ 	

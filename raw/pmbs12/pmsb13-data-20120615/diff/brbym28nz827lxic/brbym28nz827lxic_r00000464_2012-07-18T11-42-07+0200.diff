@@ -1,0 +1,193 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-17 16:54:35.300402300 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-18 11:41:37.069609500 +0200
+@@ -12,7 +12,7 @@
+ 	IupacMaps IMaps;
+ 	unsigned int kmer_len=4;
+ 	unsigned int kmer_len_end=6;
+-	sequences.seed=60;
++	sequences.seed=100;
+ 	MapIupac(IMaps);//IupacMap for generalization
+ 	
+ 	if(argc !=3){
+@@ -39,13 +39,13 @@
+ 		//std::random_shuffle(begin(background.seqs[i]),end(background.seqs[i]));
+ 	}
+ 	
+-	std::ofstream outfile;
++	/*std::ofstream outfile;
+ 	outfile.open("test2.fasta");
+ 	write2(outfile,sequences.ids,background.seqs,Fasta());
+ 
+ 	outfile.close();
+ 	
+-	std::ofstream output;
++	std::ofstream output;*/
+ 	
+ 
+ 
+@@ -140,10 +140,10 @@
+ 		- Computes the probability of each nucleotide to appear at each position (from the top motif)
+ 		- first output
+ 	*****/
+-	String<unsigned int> replaceString;
+-	String<unsigned int> replaceStringB;
+-	BuildFrequencyMatrix(freqMatrix,seqCounter, finder, (*sequences.generalizedSortedPValue.begin()).second,sequences,IMaps, replaceString);
+-	BuildFrequencyMatrix(freqMatrixB,backCounter, finderB, (*sequences.generalizedSortedPValue.begin()).second,background,IMaps,replaceStringB);
++	//String<unsigned int> replaceString;
++	//String<unsigned int> replaceStringB;
++	BuildFrequencyMatrix(freqMatrix,seqCounter, finder, (*sequences.generalizedSortedPValue.begin()).second,sequences,IMaps);
++	BuildFrequencyMatrix(freqMatrixB,backCounter, finderB, (*sequences.generalizedSortedPValue.begin()).second,background,IMaps);
+ 	
+ 	std::cout<<(*sequences.generalizedSortedPValue.begin()).second<<std::endl;
+ 	unsigned int KmerLength = length((*sequences.generalizedSortedPValue.begin()).second);
+@@ -167,8 +167,8 @@
+ 	//std::cout<<replaceString[0]<<" "<<replaceString[1]<<" "<<replaceString[2]<<" "<<leftBoundary(sequences.intervals[replaceString[0]][0])<<" "<<rightBoundary(sequences.intervals[replaceString[0]][0]);
+ 	//replaceKmer(sequences,replaceString);
+ 	//replaceKmer(background,replaceStringB);
+-	clear(replaceString);
+-	clear(replaceStringB);
++	//clear(replaceString);
++	//clear(replaceStringB);
+ 
+ 	//PrintFastA(sequences);
+ 	//clear(sequences.SArray);
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-17 14:54:41.343402300 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 11:41:37.120609500 +0200
+@@ -91,9 +91,9 @@
+ void estimateCounter(Seq &seq,String<Iupac> temp,String<Iupac> temp2,unsigned int &counter);
+ void estimateCounter(Seq &seq,std::map<String<Iupac>,unsigned int> &generalizedKmer,String<Iupac> temp,String<Iupac> temp2,unsigned int &counter);
+ void exactGeneralizeCount(std::multimap<double,String<Iupac> > &SortedPValueG,std::map<String<Iupac>,unsigned int > &seqCounter,std::map<String<Iupac>,unsigned int > &backCounter,Finder<Index<StringSet<String<Dna5> > > > &finder,Finder<Index<StringSet<String<Dna5> > > > &finderB,Seq &seq, Seq &back,IupacMaps &IMap);
+-void FindTopKmer(Seq &seq,String<Iupac> &temp,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,String<unsigned int> &replaceString,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix);
+-void loopOverTopKmer(	Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,String<unsigned int> &replaceString);
+-void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,std::map<String<Iupac>,unsigned int > &seqCounter, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps,String<unsigned int> &replaceString);
++void FindTopKmer(Seq &seq,String<Iupac> &temp,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix);
++void loopOverTopKmer(	Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix);
++void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,std::map<String<Iupac>,unsigned int > &seqCounter, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ 
+ 
+@@ -381,32 +381,32 @@
+ 
+ 
+ 
+-void replaceKmer(   Seq &seq,
+-					String<unsigned int> &replaceString){
+-
+-	unsigned int beg =0;
+-	unsigned int endP =0;
+-	unsigned int Snumber =0;
+-
+-	//std::cout<<stringNumber<<" "<<begin<<" "<<end<<std::endl;
+-	Iterator<String<unsigned int> >::Type StringIt;
+-	StringIt = begin(replaceString);
+-	for(;StringIt!=end(replaceString);++StringIt){
+-		Snumber = *StringIt;
+-		++StringIt;
+-		beg		= *StringIt;
+-		++StringIt;
+-		endP		= *StringIt;
+-		//std::cout<<Snumber<<" "<<beg<<" "<<endP<<std::endl;
+-		for(;beg<endP;++beg)
+-		{
+-			seq.seqs[Snumber][beg]='N';
+-		}
+-			//replace(seq.seqs[*StringIt],*(++StringIt),*(++StringIt),'N');
+-	}
+-
+-
+-}
++//void replaceKmer(   Seq &seq,
++//					String<unsigned int> &replaceString){
++//
++//	unsigned int beg =0;
++//	unsigned int endP =0;
++//	unsigned int Snumber =0;
++//
++//	//std::cout<<stringNumber<<" "<<begin<<" "<<end<<std::endl;
++//	Iterator<String<unsigned int> >::Type StringIt;
++//	StringIt = begin(replaceString);
++//	for(;StringIt!=end(replaceString);++StringIt){
++//		Snumber = *StringIt;
++//		++StringIt;
++//		beg		= *StringIt;
++//		++StringIt;
++//		endP		= *StringIt;
++//		//std::cout<<Snumber<<" "<<beg<<" "<<endP<<std::endl;
++//		for(;beg<endP;++beg)
++//		{
++//			seq.seqs[Snumber][beg]='N';
++//		}
++//			//replace(seq.seqs[*StringIt],*(++StringIt),*(++StringIt),'N');
++//	}
++//
++//
++//}
+ 
+ 
+ ///////////////////////////////////
+@@ -415,7 +415,6 @@
+ 				Finder<Index<StringSet<String<Dna5> > > > &finder,
+ 				unsigned int &counter,
+ 				std::vector<int> &CounterV,
+-				String<unsigned int> &replaceString,
+ 				std::map<unsigned int,std::map<Iupac,double> > &freqMatrix){
+ 	typedef IntervalAndCargo<unsigned, unsigned> TInterval;				
+ 	clear(finder);
+@@ -460,8 +459,7 @@
+ 						unsigned int &counter,
+ 						std::vector<int> &CounterV,
+ 						IupacMaps &IMaps,
+-						std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,
+-						String<unsigned int> &replaceString){
++						std::map<unsigned int,std::map<Iupac,double> > &freqMatrix){
+ 
+ 						
+ 			String<Dna5> replace;
+@@ -477,7 +475,7 @@
+ 			freq.clear();*/
+ 			//std::cout<<" "<<*tempIt<<" ";
+ 			if((*tempIt == 'A' || *tempIt == 'C' ||*tempIt == 'G' ||*tempIt == 'T')){
+-				loopOverTopKmer(seq,temp,temp,++tempIt,finder,counter,CounterV,IMaps,freqMatrix,replaceString);//only replace the position with a wildcard
++				loopOverTopKmer(seq,temp,temp,++tempIt,finder,counter,CounterV,IMaps,freqMatrix);//only replace the position with a wildcard
+ 				return;//nach diesem schritt immer return, sonst gelangt man in eine loop
+ 			}
+ 				
+@@ -496,7 +494,7 @@
+ 					
+ 					if(tempIt+1!=end(temp)){
+ 						//std::cout<<"vor if "<<temp<<std::endl;
+-						loopOverTopKmer(seq,temp,temp,++tempIttemp,finder,counter,CounterV,IMaps,freqMatrix,replaceString);
++						loopOverTopKmer(seq,temp,temp,++tempIttemp,finder,counter,CounterV,IMaps,freqMatrix);
+ 						//std::cout<<*tempIttemp<<" tempittemp "<<std::endl;
+ 					}
+ 					//zu häufig aufgerufen
+@@ -512,7 +510,7 @@
+ 						--> FindKmer wird nur mit ganzen aufgerufen, also alle addieren, dann ist der counter auch gleich?
+ 						**/
+ 						std::vector<int> CounterV(seq.SeqsNumber+1,0);
+-						FindTopKmer(seq,temp,finder,counter,CounterV,replaceString,freqMatrix);
++						FindTopKmer(seq,temp,finder,counter,CounterV,freqMatrix);
+ 						
+ 					}
+ 					*tempIt=resetTemp;
+@@ -528,8 +526,7 @@
+ 							Finder<Index<StringSet<String<Dna5> > > > &finder,
+ 							String<Iupac> &Kmer,
+ 							Seq &seq, 
+-							IupacMaps &IMaps,
+-							String<unsigned int> &replaceString){
++							IupacMaps &IMaps){
+ 			//std::cout<<Kmer<<std::endl;
+ 			//freqMatrix -->unsigned int = position in Kmer, position 1 in map = prob. for A, pos. 2 = prob. for C...
+ 			String<Iupac> temp;	
+@@ -543,7 +540,7 @@
+ 			std::vector<int> CounterV(seq.SeqsNumber+1,0);
+ 		
+ 			
+-			loopOverTopKmer(seq,temp,Kmer,tempIt,finder,counter,CounterV,IMaps,freqMatrix,replaceString);
++			loopOverTopKmer(seq,temp,Kmer,tempIt,finder,counter,CounterV,IMaps,freqMatrix);
+ 			CounterV.clear();
+ 			//loopOver funktionier, aber jetzt wird der counter nicht mehr richtig berechnet --> fixen  + andere loop anpassen
+ 			//Durch die wildcards mehrere Vorkommen pro Sequence möglich:

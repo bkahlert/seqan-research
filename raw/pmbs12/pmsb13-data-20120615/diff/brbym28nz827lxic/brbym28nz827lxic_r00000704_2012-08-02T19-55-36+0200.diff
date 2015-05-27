@@ -1,0 +1,75 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp ./sandbox/meyerclp/apps/dreme/dreme_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-08-02 14:56:30.618793700 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme_test.cpp	2012-08-02 19:55:15.079593700 +0200
+@@ -856,6 +856,63 @@
+ }
+ 
+ 
++SEQAN_DEFINE_TEST(test_AlignPWMs){
++
++	using namespace seqan;
++
++	std::map<unsigned int,std::map<Iupac,double> >  freqMatrix1;
++	std::map<unsigned int,std::map<Iupac,double> >  freqMatrix2;
++
++	freqMatrix1[0]['A']=0.66;
++	freqMatrix1[0]['C']=0.3;
++	freqMatrix1[0]['G']=0.02;
++	freqMatrix1[0]['T']=0.02;
++
++	freqMatrix1[1]['A']=0.03;
++	freqMatrix1[1]['C']=0.03;
++	freqMatrix1[1]['G']=0.04;
++	freqMatrix1[1]['T']=0.9;
++
++	freqMatrix1[2]['A']=0.3;
++	freqMatrix1[2]['C']=0.3;
++	freqMatrix1[2]['G']=0.3;
++	freqMatrix1[2]['T']=0.1;
++
++	freqMatrix1[3]['A']=0.45;
++	freqMatrix1[3]['C']=0.05;
++	freqMatrix1[3]['G']=0.05;
++	freqMatrix1[3]['T']=0.45;
++
++	freqMatrix1[4]['A']=0.65;
++	freqMatrix1[4]['C']=0.025;
++	freqMatrix1[4]['G']=0.3;
++	freqMatrix1[4]['T']=0.025;
++	/*********************/
++
++	freqMatrix2[0]['A']=0.33;
++	freqMatrix2[0]['C']=0.33;
++	freqMatrix2[0]['G']=0.33;
++	freqMatrix2[0]['T']=0.01;
++
++	freqMatrix2[1]['A']=0.4;
++	freqMatrix2[1]['C']=0.1;
++	freqMatrix2[1]['G']=0.1;
++	freqMatrix2[1]['T']=0.4;
++
++	freqMatrix2[2]['A']=0.3;
++	freqMatrix2[2]['C']=0.05;
++	freqMatrix2[2]['G']=0.6;
++	freqMatrix2[2]['T']=0.05;
++
++	String<double> Mmax;
++
++	Mmax=AlignPWMs(freqMatrix1,freqMatrix2);
++	std::cout<<Mmax[0]<<" "<<Mmax[1]<<" "<<Mmax[2];
++
++
++}
++
++
+ SEQAN_BEGIN_TESTSUITE(dreme_test)
+ {
+     // Call tests.
+@@ -871,6 +928,7 @@
+ 	SEQAN_CALL_TEST(test_ChIPSeq_BuildFrequency);
+ 	SEQAN_CALL_TEST(test_PWMClustering);
+ 	SEQAN_CALL_TEST(test_ComparePWM);
++	SEQAN_CALL_TEST(test_AlignPWMs)
+ }
+ SEQAN_END_TESTSUITE
+ 

@@ -1,0 +1,32 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-17 12:09:00.404595100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-17 12:11:51.441595100 +0200
+@@ -38,13 +38,13 @@
+ 		//std::random_shuffle(begin(background.seqs[i]),end(background.seqs[i]));
+ 	}
+ 	
+-	std::ofstream outfile;
++	/*std::ofstream outfile;
+ 	outfile.open("test2.fasta");
+ 	write2(outfile,sequences.ids,background.seqs,Fasta());
+ 
+ 	outfile.close();
+ 
+-	std::ofstream output;
++	std::ofstream output;*/
+ 	
+ 
+ 
+@@ -122,10 +122,10 @@
+ 	std::map<unsigned int,std::map<Iupac,double> > freqMatrix;
+ 	std::map<unsigned int,std::map<Iupac,double> > freqMatrixB;
+ 
+-	output.open("output.fasta",std::ios::out|std::ios::app);
++	/*output.open("output.fasta",std::ios::out|std::ios::app);
+ 	write(output,(*sequences.generalizedSortedPValue.begin()).second);
+ 	write(output,"   ");
+-	output.close();
++	output.close();*/
+ 
+ 	/*****
+ 		- Computes the probability of each nucleotide to appear at each position (from the top motif)

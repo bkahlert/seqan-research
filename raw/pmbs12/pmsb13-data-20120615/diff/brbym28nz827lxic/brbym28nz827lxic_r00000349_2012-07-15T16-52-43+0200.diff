@@ -1,0 +1,44 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 16:49:00.422402900 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-15 16:52:41.789402900 +0200
+@@ -80,7 +80,7 @@
+ void estimateCounter(Seq &seq,std::map<String<Iupac>,unsigned int> &generalizedKmer,String<Iupac> temp,String<Iupac> temp2,unsigned int &counter);
+ void exactGeneralizeCount(std::multimap<double,String<Iupac> > &SortedPValueG,std::map<String<Iupac>,unsigned int > &seqCounter,std::map<String<Iupac>,unsigned int > &backCounter,Finder<Index<StringSet<String<Dna5> > > > &finder,Finder<Index<StringSet<String<Dna5> > > > &finderB,Seq &seq, Seq &back,IupacMaps &IMap);
+ void FindTopKmer(Seq &seq,String<Iupac> &temp,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,String<unsigned int> &replaceString,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix);
+-void loopOverTopKmer(	Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,unsigned int &pos,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap,std::map<Iupac,double> &freq,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,String<unsigned int> &replaceString);
++void loopOverTopKmer(	Seq &seq,String<Iupac> &temp,String<Iupac> &Kmer,unsigned int &pos,Iterator<String<Iupac> >::Type &tempIt,Finder<Index<StringSet<String<Dna5> > > > &finder,unsigned int &counter,std::vector<int> &CounterV,IupacMaps &IMap,std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,String<unsigned int> &replaceString);
+ void BuildFrequencyMatrix(std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,std::map<String<Iupac>,unsigned int > &seqCounter, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Iupac> &Kmer,Seq &seq, IupacMaps &IMaps,String<unsigned int> &replaceString);
+ void replaceKmer(Seq &seq,unsigned int stringNumber, unsigned int begin, unsigned int end);
+ 
+@@ -436,7 +436,7 @@
+ 						unsigned int &counter,
+ 						std::vector<int> &CounterV,
+ 						IupacMaps &IMaps,
+-						std::map<Iupac,double> &freq,
++						
+ 						std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,
+ 						String<unsigned int> &replaceString){
+ 
+@@ -520,9 +520,9 @@
+ 			unsigned int counter=0;
+ 			unsigned int pos = 0;
+ 			std::vector<int> CounterV(seq.SeqsNumber+1,0);
+-			std::map<Iupac,double> freq;//4= ACGT
++		
+ 			
+-			loopOverTopKmer(seq,temp,Kmer,pos,tempIt,finder,counter,CounterV,IMaps,freq,freqMatrix,replaceString);
++			loopOverTopKmer(seq,temp,Kmer,pos,tempIt,finder,counter,CounterV,IMaps,freqMatrix,replaceString);
+ 			
+ 			//loopOver funktionier, aber jetzt wird der counter nicht mehr richtig berechnet --> fixen  + andere loop anpassen
+ 			//Durch die wildcards mehrere Vorkommen pro Sequence möglich:
+@@ -538,9 +538,8 @@
+ 				
+ 
+ 				for( unsigned int k =0;k< length(temp);++k){
+-					std::cout<<freqMatrix[k]['A']<<" "<<counter<<"  ";
++					
+ 					freqMatrix[k]['A']=freqMatrix[k]['A']/counter; 
+-					std::cout<<freqMatrix[k]['A']<<std::endl;
+ 					freqMatrix[k]['C']=freqMatrix[k]['C']/counter; 
+ 					freqMatrix[k]['G']=freqMatrix[k]['G']/counter; 
+ 					freqMatrix[k]['T']=freqMatrix[k]['T']/counter; 

@@ -1,0 +1,77 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-16 13:08:33.713106100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-08-16 15:43:41.514106100 +0200
+@@ -172,11 +172,11 @@
+ 			BuildFrequencyMatrix( finder, (*sequences.SortedPValue.begin()).second,sequences,IMaps);
+ 			BuildFrequencyMatrix( finderB, (*sequences.SortedPValue.begin()).second,background,IMaps);
+ 			std::cout<<(*sequences.SortedPValue.begin()).second<<std::endl;
+-			bool foreground = true;
++			/*bool foreground = true;
+ 			PrintMap(sequences,foreground);
+ 
+ 			foreground=false;
+-			PrintMap(background,foreground);
++			PrintMap(background,foreground);*/
+ 			saveData(sequences,PWM,sequences.c);
+ 			
+ 			sequences.pValue=sequences.SortedPValue.begin()->first;
+@@ -252,8 +252,8 @@
+ 	while(sequences.pValue<0.05 && sequences.c<5);
+ 	String<Cluster> cluster;
+ 	PWMClustering(sequences.allPWMs,cluster);
+-	std::cout<<"ComputeGap"<<std::endl;
+-	computeGap(sequences.allPWMs,cluster);
++	std::cout<<"ComputeGapStat"<<std::endl;
++	computeGapStat(sequences.allPWMs,cluster);
+ 	
+ 	clear(cluster);
+ 	/***
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-16 15:38:52.386306100 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-16 15:43:41.529706100 +0200
+@@ -158,8 +158,11 @@
+ double computeDr(Cluster &cluster,std::vector<std::vector<String<double> > > copyCompare);
+ double computeWk(int n,String<Cluster> &cluster);
+ void computeReferenceData(String< std::map<unsigned int,std::map<Iupac,double> > > &Reference,unsigned allPWMsLength,unsigned PWMLength );
+-void computeGap(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs, String<Cluster> &observedCluster);
++void computeGapStat(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs, String<Cluster> &observedCluster);
+ void compute_l_quer(String< std::map<unsigned int,std::map<Iupac,double> > > &Reference, String<Cluster> &cluster, String<double> &l_quer_for_k,String<String<double> > &allWk,int B,unsigned allPWMsLength, unsigned PWMLength);
++void computeGap(String<double> &l_quer_for_k,String<Cluster> &observedCluster,String<double> &Gap,unsigned allPWMsLength);
++
++
+ 
+ void readFastA( struct Seq &seq, 
+ 				CharString fname){
+@@ -1128,7 +1131,17 @@
+ 
+ }
+ 
+-void computeGap(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs, String<Cluster> &observedCluster){
++void computeGap(String<double> &l_quer_for_k,String<Cluster> &observedCluster,String<double> &Gap,unsigned allPWMsLength){
++
++	std::cout<<"Gap"<<std::endl;
++	for(unsigned k=0;k<allPWMsLength-1;++k){
++		std::cout<<l_quer_for_k[k]<<" "<<log(observedCluster[k].Wk)<<" ";
++		Gap[k]=l_quer_for_k[k]-log(observedCluster[k].Wk);
++		std::cout<<Gap[k]<<std::endl;
++	}
++
++}
++void computeGapStat(String< std::map<unsigned int,std::map<Iupac,double> > > &allPWMs, String<Cluster> &observedCluster){
+ 
+ 	String<Cluster> cluster;
+ 	String<String<double> > allWk;
+@@ -1158,12 +1171,7 @@
+ 	/******************
+ 		Gap berechnen
+ 	******************/
+-	std::cout<<"Gap"<<std::endl;
+-	for(unsigned k=0;k<allPWMsLength-1;++k){
+-		std::cout<<l_quer_for_k[k]<<" "<<log(observedCluster[k].Wk)<<" ";
+-		Gap[k]=l_quer_for_k[k]-log(observedCluster[k].Wk);
+-		std::cout<<Gap[k]<<std::endl;
+-	}
++	computeGap(l_quer_for_k,observedCluster,Gap,allPWMsLength);
+ 
+ 
+ 	/******************

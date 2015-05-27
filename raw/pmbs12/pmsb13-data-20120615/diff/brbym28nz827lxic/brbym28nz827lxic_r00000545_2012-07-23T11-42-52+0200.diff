@@ -1,0 +1,36 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-19 16:39:02.278797200 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 11:42:38.865806800 +0200
+@@ -62,6 +62,13 @@
+ 	initST(sequences);
+ 	initST(background);
+ 
++	typedef Iterator<StringSet<String<Dna5> >, Standard>::Type TSeqIter;
++	TSeqIter seqItbegin=begin(sequences.seqs, Standard());
++	TSeqIter seqItend=end(sequences.seqs, Standard());
++	absFreqOfLettersInSetOfSeqs(sequences.frequencies,seqItbegin,seqItend);
++	std::cout<<length(sequences.frequencies)<<" "<<sequences.frequencies[0];
++	system("PAUSE");
++
+ 	do{
+ 		std::cout<<"new "<<std::endl;
+ 	
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-19 16:39:04.874797200 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 11:34:29.820806800 +0200
+@@ -10,6 +10,7 @@
+ #include <seqan/file.h>
+ #include <seqan/find.h>
+ #include <seqan/stream.h>
++#include <seqan/find_motif.h>
+ #include <seqan/index.h>
+ #include <seqan/sequence.h>
+ #include <seqan/misc/misc_interval_tree.h>
+@@ -33,6 +34,7 @@
+ 	
+ 	std::multimap<double,String<Dna5> > SortedPValue;
+ 	std::multimap<double,String<Iupac> > generalizedSortedPValue;
++	FrequencyDistribution<Dna5> frequencies;
+ 
+ 	/**
+ 		In BuildFrequencyMatrix werden die gefundenen Intervalle des Top-Motivs an Intervalls gehängt

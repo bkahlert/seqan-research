@@ -1,0 +1,92 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 11:46:58.052806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 12:30:16.978806800 +0200
+@@ -62,13 +62,16 @@
+ 	initST(sequences);
+ 	initST(background);
+ 
+-	typedef Iterator<StringSet<String<Dna5> >, Standard>::Type TSeqIter;
+-	TSeqIter seqItbegin=begin(sequences.seqs, Standard());
+-	TSeqIter seqItend=end(sequences.seqs, Standard());
+-	absFreqOfLettersInSetOfSeqs(sequences.frequencies,seqItbegin,seqItend);
+-	normalize(sequences.frequencies);
+-	std::cout<<length(sequences.frequencies)<<" "<<sequences.frequencies[0]<<" "<<sequences.frequencies[1]<<" "<<sequences.frequencies[2]<<" "<<sequences.frequencies[3]<<" "<<sequences.frequencies[4];
+-	system("PAUSE");
++
++	/****
++	Hintergrund-Wahrscheinlichkeit
++	****/
++	priorFreq(sequences);
++
++	/****
++	PSSM
++	****/
++	
+ 
+ 	do{
+ 		std::cout<<"new "<<std::endl;
+@@ -181,7 +184,19 @@
+ 			sequences.pValue=sequences.SortedPValue.begin()->first;
+ 
+ 		}
+-		
++
++
++
++	std::map<unsigned int,std::map<Iupac,double> > weightMatrix;
++	weightMatrix[0]['A'] = log(freqMatrix[0]['A']/sequences.frequencies[0]);
++	weightMatrix[0]['C'] = log(freqMatrix[0]['C']/sequences.frequencies[1]);
++	weightMatrix[0]['G'] = log(freqMatrix[0]['G']/sequences.frequencies[2]);
++	weightMatrix[0]['T'] = log(freqMatrix[0]['T']/sequences.frequencies[3]);
++	
++	std::cout<<freqMatrix[0]['A']<<" "<<freqMatrix[0]['C']<<" "<<freqMatrix[0]['G']<<" "<<freqMatrix[0]['T']<<std::endl;
++	std::cout<<weightMatrix[0]['A']<<" "<<weightMatrix[0]['C']<<" "<<weightMatrix[0]['G']<<" "<<weightMatrix[0]['T'];
++
++	system("PAUSE");
+ 		
+ 		//std::cout<<"first "<<(*sequences.generalizedSortedPValue.begin()).first<<std::endl;
+ 		/*****
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 11:34:29.820806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 12:30:16.990806800 +0200
+@@ -64,6 +64,7 @@
+ void PrintFastA(TStream & stream, Seq &seq);
+ void initST(Seq &seq);
+ void PrintST(Seq &seq);
++void priorFreq(Seq &seq);
+ void initExactKmer(Seq &seq,Seq &back,unsigned int kmer_len,unsigned int kmer_len_end);
+ void CountKmer(Seq &seq, Finder<Index<StringSet<String<Dna5> > > > &finder, String<Dna5> &Kmer);
+ void CountKmer(std::map<String<Iupac>,unsigned int > &Dna5CounterMap, Finder<Index<StringSet<String<Iupac> > > > &finder, String<Iupac> &Kmer,Seq &seq,IupacMaps &IMap);
+@@ -176,6 +177,21 @@
+ 	}
+ 
+ }
++
++/***
++	Berechnet relative Hintergrund-Wahrscheinlichkeit von ACGT
++***/
++void priorFreq(Seq &seq){
++
++	typedef Iterator<StringSet<String<Dna5> >, Standard>::Type TSeqIter;
++	TSeqIter seqItbegin=begin(seq.seqs, Standard());
++	TSeqIter seqItend=end(seq.seqs, Standard());
++	absFreqOfLettersInSetOfSeqs(seq.frequencies,seqItbegin,seqItend);
++	normalize(seq.frequencies);
++
++}
++
++
+ //iniate Search in Fore- and Background
+ void initExactKmer( Seq &seq,
+ 					Seq &back,
+@@ -545,7 +561,9 @@
+ 
+ }
+ 
+-
++/***
++	Computes PWM 
++***/
+ void BuildFrequencyMatrix(  std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,
+ 							Finder<Index<StringSet<String<Dna5> > > > &finder,
+ 							String<Iupac> &Kmer,

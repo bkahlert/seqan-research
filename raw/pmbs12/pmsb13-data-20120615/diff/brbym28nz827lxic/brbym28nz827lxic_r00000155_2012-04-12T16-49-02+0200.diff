@@ -1,0 +1,78 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Indices.cpp ./sandbox/meyerclp/demos/Indices.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/demos/Indices.cpp	2012-04-12 16:02:32.930384400 +0200
++++ ./sandbox/meyerclp/demos/Indices.cpp	2012-04-12 16:49:00.504384400 +0200
+@@ -50,35 +50,46 @@
+ 
+ 
+ 
+-	typedef String<char> TString;
+-	TString seq = "tobeornottobe";
++	//typedef String<char> TString;
++	//TString seq = "tobeornottobe";
+ 
+-	typedef Index<TString> TIndex;
+-	TIndex myIndex(seq);
+-	Iterator<TIndex, TopDown<ParentLinks<> > >::Type it(myIndex);
+-	bool a= true;
+-	while(a){
+-		
+-		
+-		if(goDown(it)){
+-			::std::cout<<representative(it)<<std::endl;
+-			
+-		}
+-		else{
+-			if(goRight(it))
+-				::std::cout<<representative(it)<<std::endl;
+-			else{
+-				while(goUp(it)){
+-					if(goRight(it)){
+-						::std::cout<<representative(it)<<std::endl;
+-						break;
+-					}
+-					a=false;
+-
+-				}
+-			}
+-		}
+-	}
++	//typedef Index<TString> TIndex;
++	//TIndex myIndex(seq);
++	//Iterator<TIndex, TopDown<ParentLinks<> > >::Type it(myIndex);
++	//bool a= true;
++	//while(a){
++	//	
++	//	
++	//	if(goDown(it)){
++	//		::std::cout<<representative(it)<<std::endl;
++	//		
++	//	}
++	//	else{
++	//		if(goRight(it))
++	//			::std::cout<<representative(it)<<std::endl;
++	//		else{
++	//			while(goUp(it)){
++	//				if(goRight(it)){
++	//					::std::cout<<representative(it)<<std::endl;
++	//					break;
++	//				}
++	//				a=false;
++
++	//			}
++	//		}
++	//	}
++	//}
++
++
++
++
++	typedef Index<DnaString, IndexQGram< OneGappedShape > > TIndex;
++	TIndex index("CATGATTACATA");
++	hash(indexShape(index),"AT-T");
++	for(unsigned int i =0; i < length(getOccurrences(index, indexShape(index)));++i)
++		std::cout<<getOccurrences(index, indexShape(index))[i];
++
++	
+ 
+ 	return 0; 
+ 

@@ -1,0 +1,12 @@
+1.0.0 (September 20, 2006)
+	
+	* Initial release
+
+1.1.0 (February 1, 2007)
+	* Allows for an option for batch processing from a file
+	* Updated to use drand48() routines for more uniformly
+        * distributed random numbers
+
+2.0.0 (March 1, 2007)
+	* Allows for creating random Amino Acid motifs using
+          PAM scoring matrices

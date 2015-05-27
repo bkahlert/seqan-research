@@ -1,0 +1,11 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/1bmlqcp2t8t0hfjr_stats.txt -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/userdata/1bmlqcp2t8t0hfjr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/Bobby/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/arsenew/demos/task1.cpp ./sandbox/arsenew/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/arsenew/demos/task1.cpp	2012-04-12 17:02:33.034792300 +0200
++++ ./sandbox/arsenew/demos/task1.cpp	2012-04-27 17:31:52.930878800 +0200
+@@ -22,6 +22,7 @@
+ 	}
+ 	std:: cout << sequence << std:: endl;
+ 	return 0;
++}
+ 
+ 
+ 

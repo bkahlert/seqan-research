@@ -1,0 +1,74 @@
+********************************************************************
+
+                  SOFTWAREPRAKTIKUM - VERLAUF                     
+
+********************************************************************
+
+
+08.05.2012 
+
+- softmasking.cpp : Maskieren eines Genoms, wenn ein int array gegeben ist. Die maskierte Sequenz wird in eine neue Datei geschrieben und gespeichert.
+  das int array im programm ist erstmal provisorisch und mit willkürlichen Zahlen gefüllt, um die Richtigkeit des Programms zu überprüfen.
+  Später wird der masking Funktion ein Array mit den Positionen der relevanten qGramme übergeben.
+  Außerdem wird zur Zeit nur die erste Postion in der Sequenz markiert. Später werden pos+q maskiert.
+- weitere Versuche countOccurrences/ getOccurrences zu implementieren und das Problem mit QGramCounts Fibre auf Strings zu lösen.
+
+
+
+
+09.05.2012
+
+- Meeting mit Jochen, um Fragen/Probleme zu klären.
+- An einer Funktion 'countQGrams' zum Zählen der qGramme gearbeitet (countOcc.cpp). Dabei auf ein Problem beim hashen gestoßen, dessen Lösung aber noch nicht gefunden.
+- Planung des nächsten Schritts -> Histogramm.
+  Wenn countQGrams funktioniert: qGramme und ihre Trefferanzahl als Wertepaare speichern, so dass die Anzahl der qGramme, die die gleiche Trefferanzahl haben 
+  zusammengenommen werden.
+  Bsp.: <#qGramme, #Treffer> = <10, 3>, <2, 50>, etc.
+  Diese sollen dann als Histogramm geplottet werden, um q zu ermitteln.
+
+
+10.05.2012
+
+- svn - Problem gehabt.Deshalb alle uploads gelöscht und 
+  nochmal commited.
+  -> Revision 62 ist nun die erste relevante Version.
+- Lösen des gestrigen Problems
+  -> countQGrams Funktion zählt nun die Anzahl der Vorkommen pro qGramm und speichert die Occurrences in einem String<int>
+
+
+14.05.2012
+
+- Trefferanzahl für q:[10-13] in txt-Dateien gespeichert und als Histogramme dargestellt
+- Analyse der Histogramme, um Threshold für überrepräsentierte q-Gramme festzustellen
+- da nur bis q=13 geplottet, Threshold >=25 festgelegt - kann sich ändern, wenn mittels OpenAdressing für größere q Histogramme erstellt wurden.
+
+
+15.05.2012
+
+- Positionen der überrepräsentierten q-Gramme in String<int> counts ermittelt 
+- Ermittlung der Positionen der überrepräsentierten q-Gramme im Genom mit getOccurrences -> funktioniert aber noch nicht ganz
+- Merging von readsin.cpp und countocc.cpp und Anlegen des QGramindex über reads
+
+
+16.05.2012
+
+- Progress Meeting mit Jochen
+- Funktionen zur Ermittlung der Repeatpositionen im Genom und in den Reads fertiggestellt
+
+
+21.05.2012
+
+- softmasking des Genoms und Herausschreiben der Repeatpositionen im Read quasi fertig
+- Testen des Programms mit anderen Inputdateien -> Probleme
+- erneut Histogramme für q :[5-15,20,30,40,50] 
+  -> für q:[20,30,40,50] max Trefferanzahl 1, aber in den meisten Fällen gar keine Treffer
+
+
+
+25.05.2012
+
+- mein fertiges Programm heißt repeatlocator.cpp und befindet sich in demos/. Dort sind auch die fastA Dateien hinterlegt,
+  die ich für Testläufe meines Programms verwendet habe
+
+- der SeqAn-Test befindet sich in tests/repeatLocator/  (test_repeatLocator.cpp und test_repeatLocator.h)
+

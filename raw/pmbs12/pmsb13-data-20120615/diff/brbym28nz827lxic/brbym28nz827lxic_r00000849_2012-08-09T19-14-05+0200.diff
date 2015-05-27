@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-08-09 17:31:58.769598800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-08-09 19:14:01.293598800 +0200
+@@ -1064,7 +1064,8 @@
+ 		for(unsigned j=0;j<PWMLength;++j){
+ 			ACGT="ACGT";
+ 			uniDouble=0;
+-			for(unsigned k=0;k<4;++k){
++			for(unsigned k=0;k<3;++k){
++				
+ 				Pdf<Uniform<int> > uniformInt(0, length(ACGT)-1);
+ 			
+ 				Pdf<Uniform<double> > uniformDouble(0, 0.99-uniDouble);
+@@ -1074,6 +1075,7 @@
+ 				std::cout<<"Pos: "<<ACGT[pos]<<" "<<uniDouble<<" "<<ReferenzFreq[j][ACGT[pos]]<<std::endl;
+ 				erase(ACGT,pos);
+ 			}
++			ReferenzFreq[j][ACGT[0]]=1-uniDouble;
+ 			std::cout<<std::endl;
+ 	//		ReferenzFreq[j]["zufallACGT"]="zufallvon 0 bis 0.99";
+ 	//		ReferenzFreq[j]["zufallACG"]="zufallvon 0 bis 1-[zufallACGT]";

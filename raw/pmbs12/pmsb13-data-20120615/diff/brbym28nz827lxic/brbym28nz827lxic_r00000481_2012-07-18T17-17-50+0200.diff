@@ -1,0 +1,71 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 17:10:07.061609500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-18 17:17:49.200609500 +0200
+@@ -834,7 +834,7 @@
+ 	
+ 	
+ 
+-	std::cout<<"begin Fisher "<<seq.generalizedKmer.size()<<" "<<back.generalizedKmer.size()<<std::endl;
++	//std::cout<<"begin Fisher "<<seq.generalizedKmer.size()<<" "<<back.generalizedKmer.size()<<std::endl;
+ 	
+ 	if(seq.generalizedKmer.size()==0)	
+ 		return 2;
+@@ -1002,7 +1002,7 @@
+ 	//seq.generalizedSortedPValue.insert(seq.SortedPValue.begin(),seq.SortedPValue.end());
+ 	double topPValue = FisherExactTest(seq,back,generalizedSortedPValueTemp);// lowest pValue from the first generalization
+ 	double topPValueOld =seq.SortedPValue.begin()->first;//lowest pValue before generalization
+-	system("PAUSE");
++	
+ 	do{//only start a new round, if the top PValue is an improvement of the old one
+ 		
+ 		
+@@ -1216,14 +1216,16 @@
+ 	if(seq.seqCounter.find(temp2)!=seq.seqCounter.end()){//falls temp2 ein altes motiv ist, hat es einen counter
+ 		counter= RE1+ seq.seqCounter.find(temp2)->second - (RE1*seq.seqCounter.find(temp2)->second)/seq.SeqsNumber;
+ 			//std::cout<<temp<<" "<<temp2<<" "<<RE1<<"  "<<SequenceCounter.find(temp2)->second.back()<<" "<<counter<<std::endl;
+-		if(counter>seq.SeqsNumber) std::cout<<"if "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" "<<seq.seqCounter.find(temp2)->second<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
+-		
++		if(counter>seq.SeqsNumber){ std::cout<<"if "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" "<<seq.seqCounter.find(temp2)->second<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
++			system("PAUSE");
++		}
+ 	}
+ 	else{
+ 		counter=RE1;//RE2=0, da noch nicht vorhanden
+ 		//std::cout<<"else "<<counter<<std::endl;
+-		if(counter>seq.SeqsNumber) std::cout<<"else "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
+-	
++		if(counter>seq.SeqsNumber){ std::cout<<"else "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
++			system("PAUSE");
++		}
+ 	}
+ 	
+ }
+@@ -1249,18 +1251,24 @@
+ 	if(seq.seqCounter.find(temp2)!=seq.seqCounter.end()){// if temp2 is in SequenceCounter do the same as above --> has no wildcard
+ 		counter= RE1+ seq.seqCounter.find(temp2)->second- (RE1*seq.seqCounter.find(temp2)->second)/seq.SeqsNumber;
+ 		//std::cout<<temp<<" "<<temp2<<" "<<RE1<<"  "<<SequenceCounter.find(temp2)->second.back()<<" "<<counter<<std::endl;
+-		if(counter>seq.SeqsNumber) std::cout<<"if "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" "<<seq.seqCounter.find(temp2)->second<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
+-		
++		if(counter>seq.SeqsNumber){ std::cout<<"if "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" "<<seq.seqCounter.find(temp2)->second<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
++			system("PAUSE");
++		}
+ 	}
+ 		
+ 	else if(generalizedKmer.find(temp2)!=generalizedKmer.end()){//if temp2 has a wildcard and is found in generalizedKmer
+ 		counter= RE1+ generalizedKmer.find(temp2)->second - (RE1*generalizedKmer.find(temp2)->second)/seq.SeqsNumber;
+ 		//std::cout<<temp<<" "<<temp2<<" "<<RE1<<"  "<<generalizedKmer.find(temp2)->second<<" "<<counter<<std::endl;
+-		if(counter>seq.SeqsNumber) std::cout<<"elif "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" "<<generalizedKmer.find(temp2)->second<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
++		if(counter>seq.SeqsNumber){ std::cout<<"elif "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" "<<generalizedKmer.find(temp2)->second<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
++			system("PAUSE");
++		}
++		
+ 	}
+ 	else{//if temp2 is not found
+ 		counter= RE1;//RE2=0
+-		if(counter>seq.SeqsNumber) std::cout<<"else "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
++		if(counter>seq.SeqsNumber){ std::cout<<"else "<<counter<<" "<<temp<<" "<<RE1<<" "<<temp2<<" SeqsNumer "<<seq.SeqsNumber<<std::endl;
++				system("PAUSE");
++		}
+ 	}
+ }
+ 

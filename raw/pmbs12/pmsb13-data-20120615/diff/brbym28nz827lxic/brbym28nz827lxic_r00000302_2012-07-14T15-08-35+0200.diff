@@ -1,0 +1,38 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-14 15:05:56.940399400 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-14 15:08:34.148399400 +0200
+@@ -400,7 +400,7 @@
+ 				String<unsigned int> &replaceString){
+ 
+ 	clear(finder);
+-	//std::cout<<temp<<" vor-while"<<std::endl;
++	std::cout<<temp<<" vor-while"<<std::endl;
+ 	while(find(finder,temp)){//search the current Kmer in all sequences
+ 		//std::cout<<" "<<temp<<" "<<Kmer<<" "<<*replaceIt<<std::endl;
+ 		//std::cout<<'[' <<beginPosition(finder)<<','<<endPosition(finder)<<")\t"<<infix(finder)<<std::endl;//Debug
+@@ -463,7 +463,7 @@
+ 					if(tempIt+1!=end(temp)){
+ 						loopOverTopKmer(seq,temp,temp,++posTemp,++tempIttemp,finder,counter,CounterV,IMaps,freq,freqMatrix,replaceString);
+ 					}
+-					std::cout<<temp<<" ";
++					
+ 					FindTopKmer(seq,temp,finder,counter,CounterV,replaceString);
+ }
+ 
+@@ -504,14 +504,14 @@
+ 			CounterV.clear();
+ 				
+ 			if(counter>0){
+-				std::cout<<freq['A']<< " "<<freq['C']<< " "<<freq['G']<< " "<<freq['T']<<" "<<counter<<std::endl;
++				std::cout<<freq['A']<< " "<<freq['C']<< " "<<freq['G']<< " "<<freq['T']<<" >0 "<<counter<<std::endl;
+ 				freq['A']=freq['A']/counter;
+ 				freq['C']=freq['C']/counter;
+ 				freq['G']=freq['G']/counter;
+ 				freq['T']=freq['T']/counter;
+ 				}
+ 			else{
+-				std::cout<<freq['A']<< " "<<freq['C']<< " "<<freq['G']<< " "<<freq['T']<<" "<<counter<<std::endl;
++				std::cout<<freq['A']<< " "<<freq['C']<< " "<<freq['G']<< " "<<freq['T']<<" =0 "<<counter<<std::endl;
+ 				freqMatrix.clear();
+ 				}
+ 				freqMatrix[pos]=freq;

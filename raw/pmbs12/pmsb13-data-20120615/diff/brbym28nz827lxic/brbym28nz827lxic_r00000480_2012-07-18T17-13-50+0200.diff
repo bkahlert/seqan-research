@@ -1,0 +1,15 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-18 12:13:22.717609500 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-18 17:13:48.919609500 +0200
+@@ -163,7 +163,11 @@
+ 		sequences.seqCounter.clear();
+ 		sequences.SortedPValue.clear();
+ 		sequences.SortedPValueReversed.clear();
++		background.generalizedKmer.clear();
+ 		background.seqCounter.clear();
++		background.SortedPValue.clear();
++		background.SortedPValueReversed.clear();
++		
+ 		//std::cout<<replaceString[0]<<" "<<replaceString[1]<<" "<<replaceString[2]<<" "<<leftBoundary(sequences.intervals[replaceString[0]][0])<<" "<<rightBoundary(sequences.intervals[replaceString[0]][0]);
+ 		//replaceKmer(sequences,replaceString);
+ 		//replaceKmer(background,replaceStringB);

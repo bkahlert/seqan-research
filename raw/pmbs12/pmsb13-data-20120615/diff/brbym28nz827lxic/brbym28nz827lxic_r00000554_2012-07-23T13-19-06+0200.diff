@@ -1,0 +1,192 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp ./sandbox/meyerclp/apps/dreme/dreme.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 13:06:34.786806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.cpp	2012-07-23 13:19:04.017806800 +0200
+@@ -112,8 +112,8 @@
+ 		/*****
+ 			- if there is not a single pValue<treshold exit the programm
+ 		*****/
+-		std::map<unsigned int,std::map<Iupac,double> > freqMatrix;
+-		std::map<unsigned int,std::map<Iupac,double> > freqMatrixB;
++		
++		
+ 		Finder<Index<StringSet<String<Dna5> > > > finder(sequences.SArray);
+ 		Finder<Index<StringSet<String<Dna5> > > > finderB(background.SArray);//finder ins struct
+ 		sequences.pValue=0;
+@@ -146,14 +146,14 @@
+ 			output<<(*sequences.generalizedSortedPValue.begin()).first;
+ 			write(output,"   ");
+ 			output.close();
+-			BuildFrequencyMatrix(freqMatrix, finder, (*sequences.generalizedSortedPValue.begin()).second,sequences,IMaps);
+-			BuildFrequencyMatrix(freqMatrixB, finderB, (*sequences.generalizedSortedPValue.begin()).second,background,IMaps);
++			BuildFrequencyMatrix(finder, (*sequences.generalizedSortedPValue.begin()).second,sequences,IMaps);
++			BuildFrequencyMatrix(finderB, (*sequences.generalizedSortedPValue.begin()).second,background,IMaps);
+ 			std::cout<<(*sequences.generalizedSortedPValue.begin()).second<<std::endl;
+ 			bool foreground = true;
+-			PrintMap(freqMatrix,foreground);
++			PrintMap(sequences,foreground);
+ 
+ 			foreground=false;
+-			PrintMap(freqMatrixB,foreground);
++			PrintMap(background,foreground);
+ 
+ 			
+ 			sequences.pValue=sequences.generalizedSortedPValue.begin()->first;
+@@ -167,14 +167,14 @@
+ 			output<<(*sequences.SortedPValue.begin()).first;
+ 			write(output,"   ");
+ 			output.close();
+-			BuildFrequencyMatrix(freqMatrix, finder, (*sequences.SortedPValue.begin()).second,sequences,IMaps);
+-			BuildFrequencyMatrix(freqMatrixB, finderB, (*sequences.SortedPValue.begin()).second,background,IMaps);
++			BuildFrequencyMatrix( finder, (*sequences.SortedPValue.begin()).second,sequences,IMaps);
++			BuildFrequencyMatrix( finderB, (*sequences.SortedPValue.begin()).second,background,IMaps);
+ 			std::cout<<(*sequences.SortedPValue.begin()).second<<std::endl;
+ 			bool foreground = true;
+-			PrintMap(freqMatrix,foreground);
++			PrintMap(sequences,foreground);
+ 
+ 			foreground=false;
+-			PrintMap(freqMatrixB,foreground);
++			PrintMap(background,foreground);
+ 
+ 			
+ 			sequences.pValue=sequences.SortedPValue.begin()->first;
+@@ -184,7 +184,11 @@
+ 		/***
+ 		PSSM
+ 		***/
+-		BuildWeightMatrix(sequences,freqMatrix);
++		BuildWeightMatrix(sequences);
++
++		/***
++		Information Content
++		***/
+ 	
+ 		
+ 		freqMatrix.clear();
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 13:06:34.800806800 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-23 13:19:04.035806800 +0200
+@@ -34,6 +34,7 @@
+ 	
+ 	std::multimap<double,String<Dna5> > SortedPValue;
+ 	std::multimap<double,String<Iupac> > generalizedSortedPValue;
++	std::map<unsigned int,std::map<Iupac,double> > freqMatrix;
+ 	FrequencyDistribution<Dna5> frequencies;
+ 
+ 	/**
+@@ -565,8 +566,7 @@
+ /***
+ 	Computes PWM 
+ ***/
+-void BuildFrequencyMatrix(  std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,
+-							Finder<Index<StringSet<String<Dna5> > > > &finder,
++void BuildFrequencyMatrix(  Finder<Index<StringSet<String<Dna5> > > > &finder,
+ 							String<Iupac> &Kmer,
+ 							Seq &seq, 
+ 							IupacMaps &IMaps){
+@@ -583,7 +583,7 @@
+ 			std::vector<int> CounterV(seq.SeqsNumber+1,0);
+ 		
+ 			
+-			loopOverTopKmer(seq,temp,Kmer,tempIt,finder,counter,CounterV,IMaps,freqMatrix);
++			loopOverTopKmer(seq,temp,Kmer,tempIt,finder,counter,CounterV,IMaps,seq.freqMatrix);
+ 			CounterV.clear();
+ 			//loopOver funktionier, aber jetzt wird der counter nicht mehr richtig berechnet --> fixen  + andere loop anpassen
+ 			//Durch die wildcards mehrere Vorkommen pro Sequence möglich:
+@@ -600,10 +600,10 @@
+ 				
+ 				for( unsigned int k =0;k< length(temp);++k){
+ 					
+-					freqMatrix[k]['A']=(freqMatrix[k]['A']+seq.frequencies[0])/(counter+1);//corrected freq (with pseudocount)
+-					freqMatrix[k]['C']=(freqMatrix[k]['C']+seq.frequencies[1])/(counter+1); 
+-					freqMatrix[k]['G']=(freqMatrix[k]['G']+seq.frequencies[2])/(counter+1); 
+-					freqMatrix[k]['T']=(freqMatrix[k]['T']+seq.frequencies[3])/(counter+1);  
++					seq.freqMatrix[k]['A']=(seq.freqMatrix[k]['A']+seq.frequencies[0])/(counter+1);//corrected freq (with pseudocount)
++					seq.freqMatrix[k]['C']=(seq.freqMatrix[k]['C']+seq.frequencies[1])/(counter+1); 
++					seq.freqMatrix[k]['G']=(seq.freqMatrix[k]['G']+seq.frequencies[2])/(counter+1); 
++					seq.freqMatrix[k]['T']=(seq.freqMatrix[k]['T']+seq.frequencies[3])/(counter+1);  
+ 				}
+ 	
+ 
+@@ -619,8 +619,7 @@
+ /**
+ 		Version für nicht generalisierte
+ **/
+-void BuildFrequencyMatrix(  std::map<unsigned int,std::map<Iupac,double> > &freqMatrix,
+-							Finder<Index<StringSet<String<Dna5> > > > &finder,
++void BuildFrequencyMatrix(  Finder<Index<StringSet<String<Dna5> > > > &finder,
+ 							String<Dna5> &Kmer,
+ 							Seq &seq, 
+ 							IupacMaps &IMaps){
+@@ -635,7 +634,7 @@
+ 			unsigned int counter=0;
+ 			
+ 			std::vector<int> CounterV(seq.SeqsNumber+1,0);
+-			FindTopKmer(seq,Kmer,finder,counter,CounterV,freqMatrix);
++			FindTopKmer(seq,Kmer,finder,counter,CounterV,seq.freqMatrix);
+ 			CounterV.clear();
+ 			
+ 			
+@@ -645,16 +644,16 @@
+ 				
+ 				for( unsigned int k =0;k< length(temp);++k){
+ 					
+-					freqMatrix[k]['A']=(freqMatrix[k]['A']+seq.frequencies[0])/(counter+1);//corrected freq (with pseudocount)
+-					freqMatrix[k]['C']=(freqMatrix[k]['C']+seq.frequencies[1])/(counter+1); 
+-					freqMatrix[k]['G']=(freqMatrix[k]['G']+seq.frequencies[2])/(counter+1); 
+-					freqMatrix[k]['T']=(freqMatrix[k]['T']+seq.frequencies[3])/(counter+1); 
++					seq.freqMatrix[k]['A']=(seq.freqMatrix[k]['A']+seq.frequencies[0])/(counter+1);//corrected freq (with pseudocount)
++					seq.freqMatrix[k]['C']=(seq.freqMatrix[k]['C']+seq.frequencies[1])/(counter+1); 
++					seq.freqMatrix[k]['G']=(seq.freqMatrix[k]['G']+seq.frequencies[2])/(counter+1); 
++					seq.freqMatrix[k]['T']=(seq.freqMatrix[k]['T']+seq.frequencies[3])/(counter+1); 
+ 				}
+ 	
+ 
+ 				}
+ 			else
+-				freqMatrix.clear();
++				seq.freqMatrix.clear();
+ 				
+ 				
+ 				
+@@ -663,7 +662,7 @@
+ //////////////////////////////////////
+ 
+ //FreqMatrix output
+-void PrintMap(  std::map<unsigned int,std::map<Iupac,double> > freqMatrix,
++void PrintMap(  Seq &seq,
+ 				bool foreground){
+ 	std::map<Iupac,double> freq;
+ 	std::cout<<std::endl;
+@@ -671,7 +670,7 @@
+ 		std::cout<<"foreground: "<<std::endl;
+ 	else
+ 		std::cout<<"background: "<<std::endl;
+-	for(unsigned int j=0;j<length(freqMatrix);++j){
++	for(unsigned int j=0;j<length(seq.freqMatrix);++j){
+ 				freq=freqMatrix[j];
+ 				std::cout<<"Position: "<<j<<" A: "<<freq['A']<<std::endl;
+ 				std::cout<<"Position: "<<j<<" C: "<<freq['C']<<std::endl;
+@@ -682,16 +681,15 @@
+ 
+ }
+ 
+-void BuildWeightMatrix(Seq &seq,
+-					   std::map<unsigned int,std::map<Iupac,double> > &freqMatrix){
++void BuildWeightMatrix(Seq &seq){
+ 
+ 	std::map<unsigned int,std::map<Iupac,double> > weightMatrix;
+ 	
+-	for(unsigned int j=0;j<length(freqMatrix);++j){
+-		weightMatrix[j]['A'] = log(freqMatrix[j]['A']/seq.frequencies[0]);
+-		weightMatrix[j]['C'] = log(freqMatrix[j]['C']/seq.frequencies[1]);
+-		weightMatrix[j]['G'] = log(freqMatrix[j]['G']/seq.frequencies[2]);
+-		weightMatrix[j]['T'] = log(freqMatrix[j]['T']/seq.frequencies[3]);
++	for(unsigned int j=0;j<length(seq.freqMatrix);++j){
++		weightMatrix[j]['A'] = log(seq.freqMatrix[j]['A']/seq.frequencies[0]);
++		weightMatrix[j]['C'] = log(seq.freqMatrix[j]['C']/seq.frequencies[1]);
++		weightMatrix[j]['G'] = log(seq.freqMatrix[j]['G']/seq.frequencies[2]);
++		weightMatrix[j]['T'] = log(seq.freqMatrix[j]['T']/seq.frequencies[3]);
+ 	}
+ 
+ 

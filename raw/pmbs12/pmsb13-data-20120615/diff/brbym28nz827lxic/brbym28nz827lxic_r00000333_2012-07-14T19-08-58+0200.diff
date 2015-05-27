@@ -1,0 +1,32 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata/brbym28nz827lxic_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/David/Desktop/Seqan/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h ./sandbox/meyerclp/apps/dreme/dreme.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/meyerclp/apps/dreme/dreme.h	2012-07-14 18:54:02.542399400 +0200
++++ ./sandbox/meyerclp/apps/dreme/dreme.h	2012-07-14 19:08:56.463399400 +0200
+@@ -476,7 +476,11 @@
+ 					//zu häufig aufgerufen
+ 					if((*tempIttemp == 'A' || *tempIttemp == 'C' || *tempIttemp == 'G' || *tempIttemp == 'T' || tempIttemp == end(temp))){//falls nicht, dann kann dies übersprungen werden
+ 						FindTopKmer(seq,temp,finder,counter,CounterV,replaceString);
+-						
++						//Durch die wildcards mehrere Vorkommen pro Sequence möglich:
++						seqCounter[temp]=CounterV[seq.SeqsNumber];
++						//std::cout<<temp<<" "<<*replaceIt<<" ";
++						freq[*tempIt]=CounterV[seq.SeqsNumber];
++						CounterV.clear();
+ 					}
+ 					*tempIt=resetTemp;
+ 					//if ende von replaceIt, dann begin(replace) in temp speichern und mitübergeben--> referenz?
+@@ -509,14 +513,7 @@
+ 			loopOverTopKmer(seq,temp,Kmer,pos,tempIt,finder,counter,CounterV,IMaps,freq,freqMatrix,replaceString);
+ 			
+ 					
+-			//Durch die wildcards mehrere Vorkommen pro Sequence möglich:
+-			seqCounter[temp]=CounterV[seq.SeqsNumber];
+-					
+-			//std::cout<<temp<<" "<<*replaceIt<<" ";
+-			freq[*tempIt]=CounterV[seq.SeqsNumber];
+-					
+-					
+-			CounterV.clear();
++			
+ 				
+ 			if(counter>0){
+ 				std::cout<<freq['A']<< " "<<freq['C']<< " "<<freq['G']<< " "<<freq['T']<<" >0 "<<counter<<std::endl;

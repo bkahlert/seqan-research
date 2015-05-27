@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata/gxymtwhk6d1fehg3_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x Z:/RAID/Seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x Z:/RAID/Seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x Z:/RAID/Seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp ./sandbox/wissmann/demos/task1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/wissmann/demos/task1.cpp	2012-05-11 11:07:38.509672000 +0200
++++ ./sandbox/wissmann/demos/task1.cpp	2012-05-11 11:09:38.017261600 +0200
+@@ -190,16 +190,12 @@
+ 	//	}
+ 	//}
+ 
+-    while (repLength(forwardIter) < length(pattern))
+-    {
+-        // go down edge starting with the next pattern character
+-        if (!goDown(forwardIter, pattern[repLength(forwardIter)])) return 0;
+-        unsigned endPos = _min(repLength(forwardIter), length(pattern));
+-        // compare remaining edge characters with pattern
+-        std::cout << representative(forwardIter) << std::endl;
+-        if (infix(representative(forwardIter), parentRepLength(forwardIter) + 1, endPos) !=
+-            infix(pattern, parentRepLength(forwardIter) + 1, endPos)) return 0;
+-    }
++	std::cout << representative(forwardIter)<< std::endl;
++	goDown(forwardIter, 'a');
++	std::cout << representative(forwardIter)<< std::endl;
++	goDown(forwardIter, 't');
++	std::cout << representative(forwardIter)<< std::endl;
++	std::cout << position(fowardIter) << std::endl;
+ 
+ 
+ 	return 0;

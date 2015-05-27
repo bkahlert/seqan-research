@@ -1,0 +1,16 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-11 00:14:58.699109100 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-11 00:15:42.334849100 +0200
+@@ -20,10 +20,10 @@
+     TFinder swiftFinder(file1, 1000, 1);
+ 
+ 	// pattern
+-    typedef Index<file2, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
++    typedef Index<StringSet<TSequence, Dependent<> >, IndexQGram<SimpleShape, OpenAddressing> > TQGramIndex;
+     TQGramIndex qgramIndex(file2);
+     resize(indexShape(qgramIndex), 3);
+-    //cargo(qgramIndex).abundanceCut = options.qgramAbundanceCut;
++    cargo(qgramIndex).abundanceCut = options.qgramAbundanceCut;
+     Pattern<TQGramIndex, Swift<SwiftLocal> > swiftPattern(qgramIndex);
+ 
+ 	StringSet<QueryMatches<StellarMatch<TSequence, TId> > > matches;

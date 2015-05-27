@@ -1,0 +1,37 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x D:/SeqAn/misc/seqan_instrumentation/userdata/re2iaamwqjaf6msb_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x D:/SeqAn/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x D:/SeqAn/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x D:/SeqAn/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 22:28:14.676652000 +0200
++++ ./sandbox/jennyann/apps/segmentaligner/segmentaligner.cpp	2012-05-10 22:32:28.271156800 +0200
+@@ -10,26 +10,17 @@
+ 
+ int main()
+ {
+-	  CharString const filename = "test1.fasta";
++	 CharString const filename = "test1.fasta";
+ 
+-	std::ifstream fasta(toCString(filename), std::ios_base::in | std::ios_base::binary);
++	 std::ifstream fasta(argv[1], std::ios_base::in | std::ios_base::binary);
+     if (!fasta.good())
+         return 1;
+-    RecordReader(filename);
+-
+-	std::cout << "test \t";
++    RecordReader<std::ifstream, SinglePass<> > reader(fasta);
+ 
+ 	CharString id;
+     Dna5String seq;
+ 
+-	while (!atEnd(reader))
+-    {
+-        if (readRecord(id, seq, reader, Fasta()) != 0)
+-        {
+-            std::cerr << "ERROR reading FASTA." << std::endl;
+-            return 1;
+-        }
+-        std::cout << id << "\t" << seq << "\n";
+-    }
+-	 return 0;
++	readRecord(id, seq, reader, Fasta());
++
++	std::cout << id << "\t" << seq << "\n";
+ }
+\ No newline at end of file
