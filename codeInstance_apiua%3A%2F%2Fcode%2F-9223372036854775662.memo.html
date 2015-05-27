@@ -30,107 +30,21 @@
 
 <p style="line-height: 14.559999465942383px; background-color: rgb(249, 249, 249);">&nbsp;</p>
 
-<pre style="line-height: 1.5; font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace; font-size: 12px; margin-bottom: 0px; padding: 12px; white-space: pre; box-sizing: border-box; margin-top: 0px; color: rgb(64, 64, 64);">
-<span class="kt" style="box-sizing: border-box; color: rgb(68, 85, 136); font-weight: bold;">int</span>
-<span class="nf" style="box-sizing: border-box; color: rgb(153, 0, 0); font-weight: bold;">main</span>
-<span class="p" style="box-sizing: border-box;">()</span>
+<pre style="box-sizing: border-box; font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace; font-size: 12px; white-space: pre; margin-top: 0px; margin-bottom: 0px; padding: 12px; line-height: 1.5; color: rgb(64, 64, 64);">
+<span class="kt" style="box-sizing: border-box; color: rgb(68, 85, 136); font-weight: bold;">int</span> <span class="nf" style="box-sizing: border-box; color: rgb(153, 0, 0); font-weight: bold;">main</span><span class="p" style="box-sizing: border-box;">()</span>
 <span class="p" style="box-sizing: border-box;">{</span>
-<span class="k" style="box-sizing: border-box; font-weight: bold;">typedef</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">Index</span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">DnaString</span>
-<span class="p" style="box-sizing: border-box;">,</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">IndexQGram</span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">UngappedShape</span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span>
-<span class="mi" style="box-sizing: border-box; color: rgb(0, 153, 153);">3</span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">&gt;</span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">&gt;</span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">&gt;</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">TIndex</span>
-<span class="p" style="box-sizing: border-box;">;</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">TIndex</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span>
-<span class="p" style="box-sizing: border-box;">(</span>
-<span class="s" style="box-sizing: border-box; color: rgb(221, 17, 68);">&quot;CATGATTACATA&quot;</span>
-<span class="p" style="box-sizing: border-box;">);
-​</span>
-<span style="line-height: 1.5;">    </span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">hash</span>
-<span class="p" style="box-sizing: border-box;">(</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">indexShape</span>
-<span class="p" style="box-sizing: border-box;">(</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span>
-<span class="p" style="box-sizing: border-box;">),</span>
-<span style="line-height: 1.5;"> </span>
-<span class="s" style="box-sizing: border-box; color: rgb(221, 17, 68);">&quot;CAT&quot;</span>
-<span class="p" style="box-sizing: border-box;">);
-​    </span>
-<span class="k" style="box-sizing: border-box; font-weight: bold;">for</span>
-<span style="line-height: 1.5;"> </span>
-<span class="p" style="box-sizing: border-box;">(</span>
-<span class="kt" style="box-sizing: border-box; color: rgb(68, 85, 136); font-weight: bold;">unsigned</span>
-<span style="line-height: 1.5;"> </span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">i</span>
-<span style="line-height: 1.5;"> </span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">=</span>
-<span style="line-height: 1.5;"> </span>
-<span class="mi" style="box-sizing: border-box; color: rgb(0, 153, 153);">0</span>
-<span class="p" style="box-sizing: border-box;">;</span>
-<span style="line-height: 1.5;"> </span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">i</span>
-<span style="line-height: 1.5;"> </span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span>
-<span style="line-height: 1.5;"> </span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">length</span>
-<span class="p" style="box-sizing: border-box;">(</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">getOccurrences</span>
-<span class="p" style="box-sizing: border-box;">(</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span>
-<span class="p" style="box-sizing: border-box;">,</span>
-<span style="line-height: 1.5;"> </span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">indexShape</span>
-<span class="p" style="box-sizing: border-box;">(</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span>
-<span class="p" style="box-sizing: border-box;">)));</span>
-<span style="line-height: 1.5;"> </span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">++</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">i</span>
-<span class="p" style="box-sizing: border-box;">)
-​     &nbsp;</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">std</span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">::</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">cout</span>
-<span style="line-height: 1.5;"> </span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;&lt;</span>
-<span style="line-height: 1.5;"> </span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">getOccurrences</span>
-<span class="p" style="box-sizing: border-box;">(</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span>
-<span class="p" style="box-sizing: border-box;">,</span>
-<span style="line-height: 1.5;"> </span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">indexShape</span>
-<span class="p" style="box-sizing: border-box;">(</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span>
-<span class="p" style="box-sizing: border-box;">))[</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">i</span>
-<span class="p" style="box-sizing: border-box;">]</span>
-<span style="line-height: 1.5;"> </span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;&lt;</span>
-<span style="line-height: 1.5;"> </span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">std</span>
-<span class="o" style="box-sizing: border-box; font-weight: bold;">::</span>
-<span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">endl</span>
-<span class="p" style="box-sizing: border-box;">;</span>
-​     &nbsp;
-<span class="k" style="box-sizing: border-box; font-weight: bold;">return</span>
-<span style="line-height: 1.5;"> </span>
-<span class="mi" style="box-sizing: border-box; color: rgb(0, 153, 153);">0</span>
-<span class="p" style="box-sizing: border-box;">;
-}</span>
-<span style="line-height: 1.5;"> </span>
-</pre>
+    <span class="k" style="box-sizing: border-box; font-weight: bold;">typedef</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">Index</span><span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">DnaString</span><span class="p" style="box-sizing: border-box;">,</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">IndexQGram</span><span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">UngappedShape</span><span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span><span class="mi" style="box-sizing: border-box; color: rgb(0, 153, 153);">3</span><span class="o" style="box-sizing: border-box; font-weight: bold;">&gt;</span> <span class="o" style="box-sizing: border-box; font-weight: bold;">&gt;</span> <span class="o" style="box-sizing: border-box; font-weight: bold;">&gt;</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">TIndex</span><span class="p" style="box-sizing: border-box;">;</span>
+    <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">TIndex</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span><span class="p" style="box-sizing: border-box;">(</span><span class="s" style="box-sizing: border-box; color: rgb(221, 17, 68);">&quot;CATGATTACATA&quot;</span><span class="p" style="box-sizing: border-box;">);</span></pre>
+
+<pre style="box-sizing: border-box; font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace; font-size: 12px; white-space: pre; margin-top: 0px; margin-bottom: 0px; padding: 12px; line-height: 1.5; color: rgb(64, 64, 64);">
+    <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">hash</span><span class="p" style="box-sizing: border-box;">(</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">indexShape</span><span class="p" style="box-sizing: border-box;">(</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span><span class="p" style="box-sizing: border-box;">),</span> <span class="s" style="box-sizing: border-box; color: rgb(221, 17, 68);">&quot;CAT&quot;</span><span class="p" style="box-sizing: border-box;">);</span>
+    <span class="k" style="box-sizing: border-box; font-weight: bold;">for</span> <span class="p" style="box-sizing: border-box;">(</span><span class="kt" style="box-sizing: border-box; color: rgb(68, 85, 136); font-weight: bold;">unsigned</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">i</span> <span class="o" style="box-sizing: border-box; font-weight: bold;">=</span> <span class="mi" style="box-sizing: border-box; color: rgb(0, 153, 153);">0</span><span class="p" style="box-sizing: border-box;">;</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">i</span> <span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">length</span><span class="p" style="box-sizing: border-box;">(</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">getOccurrences</span><span class="p" style="box-sizing: border-box;">(</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span><span class="p" style="box-sizing: border-box;">,</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">indexShape</span><span class="p" style="box-sizing: border-box;">(</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span><span class="p" style="box-sizing: border-box;">)));</span> <span class="o" style="box-sizing: border-box; font-weight: bold;">++</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">i</span><span class="p" style="box-sizing: border-box;">)</span>
+        <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">std</span><span class="o" style="box-sizing: border-box; font-weight: bold;">::</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">cout</span> <span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;&lt;</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">getOccurrences</span><span class="p" style="box-sizing: border-box;">(</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span><span class="p" style="box-sizing: border-box;">,</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">indexShape</span><span class="p" style="box-sizing: border-box;">(</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">index</span><span class="p" style="box-sizing: border-box;">))[</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">i</span><span class="p" style="box-sizing: border-box;">]</span> <span class="o" style="box-sizing: border-box; font-weight: bold;">&lt;&lt;</span> <span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">std</span><span class="o" style="box-sizing: border-box; font-weight: bold;">::</span><span class="n" style="box-sizing: border-box; color: rgb(51, 51, 51);">endl</span><span class="p" style="box-sizing: border-box;">;</span>
+
+    <span class="k" style="box-sizing: border-box; font-weight: bold;">return</span> <span class="mi" style="box-sizing: border-box; color: rgb(0, 153, 153);">0</span><span class="p" style="box-sizing: border-box;">;</span>
+<span class="p" style="box-sizing: border-box;">}</span></pre>
+
+<p>&nbsp;</p>
 
 <p style="line-height: 14.559999465942383px; background-color: rgb(249, 249, 249);">&nbsp;</p>
 
