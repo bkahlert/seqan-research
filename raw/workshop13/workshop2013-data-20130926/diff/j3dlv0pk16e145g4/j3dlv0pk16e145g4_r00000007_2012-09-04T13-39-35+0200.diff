@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app/io_app.cpp ./sandbox/my_sandbox/apps/io_app/io_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app/io_app.cpp	2012-09-04 13:39:11.000000000 +0200
++++ ./sandbox/my_sandbox/apps/io_app/io_app.cpp	2012-09-04 13:39:34.473812880 +0200
+@@ -6,7 +6,7 @@
+ {
+     seqan::CharString id;
+     seqan::Dna5String seq;
+-    if (argc < 2)
++    if (std::argc < 2)
+     {
+         std::cerr << "Please give an input file." << std::endl;
+         return 1;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app/io_app.cpp~ ./sandbox/my_sandbox/apps/io_app/io_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app/io_app.cpp~	2012-09-04 13:38:59.000000000 +0200
++++ ./sandbox/my_sandbox/apps/io_app/io_app.cpp~	2012-09-04 13:39:11.041696681 +0200
+@@ -7,8 +7,10 @@
+     seqan::CharString id;
+     seqan::Dna5String seq;
+     if (argc < 2)
++    {
+         std::cerr << "Please give an input file." << std::endl;
+         return 1;
++    }
+     seqan::SequenceStream seqStream(argv[1]);
+     readRecord(id, seq, seqStream);
+     std::cout << id << '\t' << seq << '\n';

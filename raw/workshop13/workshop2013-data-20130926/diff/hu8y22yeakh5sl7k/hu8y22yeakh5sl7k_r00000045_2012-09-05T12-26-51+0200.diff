@@ -1,0 +1,34 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp	2012-09-05 12:26:15.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp	2012-09-05 12:26:48.012764171 +0200
+@@ -98,8 +98,8 @@
+ 	
+ 	stringToShape(indexShape(indexQ), "1101");
+ 	hash(indexShape(indexQ), "AT-A");
+-   	for (unsigned i = 0; i < length(getOccurrences(index, indexShape(indexQ))); ++i){
+-        std::cout << getOccurrences(indexQ, indexShape(indexQ))[i] << std::endl;
++   	for (unsigned i = 0; i < length(getOccurrences(indexQ, indexShape(indexQ))); ++i){
++        	std::cout << getOccurrences(indexQ, indexShape(indexQ))[i] << std::endl;
+     }
+ 
+     return 0;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~ ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~	2012-09-05 12:25:27.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~	2012-09-05 12:26:15.860762837 +0200
+@@ -95,11 +95,11 @@
+ 	// q-gram
+ 
+ 	Index<DnaString, IndexQGram<OneGappedShape> > indexQ("CATGATTACATA");
+-	OneGappedShape shape;
+-	stringToShape(shape(indexQ), "1101");
+-	hash(shape(indexQ), "AT-A");
+-   	for (unsigned i = 0; i < length(getOccurrences(index, shape(indexQ))); ++i){
+-        std::cout << getOccurrences(indexQ, shape(indexQ))[i] << std::endl;
++	
++	stringToShape(indexShape(indexQ), "1101");
++	hash(indexShape(indexQ), "AT-A");
++   	for (unsigned i = 0; i < length(getOccurrences(index, indexShape(indexQ))); ++i){
++        std::cout << getOccurrences(indexQ, indexShape(indexQ))[i] << std::endl;
+     }
+ 
+     return 0;

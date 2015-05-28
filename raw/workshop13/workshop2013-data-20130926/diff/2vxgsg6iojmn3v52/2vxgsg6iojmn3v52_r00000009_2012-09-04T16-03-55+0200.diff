@@ -1,0 +1,82 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/2vxgsg6iojmn3v52_stats.txt -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/userdata/2vxgsg6iojmn3v52_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/seq_iter/seq_iter.cpp ./sandbox/my_sandbox/apps/seq_iter/seq_iter.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/seq_iter/seq_iter.cpp	2012-09-04 15:59:21.000000000 +0200
++++ ./sandbox/my_sandbox/apps/seq_iter/seq_iter.cpp	2012-09-04 16:03:54.000000000 +0200
+@@ -11,12 +11,10 @@
+     std::cout << "  genome : " << genomeFragment << std::endl;
+     std::cout << "  read   : " << read << std::endl;
+ }
+-
+ int main(int, char const **)
+ {
+     // Build reads and genomes
+     DnaString chr1 = "TATAATATTGCTATCGCGATATCGCTAGCTAGCTACGGATTATGCGCTCTGCGATATATCGCGCTAGATGTGCAGCTCGATCGAATGCACGTGTGTGCGATCGATTAGCGTCGATCATCGATCTATATTAGCGCGCGGTATCGGACGATCATATTAGCGGTCTAGCATTTAG";
+-    
+     // Build List containing all reads
+     typedef String<DnaString> TDnaList;
+     TDnaList readList;
+@@ -25,50 +23,42 @@
+     readList[1] = "TCGATTAGCGTCGATCATCGATCTATATTAGCGCGCGGTATCGGACGATCATATTAGCGGTCTAGCATT";
+     readList[2] = "AGCCTGCGTACGTTGCAGTGCGTGCGTAGACTGTTGCAAGCCGGGGGTTCATGTGCGCTGAAGCACACATGCACA";
+     readList[3] = "CGTGCACTGCTGACGTCGTGGTTGTCACATCGTCGTGCGTGCGTACTGCTGCTGACA";
+-    
+-    typedef String<int> TPosList;
+-    TPosList alignPosList;
+-    resize(alignPosList, 4);
+-    alignPosList[0] = 7;
+-    alignPosList[1] = 100;
+-    alignPosList[2] = 172;
+-    alignPosList[3] = 272;
+-    
+     // Append a second chromosome sequence fragment to chr1
+     DnaString chr2 = "AGCCTGCGTACGTTGCAGTGCGTGCGTAGACTGTTGCAAGCCGGGGGTTCATGTGCGCTGAAGCACACATGCACACGTCTCTGTGTTCCGACGTGTGTCACGTGCACTGCTGACGTCGTGGTTGTCACATCGTCGTGCGTGCGTACTGCTGCTGACACATGCTGCTG";
+     append(chr1, chr2);
+-    
+     // Print readlist
+     std::cout << " \n Read list: " << std::endl;
+     for(unsigned i = 0; i < length(readList); ++i)
+         std::cout << readList[i] << std::endl;
+-    
+-    std::cout << " \n Read list: " << std::endl;
+-    for(unsigned i = 0; i < length(alignPosList); ++i)
+-        std::cout << alignPosList[i] << std::endl;
+-    
+     // Assume we have mapped the 4 reads to chr1 (and chr2) and now have the mapping start positions (no gaps).
+     // Store the start position in a String alignPosList: 7, 100, 172, 272
+-    
++    String<unsigned> alignPosList;
++    resize(alignPosList, 4);
++    alignPosList[0] = 7;
++    alignPosList[1] = 100;
++    alignPosList[2] = 172;
++    alignPosList[3] = 272;
+     // Optional
+     // Bisulfite conversion
+     // Assume chr1 is beeing bisulfate treated: Copy chr1 to a new genome bsChr1 and exchange every 'C' with a 'T'
+-    DnaString bsChr1;
+-    
++    DnaString bsChr1;;
++    assign(bsChr1, chr1);
++    for(unsigned i = 0; i < length(bsChr1); ++i)
++        if(bsChr1[i] == 'C')
++            bsChr1[i] = 'T';
+     // Print alignments of the reads with chr1 (or bsChr1) sequence using the function printAlign
+     // and the positions in alignPosList.
+     // To do that, you have to create a copy of the fragment in chr1 (bsChr1) that is aligned to the read.
+     std::cout << " \n Print alignment: " << std::endl;
+     for(unsigned i = 0; i < length(readList); ++i)
+     {
+-        // Temporary copy of begin position (beginPosition) from alignPosList
+-        // of a given alignment between the read and the genome
+-        
++        // Begin position beginPosition of a given alignment between the read and the genome
++        unsigned beginPosition = alignPosList[i];
+         // Genome fragment
+         DnaString genomeFragment;
+         // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
+-        
+-        
++        for (unsigned j = 0; j < length(readList[i]); ++j)
++            appendValue(genomeFragment, chr1[beginPosition+j]);
+         // Call of our function to print the simple alignment
+         printAlign(genomeFragment, readList[i]);
+     }

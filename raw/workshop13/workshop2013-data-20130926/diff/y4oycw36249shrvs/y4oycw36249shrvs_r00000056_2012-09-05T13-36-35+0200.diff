@@ -1,0 +1,29 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/index.cpp ./sandbox/my_rob/apps/index/index.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/index.cpp	2012-09-05 13:28:57.000000000 +0200
++++ ./sandbox/my_rob/apps/index/index.cpp	2012-09-05 13:36:29.915770675 +0200
+@@ -2,18 +2,14 @@
+ #include <seqan/index.h>
+ 
+ using namespace seqan;
+-
+ int main()
+ {
+-    String<Dna> text = "This is the first example";
+-    Index<String<Dna>, IndexEsa<> > index(text);
+-    StringSet<String<Dna> > stringSet;
+-    
+-    appendValue(stringSet, "This");
+-    appendValue(stringSet, "That");
+-	
+-    Index<StringSet<String<Dna> >, IndexEsa<> > indexSet(stringSet);
+-    
+-
++    String<Dna5> genome = "TTATTAAGCGTATAGCCCTATAAATATAA";
++    Index<String<Dna5>, IndexEsa<> > esaIndex(genome);
++    Finder<Index<String<Dna5>, IndexEsa<> > > esaFinder(esaIndex);
++    while(find(esaFinder, "TATAA"))
++    {
++        std::cout << position(esaFinder) << std::endl;
++    }
+     return 0;
+ }

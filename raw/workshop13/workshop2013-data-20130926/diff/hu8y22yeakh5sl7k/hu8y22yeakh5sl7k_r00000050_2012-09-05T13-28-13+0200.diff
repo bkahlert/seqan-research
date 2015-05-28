@@ -1,0 +1,36 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp	2012-09-05 13:22:56.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp	2012-09-05 13:28:06.826950575 +0200
+@@ -51,10 +51,10 @@
+ 	int counter = 0;    
+ 	while(goDown(it));
+ 
+-	counter++;
++	++counter;
+ 
+ 	while(goRight(it)){
+-		counter++;	
++		++counter;	
+ 	}
+ 
+ 	std::cout << "Counted: " << counter << '\n';
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~	2012-09-05 13:16:42.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~	2012-09-05 13:22:56.114937694 +0200
+@@ -48,6 +48,15 @@
+     Iterator<FragmentStore<>, AnnotationTree<> >::Type it;
+     it = begin(store, AnnotationTree<>());
+     // Move iterator one node down
+-    goDown(it);
++	int counter = 0;    
++	while(goDown(it));
++
++	counter++;
++
++	while(goRight(it)){
++		counter++;	
++	}
++
++	std::cout << "Counted: " << counter << '\n';
+     return 0;
+ }

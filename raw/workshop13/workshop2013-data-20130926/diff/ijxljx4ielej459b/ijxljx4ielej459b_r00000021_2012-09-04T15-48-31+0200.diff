@@ -1,0 +1,108 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 14:27:47.445197700 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 15:48:28.915114000 +0200
+@@ -1,49 +1,64 @@
+ #include <iostream>
++#include <seqan/sequence.h> 
+ #include <seqan/file.h>
+-#include <seqan/score.h>
+-#include <seqan/sequence.h>
+-template <typename TText, typename TPattern>
+-int computeLocalScore(TText const & subText, TPattern const & pattern)
++
++using namespace seqan;
++// Function to print simple alignment between two sequences with the same length
++template <typename TText1, typename TText2>
++void printAlign(TText1 const & genomeFragment, TText2 const & read)
+ {
+-    int localScore = 0;
+-    for (unsigned i = 0; i < seqan::length(pattern); ++i)
+-        if (subText[i] == pattern[i])
+-            ++localScore;
+-    return localScore;
++        std::cout <<  "Alignment " << std::endl;
++        std::cout << "  genome : " << genomeFragment << std::endl;
++        std::cout << "  read   : " << read << std::endl;
+ }
+ 
+-template <typename TText>
+-int computeLocalScore(TText const & subText, seqan::String<seqan::AminoAcid> const & pattern)
++int main(int, char const **)
+ {
+-    int localScore = 0;
+-    for (unsigned i = 0; i < seqan::length(pattern); ++i)
+-        localScore += seqan::score(seqan::Blosum62(), subText[i], pattern[i]);
+-    
+-    return localScore;
+-}
++    // Build reads and genomes
++    DnaString chr1 = "TATAATATTGCTATCGCGATATCGCTAGCTAGCTACGGATTATGCGCTCTGCGATATATCGCGCTAGATGTGCAGCTCGATCGAATGCACGTGTGTGCGATCGATTAGCGTCGATCATCGATCTATATTAGCGCGCGGTATCGGACGATCATATTAGCGGTCTAGCATTTAG";
+ 
+-template <typename TText, typename TPattern>
+-seqan::String<int> computeScore(TText const & text, TPattern const & pattern)
++    // Build List containing all reads
++    typedef String<DnaString> TDnaList;
++    TDnaList readList;
++    resize(readList, 4);
++    readList[0] = "TTGCTATCGCGATATCGCTAGCTAGCTACGGATTATGCGCTCTGCGATATATCGCGCT";
++    readList[1] = "TCGATTAGCGTCGATCATCGATCTATATTAGCGCGCGGTATCGGACGATCATATTAGCGGTCTAGCATT";
++    readList[2] = "AGCCTGCGTACGTTGCAGTGCGTGCGTAGACTGTTGCAAGCCGGGGGTTCATGTGCGCTGAAGCACACATGCACA";
++    readList[3] = "CGTGCACTGCTGACGTCGTGGTTGTCACATCGTCGTGCGTGCGTACTGCTGCTGACA";
++    
++    // Append a second chromosome sequence fragment to chr1
++    DnaString chr2 = "AGCCTGCGTACGTTGCAGTGCGTGCGTAGACTGTTGCAAGCCGGGGGTTCATGTGCGCTGAAGCACACATGCACACGTCTCTGTGTTCCGACGTGTGTCACGTGCACTGCTGACGTCGTGGTTGTCACATCGTCGTGCGTGCGTACTGCTGCTGACACATGCTGCTG";
++    append(chr1, chr2);
++   
++    // Print readlist
++    std::cout << " \n Read list: " << std::endl;
++    for(unsigned i = 0; i < length(readList); ++i)
++        std::cout << readList[i] << std::endl;
+ 
+-{
+-    seqan::String<int> score;
+-    seqan::resize(score, seqan::length(text), 0);
+-    for (unsigned i = 0; i < seqan::length(text) - seqan::length(pattern) + 1; ++i)
+-        score[i] = computeLocalScore(infix(text, i, i + seqan::length(pattern)), pattern);
+-    return score;
+-}
++    // Assume we have mapped the 4 reads to chr1 (and chr2) and now have the mapping start positions (no gaps).
++    // Store the start position in a String alignPosList: 7, 100, 172, 272
++  
++    // Optional
++    // Bisulfite conversion
++    // Assume chr1 is beeing bisulfate treated: Copy chr1 to a new genome bsChr1 and exchange every 'C' with a 'T'
++    DnaString bsChr1;
++  
++    // Print alignments of the reads with chr1 (or bsChr1) sequence using the function printAlign
++    // and the positions in alignPosList.
++    // To do that, you have to create a copy of the fragment in chr1 (bsChr1) that is aligned to the read.
++    std::cout << " \n Print alignment: " << std::endl;
++    for(unsigned i = 0; i < length(readList); ++i)
++    {
++        // Temporary copy of begin position (beginPosition) from alignPosList
++        // of a given alignment between the read and the genome
++       
++        // Genome fragment
++        DnaString genomeFragment;
++        // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
++       
+ 
+-template <typename Tprint>
+-void print (Tprint const & score)
+-{for (unsigned i = 0; i < seqan::length(score); ++i)
+-        std::cout << score[i] << " ";
+-std::cout << std::endl;
+-}
+-int main()
+-{
+-    seqan::String<char> text = "This is an awesome tutorial to get to now SeqAn!";
+-    seqan::String<char> pattern = "tutorial";
+-    seqan::String<int> score = computeScore(text, pattern);
+-    print(score);
+-    return 0;
++        // Call of our function to print the simple alignment
++        printAlign(genomeFragment, readList[i]);
++    }
++    return 1;
+ }
+\ No newline at end of file

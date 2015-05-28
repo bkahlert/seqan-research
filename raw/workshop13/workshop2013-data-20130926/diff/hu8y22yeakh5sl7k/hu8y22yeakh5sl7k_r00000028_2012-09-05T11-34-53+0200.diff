@@ -1,0 +1,55 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp	2012-09-05 10:53:11.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp	2012-09-05 11:34:43.832634650 +0200
+@@ -49,6 +49,39 @@
+ 		std::cout << "Position: " << position(esaFinder) << '\n';
+ 	}
+ 
++	// next assignment
++
++	typedef Index<CharString> TIndex;
++    	TIndex index("tobeornottobe");
++	Iterator< TIndex, TopDown< ParentLinks<> > >::Type it(index);
++	
++	boolean foundMore = true;
++	while(foundMore){
++		foundMore = false;
++		while(goDown(it)){	
++			std::cout << "label: " << representative(it) << '\n';				
++		}
++		
++		if(goRight(it)){
++			foundMore = true;
++			std::cout << "label: " << representative(it) << '\n';
++					
++		}else{
++			while(goUp(it)){
++				
++				if(goRight(it)){
++					std::cout << "label: " << representative(it) << '\n';
++					foundMore = true;
++					break;					
++				}
++			}
++			
++		}
++}
++
++	}
++
++
+     return 0;
+ }
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~ ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~	2012-09-05 10:52:07.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~	2012-09-05 10:55:21.788536724 +0200
+@@ -43,7 +43,7 @@
+ 	String<Dna5> myPattern = "TATAA";
+         
+ 	Index<String<Dna5>, IndexEsa<> > esaIndex(myDna);
+-	Finder<Index<String<Dna5>, IndexEsa> > esaFinder(esaIndex);
++	Finder<Index<String<Dna5>, IndexEsa<> > > esaFinder(esaIndex);
+ 
+ 	while(find(esaFinder, myPattern)){
+ 		std::cout << "Position: " << position(esaFinder) << '\n';

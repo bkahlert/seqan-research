@@ -1,0 +1,30 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_tutorial/sam_tutorial.cpp ./sandbox/my_sandbox/apps/sam_tutorial/sam_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_tutorial/sam_tutorial.cpp	2012-09-04 14:50:54.000000000 +0200
++++ ./sandbox/my_sandbox/apps/sam_tutorial/sam_tutorial.cpp	2012-09-05 09:09:45.695637346 +0200
+@@ -52,4 +52,3 @@
+     }
+     return 0;
+ }
+-
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_tutorial/sam_tutorial.cpp~ ./sandbox/my_sandbox/apps/sam_tutorial/sam_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_tutorial/sam_tutorial.cpp~	2012-09-04 14:50:05.000000000 +0200
++++ ./sandbox/my_sandbox/apps/sam_tutorial/sam_tutorial.cpp~	2012-09-05 09:08:23.507633943 +0200
+@@ -38,7 +38,7 @@
+ int main()
+ {
+     // Open input stream, BamStream can read SAM and BAM files.
+-    seqan::BamStream bamStreamIn("/home/franzi/SeqAn/exampleSAM2.sam");
++    seqan::BamStream bamStreamIn("example.sam");
+     // Open output stream, "-" means stdin on if reading, else stdout.
+     seqan::BamStream bamStreamOut("-", seqan::BamStream::WRITE);
+     // Copy header.  The header is automatically written out before
+@@ -48,8 +48,7 @@
+     while (!atEnd(bamStreamIn))
+     {
+         readRecord(record, bamStreamIn);
+-        //writeRecord(bamStreamOut, record);
++        writeRecord(bamStreamOut, record);
+     }
+     return 0;
+ }
+-

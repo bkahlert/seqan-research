@@ -1,0 +1,35 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7i0p2gnbxpw7gofj_stats.txt -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7i0p2gnbxpw7gofj_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragstore/fragstore.cpp ./sandbox/my_sandbox/apps/fragstore/fragstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragstore/fragstore.cpp	2012-09-05 13:40:51.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragstore/fragstore.cpp	2012-09-05 14:03:08.000000000 +0200
+@@ -57,15 +57,22 @@
+ 
+     // Move iterator one node down
+     while (goDown(it));
+-
+-
+-    do {
+-      unsigned n = 1;
+-      while (goRight(it)) n++;
+-      goNext(it);
+-      
+-      cout << "n= " << n << endl;
+-    } while (!atEnd(it));
++    while (!atEnd(it)){
++      // Iterate over all siblings and count
++      while (goRight(it)) {
++	cout << "type: " <<  getType(it) << endl;
++	cout << "begin position: " <<  getAnnotation(it).beginPos << endl;
++	cout << "end position: " <<  getAnnotation(it).endPos << endl;
++	cout << "id: " << value(it) << endl;
++	cout << "parent id:" << value(nodeUp(it)) << endl;
++	cout << "parent name:" << getName(nodeUp(it)) << endl;
++      }
++      // Jump to the next mRNA or gene, go down to its first leaf and count it
++      if (!atEnd(it)) {
++	goNext(it);
++	if (!atEnd(it)) while(goDown(it)) ;
++      }
++    }
+ 
+     return 0;
+ }

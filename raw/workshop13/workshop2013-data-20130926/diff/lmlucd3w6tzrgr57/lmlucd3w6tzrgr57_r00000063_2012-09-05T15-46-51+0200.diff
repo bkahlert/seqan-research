@@ -1,0 +1,59 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp ./sandbox/grunert/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp	2012-09-05 14:38:25.000000000 +0200
++++ ./sandbox/grunert/apps/first_app/first_app.cpp	2012-09-05 15:46:47.000000000 +0200
+@@ -1,49 +1,18 @@
+-#include <fstream>
+ #include <iostream>
+ #include <seqan/sequence.h>
+-#include <seqan/file.h>
+-#include <seqan/store.h>
++#include <seqan/seq_io.h>
+ 
+ using namespace seqan;
+ using namespace std;
+ 
+-
+ int main()
+ {
+-    FragmentStore<> store;
+-    std::ifstream file("/Users/grunert/Development/workshop/assignment_annotations.gtf", std::ios_base::in | std::ios_base::binary);
+-    read(file, store, Gtf());
+-    Iterator<FragmentStore<>, AnnotationTree<> >::Type it;
+-    it = begin(store, AnnotationTree<>());
+-  
+-    unsigned genes = 0;
+-    unsigned mRNAs = 0;
+-    unsigned exons = 0;
+-    unsigned length = 0;
+-   
+-    while (!atEnd(it))
+-    {
+-        
+-        if (getType(it) == "gene") ++genes;
+-        else if (getType(it) == "mRNA") ++mRNAs;
+-        else if (getType(it) == "exon")
+-        {
+-            ++exons;
+-            length += getAnnotation(it).endPos - getAnnotation(it).beginPos;
+-        }
+-        
+-        goNext(it);
+-    
+-    }
++    CharString id;
++    Dna5String seq;
++    SequenceStream seqStream("example.fa");
++    readRecord(id, seq, seqStream);
+     
+-    cout << "mRNAs:" << (float)mRNAs/(float)genes << endl;
+-    cout << "Exons:" << (float)exons/(float)mRNAs << endl;
+-    cout << "- with average length:" << (float)length/(float)exons << endl;
++    cout << id << '\t' << seq << '\n';
+     
+-    
+-
+     return 0;
+ }
+-
+-    
+-

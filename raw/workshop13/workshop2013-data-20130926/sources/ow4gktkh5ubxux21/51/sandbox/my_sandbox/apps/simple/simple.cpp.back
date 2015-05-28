@@ -1,0 +1,143 @@
+#include <iostream>
+#include <time.h>
+
+#include <seqan/basic.h>
+#include <seqan/sequence.h>
+//#include <seqan/file.h>      // For printing SeqAn Strings.
+
+//#include <seqan/stream.h>
+#include <seqan/bam_io.h>
+#include <seqan/arg_parse.h>
+#include <seqan/seq_io.h>
+
+using namespace seqan;
+using namespace std;
+
+/* 
+    
+void setupArgumentParser(ArgumentParser & parser)
+{
+    setVersion(parser, "1.0");
+    setShortDescription(parser, "42");
+
+    addUsageLine(parser, "simple [OPTIONS]");
+    
+	addSection(parser, "Options");
+    addOption(parser, ArgParseOption("v", "verbose", "Enable verbose mode (show steps).") );
+    addOption(parser, ArgParseOption("i", "input-file", "Path to input file.", ArgParseArgument::STRING ));
+    //setRequired(parser, "i", true);
+    addOption(parser, ArgParseOption("o", "output-file", "Path to output file.", ArgParseArgument::STRING ));
+    addOption(parser, ArgParseOption("t", "threshold", "Max eshold.", ArgParseArgument::INTEGER ));
+    setMinValue(parser, "t", "1");
+    
+    addTextSection(parser, "References");
+    addText(parser, "k00k <okonechnikov@mpiib-berlin.mpg.de>");
+}
+*/
+
+void funWithIndex () {
+    
+    FaiIndex faiIndex;
+
+    double t1 = clock();
+    if (! build(faiIndex, "/data/genomes/hg19.fa")) {
+        cout << "ERROR: Could not build the index!\n";
+    }
+    double t2 = clock();
+    
+    cout << "Time building index: " << (t2 - t1) / 1000 << endl;
+   
+    CharString fileName = "/home/kokonech/tmp/hg19.fa.fai";
+    int res = write(faiIndex, toCString(fileName));
+    /*if (res != 0)
+        std::cerr << "ERROR: Could not write the index to file!\n";
+    
+    unsigned idx = 0;
+    if (!getIdByName(faiIndex, "1", idx))
+        std::cerr << "ERROR: FAI index does not know about chr1.\n";
+    
+    unsigned seqLength = sequenceLength(faiIndex, idx);
+    cout << "Sequence length is " << seqLength;    
+
+    // Load first 1000 characters of chr1.
+    seqan::CharString seqRegion;
+    if (readRegion(seqRegion, faiIndex, idx, 0, 1000) != 0)
+        std::cerr << "ERROR: Could not load chr1.\n";
+    
+    cout << "First 1000 bases:\n" << seqRegion << endl;
+    */
+
+    // Load all of chr1.
+   //aseqan::CharString seqChr1;
+    //if (readSequence(seqChr1, faiIdx, idx) != 0)
+    //    std::cerr << "ERROR: Could not load chr1.\n";
+    
+
+
+
+}
+
+
+
+int main(int argc, char const ** argv)
+{
+    funWithIndex(); 
+/*    ArgumentParser parser("simple");
+    setupArgumentParser(parser);
+    
+    ArgumentParser::ParseResult res = parse(parser, argc, argv);
+    if (res != ArgumentParser::PARSE_OK) {
+        return 1;
+    }
+
+    CharString inFile, outFile;
+    int threshold = 0;
+    bool verbose = false;
+
+    getOptionValue(inFile, parser, "i");
+    getOptionValue(outFile, parser, "o");
+    getOptionValue(threshold, parser, "t");
+    getOptionValue(verbose, parser, "v");
+
+    cerr << "Options" << endl;
+    cerr << "Input file:  " << inFile << endl;
+    cerr << "Output file: " << outFile << endl;
+    cerr << "Max coverage threshold: " << threshold << endl;
+    cerr << "Verbose: " << verbose << endl;
+*/
+/*    if (argc < 2) {
+        cerr << " Not enought parameters" << endl;
+        return -1;    
+    }   
+        
+
+    CharString id;
+    Dna5String seq;
+    cout << "Openning " << argv[1] << endl;
+    SequenceStream seqStream(argv[1]);
+    SequenceStream outStream("out.fa", SequenceStream::WRITE);    
+
+    if (!isGood(seqStream))
+    {
+        std::cerr << "ERROR: Could not open the file.\n";
+        return 1;
+    }
+    
+    StringSet<Dna5String> stringSet;
+    StringSet<CharString> ids;
+    cout << "File is OK" << endl;
+    seqan::CharString qual;
+    while(!atEnd(seqStream)) {
+        readRecord(id, seq, qual, seqStream); // != 0 ) {
+            std::cout << id << '\t' << seq <<  "\t" << qual << '\n';
+      //  }
+        appendValue(seqs, seq);
+        appendValue(ids, id);
+    }
+
+    
+    writeAll(outStream, ids, seqs);
+  */  
+
+    return 0;
+}

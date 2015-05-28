@@ -1,0 +1,28 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/aln/aln.cpp ./sandbox/my_rob/apps/aln/aln.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/aln/aln.cpp	2012-09-05 10:58:27.000000000 +0200
++++ ./sandbox/my_rob/apps/aln/aln.cpp	2012-09-05 11:06:50.055635929 +0200
+@@ -21,4 +21,24 @@
+   
+   std::cout << align << std::endl;
+   
++  std::cout << "Source" << std::endl;
++  for (unsigned i=0;i<length(row(align,0));i++){
++	  std::cout << toSourcePosition(row(align,0),i) << " ";
++  }
++  std::cout << std::endl;
++  for (unsigned i=0;i<length(row(align,1));i++){
++	  std::cout << toSourcePosition(row(align,1),i) << " ";
++  }
++  std::cout << std::endl;
++  std::cout << "Source" << std::endl;
++  for (unsigned i=0;i<length(source(row(align,0))));i++){
++	  std::cout << toSourcePosition(row(align,0),i) << " ";
++  }
++  std::cout << std::endl;
++  for (unsigned i=0;i<length(source(row(align,1))));i++){
++	  std::cout << toSourcePosition(row(align,1),i) << " ";
++  }
++  std::cout << std::endl;
++  return 1;
++  
+ }

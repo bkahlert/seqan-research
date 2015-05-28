@@ -1,0 +1,57 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/CMakeLists.txt ./sandbox/my_rob/apps/index/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_rob/apps/index/CMakeLists.txt	2012-09-05 13:21:16.199756962 +0200
+@@ -0,0 +1,5 @@
++cmake_minimum_required (VERSION 2.6)
++project (sandbox_my_rob_apps_index)
++
++# Update the list of file names below if you add source files to your application.
++seqan_add_executable(index index.cpp)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/index.cpp ./sandbox/my_rob/apps/index/index.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/index.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_rob/apps/index/index.cpp	2012-09-05 13:28:57.147763880 +0200
+@@ -0,0 +1,19 @@
++#include <seqan/sequence.h>
++#include <seqan/index.h>
++
++using namespace seqan;
++
++int main()
++{
++    String<Dna> text = "This is the first example";
++    Index<String<Dna>, IndexEsa<> > index(text);
++    StringSet<String<Dna> > stringSet;
++    
++    appendValue(stringSet, "This");
++    appendValue(stringSet, "That");
++	
++    Index<StringSet<String<Dna> >, IndexEsa<> > indexSet(stringSet);
++    
++
++    return 0;
++}
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/INFO ./sandbox/my_rob/apps/index/INFO
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/INFO	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_rob/apps/index/INFO	2012-09-05 13:21:16.199756962 +0200
+@@ -0,0 +1,21 @@
++Name: index
++Author: Your Name <your.email@example.net>
++Maintainer: Your Name <your.email@example.net>
++License: GPL v3
++Copyright: 2008-2012, FU Berlin
++Status: under development
++Description: One-line description for app index.
++ This is the long text description for the app.  You should wrap text to 78
++ characters and you have to wrap it to 80 characters.  The lines must have one
++ leading space.  Successive lines in this format will be word-wrapped when
++ displayed.  Leading space is stripped off.
++ .
++ Use empty lines with one dot to insert an empty line / break paragraphs.
++ .
++  Start lines with two spaces to make them display verbatim.  Lines that
++  cannot be displayed horizontally will be hard-wrapped (not at word bor-
++  ders), so maybe do your own hyphenation.
++ .
++ Do not use tab characters, their effect is not predictable.
++ .
++ The INFO file format is oriented after the Debian controfields format.

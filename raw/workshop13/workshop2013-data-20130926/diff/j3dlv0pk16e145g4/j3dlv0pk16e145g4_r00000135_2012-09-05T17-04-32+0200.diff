@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 17:00:51.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 17:04:28.610703117 +0200
+@@ -25,7 +25,7 @@
+             --j;
+         if (j>=length(pattern)/2)
+             continue;
+-        for (Dna5 c=MinValue<Dna>::VALUE; c<ValueSize<Dna>::VALUE; ++c)
++        for (Dna5 c=MinValue<Dna>::VALUE; c < +ValueSize<Dna>::VALUE; ++c)
+         {
+             TIter aprox(it);
+             if(!goDown(aprox, c))
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 17:00:42.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 17:00:51.061624348 +0200
+@@ -25,7 +25,7 @@
+             --j;
+         if (j>=length(pattern)/2)
+             continue;
+-        for (Dna c=MinValue<Dna5>::VALUE; c<ValueSize<Dna>::VALUE; ++c)
++        for (Dna5 c=MinValue<Dna>::VALUE; c<ValueSize<Dna>::VALUE; ++c)
+         {
+             TIter aprox(it);
+             if(!goDown(aprox, c))

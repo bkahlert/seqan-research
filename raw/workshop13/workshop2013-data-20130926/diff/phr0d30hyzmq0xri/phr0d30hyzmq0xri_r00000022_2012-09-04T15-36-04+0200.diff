@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_bam/io_bam.cpp ./sandbox/lienhard/apps/io_bam/io_bam.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_bam/io_bam.cpp	2012-09-04 15:05:34.000000000 +0200
++++ ./sandbox/lienhard/apps/io_bam/io_bam.cpp	2012-09-04 15:35:51.742161412 +0200
+@@ -111,6 +111,7 @@
+     // the first record.
+     bamStreamOut.header = bamStreamIn.header;
+     seqan::BamAlignmentRecord record;
++    unsigned lenSum = 0;
+     if(! isGood(bamStreamIn)){
+       std::cerr <<"error: cannot open "<< options.file <<" for reading\n";
+       return 1;
+@@ -121,11 +122,13 @@
+           std::cerr <<"problems while reading file "<<options.file<<"\n";
+           return 1;
+         }
++	if (hasFlagUnmapped(record))
++          lenSum += length(record.seq);
+         if(writeRecord(bamStreamOut, record)!=0){
+           std::cerr <<"problems while writing to stdout\n";
+           return 1;
+         }
+     }
+-
++    std::cout << "length of unmapped reads: " << lenSum << "\n";
+     return 0;
+ }

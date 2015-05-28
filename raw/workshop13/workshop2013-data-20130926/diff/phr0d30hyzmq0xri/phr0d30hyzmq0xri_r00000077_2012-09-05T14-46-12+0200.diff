@@ -1,0 +1,17 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 14:45:22.000000000 +0200
++++ ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 14:46:04.672541627 +0200
+@@ -149,11 +149,11 @@
+       while(goRight(it)){
+         if(getType(it)=="exon"){
+ 	  ++counter;
+-	  lenght+=abs(getEnd(getAnnotation(it))-getStart(getAnnotation(it)));
++	  //lenght+=abs(getEnd(getAnnotation(it))-getStart(getAnnotation(it)));
+ 	  }
+       }
+       std::cout << "In mRNA " << getParentName(it) << " gibt es " << counter <<" Exons\n";
+-      std::count << "Duchschnittliche Exon Laenge: " << lenght/counter <<"\n";
++      std::cout << "Duchschnittliche Exon Laenge: " << lenght/counter <<"\n";
+       sum+=counter;
+       lengthsum+=lenght;
+       goNext(it); 

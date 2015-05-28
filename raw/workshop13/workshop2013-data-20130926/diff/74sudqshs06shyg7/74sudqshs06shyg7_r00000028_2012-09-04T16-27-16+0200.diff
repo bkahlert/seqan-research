@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp ./sandbox/my_sandbox/apps/second_app/second_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp	2012-09-04 16:26:45.000000000 +0200
++++ ./sandbox/my_sandbox/apps/second_app/second_app.cpp	2012-09-04 16:27:11.581607181 +0200
+@@ -65,8 +65,8 @@
+     // To do that, you have to create a copy of the fragment in chr1 (bsChr1) that is aligned to the read.
+     std::cout << " \n Print alignment: " << std::endl;
+     
+-    Iterator<TDnaList>::Type it=begin(readList)
+-    Iterator<TDnaList>::Type itEnd=end(readList)
++    Iterator<TDnaList>::Type it=begin(readList);
++    Iterator<TDnaList>::Type itEnd=end(readList);
+     
+     for( ; !=itEnd; goNext(it) )
+     {
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp~ ./sandbox/my_sandbox/apps/second_app/second_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp~	2012-09-04 16:26:40.000000000 +0200
++++ ./sandbox/my_sandbox/apps/second_app/second_app.cpp~	2012-09-04 16:26:45.673606467 +0200
+@@ -68,7 +68,7 @@
+     Iterator<TDnaList>::Type it=begin(readList)
+     Iterator<TDnaList>::Type itEnd=end(readList)
+     
+-    for(; !=itEnd; goNext(it))
++    for( ; !=itEnd; goNext(it) )
+     {
+         // Temporary copy of begin position (beginPosition) from alignPosList
+         // of a given alignment between the read and the genome

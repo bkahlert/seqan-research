@@ -1,0 +1,38 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp ./sandbox/jtr/apps/workshop_app/workshop_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-04 16:19:06.000000000 +0200
++++ ./sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-04 16:19:32.000000000 +0200
+@@ -238,14 +238,27 @@
+ {
+     // INSERT YOUR CODE HERE ...
+     //
+-	std::ifstream is(options.alignmentFileName.c_str());
++	std::ifstream alignmentFile(options.alignmentFileName.c_str());
++	    if (!alignmentFile.good())
++	    {
++	        std::cerr << "Couldn't open alignment file " << options.alignmentFileName << std::endl;
++	        return false;
++	    }
++	    std::cerr << "Loading read alignments ..... " << std::flush;
++	    read(alignmentFile, store, Sam());
++	    std::cerr << "[" << length(store.alignedReadStore) << "]" << std::endl;
++	    // load annotations
++	    std::ifstream annotationFile(options.annotationFileName.c_str());
++	    if (!annotationFile.good())
++	    {
++	        std::cerr << "Couldn't open annotation file" << options.annotationFileName << std::endl;
++	        return false;
++	    }
++	    std::cerr << "Loading genome annotation ... " << std::flush;
++	    read(annotationFile, store, Gtf());
++	    std::cerr << "[" << length(store.annotationStore) << "]" << std::endl;
++	    return true;	
+ 	
+-	read(is, store, Sam());
+-	
+-	
+-	
+-	
+-    return true;
+ }
+ int main(int argc, char const * argv[])
+ {

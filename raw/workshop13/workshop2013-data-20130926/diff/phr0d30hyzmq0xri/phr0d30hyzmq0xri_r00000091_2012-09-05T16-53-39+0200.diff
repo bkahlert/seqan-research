@@ -1,0 +1,20 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp ./sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp	2012-09-05 16:50:51.000000000 +0200
++++ ./sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp	2012-09-05 16:53:31.251187778 +0200
+@@ -14,6 +14,7 @@
+ #include <seqan/store.h>
+ 
+ using namespace seqan;
++
+ template <typename TIter, typename TStringSet>
+ int search(TIter & it, TStringSet const & pattern){
+ 
+@@ -24,7 +25,7 @@
+     unsigned startApproxSearch = length(value(pIt)) / 2;
+     goDown(it, infix(value(pIt), startApproxSearch + 1, length(value(pIt))));
+     goRoot(it);
+-    for (int i = startApproxSearch; i<=0;--i)
++    for (unsigned i = startApproxSearch; i<=0;--i)
+     {
+       for (DNA5 c=MinValue<DNA>::value;c<ValueSize<DNA>::Value;c++)
+       {

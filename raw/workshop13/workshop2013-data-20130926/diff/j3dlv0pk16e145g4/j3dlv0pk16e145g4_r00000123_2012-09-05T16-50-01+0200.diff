@@ -1,0 +1,72 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 16:29:12.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 16:49:54.522368748 +0200
+@@ -15,16 +15,29 @@
+ 
+ using namespace seqan;
+ 
+-template <typename TIter, typename TStringSet>
++template <typename TIter, typename StringSet<String<TAlph> > >
+ void search(TIter & it, TStringSet const & pattern)
+ {
+     for (unsigned i=0; i < length(pattern); ++i)
+     {
+         unsigned j=length(pattern[i])-1 ;
+         while(goDown(it, pattern[i][j]) && j>= length(pattern)/2)
+-        {
+             --j;
+-        }
++        if (j>=length(pattern/2))
++            continue;
++        TIter aprox;
++        for (char c=MinValue<TAlph>::Value; c<ValueSize<TAlph>; ++c)
++        {
++            aprox = it;
++            if(!goDown(aprox, c))
++                continue
++            while(goDown(aprox, pattern[i][j] && j >= 0)
++                --j;
++            if (j==0)
++            {
++                //found hit
++            }
++        } 
+         goRoot(it);
+     }
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 16:27:39.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 16:49:31.266253423 +0200
+@@ -15,16 +15,28 @@
+ 
+ using namespace seqan;
+ 
+-template <typename TIter, typename TStringSet>
++template <typename TIter, typename StringSet<String<TAlph> > >
+ void search(TIter & it, TStringSet const & pattern)
+ {
+     for (unsigned i=0; i < length(pattern); ++i)
+     {
+-        unsigned j=length(pattern[i])-1;
++        unsigned j=length(pattern[i])-1 ;
+         while(goDown(it, pattern[i][j]) && j>= length(pattern)/2)
+-        {
+             --j;
+-        }
++        if (j>=length(pattern/2))
++            continue;
++        TIter aprox = it;
++        for (char c=MinValue<TAlph>::Value; c<ValueSize<TAlph>; ++c)
++        {
++            if(!goDown(aprox, c))
++                continue
++            while(goDown(it, pattern[i][j] && j >= 0)
++                --j;
++            if (j==0)
++            {
++                //found hit
++            }
++        } 
+         goRoot(it);
+     }
+ }

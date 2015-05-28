@@ -1,0 +1,31 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp	2012-09-04 17:04:45.000000000 +0200
++++ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp	2012-09-04 17:06:02.868269104 +0200
+@@ -93,11 +93,10 @@
+ //
+ void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
+ {
+-    typename Iterator<String<String<TInterval> > >::Type iit = begin(intervals);
+-    do
+-    {
+-        appendValue(intervalTrees, TIntervalTree(getValue(iit)));
+-    } while (iit.goNext())
++    resize(intervalTrees, length(intervals));
++    SEQAN_OMP_PRAGMA(parallel for)
++    for (unsigned i = 0; i < length(intervals); ++i)
++        createIntervalTree(intervalTrees[i], intervals[i]);
+ }
+ 
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~	2012-09-04 17:04:14.000000000 +0200
++++ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~	2012-09-04 17:04:45.283884377 +0200
+@@ -93,7 +93,7 @@
+ //
+ void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
+ {
+-    Iterator<String<String<TInterval> > >::Type iit = begin(intervals);
++    typename Iterator<String<String<TInterval> > >::Type iit = begin(intervals);
+     do
+     {
+         appendValue(intervalTrees, TIntervalTree(getValue(iit)));

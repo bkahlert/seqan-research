@@ -1,0 +1,38 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/aln/aln.cpp ./sandbox/my_rob/apps/aln/aln.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/aln/aln.cpp	2012-09-05 11:47:52.000000000 +0200
++++ ./sandbox/my_rob/apps/aln/aln.cpp	2012-09-05 12:00:06.479683893 +0200
+@@ -5,6 +5,26 @@
+ 
+ using namespace seqan;
+ 
++
++
++void msaDemo(){
++  typedef String<AminoAcid> TString;
++  typedef StringSet<TString> TStringSet;
++  typedef Graph<Alignment<StringSet<TString,Dependent<>>>> TAlingGraph;
++  
++  TStringSet seq;
++    appendValue(seq,"DPKKPRGKMSSYAFFVQTSREEHKKKHPDASVNFSEFSKKCSERWKTMSAKEKGKFEDMAKADKARYEREMKTYIPPKGE");
++    appendValue(seq,"RVKRPMNAFIVWSRDQRRKMALENPRMRNSEISKQLGYQWKMLTEAEKWPFFQEAQKLQAMHREKYPNYKYRPRRKAKMLPK");
++    appendValue(seq,"FPKKPLTPYFRFFMEKRAKYAKLHPEMSNLDLTKILSKKYKELPEKKKMKYIQDFQREKQEFERNLARFREDHPDLIQNAKK");
++    appendValue(seq,"HIKKPLNAFMLYMKEMRANVVAESTLKESAAINQILGRRWHALSREEQAKYYELARKERQLHMQLYPGWSARDNYGKKKKRKREK");
++  TAlignGreph alignG(seq);
++  globalMsaAlignment(alinG,Blosum62(-1,-11));
++  
++
++  std::cout << "MSA alignment:" << std::endl;
++  std::cout << alignG << std::endl;
++}
++
+ void globalAln(){
+   typedef String<char> TString;
+   typedef Align<TString> TAlign;
+@@ -86,6 +106,7 @@
+   
+   globalAln();
+   localAln();
++  mseDemo();
+   return 1;
+   
+ }

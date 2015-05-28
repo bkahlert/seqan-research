@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 13:25:35.000000000 +0200
++++ ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 13:26:29.476862935 +0200
+@@ -124,7 +124,7 @@
+     it = begin(store, AnnotationTree<>());
+     // Move iterator one node down
+     goDown(it);
+-    std::cout << it <<"\n";
++    std::cout << "hi" <<"\n";
+ 
+ 
+ 

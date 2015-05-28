@@ -1,0 +1,52 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 14:36:30.000000000 +0200
++++ ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 14:43:42.427836255 +0200
+@@ -127,7 +127,11 @@
+     Iterator<FragmentStore<>, AnnotationTree<> >::Type it;
+     it = begin(store, AnnotationTree<>());
+     // Move iterator one node down
+-    while(goDown(it));
++    unsigned counter;
++    unsigned lenght;
++    unsigned sum=0;
++    unsigned lengthsum=0;
++/*    while(goDown(it));
+     unsigned counter=0;
+     if(getType(it)=="exon"){++counter;}
+     while(goRight(it)){
+@@ -135,26 +139,28 @@
+     }
+     std::cout << "In mRNA " << getParentName(it) << " gibt es " << counter <<" Exons\n";
+     unsigned sum=counter;
+-    goNext(it); 
++    goNext(it); */
+     while(! atEnd(it)){
+-     
+-      std::cout << "next\n";  
+       while(goDown(it));
+       counter=0;
++      lenght=0;
+       if(getType(it) == "exon")
+         ++counter;
+-      else std::cout <<"-" << getType(it) <<"-\n";
+       while(goRight(it)){
+-        if(getType(it)=="exon")
++        if(getType(it)=="exon"){
+ 	  ++counter;
+-	else std::cout << "-" << getType(it) <<"-\n";
++	  lenght+=abs(getEnd(it)-getStart(it));
++	  }
+       }
+       std::cout << "In mRNA " << getParentName(it) << " gibt es " << counter <<" Exons\n";
++      std::count << "Duchschnittliche Exon Laenge: " << lenght/counter <<"\n";
+       sum+=counter;
++      lengthsum+=lenght;
+       goNext(it); 
+     }
+     std::cout << "Insgesammt: " << sum <<" Exons\n";
+-   
++       
++    std::cout << "Duchschnittslaenge insgesammt: " << lengthsum/sum <<"\n";
+ 
+ 
+     return 0;

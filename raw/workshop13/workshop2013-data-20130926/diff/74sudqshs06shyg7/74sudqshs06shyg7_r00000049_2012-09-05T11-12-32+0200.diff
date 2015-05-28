@@ -1,0 +1,39 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 11:09:20.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 11:12:28.671016774 +0200
+@@ -39,12 +39,12 @@
+ 	
+ 	
+ 	std::cout << "SourceToViewPosition" << std::endl;
+-	for(unsigned i=0; i<length(row(align,0)); ++i){
++	for(unsigned i=0; i<length(source( row(align,0)) ); ++i){
+ 	
+ 		std::cout << toViewPosition(row(align,0), i) << " ";
+ 	}
+ 	std::cout << std::endl;
+-	for(unsigned i=0; i<length(row(align,1)); ++i){
++	for(unsigned i=0; i<length(source( row(align,1)) ); ++i){
+ 	
+ 		std::cout << toViewPosition(row(align,1), i) << " ";
+ 	}
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 11:08:28.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 11:09:20.399006758 +0200
+@@ -31,7 +31,7 @@
+ 	}
+ 	std::cout << std::endl;
+ 	
+-	for(unsigned i=0; i<length(row(align,0)); ++i){
++	for(unsigned i=0; i<length(row(align,1)); ++i){
+ 	
+ 		std::cout << toSourcePosition(row(align,1), i) << " ";
+ 	}
+@@ -44,7 +44,7 @@
+ 		std::cout << toViewPosition(row(align,0), i) << " ";
+ 	}
+ 	std::cout << std::endl;
+-	for(unsigned i=0; i<length(row(align,0)); ++i){
++	for(unsigned i=0; i<length(row(align,1)); ++i){
+ 	
+ 		std::cout << toViewPosition(row(align,1), i) << " ";
+ 	}

@@ -1,0 +1,36 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 13:42:20.000000000 +0200
++++ ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 13:46:02.110677454 +0200
+@@ -118,6 +118,10 @@
+ 
+     FragmentStore<> store;
+     std::ifstream file(toCString(options.file), std::ios_base::in | std::ios_base::binary);
++    if(!isGood(file)){
++      std::cerr << "Cannot open file " << options.file << "for reading\n";
++      return 1;
++    }
+     read(file, store, Gtf());
+     // Create AnnotationTree iterator
+     Iterator<FragmentStore<>, AnnotationTree<> >::Type it;
+@@ -128,17 +132,19 @@
+     while(goRight(it))
+       counter++;  
+     std::cout << "Es gibt " << counter <<" Exons\n";
++    unsigned sum=counter;
+     do{
+       goNext(it);    
+       while(goDown(it));
+       counter=1; //weil es beim ersten ankommt
+       while(goRight(it))
+         counter++;
+-        
+       std::cout << "Es gibt " << counter <<" Exons\n";
++      sum+=counter;
+       goNext(it);
+     }while(! atEnd(it));
+-
++    std::cout << "Insgesammt: " << sum <<" Exons\n";
++   
+ 
+ 
+     return 0;

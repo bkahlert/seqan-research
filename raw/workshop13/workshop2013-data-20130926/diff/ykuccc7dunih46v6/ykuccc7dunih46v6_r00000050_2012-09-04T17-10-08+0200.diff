@@ -1,0 +1,38 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tut2/.tut2.cpp.swp and ./sandbox/my_sandbox/apps/tut2/.tut2.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tut2/tut2.cpp ./sandbox/my_sandbox/apps/tut2/tut2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tut2/tut2.cpp	2012-09-04 17:06:53.000000000 +0200
++++ ./sandbox/my_sandbox/apps/tut2/tut2.cpp	2012-09-04 17:10:06.335055788 +0200
+@@ -109,19 +109,27 @@
+     //Iterator<TDnaList >::Type it = begin(readList);
+     //Iterator<String<int> >::Type it2 = begin(alignPosList);
+     Iterator<TDnaList, Rooted>::Type it = begin(readList);
++    /*
++    Iterator<String<int>, Rooted>::Type it2 = begin(alignPosList);
++    while (!atEnd(it, readList)) {
++            printAlign(infix(chr1, *it2, *it2 + length(*it)), *it);
++            printAlign(infix(bsChr1, *it2, *it2 + length(*it)), *it);
++	    ++it;
++	    ++it2;
++    }
++    */
++
+     StringSet<DnaString> readSet;
+     while (!atEnd(it)) {
+ 	    appendValue(readSet, *it);
+ 	    ++it;
+     }
+-    it = begin(readList);
+-    
+     Iterator<String<int>, Rooted>::Type it2 = begin(alignPosList);
+-    while (!atEnd(it, readList)) {
+-            printAlign(infix(chr1, *it2, *it2 + length(*it)), *it);
++    for (TStringSetIterator it = begin(stringSet); it != end(stringSet); ++it, ++it2) {
+             printAlign(infix(bsChr1, *it2, *it2 + length(*it)), *it);
+-	    ++it;
+-	    ++it2;
+     }
++    
++    typedef Iterator<StringSet<DnaString> >::Type TStringSetIterator;
++
+     return 0;
+ }

@@ -1,0 +1,32 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp ./sandbox/my_sandbox/apps/index_app/index_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp	2012-09-05 11:28:28.000000000 +0200
++++ ./sandbox/my_sandbox/apps/index_app/index_app.cpp	2012-09-05 11:30:10.929486428 +0200
+@@ -19,9 +19,12 @@
+         }
+         else
+         {
+-            while (!isRoot(it) && !goRight(it))
++            while (!goRight(it))
+             {
+-                goUp(it);
++                if (!goUp(it))
++                {
++                    return 0;
++                }
+             }
+             std::cout << representative(it) << std::endl;
+         }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp~ ./sandbox/my_sandbox/apps/index_app/index_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp~	2012-09-05 11:27:59.000000000 +0200
++++ ./sandbox/my_sandbox/apps/index_app/index_app.cpp~	2012-09-05 11:28:28.672979357 +0200
+@@ -3,8 +3,8 @@
+ 
+ using namespace seqan;
+ 
+-typedef Index<String<char> TIndex;
+-typedef typename Iterator<TIndex >, TopDown<ParentLinks<> > >::Type TIter;
++typedef Index<String<char> > TIndex;
++typedef Iterator<TIndex , TopDown<ParentLinks<> > >::Type TIter;
+ 
+ int main()
+ {

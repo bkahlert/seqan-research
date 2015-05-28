@@ -1,0 +1,18 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp and ./sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 15:59:47.000000000 +0200
++++ ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 16:07:02.000000000 +0200
+@@ -40,8 +40,11 @@
+ //
+ bool loadFiles(TStore & store, Options const & options)
+ {
+-    // INSERT YOUR CODE HERE ...
+-    //
++    std::ifstream aligStream(toCString(options.alignmentFileName));
++    std::ifstream annoStream(toCString(options.annotationFileName));
++	    
++    read(aligStream, store, Sam());
++    read(annoStream, store, Gff());
+ 
+     return true;
+ }

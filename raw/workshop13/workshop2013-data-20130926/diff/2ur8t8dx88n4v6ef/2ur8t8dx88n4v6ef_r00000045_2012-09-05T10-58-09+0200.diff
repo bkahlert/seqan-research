@@ -1,0 +1,15 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/2ur8t8dx88n4v6ef_stats.txt -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata/2ur8t8dx88n4v6ef_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp ./sandbox/my_sandbox/apps/index_app/index_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp	2012-09-05 10:56:23.859375000 +0200
++++ ./sandbox/my_sandbox/apps/index_app/index_app.cpp	2012-09-05 10:58:07.453125000 +0200
+@@ -6,9 +6,9 @@
+ int main()
+ {
+     String<Dna5> text = "TTATTAAGCGTATAGCCCTATAAATATAA";
+-    Index<String<Dna5>, FMIndex<> > index(text);
++    Index<String<Dna5>, IndexEsa<> > index(text);
+ 
+-	Finder<String<Dna5>, FMIndex<> > fmfinder ( index );
++	Finder<String<Dna5>, IndexEsa<> > fmfinder ( index );
+ 	String<Dna5> pattern = "TATAA";
+ 
+ 	find(fmfinder, pattern);

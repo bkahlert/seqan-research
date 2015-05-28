@@ -1,0 +1,40 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp	2012-09-04 17:21:34.000000000 +0200
++++ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp	2012-09-04 17:22:00.249016500 +0200
+@@ -105,7 +105,7 @@
+ //
+ void countReadsPerGene(String<unsigned> & readsPerGene, String<TIntervalTree> const & intervalTrees, TStore const & store)
+ {
+-    resize(readsPerGene, length(store.annotationStore);
++    resize(readsPerGene, length(store.annotationStore));
+     for (unsigned i = 0; i < length(store.contigStore); ++i)
+     {
+         Iterator<TStore, TAlignedRead>::Type it = begin(store, TAlignedRead);
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~	2012-09-04 17:10:27.000000000 +0200
++++ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~	2012-09-04 17:21:34.532888982 +0200
+@@ -105,7 +105,23 @@
+ //
+ void countReadsPerGene(String<unsigned> & readsPerGene, String<TIntervalTree> const & intervalTrees, TStore const & store)
+ {
+-    
++    resize(readsPerGene, length(store.annotationStore);
++    for (unsigned i = 0; i < length(store.contigStore); ++i)
++    {
++        Iterator<TStore, TAlignedRead>::Type it = begin(store, TAlignedRead);
++        while(!atEnd(it))
++        {
++            String<TId> overlapping;
++            findintervals(intervallTrees[getValue(it).contigId],
++                          getValue(it).beginPos,
++                          getValue(it).endPos);
++             Iterator<Sting<TId> >::Type rIt = begin(overlapping);
++             while(!atEnd(rIt))
++             {
++                countReadsPerGene[getValue(rIt)] += 1;
++             }
++        }
++    }
+ }
+ 
+ int main(int argc, char const * argv[])

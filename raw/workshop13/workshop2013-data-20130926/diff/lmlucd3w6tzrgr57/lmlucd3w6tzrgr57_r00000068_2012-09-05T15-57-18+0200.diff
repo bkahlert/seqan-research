@@ -1,0 +1,42 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp ./sandbox/grunert/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp	2012-09-05 15:53:15.000000000 +0200
++++ ./sandbox/grunert/apps/first_app/first_app.cpp	2012-09-05 15:57:17.000000000 +0200
+@@ -8,9 +8,8 @@
+ 
+ int main(int argc, char const ** argv)
+ {
+-    
++    // assignment 1
+     if(argc<2) {
+-        
+         cerr << "Check arguments! Error\n";
+         return 1;
+     }
+@@ -18,9 +17,26 @@
+     CharString id;
+     Dna5String seq;
+     //SequenceStream seqStream("/Users/grunert/Development/workshop/example.fa");
++    
++    // assignment 1
+     SequenceStream seqStream(argv[1]);
+     
+-    readRecord(id, seq, seqStream);
++    //readRecord(id, seq, seqStream);
++    
++    
++    
++    if (!isGood(seqStream))
++    {
++        std::cerr << "ERROR: Could not open the file.\n";
++        return 1;
++    }
++    if (readRecord(id, seq, seqStream) != 0)
++    {
++        std::cerr << "ERROR: Could not read from example.fa!\n";
++        return 1;
++    }
++    
++    
+     
+     cout << id << '\t' << seq << '\n';
+     

@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp ./sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp	2012-09-05 14:19:36.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp	2012-09-05 14:20:21.458913372 +0200
+@@ -6,7 +6,7 @@
+ {
+     typedef Index<CharString> TIndex;  
+     TIndex index("mariaM");
+-    Iterator< TIndex, TopDown< PreOrder > >::Type it(index);
++    Iterator< TIndex, TopDown<Preorder> >::Type it(index);
+     
+     
+     do {
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp~ ./sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp~	2012-09-05 14:18:07.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp~	2012-09-05 14:20:08.234912668 +0200
+@@ -6,7 +6,7 @@
+ {
+     typedef Index<CharString> TIndex;  
+     TIndex index("mariaM");
+-    Iterator< TIndex, TopDown< PreOrder<> > >::Type it(index);
++    Iterator< TIndex, TopDown<PreOrder> >::Type it(index);
+     
+     
+     do {

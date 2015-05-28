@@ -1,0 +1,88 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 14:14:39.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 14:50:57.731156955 +0200
+@@ -34,11 +34,50 @@
+ }
+ 
+ 
++void funWithFastaIndex() {
++
++    double t1 = tick();
++    if (! build(faiIndex, "/data/genomes/hg19.fa")) {
++        std::cerr << "ERROR: Could not build the index!\n";
++    }
++    double t2 = tick();
++    a
++    cout << "Time building index: " << (t2 - t1) / 1000 << endl;
++    
++    int res = write(faiIndex, "/home/kokonech/tmp/hg19.fa.fai");
++    if (res != 0)
++        std::cerr << "ERROR: Could not write the index to file!\n";
++    
++    unsigned idx = 0;
++    if (!getIdByName(faiIndex, "1", idx))
++        std::cerr << "ERROR: FAI index does not know about chr1.\n";
++    
++    unsigned seqLength = sequenceLength(faiIndex, idx);
++    cout << "Sequence length is " << seqLength;    
++
++    // Load first 1000 characters of chr1.
++    seqan::CharString seqRegion;
++    if (readRegion(seqRegion, faiIndex, idx, 0, 1000) != 0)
++        std::cerr << "ERROR: Could not load chr1.\n";
++    
++    cout << "First 1000 bases:\n" << seqRegion << endl;
++   
++
++    // Load all of chr1.
++   //aseqan::CharString seqChr1;
++    //if (readSequence(seqChr1, faiIdx, idx) != 0)
++    //    std::cerr << "ERROR: Could not load chr1.\n";
++    
++
++
++
++}
++
+ 
+ 
+ int main(int argc, char const ** argv)
+ {
+-    
++    funWithFastaIndex(); 
+ /*    ArgumentParser parser("simple");
+     setupArgumentParser(parser);
+     
+@@ -62,7 +101,7 @@
+     cerr << "Max coverage threshold: " << threshold << endl;
+     cerr << "Verbose: " << verbose << endl;
+ */
+-    if (argc < 2) {
++/*    if (argc < 2) {
+         cerr << " Not enought parameters" << endl;
+         return -1;    
+     }   
+@@ -80,15 +119,21 @@
+         return 1;
+     }
+     
++    StringSet<Dna5String> stringSet;
++    StringSet<CharString> ids;
+     cout << "File is OK" << endl;
+     seqan::CharString qual;
+     while(!atEnd(seqStream)) {
+         readRecord(id, seq, qual, seqStream); // != 0 ) {
+             std::cout << id << '\t' << seq <<  "\t" << qual << '\n';
+       //  }
+-    writeRecord(outStream, id, seq);
++        appendValue(seqs, seq);
++        appendValue(ids, id);
+     }
++
+     
++    writeAll(outStream, ids, seqs);
++  */  
+ 
+     return 0;
+ }
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

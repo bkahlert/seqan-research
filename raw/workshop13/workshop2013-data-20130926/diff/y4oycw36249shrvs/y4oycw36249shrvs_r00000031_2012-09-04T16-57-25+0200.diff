@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_ass2/apps/ass2/ass2.cpp ./sandbox/my_ass2/apps/ass2/ass2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_ass2/apps/ass2/ass2.cpp	2012-09-04 16:56:47.000000000 +0200
++++ ./sandbox/my_ass2/apps/ass2/ass2.cpp	2012-09-04 16:57:24.113436586 +0200
+@@ -5,21 +5,6 @@
+ 
+ using namespace seqan;
+ 
+-int main()
+-{
+-    Dna5String genome = "ANTGGTTNCAACNGTAANTGCTGANNNACATGTNCGCGTGTA";
+-    Iterator<Dna5String>::Type it = begin(genome);
+-    Iterator<Dna5String>::Type itEnd = end(genome);
+-    for (; it != itEnd; goNext(it)){
+-        //int i = position(it,readList);
+-        
+-        if (getValue(it) == 'N')
+-            getValue(it) = 'A';
+-    }
+-    std::cout << "Modified genome: " << genome << std::endl;
+-    return 0;
+-}
+-
+ 
+ 
+ #include <iostream>

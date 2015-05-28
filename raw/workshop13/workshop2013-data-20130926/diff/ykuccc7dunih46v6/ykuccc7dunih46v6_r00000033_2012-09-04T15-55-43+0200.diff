@@ -1,0 +1,34 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tut2/.tut2.cpp.swp and ./sandbox/my_sandbox/apps/tut2/.tut2.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tut2/tut2.cpp ./sandbox/my_sandbox/apps/tut2/tut2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tut2/tut2.cpp	2012-09-04 15:47:37.000000000 +0200
++++ ./sandbox/my_sandbox/apps/tut2/tut2.cpp	2012-09-04 15:55:41.394008162 +0200
+@@ -72,11 +72,19 @@
+ 
+     // Assume we have mapped the 4 reads to chr1 (and chr2) and now have the mapping start positions (no gaps).
+     // Store the start position in a String alignPosList: 7, 100, 172, 272
++	String<int> alignPosList;
++	append(alignPosList, 7);
++	append(alignPosList, 100);
++	append(alignPosList, 172);
++	append(alignPosList, 272);
+   
+     // Optional
+     // Bisulfite conversion
+     // Assume chr1 is beeing bisulfate treated: Copy chr1 to a new genome bsChr1 and exchange every 'C' with a 'T'
+-    DnaString bsChr1;
++    DnaString bsChr1 = chr1;
++    for (unsigned i = 0; i < length(bsChr1); ++i)
++	    if (bsChr1[i] == 'C')
++		    bsChr1[i] = 'T';
+   
+     // Print alignments of the reads with chr1 (or bsChr1) sequence using the function printAlign
+     // and the positions in alignPosList.
+@@ -88,7 +96,7 @@
+         // of a given alignment between the read and the genome
+        
+         // Genome fragment
+-        DnaString genomeFragment;
++        DnaString genomeFragment = infix(chr1, alignPosList[i], alignPosList[i] + length(readList[i]);
+         // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
+        
+ 

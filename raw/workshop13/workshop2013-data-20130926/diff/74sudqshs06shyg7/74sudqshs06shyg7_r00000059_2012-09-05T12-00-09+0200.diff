@@ -1,0 +1,108 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 11:48:40.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 12:00:05.047168732 +0200
+@@ -3,10 +3,29 @@
+ 
+ using namespace seqan;
+ 
++void msaDemo(){
++
++	typedef String<AminoAcid> TSequence;
++	typedef StringSet<TSequence> TStringSet;
++	typedef StringSet< TSequence, Dependent<> > TDepStringSet;
++	typedef Graph< Alignment<TDepStringSe> > TStringSet;
++	
++	TStringSet seq;
++    	appendValue(seq,"DPKKPRGKMSSYAFFVQTSREEHKKKHPDASVNFSEFSKKCSERWKTMSAKEKGKFEDMAKADKARYEREMKTYIPPKGE");
++    	appendValue(seq,"RVKRPMNAFIVWSRDQRRKMALENPRMRNSEISKQLGYQWKMLTEAEKWPFFQEAQKLQAMHREKYPNYKYRPRRKAKMLPK");
++    	appendValue(seq,"FPKKPLTPYFRFFMEKRAKYAKLHPEMSNLDLTKILSKKYKELPEKKKMKYIQDFQREKQEFERNLARFREDHPDLIQNAKK");
++  	appendValue(seq,"HIKKPLNAFMLYMKEMRANVVAESTLKESAAINQILGRRWHALSREEQAKYYELARKERQLHMQLYPGWSARDNYGKKKKRKREK");
++	
++	TAlignGraph alignG(seq);
++	int score = globalMSAAlignment(align, Blosum62(-1,-11));
++	
++	std::cout << "Global MSA alignment:" << std::endl;
++	std::cout << alignG << std::endl;
++}
+ 
+ void localAlignmentDemo(){
+ 
+-	typedef String<Dna> TString;
++	typedef String<Dna5> TString;
+ 	typedef Align<TString> TAlign;
+ 	
+ 	TString seq1="ataagcgtctcg";
+@@ -26,6 +45,7 @@
+ 	std::cout << "Score: " << score << std::endl;
+ 	std::cout << align << std::endl;
+ 	
++	//Getting all kind of alignments possible starting from the one with the highest score
+ 	LocalAlignmentEnumerator<Score<int>, Unbanded> enumerator (scoring,5);
+ 	while(nextLocalAlignment(align, enumerator)){
+ 		
+@@ -116,6 +136,9 @@
+ 	//---3
+ 	localAlignmentDemo();
+ 	
++	//---4
++	msaDemo();
++	
+ 	return 0;
+ }
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 11:44:52.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 11:58:02.875162232 +0200
+@@ -3,10 +3,24 @@
+ 
+ using namespace seqan;
+ 
++void msaDemo(){
++
++	typedef String<AminoAcid> TSequence;
++	typedef StringSet<TSequence> TStringSet;
++	typedef StringSet< TSequence, Dependent<> > TDepStringSet;
++	typedef Graph< Alignment<TDepStringSe> > TStringSet;
++	
++	StringSet<TSequence> seq;
++    	appendValue(seq,"DPKKPRGKMSSYAFFVQTSREEHKKKHPDASVNFSEFSKKCSERWKTMSAKEKGKFEDMAKADKARYEREMKTYIPPKGE");
++    	appendValue(seq,"RVKRPMNAFIVWSRDQRRKMALENPRMRNSEISKQLGYQWKMLTEAEKWPFFQEAQKLQAMHREKYPNYKYRPRRKAKMLPK");
++    	appendValue(seq,"FPKKPLTPYFRFFMEKRAKYAKLHPEMSNLDLTKILSKKYKELPEKKKMKYIQDFQREKQEFERNLARFREDHPDLIQNAKK");
++  	appendValue(seq,"HIKKPLNAFMLYMKEMRANVVAESTLKESAAINQILGRRWHALSREEQAKYYELARKERQLHMQLYPGWSARDNYGKKKKRKREK");
++	
++}
+ 
+ void localAlignmentDemo(){
+ 
+-	typedef String<Dna> TString;
++	typedef String<Dna5> TString;
+ 	typedef Align<TString> TAlign;
+ 	
+ 	TString seq1="ataagcgtctcg";
+@@ -25,6 +39,16 @@
+ 	std::cout << "Local_alignment:" << std::endl;
+ 	std::cout << "Score: " << score << std::endl;
+ 	std::cout << align << std::endl;
++	
++	//Getting all kind of alignments possible starting from the one with the highest score
++	LocalAlignmentEnumerator<Score<int>, Unbanded> enumerator (scoring,5);
++	while(nextLocalAlignment(align, enumerator)){
++		
++		std::cout << "Local_alignment2:" << std::endl;
++		std::cout << getScore(enumerator) << std::endl;
++		std::cout << align << std::endl;
++	}
++	
+ 		
+ }
+ 
+@@ -107,6 +131,9 @@
+ 	//---3
+ 	localAlignmentDemo();
+ 	
++	//---4
++	msaDemo();
++	
+ 	return 0;
+ }
+ 

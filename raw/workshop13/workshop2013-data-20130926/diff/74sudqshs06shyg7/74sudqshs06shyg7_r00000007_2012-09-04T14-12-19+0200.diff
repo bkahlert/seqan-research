@@ -1,0 +1,46 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 14:04:47.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 14:11:27.920163847 +0200
+@@ -14,7 +14,8 @@
+     return localScore;
+ }
+ 
+-seqan::String<int> computeScore(seqan::String<char> const & text, seqan::String<char> const & pattern)
++template <typename TText, typename TPattern>
++seqan::String<int> computeScore(TText const & text, TPattern const & pattern)
+ {
+     seqan::String<int> score;
+     seqan::resize(score, seqan::length(text), 0);
+@@ -22,6 +23,8 @@
+         score[i] = computeLocalScore(infix(text, i, i + seqan::length(pattern)), pattern);
+     return score;
+ }
++
++
+ void print(seqan::String<int> const & text)
+ {
+     for (unsigned i = 0; i < seqan::length(text); ++i)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-04 13:57:37.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-04 14:11:03.528163175 +0200
+@@ -4,7 +4,8 @@
+ #include <seqan/file.h>
+ #include <seqan/sequence.h>
+ 
+-int computeLocalScore(seqan::String<char> const & subText, seqan::String<char> const & pattern)
++template <typename TSubText, typename TPattern>
++int computeLocalScore(TSubText const & subText, TPattern const & pattern)
+ {
+     int localScore = 0;
+     for (unsigned i = 0; i < seqan::length(pattern); ++i)
+@@ -12,7 +13,9 @@
+             ++localScore;
+     return localScore;
+ }
+-seqan::String<int> computeScore(seqan::String<char> const & text, seqan::String<char> const & pattern)
++
++template <typename TText, typename TPattern>
++seqan::String<int> computeScore(TText const & text, TPattern const & pattern)
+ {
+     seqan::String<int> score;
+     seqan::resize(score, seqan::length(text), 0);

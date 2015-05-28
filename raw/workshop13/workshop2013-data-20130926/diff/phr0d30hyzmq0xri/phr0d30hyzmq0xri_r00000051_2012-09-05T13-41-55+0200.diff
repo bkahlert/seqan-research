@@ -1,0 +1,27 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 13:38:17.000000000 +0200
++++ ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 13:41:48.749420988 +0200
+@@ -123,14 +123,21 @@
+     Iterator<FragmentStore<>, AnnotationTree<> >::Type it;
+     it = begin(store, AnnotationTree<>());
+     // Move iterator one node down
++    while(goDown(it));
++    unsigned counter=1; //weil es beim ersten ankommt
++    while(goRight(it))
++      counter++;  
++    std::cout << "Es gibt " << counter <<" Exons\n";
+     do{
++      goNext(it);    
+       while(goDown(it));
+-      unsigned counter=1; //weil es beim ersten ankommt
++      counter=1; //weil es beim ersten ankommt
+       while(goRight(it))
+         counter++;
+         
+       std::cout << "Es gibt " << counter <<" Exons\n";
+-    }while(goNext(it));
++      goNext(it);
++    }while(! atEnd(it);
+ 
+ 
+ 

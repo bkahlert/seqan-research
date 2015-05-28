@@ -1,0 +1,48 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp ./sandbox/my_sandbox/apps/second_app/second_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp	2012-09-04 16:00:48.000000000 +0200
++++ ./sandbox/my_sandbox/apps/second_app/second_app.cpp	2012-09-04 16:03:48.709568500 +0200
+@@ -68,11 +68,13 @@
+     {
+         // Temporary copy of begin position (beginPosition) from alignPosList
+         // of a given alignment between the read and the genome
++        unsigned beginPosition = alignPosList[i];
+        
+         // Genome fragment
+         DnaString genomeFragment;
+         // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
+-       
++       	 for (unsigned j = 0; j < length(readList[i]); ++j)
++            appendValue(genomeFragment, chr1[beginPosition+j]);
+ 
+         // Call of our function to print the simple alignment
+         printAlign(genomeFragment, readList[i]);
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp~ ./sandbox/my_sandbox/apps/second_app/second_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp~	2012-09-04 16:00:11.000000000 +0200
++++ ./sandbox/my_sandbox/apps/second_app/second_app.cpp~	2012-09-04 16:03:47.153568457 +0200
+@@ -54,8 +54,9 @@
+     DnaString bsChr1;
+     assign(bsChr1, chr1);
+     
+-    for(unsigned i = 0; i < length(chr1)); ++i)
+-    	if(bsChr1[i]=='C'){ bsChr1[i]='T' }
++    for(unsigned i = 0; i < length(bsChr1)); ++i)
++    	if(bsChr1[i]=='C')
++    		bsChr1[i]='T'
+     
+     
+   
+@@ -67,11 +68,13 @@
+     {
+         // Temporary copy of begin position (beginPosition) from alignPosList
+         // of a given alignment between the read and the genome
++        unsigned beginPosition = alignPosList[i];
+        
+         // Genome fragment
+         DnaString genomeFragment;
+         // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
+-       
++       	 for (unsigned j = 0; j < length(readList[i]); ++j)
++            appendValue(genomeFragment, chr1[beginPosition+j]);
+ 
+         // Call of our function to print the simple alignment
+         printAlign(genomeFragment, readList[i]);

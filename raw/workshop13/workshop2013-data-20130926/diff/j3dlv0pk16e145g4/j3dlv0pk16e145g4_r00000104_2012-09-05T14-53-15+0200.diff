@@ -1,0 +1,101 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp	2012-09-05 14:49:36.000000000 +0200
++++ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp	2012-09-05 14:53:12.896527782 +0200
+@@ -129,16 +129,46 @@
+         return;
+     Iterator<String<int> >::Type upper = ::std::upper_bound(begin(refHits), end(refHits), entriesIt->physicalPosition);
+     goPrevious(upper);
+-    if (value(upper) < (int)entriesIt->physicalPosition)
++    if (getValue(upper) < (int)entriesIt->physicalPosition)
+         goNext(upper);
+     int offset = entriesIt->physicalPosition - entriesIt->virtualPosition;
+     while(value(upper) < (int)entriesIt->physicalPosition + (int)entriesIt->length - (int)length(pattern) + 1 && upper != end(refHits))
+     {
+-        appendValue(hitTarget, value(upper)+offset);
++        appendValue(hitTarget, getValue(upper)+offset);
+         goNext(upper);
+     }
+ }
+ 
++template <typename TJournalEntriesIterator, typename TJournal, typename TPattern>
++void _findInPatchNode(String<int> & hitTarget,
++                      TJournalEntriesIterator & entriesIt,
++                      TJournal const & journal,
++                      TPattern const & pattern)
++{
++    typedef typename Iterator<TJournal const, Standard>::Type TJournalIterator;
++// Search for pattern in the insertion node.
++    TJournalIterator patchIter = iter(journal, entriesIt->virtualPosition);
++    TJournalIterator patchEnd = patchIter + _max(0, (int)entriesIt->length - (int)length(pattern) + 1);
++    // Move step by step over search region.
++    for (; patchIter != patchEnd; ++patchIter)
++    {
++        TJournalIterator verifyIter = patchIter;
++        bool isHit = true;
++        // Search for pattern in the insertion node.
++        for (unsigned posPattern = 0; posPattern < length(pattern); ++posPattern, ++verifyIter)
++        {
++            // Comparing the pattern value with the current value of the iterator.
++            if(pattern[posPattern] != getValue(verifyIter))
++            {
++                isHit = false;
++                break;
++            }
++        }
++        if (isHit)
++            appendValue(hitTarget, position(patchIter) + entriesIt->virtualPosition);
++    }
++}
++
+ int main()
+ {
+     // Definition of the used types.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp~ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp~	2012-09-05 14:49:01.000000000 +0200
++++ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp~	2012-09-05 14:52:47.496401829 +0200
+@@ -129,7 +129,7 @@
+         return;
+     Iterator<String<int> >::Type upper = ::std::upper_bound(begin(refHits), end(refHits), entriesIt->physicalPosition);
+     goPrevious(upper);
+-    if (value(upper) < entriesIt->physicalPosition)
++    if (value(upper) < (int)entriesIt->physicalPosition)
+         goNext(upper);
+     int offset = entriesIt->physicalPosition - entriesIt->virtualPosition;
+     while(value(upper) < (int)entriesIt->physicalPosition + (int)entriesIt->length - (int)length(pattern) + 1 && upper != end(refHits))
+@@ -139,6 +139,36 @@
+     }
+ }
+ 
++template <typename TJournalEntriesIterator, typename TJournal, typename TPattern>
++void _findInPatchNode(String<int> & hitTarget,
++                      TJournalEntriesIterator & entriesIt,
++                      TJournal const & journal,
++                      TPattern const & pattern)
++{
++    typedef typename Iterator<TJournal const, Standard>::Type TJournalIterator;
++// Search for pattern in the insertion node.
++    TJournalIterator patchIter = iter(journal, entriesIt->virtualPosition);
++    TJournalIterator patchEnd = patchIter + _max(0, (int)entriesIt->length - (int)length(pattern) + 1);
++    // Move step by step over search region.
++    for (; patchIter != patchEnd; ++patchIter)
++    {
++TJournalIterator verifyIter = patchIter;
++        bool isHit = true;
++        // Search for pattern in the insertion node.
++        for (unsigned posPattern = 0; posPattern < length(pattern); ++posPattern, ++verifyIter)
++        {
++            // Comparing the pattern value with the current value of the iterator.
++            if(pattern[posPattern] != getValue(verifyIter))
++            {
++                isHit = false;
++                break;
++            }
++        }
++        if (isHit)
++            appendValue(hitTarget, position(patchIter) + entriesIt->virtualPosition);
++    }
++}
++
+ int main()
+ {
+     // Definition of the used types.

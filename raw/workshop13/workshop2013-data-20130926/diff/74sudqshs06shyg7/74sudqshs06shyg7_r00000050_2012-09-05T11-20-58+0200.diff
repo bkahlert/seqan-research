@@ -1,0 +1,97 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 11:12:28.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 11:20:54.255043671 +0200
+@@ -3,6 +3,29 @@
+ 
+ using namespace seqan;
+ 
++void globalAlignment(){
++
++	typedef String<char> TString;
++	typedef Align<TString, ArrayGaps> TAlign;
++	
++	TString seq1="CDFGDC";
++	TString seq2="CDEFGAHGC";
++
++	TAlign align;
++	
++	resize( rows(align), 2 );
++	assignSource( row(align,0), seq1 );
++	assignSource( row(align,1), seq2 );
++	
++	Score<int,Simple> scoring(0,-1,-1,-1);
++	
++	int score=globalAlignment(align,scoring);
++	
++	std:: << "alignment:" << std::endl;
++	std:: << score << std::endl;
++	std:: << align << std::endl;
++}
++
+ int main()
+ {
+ 
+@@ -49,5 +72,9 @@
+ 		std::cout << toViewPosition(row(align,1), i) << " ";
+ 	}
+ 	std::cout << std::endl;
++	
++	
++	globalAlignment();
++	return 0;
+ }
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 11:09:20.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 11:20:25.767042155 +0200
+@@ -3,6 +3,29 @@
+ 
+ using namespace seqan;
+ 
++void globalAlignment(){
++
++	typedef String<char> TString;
++	typedef Align<TString, ArrayGaps> TAlign;
++	
++	TString seq1="CDFGDC";
++	TString seq2="CDEFGAHGC";
++
++	TAlign align;
++	
++	resize( rows(align), 2 );
++	assignSource( row(align,0), seq1 );
++	assignSource( row(align,1), seq2 );
++	
++	Score<int,Simple> scoring(0,-1,-1,-1);
++	
++	int score=globalAlignment(align,scoring);
++	
++	std:: << "alignment:" << std::endl;
++	std:: << score << std::endl;
++	std:: << align << std::endl;
++}
++
+ int main()
+ {
+ 
+@@ -39,15 +62,18 @@
+ 	
+ 	
+ 	std::cout << "SourceToViewPosition" << std::endl;
+-	for(unsigned i=0; i<length(row(align,0)); ++i){
++	for(unsigned i=0; i<length(source( row(align,0)) ); ++i){
+ 	
+ 		std::cout << toViewPosition(row(align,0), i) << " ";
+ 	}
+ 	std::cout << std::endl;
+-	for(unsigned i=0; i<length(row(align,1)); ++i){
++	for(unsigned i=0; i<length(source( row(align,1)) ); ++i){
+ 	
+ 		std::cout << toViewPosition(row(align,1), i) << " ";
+ 	}
+ 	std::cout << std::endl;
++	
++	
++	globalAlignment
+ }
+ 

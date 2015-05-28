@@ -1,0 +1,35 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp ./sandbox/grunert/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp	2012-09-05 14:07:50.000000000 +0200
++++ ./sandbox/grunert/apps/first_app/first_app.cpp	2012-09-05 14:08:47.000000000 +0200
+@@ -5,6 +5,7 @@
+ #include <seqan/store.h>
+ 
+ using namespace seqan;
++using namespace std;
+ int main()
+ {
+     FragmentStore<> store;
+@@ -15,17 +16,15 @@
+     it = begin(store, AnnotationTree<>());
+   
+     goBegin(it);
+-    
+     while (!atEnd(it) && getType(it)!="exon")
+-    
+     goNext(it);
+     
+-    std::cout << "Type:" << getType(it) << std::endl;
+-    std::cout << "Begin position:" << getAnnotation(it).beginPos << std::endl;
+-    std::cout << "End position:" << getAnnotation(it).endPos << std::endl;
+-    std::cout << "Id:" << value(it) << std::endl;
+-    std::cout << "Id parent:" << getAnnotation(it).parentId << std::endl;
+-    std::cout << "Parent name:" << getParentName(it) << std::endl;
++    cout << "Type:" << getType(it) << endl;
++    cout << "Begin position:" << getAnnotation(it).beginPos << endl;
++    cout << "End position:" << getAnnotation(it).endPos << endl;
++    cout << "Id:" << value(it) << endl;
++    cout << "Id parent:" << getAnnotation(it).parentId << endl;
++    cout << "Parent name:" << getParentName(it) << endl;
+     
+     
+     return 0;

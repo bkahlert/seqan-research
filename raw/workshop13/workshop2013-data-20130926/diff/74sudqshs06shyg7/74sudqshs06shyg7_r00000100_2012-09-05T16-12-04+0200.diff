@@ -1,0 +1,75 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/firstIO_App/firstIO_App.cpp ./sandbox/my_sandbox/apps/firstIO_App/firstIO_App.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/firstIO_App/firstIO_App.cpp	2012-09-05 16:01:38.000000000 +0200
++++ ./sandbox/my_sandbox/apps/firstIO_App/firstIO_App.cpp	2012-09-05 16:11:55.847269510 +0200
+@@ -9,22 +9,22 @@
+         std::cerr << "USAGE: basic_seq_io_example FILENAME\n";
+         return 1;
+     }
+-    seqan::CharString id;
+-    seqan::Dna5String seq;
+-    seqan::SequenceStream seqStream(argv[1]);
++    seqan::SequenceStream seqStream(argv[1], seqan::SequenceStream::WRITE);
+     if (!isGood(seqStream))
+     {
+         std::cerr << "ERROR: Could not open the file.\n";
+         return 1;
+     }
+-    while (!atEnd(seqStream))
++    seqan::StringSet<seqan::CharString> ids;
++    appendValue(ids, "seq1");
++    appendValue(ids, "seq2");
++    seqan::StringSet<seqan::Dna5String> seqs;
++    appendValue(seqs, "CGAT");
++    appendValue(seqs, "TTTT");
++    if (writeAll(seqStream, ids, seqs) != 0)
+     {
+-        if (readRecord(id, seq, seqStream) != 0)
+-        {
+-            std::cerr << "ERROR: Could not read from example.fa!\n";
+-            return 1;
+-        }
+-        std::cout << id << '\t' << seq << '\n';
++        std::cerr << "ERROR: Could not write to file!\n";
++        return 1;
+     }
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/firstIO_App/firstIO_App.cpp~ ./sandbox/my_sandbox/apps/firstIO_App/firstIO_App.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/firstIO_App/firstIO_App.cpp~	2012-09-05 15:57:01.000000000 +0200
++++ ./sandbox/my_sandbox/apps/firstIO_App/firstIO_App.cpp~	2012-09-05 16:01:38.671236676 +0200
+@@ -2,21 +2,29 @@
+ #include <seqan/sequence.h>
+ #include <seqan/seq_io.h>
+ 
+-int main()
++int main(int argc, char const ** argv)
+ {
++    if (argc < 2)
++    {
++        std::cerr << "USAGE: basic_seq_io_example FILENAME\n";
++        return 1;
++    }
+     seqan::CharString id;
+     seqan::Dna5String seq;
+-    seqan::SequenceStream seqStream("example.fa");
++    seqan::SequenceStream seqStream(argv[1]);
+     if (!isGood(seqStream))
+     {
+         std::cerr << "ERROR: Could not open the file.\n";
+         return 1;
+     }
+-    if (readRecord(id, seq, seqStream) != 0)
++    while (!atEnd(seqStream))
+     {
+-        std::cerr << "ERROR: Could not read from example.fa!\n";
+-        return 1;
++        if (readRecord(id, seq, seqStream) != 0)
++        {
++            std::cerr << "ERROR: Could not read from example.fa!\n";
++            return 1;
++        }
++        std::cout << id << '\t' << seq << '\n';
+     }
+-    std::cout << id << '\t' << seq << '\n';
+     return 0;
+ }

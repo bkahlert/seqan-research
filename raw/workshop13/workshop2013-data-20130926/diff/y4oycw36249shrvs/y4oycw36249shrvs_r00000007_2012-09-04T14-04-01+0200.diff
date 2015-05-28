@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/ass1/ass1.cpp ./sandbox/my_rob/apps/ass1/ass1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/ass1/ass1.cpp	2012-09-04 13:59:40.000000000 +0200
++++ ./sandbox/my_rob/apps/ass1/ass1.cpp	2012-09-04 14:03:55.473280404 +0200
+@@ -1,7 +1,7 @@
+ #include <iostream>
+ #include <seqan/file.h>
+ #include <seqan/sequence.h>
+-
++template <typename TText, typename TPattern>
+ const int computeLocalScore(seqan::String<char> subText, seqan::String<char>  pattern)
+ {
+     int localScore = 0;
+@@ -10,6 +10,8 @@
+             ++localScore;
+     return localScore;
+ }
++
++template <typename TText, typename TPattern>
+ seqan::String<int> computeScore(seqan::String<char> const & text, seqan::String<char> const & pattern)
+ {
+     seqan::String<int> score;

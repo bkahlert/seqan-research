@@ -1,0 +1,58 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp and ./sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 17:19:43.000000000 +0200
++++ ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 17:23:02.000000000 +0200
+@@ -121,6 +121,45 @@
+     }
+ }
+ 
++// COPY+PASTE to check if [5] works...
++void outputGeneCoverage(String<unsigned> const & readsPerGene, TStore const & store)
++{
++    // output abundances for covered genes
++    Iterator<TStore const, AnnotationTree<> >::Type transIt = begin(store, AnnotationTree<>());
++    Iterator<TStore const, AnnotationTree<> >::Type exonIt;
++    double millionMappedReads = length(store.alignedReadStore) / 1000000.0;
++    std::cout << "#gene name\tRPKM value" << std::endl;
++    for (unsigned j = 0; j < length(readsPerGene); ++j)
++    {
++        if (readsPerGene[j] == 0)
++            continue;
++        unsigned mRNALengthMax = 0;
++        goTo(transIt, j);
++        // determine maximal mRNA length (which we use as gene length)
++        SEQAN_ASSERT_NOT(isLeaf(transIt));
++        goDown(transIt);
++        do
++        {
++            exonIt = nodeDown(transIt);
++            unsigned mRNALength = 0;
++            // determine mRNA length, sum up the lengths of its exons
++            do
++            {
++                if (getAnnotation(exonIt).typeId == store.ANNO_EXON)
++                    mRNALength += abs((int)getAnnotation(exonIt).beginPos - (int)getAnnotation(exonIt).endPos);
++            }
++            while (goRight(exonIt));
++            if (mRNALengthMax < mRNALength)
++                mRNALengthMax = mRNALength;
++        }
++        while (goRight(transIt));
++        // RPKM is number of reads mapped to a gene divided by its gene length in kbps
++        // and divided by millions of total mapped reads
++        std::cout << store.annotationNameStore[j] << '\t';
++        std::cout << readsPerGene[j] / (mRNALengthMax / 1000.0) / millionMappedReads << std::endl;
++    }
++}
++
+ int main(int argc, char const * argv[])
+ {
+     Options options;
+@@ -139,6 +178,7 @@
+     extractGeneIntervals(intervals, store);
+     constructIntervalTrees(intervalTrees, intervals);
+     countReadsPerGene(readsPerGene, intervalTrees, store);
++    outputGeneCoverage(readsPerGene, store);
+ 
+     return 0;
+ }

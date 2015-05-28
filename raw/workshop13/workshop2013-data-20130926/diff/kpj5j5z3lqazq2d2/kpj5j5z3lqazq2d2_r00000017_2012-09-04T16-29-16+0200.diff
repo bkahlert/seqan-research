@@ -1,0 +1,30 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp and ./sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 16:18:31.000000000 +0200
++++ ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 16:29:11.000000000 +0200
+@@ -7,6 +7,10 @@
+ using namespace seqan;
+ // define used types
+ typedef FragmentStore<> TStore;
++typedef Value<TStore::TAnnotationStore>::Type TAnnotation;
++typedef TAnnotation::TId TId;
++typedef TAnnotation::TId TPos;
++typedef IntervalAndCargo<TPos, TId> TInterval;
+ // define options
+ struct Options
+ {
+@@ -68,6 +72,14 @@
+         return res == ArgumentParser::PARSE_ERROR;
+     if (!loadFiles(store, options))
+         return 1;
++
++    String<String<TInterval> > intervals;
++    for (typename Iterator<TStore, AnnotationTree<> >::Type it = begin(store.annotationStore); it!=end(store.annotationStore); ++it) {
++
++    }
++    
++
++
+     return 0;
+ }
+ 

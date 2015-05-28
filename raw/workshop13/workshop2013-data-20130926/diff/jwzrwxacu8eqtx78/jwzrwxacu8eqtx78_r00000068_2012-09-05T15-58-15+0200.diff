@@ -1,0 +1,83 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp ./sandbox/jtr/apps/workshop_app/workshop_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-05 15:48:39.000000000 +0200
++++ ./sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-05 15:58:11.000000000 +0200
+@@ -409,7 +409,7 @@
+ #include <seqan/sequence.h>
+ #include <seqan/file.h>
+ #include <seqan/index.h>
+-#include <seqan/fm_index.h>
++#include <seqan/index_fm.h>
+ #include <seqan/store.h>
+ 
+ using namespace seqan;
+@@ -421,39 +421,50 @@
+     // type definitions
+     typedef String<Dna5> TString;
+     typedef StringSet<TString> TStringSet;
+-    typedef Index<StringSet<TString>, FmIndex<> > TIndex;
++    typedef Index<StringSet<TString>, FMIndex<> > TIndex;
+     typedef Iterator<TIndex, TopDown<ParentLinks<> > >::Type TIter;
+ 
+-    // reversing the sequences for backward search
++    StringSet<TString> text;
++    FragmentStore<> fragStore;
++	
++    if (argc < 3) {
++	    std::cerr << "Invalid number of arguments." << std::endl
++	                  << "USAGE: mini_bowtie GENOME.fasta READS.fasta OUT.sam" << std::endl;
++	}
++    
++	if (!loadContigs(fragStore, argv[1])) return 1;
++    if (!loadReads(fragStore, argv[2])) return 1;
++    
++	// reversing the sequences for backward search
+     // backward search
+     // reading the command line arguments
+     // declaration and initialization of the fragment store
+     // forward search
+     // combining the contigs of the reference into one string set
+-    appendValue(text, fragStore.contigStore[i].seq);
+-    std::cerr << "Invalid number of arguments." << std::endl
+-                  << "USAGE: mini_bowtie GENOME.fasta READS.fasta OUT.sam" << std::endl;
+-    }
+-    if (argc < 3) {
+-    if (!loadContigs(fragStore, argv[1])) return 1;
+-    if (!loadReads(fragStore, argv[2])) return 1;
++    
++    for (unsigned i = 0; i < length(fragStore.contigStore); ++i){
++		appendValue(text, fragStore.contigStore[i].seq);
++	}
++	
++	TIndex fmIndex(text);
++	TIter it(fmIndex);
++	
++	search();
+     clear(fmIndex);
+-    clear(fmIndex);
+-    StringSet<TString> text;
+-    for (unsigned i = 0; i < length(fragStore.contigStore); ++i)   
+-    fmIndex = TIndex(text);
+-    TIndex fmIndex(text);
+-    TIter it(fmIndex);
+-    search();
+-    search();
+-    clear(it);
+     clear(it);
++    
+     reverse(text);
+     reverse(fragStore.readSeqStore);
++
++	fmIndex = TIndex(text);
+     it = TIter(fmIndex);
+-    FragmentStore<> fragStore;
++	
++    search();
++	clear(fmIndex);
++    clear(it);
++
+     return 0;
+-    return 1;
++    // return 1;
+ }
+ 
+ 

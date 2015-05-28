@@ -1,0 +1,37 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 13:59:23.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 14:05:24.911123742 +0200
+@@ -62,15 +62,15 @@
+     cerr << "Max coverage threshold: " << threshold << endl;
+     cerr << "Verbose: " << verbose << endl;
+ */
+-    /*if (argc < 2) {
++    if (argc < 2) {
+         cerr << " Not enought parameters" << endl;
+         return -1;    
+-    } */  
++    }   
+         
+ 
+     CharString id;
+     Dna5String seq;
+-    //cout << "Openning " << argv[1] << endl;
++    cout << "Openning " << argv[1] << endl;
+     SequenceStream seqStream(argv[1]);
+     
+     if (!isGood(seqStream))
+@@ -80,10 +80,10 @@
+     }
+     
+     cout << "File is OK" << endl;
+-    
++    seqan::CharString qual;
+     while(!atEnd(seqStream)) {
+-        readRecord(id, seq, seqStream); // != 0 ) {
+-            std::cout << id << '\t' << seq << '\n';
++        readRecord(id, seq, qual, seqStream); // != 0 ) {
++            std::cout << id << '\t' << seq <<  "\t" << qual << '\n';
+       //  }
+     }
+     
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

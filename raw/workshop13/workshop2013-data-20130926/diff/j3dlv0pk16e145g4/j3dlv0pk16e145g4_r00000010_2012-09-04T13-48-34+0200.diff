@@ -1,0 +1,55 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app/io_app.cpp ./sandbox/my_sandbox/apps/io_app/io_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app/io_app.cpp	2012-09-04 13:40:40.000000000 +0200
++++ ./sandbox/my_sandbox/apps/io_app/io_app.cpp	2012-09-04 13:48:22.004428759 +0200
+@@ -12,7 +12,19 @@
+         return 1;
+     }
+     seqan::SequenceStream seqStream(argv[1]);
+-    readRecord(id, seq, seqStream);
+-    std::cout << id << '\t' << seq << '\n';
++    if (!isGood(seqStream))
++    {
++        std::cerr << "Could not open file " << argv[1] << std::endl;
++        return 1;
++    }
++    while (!atEnd(seqStream))
++    {
++        if (readRecord(id, seq, seqStream) != 0)
++        {
++            std::cerr << "Could not read record" << std::endl;
++            return 1;
++        }
++        std::cout << id << '\t' << seq << '\n';
++    }
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app/io_app.cpp~ ./sandbox/my_sandbox/apps/io_app/io_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app/io_app.cpp~	2012-09-04 13:40:25.000000000 +0200
++++ ./sandbox/my_sandbox/apps/io_app/io_app.cpp~	2012-09-04 13:44:49.215373597 +0200
+@@ -2,7 +2,7 @@
+ #include <seqan/sequence.h>
+ #include <seqan/seq_io.h>
+ 
+-int main(int agrc, char const ** argv)
++int main(int argc, char const ** argv)
+ {
+     seqan::CharString id;
+     seqan::Dna5String seq;
+@@ -12,7 +12,16 @@
+         return 1;
+     }
+     seqan::SequenceStream seqStream(argv[1]);
+-    readRecord(id, seq, seqStream);
++    if (!isGood(seqStream))
++    {
++        std::cerr << "Could not open file " << argv[1] << std::endl;
++        return 1;
++    }
++    if (readRecord(id, seq, seqStream) != 0)
++    {
++        std::cerr << "Could not read record" << std::endl;
++        return 1;
++    }
+     std::cout << id << '\t' << seq << '\n';
+     return 0;
+ }

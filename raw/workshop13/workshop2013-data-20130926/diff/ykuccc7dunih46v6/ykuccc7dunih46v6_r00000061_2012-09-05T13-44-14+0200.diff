@@ -1,0 +1,12 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutfrag/.tutfrag.cpp.swp and ./sandbox/my_sandbox/apps/tutfrag/.tutfrag.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp ./sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp	2012-09-05 13:39:41.000000000 +0200
++++ ./sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp	2012-09-05 13:44:09.796454687 +0200
+@@ -17,6 +17,7 @@
+     it = begin(store, AnnotationTree<>());
+     // Move iterator one node down 
+     goDown(it);
++    goDown(it);
+ 
+     int count = 0;
+     while (goRight(it))

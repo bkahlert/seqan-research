@@ -1,0 +1,25 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn2/.assgn2.cpp.swp and ./sandbox/my_sandbox/apps/assgn2/.assgn2.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn2/assgn2.cpp ./sandbox/my_sandbox/apps/assgn2/assgn2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn2/assgn2.cpp	2012-09-04 13:42:53.000000000 +0200
++++ ./sandbox/my_sandbox/apps/assgn2/assgn2.cpp	2012-09-04 13:46:58.494974648 +0200
+@@ -116,10 +116,10 @@
+ }
+ 
+ template <typename Whatever>
+-void print(std::ostream & os, const Whatever & sequence)
++void print(std::ostream & os, const Whatever & sequence, const char * sep = " ")
+ {
+     for (unsigned i = 0; i < seqan::length(sequence); ++i)
+-        os << sequence[i] << " ";
++        os << sequence[i] << sep;
+     os << std::endl;
+ }
+ 
+@@ -151,6 +151,6 @@
+         score[i] = localScore;
+     }
+     // Printing the result
+-    print(std::cout, score);
++    print(std::cout, score, ", ");
+     return 0;
+ }

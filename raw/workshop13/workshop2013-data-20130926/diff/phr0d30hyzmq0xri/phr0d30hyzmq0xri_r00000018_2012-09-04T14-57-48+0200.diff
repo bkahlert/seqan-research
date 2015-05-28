@@ -1,0 +1,33 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_bam/io_bam.cpp ./sandbox/lienhard/apps/io_bam/io_bam.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_bam/io_bam.cpp	2012-09-04 14:48:02.000000000 +0200
++++ ./sandbox/lienhard/apps/io_bam/io_bam.cpp	2012-09-04 14:57:36.757837463 +0200
+@@ -102,6 +102,29 @@
+                   << "VERBOSITY\t" << options.verbosity << '\n'
+                   << "FILE     \t" << options.file << "\n\n";
+     }
++    
++    // Open input stream, BamStream can read SAM and BAM files.
++    seqan::BamStream bamStreamIn(toCString(options.file));
++    // Open output stream, "-" means stdin on if reading, else stdout.
++    seqan::BamStream bamStreamOut("-", seqan::BamStream::WRITE);
++    // Copy header.  The header is automatically written out before
++    // the first record.
++    bamStreamOut.header = bamStreamIn.header;
++    seqan::BamAlignmentRecord record;
++    if(! is.Good(bamStreamIn)){
++      cerr <<"error: cannot open "<< options.file <<" for reading\n"
++    }
++    while (!atEnd(bamStreamIn))
++    {
++        if(readRecord(record, bamStreamIn)!=0){
++          cerr <<"problems while reading file "<<options.file<<"\n";
++          return 1;
++        }
++        if(writeRecord(bamStreamOut, record)!=0){
++          cerr <<"problems while writing to stdout\n";
++          return 1;
++        }
++    }
+ 
+     return 0;
+ }

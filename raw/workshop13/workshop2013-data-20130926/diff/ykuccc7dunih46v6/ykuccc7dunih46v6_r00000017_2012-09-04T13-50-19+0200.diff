@@ -1,0 +1,127 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn2/.assgn2.cpp.swp and ./sandbox/my_sandbox/apps/assgn2/.assgn2.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn2/assgn2.cpp ./sandbox/my_sandbox/apps/assgn2/assgn2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn2/assgn2.cpp	2012-09-04 13:46:58.000000000 +0200
++++ ./sandbox/my_sandbox/apps/assgn2/assgn2.cpp	2012-09-04 13:50:17.351047905 +0200
+@@ -35,84 +35,29 @@
+ #include <seqan/basic.h>
+ #include <seqan/sequence.h>
+ 
+-#include <seqan/arg_parse.h>
+-
+ // ==========================================================================
+ // Classes
+ // ==========================================================================
+ 
+-// --------------------------------------------------------------------------
+-// Class AppOptions
+-// --------------------------------------------------------------------------
+-
+-// This struct stores the options from the command line.
+-//
+-// You might want to rename this to reflect the name of your app.
+-
+-struct AppOptions
+-{
+-    // Verbosity level.  0 -- quiet, 1 -- normal, 2 -- verbose, 3 -- very verbose.
+-    int verbosity;
+-
+-    // The first (and only) argument of the program is stored here.
+-    seqan::CharString text;
+-
+-    AppOptions() :
+-        verbosity(1)
+-    {}
+-};
+-
+ // ==========================================================================
+ // Functions
+ // ==========================================================================
+ 
+-// --------------------------------------------------------------------------
+-// Function parseCommandLine()
+-// --------------------------------------------------------------------------
+-
+-seqan::ArgumentParser::ParseResult
+-parseCommandLine(AppOptions & options, int argc, char const ** argv)
++int computeLocalScore(const seqan::String<char> & subText, const seqan::String<char> & pattern)
+ {
+-    // Setup ArgumentParser.
+-    seqan::ArgumentParser parser("assgn1");
+-    // Set short description, version, and date.
+-    setShortDescription(parser, "Put a Short Description Here");
+-    setVersion(parser, "0.1");
+-    setDate(parser, "July 2012");
+-
+-    // Define usage line and long description.
+-    addUsageLine(parser, "[\\fIOPTIONS\\fP] \"\\fITEXT\\fP\"");
+-    addDescription(parser, "This is the application skelleton and you should modify this string.");
+-
+-    // We require one argument.
+-    addArgument(parser, seqan::ArgParseArgument(seqan::ArgParseArgument::STRING, "TEXT"));
+-
+-    addOption(parser, seqan::ArgParseOption("q", "quiet", "Set verbosity to a minimum."));
+-    addOption(parser, seqan::ArgParseOption("v", "verbose", "Enable verbose output."));
+-    addOption(parser, seqan::ArgParseOption("vv", "very-verbose", "Enable very verbose output."));
+-
+-    // Add Examples Section.
+-    addTextSection(parser, "Examples");
+-    addListItem(parser, "\\fBassgn1\\fP \\fB-v\\fP \\fItext\\fP",
+-                "Call with \\fITEXT\\fP set to \"text\" with verbose output.");
+-
+-    // Parse command line.
+-    seqan::ArgumentParser::ParseResult res = seqan::parse(parser, argc, argv);
+-
+-    // Only extract  options if the program will continue after parseCommandLine()
+-    if (res != seqan::ArgumentParser::PARSE_OK)
+-        return res;
+-
+-    // Extract option values.
+-    if (isSet(parser, "quiet"))
+-        options.verbosity = 0;
+-    if (isSet(parser, "verbose"))
+-        options.verbosity = 2;
+-    if (isSet(parser, "very-verbose"))
+-        options.verbosity = 3;
+-    seqan::getArgumentValue(options.text, parser, 0);
+-
+-    return seqan::ArgumentParser::PARSE_OK;
++    int localScore = 0;
++    for (unsigned i = 0; i < seqan::length(pattern); ++i)
++        if (subText[i] == pattern[i])
++            ++localScore;
++    return localScore;
++}
++seqan::String<int> computeScore(const seqan::String<char> & text, const seqan::String<char> & pattern)
++{
++    seqan::String<int> score;
++    seqan::resize(score, seqan::length(text), 0);
++    for (unsigned i = 0; i < seqan::length(text) - seqan::length(pattern) + 1; ++i)
++        score[i] = computeLocalScore(infix(text, i, i + seqan::length(pattern)), pattern);
++    return score;
+ }
+ 
+ template <typename Whatever>
+@@ -134,22 +79,7 @@
+     // Initialization
+     seqan::String<char> text = "This is an awesome tutorial to get to know SeqAn!";
+     seqan::String<char> pattern = "tutorial";
+-    seqan::String<int> score;
+-    resize(score, length(text));
+-    //seqan::resize(42, 42);
+-    // Computation of the similarities
+-    // Iteration over the text (outer loop)
+-    for (unsigned i = 0; i < seqan::length(text) - seqan::length(pattern) + 1; ++i)
+-    {
+-        int localScore = 0;
+-        // Iteration over the pattern for character comparison
+-        for (unsigned j = 0; j < seqan::length(pattern); ++j)
+-        {
+-            if (text[i + j] == pattern[j])
+-                ++localScore;
+-        }
+-        score[i] = localScore;
+-    }
++    seqan::String<int> score = computeScore(text, pattern);
+     // Printing the result
+     print(std::cout, score, ", ");
+     return 0;

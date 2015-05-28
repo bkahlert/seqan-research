@@ -1,0 +1,28 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 16:06:15.388112700 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 16:14:35.351709000 +0200
+@@ -54,13 +54,15 @@
+     {
+         // Begin position beginPosition of a given alignment between the read and the genome
+         unsigned beginPosition = alignPosList[i];
+-        // Genome fragment
+-        DnaString genomeFragment;
+-        // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
+-        for (unsigned j = 0; j < length(readList[i]); ++j)
+-            appendValue(genomeFragment, chr1[beginPosition+j]);
+-        // Call of our function to print the simple alignment
+-        printAlign(genomeFragment, readList[i]);
+-    }
++		 unsigned endPosition = length(readList[i])+beginPosition;
++
++		   // Genome fragment
++		Infix<String<Dna> >::Type inf = infix(chr1,beginPosition, endPosition);
++
++      
++        
++       
++        printAlign(inf, readList[i]);
++    
+     return 1;
+ }
+\ No newline at end of file

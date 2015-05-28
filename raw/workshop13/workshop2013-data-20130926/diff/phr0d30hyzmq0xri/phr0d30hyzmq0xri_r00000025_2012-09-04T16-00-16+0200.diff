@@ -1,0 +1,14 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/rna_seq.cpp ./sandbox/lienhard/apps/rna_seq/rna_seq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/rna_seq.cpp	2012-09-04 15:52:35.000000000 +0200
++++ ./sandbox/lienhard/apps/rna_seq/rna_seq.cpp	2012-09-04 16:00:05.333369381 +0200
+@@ -18,8 +18,8 @@
+ //
+ ArgumentParser::ParseResult parseOptions(Options & options, int argc, char const * argv[])
+ {
+-    ArgumentParser parser("gene_quant");
+-    setShortDescription(parser, "A simple gene quantification tool");
++    ArgumentParser parser("rna_seq");
++    setShortDescription(parser, "A simple rna-seq gene quantification tool");
+     setVersion(parser, "1.0");
+     setDate(parser, "Sep 2012");
+     addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));

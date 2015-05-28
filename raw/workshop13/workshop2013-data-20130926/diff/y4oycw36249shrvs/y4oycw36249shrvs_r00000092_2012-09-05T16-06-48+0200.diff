@@ -1,0 +1,38 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/parse/parse.cpp ./sandbox/my_rob/apps/parse/parse.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/parse/parse.cpp	2012-09-05 16:05:30.000000000 +0200
++++ ./sandbox/my_rob/apps/parse/parse.cpp	2012-09-05 16:06:45.403083385 +0200
+@@ -2,19 +2,22 @@
+ #include <seqan/sequence.h>
+ #include <seqan/seq_io.h>
+ 
+-int main(int argc, char const ** argv){
+-	
++
++int main(){
++	/*
++	if (argc < 2){
++	if (argc < 2){
+ 	if (argc < 2){
+ 		std::cerr << "Error"<< std::endl;
+ 		return 1;
+ 	}
+-	 
++	 */
+ 
+ 	seqan::CharString id;
+     seqan::Dna5String seq;
+     seqan::SequenceStream seqStream("exemple.fa");
+     readRecord(id, seq, seqStream);
+-	do {
++	while (!atEnd(seqStream)){
+ 	  if (!isGood(seqStream)){
+         std::cerr << "ERROR: Could not open the file.\n";
+         return 1;
+@@ -26,6 +29,6 @@
+ 	
+ 
+       std::cout << id << '\t' << seq << '\n';
+-    }while (!atEnd(seqStream));
++    }
+     return 0;
+ }

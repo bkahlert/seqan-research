@@ -1,0 +1,41 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7i0p2gnbxpw7gofj_stats.txt -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7i0p2gnbxpw7gofj_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 13:42:51.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 13:52:09.000000000 +0200
+@@ -54,6 +54,20 @@
+     return localScore;
+ }
+ 
++template <typename TText>
++int computeLocalScore(TText const & subText, seqan::String<AminoAcid> const & pattern)
++{
++    int localScore = 0;
++    for (unsigned i = 0; i < seqan::length(pattern); ++i)
++        localScore += seqan::score(seqan::Blosum62(), subText[i], pattern[i]);
++    
++    return localScore;
++}
++
++
++
++
++
+ template <typename TText, typename TPattern>
+ seqan::String<int> computeScore(const TText & text, 
+ 				const TPattern & pattern)
+@@ -65,7 +79,15 @@
+     return score;
+ }
+ 
+-void print(seqan::String<int> const & text)
++template <typename TText>
++void print(const TText & text)
++{
++    for (unsigned i = 0; i < seqan::length(text); ++i)
++        std::cout << text[i] << ", ";
++    std::cout << std::endl;
++}
++
++void print(const seqan::String<int> & text)
+ {
+     for (unsigned i = 0; i < seqan::length(text); ++i)
+         std::cout << text[i] << " ";

@@ -1,0 +1,29 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/third_app/third_app.cpp ./sandbox/my_sandbox/apps/third_app/third_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/third_app/third_app.cpp	2012-09-04 16:58:34.000000000 +0200
++++ ./sandbox/my_sandbox/apps/third_app/third_app.cpp	2012-09-04 17:01:05.249663256 +0200
+@@ -19,9 +19,12 @@
+  
+     appendValue(stringSet, str0);
+     appendValue(stringSet, str1);
++    appendValue(stringSet, str2);
++    appendValue(stringSet, str3);
++     
+     
+     for(unsigned i = 0; i < length(stringSet); ++i){
+-    	for(unsigned j = 0; j < length(stringSet[i]); ++j){       	std::cout << stringSet[i][j]; }
++    	for(unsigned j = 0; j < length(stringSet[i]); ++j){ std::cout << stringSet[i][j]; }
+     	std::cout << std::endl;
+     }
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/third_app/third_app.cpp~ ./sandbox/my_sandbox/apps/third_app/third_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/third_app/third_app.cpp~	2012-09-04 16:58:31.000000000 +0200
++++ ./sandbox/my_sandbox/apps/third_app/third_app.cpp~	2012-09-04 16:58:34.789659107 +0200
+@@ -22,7 +22,7 @@
+     
+     for(unsigned i = 0; i < length(stringSet); ++i){
+     	for(unsigned j = 0; j < length(stringSet[i]); ++j){       	std::cout << stringSet[i][j]; }
+-    std::cout << std::endl;
++    	std::cout << std::endl;
+     }
+ 
+     return 0;

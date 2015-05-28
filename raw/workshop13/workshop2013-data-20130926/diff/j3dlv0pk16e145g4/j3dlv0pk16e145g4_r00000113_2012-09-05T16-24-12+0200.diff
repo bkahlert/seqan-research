@@ -1,0 +1,20 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt ./sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt	2012-09-05 15:35:43.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt	2012-09-05 16:24:06.298691516 +0200
+@@ -1,5 +1,7 @@
+ cmake_minimum_required (VERSION 2.6)
+ project (sandbox_my_sandbox_apps_bowtie_app)
+ 
++add_definition("-Wno-packed")
++
+ # Update the list of file names below if you add source files to your application.
+ seqan_add_executable(bowtie_app bowtie_app.cpp)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt~ ./sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt~	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt~	2012-09-05 15:35:43.816298887 +0200
+@@ -0,0 +1,5 @@
++cmake_minimum_required (VERSION 2.6)
++project (sandbox_my_sandbox_apps_bowtie_app)
++
++# Update the list of file names below if you add source files to your application.
++seqan_add_executable(bowtie_app bowtie_app.cpp)

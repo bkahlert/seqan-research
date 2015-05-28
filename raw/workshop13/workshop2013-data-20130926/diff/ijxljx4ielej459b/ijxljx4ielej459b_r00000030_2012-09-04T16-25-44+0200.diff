@@ -1,0 +1,51 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 16:25:07.379859000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 16:25:43.489924400 +0200
+@@ -41,33 +41,25 @@
+     // Optional
+     // Bisulfite conversion
+     // Assume chr1 is beeing bisulfate treated: Copy chr1 to a new genome bsChr1 and exchange every 'C' with a 'T'
+-    DnaString bsChr1;;
++    DnaString bsChr1;
+     assign(bsChr1, chr1);
+     for(unsigned i = 0; i < length(bsChr1); ++i)
+         if(bsChr1[i] == 'C')
+             bsChr1[i] = 'T';
+-    // Print alignments of the reads with chr1 (or bsChr1) sequence using the function printAlign
+-    // and the positions in alignPosList.
+-    // To do that, you have to create a copy of the fragment in chr1 (bsChr1) that is aligned to the read.
+-    std::cout << " \n Print alignment: " << std::endl;
++    // Print alignments using Segment: Do the same as above, but instead of using a for loop to build the fragment,
++    // use the Segment class to build an infix of bsChr1.
++    // Note: Because printAlign uses templates, we don't have to change the function even though the type of
++    // genomeFragment is different.
++    std::cout << " \n Print alignment using Segment: " << std::endl;
+     for(unsigned i = 0; i < length(readList); ++i)
+     {
+-        // Begin position beginPosition of a given alignment between the read and the genome
++        // Begin and end position of a given alignment between the read and the genome
+         unsigned beginPosition = alignPosList[i];
+-		 unsigned endPosition = length(readList[i])+beginPosition;
+-
+-		   // Genome fragment
+-		Infix<DnaString>::Type inf = infix(chr1,beginPosition, endPosition);
+-
+-      
+-        
+-       
+-        printAlign(inf, readList[i]);
+-    
++        unsigned endPosition = beginPosition + length(readList[i]);
++        // Build infix
++        Infix<DnaString>::Type genomeFragment = infix(chr1, beginPosition, endPosition);
++        // Call of our function to print the simple alignment
++        printAlign(genomeFragment, readList[i]);
++    }
+     return 1;
+-}
+-
+-
+-
+-
+ }
+\ No newline at end of file

@@ -1,0 +1,30 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/2ur8t8dx88n4v6ef_stats.txt -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata/2ur8t8dx88n4v6ef_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_io/sam_io.cpp ./sandbox/my_sandbox/apps/sam_io/sam_io.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_io/sam_io.cpp	2012-09-04 14:43:23.343750000 +0200
++++ ./sandbox/my_sandbox/apps/sam_io/sam_io.cpp	2012-09-04 14:53:26.984375000 +0200
+@@ -5,8 +5,10 @@
+ {
+     // Open input stream, BamStream can read SAM and BAM files.
+     seqan::BamStream bamStreamIn("C:\\temp\\example.sam");
++
+     // Open output stream, "-" means stdin on if reading, else stdout.
+     seqan::BamStream bamStreamOut("-", seqan::BamStream::WRITE);
++
+     // Copy header.  The header is automatically written out before
+     // the first record.
+     bamStreamOut.header = bamStreamIn.header;
+@@ -14,8 +16,12 @@
+     while (!atEnd(bamStreamIn))
+     {
+         readRecord(record, bamStreamIn);
+-        writeRecord(bamStreamOut, record);
+-		break;
++        if( hasFlagUnmapped(record) )
++		{
++			writeRecord(bamStreamOut, record);
++		}
++		
++		
+     }
+     return 0;
+ }
+\ No newline at end of file

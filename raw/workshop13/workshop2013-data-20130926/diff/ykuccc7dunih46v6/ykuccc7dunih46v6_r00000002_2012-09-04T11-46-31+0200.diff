@@ -1,0 +1,35 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/arg_parse/CMakeLists.txt ./sandbox/arg_parse/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/arg_parse/CMakeLists.txt	2012-08-25 10:59:36.000000000 +0200
++++ ./sandbox/arg_parse/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
+@@ -1,11 +0,0 @@
+-cmake_minimum_required (VERSION 2.6)
+-project (seqan_sandbox_arg_parse)
+-
+-# We have to register our own include directory here, though.
+-seqan_setup_includes(include SeqAnSandboxArg_parse)
+-# SeqAnCore is added include in ../core/CMakeLists.txt.  We only have to
+-# register that we want it here, too.  Same for SeqAnExtras.
+-seqan_make_seqan_available(SeqAnCore)
+-seqan_make_seqan_available(SeqAnExtras)
+-
+-seqan_add_all_subdirectories()  # include_directory(*)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/arg_parse/demos/CMakeLists.txt ./sandbox/arg_parse/demos/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/arg_parse/demos/CMakeLists.txt	2012-08-25 10:59:36.000000000 +0200
++++ ./sandbox/arg_parse/demos/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
+@@ -1,6 +0,0 @@
+-cmake_minimum_required (VERSION 2.6)
+-project (seqan_sandbox_arg_parse_demos)
+-
+-seqan_setup_demos(sandbox_arg_parse_demos)  # Add meta target and make executables depend on it.
+-
+-seqan_add_all_executables(sandbox_arg_parse_demos)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/arg_parse/tests/CMakeLists.txt ./sandbox/arg_parse/tests/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/arg_parse/tests/CMakeLists.txt	2012-08-25 10:59:36.000000000 +0200
++++ ./sandbox/arg_parse/tests/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
+@@ -1,6 +0,0 @@
+-cmake_minimum_required (VERSION 2.6)
+-project (seqan_sandbox_arg_parse_tests)
+-
+-seqan_setup_tests(sandbox_arg_parse_tests)  # Setup flags etc, add meta target.
+-
+-seqan_add_all_subdirectories()  # include_directory(*)

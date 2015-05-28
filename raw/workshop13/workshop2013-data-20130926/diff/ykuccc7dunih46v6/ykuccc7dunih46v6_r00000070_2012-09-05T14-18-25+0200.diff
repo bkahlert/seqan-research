@@ -1,0 +1,23 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutfrag/.tutfrag.cpp.swp and ./sandbox/my_sandbox/apps/tutfrag/.tutfrag.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp ./sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp	2012-09-05 14:15:40.000000000 +0200
++++ ./sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp	2012-09-05 14:18:22.142866130 +0200
+@@ -53,6 +53,7 @@
+     unsigned no_gene = 0;
+     unsigned no_mrna = 0;
+     unsigned no_exon = 0;
++    unsigned exlen = 0;
+     while (!atEnd(it))
+     {
+ 	    if (getType(it) == "gene")
+@@ -60,6 +61,10 @@
+ 	    goNext(it);
+     }
+ #endif
++    std::cout << no_gene << std::endl;
++    std::cout << no_mrna << std::endl;
++    std::cout << no_exon << std::endl;
++    std::cout << exlen << std::endl;
+  
+     return 0;
+ }

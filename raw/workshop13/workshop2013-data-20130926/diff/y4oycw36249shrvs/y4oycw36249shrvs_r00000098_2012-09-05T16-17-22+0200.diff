@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/parse/parse.cpp ./sandbox/my_rob/apps/parse/parse.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/parse/parse.cpp	2012-09-05 16:16:39.000000000 +0200
++++ ./sandbox/my_rob/apps/parse/parse.cpp	2012-09-05 16:17:18.823092888 +0200
+@@ -25,7 +25,7 @@
+             std::cerr << "ERROR: Could not read from example.fa!\n";
+             return 1;
+         }
+-        std::cout << id << '\t' << seq << qual << '\n';
++        std::cout << id << '\t' << seq <<'\t'<< qual << '\n';
+     }
+     return 0;
+ }

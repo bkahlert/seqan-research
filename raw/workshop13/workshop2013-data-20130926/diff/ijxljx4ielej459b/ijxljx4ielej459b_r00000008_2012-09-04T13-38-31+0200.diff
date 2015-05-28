@@ -1,0 +1,49 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 13:35:16.999002500 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 13:38:30.234054900 +0200
+@@ -2,27 +2,27 @@
+ #include <seqan/file.h>
+ #include <seqan/sequence.h>
+ 
+-int main()
++int computeLocalScore(seqan::String<char> subText, seqan::String<char> pattern)
++{
++    int localScore = 0;
++    for (unsigned i = 0; i < seqan::length(pattern); ++i)
++        if (subText[i] == pattern[i])
++            ++localScore;
++    return localScore;
++}
++seqan::String<int> computeScore(seqan::String<char> text, seqan::String<char> pattern)
+ {
+-    // Initialization
+-    seqan::String<char> text = "This tutorial to get to know SeqAn!";
+-    seqan::String<char> pattern = "tutorial";
+     seqan::String<int> score;
+-    resize(score, seqan::length(text));
+-    // Computation of the similarities
+-    // Iteration over the text (outer loop)
++    seqan::resize(score, seqan::length(text), 0);
+     for (unsigned i = 0; i < seqan::length(text) - seqan::length(pattern) + 1; ++i)
+-    {
+-        int localScore = 0;
+-        // Iteration over the pattern for character comparison
+-        for (unsigned j = 0; j < seqan::length(pattern); ++j)
+-        {
+-            if (text[i + j] == pattern[j])
+-                ++localScore;
+-        }
+-        score[i] = localScore;
+-    }
+-    // Printing the result
++        score[i] = computeLocalScore(infix(text, i, i + seqan::length(pattern)), pattern);
++    return score;
++}
++int main()
++{
++    seqan::String<char> text = "This is an awesome tutorial to get to now SeqAn!";
++    seqan::String<char> pattern = "tutorial";
++    seqan::String<int> score = computeScore(text, pattern);
+     for (unsigned i = 0; i < seqan::length(score); ++i)
+         std::cout << score[i] << " ";
+     std::cout << std::endl;

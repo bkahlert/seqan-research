@@ -1,0 +1,22 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp ./sandbox/grunert/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp	2012-09-04 16:23:36.000000000 +0200
++++ ./sandbox/grunert/apps/first_app/first_app.cpp	2012-09-04 16:33:38.000000000 +0200
+@@ -61,7 +61,16 @@
+     // Print alignments using Iterators: Do the same as above, but use Iterators to iterate over the read list.
+     // First, use Standard Iterators: Build two iterators {{{it}}} and {{{itEnd}}} to traverse {{{readList}}}.
+     
++    Iterator<DnaList>::Type it = begin(readList);
++    Iterator<DnaList, Standard>::Type itEnd = end(readList); //same Iterator as above
++    
+     std::cout << " \n Print alignment using Standard Iterators: " << std::endl;
++    for(; it != itEnd; goNext(it))
++    {
++        std::cout << *it;
++    }
+     
+     return 1;
+-}
+\ No newline at end of file
++}
++
++

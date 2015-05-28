@@ -1,0 +1,80 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp	2012-09-05 14:07:55.000000000 +0200
++++ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp	2012-09-05 14:08:27.039209352 +0200
+@@ -115,7 +115,7 @@
+     
+     String<char> pattern("AAAAAA");
+     
+-    searchPattern(hitSet, jSet, pattern)
++    searchPattern(hitSet, jSet, pattern);
+     
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp~ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp~	2012-09-05 13:50:22.000000000 +0200
++++ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp~	2012-09-05 14:07:55.207051493 +0200
+@@ -45,6 +45,52 @@
+     }
+     return 0;
+ }
++
++template <typename TString, typename TPattern>
++void searchPattern(StringSet<String<int> > & hitSet,
++                   StringSet<TString, Owner<JournaledSet> > const & journalSet,
++                   TPattern const & pattern)
++{
++    typedef typename Host<TString>::Type THost;
++    // Check for valid initial state.
++    if (empty(globalReference(journalSet)))
++    {
++        ::std::cout << "No reference set. Aborted search!" << std::endl;
++        return;
++    }
++    // Reset the hitSet to avoid phantom hits coming from a previous search.
++    clear(hitSet);
++    resize(hitSet, length(journalSet) + 1);
++    // Access the reference sequence.
++    THost & globalRef = globalReference(journalSet);
++    // Search for pattern in the reference sequence.
++    findPatternInReference(hitSet[0], globalRef, pattern);
++    // Search for pattern in the journaled sequences.
++    for (unsigned i = 0; i < length(journalSet); ++i)
++        findPatternInJournalString(hitSet[i+1], journalSet[i], pattern, hitSet[0]);
++}
++
++template <typename TString, typename TPattern>
++void findPatternInReference(String<int> & hits,
++                            TString const & reference,
++                            TPattern const & pattern)
++{
++    if (length(pattern) > length(reference))
++    {
++        return;
++    }
++    for (unsigned i=0; i<length(reference)-length(pattern), ++i)
++    {
++        unsigned j=0; 
++        while (j<length(pattern) && reference[i+j] == pattern[j])
++            ++j; 
++        if (j==length(pattern))
++            appendValue(hits, i);
++    }
++
++}
++
++
+ int main()
+ {
+     // Definition of the used types.
+@@ -65,6 +111,11 @@
+ 
+     databaseFile.close();
+     
++    StringSet<String<int> > hitSet;
++    
++    String<char> pattern("AAAAAA");
++    
++    searchPattern(hitSet, jSet, pattern)
+     
+     return 0;
+ }
