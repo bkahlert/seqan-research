@@ -1,0 +1,23 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Dokumente/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Dokumente/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Dokumente/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Dokumente/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Dokumente/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Dokumente/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Dokumente/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/.kdev4/seqan-trunk.kdev4 ./.kdev4/seqan-trunk.kdev4
+--- ./misc/seqan_instrumentation/last_revision_copy/.kdev4/seqan-trunk.kdev4	1970-01-01 01:00:00.000000000 +0100
++++ ./.kdev4/seqan-trunk.kdev4	2013-02-06 10:04:03.018806383 +0100
+@@ -0,0 +1,19 @@
++[Buildset]
++BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x16\x00s\x00e\x00q\x00a\x00n\x00-\x00t\x00r\x00u\x00n\x00k)
++
++[CMake]
++Build Directory Count=1
++CMakeDir=/usr/share/cmake-2.8/Modules
++Current Build Directory Index=0
++ProjectRootRelative=./
++
++[CMake][CMake Build Directory 0]
++Build Directory Path=file:///home/david/Dokumente/Seqan/seqan-trunk-build/debug
++Build Type=Debug
++CMake Binary=file:///usr/bin/cmake
++Environment Profile=
++Extra Arguments=
++Install Directory=file:///usr/local
++
++[Project]
++VersionControlSupport=kdevsubversion

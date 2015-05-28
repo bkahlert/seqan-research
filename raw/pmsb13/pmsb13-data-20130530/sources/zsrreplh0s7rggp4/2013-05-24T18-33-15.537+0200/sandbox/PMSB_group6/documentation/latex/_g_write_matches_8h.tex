@@ -1,0 +1,38 @@
+\hypertarget{_g_write_matches_8h}{\section{include/seqan/\-G\-Search/\-G\-Write\-Matches.h File Reference}
+\label{_g_write_matches_8h}\index{include/seqan/\-G\-Search/\-G\-Write\-Matches.\-h@{include/seqan/\-G\-Search/\-G\-Write\-Matches.\-h}}
+}
+{\ttfamily \#include $<$seqan/sequence.\-h$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Match.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Fasta\-Record.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/get\-Id\-Without\-Master.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\-Score , typename T\-Sequence $>$ }\\int \hyperlink{_g_write_matches_8h_a98b8b0d6ad077b1be00829f148ed5914}{G\-Write\-Matches} (std\-::fstream \&output\-Stream, String$<$ \hyperlink{structseqan_1_1_g_match}{G\-Match}$<$ T\-Score, T\-Sequence $>$ $>$ \&matches, \hyperlink{structseqan_1_1_g_fasta_record}{G\-Fasta\-Record}$<$ T\-Sequence $>$ \&query\-Record)
+\begin{DoxyCompactList}\small\item\em writes the given matches into an fstream \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_g_write_matches_8h_a98b8b0d6ad077b1be00829f148ed5914}{\index{G\-Write\-Matches.\-h@{G\-Write\-Matches.\-h}!G\-Write\-Matches@{G\-Write\-Matches}}
+\index{G\-Write\-Matches@{G\-Write\-Matches}!GWriteMatches.h@{G\-Write\-Matches.\-h}}
+\subsubsection[{G\-Write\-Matches}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Score , typename T\-Sequence $>$ int G\-Write\-Matches (
+\begin{DoxyParamCaption}
+\item[{std\-::fstream \&}]{output\-Stream, }
+\item[{String$<$ {\bf G\-Match}$<$ T\-Score, T\-Sequence $>$ $>$ \&}]{matches, }
+\item[{{\bf G\-Fasta\-Record}$<$ T\-Sequence $>$ \&}]{query\-Record}
+\end{DoxyParamCaption}
+)}}\label{_g_write_matches_8h_a98b8b0d6ad077b1be00829f148ed5914}
+
+
+writes the given matches into an fstream 
+
+This function gets the reference to an output\-Stream(fstream), a string of G\-Match and a query\-Record(\-G\-Fasta\-Record). It computes a global alignment without overlap penalaties for every found hit. In the output\-Stream it writes the query\-Record\-Id, the Id of the Matches, a saved Q-\/\-Gram Score and a global alignment score. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em output\-Stream} & stream in which is written \\
+\hline
+\mbox{\tt in}  & {\em matches} & String of Matches which will be written to the stream \\
+\hline
+\mbox{\tt in}  & {\em query\-Record} & query\-Record from wich the query\-Record\-Id is taken to compute the global alignment \\
+\hline
+\end{DoxyParams}

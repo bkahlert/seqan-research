@@ -1,0 +1,1 @@
+clang++    -DSEQAN_ENABLE_TESTING=0  -fno-omit-frame-pointer -fopenmp   CMakeFiles/t1SeqA2.dir/t1SeqA2.cpp.o  -o ../../../../bin/t1SeqA2 -rdynamic -lrt -lz 

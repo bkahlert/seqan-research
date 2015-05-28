@@ -1,0 +1,31 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-05 11:32:59.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-05 11:35:00.135157276 +0200
+@@ -30,7 +30,7 @@
+        cout << representative(it) << endl;
+      } while (goDown(it));
+    }while (goRight(it));
+- }while (goUp(it));
++ }while (goUp(it)&&goRight(it));
+    
+    
+     return 0;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-05 11:32:59.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-05 11:35:00.091157623 +0200
+@@ -24,5 +24,14 @@
+    
+    Iterator<Index<CharString>, TopDown<ParentLinks<> >  >::Type it(esaFinder2);
+    
++ do {
++   do {
++     do{
++       cout << representative(it) << endl;
++     } while (goDown(it));
++   }while (goRight(it));
++ }while (goUp(it));
++   
++   
+     return 0;
+ }
+\ Kein Zeilenumbruch am Dateiende.

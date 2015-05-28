@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/jasparParser/jasparParser.cpp ./sandbox/robinson/apps/jasparParser/jasparParser.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/jasparParser/jasparParser.cpp	2012-09-10 11:22:29.000000000 +0200
++++ ./sandbox/robinson/apps/jasparParser/jasparParser.cpp	2012-09-10 11:22:54.109687848 +0200
+@@ -67,7 +67,7 @@
+ 				return res;
+ 
+ 			if (rowIndex == 0)
+-				resize(matrix, length(record.matrix) + 1);
++				resize(matrix, length(matrix) + 1);
+ 
+ 			if (!lexicalCast2<unsigned> (matrix[columnIndex].count[rowIndex],
+ 					bufferString))

@@ -1,0 +1,23 @@
+#include <iostream>
+#include <seqan/sequence.h>
+#include <seqan/file.h>
+
+using namespace seqan;
+
+int main()
+{
+    String<Dna5> nucleotides = "AGTCGTGNNANCT";
+	String<Dna5> g="G";
+	String<Dna5> lesser;
+	String<Dna5> greater;
+    // Append all elements of nucleotides, apart of Gs, 
+    // to the list `selected` 
+    for (unsigned i = 0; i < length(nucleotides); ++i){
+		if(nucleotides[i] < g)
+			appendValue(lesser, nucleotides[i]);
+		else
+			appendValue(greater, nucleotides[i]);
+    }
+    std::cout << "Selected nucleotides: " << nucleotides << "\n"<< "Lesser nucleotides: "<< lesser << "\n" << "Greater nucleotides: " << greater << std::endl;
+    return 0;
+}

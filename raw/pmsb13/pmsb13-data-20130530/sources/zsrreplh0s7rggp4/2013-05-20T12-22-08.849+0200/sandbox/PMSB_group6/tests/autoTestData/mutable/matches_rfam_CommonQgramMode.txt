@@ -1,0 +1,1680 @@
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01009010.1/5469-5582   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AEMG01000009.1/447840-447797   797209:Haladaptatus paucihalophilus DX253 	54	9
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUGUCUACAAGUCAUGACG-GAUCAGUUCGUGUAGUGAUCACGGAAGUCA
+                   | | | ||  | | || |   |   || ||||||||| |
+        -----------U-AGGGCGACACCCGUACCCAUCCCGAACACGGAAGUUA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AG-C-AACGUUCACCGGAGUCGCGACUUGGAUGGGUGACCGCUCGGGAAU
+        || | |                                            
+        AGCCUA--------------------------------------------
+
+    100     .    :    .   
+        UUUUGAAAAGAAAUACC
+                         
+        -----------------
+
+
+
+RF00001;5S_rRNA;AEAQ01009010.1/5469-5582   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002988.1/929837-929716   756883:halophilic archaeon DL31 	18	19
+      0     .    :    .    :    .    :    .    :    .    : 
+        ------GUGUCUACA-AGUCAUGACGG-AUCA---GUUCGUGUAGUGAUC
+              | | |  || |||  ||| || | ||   || |   |   || |
+        UGAGACG-G-C--CAGAGUGGUGA-GGCAGCACCCGUACCCAUCCCGAAC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        ACGGAAGUCAAGC-AACGUUCACCGGAGUC-G-C-G-ACUUGG-AUGGGU
+        |||||||| ||||  ||   || | | ||| | | | || |||  || | 
+        ACGGAAGUUAAGCUCAC--CCA-C-GUGUCAGCCAGUAC-UGGCGUGCGC
+
+    100     .    :    .    :    .    :    . 
+        GA-CCGCUCGGGAAUUUUUGAAAAGAAAUAC-C--
+        || |||||  ||||    |||   |   | | |  
+        GAGCCGCU--GGAAACCCUGAUUCGCCGU-CUCUC
+
+
+
+RF00001;5S_rRNA;AEAQ01009010.1/5469-5582   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;L27163.1/1-121   28442:Haloarcula vallismortis 	9	19
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---GUGUCUACAAGUC-AUGACGGAUCAGUUCGUGUA---GU---GAUCA
+           | | | || || |  ||  || ||   ||  |||    |   || ||
+        GUAGCGGCCAC-AG-CGGUG-GGGUUC--CUCCCGUACCCAUCCCGAACA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAG-UCAAG--CA--A-CGUU-C-------ACCGGAGU-CGCGA--C
+        |||||| | |||  ||  | |||| |       || ||||| |||||  |
+        CGGAAGAU-AAGCCCACCAGCGUUCCGGGGAGUACUGGAGUGCGCGACCC
+
+    100     .    :    .    :    .    :    .    :    .     
+        U-U-GG--A-UGGG-U-GACCGCU-CGGGAAUUUUUGAAAAGAAAUACC
+        | | ||  |  ||| | | ||||| |                       
+        UCUGGGAAACCGGGUUCG-CCGCUAC-----------------------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01010090.1/52462-52538   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	14	8
+      0     .    :    .    :    .    :    .    :    .    : 
+        GAUAACGUUCCAACCA-CGU----U-GAAACUA-UCGGUUCUCGUC-CGA
+              |  ||  |||  ||    | | ||| |  |||  ||| || |||
+        ------GGCCCGGCCAUAGUGGCCUGGCAAC-ACCCGG-ACUCAUCUCGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCACUGAA-UAAAAAAGCGAUAGACCAACGUAAAUC--------------
+         | | ||| |    ||||   || || ||||   |               
+        ACCCGGAAGU---UAAGC---AGGCC-ACGU---U-GGAGGGGGCCGUGA
+
+    100     .    :    .    :    .    :    .     
+        ---------------------------------------
+                                               
+        GGUCCGAAAGGCCUCGCAGCCCCCUCCAAGCCGGGGCCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01018039.1/24287-24406   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	8	18
+      0     .    :    .    :    .    :    .    :    .    : 
+        GAUAAC-GUCUAUAUCAC-GUUGAAA-A-AC--AC-CAGUU-CGAUCACU
+        |   || ||| |||  || |  |||| |  |  || || || ||| | | 
+        GCCGACGGUC-AUAGGACGGGGGAAACACCCGGACUCA-UUCCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAGGUUGAA-CAACGUU-GGGCACGGUUAAUACU-UGAAUAGGUGACCGC
+        || ||| || |  ||||  | | ||   | |||| ||  |  | ||  ||
+        GAAGUU-AAGCCCCGUUCCGUCCCGCACAGUACUGUG-UUCCGAGAGGGC
+
+    100     .    :    .    :    .    :    .  
+        -UGGGAAUACUUCUUGUGUG-A-CGAU--GAUGUCA
+          ||| | ||| |  | | | | || |  | |    
+        ACGGG-A-ACUGC--G-G-GAACCG-UCGGCU----
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01073487.1/455-372   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	12	12
+      0     .    :    .    :    .    :    .    :    .    : 
+        ------------------UGCAGCAAUCUUA-GAGGUUAAGCAACGUUG-
+                          ||  |||| |  |   ||  |  || | | | 
+        GGCCCGGCCAUAGUGGCCUG--GCAA-C--ACCCGG--ACUCAUC-UCGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        A-UCGG-AG-U---C--GCGAC-UUGGAUGGGUGUCCGCUUG-GGAAUAC
+        |  ||| || |   |  || || ||||| ||| | |||  || ||  | |
+        ACCCGGAAGUUAAGCAGGCCACGUUGGA-GGG-GGCCG--UGAGG--U-C
+
+    100     .    :    .    :    .    :    .   
+        C-AAUAUUACU-GCAU---------------------
+        | || |   || |||                      
+        CGAA-AGGCCUCGCA-GCCCCCUCCAAGCCGGGGCCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01017109.1/9095-9176   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	13	12
+      0     .    :    .    :    .    :    .    :    .    : 
+        ------------------U-GCAGCGAUCUUAGGUUAAGCAACGUUG-A-
+                          | ||| | | |   ||  |  || | | | | 
+        GGCCCGGCCAUAGUGGCCUGGCAAC-A-C-CCGG--ACUCAUC-UCGAAC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CCGG-AG-U---C--GCGAC-UUGGAUGGGUGACCGUUUG-GGAAUAUC-
+        |||| || |   |  || || ||||| ||| | |||  || ||  |  | 
+        CCGGAAGUUAAGCAGGCCACGUUGGA-GGG-GGCCG--UGAGG--U-CCG
+
+    100     .    :    .    :    .    :    . 
+        AAUAUUACU-GCAU---------------------
+        || |   || |||                      
+        AA-AGGCCUCGCA-GCCCCCUCCAAGCCGGGGCCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01046924.1/1345-1229   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;ACVJ01000008.1/189457-189568   425595:Candidatus Micrarchaeum acidiphilum ARMAN-2 	9	12
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---AA-GUGU-UCA-UAGGUCAUCAUAA-G--AAAUCAGUUCGCAGCGAU
+           || | ||  || | || |   | || |    |||  ||  |  ||| 
+        CCAAACG-GUAACAGU-GGCCGGGA-AACGCCCGAUCCCUU-UC--CGAA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CACGGAGGUC-AAGCAACGUUCACCGGAGU-CGCGACUUGGAUGGGUGAC
+        | |||| | | ||||  ||  || | || |  || | ||  |    || |
+        CUCGGAAG-CUAAGC--CGGCCAAC-GA-UAUGC-A-UU--A---CUG-C
+
+    100     .    :    .    :    .    :    .   
+        CUCUUGGAAAUUUC-CGAAAAAAUAUUUC--------
+        || | ||      |  ||||| ||||| |        
+        CU-UAGG-----GCGGGAAAACAUAUUGCUGUUUGGC
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01010485.1/62377-62268   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AEMG01000009.1/447840-447797   797209:Haladaptatus paucihalophilus DX253 	27	7
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUAACGAUACUUAAAUAUCAGUUCUCAU-GC-AAUCACUGAAAUCAAG-
+                ||     | | | || | |||  | || ||| ||| | ||| 
+        --------UAGGGCGACACCCGUACCCAUCCCGAA-CACGGAAGUUAAGC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        -UAAUAUUGGACACGGAAUCUCUUGGAUGGGUGACCAUUUGAGAACUUUG
+         ||                                               
+        CUA-----------------------------------------------
+
+    100     .    :     
+        CGUUGUCGUUAAAU
+                      
+        --------------
+
+
+
+RF00001;5S_rRNA;AEAQ01010485.1/62377-62268   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;L27163.1/1-121   28442:Haloarcula vallismortis 	9	12
+      0     .    :    .    :    .    :    .    :    .    : 
+        --------CUUAACGAU--ACUUAAAUAUCAGUUCUCAU-GC-AAUCACU
+                |  | || |    ||   |  | || | |||  | || ||| 
+        GUAGCGGCCACAGCGGUGGGGUU-CCU-CCCGUACCCAUCCCGAA-CACG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAA-AUCAAG--UAAUAUUGGACAC--GGAAUCUCUUGGA-UGGGUGACC
+        ||| || |||   |  |  |  | |  ||| |  | |||| || | ||||
+        GAAGAU-AAGCCCACCAGCGUUC-CGGGGAGU-AC-UGGAGUGCGCGACC
+
+    100     .    :    .    :    .    :  
+        AUUUGAG-AACUUUGCGUU-GUCGUUA-AAU
+         | || | |||   | ||| | || ||    
+        CUCUGGGAAAC--CGGGUUCGCCGCUAC---
+
+
+
+RF00001;5S_rRNA;AEAQ01010485.1/62377-62268   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002988.1/929837-929716   756883:halophilic archaeon DL31 	9	10
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUA-AC-G--AUACU--U-A---AAUAUCAGUUCUCAU-GC-AAUCACU
+         | | || |  | | |  | |   |  | | || | |||  | || ||| 
+        -UGAGACGGCCAGAGUGGUGAGGCAGCACCCGUACCCAUCCCGAA-CACG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAAUCAAG-U-A-AUAUUG-GACACG-GAAUCUCUUGG-AUGGGUGA-C
+        ||| | ||| | |   |  | | || |  | |  | |||  || | || |
+        GAAGUUAAGCUCACCCA-CGUGUCA-GCCAGU-AC-UGGCGUGCGCGAGC
+
+    100     .    :    .    :    .    :    .  
+        CAUUUGAGAA--CU--UU-G-CGU-UGUCGUUAAAU
+        |  | || ||  ||  || | ||| | ||       
+        CGCUGGA-AACCCUGAUUCGCCGUCUCUC-------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01020074.1/4117-4235   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	44	23
+      0     .    :    .    :    .    :    .    :    .    : 
+        -GCCAACUUCCAUA-UCAUG-CUGAG-AAAACCAGUUCUCGUC-CGAUCA
+         |||  |  ||||| |   | ||| | || ||| |  ||| || ||| | 
+        GGCC--CGGCCAUAGU--GGCCUG-GCAACACCCGGACUCAUCUCGAACC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CUGAAGUUAAGCA-G-CA--UU-GA--GCACGGUUA-GUACUUGGAUGG-
+        | ||||||||||| | ||  || ||  |  | || | || |  | | || 
+        CGGAAGUUAAGCAGGCCACGUUGGAGGGGGCCGUGAGGU-C-CGAAAGGC
+
+    100     .    :    .    :    .    :    .  
+        GU-G-A-CCGCUUGGGAACACCGUGUGAUGUUGGCC
+         | | | || | |   ||  ||| | |  |      
+        CUCGCAGCCCCCU-CCAA-GCCG-GGGCCG------
+
+
+
+RF00001;5S_rRNA;AEAQ01020074.1/4117-4235   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP000816.1/30219-30106   453591:Ignicoccus hospitalis KIN4/I 	28	16
+      0     .    :    .    :    .    :    .    :    .    : 
+        GCCAACUUCCAUAUCAUG-CUGAG-AAAACCAGUUCUC-GUCCGAUCACU
+         ||  |  ||| | |  | | | | || ||| |  | |  | ||| | | 
+        -CC--CGGCCACAGC--GACCGGGCAACACCCGGACCCAUUUCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGUUAAGCAGCAUUGAGCACGGU----UAGU-AC-UUGGAUG-GGUGA
+        |||||||||| |  | | ||  |||     |||  | |  || | || | 
+        GAAGUUAAGCCG-GUCGCGCGGGGUCCGGCAGUGGCGUCCGA-GAGGCG-
+
+    100     .    :    .    :    .    :    
+        CCGCUUG-GGAACACCGUG-U--GAUGUUGGCC
+        ||||  |  |  | ||||| |  ||        
+        CCGC-AGCCG--CCCCGUGCUGGGA--------
+
+
+
+RF00001;5S_rRNA;AEAQ01020074.1/4117-4235   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002588.1/885631-885510   693661:Archaeoglobus veneficus SNP6 	26	35
+      0     .    :    .    :    .    :    .    :    .    : 
+        GCCAACUUCCAUAUCAUGC-UGAGAAA-ACCAGUUCUC-GUCCGAUCACU
+        ||| ||  |||||  | ||  | |||| ||| |  |||  ||||| | | 
+        GCCGACGGCCAUA-GAAGCGGGGGAAACACCCGGACUCAUUCCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGUUAAG--CAGCAUU-GAGCACG-GUUAGUACUUG-GAUGGGUGACC
+        |||||||||  | || || |  | || ||| |||| || | |  | ||  
+        GAAGUUAAGCCCCGC-UUCGUUC-CGCGUU-GUAC-UGUGUUCCGAGAGG
+
+    100     .    :    .    :    .    : 
+        GCUUGGGAA-CACCGUG-UGAUGUUGGC-C
+        ||  ||||| |  || |  | ||| |||  
+        GCACGGGAAGC-GCG-GAAGCUGUCGGCU-
+
+
+
+RF00001;5S_rRNA;AEAQ01020074.1/4117-4235   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001857.1/947564-947685   572546:Archaeoglobus profundus DSM 5631 	26	26
+      0     .    :    .    :    .    :    .    :    .    : 
+        GCCAACUUCCAUAUCAUG-CUGAGAAA-ACCAGUUCUC-GUCCGAUCACU
+        ||| ||  |||||    | | | |||| ||| |  |||  ||||| | | 
+        GCCGACGGCCAUA-GGGGUCGGGGAAACACCCGGACUCAUUCCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGUUAAG-CAG-CAUUGAGCACG-GUUAGUACUUG-GAUGGGUGACCG
+        ||||||||| | | |   |  | || | | |||| || | |  | ||  |
+        GAAGUUAAGCCCGACCCCGUUC-CGCG-UGGUAC-UGUGUUCCGAGAGGG
+
+    100     .    :    .    :    .     
+        CUUGGGAA-CACCGUG-UGAUGUUGGC-C
+        |  ||||| |  || |  |  || |||  
+        CACGGGAAGC-GCG-GAAGCCGUCGGCA-
+
+
+
+RF00001;5S_rRNA;AEAQ01020074.1/4117-4235   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002656.1/139042-138924   1006006:Metallosphaera cuprina Ar-4 	26	25
+      0     .    :    .    :    .    :    .    :    .    : 
+        GCCA-AC-UUCCAUAUCAUGCUGAGAAA-ACCAGUUCUCGUC-CGAUCAC
+         |||  |  | |||| || |  | |||| ||| |  ||| || ||| | |
+        -CCACCCGGU-CAUAGCA-GGGGGGAAACACCCGGACUCAUCUCGAACCC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UGAAGUUAAG----CAGCAUU-GAGCA--CGGUUAGUACUUGGAUGGGUG
+         |||||||||    | || || ||| |  ||| | | | |  ||  || |
+        GGAAGUUAAGCCCUCUGCGUUGGAG-AUGCGG-UGGGA-UCCGAAAGG-G
+
+    100     .    :    .    :    .    :     
+        ACCGCUUGGGAACACC---GUGUGAU-GUUGGCC
+         ||||   |  || ||    || ||| |      
+        CCCGC--AGCUACUCCAAACUGGGAUGG------
+
+
+
+RF00001;5S_rRNA;AEAQ01020074.1/4117-4235   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;BA000002.3/627911-627792   272557:Aeropyrum pernix K1 	26	24
+      0     .    :    .    :    .    :    .    :    .    : 
+        -GCCAACUUCCAUAUCAUGCUGAG-AAAACCAGUUCUC-GUCCGAUCACU
+         |||  |  ||||| |  || | | || ||| |  |||  | ||| | | 
+        GGCC--CGGCCAUAGC-GGCCGGGUAACACCCGGACUCAUUUCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGUUAAGCAGCAUUGAGCACG-GUU--AGUACUUGGA-UGGGUGACCG
+        ||||||||||  |   | || || |||  ||  | |  | |||| | |||
+        GAAGUUAAGC--C---G-GC-CGCGUUGGAG-GC-UCCAGUGGG-GUCCG
+
+    100     .    :    .    :    .    :    .    :   
+        CUUG-GGAACACCGUGUGAUGUUGGCC---------------
+           | ||  | || ||  | |  ||||               
+        --AGAGG--C-CC-UG-CA-G-GGGCCUCCAAGCCGGGGCCG
+
+
+
+RF00001;5S_rRNA;AEAQ01020074.1/4117-4235   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP000493.1/884167-884049   415426:Hyperthermus butylicus DSM 5456 	26	20
+      0     .    :    .    :    .    :    .    :    .    : 
+        G-CCAACUUCCAUAUCAUGCUGAG-AAAACCAGUUCUC-GUCCGAUCACU
+        | ||  |  ||||| |  || | | || ||| |  | |  | ||| | | 
+        GACC--CGGCCAUAGC-GGCCGGGCAACACCCGGACCCACUUCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGUUAAGCAGCAUUGAGCACG-GUU---AGUA-CUUGGAUGGGUGACC
+        ||||||||||  |   | || || |||    ||| | | | |||| | ||
+        GAAGUUAAGC--C---G-GC-CGCGUUGGGGGUAGC-U-G-UGGG-GUCC
+
+    100     .    :    .    :    .    :    .    :    
+        GCUUG-GGAACACCGUGUGAUGUUGGCC---------------
+        ||  | ||  | ||  |  | | |  ||               
+        GC--GAGG--C-CC-CG-CA-GCU--CCCCCAAGCCGGGAUCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01038228.1/161-43   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;ACVJ01000008.1/189457-189568   425595:Candidatus Micrarchaeum acidiphilum ARMAN-2 	9	14
+      0     .    :    .    :    .    :    .    :    .    : 
+        UCAAGUGUUCACA-GGUCAUCA-U-G--AGGAAUCAGUUCGCAGCGAUCA
+                 || | ||| | || | |   |||| | |  || | |  |  
+        --------CCAAACGGU-AACAGUGGCCGGGAAAC-GCCCG-AUCCCUUU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAGGUCAAGCAAUGUUCAGCGGAGUCGCAACUUG-GAUGGGUGACCG-
+        | ||  ||  | || | | ||| | | | ||||  |  |||  | || | 
+        CCGAACUC--GGAA-GCUAAGCCG-G-C-CAAC--GAUAUGCAUUACUGC
+
+    100     .    :    .    :    .    :    . 
+        CUUGAAAAUUUC-CGAAAAAAUAUUG-U-------
+        |||    |   |  ||||| |||||| |       
+        CUU----AGGGCGGGAAAACAUAUUGCUGUUUGGC
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01029395.1/4672-4790   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	17	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        GGCAA--CGUUCAUA---UCACGUUGUAAUUACC-AGUUCUCG-UCCGAU
+          |||  ||  ||||   ||| |  ||    ||| |  || || ||||| 
+        --CAAGCCGGCCAUAGCGUCA-G-GGU-GCGACCUA-AUCCCGUUCCGA-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CAC-U-GAAGUCAAGCAACGUUGA-G-CACAGUU-AG-UACUUGGAUGGG
+         || | |||||| |  |||  ||| | | | |||  | ||||  |||| |
+        -ACUUAGAAGUC-A--AAC-CUGAUGUCGCUGUUGUGCUACUAAGAUGCG
+
+    100     .    :    .    :    .    :    .   
+        UGACCGCUUGGGAA--UAC--UG-UGUAAUGUUGUCC
+         || | ||||||||   ||  || ||  || ||    
+        AGAGCUCUUGGGAAGCAACAGUGCUGGCAU-UU----
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01013535.1/6930-7051   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	8	10
+      0     .    :    .    :    .    :    .    :    .    : 
+        --------------------------------AUUUUUUUUGUUUUCCUC
+                                        | |  ||  |    ||  
+        GCCGACGGUCAUAGGACGGGGGAAACACCCGGACUCAUUCCG-AACCCGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CAGUUUGCAGCGAUCCAGUUUGCAGCGAUCUUG-AAAGUCAAGCAGCGUU
+         || ||  |||   || | || |  || ||  | | |||  | | | |||
+        AAG-UU-AAGC---CCCG-UU-C--CG-UCCCGCACAGU--A-CUGUGUU
+
+    100     .    :    .    :    .    :    .    :    .    : 
+        --GAGCGUGGUCACAAAUUGAA-UG-GGUG-ACCGCUCAGGAAUUUCCGA
+          ||| | || |||     ||| || || | |||| || ||  |      
+        CCGAGAG-GG-CAC---GGGAACUGCGG-GAACCG-UC-GG-CU------
+
+    150     .    : 
+        GAAAAAAUUC
+                  
+        ----------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01082598.1/956-1061   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001857.1/947564-947685   572546:Archaeoglobus profundus DSM 5631 	10	18
+      0     .    :    .    :    .    :    .    :    .    : 
+        --------------------------------GA-UCA-UCACG-A---G
+                                        || ||| || || |   |
+        GCCGACGGCCAUAGGGGUCGGGGAAACACCCGGACUCAUUC-CGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAA-UCCAGUUCG-CAGCGAUCACG-GAGGUUAAGCAACGUUCACCG-GA
+        ||| |  ||  || |  || || || | || | | |   |||  ||| ||
+        GAAGUUAAGCCCGACCCCGUUC-CGCGUGG-U-A-CUGUGUU--CCGAGA
+
+    100     .    :    .    :    .    :    .    :    .    : 
+        GUCGCGACUUGGAUG-G-GUG-A-CCGUUUGGGAAUUUCCGAGAAAAAAU
+        |  || ||  ||| | | | | | ||| | || |                
+        G-GGC-AC-GGGAAGCGCG-GAAGCCG-UCGGCA----------------
+
+    150    
+        UC
+          
+        --
+
+
+
+RF00001;5S_rRNA;AEAQ01082598.1/956-1061   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002588.1/885631-885510   693661:Archaeoglobus veneficus SNP6 	10	18
+      0     .    :    .    :    .    :    .    :    .    : 
+        ----------------------GAUCAUCACGAGGAAUCCAGUUCGCAGC
+                              ||  | |||  ||| | || ||  |  |
+        GCCGACGGCCAUAGAAGCGGGGGA--AACACCCGGACU-CA-UU--C--C
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAUCACGGAGGUUAAGCAACG-UUC--ACCGGAGUCGCGACUUG-GAUGG
+        || | |||| |||||||  || |||   || | || |  || || | |  
+        GAACCCGGAAGUUAAGCCCCGCUUCGUUCC-GCGUUG-UAC-UGUGUUCC
+
+    100     .    :    .    :    .    :    .    
+        GUGACCGUUUGGGAAUUUC-CGAGAAAAAAU-UC----
+        | ||  |   |||||   | || |  ||  | ||    
+        GAGAGGGCACGGGAA--GCGCG-G--AAGCUGUCGGCU
+
+
+
+RF00001;5S_rRNA;AEAQ01082598.1/956-1061   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	10	16
+      0     .    :    .    :    .    :    .    :    .    : 
+        -------------------GAUCAUCACGAGGAAUCCAGU-UCGCAGCGA
+                           |  || |||  ||| | || | ||| |   |
+        GGCCCGGCCAUAGUGGCCUG-GCAACACCCGGACU-CA-UCUCG-A---A
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCACGGAGGUUAAGCAACGUUCACCGGAGUCGCGACUUGGAUGGGUGACC
+         | |||| ||||||| | |    ||  |    ||  ||||| ||| | ||
+        -CCCGGAAGUUAAGC-A-G---GCC--A----CG--UUGGA-GGG-GGCC
+
+    100     .    :    .    :    .    :    .    :    .    : 
+        GUUUG-GGAAUUUCCGAGAAAAAAUUC-----------------------
+        |  || ||    |||  ||||    ||                       
+        G--UGAGG----UCC--GAAAGGCCUCGCAGCCCCCUCCAAGCCGGGGCC
+
+    150   
+        -
+         
+        G
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01013980.1/101-25   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	14	18
+      0     .    :    .    :    .    :    .    :    .    : 
+        GCCAA--CUUCCAUA---UCACGCCGAGAAAACC-AGUUCUCG-UCCGAU
+          |||  |  |||||   ||| |  | |   ||| |  || || ||||| 
+        --CAAGCCGGCCAUAGCGUCA-G-GGUG-CGACCUA-AUCCCGUUCCGA-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CAC-U-GAAGUCAAGCGGCGUUGA-G-CACGGUUAGUA------------
+         || | |||||||| |  |  ||| | | | ||| ||             
+        -ACUUAGAAGUCAAAC--C--UGAUGUCGCUGUU-GU-GCUACUAAGAUG
+
+    100     .    :    .    :    .    :     
+        ----------------------------------
+                                          
+        CGAGAGCUCUUGGGAAGCAACAGUGCUGGCAUUU
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01016699.1/4839-4756   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;ACVJ01000008.1/189457-189568   425595:Candidatus Micrarchaeum acidiphilum ARMAN-2 	25	16
+      0     .    :    .    :    .    :    .    :    .    : 
+        -------------------------------------UGCAGCGAUCUUA
+                                             | |  ||| ||  
+        CCAAACGGUAACAGUGGCCGGGAAACGCCCGAUCCCUUUC--CGAACUCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAGGUUAAGCAACGUUGACCGGA-G-U-UGCGACUUGGA-UGGGUGAUCG
+        || | |||||  ||  | ||  | | | ||| | ||  | ||  |  | |
+        GAAGCUAAGC--CG--G-CC-AACGAUAUGC-A-UU--ACUGCCU--UAG
+
+    100     .    :    .    :    .    :  
+        CGUGGGAAUAUCAAUAUUGCUGCAA------
+         | ||||| | | |||||||||         
+        GGCGGGAA-AAC-AUAUUGCUG---UUUGGC
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01030831.1/6986-6892   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;ACVJ01000008.1/189457-189568   425595:Candidatus Micrarchaeum acidiphilum ARMAN-2 	22	15
+      0     .    :    .    :    .    :    .    :    .    : 
+        ----------------------------GGGAUCAGUUUGC-AACGAUCA
+                                      ||||  ||| | |||  || 
+        CCAAACGGUAACAGUGGCCGGGAAACGCCCGAUCCCUUUCCGAAC--UC-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CAAAGGUCAAGCAACGUUCAGCGA-AGUCGCGACUUGGAUGGGUGACCGC
+          ||| | ||||  ||  || ||| | | || | ||  |    ||  | |
+        GGAAGCU-AAGC--CGGCCAACGAUA-U-GC-A-UU--A---CUG--C-C
+
+    100     .    :    .    :    .    :     
+        UU-GGGACUUUCCGAAAA-AAAUUCCU-------
+        || ||| |     ||||| | ||| ||       
+        UUAGGG-C---GGGAAAACAUAUUGCUGUUUGGC
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01007640.1/675-561   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	55	14
+      0     .    :    .    :    .    :    .    :    .    : 
+        -----------AGUGUUCACAGGUAUCACGAGGGAUC-CAAU-UCGCAGC
+                   ||||  | | || | |||   ||| | | || ||| |  
+        GGCCCGGCCAUAGUG-GC-CUGGCAACAC-CCGGA-CUC-AUCUCG-A--
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAUCUUGGAAGUUAAGCAGCGUCGAGCGCGGUUACAACUUGAAUGGGUGG
+         | |  ||||||||||||     | || |    ||   ||| | ||| ||
+        -A-CCCGGAAGUUAAGCA-----G-GC-C----AC--GUUGGA-GGG-GG
+
+    100     .    :    .    :    .    :    .    :    .    : 
+        CCGUUUG-GGAAUUUAUGAGAGAAAAUUC---------------------
+        |||  || ||    |  || | |    ||                     
+        CCG--UGAGG----UCCGA-A-AGGCCUCGCAGCCCCCUCCAAGCCGGGG
+
+    150     
+        ---
+           
+        CCG
+
+
+
+RF00001;5S_rRNA;AEAQ01007640.1/675-561   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002656.1/139042-138924   1006006:Metallosphaera cuprina Ar-4 	37	14
+      0     .    :    .    :    .    :    .    :    .    : 
+        AGUGUUCA-CAGGU-AU--CACGAGGGAUCCAAUUC-G---CA--GCGAU
+              || | ||| ||  || | ||||  | |  | |   ||   ||| 
+        -----CCACCCGGUCAUAGCAGGGGGGAAAC-ACCCGGACUCAUCUCGAA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CUUGGAAGUUAAG----CAGCG-UCGAG-CGCGGUUACAACUUGAAUGGG
+        |  ||||||||||    | ||| | |||  |||||   | |  ||| |||
+        CCCGGAAGUUAAGCCCUCUGCGUUGGAGAUGCGGUGGGAUC-CGAAAGGG
+
+    100     .    :    .    :    .    :    .  
+        -UGGCCG-U-UUGGGAA-U-UUAUGAGAGAAAAUUC
+           || | |  |   || |   ||| |         
+        CCCGCAGCUACUCCAAACUGGGAUG-G---------
+
+
+
+RF00001;5S_rRNA;AEAQ01007640.1/675-561   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002588.1/885631-885510   693661:Archaeoglobus veneficus SNP6 	37	15
+      0     .    :    .    :    .    :    .    :    .    : 
+        ------------AG-UGUUCACAGGUAUCACGAGGGAUC-CAAUUCGCAG
+                    ||  |  |   || | |||   ||| | | |||  |  
+        GCCGACGGCCAUAGAAG--CGGGGGAAACAC-CCGGA-CUC-AUU--C--
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGAUCUUGGAAGUUAAG--CAGCGUCGAGCGCG-GUUACAACU-UGAAU-
+        ||| |  ||||||||||  | || |||  | || |||   ||| ||  | 
+        CGAACCCGGAAGUUAAGCCCCGCUUCGUUC-CGCGUU-GUACUGUG-UUC
+
+    100     .    :    .    :    .    :    .    :    
+        -G-G-GUGGC-CGUUUGGGAAUUUAUGAGAGAAAAU-UC----
+         | | | ||| |    |||||     | | |||  | ||    
+        CGAGAG-GGCAC----GGGAA---GCGCG-GAAGCUGUCGGCU
+
+
+
+RF00001;5S_rRNA;AEAQ01007640.1/675-561   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001857.1/947564-947685   572546:Archaeoglobus profundus DSM 5631 	37	15
+      0     .    :    .    :    .    :    .    :    .    : 
+        ------------AGUGUUCACAGGUAUCACGAGGGAUC-CAAUUCGCAGC
+                    || | ||   || | |||   ||| | | |||  |  |
+        GCCGACGGCCAUAGGGGUC-GGGGAAACAC-CCGGA-CUC-AUU--C--C
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAUCUUGGAAGUUAAGCAGCGUCGAGCGCGGUUACAAC-UUG-AAUGGGU
+        || |  |||||||||||  |  ||| | | ||| |  | | | | || ||
+        GAACCCGGAAGUUAAGC--C--CGA-CCCCGUU-CCGCGUGGUACUGUGU
+
+    100     .    :    .    :    .    :    .     
+        GGCCGUUUGGG-AAUUUAUGAGAGAAAAUUC--------
+          |||   ||| |    | | | |  ||  |        
+        -UCCGAGAGGGCACGGGAAGCGCG-GAA-GCCGUCGGCA
+
+
+
+RF00001;5S_rRNA;AEAQ01007640.1/675-561   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;BA000002.3/627911-627792   272557:Aeropyrum pernix K1 	37	15
+      0     .    :    .    :    .    :    .    :    .    : 
+        -----------AGUGUUCACAGGUAUCACGAGGGAUC-CAAUUCGCAGCG
+                   || |  | | |||| |||   ||| | || |||| |   
+        GGCCCGGCCAUAGCG-GC-CGGGUAACAC-CCGGA-CUCAUUUCG-A---
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AUCUUGGAAGUUAAGCAGCGUCGAGCGCGGUUACA-ACUUGAAUGGGUGG
+        | |  |||||||||||  ||  |  ||| |||  |  ||  | |||| | 
+        A-CCCGGAAGUUAAGC--CG--G-CCGC-GUUGGAGGCUCCAGUGGG-GU
+
+    100     .    :    .    :    .    :    .    :    
+        CCGUUUG-GGAAUUUAUG-AGAGAAAAUUC-------------
+        |||   | ||      || || |     ||             
+        CCG--AGAGG---CCCUGCAG-G-GGCCUCCAAGCCGGGGCCG
+
+
+
+RF00001;5S_rRNA;AEAQ01007640.1/675-561   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP000816.1/30219-30106   453591:Ignicoccus hospitalis KIN4/I 	37	20
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---------AGUGUUCACAGGUAUCACGAGGGAUCCAAUUCGCAGCGAUC
+                 || |  | | || | |||   ||| ||| |||| |   | |
+        CCCGGCCACAGCG-AC-CGGGCAACAC-CCGGACCCAUUUCG-A---A-C
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UUGGAAGUUAAGCAGCGUCGAGCGCGGU--UACA---AC-U-UGA-AUG-
+          ||||||||||| | |||| ||| |||    ||    | |  || | | 
+        CCGGAAGUUAAGCCG-GUCGCGCGGGGUCCGGCAGUGGCGUCCGAGAGGC
+
+    100     .    :    .    :    .    :    .    :  
+        G--G-UG--G--CCGU-UUGGGAAUUUAUGAGAGAAAAUUC
+        |  |  |  |  ||||  |||||                  
+        GCCGCAGCCGCCCCGUGCUGGGA------------------
+
+
+
+RF00001;5S_rRNA;AEAQ01007640.1/675-561   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP000493.1/884167-884049   415426:Hyperthermus butylicus DSM 5456 	37	11
+      0     .    :    .    :    .    :    .    :    .    : 
+        -----------AGUGUUCACAGGUAUCACGAGGGAUCCAAUUCGCAGCGA
+                   || |  | | || | |||   ||| ||| |||| |   |
+        GACCCGGCCAUAGCG-GC-CGGGCAACAC-CCGGACCCACUUCG-A---A
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCUUGGAAGUUAAGCAGCGUCGAG-CGCGGUUACAACUUGAAUGGGUGGC
+         |  ||||||||||| | | || |  | || |  | | ||  |||| | |
+        -CCCGGAAGUUAAGCCG-GCCGCGUUGGGGGU--AGC-UG--UGGG-GUC
+
+    100     .    :    .    :    .    :    .    :     
+        CGUUUG-GGAAUUUAUGAGAGAAAAUUC----------------
+        ||   | ||       |  ||     ||                
+        CG--CGAGG---CCCCG-CAG----CUCCCCCAAGCCGGGAUCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01017846.1/7385-7269   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	18	24
+      0     .    :    .    :    .    :    .    :    .    : 
+        CAAAAUAA-AC--UAAUUAAAAAAAAGGU---A-CUAAUUCUCG-UCCGA
+              ||  |    | ||     | |||   | |||| || || |||||
+        -----CAAGCCGGCCA-UAGCGUCAGGGUGCGACCUAA-UCCCGUUCCGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCAC-U-GAAGUC-AAGCAG-CGUCGGGCACGGUCAG-UACUUGGAUGGG
+          || | |||||| || | |  |||  ||  | |  | ||||  |||| |
+        --ACUUAGAAGUCAAACCUGAUGUC--GC-UGUUGUGCUACUAAGAUGCG
+
+    100     .    :    .    :    .    :    . 
+        UGACCGCUUGGGAA-C-ACCGUG-U--AAUGUUGU
+         || | |||||||| | || ||| |   || ||  
+        AGAGCUCUUGGGAAGCAACAGUGCUGGCAU-UU--
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01016358.1/1891-1773   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;ACVJ01000008.1/189457-189568   425595:Candidatus Micrarchaeum acidiphilum ARMAN-2 	9	9
+      0     .    :    .    :    .    :    .    :    .    : 
+        UAAAGUAUUUAC-AA--GUCAUC-GUGAG-C--GAUUA-GUUC-A-CCGC
+                   | ||  || | | ||| | |  ||  | |  | | || |
+        ----------CCAAACGGU-AACAGUG-GCCGGGA-AACGCCCGAUCC-C
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAUCACGGAGGUC--AAGC-AAUGUUCACUGGAGUC-GCGACU-UGGAUG
+          || | ||  ||  |||| || |  | |  | | |  ||| | || || 
+        UUUC-C-GAACUCGGAAGCUAA-G--C-C--G-GCCAACGA-UAUGCAU-
+
+    100     .    :    .    :    .    :    .    :    .  
+        GGUGACCG-CUU-GGAAAUUUC-CGAAAA-A-AGUUUCU-------
+          | || | ||| ||      |  ||||| | | || ||       
+        --U-ACUGCCUUAGG-----GCGGGAAAACAUA-UUGCUGUUUGGC
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01004443.1/1375-1251   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	17	17
+      0     .    :    .    :    .    :    .    :    .    : 
+        --------------------------------A-UCAAUGCCUUCA-GC-
+                                        | || || ||   |  | 
+        GCCGACGGUCAUAGGACGGGGGAAACACCCGGACUC-AUUCC-GAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UUAGUU-AGCAACACUAGUUCCCGU-UAGAUCAC-UUAAAGU-UUAAGCA
+          |||| |||  | |  ||| ||||   |  |||  ||  || ||  | |
+        GAAGUUAAGC--C-C-CGUU-CCGUCCCG--CACAGUACUGUGUUCCG-A
+
+    100     .    :    .    :    .    :    .    :    .    : 
+        GCUAGGGCACGGAAUACCGUUUGGAUGGGUGACCGUCUUGG-UAUGAUAC
+        |  ||||||||| | | |   | |  |||  ||||||  || |       
+        G--AGGGCACGGGA-A-C---U-G-CGGG-AACCGUC--GGCU-------
+
+    150     .    :    . 
+        CGCGUGGCGUUGACA
+                       
+        ---------------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01030792.1/10158-10044   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;ADHF01000012.1/3514-3626   662762:Candidatus Parvarchaeum acidophilus ARMAN-5 	9	18
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCGAUAGUCUUGCAUUGAAAGCACCGGUUCGCGUUAGACGAUUAAG-GU
+                                                || | || ||
+        ----------------------------------------GA-U-AGCGU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CAAGCGAUGUUGGGCA-CGGUCAGCAUCUGGUU-AGAUAAUC--ACACGG
+        |   | |  | || || ||| ||  |||  |||   ||  ||  ||||||
+        C---C-A--UAGGCCAGCGG-CA-AAUCCCGUUCCCAU-UUCGAACACGG
+
+    100     .    :    .    :    .    :    .    :    .    : 
+        GAGCACGCUCGCUGUUUGCG------------------------------
+         || |   ||||||  ||||                              
+        AAG-AUAAUCGCUG-GUGCGUCUUAUGAGUACUUCGUAAAAGAGGGAAAG
+
+    150     .    :    .  
+        ----------------
+                        
+        UAAGUUGGCGCUACAC
+
+
+
+RF00001;5S_rRNA;AEAQ01030792.1/10158-10044   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	9	22
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---------------------GU-CGA--UAGU--C-UU--GCA-UUGA-
+                             || |||  || |  | ||  | | || | 
+        CAAGCCGGCCAUAGCGUCAGGGUGCGACCUAAUCCCGUUCCGAACUU-AG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAG-C--ACC-GGU-UCGC-GUUAG-ACGAUUAAGGU-CAAGCGAUGUUG
+        ||| |  ||| | | |||| ||| |  | | |||| | | || | | |||
+        AAGUCAAACCUGAUGUCGCUGUU-GUGCUACUAAGAUGCGAGAGCUCUUG
+
+    100     .    :    .    :    .    :    .    :    .    : 
+        GGCACGGUCAGCA-U-CUGG---UUAGAUAAUCACACGGGAGCACGCUCG
+        || |  | || || | ||||   ||                         
+        GG-A-AG-CAACAGUGCUGGCAUUU-------------------------
+
+    150     .     
+        CUGUUUGCG
+                 
+        ---------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01030096.1/94608-94505   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	10	24
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---------CUUAUGC--C-CUUUACAUAUC-AAUUCUCG-UCCGAUCAC
+                 | || ||  |    | |  | | || || || |||||  ||
+        CAAGCCGGCCAUA-GCGUCAGGGUGC-GACCUAA-UCCCGUUCCGA--AC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        -U-GAAGUCGAGCAACGUUG--GGCACGGUU-AG-UACUUGGAUGGGUGA
+         | |||||| |  |||  ||  | | | |||  | ||||  |||| | ||
+        UUAGAAGUC-A--AAC-CUGAUGUCGCUGUUGUGCUACUAAGAUGCGAGA
+
+    100     .    :    .    :    .    : 
+        CCGCUUGGGAA--UACCGUG-U--AAUGU-
+         | ||||||||   || ||| |   || | 
+        GCUCUUGGGAAGCAACAGUGCUGGCAU-UU
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01023721.1/3756-3839   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	12	14
+      0     .    :    .    :    .    :    .    :    .    : 
+        ------------------UGCAGCGAUCUUA-GAGGUUAAGCAACGUUG-
+                          ||  || | |  |   ||  |  || | | | 
+        GGCCCGGCCAUAGUGGCCUG--GC-AAC--ACCCGG--ACUCAUC-UCGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        A-CCGG-AGUU--GC--G--AC-UUGGAUGGGUGACCGCUUG-GGAAUAC
+        | |||| ||||  ||  |  || ||||| ||| | |||  || ||  | |
+        ACCCGGAAGUUAAGCAGGCCACGUUGGA-GGG-GGCCG--UGAGG--U-C
+
+    100     .    :    .    :    .    :    .   
+        C-AAUAUUACU-GCAU---------------------
+        | || |   || |||                      
+        CGAA-AGGCCUCGCA-GCCCCCUCCAAGCCGGGGCCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01021128.1/1023-1138   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	9	14
+      0     .    :    .    :    .    :    .    :    .    : 
+        -------CUA-AGUGUUCACAGGUCAUUACA-AAGGACU-AGUUUACAGC
+               | | ||||  | | || ||  |||   ||||| |   | |  |
+        GGCCCGGCCAUAGUG-GC-CUGG-CA--ACACCCGGACUCA---U-C-UC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAUCUUAGAGGUUAAGCAAUGUUGACCGGAGUCGCGACUUAGAUGGGUGA
+        || |   || ||||||| | |  | ||  |    ||  || || ||| | 
+        GAACCCGGAAGUUAAGC-A-G--G-CC--A----CG--UUGGA-GGG-GG
+
+    100     .    :    .    :    .    :    .    :    .    : 
+        CCGCUUG-GGAAUAUC-AAUAUUACU-GC---------------------
+        |||  || ||  |  | || |   || ||                     
+        CCG--UGAGG--U-CCGAA-AGGCCUCGCAGCCCCCUCCAAGCCGGGGCC
+
+    150   
+        -
+         
+        G
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01000138.1/1943-2052   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AEMG01000009.1/447840-447797   797209:Haladaptatus paucihalophilus DX253 	54	12
+      0     .    :    .    :    .    :    .    :    .    : 
+        AUAAAGAUGUUCACAG-GUCAUCAGUUCGCAGU---GAUCACGGAAGUCA
+                  | |  | | || | || | || |   || ||||||||| |
+        ----------U-AGGGCGACACCCGUACCCA-UCCCGAACACGGAAGUUA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AG-C-AACGUUCACCGGAGUCGCGACUUGGAUGGGUGACCGCUUGGAAAU
+        || | |                                            
+        AGCCUA--------------------------------------------
+
+    100     .    :    .  
+        UUCCGAAAAAAAUAUU
+                        
+        ----------------
+
+
+
+RF00001;5S_rRNA;AEAQ01000138.1/1943-2052   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002988.1/929837-929716   756883:halophilic archaeon DL31 	19	21
+      0     .    :    .    :    .    :    .    :    .    : 
+        --------AUAAAGAUGUUCA--CAGGUCAUCAGUUCGCAGU---GAUCA
+                  | || || | |  || | || | || | || |   || ||
+        UGAGACGGCCAGAG-UGGUGAGGCA-G-CACCCGUACCCA-UCCCGAACA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGUCAAGC-AACGUUCACCGGAGUC-G-C-G-ACUUGG-AUGGGUG
+        ||||||| ||||  ||   || | | ||| | | | || |||  || | |
+        CGGAAGUUAAGCUCAC--CCA-C-GUGUCAGCCAGUAC-UGGCGUGCGCG
+
+    100     .    :    .    :    .    :    .    :   
+        A-CCGCUUGGAAAUUUCCGAAAAAAAU-AUU-----------
+        | |||| ||||||   ||        | |||           
+        AGCCGC-UGGAAA---CC-------CUGAUUCGCCGUCUCUC
+
+
+
+RF00001;5S_rRNA;AEAQ01000138.1/1943-2052   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;L27163.1/1-121   28442:Haloarcula vallismortis 	9	21
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---------AUAAAGAU---GUUCACAGGUCAUCAGUUCGCAGU---GAU
+                 | |  | |   |||| |   ||  | || | || |   || 
+        GUAGCGGCCACAGCGGUGGGGUUC-C---UC--CCGUACCCA-UCCCGAA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CACGGAAG-UCAAG--CA--A-CGUUCACCGGAGUCGCG-ACUUGGA-UG
+        |||||||| | |||  ||  | ||||  |||| |  | | || |||| ||
+        CACGGAAGAU-AAGCCCACCAGCGUU--CCGG-G--GAGUAC-UGGAGUG
+
+    100     .    :    .    :    .    :    .    :     
+        GGUGACCGCU-U-GGAAA-----UU-UCCG--A-AAAAAAUAUU
+         | |||| || | |||||     ||  |||  |           
+        CGCGACC-CUCUGGGAAACCGGGUUCGCCGCUAC----------
+
+
+
+RF00001;5S_rRNA;AEAQ01000138.1/1943-2052   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002098.1/296345-296463   583356:Ignisphaera aggregans DSM 17230 	9	14
+      0     .    :    .    :    .    :    .    :    .    : 
+        AUAAAGAUGUUC-A-CAGGUCAUCAGUUC-GCAGUG-AUCA--CGGAAGU
+                   | | | || ||| ||  | || | | | ||  ||| | |
+        -----------CGACCCGGCCAU-AG--CGGCUGGGCAACACCCGG-ACU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CAAG-CAACGUUCACCGG-AG-U-CGCGA-CUUG-GAUGGGUGACCGCU-
+        |  | | | | || |||| || |  || | |  | | | ||||   ||| 
+        C--GUC-A-GAUC-CCGGCAGUUAAGCCAGC-CGCGUUAGGUG-UGGCUG
+
+    100     .    :    .    :    .    :    .    :     
+        UGGAAAUUUCCGAAAAAAAUAUU---------------------
+        |||    ||||||||       |                     
+        UGG---CUUCCGAAAGGGGCCGUAGCCCACCUAAGCCGGGAUCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01013907.1/4968-4885   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	12	9
+      0     .    :    .    :    .    :    .    :    .    : 
+        ------------------UGCAGCGAUCUUA-AAGGUUAAGCAACGUUG-
+                          ||  || | |  |   ||  |  || | | | 
+        GGCCCGGCCAUAGUGGCCUG--GC-AAC--ACCCGG--ACUCAUC-UCGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        A-CCGG-AG-U---C--GCGAC-UUGGAUGGGUGACCGUUUG-GGAAUAU
+        | |||| || |   |  || || ||||| ||| | |||  || ||  |  
+        ACCCGGAAGUUAAGCAGGCCACGUUGGA-GGG-GGCCG--UGAGG--UCC
+
+    100     .    :    .    :    .    :    .  
+        UAAUAUUACU-GCAU---------------------
+         || |   || |||                      
+        GAA-AGGCCUCGCA-GCCCCCUCCAAGCCGGGGCCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01024342.1/4004-4116   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AEMG01000009.1/447840-447797   797209:Haladaptatus paucihalophilus DX253 	54	12
+      0     .    :    .    :    .    :    .    :    .    : 
+        AGUUCACAGGUCAUUAUGAG-G-UAUCAGUUCGCAGU---GAUCACGGAA
+                      || | | |  | | || | || |   || |||||||
+        --------------UA-GGGCGACACCCGUACCCA-UCCCGAACACGGAA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GUCAAG-C-AACGUUCACCGGAGUCGCGACUUGGAUGGGUGACCGCUUGG
+        || ||| | |                                        
+        GUUAAGCCUA----------------------------------------
+
+    100     .    :    .    : 
+        AAAUGUCCGAAAAAAUAUUU
+                            
+        --------------------
+
+
+
+RF00001;5S_rRNA;AEAQ01024342.1/4004-4116   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002988.1/929837-929716   756883:halophilic archaeon DL31 	18	23
+      0     .    :    .    :    .    :    .    :    .    : 
+        AGUUCACA-GGUC--A-UUAUGAGGUAUCA---GUUCGCAGU---GAUCA
+           | | | || |  | |  ||||| | ||   || | || |   || ||
+        ---UGAGACGGCCAGAGUGGUGAGGCAGCACCCGUACCCA-UCCCGAACA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGUCAAGC-AACGUUCACCGGAGUC-G-C-G-ACUUGG-AUGGGUG
+        ||||||| ||||  ||   || | | ||| | | | || |||  || | |
+        CGGAAGUUAAGCUCAC--CCA-C-GUGUCAGCCAGUAC-UGGCGUGCGCG
+
+    100     .    :    .    :    .    :    . 
+        A-CCGCUUGGAAA---UG-UCCGAAAAAAUAUUU-
+        | |||| ||||||   || | ||      | | | 
+        AGCCGC-UGGAAACCCUGAUUCG---CCGUCUCUC
+
+
+
+RF00001;5S_rRNA;AEAQ01024342.1/4004-4116   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;L27163.1/1-121   28442:Haloarcula vallismortis 	9	22
+      0     .    :    .    :    .    :    .    :    .    : 
+        ----AGUUCACAGGUCAUUAUGAGG-U-AU-CAGUUCGCAGU---GAUCA
+             |  |||| | |    || || |  | | || | || |   || ||
+        GUAGCGGCCACA-G-C--GGUGGGGUUCCUCCCGUACCCA-UCCCGAACA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAG-UCAAG--CA--A-CGUUCACCGGAGUCGCG-ACUUGGA-UGGG
+        |||||| | |||  ||  | ||||  |||| |  | | || |||| || |
+        CGGAAGAU-AAGCCCACCAGCGUU--CCGG-G--GAGUAC-UGGAGUGCG
+
+    100     .    :    .    :    .    :    .    :   
+        UGACCGCU-U-GGAAA---UG-U--CCG--A-AAAAAUAUUU
+         |||| || | |||||    | |  |||  |           
+        CGACC-CUCUGGGAAACCGGGUUCGCCGCUAC----------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01011134.1/22413-22296   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP002590.1/1789041-1788921   999630:Thermoproteus uzoniensis 768-20 	18	8
+      0     .    :    .    :    .    :    .    :    .    : 
+        UAAAG-UGUUCAUAGAUCAUC-AUG--A-G---GGA-UCAGUUCACAGCG
+        |  ||  |  |||||  |  |  ||  | |   ||| || |  | ||  |
+        U-GAGCCGGCCAUAG-GCGCCGGUGCUACGCCCGGACUC-G--C-CA--G
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AUCUUGGAAGUC-AA-GCAACGUUCAUCG-G-UCGCGACUUGAAUGGG-U
+        |||  ||||| | || ||  ||  |  || | ||| ||  | | |||| |
+        AUCCCGGAAG-CUAAGGC--CG-GCGCCGCGCUCGGGA-GU-ACUGGGCU
+
+    100     .    :    .    :    .    :    .    :   
+        GACCGCUCGGGAAUUUCCGAAAAAAAUUUUUA----------
+          ||||  |||     |||  |||      |           
+        --CCGCGAGGG----CCCGGGAAACCGGCGU-GCUGGCAGGA
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01029928.1/1484-1373   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	19	14
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUUCACUAGUCAUCAUGAG-GGAUCCAGUUUGCAGCGAUCUUGGA---A-
+        |  | |  | |  ||| || ||  ||   | ||| | | |  |||   | 
+        G-GC-C-CGGC--CAU-AGUGG--CC---UGGCAAC-A-CCCGGACUCAU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GUC-AA-GCAG-CGUUGAGCGCGGUCACAAC-UUGGAGGGGUGACCGCUU
+         || ||  | |  ||| |||  || | | || ||||||||| | |||  |
+        CUCGAACCCGGAAGUUAAGC-AGG-C-C-ACGUUGGAGGGG-G-CCG--U
+
+    100     .    :    .    :    .    :    .    :    .   
+        G-GGAAUUUCCGCCAGAGAAUU-------------------------
+        | ||    ||||  | ||   |                         
+        GAGG----UCCG--AAAGGCCUCGCAGCCCCCUCCAAGCCGGGGCCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01007323.1/343-240   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	20	13
+      0     .    :    .    :    .    :    .    :    .    : 
+        ------------AAAAAUGUCUAAAGUACCAGUUCUC-GUCCGAUCACUA
+                    |  |  |   |||  ||| |  |||  ||||| | |  
+        GCCGACGGUCAUAGGACGGGGGAAA-CACCCGGACUCAUUCCGAACCCGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAAUAAAGUAACGUU--G----GACAUAGUACUUG-GAU-GGAUAACCGC
+        || | |||   ||||  |    | || ||||| || | |  ||  |  ||
+        AAGUUAAGCCCCGUUCCGUCCCG-CACAGUAC-UGUGUUCCGA-GAGGGC
+
+    100     .    :    .    :    .    
+        UUGGAAACACCGUGUGACAUUGUCG---
+          || |||  || | || |  ||||   
+        ACGGGAACUGCG-G-GA-ACCGUCGGCU
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01030635.1/1294-1167   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	17	15
+      0     .    :    .    :    .    :    .    :    .    : 
+        AUCAACGCCUUCAG-C-U--UA-GUUGGUAACAUCAGUUCCCGUU-AGAU
+              |||  | | | |   | |  || |||| | |  | | ||  || 
+        ------GCCGACGGUCAUAGGACGGGGGAAACACCCGGACUCAUUCCGAA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UACUAAAGUUUAAG--CAGCUAGGGCACGGA-A-UACCGU-UU--G-GAU
+          |  ||| |||||  | | |  | | || | | ||| || ||  | || 
+        CCCGGAAG-UUAAGCCCCGUUCCGUCCCGCACAGUACUGUGUUCCGAGA-
+
+    100     .    :    .    :    .    :    .    :   
+        GGGUUAUGAUACCGUGGGGUAUGAUACCGUAUGGCGUUGACA
+        |||  | |  | | || ||   || |||||  ||| |     
+        GGG-CACGGGAAC-UGCGG---GA-ACCGU-CGGC-U-----
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01014826.1/1472-1354   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	17	22
+      0     .    :    .    :    .    :    .    :    .    : 
+        -AA-CAC-UAAAAAAAAAAAGUUUAACUUACC-AGUUCUCGUU-UGAUUA
+         || | |    | |     ||  |  |  ||| |  || ||||  ||  |
+        CAAGC-CGGCCAUAGCGUCAGGGU-GC-GACCUA-AUCCCGUUCCGA--A
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        -UU-GAAGUCAAGCAGC-GUUG-GGCAUGGUUAGUGCU--U-GGAUGGGU
+         || ||||||||  | | | ||  || | ||| |||||  |  |||| | 
+        CUUAGAAGUCAA--ACCUGAUGUCGC-U-GUU-GUGCUACUAAGAUGCGA
+
+    100     .    :    .    :    .    :    .   
+        GA-CUGCUUGGGAA--UAGGGUG-U-G-AUGUUGUCC
+        || || ||||||||   |  ||| | | || ||    
+        GAGCU-CUUGGGAAGCAACAGUGCUGGCAU-UU----
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01030297.1/4030-3936   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	11	15
+      0     .    :    .    :    .    :    .    :    .    : 
+        -----------------------GGGA-UUAAU----UUGCAGCAA-UUG
+                               | ||  ||||    || | | || || 
+        CAAGCCGGCCAUAGCGUCAGGGUGCGACCUAAUCCCGUU-CCG-AACUU-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CAGAGGUUAAGAAUUG-U-UCACCGGGGUCAG-GACUUGGAUG-GAUGAC
+         ||| || || |  || | || | |  ||  |  |||  |||| || || 
+        -AGAAGUCAA-ACCUGAUGUCGCUGUUGU--GCUACUAAGAUGCGA-GAG
+
+    100     .    :    .    :    .    :    . 
+        CGCUUGGGAAUUUCCGAAAAAAAUUCCU-------
+        | ||||||||     |   || | | ||       
+        CUCUUGGGAA-----G--CAACAGUGCUGGCAUUU
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01021536.1/13877-13757   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	8	26
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUC-A-CUGGUCA-AAC--CAUGUUGAACGUA--UAAGAUCUCG-UCCGA
+          | | | || || | |  || | ||  || |  | | ||| || |||||
+        --CAAGCCGGCCAUAGCGUCAGGGUG--CG-ACCU-A-AUCCCGUUCCGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCACUUCA-CAGUCAAGUA-AU-AUUG-GGCACGAUUAGU--AAUUAA-A
+          |||| |  ||||||  |  | | ||  ||  | || ||   | ||| |
+        --ACUU-AGAAGUCAA--ACCUGA-UGUCGC-UG-UU-GUGCUACUAAGA
+
+    100     .    :    .    :    .    :    .    :     
+        UG-GAUGA--U-UU-AGAA--AUACAGUAG-UGUAAUGUUGAUA
+        || || ||  | ||  |||  | ||||| | ||  || ||    
+        UGCGA-GAGCUCUUGGGAAGCA-ACAGU-GCUGGCAU-UU----
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAQ01007322.1/5376-5263   13686:Solenopsis invicta (red fire ant)	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	18	11
+      0     .    :    .    :    .    :    .    :    .    : 
+        ----AUAAACAUUAAAAAAAUGUCUAAAGUACCAGUUCUC-GUCCGAUCA
+            |    || |  |  |  |   |||  ||| |  |||  ||||| | 
+        GCCGACGGUCA-U--AGGACGGGGGAAA-CACCCGGACUCAUUCCGAACC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CUAAAAUAAAGCAACGUU--G----GACAUAGUACUUG-GAU-GGAUAAC
+        |  || | ||||  ||||  |    | || ||||| || | |  ||  | 
+        CGGAAGUUAAGCCCCGUUCCGUCCCG-CACAGUAC-UGUGUUCCGA-GAG
+
+    100     .    :    .    :    .    :  
+        CGCUUGGAAACACCGUGUGACAUUGUC----
+         ||  || |||  || | || |  |||    
+        GGCACGGGAACUGCG-G-GA-ACCGUCGGCU
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01025011.1/19909-19805   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP000505.1/667525-667409   368408:Thermofilum pendens Hrk 5 	20	15
+      0     .    :    .    :    .    :    .    :    .    : 
+        -GUCAGCGGUCAU-GCCACGU-UGAAAGCGCCAGUUCUCGUCCGAUCACU
+         | |  ||  ||| | |  ||  | || |||| | ||||||| |||| | 
+        CG-CCCCGCCCAUAGUC-GGUGGGCAA-CGCCCGGUCUCGUCAGAUCCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        G-AGGUGAAG-CAACGUUAGGCAUGAUCAGUACUUGAGAAUACCACGUGU
+        | || | ||| || ||  | ||  | || |  |  |||  |   || || 
+        GAAGCU-AAGCCACCG--ACGC--GGUC-G--C--GAG--U---AC-UG-
+
+    100     .    :    .    :    .    :    .     
+        UUUGUUUUUC-----------------------------
+           | | | |                             
+        --GGGUCUGCGGCCCCGGGAAAGCGCCGUGGUGGGGCAU
+
+
+
+RF00001;5S_rRNA;AEAC01025011.1/19909-19805   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	20	10
+      0     .    :    .    :    .    :    .    :    .    : 
+        --------------------------------------------------
+                                                          
+        GGCCCGGCCAUAGUGGCCUGGCAACACCCGGACUCAUCUCGAACCCGGAA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GUCAGCGGUCAUGCCACGUU-GAAAGCGCCAGUUCUCGUCCGAUCACUGA
+        || |   | || |||||||| ||  | ||| | |   ||||||  |   |
+        GUUA--AG-CAGGCCACGUUGGAGGGGGCC-G-UGAGGUCCGA--A---A
+
+    100     .    :    .    :    .    :    .    :    .    : 
+        GG--U-GAAGCAACGU-UAGGCAUGAUCAGUACUUGAGAAUACCACGUGU
+        ||  | | |||  | |  | ||  |  | |                    
+        GGCCUCGCAGCCCCCUCCAAGCCGGGGCCG--------------------
+
+    150     .    : 
+        UUUGUUUUUC
+                  
+        ----------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01004249.1/22772-22654   610380:Harpegnathos saltator	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	35	35
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUACCACGCUGAAAACACCAGUUCUC-GCCCGAUCACUGC
+        | | |||||||||  |||  | ||||||| |  |||   |||| | | | 
+        GCCGACGGUCAUAGGACGGGGGAAACACCCGGACUCAUUCCGAACCCGGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGUUAAGCAGCGUU-GGGCACGGUUAGUACU-UG----GAUG-GGUCAC-
+        ||||||||  ||||  | | ||   |||||| ||    || | || ||| 
+        AGUUAAGCCCCGUUCCGUCCCGCACAGUACUGUGUUCCGA-GAGGGCACG
+
+    100     .    :    .    :    .    :   
+        --CACUUG-GGAACACCGU-GUACUGUUGGCG
+           || || || | ||||| |  ||       
+        GGAAC-UGCGGGA-ACCGUCG-GCU-------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01000156.1/2674-2547   610380:Harpegnathos saltator	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	35	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUACCAC-GUUGAACAAACCAGUUCUC-GUCCGAUCGCUG
+        | | |||||||||  || |  ||| | ||| |  |||  ||||| | | |
+        GCCGACGGUCAUAGGACGGGGGAA-ACACCCGGACUCAUUCCGAACCCGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CAGUUAAGCAACGGU-GGGCACGGUUAGUACUUG-GAU--GGGUGGUG-G
+         ||||||||  || |  | | ||   ||||| || | |  | | || |  
+        AAGUUAAGCCCCGUUCCGUCCCGCACAGUAC-UGUGUUCCGAGAGG-GCA
+
+    100     .    :    .    :    .    :    .  
+        UGGGUGCCGCUUAGGACCACCGU-GUGCUGUUGGCA
+         |||  | ||   |||  ||||| | |||       
+        CGGGAACUGC--GGGA--ACCGUCG-GCU-------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01026484.1/35872-35757   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP002588.1/885631-885510   693661:Archaeoglobus veneficus SNP6 	27	27
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---AACAAUUAAAAAAAAACACUGAAAACACCAGUUCUCA-UCCGAACAC
+            ||      | | || |   | ||||||| |  |||| ||||||| |
+        GCCGAC--GGCCAUAGAAGCGGGGGAAACACCCGGACUCAUUCCGAACCC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UGCAGUUAAG--CAGCAUU-GGGCACG-GUUAGUACUUG-GAU--G-GAU
+         | |||||||  | || || |  | || ||| |||| || | |  | || 
+        GGAAGUUAAGCCCCGC-UUCGUUC-CGCGUU-GUAC-UGUGUUCCGAGA-
+
+    100     .    :    .    :    .    :    
+        GACCACUUGGGAA-CAUCAUGUA-CUGUUG---
+        |  |||  ||||| |  |  | | |||| |   
+        GGGCAC--GGGAAGC-GC-GGAAGCUGUCGGCU
+
+
+
+RF00001;5S_rRNA;AEAC01026484.1/35872-35757   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	27	13
+      0     .    :    .    :    .    :    .    :    .    : 
+        -----AACAAUUAAAAAAAAACACUGAAAACACCAGUUCUCAUC-CGAAC
+               | | |    |    | |||  |||||| |  |||||| |||||
+        GGCCCGGCCA-U----AGUGGC-CUGGCAACACCCGGACUCAUCUCGAAC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        ACUGCAGUUAAGCA-G-CA--UU---GGGCACGGUUA-GUACUUGGAUGG
+         | | ||||||||| | ||  ||   |||  | || | || |  | | ||
+        CCGGAAGUUAAGCAGGCCACGUUGGAGGGGGCCGUGAGGU-C-CGAAAGG
+
+    100     .    :    .    :    .    :    . 
+        -AU-G-A-CCACUUGGGAA-CAUCAUGUACUGUUG
+          | | | || | |   || |  |  |  | |   
+        CCUCGCAGCCCCCU-CCAAGC--C-GGGGCCG---
+
+
+
+RF00001;5S_rRNA;AEAC01026484.1/35872-35757   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP001857.1/947564-947685   572546:Archaeoglobus profundus DSM 5631 	18	16
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---AACAAUUAAAAAAAAACACUGAAAACACCAGUUCUCA-UCCGAACAC
+            ||     | |     |   | ||||||| |  |||| ||||||| |
+        GCCGAC-GGCCAUAGGGGUC-GGGGAAACACCCGGACUCAUUCCGAACCC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UGCAGUUAAG-CAG-CAUUGGGCACG-GUUAGUACUUG-GAU--G-GAUG
+         | ||||||| | | |   |  | || | | |||| || | |  | || |
+        GGAAGUUAAGCCCGACCCCGUUC-CGCG-UGGUAC-UGUGUUCCGAGA-G
+
+    100     .    :    .    :    .    :   
+        ACCACUUGGGAA-CAUCAUGUA-CUGUUG---
+          |||  ||||| |  |  | | | || |   
+        GGCAC--GGGAAGC-GC-GGAAGCCGUCGGCA
+
+
+
+RF00001;5S_rRNA;AEAC01026484.1/35872-35757   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP002656.1/139042-138924   1006006:Metallosphaera cuprina Ar-4 	9	14
+      0     .    :    .    :    .    :    .    :    .    : 
+        --AACAAUUAAAAAAAAACACUGAAAACACCAGUUCUCAUC-CGAACACU
+          | |   |   | |  |    | ||||||| |  |||||| ||||| | 
+        CCACCCGGU--CAUAGCAGGGGGGAAACACCCGGACUCAUCUCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GCAGUUAAGCAGCAU-UGGGCACGGUUAGUACUUG-GAUGGAUGA-CC-A
+        | ||||||||  | | |  |  | ||| | |  || | |||  || || |
+        GAAGUUAAGC--CCUCU--G--C-GUU-GGAGAUGCGGUGG--GAUCCGA
+
+    100     .    :    .    :    .    :    .    
+        CUUGGGAACAUCAUG-UACUGUUG--------------
+           |||  |  || | |||   |               
+        -AAGGG-CCCGCA-GCUAC---U-CCAAACUGGGAUGG
+
+
+
+RF00001;5S_rRNA;AEAC01026484.1/35872-35757   610380:Harpegnathos saltator	RF00001;5S_rRNA;BA000002.3/627911-627792   272557:Aeropyrum pernix K1 	9	10
+      0     .    :    .    :    .    :    .    :    .    : 
+        -----AACAAUUAAAAAAAAACACUGAAAACACCAGUUCUCA-UCCGAAC
+               | | |    |    | | |  |||||| |  |||| | |||||
+        GGCCCGGCCA-U----AGCGGC-CGGGUAACACCCGGACUCAUUUCGAAC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        ACUGCAGUUAAGCAGCAUUGGGCACGGUUAGUACUUGGAUGGAUGACCAC
+         | | ||||||||  |    ||| | |   |   ||||| || |  ||| 
+        CCGGAAGUUAAGC--C----GGC-C-G--CG---UUGGA-GGCU--CCAG
+
+    100     .    :    .    :    .    :    .    :    
+        UUGGGAAC-AUCAUGUACUGUUG--------------------
+        | |||  | |  | |  |||  |                    
+        UGGGGUCCGA-GAGGCCCUGCAGGGGCCUCCAAGCCGGGGCCG
+
+
+
+RF00001;5S_rRNA;AEAC01026484.1/35872-35757   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP000816.1/30219-30106   453591:Ignicoccus hospitalis KIN4/I 	9	9
+      0     .    :    .    :    .    :    .    :    .    : 
+        AACAAUUAAAAAAAAACACUGAAAACACCAGUUCUCA-UCCGAACACUGC
+          |      | |   || | |  |||||| |  | || | ||||| | | 
+        --CCCGGCCACAGCGAC-CGGGCAACACCCGGACCCAUUUCGAACCCGGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGUUAAG-C---AGCAUUGGG-CACGGUUAGU-AC-U-UG-GAUG-GAUG
+        ||||||| |    ||   ||| | |||  |||  | |  | || | |  |
+        AGUUAAGCCGGUCGCGCGGGGUC-CGG-CAGUGGCGUCCGAGAGGCGCCG
+
+    100     .    :    .    :    .    :    . 
+        -A----CCAC-U--UGGGAACAUCAUGUACUGUUG
+         |    || | |  |||||                
+        CAGCCGCCCCGUGCUGGGA----------------
+
+
+
+RF00001;5S_rRNA;AEAC01026484.1/35872-35757   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP000493.1/884167-884049   415426:Hyperthermus butylicus DSM 5456 	9	7
+      0     .    :    .    :    .    :    .    :    .    : 
+        AACAAUUAAAAAAAAACACUGAAAACACCAGUUCUCA-UCCGAACACUGC
+         ||      | |    | | |  |||||| |  | || | ||||| | | 
+        GACCCGGCCAUAGCGGC-CGGGCAACACCCGGACCCACUUCGAACCCGGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGUUAA----GCAGCAUUGGGCACGGUUAGUACU-UGGAUGGAUGACCAC
+        ||||||    || || |||||   || |||  || |||  || |  || |
+        AGUUAAGCCGGCCGCGUUGGG---GG-UAG--CUGUGG--GG-U--CCGC
+
+    100     .    :    .    :    .    :    .    : 
+        UUG-GGAACAUCAUGUACUGUUG-----------------
+          | ||  |  |  |  | | |                  
+        --GAGG--C--CCCG--CAGCU-CCCCCAAGCCGGGAUCG
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01000157.1/5887-5769   610380:Harpegnathos saltator	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	17	25
+      0     .    :    .    :    .    :    .    :    .    : 
+        GCCAA--CGGUCGUA---UCACGUUGAAAAC-ACCAGUUAU--CG-UCCG
+          |||  ||| | ||   ||| | ||    | |||  | ||  || ||||
+        --CAAGCCGGCCAUAGCGUCAGGGUG----CGACC--UAAUCCCGUUCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AUCACUGCGGUCAAG-C-AACAU--UG-GGCAUGGUU-AG-UACUUGGAU
+        |  |||   |  ||| | ||| |  ||  || | |||  | ||||  |||
+        A--ACU-UAG--AAGUCAAACCUGAUGUCGC-U-GUUGUGCUACUAAGAU
+
+    100     .    :    .    :    .    :    .    :  
+        G-AAUGACCGCUUGGGAA-CAUC-GU-AU-AC-UGUUGGUA
+        |  | || | |||||||| || | ||  |  | | ||    
+        GCGA-GAGCUCUUGGGAAGCAACAGUGCUGGCAU-UU----
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01026478.1/942-1018   610380:Harpegnathos saltator	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	57	23
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUACCACGCUGAAAACACCAGUUCUC-GUCCGAUCACUGC
+        | | |||||||||  |||  | ||||||| |  |||  ||||| | | | 
+        GCCGACGGUCAUAGGACGGGGGAAACACCCGGACUCAUUCCGAACCCGGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGUUAAGCAGCAUU-GGGCACGGUUUAAA---------------------
+        ||||||||  | ||  | | | |   | |                     
+        AGUUAAGCCCCGUUCCGUC-CCG--CACAGUACUGUGUUCCGAGAGGGCA
+
+    100     .    :    .    :     
+        ------------------------
+                                
+        CGGGAACUGCGGGAACCGUCGGCU
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01000156.1/2259-2139   610380:Harpegnathos saltator	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	17	30
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUUAA--CUGUCAUA---UCAUGUUGAAAAUACC-AGUUCUCG-UCCGAU
+           ||  | | ||||   ||| | ||     ||| |  || || ||||| 
+        --CAAGCCGGCCAUAGCGUCAGGGUG---CGACCUA-AUCCCGUUCCGA-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CACUGCAGUCAAG-CAACA-UUGA-G-CACGGUUAGUGCU--U-UGAUGG
+         |||  ||  ||| ||| |  ||| | | | ||| |||||  |  |||| 
+        -ACU-UAG--AAGUCAA-ACCUGAUGUCGCUGUU-GUGCUACUAAGAUGC
+
+    100     .    :    .    :    .    :    .    : 
+        GUGA-CUACUUGGGAA--AACCGUG-UAUAC-UGUUGGCA
+        | || || ||||||||  ||| ||| |   | | ||    
+        GAGAGCU-CUUGGGAAGCAACAGUGCU-GGCAU-UU----
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01025904.1/6959-7084   610380:Harpegnathos saltator	RF00001;5S_rRNA;ACVJ01000008.1/189457-189568   425595:Candidatus Micrarchaeum acidiphilum ARMAN-2 	9	14
+      0     .    :    .    :    .    :    .    :    .    : 
+        ----AC--UAGACCUGAUACCACGAUGAAAAUAUCAGUUCUCG-UCCGAU
+            ||  || | | | |  | ||  |  || | | |  | || |||  |
+        CCAAACGGUA-A-CAG-UGGC-CG--G-GAA-A-C-G--CCCGAUCC-CU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GACCGAAAUUAAACAGCGUUAAACAGGCACAGUCAAUAU---UUGGA-UG
+          ||||| |   | |||  ||| | ||| ||  | ||||   ||  | ||
+        UUCCGAACUCGGA-AGC--UAAGCCGGC-CA-ACGAUAUGCAUU--ACUG
+
+    100     .    :    .    :    .    :    .    :  
+        -GUUGAUCACUUGAAAAC--AUUACACGUAUAU-GCUAUUG
+          || |   |  ||||||  ||| |  || | | ||     
+        CCUU-AGGGCGGGAAAACAUAUUGC-UGU-U-UGGC-----
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01012799.1/2893-2774   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP001742.1/479913-479794   666510:Acidilobus saccharovorans 345-15 	26	21
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUACCACG-CU-GAAAGCACCAGUUCUCGUCU-GAUCACU
+        | |  ||| ||||    | || | || |||| |  ||| ||| || | | 
+        GGC-CCGGCCAUA-GUGGCCUGGCAA-CACCCGGACUCAUCUCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GCAGUUAAGCA-G---CGUUGG-GCUCGGUUAGUACUUGGAUGGGU-GGU
+        | ||||||||| |   |||||| |   ||   |  | | ||  |||  | 
+        GAAGUUAAGCAGGCCACGUUGGAG---GG---GGCCGU-GA--GGUCCG-
+
+    100     .    :    .    :    .    :    . 
+        AACCACCUGGGAACACCGUACUAUUGACG------
+        ||   ||| | | | || | | |  | ||      
+        AAAGGCCUCGCAGCCCCCU-CCA-AGCCGGGGCCG
+
+
+
+RF00001;5S_rRNA;AEAC01012799.1/2893-2774   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP000493.1/884167-884049   415426:Hyperthermus butylicus DSM 5456 	17	18
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUA-C--CACGCUGAAAGCACCAGUUCUCGUC-U-GAUCA
+        | |  ||| |||| |  | ||  | || |||| |  | |  | | || | 
+        GAC-CCGGCCAUAGCGGC-CG-GGCAA-CACCCGGAC-CCACUUCGAACC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CUGCAGUUAA----GCAGCGUUGGGCUCGGUUAGUACUUGGAUGGGUGGU
+        | | ||||||    || ||||||||   || |||  | | | | || |||
+        CGGAAGUUAAGCCGGCCGCGUUGGG---GG-UAG--C-U-G-U-GG-GGU
+
+    100     .    :    .    :    .    :    .    :    .    
+        AACCACCUG-GGAACACCGUACUAUUGACG------------------
+          ||  | | ||  | |||  | |  | |                   
+        --CC-GC-GAGG--CCCCG--C-A--G-C-UCCCCCAAGCCGGGAUCG
+
+
+
+RF00001;5S_rRNA;AEAC01012799.1/2893-2774   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP002656.1/139042-138924   1006006:Metallosphaera cuprina Ar-4 	17	28
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCA-ACGGUCAUACCA-CGCUGAAAGCACCAGUUCUCGUCU-GAUCACU
+          ||  |||||||| ||  |  |||| |||| |  ||| ||| || | | 
+        -CCACCCGGUCAUAGCAGGGGGGAAA-CACCCGGACUCAUCUCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GCAGUUAAG----CAGCGUUGG-GCU-CGGUUAGUACU-UGGAUGGG--U
+        | |||||||    | ||||||| | | ||| | | | |  | | |||   
+        GAAGUUAAGCCCUCUGCGUUGGAGAUGCGG-UGGGA-UCCGAAAGGGCCC
+
+    100     .    :    .    :    .    :    .    : 
+        G--G-UA-ACC-ACCUGGGA---ACACCGUACUAUUGACG
+        |  | ||  || | ||||||                    
+        GCAGCUACUCCAAACUGGGAUGG-----------------
+
+
+
+RF00001;5S_rRNA;AEAC01012799.1/2893-2774   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP000816.1/30219-30106   453591:Ignicoccus hospitalis KIN4/I 	9	17
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUA-CCACGC-UGAAAGCACCAGUUCUCGUCU-GAUCACU
+          |  ||| || | | || |  | || |||| |  | | | | || | | 
+        --C-CCGGCCACAGCGAC-CGGGCAA-CACCCGGACCCAUUUCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GCAGUUAAG-CAG-CG-UUGGGCU-CGGUUAGU-AC-U-UG-GAUGG-G-
+        | ||||||| | | ||   ||| | |||  |||  | |  | || || | 
+        GAAGUUAAGCCGGUCGCGCGGGGUCCGG-CAGUGGCGUCCGAGA-GGCGC
+
+    100     .    :    .    :    .    :    .    
+        UG--GUAACCAC---CUGGGAACACCGUACUAUUGACG
+         |  |   || |   ||||||                 
+        CGCAGCCGCCCCGUGCUGGGA-----------------
+
+
+
+RF00001;5S_rRNA;AEAC01012799.1/2893-2774   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP002588.1/885631-885510   693661:Archaeoglobus veneficus SNP6 	8	29
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUACCA-C-GCUGAAAGCACCAGUUCUC-GUCUGAUCACU
+        | | |||| ||||  | | |  |||| |||| |  |||  || || | | 
+        GCCGACGGCCAUAGAAGCGGGGGAAA-CACCCGGACUCAUUCCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GCAGUUAAGCAGCG-UUGGGCU-CG-GUUAGUACUUG-GAU--GGGUGGU
+        | ||||||||  || ||  | | || ||| |||| || | |  | | || 
+        GAAGUUAAGCCCCGCUU-CGUUCCGCGUU-GUAC-UGUGUUCCGAGAGG-
+
+    100     .    :    .    :    .    :   
+        AACCACCUGGGAA-CACCGUA-CUAUUGAC-G
+           || | ||||| | | | | || | | |  
+        --GCA-C-GGGAAGCGCGGAAGCUGUCGGCU-
+
+
+
+RF00001;5S_rRNA;AEAC01012799.1/2893-2774   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP001857.1/947564-947685   572546:Archaeoglobus profundus DSM 5631 	8	22
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUA--CCACGCUGAAAGCACCAGUUCUC-GUCUGAUCACU
+        | | |||| ||||     ||  |||| |||| |  |||  || || | | 
+        GCCGACGGCCAUAGGGGUCGGGGAAA-CACCCGGACUCAUUCCGAACCCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GCAGUUAAG--C-A--GCGUUGGGC-UCGGUUA--GUACUU--G-GAUGG
+        | |||||||  | |   ||||  || | || ||  ||  ||  | || ||
+        GAAGUUAAGCCCGACCCCGUUCCGCGU-GG-UACUGU-GUUCCGAGA-GG
+
+    100     .    :    .    :    .    :    .    
+        G--UGGUAACCACCUGGGAACACCGUAC--UAUUGACG
+        |   || || |  |  ||||  |||| |   |      
+        GCACGGGAAGC-GC--GGAA-GCCGU-CGGCA------
+
+
+
+RF00001;5S_rRNA;AEAC01012799.1/2893-2774   610380:Harpegnathos saltator	RF00001;5S_rRNA;BA000002.3/627911-627792   272557:Aeropyrum pernix K1 	8	19
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUA-C--CACGCUGAAAGCACCAGUUCUCGUCU-GAUCAC
+        | |  ||| |||| |  | ||  | || |||| |  ||| | | || | |
+        GGC-CCGGCCAUAGCGGC-CG-GGUAA-CACCCGGACUCAUUUCGAACCC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UGCAGUUAA----GCAGCGUU-G-GGCU-CGGU-UAGUAC--UUGG--AU
+         | ||||||    || ||||| | |||| | ||   || |    ||   |
+        GGAAGUUAAGCCGGCCGCGUUGGAGGCUCCAGUGGGGUCCGAGAGGCCCU
+
+    100     .    :    .    :    .    :    .    : 
+        G--GGUGGUAACC-A-CCUGGGAACACCGUACUAUUGACG
+        |  || ||   || | || |||    |||           
+        GCAGG-GGCCUCCAAGCC-GGG---GCCG-----------
+
+
+
+RF00001;5S_rRNA;AEAC01012799.1/2893-2774   610380:Harpegnathos saltator	RF00001;5S_rRNA;CP000682.1/2048330-2048449   399549:Metallosphaera sedula DSM 5348 	8	22
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCA-ACGGUCAUACCACGCUGA--AAGCACCAGUUCUCGUCU-GAUCAC
+          ||  ||| |||| |  |  ||  || |||| |  ||| ||| || | |
+        -CCACCCGGCCAUAGC-GGGGGAGCAA-CACCCGGACUCAUCUCGAACCC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UGCAGUUAAG----CAGCGUU-GGGCU-CGGUUAGUACU-UGGAUGGG--
+         | ||| |||    | ||||| ||| | ||| | | | |  | | |||  
+        GGAAGUAAAGUCCCCUGCGUUGGGGAUGCGG-UGGGA-UCCGAAAGGGCC
+
+    100     .    :    .    :    .    :    .    :  
+        UG--G-UA-ACC-ACCUGGGA---ACACCGUACUAUUGACG
+         |  | ||  || | ||||||   |                
+        CGCAGCUACCCCAAGCUGGGAUGGA----------------
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01026477.1/16659-16583   610380:Harpegnathos saltator	RF00001;5S_rRNA;AGBE01001909.1/13730-13849   1089683:uncultured marine crenarchaeote 'Gulf of Maine' 	14	20
+      0     .    :    .    :    .    :    .    :    .    : 
+        ------------------------------------------CAC-U-GC
+                                                   || | | 
+        CAAGCCGGCCAUAGCGUCAGGGUGCGACCUAAUCCCGUUCCGAACUUAGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGUUAAAUAGC-GUUGGGCACGGUU-AG-UACUUGGAUGGGUGACCACUU
+        || | || | | | | | | | |||  | ||||  |||| | || | |||
+        AG-UCAA-ACCUGAU-GUCGCUGUUGUGCUACUAAGAUGCGAGAGCUCUU
+
+    100     .    :    .    :    .     
+        GGGAA-C-ACCGUG-U-AC-UGUUGGUGC
+        ||||| | || ||| |  | | ||     
+        GGGAAGCAACAGUGCUGGCAU-UU-----
+
+
+
+
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AEAC01026484.1/42118-42017   610380:Harpegnathos saltator	RF00001;5S_rRNA;AE000782.1/81142-81022   224325:Archaeoglobus fulgidus DSM 4304 	42	32
+      0     .    :    .    :    .    :    .    :    .    : 
+        GUCAACGGUCAUACCACGCUGAAAACACCAGUUCUC-GUCCGAUCACUGC
+        | | |||||||||  |||  | ||||||| |  |||  ||||| | | | 
+        GCCGACGGUCAUAGGACGGGGGAAACACCCGGACUCAUUCCGAACCCGGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGUUAAGCAGCGUU-GGGCACGGUUAGUACU-UG-GCAAAUUUUGCAGCG
+        ||||||||  ||||  | | ||   |||||| ||  |  |    ||| ||
+        AGUUAAGCCCCGUUCCGUCCCGCACAGUACUGUGUUCCGAGAGGGCA-CG
+
+    100     .    :    .    :    
+        GUG--CUG---------------
+        | |  |||               
+        G-GAACUGCGGGAACCGUCGGCU
+
+
+
+

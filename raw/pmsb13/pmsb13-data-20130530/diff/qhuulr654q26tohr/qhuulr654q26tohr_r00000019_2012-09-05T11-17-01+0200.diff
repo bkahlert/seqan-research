@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_ind/ws_ind.cpp ./sandbox/robinson/apps/ws_ind/ws_ind.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_ind/ws_ind.cpp	2012-09-05 11:15:46.000000000 +0200
++++ ./sandbox/robinson/apps/ws_ind/ws_ind.cpp	2012-09-05 11:16:57.230095275 +0200
+@@ -19,7 +19,7 @@
+ 
+     CharString text2 = "tobeornottobe";
+     Index<CharString, IndexEsa<> > esaindex2(text2);
+-    typedef Iterator<Index<CharString, IndexEsa<> >, TopDown<ParentLinks<> > > :: Type TIterator;
++    typedef Iterator<Index<CharString, IndexEsa<> >, TopDown<ParentLinks<Preorder> > > :: Type TIterator;
+ 
+     TIterator it;
+ 

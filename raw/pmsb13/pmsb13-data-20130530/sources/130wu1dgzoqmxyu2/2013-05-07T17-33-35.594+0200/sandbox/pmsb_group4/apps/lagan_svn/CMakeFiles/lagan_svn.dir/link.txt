@@ -1,0 +1,1 @@
+/usr/bin/c++    -DSEQAN_ENABLE_TESTING=0 -W -Wall -Wno-long-long -fstrict-aliasing -Wstrict-aliasing -pedantic -Wno-variadic-macros -fopenmp -O3 -DNDEBUG -DSEQAN_ENABLE_DEBUG=0    CMakeFiles/lagan_svn.dir/lagan_svn.cpp.o CMakeFiles/lagan_svn.dir/lagan_functions.cpp.o CMakeFiles/lagan_svn.dir/stellar/stellar.cpp.o  -o ../../../../bin/lagan_svn -rdynamic -lrt -lz 

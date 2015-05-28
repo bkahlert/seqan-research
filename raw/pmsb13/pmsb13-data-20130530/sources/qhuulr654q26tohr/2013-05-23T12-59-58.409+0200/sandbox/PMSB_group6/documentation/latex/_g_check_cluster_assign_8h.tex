@@ -1,0 +1,14 @@
+\hypertarget{_g_check_cluster_assign_8h}{\section{include/seqan/\-G\-Cluster/\-G\-Check\-Cluster\-Assign.h File Reference}
+\label{_g_check_cluster_assign_8h}\index{include/seqan/\-G\-Cluster/\-G\-Check\-Cluster\-Assign.\-h@{include/seqan/\-G\-Cluster/\-G\-Check\-Cluster\-Assign.\-h}}
+}
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Fasta\-Record.\-h$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceseqan}{seqan}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\-Score , typename T\-Sequence $>$ }\\bool \hyperlink{namespaceseqan_aeda48428fe6fb5b47547739a2e304d55}{seqan\-::\-G\-Check\-Cluster\-Assign} (T\-Score \&score, T\-Score \&threshold, G\-Fasta\-Record$<$ T\-Sequence $>$ \&new\-Record, G\-Fasta\-Record$<$ T\-Sequence $>$ \&cluster\-Record, double \&length\-Threshold)
+\begin{DoxyCompactList}\small\item\em checks whether the new record should be assigned to the cluster (represented by cluster\-Record). The function checks whether the new record should be assigned to the cluster (represented by cluster\-Record). If the given score is greater or equal the threshold and if the length of the new record's sequence does not exceed ($<$= and $>$=) the length of the cluster master (+-\/ relative length\-Threshold), the function returns true. \end{DoxyCompactList}\end{DoxyCompactItemize}

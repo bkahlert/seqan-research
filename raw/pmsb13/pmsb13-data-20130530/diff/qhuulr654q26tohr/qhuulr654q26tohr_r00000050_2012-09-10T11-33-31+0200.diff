@@ -1,0 +1,18 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/jasparParser/jasparParser.cpp ./sandbox/robinson/apps/jasparParser/jasparParser.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/jasparParser/jasparParser.cpp	2012-09-10 11:31:25.000000000 +0200
++++ ./sandbox/robinson/apps/jasparParser/jasparParser.cpp	2012-09-10 11:33:26.473397821 +0200
+@@ -92,11 +92,13 @@
+ 	std::fstream stream(argv[1], std::ios::binary | std::ios::in);
+ 	if (!stream.good())
+ 		return 1;
++
+ 	// Read file.
+-	RecordReader < std::fstream, SinglePass<> > reader(stream);
++	RecordReader < fstream, SinglePass<> > reader(stream);
+ 	CharString name;
+ 	CharString id;
+ 	String < ProfileChar<Dna> > matrix;
++
+ 	int res = readRecord(id, name, matrix, reader, Jaspar());
+ 	if (res != 0)
+ 		return res;

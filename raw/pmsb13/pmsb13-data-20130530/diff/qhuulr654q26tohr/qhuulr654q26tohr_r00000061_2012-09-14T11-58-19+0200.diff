@@ -1,0 +1,42 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/testTest/testTest.cpp ./sandbox/robinson/apps/testTest/testTest.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/testTest/testTest.cpp	2012-09-14 11:52:25.000000000 +0200
++++ ./sandbox/robinson/apps/testTest/testTest.cpp	2012-09-14 11:57:31.958370391 +0200
+@@ -14,16 +14,35 @@
+ using namespace std;
+ 
+ int main(int argc, char const ** argv) {
+-	typedef Graph<Automaton< > > TGraph;
++	typedef Graph<Automaton<> > TGraph;
+ 	typedef VertexDescriptor<TGraph>::Type TVertexDescriptor;
+-	String<String< unsigned int> > terminalStateMap;
++	String < String<unsigned int> > terminalStateMap;
+ 	TGraph g;
+-	String<CharString> sequenceList;
++	String < CharString > sequenceList;
+ 
+ 	appendValue(sequenceList, "at");
+ 	appendValue(sequenceList, "ac");
+ 	createTrie(g, terminalStateMap, sequenceList);
+ 	// Write out some of the data to stdout.
+ 	cout << "length(terminalStateMap) = " << length(terminalStateMap) << endl;
++	cout << "Vertex 0 : ";
++	if (!empty(terminalStateMap[0]))
++		cout << terminalStateMap[0][0];
++	cout << endl;
++
++	cout << "Vertex 1 : ";
++	if (!empty(terminalStateMap[1]))
++		cout << terminalStateMap[1][0];
++	cout << endl;
++
++	cout << "Vertex 2 : ";
++	if (!empty(terminalStateMap[2]))
++		cout << terminalStateMap[2][0];
++	cout << endl;
++
++	cout << "Vertex 3 : ";
++	if (!empty(terminalStateMap[3]))
++		cout << terminalStateMap[3][0];
++	cout << endl;
+ 	return 0;
+ }

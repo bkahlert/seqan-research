@@ -1,0 +1,1 @@
+clang++    -DSEQAN_ENABLE_TESTING=0  -fno-omit-frame-pointer -fopenmp   CMakeFiles/t3Ala1.dir/t3Ala1.cpp.o  -o ../../../../bin/t3Ala1 -rdynamic -lrt -lz 

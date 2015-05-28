@@ -1,0 +1,422 @@
+\hypertarget{adapter_trimming_8h}{\section{D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/adapter\-Trimming.h File Reference}
+\label{adapter_trimming_8h}\index{D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/adapter\-Trimming.\-h@{D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/adapter\-Trimming.\-h}}
+}
+
+
+Contains the functions for adapter trimming.  
+
+
+{\ttfamily \#include $<$seqan/align.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/find.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structseqan_1_1_adapter_scoring_matrix}{seqan\-::\-Adapter\-Scoring\-Matrix}
+\begin{DoxyCompactList}\small\item\em Struct used to define a new custom scoring matrix. \end{DoxyCompactList}\item 
+struct \hyperlink{structseqan_1_1_scoring_matrix_data___3_01int_00_01_dna5_00_01_adapter_scoring_matrix_01_4}{seqan\-::\-Scoring\-Matrix\-Data\-\_\-$<$ int, Dna5, Adapter\-Scoring\-Matrix $>$}
+\begin{DoxyCompactList}\small\item\em Struct containing data for the \hyperlink{structseqan_1_1_adapter_scoring_matrix}{seqan\-::\-Adapter\-Scoring\-Matrix} custom scoring matrix. Matches score 1, mismatches -\/1 and matches against N with 0. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_mode}{Mode}
+\begin{DoxyCompactList}\small\item\em A struct encapsulating information about the match algorithm. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_auto}{Auto}
+\begin{DoxyCompactList}\small\item\em Tagging struct for the automatic match algorithm. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_user}{User}
+\begin{DoxyCompactList}\small\item\em Tagging struct representing the the match algorithm working with values supplied by the user. Saves those values as members. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_adapter_trimming_stats}{Adapter\-Trimming\-Stats}
+\begin{DoxyCompactList}\small\item\em Struct holding information about certain adapter trimming statistics. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_s_t_r_i_n_g___r_e_v_e_r_s_e___c_o_m_p_l_e_m_e_n_t}{S\-T\-R\-I\-N\-G\-\_\-\-R\-E\-V\-E\-R\-S\-E\-\_\-\-C\-O\-M\-P\-L\-E\-M\-E\-N\-T$<$ T\-Value $>$}
+\begin{DoxyCompactList}\small\item\em A metafunction which constructs a Modified\-String type for an Alphabet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{adapter_trimming_8h_ab719b1a56b7f138316a70a055c8ae54e}{typedef Score$<$ int, \\*
+Score\-Matrix$<$ Dna5, \\*
+\hyperlink{structseqan_1_1_adapter_scoring_matrix}{Adapter\-Scoring\-Matrix} $>$ $>$ {\bfseries T\-Score}}\label{adapter_trimming_8h_ab719b1a56b7f138316a70a055c8ae54e}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\-Seq1 , typename T\-Seq2 , bool T\-Top, bool T\-Left, bool T\-Right, bool T\-Bottom$>$ }\\seqan\-::\-Pair$<$ unsigned, \\*
+seqan\-::\-Align$<$ T\-Seq1 $>$ $>$ \hyperlink{adapter_trimming_8h_a690b4222b093c2260ab0522bff30049f}{align\-Pair} (T\-Seq1 \&seq1, T\-Seq2 \&seq2, const seqan\-::\-Align\-Config$<$ T\-Top, T\-Left, T\-Right, T\-Bottom $>$ \&config, bool band=false)
+\begin{DoxyCompactList}\small\item\em Align two sequences, returning the score and align object of the alignment. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Row $>$ }\\unsigned \hyperlink{adapter_trimming_8h_a3bc646d4dc99acf0ae165cf082e217cb}{count\-Total\-Gaps} (T\-Row \&row)
+\begin{DoxyCompactList}\small\item\em Returns the total number of gaps in a row object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Align $>$ }\\unsigned \hyperlink{adapter_trimming_8h_af28bd342d3520fd7fe6e298e0271e288}{get\-Overlap} (T\-Align \&align)
+\begin{DoxyCompactList}\small\item\em Determines the overlap between two (free-\/shift) aligned gapless sequences. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Align $>$ }\\unsigned \hyperlink{adapter_trimming_8h_a8427805bc99660a9476176b62061f45f}{get\-Insert\-Size} (T\-Align \&align)
+\begin{DoxyCompactList}\small\item\em Given an alignment with two overlapping (forward and reverse) sequences, this function determines the actual size of the insert they cover. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq $>$ }\\unsigned \hyperlink{adapter_trimming_8h_a502e2eb7a85e1f67dd637e94f1600524}{strip\-Pair} (T\-Seq \&seq1, T\-Seq \&seq2)
+\begin{DoxyCompactList}\small\item\em Removes adapter contamination from paired-\/end reads. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq $>$ }\\unsigned \hyperlink{adapter_trimming_8h_aeddd7c1ce0243088be7cde1b4cb5825c}{strip\-Pair} (T\-Seq \&seq1, T\-Seq \&adapter1, T\-Seq \&seq2, T\-Seq \&adapter2)
+\begin{DoxyCompactList}\small\item\em Removes adapter contamination from paired-\/end reads with adapter information. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq $>$ }\\unsigned \hyperlink{adapter_trimming_8h_a390ded6489d24d870c5b63d57b394ad9}{strip\-Pair\-Batch} (seqan\-::\-String\-Set$<$ T\-Seq $>$ \&set1, seqan\-::\-String\-Set$<$ T\-Seq $>$ \&set2, \hyperlink{struct_adapter_trimming_stats}{Adapter\-Trimming\-Stats} \&stats)
+\begin{DoxyCompactList}\small\item\em Removes adapter contamination from paired-\/end reads. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq , typename T\-Adapter $>$ }\\seqan\-::\-Pair$<$ unsigned, \\*
+seqan\-::\-Align$<$ T\-Seq $>$ $>$ \hyperlink{adapter_trimming_8h_a5c6fd3864a1835e6d7120555021326ee}{align\-Adapter} (T\-Seq \&seq, T\-Adapter \&adapter)
+\begin{DoxyCompactList}\small\item\em Aligns a sequence to an adapter. \end{DoxyCompactList}\item 
+bool \hyperlink{adapter_trimming_8h_a8d41cfe5174b6faee428503c8fd0fa45}{is\-Match} (int overlap, int mismatches, const \hyperlink{struct_auto}{Auto} \&)
+\begin{DoxyCompactList}\small\item\em Checks if a overlap of an alignment is accepted, based on mismatches and the length of the overlap. \end{DoxyCompactList}\item 
+bool \hyperlink{adapter_trimming_8h_acd23c187993f2c93b6c9177d7df4563f}{is\-Match} (int overlap, int mismatches, const \hyperlink{struct_user}{User} \&user\-Options)
+\begin{DoxyCompactList}\small\item\em Checks if a overlap of an alignment is accepted, based on mismatches and the length of the overlap. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq , typename T\-Adapter , typename T\-Spec $>$ }\\unsigned \hyperlink{adapter_trimming_8h_a7f0ed5b254d423dabfb235c79355242d}{strip\-Adapter} (T\-Seq \&seq, T\-Adapter \&adapter, T\-Spec \&spec)
+\begin{DoxyCompactList}\small\item\em Remove adapter sequence from a sequence. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq , typename T\-Adapter , typename T\-Spec $>$ }\\unsigned \hyperlink{adapter_trimming_8h_a3c85c17ed0ce3241d328d9b609d88789}{strip\-Adapter\-Batch} (seqan\-::\-String\-Set$<$ T\-Seq $>$ \&set, T\-Adapter \&adapter, T\-Spec const \&spec, \hyperlink{struct_adapter_trimming_stats}{Adapter\-Trimming\-Stats} \&stats, bool reverse=false)
+\begin{DoxyCompactList}\small\item\em Remove adapter sequence from a set of sequences. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq , typename T\-Spec $>$ }\\unsigned \hyperlink{adapter_trimming_8h_a388d9f7c52eada005728f2394f2bb7d2}{strip\-Reverse\-Adapter\-Batch} (seqan\-::\-String\-Set$<$ T\-Seq $>$ \&set, T\-Seq \&adapter, T\-Spec const \&spec, \hyperlink{struct_adapter_trimming_stats}{Adapter\-Trimming\-Stats} \&stats)
+\begin{DoxyCompactList}\small\item\em Simple interface to align the reverse complement of an adapter to a batch of sequences. to a set of reads and remove significant matches. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the functions for adapter trimming. 
+
+\subsection{Function Documentation}
+\hypertarget{adapter_trimming_8h_a5c6fd3864a1835e6d7120555021326ee}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!align\-Adapter@{align\-Adapter}}
+\index{align\-Adapter@{align\-Adapter}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{align\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq , typename T\-Adapter $>$ seqan\-::\-Pair$<$unsigned, seqan\-::\-Align$<$T\-Seq$>$ $>$ align\-Adapter (
+\begin{DoxyParamCaption}
+\item[{T\-Seq \&}]{seq, }
+\item[{T\-Adapter \&}]{adapter}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a5c6fd3864a1835e6d7120555021326ee}
+
+
+Aligns a sequence to an adapter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The sequence which adapter contamination shall be removed. \\
+\hline
+{\em adapter} & The adapter that might contaminate the sequence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of unsigned ints containing the score of the alignment and the alignment object. 
+\end{DoxyReturn}
+\hypertarget{adapter_trimming_8h_a690b4222b093c2260ab0522bff30049f}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!align\-Pair@{align\-Pair}}
+\index{align\-Pair@{align\-Pair}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{align\-Pair}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq1 , typename T\-Seq2 , bool T\-Top, bool T\-Left, bool T\-Right, bool T\-Bottom$>$ seqan\-::\-Pair$<$unsigned, seqan\-::\-Align$<$T\-Seq1$>$ $>$ align\-Pair (
+\begin{DoxyParamCaption}
+\item[{T\-Seq1 \&}]{seq1, }
+\item[{T\-Seq2 \&}]{seq2, }
+\item[{const seqan\-::\-Align\-Config$<$ T\-Top, T\-Left, T\-Right, T\-Bottom $>$ \&}]{config, }
+\item[{bool}]{band = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a690b4222b093c2260ab0522bff30049f}
+
+
+Align two sequences, returning the score and align object of the alignment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq1} & The first sequence of the alignment. \\
+\hline
+{\em seq2} & The second sequence of the alignment. \\
+\hline
+{\em config} & The alignment configuration used by the Seqan's global\-Alignment method. \\
+\hline
+{\em band} & Whether the alignment's lower diagonal should be banded at -\/2. (Two diagonals below the main diagonal.) Useful to speed up computation for 5'-\/3' overlap alignments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The main intended uses are Align\-Config$<$true, false, true, false$>$ with band = true and Align\-Config$<$true, true, true, true$>$ with band = false. 
+
+We use a custom scoring scheme which scores 1 for match, -\/1 for mismatch, 0 for match with N. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+A pair containing the score of the alignment and the aling object. 
+\end{DoxyReturn}
+\hypertarget{adapter_trimming_8h_a3bc646d4dc99acf0ae165cf082e217cb}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!count\-Total\-Gaps@{count\-Total\-Gaps}}
+\index{count\-Total\-Gaps@{count\-Total\-Gaps}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{count\-Total\-Gaps}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Row $>$ unsigned count\-Total\-Gaps (
+\begin{DoxyParamCaption}
+\item[{T\-Row \&}]{row}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a3bc646d4dc99acf0ae165cf082e217cb}
+
+
+Returns the total number of gaps in a row object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The gapped row object used by seqan alignments. \\
+\hline
+\end{DoxyParams}
+\hypertarget{adapter_trimming_8h_a8427805bc99660a9476176b62061f45f}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!get\-Insert\-Size@{get\-Insert\-Size}}
+\index{get\-Insert\-Size@{get\-Insert\-Size}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{get\-Insert\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Align $>$ unsigned get\-Insert\-Size (
+\begin{DoxyParamCaption}
+\item[{T\-Align \&}]{align}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a8427805bc99660a9476176b62061f45f}
+
+
+Given an alignment with two overlapping (forward and reverse) sequences, this function determines the actual size of the insert they cover. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em align} & An alignment object with two aligned overlapping sequences. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The aligned sequences must overlap and not contain any internal gaps. 
+\end{DoxyPrecond}
+\begin{DoxyRemark}{Remarks}
+This method can reconstruct the insert perfectly, provided the alignment object represents the real alignment. There can be small discrepancies if indels occurred. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+The insert size that was determined from the overlap alignment. 
+\end{DoxyReturn}
+\hypertarget{adapter_trimming_8h_af28bd342d3520fd7fe6e298e0271e288}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!get\-Overlap@{get\-Overlap}}
+\index{get\-Overlap@{get\-Overlap}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{get\-Overlap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Align $>$ unsigned get\-Overlap (
+\begin{DoxyParamCaption}
+\item[{T\-Align \&}]{align}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_af28bd342d3520fd7fe6e298e0271e288}
+
+
+Determines the overlap between two (free-\/shift) aligned gapless sequences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em align} & An alignment object with two aligned overlapping sequences. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The aligned sequences must not contain any internal gaps. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+The number of overlapping positions. 
+\end{DoxyReturn}
+\hypertarget{adapter_trimming_8h_a8d41cfe5174b6faee428503c8fd0fa45}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!is\-Match@{is\-Match}}
+\index{is\-Match@{is\-Match}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{is\-Match}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-Match (
+\begin{DoxyParamCaption}
+\item[{int}]{overlap, }
+\item[{int}]{mismatches, }
+\item[{const {\bf Auto} \&}]{}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a8d41cfe5174b6faee428503c8fd0fa45}
+
+
+Checks if a overlap of an alignment is accepted, based on mismatches and the length of the overlap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em overlap} & The number of overlapping positions in the overlap alignment. \\
+\hline
+{\em mismatches} & The number of allowed mismatches in the overlapping region. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method automatically uses a very simple heuristic to determine matches. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+Bool indicating if the alignment is significant. 
+\end{DoxyReturn}
+\hypertarget{adapter_trimming_8h_acd23c187993f2c93b6c9177d7df4563f}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!is\-Match@{is\-Match}}
+\index{is\-Match@{is\-Match}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{is\-Match}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-Match (
+\begin{DoxyParamCaption}
+\item[{int}]{overlap, }
+\item[{int}]{mismatches, }
+\item[{const {\bf User} \&}]{user\-Options}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_acd23c187993f2c93b6c9177d7df4563f}
+
+
+Checks if a overlap of an alignment is accepted, based on mismatches and the length of the overlap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em overlap} & The number of overlapping positions in the overlap alignment. \\
+\hline
+{\em mismatches} & The number of allowed mismatches in the overlapping region. \\
+\hline
+{\em user\-Options} & Parameters specifying requirements for the overlap. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This overload is used to let the user specify match requirements. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+Bool indicating if the alignment is significant. 
+\end{DoxyReturn}
+\hypertarget{adapter_trimming_8h_a7f0ed5b254d423dabfb235c79355242d}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!strip\-Adapter@{strip\-Adapter}}
+\index{strip\-Adapter@{strip\-Adapter}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{strip\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq , typename T\-Adapter , typename T\-Spec $>$ unsigned strip\-Adapter (
+\begin{DoxyParamCaption}
+\item[{T\-Seq \&}]{seq, }
+\item[{T\-Adapter \&}]{adapter, }
+\item[{T\-Spec \&}]{spec}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a7f0ed5b254d423dabfb235c79355242d}
+
+
+Remove adapter sequence from a sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The sequence whose adapter contamination should be removed. \\
+\hline
+{\em adapter} & The adapter sequence that might contaminate the sequence. \\
+\hline
+{\em spec} & The match algorithm that decides whether a match was significant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The overlap of the sequence with the adapter. 
+\end{DoxyReturn}
+\hypertarget{adapter_trimming_8h_a3c85c17ed0ce3241d328d9b609d88789}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!strip\-Adapter\-Batch@{strip\-Adapter\-Batch}}
+\index{strip\-Adapter\-Batch@{strip\-Adapter\-Batch}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{strip\-Adapter\-Batch}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq , typename T\-Adapter , typename T\-Spec $>$ unsigned strip\-Adapter\-Batch (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{set, }
+\item[{T\-Adapter \&}]{adapter, }
+\item[{T\-Spec const \&}]{spec, }
+\item[{{\bf Adapter\-Trimming\-Stats} \&}]{stats, }
+\item[{bool}]{reverse = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a3c85c17ed0ce3241d328d9b609d88789}
+
+
+Remove adapter sequence from a set of sequences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & A String\-Set of sequences whose adapter contaminations should be removed. \\
+\hline
+{\em adapter} & The adapter sequence that might contaminate the sequences. \\
+\hline
+{\em spec} & The match algorithm that decides whether a match was significant. \\
+\hline
+{\em reverse} & Indicates whether we align forward or reverse sequences against an adapter. Exists mainly to enable correct writing of the appropriate fields when gathering statistics. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method simply applies \hyperlink{adapter_trimming_8h_a7f0ed5b254d423dabfb235c79355242d}{strip\-Adapter} to all sequences in {\bfseries set}. 
+
+This method can operate concurrently with Open\-M\-P. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+The number of sequences that had some bases removed. 
+\end{DoxyReturn}
+\hypertarget{adapter_trimming_8h_a502e2eb7a85e1f67dd637e94f1600524}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!strip\-Pair@{strip\-Pair}}
+\index{strip\-Pair@{strip\-Pair}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{strip\-Pair}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq $>$ unsigned strip\-Pair (
+\begin{DoxyParamCaption}
+\item[{T\-Seq \&}]{seq1, }
+\item[{T\-Seq \&}]{seq2}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a502e2eb7a85e1f67dd637e94f1600524}
+
+
+Removes adapter contamination from paired-\/end reads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq1} & The forward read. \\
+\hline
+{\em seq2} & The backward read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method is very accurate and does not need any knowledge of the specific adapter sequences contaminating the reads. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+The determined actual insert size or 0 if the sequences don't overlap. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The number of trimmed bases is len(seq) -\/ insert, if the sequence was greater than the insert size. 
+\end{DoxyRemark}
+\hypertarget{adapter_trimming_8h_aeddd7c1ce0243088be7cde1b4cb5825c}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!strip\-Pair@{strip\-Pair}}
+\index{strip\-Pair@{strip\-Pair}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{strip\-Pair}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq $>$ unsigned strip\-Pair (
+\begin{DoxyParamCaption}
+\item[{T\-Seq \&}]{seq1, }
+\item[{T\-Seq \&}]{adapter1, }
+\item[{T\-Seq \&}]{seq2, }
+\item[{T\-Seq \&}]{adapter2}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_aeddd7c1ce0243088be7cde1b4cb5825c}
+
+
+Removes adapter contamination from paired-\/end reads with adapter information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq1} & The forward read. \\
+\hline
+{\em adapter1} & The adapter that contaminates the forward read. \\
+\hline
+{\em seq2} & The backward read. \\
+\hline
+{\em adapter2} & The adapter whose reverse complement contaminates the backward read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method can be less accurate than the overload which doesn't use any adapter sequence information, since it is more constrained in how it tries to overlap the sequences. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+The determined actual insert size or 0 if the sequences don't overlap. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The number of trimmed bases is len(seq) -\/ insert, if the sequence was greater than the insert size. 
+\end{DoxyRemark}
+\hypertarget{adapter_trimming_8h_a390ded6489d24d870c5b63d57b394ad9}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!strip\-Pair\-Batch@{strip\-Pair\-Batch}}
+\index{strip\-Pair\-Batch@{strip\-Pair\-Batch}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{strip\-Pair\-Batch}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq $>$ unsigned strip\-Pair\-Batch (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{set1, }
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{set2, }
+\item[{{\bf Adapter\-Trimming\-Stats} \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a390ded6489d24d870c5b63d57b394ad9}
+
+
+Removes adapter contamination from paired-\/end reads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq1} & The set of forward reads. \\
+\hline
+{\em seq2} & The set of backward reads. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method is very accurate and does not need any knowledge of the specific adapter sequences contaminating the reads. 
+
+This method can operate concurrently with Open\-M\-P. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+The number of sequences that had some bases removed. 
+\end{DoxyReturn}
+\hypertarget{adapter_trimming_8h_a388d9f7c52eada005728f2394f2bb7d2}{\index{adapter\-Trimming.\-h@{adapter\-Trimming.\-h}!strip\-Reverse\-Adapter\-Batch@{strip\-Reverse\-Adapter\-Batch}}
+\index{strip\-Reverse\-Adapter\-Batch@{strip\-Reverse\-Adapter\-Batch}!adapterTrimming.h@{adapter\-Trimming.\-h}}
+\subsubsection[{strip\-Reverse\-Adapter\-Batch}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq , typename T\-Spec $>$ unsigned strip\-Reverse\-Adapter\-Batch (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{set, }
+\item[{T\-Seq \&}]{adapter, }
+\item[{T\-Spec const \&}]{spec, }
+\item[{{\bf Adapter\-Trimming\-Stats} \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{adapter_trimming_8h_a388d9f7c52eada005728f2394f2bb7d2}
+
+
+Simple interface to align the reverse complement of an adapter to a batch of sequences. to a set of reads and remove significant matches. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & A String\-Set of sequences whose adapter contaminations should be removed. \\
+\hline
+{\em adapter} & The adapter sequence whose reverse complement might contaminate the sequences. \\
+\hline
+{\em spec} & The match algorithm that decides whether a match was significant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This interface can be used to detect contamination in reverse reads of paired-\/end reads. Those reads might read into the reverse complement of an adapter. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+The number of sequences that had some bases removed. 
+\end{DoxyReturn}

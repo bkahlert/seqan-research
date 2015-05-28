@@ -1,0 +1,58 @@
+﻿Build started 29.04.2013 12:15:51.
+     1>Project "C:\Users\Dennis\Documents\Seqan\seqan-trunk\sandbox\my_sandbox\apps\lagan_app\lagan_app.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "C:\Users\Dennis\Documents\Seqan\seqan-trunk\bin\Debug\".
+       InitializeBuildStatus:
+         Creating "lagan_app.dir\Debug\lagan_app.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       PreBuildEvent:
+         Description: Pre Build Instrumentation...
+         setlocal
+         C:\Python27\python.exe C:/Users/Dennis/Documents/Seqan/seqan-trunk/misc/seqan_instrumentation/bin/seqan_instrumentation.py pre_build C:/Users/Dennis/Documents/Seqan/seqan-trunk C:/Users/Dennis/Documents/Seqan/seqan-trunk lagan_app
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+       CustomBuild:
+         Building Custom Rule C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/lagan_app/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\Dennis\Documents\Seqan\seqan-trunk\sandbox\my_sandbox\apps\lagan_app\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/include" /I"C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/include" /I"C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/include" /Zi /nologo /W2 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D SEQAN_ENABLE_TESTING=0 /D _DEBUG /D SEQAN_ENABLE_DEBUG=1 /D NOMINMAX /D _SCL_SECURE_NO_WARNINGS /D SEQAN_ENABLE_TESTING=0 /D SEQAN_ENABLE_DEBUG=0 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"lagan_app.dir\Debug\\" /Fd"C:/Users/Dennis/Documents/Seqan/seqan-trunk/bin/Debug/lagan_app.pdb" /Gd /TP /analyze- /errorReport:prompt lagan_app.cpp  /Zm1000 /bigobj 
+         lagan_app.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"lagan_app.dir\Debug\lagan_app.exe.embed.manifest.res" lagan_app.dir\Debug\lagan_app_manifest.rc 
+       MakeDirsForLink:
+         Creating directory "C:\Users\Dennis\Documents\Seqan\seqan-trunk\sandbox\my_sandbox\apps\lagan_app\Debug\".
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dennis\Documents\Seqan\seqan-trunk\bin\Debug\lagan_app.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"lagan_app.dir\Debug\lagan_app.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/Users/Dennis/Documents/Seqan/seqan-trunk/bin/Debug/lagan_app.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/lagan_app/Debug/lagan_app.lib" /MACHINE:X86 lagan_app.dir\Debug\lagan_app.exe.embed.manifest.res
+         lagan_app.dir\Debug\lagan_app.obj  /machine:X86 /debug 
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"lagan_app.dir\Debug\lagan_app.exe.embed.manifest" /manifest lagan_app.dir\Debug\lagan_app.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"lagan_app.dir\Debug\lagan_app.exe.embed.manifest.res" lagan_app.dir\Debug\lagan_app_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dennis\Documents\Seqan\seqan-trunk\bin\Debug\lagan_app.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"lagan_app.dir\Debug\lagan_app.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/Users/Dennis/Documents/Seqan/seqan-trunk/bin/Debug/lagan_app.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/lagan_app/Debug/lagan_app.lib" /MACHINE:X86 lagan_app.dir\Debug\lagan_app.exe.embed.manifest.res
+         lagan_app.dir\Debug\lagan_app.obj  /machine:X86 /debug 
+         lagan_app.vcxproj -> C:\Users\Dennis\Documents\Seqan\seqan-trunk\bin\Debug\lagan_app.exe
+       PostBuildEvent:
+         Description: Post Build Instrumentation...
+         setlocal
+         C:\Python27\python.exe C:/Users/Dennis/Documents/Seqan/seqan-trunk/misc/seqan_instrumentation/bin/seqan_instrumentation.py post_build C:/Users/Dennis/Documents/Seqan/seqan-trunk C:/Users/Dennis/Documents/Seqan/seqan-trunk lagan_app
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+       FinalizeBuildStatus:
+         Deleting file "lagan_app.dir\Debug\lagan_app.unsuccessfulbuild".
+         Touching "lagan_app.dir\Debug\lagan_app.lastbuildstate".
+     1>Done Building Project "C:\Users\Dennis\Documents\Seqan\seqan-trunk\sandbox\my_sandbox\apps\lagan_app\lagan_app.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.43

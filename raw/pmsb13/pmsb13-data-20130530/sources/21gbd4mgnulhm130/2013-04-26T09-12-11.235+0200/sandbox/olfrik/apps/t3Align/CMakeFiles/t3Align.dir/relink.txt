@@ -1,0 +1,1 @@
+clang++    -DSEQAN_ENABLE_TESTING=0  -fno-omit-frame-pointer -fopenmp   CMakeFiles/t3Align.dir/t3Align.cpp.o  -o CMakeFiles/CMakeRelink.dir/t3Align -rdynamic -lrt -lz 

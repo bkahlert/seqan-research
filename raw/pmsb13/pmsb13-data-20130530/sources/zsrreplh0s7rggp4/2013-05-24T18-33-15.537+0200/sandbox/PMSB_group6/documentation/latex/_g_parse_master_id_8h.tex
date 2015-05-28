@@ -1,0 +1,31 @@
+\hypertarget{_g_parse_master_id_8h}{\section{include/seqan/\-G\-Search/\-G\-Parse\-Master\-Id.h File Reference}
+\label{_g_parse_master_id_8h}\index{include/seqan/\-G\-Search/\-G\-Parse\-Master\-Id.\-h@{include/seqan/\-G\-Search/\-G\-Parse\-Master\-Id.\-h}}
+}
+{\ttfamily \#include $<$seqan/sequence.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_g_parse_master_id_8h_a243bf68bc9682746ce29bed2754f2262}{G\-Parse\-Master\-Id} (String$<$ char $>$ \&master\-Id, String$<$ char $>$ \&Ref\-Seq)
+\begin{DoxyCompactList}\small\item\em gets the master\-Id out of a clustered database Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_g_parse_master_id_8h_a243bf68bc9682746ce29bed2754f2262}{\index{G\-Parse\-Master\-Id.\-h@{G\-Parse\-Master\-Id.\-h}!G\-Parse\-Master\-Id@{G\-Parse\-Master\-Id}}
+\index{G\-Parse\-Master\-Id@{G\-Parse\-Master\-Id}!GParseMasterId.h@{G\-Parse\-Master\-Id.\-h}}
+\subsubsection[{G\-Parse\-Master\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int G\-Parse\-Master\-Id (
+\begin{DoxyParamCaption}
+\item[{String$<$ char $>$ \&}]{master\-Id, }
+\item[{String$<$ char $>$ \&}]{Ref\-Seq}
+\end{DoxyParamCaption}
+)}}\label{_g_parse_master_id_8h_a243bf68bc9682746ce29bed2754f2262}
+
+
+gets the master\-Id out of a clustered database Id. 
+
+if there is no master\-Id in the given reference the function calls an error. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em master\-Id} & object in which master id is written \\
+\hline
+\mbox{\tt in}  & {\em Ref\-Seq} & id from which master\-Id is read \\
+\hline
+\end{DoxyParams}

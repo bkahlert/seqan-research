@@ -1,0 +1,68 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-05 13:52:12.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-05 13:56:52.844988446 +0200
+@@ -10,9 +10,9 @@
+ 
+ template <typename TString, typename TStream, typename TSpec>
+ inline int
+-loadAndJoin(StringSet<TString, Owner<JournaledSet> > & /*journalSet*/,
++loadAndJoin(StringSet<TString, Owner<JournaledSet> > & journalSet,
+             TStream & stream,
+-            JoinConfig<TSpec> const & /*joinConfig*/)
++            JoinConfig<TSpec> const & joinConfig)
+ {
+     typedef typename Host<TString>::Type THost;
+     // Define the RecordReader.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-05 13:52:12.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-05 13:56:52.820988667 +0200
+@@ -10,15 +10,15 @@
+ 
+ template <typename TString, typename TStream, typename TSpec>
+ inline int
+-loadAndJoin(StringSet<TString, Owner<JournaledSet> > & /*journalSet*/,
++loadAndJoin(StringSet<TString, Owner<JournaledSet> > & journalSet,
+             TStream & stream,
+-            JoinConfig<TSpec> const & /*joinConfig*/)
++            JoinConfig<TSpec> const & joinConfig)
+ {
+     typedef typename Host<TString>::Type THost;
+     // Define the RecordReader.
+     RecordReader<std::ifstream, SinglePass<> > reader(stream);
+     // [A] Ensure the Journal Set is not occupied by other sequences.
+-
++    clear(journalSet);
+     // Construct the temporary buffers for the read id and sequence.
+     String<char> tempSeqId;
+     THost tempSeq;
+@@ -35,7 +35,7 @@
+         return 1;
+     }
+     // [B] Set the reference sequence to the Journal Set
+-
++    createGlobalReference(journalSet, tempSeq);
+     // Read remaining sequences.
+     while (!atEnd(reader))
+     {
+@@ -45,6 +45,9 @@
+             return 1;
+         }
+         // [C] Append and join the current read sequence.
++    appendValue(journalSet,tempSeq);
++    join(journalSet,length(journalSet)-1,joinConfig);  
++      
+     }
+     return 0;
+ }
+@@ -63,7 +66,9 @@
+     }
+     // Reading each sequence and journal them.
+     // [D] Construct Journaled Set and call loadAndJoin
+-
++    TJournaledSet journalSet;
++    JoinConfig<GlobalAlign<JournaledCompact> > joinConfig;
++    loadAndJoin(journalSet, databaseFile, joinConfig);
+     databaseFile.close();
+     return 0;
+ }
+\ Kein Zeilenumbruch am Dateiende.

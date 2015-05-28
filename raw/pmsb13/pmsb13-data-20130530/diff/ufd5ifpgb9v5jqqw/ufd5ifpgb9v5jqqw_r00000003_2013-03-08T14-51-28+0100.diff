@@ -1,0 +1,44 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/.kdev4/seqan-trunk.kdev4 ./.kdev4/seqan-trunk.kdev4
+--- ./misc/seqan_instrumentation/last_revision_copy/.kdev4/seqan-trunk.kdev4	2013-03-08 14:31:16.000000000 +0100
++++ ./.kdev4/seqan-trunk.kdev4	2013-03-08 14:51:20.926771233 +0100
+@@ -3,7 +3,7 @@
+ 
+ [CMake]
+ Build Directory Count=1
+-CMakeDir=/usr/share/cmake-2.8/Modules
++CMakeDir=file:///usr/share/cmake-2.8/Modules
+ Current Build Directory Index=0
+ ProjectRootRelative=./
+ 
+@@ -11,7 +11,7 @@
+ Build Directory Path=file:///home/david/Development/Seqan/seqan-trunk-build/debug-kdevelop
+ Build Type=Debug
+ CMake Binary=file:///usr/bin/cmake
+-Environment Profile=
++Environment Profile=default
+ Extra Arguments=
+ Install Directory=file:///usr/local
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/demos/index_sa_bpr_demo.cpp ./sandbox/iwanowit/demos/index_sa_bpr_demo.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/demos/index_sa_bpr_demo.cpp	2013-03-08 14:11:10.000000000 +0100
++++ ./sandbox/iwanowit/demos/index_sa_bpr_demo.cpp	2013-03-08 14:42:06.922762608 +0100
+@@ -38,7 +38,7 @@
+ #include <seqan/sequence.h>
+ #include <seqan/index.h>
+ #include <seqan/file.h>      // For printing SeqAn Strings.
+-#include <
++#include <seqan/index2/index_sa_bpr.h>
+ 
+ using namespace seqan;
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/demos/index_sa_bpr_demo.cpp~ ./sandbox/iwanowit/demos/index_sa_bpr_demo.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/demos/index_sa_bpr_demo.cpp~	2013-03-08 14:11:10.000000000 +0100
++++ ./sandbox/iwanowit/demos/index_sa_bpr_demo.cpp~	2013-03-08 14:42:06.922762608 +0100
+@@ -38,6 +38,7 @@
+ #include <seqan/sequence.h>
+ #include <seqan/index.h>
+ #include <seqan/file.h>      // For printing SeqAn Strings.
++#include <seqan/index_iwanowit.h>
+ 
+ using namespace seqan;
+ 

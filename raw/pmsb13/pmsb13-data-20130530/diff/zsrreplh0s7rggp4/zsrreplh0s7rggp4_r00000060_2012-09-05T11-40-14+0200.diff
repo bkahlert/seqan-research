@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-05 11:39:34.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-05 11:40:09.240699804 +0200
+@@ -32,7 +32,7 @@
+ 	} while (goDown(it));
+       }while (goRight(it));
+     }while (goUp(it)&&goRight(it));
+- }while(!root(it));
++ }while(!goRoot(it));
+    
+     return 0;
+ }
+\ Kein Zeilenumbruch am Dateiende.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-05 11:39:34.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-05 11:40:09.216699767 +0200
+@@ -32,7 +32,7 @@
+ 	} while (goDown(it));
+       }while (goRight(it));
+     }while (goUp(it)&&goRight(it));
+- }while(!root);
++ }while(!root(it));
+    
+     return 0;
+ }
+\ Kein Zeilenumbruch am Dateiende.

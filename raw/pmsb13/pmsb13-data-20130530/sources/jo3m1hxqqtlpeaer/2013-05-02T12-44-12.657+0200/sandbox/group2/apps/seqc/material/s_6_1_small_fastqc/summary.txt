@@ -1,0 +1,11 @@
+PASS	Basic Statistics	s_6_1_small.fastq
+FAIL	Per base sequence quality	s_6_1_small.fastq
+PASS	Per sequence quality scores	s_6_1_small.fastq
+PASS	Per base sequence content	s_6_1_small.fastq
+PASS	Per base GC content	s_6_1_small.fastq
+WARN	Per sequence GC content	s_6_1_small.fastq
+PASS	Per base N content	s_6_1_small.fastq
+PASS	Sequence Length Distribution	s_6_1_small.fastq
+PASS	Sequence Duplication Levels	s_6_1_small.fastq
+PASS	Overrepresented sequences	s_6_1_small.fastq
+WARN	Kmer Content	s_6_1_small.fastq

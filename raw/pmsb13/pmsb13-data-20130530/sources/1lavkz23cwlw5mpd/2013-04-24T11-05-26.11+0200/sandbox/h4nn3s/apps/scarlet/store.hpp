@@ -1,0 +1,112 @@
+// ==========================================================================
+//                                  scarlet
+// ==========================================================================
+// Copyright (c) 2013, Hannes Hauswedell, FU Berlin
+// All rights reserved.
+//
+// This file is part of Scarlet.
+//
+// Scarlet is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Scarlet is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Scarlet.  If not, see <http://www.gnu.org/licenses/>.*/
+// ==========================================================================
+// Author: Hannes Hauswedell <hauswedell@mi.fu-berlin.de>
+// ==========================================================================
+// store.h: contains types and definitions for storing sequences and indices
+// ==========================================================================
+
+#ifndef SEQAN_SCARLET_STORE_H_
+#define SEQAN_SCARLET_STORE_H_
+
+#include <seqan/basic.h>
+#include <seqan/sequence.h>
+
+#include <seqan/index.h>
+#include <seqan/index_extras.h>
+
+using namespace seqan;
+
+typedef StringSet<CharString, Owner<ConcatDirect<> > > TDbSeqs;
+typedef StringSet<CharString, Owner<ConcatDirect<> > > TQuerySeqs;
+
+typedef Index<TDbSeqs, IndexSa<> > TDbIndex;
+typedef Index<TQuerySeqs, IndexSa<> > TQueryIndex;
+
+
+
+// ============================================================================
+// Forwards
+// ============================================================================
+
+
+
+
+// ============================================================================
+// Tags, Classes, Enums
+// ============================================================================
+
+
+
+
+// ============================================================================
+// Metafunctions
+// ============================================================================
+
+
+
+
+// ============================================================================
+// Functionshtop
+// ============================================================================
+
+template <typename TString, typename TSpec, typename TFormat>
+inline int
+loadSequences(StringSet<TString, TSpec > & seqs,
+              CharString const & path,
+              TFormat const & /*tag*/)
+{
+    std::ifstream stream;
+    stream.open(toCString(path));
+
+    typedef RecordReader<std::ifstream, DoublePass<> > TReader;
+    TReader reader(stream);
+
+    StringSet<CharString, TSpec > ids;
+
+    int res = read2(ids, seqs, reader, TFormat());
+    if (res)
+    {
+        std::cerr << "Error : " << res << "\n";
+        return res;
+    }
+
+    stream.close();
+    return 0;
+}
+
+template <typename TString, typename TSpec>
+inline void
+_debug_shorten(StringSet<TString, TSpec > & seqs, unsigned const len)
+{
+    StringSet<TString> copySet;
+
+    for (auto const & s : seqs)
+        if (length(s) >= len)
+            appendValue(copySet, prefix(s, len), Generous());
+
+    assign(seqs, copySet);
+}
+
+
+
+
+#endif // header guard

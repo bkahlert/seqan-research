@@ -1,0 +1,174 @@
+\hypertarget{class_output_streams}{\section{Output\-Streams Class Reference}
+\label{class_output_streams}\index{Output\-Streams@{Output\-Streams}}
+}
+
+
+Class that dynamically manages output streams that write out sets of sequences.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_output_streams_a224ac9f0321f3552b6874554e63683d7}{\hyperlink{class_output_streams_a224ac9f0321f3552b6874554e63683d7}{Output\-Streams} (seqan\-::\-Char\-String base, seqan\-::\-Seq\-I\-O\-File\-Format\-\_\-\-::\-Type format, bool compress)}\label{class_output_streams_a224ac9f0321f3552b6874554e63683d7}
+
+\begin{DoxyCompactList}\small\item\em Constructor for the \hyperlink{class_output_streams}{Output\-Streams} object. Prepares the file extension which will be used for all streams created by this object and saves a base directory path. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Key , typename T\-Map $>$ }\\bool \hyperlink{class_output_streams_a14babf33ab80c1dd5d158f2ddd9d5625}{exists} (T\-Key \&key, T\-Map \&map)
+\begin{DoxyCompactList}\small\item\em Checks whether a key exists in a std\-::map. \end{DoxyCompactList}\item 
+void \hyperlink{class_output_streams_a57fe721eed419cf693ad16ac2d065783}{add\-Stream} (seqan\-::\-Char\-String file\-Name, int id)
+\begin{DoxyCompactList}\small\item\em Add a new output streams to the collection of streams. \end{DoxyCompactList}\item 
+void \hyperlink{class_output_streams_ae724b4ed3aebd3ddd9d4426cdc6c856b}{add\-Streams} (seqan\-::\-Char\-String file\-Name1, seqan\-::\-Char\-String file\-Name2, int id)
+\begin{DoxyCompactList}\small\item\em Add a new output streams to the collection of streams. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Map , typename T\-Names $>$ }\\void \hyperlink{class_output_streams_aa807680b5625932c7cdd65c25023aaa3}{update\-Streams} (T\-Map \&map, T\-Names \&names, bool pair)
+\begin{DoxyCompactList}\small\item\em This method takes a vector of numbers and checks if these numbers are already associated with a stream. If not, a new stream is added and the opened file is named according to the list of names. One or two files are created. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Ids , typename T\-Seqs , typename T\-Map , typename T\-Names $>$ }\\void \hyperlink{class_output_streams_afcbc59e33ac5ea2487bd8db8dd3250c3}{write\-Seqs} (T\-Ids \&ids, T\-Seqs \&seqs, T\-Map \&map, T\-Names \&names)
+\begin{DoxyCompactList}\small\item\em Writes the sets of ids and sequences to their corresponding files. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Ids , typename T\-Seqs , typename T\-Map , typename T\-Names $>$ }\\void \hyperlink{class_output_streams_a4e2742f8208c6b37d6d5177e500ddac3}{write\-Seqs} (T\-Ids \&ids1, T\-Seqs \&seqs1, T\-Ids \&ids2, T\-Seqs \&seqs2, T\-Map \&map, T\-Names \&names)
+\begin{DoxyCompactList}\small\item\em Writes the sets of ids and sequences to their corresponding files. Overload for writing paired-\/end sequence sets. \end{DoxyCompactList}\item 
+\hypertarget{class_output_streams_a067d0c279e6148f9c46299b25616887e}{\hyperlink{class_output_streams_a067d0c279e6148f9c46299b25616887e}{$\sim$\-Output\-Streams} ()}\label{class_output_streams_a067d0c279e6148f9c46299b25616887e}
+
+\begin{DoxyCompactList}\small\item\em Destructor of the object holding the output streams. Needed to destroy the streams properly after they have been created with new. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that dynamically manages output streams that write out sets of sequences. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_output_streams_a57fe721eed419cf693ad16ac2d065783}{\index{Output\-Streams@{Output\-Streams}!add\-Stream@{add\-Stream}}
+\index{add\-Stream@{add\-Stream}!OutputStreams@{Output\-Streams}}
+\subsubsection[{add\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}void Output\-Streams\-::add\-Stream (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-Char\-String}]{file\-Name, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_output_streams_a57fe721eed419cf693ad16ac2d065783}
+
+
+Add a new output streams to the collection of streams. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Name} & The name of the first file that will be created. \\
+\hline
+{\em id} & The associated id that will be used to identify the stream. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_output_streams_ae724b4ed3aebd3ddd9d4426cdc6c856b}{\index{Output\-Streams@{Output\-Streams}!add\-Streams@{add\-Streams}}
+\index{add\-Streams@{add\-Streams}!OutputStreams@{Output\-Streams}}
+\subsubsection[{add\-Streams}]{\setlength{\rightskip}{0pt plus 5cm}void Output\-Streams\-::add\-Streams (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-Char\-String}]{file\-Name1, }
+\item[{seqan\-::\-Char\-String}]{file\-Name2, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_output_streams_ae724b4ed3aebd3ddd9d4426cdc6c856b}
+
+
+Add a new output streams to the collection of streams. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Name1} & The name of the first file that will be created. \\
+\hline
+{\em file\-Name2} & The name of the second file that will be created. \\
+\hline
+{\em id} & The associated id that will be used to identify the pair of streams. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_output_streams_a14babf33ab80c1dd5d158f2ddd9d5625}{\index{Output\-Streams@{Output\-Streams}!exists@{exists}}
+\index{exists@{exists}!OutputStreams@{Output\-Streams}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Key , typename T\-Map $>$ bool Output\-Streams\-::exists (
+\begin{DoxyParamCaption}
+\item[{T\-Key \&}]{key, }
+\item[{T\-Map \&}]{map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_output_streams_a14babf33ab80c1dd5d158f2ddd9d5625}
+
+
+Checks whether a key exists in a std\-::map. 
+
+\begin{DoxyReturn}{Returns}
+True if the key exists, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_output_streams_aa807680b5625932c7cdd65c25023aaa3}{\index{Output\-Streams@{Output\-Streams}!update\-Streams@{update\-Streams}}
+\index{update\-Streams@{update\-Streams}!OutputStreams@{Output\-Streams}}
+\subsubsection[{update\-Streams}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Map , typename T\-Names $>$ void Output\-Streams\-::update\-Streams (
+\begin{DoxyParamCaption}
+\item[{T\-Map \&}]{map, }
+\item[{T\-Names \&}]{names, }
+\item[{bool}]{pair}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_output_streams_aa807680b5625932c7cdd65c25023aaa3}
+
+
+This method takes a vector of numbers and checks if these numbers are already associated with a stream. If not, a new stream is added and the opened file is named according to the list of names. One or two files are created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The list of I\-Ds for which the existence of a file should be checked. \\
+\hline
+{\em names} & The list of names to be used when creating new files. \\
+\hline
+{\em pair} & Indicates whether one or two (a pair of files) should be created. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_output_streams_afcbc59e33ac5ea2487bd8db8dd3250c3}{\index{Output\-Streams@{Output\-Streams}!write\-Seqs@{write\-Seqs}}
+\index{write\-Seqs@{write\-Seqs}!OutputStreams@{Output\-Streams}}
+\subsubsection[{write\-Seqs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Ids , typename T\-Seqs , typename T\-Map , typename T\-Names $>$ void Output\-Streams\-::write\-Seqs (
+\begin{DoxyParamCaption}
+\item[{T\-Ids \&}]{ids, }
+\item[{T\-Seqs \&}]{seqs, }
+\item[{T\-Map \&}]{map, }
+\item[{T\-Names \&}]{names}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_output_streams_afcbc59e33ac5ea2487bd8db8dd3250c3}
+
+
+Writes the sets of ids and sequences to their corresponding files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ids} & A list of sets of sequence I\-Ds. (As returned by read\-Record etc.) \\
+\hline
+{\em seqs} & A list of sets of sequences. \\
+\hline
+{\em map} & A mapping of the sets of sequences to their corresponding output streams. \\
+\hline
+{\em names} & Names to be used when creating new streams. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_output_streams_a4e2742f8208c6b37d6d5177e500ddac3}{\index{Output\-Streams@{Output\-Streams}!write\-Seqs@{write\-Seqs}}
+\index{write\-Seqs@{write\-Seqs}!OutputStreams@{Output\-Streams}}
+\subsubsection[{write\-Seqs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Ids , typename T\-Seqs , typename T\-Map , typename T\-Names $>$ void Output\-Streams\-::write\-Seqs (
+\begin{DoxyParamCaption}
+\item[{T\-Ids \&}]{ids1, }
+\item[{T\-Seqs \&}]{seqs1, }
+\item[{T\-Ids \&}]{ids2, }
+\item[{T\-Seqs \&}]{seqs2, }
+\item[{T\-Map \&}]{map, }
+\item[{T\-Names \&}]{names}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_output_streams_a4e2742f8208c6b37d6d5177e500ddac3}
+
+
+Writes the sets of ids and sequences to their corresponding files. Overload for writing paired-\/end sequence sets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ids1} & A list of sets of forward sequence I\-Ds. (As returned by read\-Record etc.) \\
+\hline
+{\em seqs1} & A list of sets of forward sequences. \\
+\hline
+{\em ids2} & A list of sets of backward sequence I\-Ds. (As returned by read\-Record etc.) \\
+\hline
+{\em seqs2} & A list of sets of backward sequences. \\
+\hline
+{\em map} & A mapping of the sets of sequences to their corresponding output streams. \\
+\hline
+{\em names} & Names to be used when creating new streams. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/Seq\-D\-P\-T.\-cpp\end{DoxyCompactItemize}

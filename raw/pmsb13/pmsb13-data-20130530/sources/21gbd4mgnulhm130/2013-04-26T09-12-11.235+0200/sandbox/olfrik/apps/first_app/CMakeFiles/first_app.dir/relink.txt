@@ -1,0 +1,1 @@
+clang++    -DSEQAN_ENABLE_TESTING=0  -fno-omit-frame-pointer -fopenmp   CMakeFiles/first_app.dir/first_app.cpp.o  -o CMakeFiles/CMakeRelink.dir/first_app -rdynamic -lrt -lz 

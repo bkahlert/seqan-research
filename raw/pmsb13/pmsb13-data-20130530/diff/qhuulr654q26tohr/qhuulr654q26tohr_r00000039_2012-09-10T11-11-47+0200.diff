@@ -1,0 +1,251 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_journaling/ws_journaling.cpp ./sandbox/robinson/apps/ws_journaling/ws_journaling.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_journaling/ws_journaling.cpp	2012-09-05 14:15:02.000000000 +0200
++++ ./sandbox/robinson/apps/ws_journaling/ws_journaling.cpp	2012-09-05 15:11:15.435976689 +0200
+@@ -30,15 +30,15 @@
+ 	// Access the reference sequence.
+ 	THost & globalRef = globalReference(journalSet);
+ 	// Search for pattern in the reference sequence.
+-	findPatternInSequence(hitSet[0], globalRef, pattern);
++	findPatternInReference(hitSet[0], globalRef, pattern);
+ 	// Search for pattern in the journaled sequences.
+ 	for (unsigned i = 0; i < length(journalSet); ++i)
+-		findPatternInSequence(hitSet[i + 1], journalSet[i], pattern,
++		findPatternInJournalString(hitSet[i + 1], journalSet[i], pattern,
+ 				hitSet[0]);
+ }
+ 
+ template<typename TString, typename TPattern>
+-void findPatternInSequence(String<int> & hits, TString const & referenceSeq,
++void findPatternInReference(String<int> & hits, TString const & referenceSeq,
+ 		TPattern const & patternSeq) {
+ 	Finder<TString> finder(referenceSeq);
+ 	Pattern<TPattern, Horspool> pattern(patternSeq);
+@@ -46,6 +46,53 @@
+ 		++hits[beginPosition(finder)];
+ }
+ 
++template<typename TValue, typename THostSpec, typename TJournalSpec,
++		typename TBufferSpec, typename TPattern>
++void findPatternInJournalString(
++		String<int> & hitTarget,
++		String<TValue, Journaled<THostSpec, TJournalSpec, TBufferSpec> > const & journal,
++		TPattern const & pattern, String<int> const & refHits) {
++	typedef String<TValue, Journaled<THostSpec, TJournalSpec, TBufferSpec> > const
++			TJournal;
++	typedef typename JournalType<TJournal>::Type TJournalEntries;
++	typedef typename Iterator<TJournalEntries>::Type TJournalEntriesIterator;
++	if (length(pattern) > length(journal))
++		return;
++	TJournalEntriesIterator it = begin(journal._journalEntries);
++	TJournalEntriesIterator itEnd = findInJournalEntries(
++			journal._journalEntries, length(journal) - length(pattern) + 1) + 1;
++	while (it != itEnd) {
++		if (it->segmentSource == SOURCE_ORIGINAL) { // Find a possible hit in the current source vertex.
++			_findInOriginalNode(hitTarget, it, pattern, refHits);
++		}
++		if (it->segmentSource == SOURCE_PATCH) { // Search for pattern within the patch node.
++			_findInPatchNode(hitTarget, it, journal, pattern);
++		}
++		// Scan the border for a possible match.
++		_searchAtBorder(hitTarget, it, journal, pattern);
++		++it;
++	}
++}
++
++template <typename TJournalEntriesIterator, typename TPattern>
++void _findInOriginalNode(String<int> & hitTarget,
++                         TJournalEntriesIterator & entriesIt,
++                         TPattern const & pattern,
++                         String<int> const & refHits)
++{
++    // [A] Check if hits exist in the reference.
++	if (length(refHits)>0) {
++
++    // [B] Find upper bound to current physical position in sorted refHits using ::std::upper_bound.
++
++    // [C] Make sure we do not miss hits that begin at physical position of current node.
++
++    // [D] Store all hits that are found in the region of the reference which is covered by this node.
++
++    // [E] Store the correct virtual position and check next hit.
++		}
++}
++
+ int main() {
+ 
+ 	TJournaledSet journaledSet;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_test/ws_test.cpp ./sandbox/robinson/apps/ws_test/ws_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_test/ws_test.cpp	2012-09-04 17:14:00.000000000 +0200
++++ ./sandbox/robinson/apps/ws_test/ws_test.cpp	2012-09-10 11:11:14.065580828 +0200
+@@ -1,163 +1,21 @@
+ #include <iostream>
+ #include <seqan/store.h>
++#include <seqan/basic.h>
+ #include <seqan/arg_parse.h>
+ #include <seqan/misc/misc_interval_tree.h>
+ #include <seqan/parallel.h>
+ 
+ using namespace seqan;
++using namespace std;
+ 
+ 
+-// FRAGMENT(definitions)
+-// define used types
+-typedef FragmentStore<>                         TStore;
+-typedef Value<TStore::TAnnotationStore>::Type   TAnnotation;
+-typedef TAnnotation::TId                        TId;
+-typedef TAnnotation::TId                        TPos;
+-typedef IntervalAndCargo<TPos, TId>             TInterval;
+-typedef IntervalTree<TPos, TId>                 TIntervalTree;
+-typedef Value<TStore::TAlignedReadStore>::Type  TAlignedRead;
+-// FRAGMENT(definitions_end)
+-
+-// define options
+-struct Options
+-{
+-    std::string annotationFileName;
+-    std::string alignmentFileName;
+-};
+-
+-
+-//
+-// 1. Parse command line and fill Options object
+-//
+-ArgumentParser::ParseResult parseOptions(Options & options, int argc, char const * argv[])
+-{
+-    ArgumentParser parser("gene_quant");
+-    setShortDescription(parser, "A simple gene quantification tool");
+-    setVersion(parser, "1.0");
+-    setDate(parser, "Sep 2012");
+-
+-    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
+-    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
+-    addUsageLine(parser, "[\\fIOPTIONS\\fP] <\\fIANNOTATION FILE\\fP> <\\fIREAD ALIGNMENT FILE\\fP>");
+-
+-    // Parse command line
+-    ArgumentParser::ParseResult res = parse(parser, argc, argv);
+-
+-    if (res == ArgumentParser::PARSE_OK)
+-    {
+-        // Extract option values
+-        getArgumentValue(options.annotationFileName, parser, 0);
+-        getArgumentValue(options.alignmentFileName, parser, 1);
+-    }
+-
+-    return res;
+-}
+-
+-
+-//
+-// 2. Load annotations and alignments from files
+-//
+-bool loadFiles(TStore & store, Options const & options)
+-{
+-    std::ifstream alignmentFile(options.alignmentFileName.c_str());
+-    if (!alignmentFile.good())
+-    {
+-        std::cerr << "Couldn't open alignment file " << options.alignmentFileName << std::endl;
+-        return false;
+-    }
+-    std::cerr << "Loading read alignments ..... " << std::flush;
+-    read(alignmentFile, store, Sam());
+-    std::cerr << "[" << length(store.alignedReadStore) << "]" << std::endl;
+-
+-    // load annotations
+-    std::ifstream annotationFile(options.annotationFileName.c_str());
+-    if (!annotationFile.good())
+-    {
+-        std::cerr << "Couldn't open annotation file" << options.annotationFileName << std::endl;
+-        return false;
+-    }
+-    std::cerr << "Loading genome annotation ... " << std::flush;
+-    read(annotationFile, store, Gtf());
+-    std::cerr << "[" << length(store.annotationStore) << "]" << std::endl;
+-
+-    return true;
+-}
+-
+-//
+-// 3. Extract intervals from gene annotations (grouped by contigId)
+-//
+-void extractGeneIntervals(String<String<TInterval> > & intervals, TStore const & store)
+-{
+-    // extract intervals from gene annotations (grouped by contigId)
+-    resize(intervals, length(store.contigStore));
+-
+-    Iterator<TStore const, AnnotationTree<> >::Type it = begin(store, AnnotationTree<>());
+-
+-    if (!goDown(it))
+-        return;
+-
+-    do
+-    {
+-        SEQAN_ASSERT_EQ(getType(it), "gene");
+-
+-        TPos beginPos = getAnnotation(it).beginPos;
+-        TPos endPos = getAnnotation(it).endPos;
+-        TId contigId = getAnnotation(it).contigId;
+-
+-        if (beginPos > endPos)
+-            std::swap(beginPos, endPos);
+-
+-        // insert forward-strand interval of the gene and its annotation id
+-        appendValue(intervals[contigId], TInterval(beginPos, endPos, value(it)));
+-    }
+-    while (goRight(it));
+-}
+-
+-//
+-// 4. Construct interval trees
+-//
+-void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
+-{
+-    resize(intervalTrees, length(intervals));
+-
+-    SEQAN_OMP_PRAGMA(parallel for)
+-    for (unsigned i = 0; i < length(intervals); ++i)
+-        createIntervalTree(intervalTrees[i], intervals[i]);
+-}
+-
+-// FRAGMENT(yourcode)
+-//
+-// 5. Count reads per gene
+-//
+-void countReadsPerGene(String<unsigned> & readsPerGene, String<TIntervalTree> const & intervalTrees, TStore const & store)
+-{
+-    resize(readsPerGene, length(store.annotationStore), 0);
+-
+-}
+-// FRAGMENT(yourcode_end)
+-
+ int main(int argc, char const * argv[])
+ {
+-    Options options;
+-    TStore store;
+-    String<String<TInterval> > intervals;
+-// FRAGMENT(main)
+-    String<TIntervalTree> intervalTrees;
+-    String<unsigned> readsPerGene;
+-// FRAGMENT(main_end)
+-
+-    ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
+-    if (res != ArgumentParser::PARSE_OK)
+-        return res == ArgumentParser::PARSE_ERROR;
+-
+-    if (!loadFiles(store, options))
+-        return 1;
+-
+-// FRAGMENT(main2)
+-    extractGeneIntervals(intervals, store);
+-    constructIntervalTrees(intervalTrees, intervals);
+-    countReadsPerGene(readsPerGene, intervalTrees, store);
+-// FRAGMENT(main2_end)
+-
++	ProfileChar<Dna> pc1;
++	ProfileChar<Dna, double> pc2;
++	pc1[0]=3;
++	pc2[0]=4;
++	cout << pc1[0] << endl;
++	cout << pc2[0] << endl;
+     return 0;
+ }

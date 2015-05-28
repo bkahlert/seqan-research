@@ -1,0 +1,289 @@
+The system is: Windows - 6.2 - x86
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: CompilerIdC, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:43:59 gestartet.
+1>InitializeBuildStatus:
+1>  "Debug\CompilerIdC.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  CMakeCCompilerId.c
+1>Link:
+1>  CompilerIdC.vcxproj -> D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CompilerIdC\.\CompilerIdC.exe
+1>PostBuildEvent:
+1>  CMAKE_C_COMPILER=d:\Informatik\Microsoft Visual Studio 10.0\VC\bin\cl.exe
+1>FinalizeBuildStatus:
+1>  Die Datei "Debug\CompilerIdC.unsuccessfulbuild" wird gelîscht.
+1>  Aktualisieren des Timestamps von "Debug\CompilerIdC.lastbuildstate".
+1>
+1>Das Erstellen war erfolgreich.
+1>
+1>Verstrichene Zeit 00:00:01.39
+========== Erstellen: 1 erfolgreich, Fehler bei 0, 0 aktuell, 0 Åbersprungen ==========
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj.user"
+
+The C compiler identification is MSVC, found in "D:/Informatik/Development/SeqAn/CMakeFiles/2.8.10.2/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: CompilerIdCXX, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:04 gestartet.
+1>InitializeBuildStatus:
+1>  "Debug\CompilerIdCXX.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  CMakeCXXCompilerId.cpp
+1>Link:
+1>  CompilerIdCXX.vcxproj -> D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CompilerIdCXX\.\CompilerIdCXX.exe
+1>PostBuildEvent:
+1>  CMAKE_CXX_COMPILER=d:\Informatik\Microsoft Visual Studio 10.0\VC\bin\cl.exe
+1>FinalizeBuildStatus:
+1>  Die Datei "Debug\CompilerIdCXX.unsuccessfulbuild" wird gelîscht.
+1>  Aktualisieren des Timestamps von "Debug\CompilerIdCXX.lastbuildstate".
+1>
+1>Das Erstellen war erfolgreich.
+1>
+1>Verstrichene Zeit 00:00:00.82
+========== Erstellen: 1 erfolgreich, Fehler bei 0, 0 aktuell, 0 Åbersprungen ==========
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj.user"
+
+The CXX compiler identification is MSVC, found in "D:/Informatik/Development/SeqAn/CMakeFiles/2.8.10.2/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp
+
+Run Build Command:d:\INFORM~1\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec1741801603
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: cmTryCompileExec1741801603, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:08 gestartet.
+1>PrepareForBuild:
+1>  Das Verzeichnis "D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+1>InitializeBuildStatus:
+1>  "cmTryCompileExec1741801603.dir\Debug\cmTryCompileExec1741801603.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  Microsoft (R) 32-Bit C/C++-Optimierungscompiler Version 16.00.30319.01 fÅr 80x86
+1>  Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec1741801603.dir\Debug\\" /Fd"D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1741801603.pdb" /Gd /TC /analyze- /errorReport:prompt testCCompiler.c  /Zm1000 
+1>  
+1>  testCCompiler.c
+1>LinkEmbedManifest:
+1>  cmTryCompileExec1741801603.vcxproj -> D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1741801603.exe
+1>FinalizeBuildStatus:
+1>  Die Datei "cmTryCompileExec1741801603.dir\Debug\cmTryCompileExec1741801603.unsuccessfulbuild" wird gelîscht.
+1>  Aktualisieren des Timestamps von "cmTryCompileExec1741801603.dir\Debug\cmTryCompileExec1741801603.lastbuildstate".
+1>
+1>Das Erstellen war erfolgreich.
+1>
+1>Verstrichene Zeit 00:00:00.84
+========== Erstellen: 1 erfolgreich, Fehler bei 0, 0 aktuell, 0 Åbersprungen ==========
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp
+
+Run Build Command:d:\INFORM~1\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec2595796853
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: cmTryCompileExec2595796853, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:12 gestartet.
+1>PrepareForBuild:
+1>  Das Verzeichnis "D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+1>InitializeBuildStatus:
+1>  "cmTryCompileExec2595796853.dir\Debug\cmTryCompileExec2595796853.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  Microsoft (R) 32-Bit C/C++-Optimierungscompiler Version 16.00.30319.01 fÅr 80x86
+1>  Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2595796853.dir\Debug\\" /Fd"D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2595796853.pdb" /Gd /TC /analyze- /errorReport:prompt "..\..\..\..\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"  /Zm1000 
+1>  
+1>  CMakeCCompilerABI.c
+1>LinkEmbedManifest:
+1>  cmTryCompileExec2595796853.vcxproj -> D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2595796853.exe
+1>FinalizeBuildStatus:
+1>  Die Datei "cmTryCompileExec2595796853.dir\Debug\cmTryCompileExec2595796853.unsuccessfulbuild" wird gelîscht.
+1>  Aktualisieren des Timestamps von "cmTryCompileExec2595796853.dir\Debug\cmTryCompileExec2595796853.lastbuildstate".
+1>
+1>Das Erstellen war erfolgreich.
+1>
+1>Verstrichene Zeit 00:00:00.89
+========== Erstellen: 1 erfolgreich, Fehler bei 0, 0 aktuell, 0 Åbersprungen ==========
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp
+
+Run Build Command:d:\INFORM~1\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec1834924802
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: cmTryCompileExec1834924802, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:16 gestartet.
+1>PrepareForBuild:
+1>  Das Verzeichnis "D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+1>InitializeBuildStatus:
+1>  "cmTryCompileExec1834924802.dir\Debug\cmTryCompileExec1834924802.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  Microsoft (R) 32-Bit C/C++-Optimierungscompiler Version 16.00.30319.01 fÅr 80x86
+1>  Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1834924802.dir\Debug\\" /Fd"D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1834924802.pdb" /Gd /TP /analyze- /errorReport:prompt testCXXCompiler.cxx  /Zm1000 
+1>  
+1>  testCXXCompiler.cxx
+1>LinkEmbedManifest:
+1>  cmTryCompileExec1834924802.vcxproj -> D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1834924802.exe
+1>FinalizeBuildStatus:
+1>  Die Datei "cmTryCompileExec1834924802.dir\Debug\cmTryCompileExec1834924802.unsuccessfulbuild" wird gelîscht.
+1>  Aktualisieren des Timestamps von "cmTryCompileExec1834924802.dir\Debug\cmTryCompileExec1834924802.lastbuildstate".
+1>
+1>Das Erstellen war erfolgreich.
+1>
+1>Verstrichene Zeit 00:00:00.84
+========== Erstellen: 1 erfolgreich, Fehler bei 0, 0 aktuell, 0 Åbersprungen ==========
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp
+
+Run Build Command:d:\INFORM~1\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec1293198987
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: cmTryCompileExec1293198987, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:20 gestartet.
+1>PrepareForBuild:
+1>  Das Verzeichnis "D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+1>InitializeBuildStatus:
+1>  "cmTryCompileExec1293198987.dir\Debug\cmTryCompileExec1293198987.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  Microsoft (R) 32-Bit C/C++-Optimierungscompiler Version 16.00.30319.01 fÅr 80x86
+1>  Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1293198987.dir\Debug\\" /Fd"D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1293198987.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\..\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"  /Zm1000 
+1>  
+1>  CMakeCXXCompilerABI.cpp
+1>LinkEmbedManifest:
+1>  cmTryCompileExec1293198987.vcxproj -> D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1293198987.exe
+1>FinalizeBuildStatus:
+1>  Die Datei "cmTryCompileExec1293198987.dir\Debug\cmTryCompileExec1293198987.unsuccessfulbuild" wird gelîscht.
+1>  Aktualisieren des Timestamps von "cmTryCompileExec1293198987.dir\Debug\cmTryCompileExec1293198987.lastbuildstate".
+1>
+1>Das Erstellen war erfolgreich.
+1>
+1>Verstrichene Zeit 00:00:00.79
+========== Erstellen: 1 erfolgreich, Fehler bei 0, 0 aktuell, 0 Åbersprungen ==========
+
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp
+
+Run Build Command:d:\INFORM~1\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec2166709486
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: cmTryCompileExec2166709486, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:37 gestartet.
+1>PrepareForBuild:
+1>  Das Verzeichnis "D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+1>InitializeBuildStatus:
+1>  "cmTryCompileExec2166709486.dir\Debug\cmTryCompileExec2166709486.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  Microsoft (R) 32-Bit C/C++-Optimierungscompiler Version 16.00.30319.01 fÅr 80x86
+1>  Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D OpenMP_FLAG_DETECTED /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Fo"cmTryCompileExec2166709486.dir\Debug\\" /Fd"D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2166709486.pdb" /Gd /TC /analyze- /errorReport:prompt src.c  /Zm1000 
+1>  
+1>  src.c
+1>LinkEmbedManifest:
+1>  cmTryCompileExec2166709486.vcxproj -> D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2166709486.exe
+1>FinalizeBuildStatus:
+1>  Die Datei "cmTryCompileExec2166709486.dir\Debug\cmTryCompileExec2166709486.unsuccessfulbuild" wird gelîscht.
+1>  Aktualisieren des Timestamps von "cmTryCompileExec2166709486.dir\Debug\cmTryCompileExec2166709486.lastbuildstate".
+1>
+1>Das Erstellen war erfolgreich.
+1>
+1>Verstrichene Zeit 00:00:00.88
+========== Erstellen: 1 erfolgreich, Fehler bei 0, 0 aktuell, 0 Åbersprungen ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp
+
+Run Build Command:d:\INFORM~1\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec3355473003
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: cmTryCompileExec3355473003, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:44 gestartet.
+1>PrepareForBuild:
+1>  Das Verzeichnis "D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+1>InitializeBuildStatus:
+1>  "cmTryCompileExec3355473003.dir\Debug\cmTryCompileExec3355473003.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  Microsoft (R) 32-Bit C/C++-Optimierungscompiler Version 16.00.30319.01 fÅr 80x86
+1>  Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D OpenMP_FLAG_DETECTED /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /openmp /Fo"cmTryCompileExec3355473003.dir\Debug\\" /Fd"D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3355473003.pdb" /Gd /TP /analyze- /errorReport:prompt src.cxx  /Zm1000 
+1>  
+1>  src.cxx
+1>LinkEmbedManifest:
+1>  cmTryCompileExec3355473003.vcxproj -> D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3355473003.exe
+1>FinalizeBuildStatus:
+1>  Die Datei "cmTryCompileExec3355473003.dir\Debug\cmTryCompileExec3355473003.unsuccessfulbuild" wird gelîscht.
+1>  Aktualisieren des Timestamps von "cmTryCompileExec3355473003.dir\Debug\cmTryCompileExec3355473003.lastbuildstate".
+1>
+1>Das Erstellen war erfolgreich.
+1>
+1>Verstrichene Zeit 00:00:00.96
+========== Erstellen: 1 erfolgreich, Fehler bei 0, 0 aktuell, 0 Åbersprungen ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+

@@ -1,0 +1,93 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/jasparParser/jasparParser.cpp ./sandbox/robinson/apps/jasparParser/jasparParser.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/jasparParser/jasparParser.cpp	2012-09-04 15:38:33.000000000 +0200
++++ ./sandbox/robinson/apps/jasparParser/jasparParser.cpp	2012-09-10 11:21:29.141189358 +0200
+@@ -8,20 +8,11 @@
+ 
+ struct Jaspar_;
+ typedef Tag<Jaspar_> Jaspar;
+-typedef String<ProfileChar<Dna> > FrequencyMatrix;
+-struct JasparRecord {
+-	CharString id;
+-	CharString name;
+-	FrequencyMatrix matrix;
+-};
+-void clear(JasparRecord & record) {
+-	clear(record.id);
+-	clear(record.name);
+-	clear(record.matrix);
+-}
+ 
+ template<typename TStream, typename TPass>
+-int readRecord(CharString & id, CharString & name, String<ProfileChar<Dna> > & matrix, RecordReader<TStream, TPass> & reader, // record splitten in id name matrix
++int readRecord(CharString & id, CharString & name,
++		String<ProfileChar<Dna> > & matrix,
++		RecordReader<TStream, TPass> & reader, // record splitten in id name matrix
+ 		Jaspar const & /*tag*/) {
+ 	// Jaspar records look like this:
+ 	//
+@@ -32,8 +23,7 @@
+ 	// T  [xx xx xx ... x ]
+ 
+ 
+-
+-	clear(record);
++	clear( record);
+ 	int res = 0;
+ 
+ 	// skip until record begin
+@@ -81,8 +71,8 @@
+ 			if (rowIndex == 0)
+ 				resize(matrix, length(record.matrix) + 1);
+ 
+-			if (!lexicalCast2<unsigned> (
+-					matrix[columnIndex].count[rowIndex], bufferString))
++			if (!lexicalCast2<unsigned> (matrix[columnIndex].count[rowIndex],
++					bufferString))
+ 				return 1; // Could not cast or could not write into matrix!
+ 
+ 			res = skipWhitespaces(reader);
+@@ -105,33 +95,18 @@
+ 		return 1;
+ 	// Read file.
+ 	RecordReader < std::fstream, SinglePass<> > reader(stream);
+-	JasparRecord myRecord;
+-	//    String<JasparRecord> JasparRecords;
+-	//    int res = read2(JasparRecords, reader, Jaspar());
+-	//    if (res != 0)
+-	//        return res;
+-	int res = readRecord(myRecord, reader, Jaspar());
+-	if (res != 0)
+-		return res;
+-	res = readRecord(myRecord, reader, Jaspar());
++	CharString name;
++	CharString id;
++	String < ProfileChar<Dna> > matrix;
++	int res = readRecord(id, name, matrix, reader, Jaspar());
+ 	if (res != 0)
+ 		return res;
++
+ 	// Write out some of the data to stdout.
+-	cout << myRecord.id << "\t" << myRecord.name << endl;
+-	cout << myRecord.matrix[0].count[0] << endl;
+-	cout << myRecord.matrix[0].count[1] << endl;
+-	cout << myRecord.matrix[0].count[2] << endl;
+-	cout << myRecord.matrix[0].count[3] << endl;
+-	cout << myRecord.matrix[2].count[0] << endl;
+-	cout << myRecord.matrix[2].count[1] << endl;
+-	cout << myRecord.matrix[2].count[2] << endl;
+-	cout << myRecord.matrix[2].count[3] << endl;
+-	cout << myRecord.matrix[9].count[0] << endl;
+-	cout << myRecord.matrix[9].count[1] << endl;
+-	cout << myRecord.matrix[9].count[2] << endl;
+-	cout << myRecord.matrix[9].count[3] << endl;
+-	//    for (unsigned i = 0; i < length(gffRecords); ++i)
+-	//        std::cout << JasparRecords[i].seqName << "\t" << JasparRecords[i].strand << "\t" << gffRecords[i].start << "\t"
+-	//                  << JasparRecords[i].end << std::endl;
+-	//    return 0;
++	cout << id << "\t" << name << endl;
++	cout << matrix[0].count[0] << endl;
++	cout << matrix[0].count[1] << endl;
++	cout << matrix[0].count[2] << endl;
++	cout << matrix[0].count[3] << endl;
++	return 0;
+ }

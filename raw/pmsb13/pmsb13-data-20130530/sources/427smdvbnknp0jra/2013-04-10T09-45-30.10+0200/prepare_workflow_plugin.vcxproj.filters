@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+    <CustomBuild Include="CMakeFiles\7f28da92dcf4c7115a796f1120f05346\workflow_plugin_dir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\38acadf72056a0cfd19f0dbcb072c33e\descriptors.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\mimetypes.xml.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\dfi.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\pair_align.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\razers.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\razers2.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\sak.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\seqan_tcoffee.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\seqcons.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\stellar.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\tree_recon.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\alf.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\insegt.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\masai_indexer.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\masai_mapper.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\masai_output_se.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\masai_output_pe.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e0e5a622c06024695432ecf0c6ddee5a\razers3.ctd.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\38acadf72056a0cfd19f0dbcb072c33e\COPYRIGHT.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\38acadf72056a0cfd19f0dbcb072c33e\DESCRIPTION.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\38acadf72056a0cfd19f0dbcb072c33e\LICENSE.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\38acadf72056a0cfd19f0dbcb072c33e\icons.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\caa0ac856603a74faebe156ad048276f\category.png.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\caa0ac856603a74faebe156ad048276f\splash.png.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\38acadf72056a0cfd19f0dbcb072c33e\plugin.properties.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\38acadf72056a0cfd19f0dbcb072c33e\payload.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\cb8f514aae971d4b371a95890a54945f\payload.tmp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e05f177d6ce90dd61362dbeaf766f891\bin.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\dfi.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\pair_align.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\razers.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\razers2.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\sak.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\seqan_tcoffee.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\seqcons.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\stellar.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\tree_recon.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\alf.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\insegt.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\masai_indexer.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\masai_mapper.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\masai_output_se.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\masai_output_pe.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9d6963393d2712d4912ec9497ca910ee\razers3.exe.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\e05f177d6ce90dd61362dbeaf766f891\binaries.ini.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\9225019069fee936e50707f4327fcd29\binaries_win_32.zip.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\cb8f514aae971d4b371a95890a54945f\prepare_workflow_plugin.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\prepare_workflow_plugin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7BAFA5D6-188E-44EF-8B96-4E1590C6F34B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

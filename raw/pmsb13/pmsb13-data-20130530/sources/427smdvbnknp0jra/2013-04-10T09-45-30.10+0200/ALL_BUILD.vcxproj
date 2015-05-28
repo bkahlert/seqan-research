@@ -1,0 +1,1357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{F2C42909-A9D0-42B6-B85C-0E91BC10772D}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Informatik/Development/SeqAn/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"D:\Informatik\CMake 2.8\bin\cmake.exe" -HD:/Informatik/Development/SeqAn -BD:/Informatik/Development/SeqAn --check-stamp-file D:\Informatik\Development\SeqAn\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Informatik/Development/SeqAn/CMakeLists.txt;D:\Informatik\Development\SeqAn\CMakeLists.txt;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnContribs.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnBuildSystem.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnUsabilityAnalyzer.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnLegacyBuildSystem.cmake;D:\Informatik\Development\SeqAn\util\cmake\package.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnCtdSetup.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindJava.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\Development\SeqAn\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Informatik\Development\SeqAn\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Informatik/Development/SeqAn/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"D:\Informatik\CMake 2.8\bin\cmake.exe" -HD:/Informatik/Development/SeqAn -BD:/Informatik/Development/SeqAn --check-stamp-file D:\Informatik\Development\SeqAn\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Informatik/Development/SeqAn/CMakeLists.txt;D:\Informatik\Development\SeqAn\CMakeLists.txt;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnContribs.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnBuildSystem.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnUsabilityAnalyzer.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnLegacyBuildSystem.cmake;D:\Informatik\Development\SeqAn\util\cmake\package.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnCtdSetup.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindJava.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\Development\SeqAn\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Informatik\Development\SeqAn\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Informatik/Development/SeqAn/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"D:\Informatik\CMake 2.8\bin\cmake.exe" -HD:/Informatik/Development/SeqAn -BD:/Informatik/Development/SeqAn --check-stamp-file D:\Informatik\Development\SeqAn\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Informatik/Development/SeqAn/CMakeLists.txt;D:\Informatik\Development\SeqAn\CMakeLists.txt;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnContribs.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnBuildSystem.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnUsabilityAnalyzer.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnLegacyBuildSystem.cmake;D:\Informatik\Development\SeqAn\util\cmake\package.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnCtdSetup.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindJava.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\Development\SeqAn\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Informatik\Development\SeqAn\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Informatik/Development/SeqAn/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"D:\Informatik\CMake 2.8\bin\cmake.exe" -HD:/Informatik/Development/SeqAn -BD:/Informatik/Development/SeqAn --check-stamp-file D:\Informatik\Development\SeqAn\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Informatik/Development/SeqAn/CMakeLists.txt;D:\Informatik\Development\SeqAn\CMakeLists.txt;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;D:\Informatik\Development\SeqAn\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnContribs.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnBuildSystem.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnUsabilityAnalyzer.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnLegacyBuildSystem.cmake;D:\Informatik\Development\SeqAn\util\cmake\package.cmake;D:\Informatik\Development\SeqAn\util\cmake\SeqAnCtdSetup.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindJava.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\Development\SeqAn\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Informatik\Development\SeqAn\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\cb8f514aae971d4b371a95890a54945f\ALL_BUILD.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Informatik/Development/SeqAn/CMakeFiles/cb8f514aae971d4b371a95890a54945f/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Informatik\Development\SeqAn\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Informatik/Development/SeqAn/CMakeFiles/cb8f514aae971d4b371a95890a54945f/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Informatik\Development\SeqAn\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Informatik/Development/SeqAn/CMakeFiles/cb8f514aae971d4b371a95890a54945f/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Informatik\Development\SeqAn\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Informatik/Development/SeqAn/CMakeFiles/cb8f514aae971d4b371a95890a54945f/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Informatik\Development\SeqAn\CMakeFiles\ALL_BUILD</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ALL_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/ZERO_CHECK.vcxproj">
+      <Project>EBA3EC0D-486B-42AA-9B4C-46F44F0D2D0B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/alf/alf.vcxproj">
+      <Project>4C1979FD-69B0-4B28-A129-E01C1E5DABC2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_align_gaps_clipping.vcxproj">
+      <Project>E8783411-B99A-447C-B600-05534A4DF7FA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_alignment.vcxproj">
+      <Project>373DA924-86E4-4A59-AB04-084ED186878E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_alignment_local.vcxproj">
+      <Project>7D161383-D25E-4F2F-B56D-CF1BD26731CD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_alignment_msa.vcxproj">
+      <Project>BAECFD4B-6B46-4069-AE56-DBCD22588D81</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_allocator.vcxproj">
+      <Project>F25013FC-B7B4-4F0F-83ED-0A963E60A4A4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_alphabet.vcxproj">
+      <Project>A1CF1FBE-7017-4C31-8F32-F439C0D18713</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_annotation_converter.vcxproj">
+      <Project>8873178C-2024-4AF4-8D5E-9C4CB4077E46</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_arg_align.vcxproj">
+      <Project>2AE751D0-EDB6-4DEA-9883-630B71997216</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_arg_parse.vcxproj">
+      <Project>EC0B63AC-36F6-4EE5-9AF4-9EE381F13E6E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_bam_library_size.vcxproj">
+      <Project>62ED7ED7-B2FE-4F1C-89DB-D5A4E2351E53</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_bam_print_alignments.vcxproj">
+      <Project>D6B1C6BF-968E-4FC3-9C74-3BA05F821A92</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_bam_stats.vcxproj">
+      <Project>2C3C42C9-780C-4F88-AC68-39FEC284D12A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_bamutil.vcxproj">
+      <Project>AF32B9AF-9E4F-48CD-B2F3-4965FD307EB0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_benchmark_stream.vcxproj">
+      <Project>A47F6352-798B-42A4-AD19-68D8A63B41E4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_benchmark_stream_write.vcxproj">
+      <Project>2BA27514-07F4-4FC3-9E71-FAB26D8B4B51</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_enumerate_strings.vcxproj">
+      <Project>0911A696-ABE0-4952-B5CB-43500D9E1DFB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_example_seq_io.vcxproj">
+      <Project>A9A58338-BFE8-4A91-A5E7-E349A47D5365</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_file_format.vcxproj">
+      <Project>56FB6381-CABF-4473-9F19-31834C578F71</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_file_readwrite.vcxproj">
+      <Project>D7648204-E97F-4076-B4B3-9F48D1A49E92</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_file_speed.vcxproj">
+      <Project>3CB614C8-0062-4F7F-AD29-78BF2632F484</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_filter_sam.vcxproj">
+      <Project>CF26C03C-D276-4947-B88C-0326EC7BC37F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_find_approx.vcxproj">
+      <Project>7EA961B5-CA44-4E7E-BF84-0CEDEFA4F741</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_find_exact.vcxproj">
+      <Project>6F0EAC9B-23E1-4DF1-90AB-DE34528FC64B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_find_motif.vcxproj">
+      <Project>09422963-BFA7-416B-909F-3407C816D5FF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_find_wild.vcxproj">
+      <Project>7D12D0DA-28CD-4ED4-8AF1-706EBE7ED4CA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_gff2gtf.vcxproj">
+      <Project>C3AC6803-5348-4E51-8B2D-BC62FF34AF81</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_bfs.vcxproj">
+      <Project>9CCD26DC-81BF-43C0-8BFE-DA2C623006BE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_dfs.vcxproj">
+      <Project>A37C4C7B-BE6A-42EC-8631-4C2D1F017D87</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_flow_fordfulkerson.vcxproj">
+      <Project>17B8B410-E31D-40F5-BA45-4EFF7F35BC26</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_his.vcxproj">
+      <Project>7B7A072D-81BD-459E-9337-1114E0CE99BD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_lcs.vcxproj">
+      <Project>CDA821EC-DC14-4650-B309-98DB31490E74</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_lis.vcxproj">
+      <Project>7EED8162-471E-4D72-A0DF-D6378254D590</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_path_allpairs.vcxproj">
+      <Project>BC5D0E2E-854C-4075-9C19-76C6C920065D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_path_bellmanford.vcxproj">
+      <Project>806EF82A-9A7B-4D78-BF0B-C877A4F13BFE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_path_dag.vcxproj">
+      <Project>5D1E76C3-25C2-4475-9A43-61FAFD8C0F15</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_path_dijkstra.vcxproj">
+      <Project>23B2E9EC-F1AE-478C-96C9-AC00881E7885</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_path_floydwarshall.vcxproj">
+      <Project>B0453EB9-BED2-472C-BC1A-AD14429BEED7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_path_transitive.vcxproj">
+      <Project>F47B8F4E-DD56-4874-A347-ACF6EFB0D495</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_scc.vcxproj">
+      <Project>BEC4960F-A0E9-4858-A6A5-71261541519D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_topsort.vcxproj">
+      <Project>71EA121C-403E-4B77-B39E-D640DB299834</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_tree_kruskal.vcxproj">
+      <Project>B9DF53FE-6BBF-4AB2-9CEE-00DAF75726E0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_algo_tree_prim.vcxproj">
+      <Project>8A2BB29F-0CCD-4B01-A594-937BBE2CFDC4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_hmm.vcxproj">
+      <Project>6E0C2E8F-EDD4-438A-9F66-8140FEBD67EA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_graph_hmm_silent.vcxproj">
+      <Project>4A9C8B42-9F26-487A-9B59-82E12F64816F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_howto_clip_alignments.vcxproj">
+      <Project>93539A2F-17E0-47E5-9C29-2F72131CD483</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_howto_cmdparser_example.vcxproj">
+      <Project>F52DA5BF-491D-4A90-BBAA-9F62BA716F20</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_howto_efficiently_import_sequences.vcxproj">
+      <Project>ED64A292-9416-496B-BFEB-16733BAEC243</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_howto_filter_similar_sequences.vcxproj">
+      <Project>A6260C81-E3E1-495E-9823-62CDF6BE44BA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_howto_scores_init_score.vcxproj">
+      <Project>8FAC5401-B789-43F9-A7B2-8841C6F9D07E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_howto_scores_load_score.vcxproj">
+      <Project>FF9E2326-F393-4638-B24B-2898AECDACDE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_counting.vcxproj">
+      <Project>8F1B0BD3-B274-4440-B9CE-37ED5EFBD50C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_find.vcxproj">
+      <Project>0505CC09-6A68-4640-A747-9C3A82A44E78</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_find_stringset.vcxproj">
+      <Project>20288159-B929-4521-BA07-BE55716EA65A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_lcp.vcxproj">
+      <Project>EDFCE24F-A16E-4F58-AF34-5044EB3FC3C5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_maxrepeats.vcxproj">
+      <Project>2CA97554-7C2A-4F92-BC9D-4EA3345DDC16</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_mummy.vcxproj">
+      <Project>6FF555E6-E208-46BD-8E90-396CB45AB885</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_mums.vcxproj">
+      <Project>8B78927D-34E3-4714-889D-5E8883A6F8E1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_node_predicate.vcxproj">
+      <Project>83D05328-F244-4037-9DB1-B415B554AE47</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_qgram_counts.vcxproj">
+      <Project>3E212FD3-0353-44D2-820C-4BF437AF0D46</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_sufarray.vcxproj">
+      <Project>F73FE0F3-F8D9-46FD-A8E1-6D821489B7BC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_index_supermaxrepeats.vcxproj">
+      <Project>AE96C5DA-FC76-4D33-8756-B5E2BF28A9FB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_interval_tree.vcxproj">
+      <Project>F05ADDB3-3C14-4E76-A820-8E39502E6A24</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_iterator.vcxproj">
+      <Project>0EA7B564-EBEC-4F52-B32D-4E2DA9A4E57B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_modifier_modreverse.vcxproj">
+      <Project>BD33C2C5-0165-464F-9C4C-9613CEE1A257</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_modifier_modview.vcxproj">
+      <Project>A92582A7-07CA-47FB-8C5A-06BCF8FB83B2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_modifier_nested.vcxproj">
+      <Project>938B3760-55BA-4086-97C8-5D903B8AB40E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_parse_lm_stellar.vcxproj">
+      <Project>E3694C99-2A73-42A9-8422-B124A36A7677</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_pipe_sort.vcxproj">
+      <Project>CB9C583B-919D-406C-A461-73867800239B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_repeats_demo.vcxproj">
+      <Project>5D628BC5-9130-41D7-9C8B-4B07E664C8BA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_rooted_iterator.vcxproj">
+      <Project>DE8DF542-CC0F-4C11-B4E4-0533F584C2DB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_sam2svg.vcxproj">
+      <Project>307ADC1C-691C-4EFD-9563-9774329D08D0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_sample_seqs.vcxproj">
+      <Project>6ED4510D-3842-451B-A3DC-3477E5243E22</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_seeds.vcxproj">
+      <Project>C0C871F5-8B26-4F10-B404-124A10A881EA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_segmentalignment.vcxproj">
+      <Project>3E30F4B8-AF1C-40F2-8F17-57D0C1D22E66</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_sequence_length.vcxproj">
+      <Project>1E18F02F-AD06-4EF4-9F76-F389DD93A31B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_soft_to_hard_masking.vcxproj">
+      <Project>453113F2-0139-46A0-96B0-1F378A64D4E2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_stream_read_fastq_gz.vcxproj">
+      <Project>BFD29E5B-CF85-45AE-AEEE-AD368CF770D6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_template_subclassing.vcxproj">
+      <Project>D16C7DAC-E2C2-412D-8F4E-57B9602DECC4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_terminal_demo.vcxproj">
+      <Project>EE2AA19E-0B88-4511-AFBB-4EAFACBF8F99</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment2_align.vcxproj">
+      <Project>9707207B-4E47-40A8-ACDA-07F35F897CFD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_align_assignment1.vcxproj">
+      <Project>F79111B0-04B1-479B-9D3F-70A59B84F3E9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_banded.vcxproj">
+      <Project>08749C11-B826-4FD3-9623-768F58BD5FE8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_gaps.vcxproj">
+      <Project>EABBF8BF-B6A2-4502-9741-1122AE586877</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_global_assignment1.vcxproj">
+      <Project>2E2BC655-0112-484F-9A25-6EE8F1626CC7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_global_assignment2.vcxproj">
+      <Project>C3473E9A-CD2D-45A2-99E0-445191BA35CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_global_assignment3.vcxproj">
+      <Project>E8F2CC5B-C4E7-48F1-A663-6BC5625511EC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_global_assignment4_part1.vcxproj">
+      <Project>430549F5-3E8C-4963-989E-22D03991B2BB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_global_assignment4_part2.vcxproj">
+      <Project>CA87666F-E33B-467B-A1D5-E8ABE2EBFA35</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_global_overlap.vcxproj">
+      <Project>C716B111-75DD-4371-904A-E740C9B01B75</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_global_specialised.vcxproj">
+      <Project>646DF690-4E05-4F78-80DF-F162C3600C64</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_global_standard.vcxproj">
+      <Project>ECCE6AFB-B773-4309-A4B9-C3C102300147</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_local_standard.vcxproj">
+      <Project>0B26AE4F-D132-4858-A8CB-98A0D1E09B5F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_local_waterman_eggert.vcxproj">
+      <Project>E5677D52-887F-4301-A797-D8A9106E5E95</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_msa.vcxproj">
+      <Project>C2FC22B3-66A2-4178-A662-1DD7FC4194C9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_msa_assignment1.vcxproj">
+      <Project>A16090B6-4849-4531-928C-E639308BEB52</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_pairwise_global.vcxproj">
+      <Project>8A0355ED-27F9-4C67-A71F-2D994DBFA93F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_pairwise_global2.vcxproj">
+      <Project>67B107C9-48F3-4F07-BBED-F0C9F9EFD50A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_pairwise_global_assignment1.vcxproj">
+      <Project>C8E20D3F-3D4C-42AA-AF94-70CDD25CC7FF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_pairwise_global_assignment2.vcxproj">
+      <Project>A6A5F426-D283-47A8-8211-ACFBED0BAA16</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_pairwise_local.vcxproj">
+      <Project>868BAF2E-2813-4411-B54D-4ADBFBCB79DD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_pairwise_local_assignment1.vcxproj">
+      <Project>AEE62C41-3FD7-4283-B616-2910A1DCC704</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_representation_alignment_graph.vcxproj">
+      <Project>2A68E356-1143-4515-8C79-5575E7B0AB99</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_alignment_representation_alignment_graph_assignment1.vcxproj">
+      <Project>78D3D9D6-1522-49CB-848E-C00F9853C73D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5.vcxproj">
+      <Project>9495F99A-7D57-4FA5-8DCD-D59FBC2590B4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step1.vcxproj">
+      <Project>5D0B941B-9F6E-4F4D-8956-BE7610B2864C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step2.vcxproj">
+      <Project>CC4B1247-DAA1-4E61-B639-434AE802D03B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step3.vcxproj">
+      <Project>8C69773B-59BF-4B8D-8A2F-478BE967B778</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step4.vcxproj">
+      <Project>5A3C2415-640A-4E54-8EF0-6A3C8AD38C54</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step5.vcxproj">
+      <Project>CBCD474A-DC0D-4B35-A1D5-F82B918F39FE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step6.vcxproj">
+      <Project>CA0923AD-92EC-448B-B9FE-EC254AFCED43</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_alphabets_alphabet_assignment_1_solution.vcxproj">
+      <Project>F93D8F1E-CE67-499D-8017-ED7EEBF72011</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_annotation_store_assignment_1_hint.vcxproj">
+      <Project>B5F02EF3-72E1-4F09-94E6-3314128B407C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_annotation_store_assignment_1_solution.vcxproj">
+      <Project>C0913981-B0C5-4D07-BC59-19212A4BC5A2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_annotation_store_assignment_2_solution.vcxproj">
+      <Project>74A946B8-63A1-489F-821B-4F2B30B42387</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_annotation_store_assignment_3_solution.vcxproj">
+      <Project>49C9751A-6B76-4835-93FD-D98D1B0440D7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_annotation_store_assignment_4_solution.vcxproj">
+      <Project>74175C72-B3CA-48AB-9F1D-0ECAF85AC9E0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_example1.vcxproj">
+      <Project>4DCE5FF3-F156-4AB3-A240-082BAA13E071</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_example2.vcxproj">
+      <Project>134FD056-4871-4C36-8BB8-DA72FD885559</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_example3.vcxproj">
+      <Project>E73C6B74-5F75-4AF4-BD1C-16B67EAD7FB1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_example4.vcxproj">
+      <Project>385B9251-CC7E-4196-ACD3-DC8209962589</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_example5.vcxproj">
+      <Project>30A0B244-E45E-4467-BF88-9BDE16B87FE8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_example6.vcxproj">
+      <Project>B6E68506-DF6F-4DE6-9E9E-69E2214DA95A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_example7.vcxproj">
+      <Project>7FF090AD-60D5-4228-9558-5DA9D119134B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_solution1.vcxproj">
+      <Project>36075F96-23E1-4174-8482-2CC5B9FD0A5F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_solution2.vcxproj">
+      <Project>879A3160-20EF-459B-8343-DD1123AAAB9D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_bam_io_solution3.vcxproj">
+      <Project>3809A3DA-F1EF-46C7-8924-DC3B727187CA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sam_bam_io_example1.vcxproj">
+      <Project>AEC8CE4F-FA67-4939-9546-12A5B3A8C085</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sam_bam_io_example2.vcxproj">
+      <Project>745ECDB9-43D7-49CA-9EA9-600E0902A931</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sam_bam_io_example3.vcxproj">
+      <Project>00090A87-C41A-4D01-8E95-E3B501430E1B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sam_bam_io_solution1.vcxproj">
+      <Project>D8615DFC-D9D3-4000-BA39-3BE990A1ECB6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sam_bam_io_solution2.vcxproj">
+      <Project>EB1469EE-852B-4F58-899A-14D0A2D74C27</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sam_bam_io_solution3.vcxproj">
+      <Project>742174E8-C0BC-407A-A376-09BB8FC290E2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sam_bam_io_solution4.vcxproj">
+      <Project>71DFB2EF-BF72-4C36-89D2-0E3FF5CA2DAF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sequence_io_example1.vcxproj">
+      <Project>27E425E2-7FF2-4B6E-8017-0D4D077F4ACC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sequence_io_example2.vcxproj">
+      <Project>2FF21F36-230B-4DD5-A0E1-D881ACCB4CA6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sequence_io_example3.vcxproj">
+      <Project>E1110732-AE37-4C31-91CD-2B5375518F2C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sequence_io_solution1.vcxproj">
+      <Project>83158A80-245E-40C8-8BD2-F1C39849FFBD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sequence_io_solution2.vcxproj">
+      <Project>CAEBD8C7-765F-4419-8AF3-8415F5E90E2C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sequence_io_solution3.vcxproj">
+      <Project>11088AAE-0FDE-4EB6-89CF-9C947DA471CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sequence_io_solution4.vcxproj">
+      <Project>5CC582F1-F817-4BFE-955B-BFCFE37354B0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sequence_io_solution5.vcxproj">
+      <Project>1878D98B-3C7E-4957-8C21-C8B7C5307FA2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_basic_sequence_io_solution6.vcxproj">
+      <Project>D49CA061-0054-4A53-881D-607BBC3D3937</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_basics_allocator.vcxproj">
+      <Project>EB642C1A-63E9-442C-AE81-E226AE832FEA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_basics_show_alphabets.vcxproj">
+      <Project>2B7F22C6-9B1A-4150-9E72-62F2F88452DA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_basics_strings.vcxproj">
+      <Project>AEE24719-44B5-4D1B-9E18-A4E435F7409A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_basics_swap.vcxproj">
+      <Project>C87E5FD1-D387-496F-9270-1924CCEE8A58</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_example_join.vcxproj">
+      <Project>FA86F7A7-DE87-4A58-85A3-A02718BE1D2E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_example_journal_string_basic.vcxproj">
+      <Project>AF1A945C-CA47-4A3E-9622-29ABB418831F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_example_online_search.vcxproj">
+      <Project>E0A04C8A-4BB8-4CCC-B239-5173F7BBE216</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_example_online_search_assignment1_hint.vcxproj">
+      <Project>C78BAFB6-1505-483D-B187-B311E4C57890</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_example_online_search_assignment2_hint.vcxproj">
+      <Project>ED83FBDB-3BED-4E49-95AE-B341F60AF92A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_example_online_search_assignment3_hint.vcxproj">
+      <Project>D5CC4C5D-3293-46D0-9268-C8F9EE2FA746</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_example_online_search_assignment4_hint.vcxproj">
+      <Project>854DC018-C071-4707-8C81-59DE0F5D0C09</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_solution_online_search_assignment1.vcxproj">
+      <Project>F5365860-22D3-42AB-89E5-C7461B46FDB2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_solution_online_search_assignment2.vcxproj">
+      <Project>B3B193B7-7CF9-4303-839B-98A5CED27E4E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_solution_online_search_assignment3.vcxproj">
+      <Project>9460BDD4-2048-4C11-9D08-316620451DE8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_solution_online_search_assignment4.vcxproj">
+      <Project>950AF4B3-C7FF-430E-8E9F-29CF857069EC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_data_journaling_solution_online_search_finder.vcxproj">
+      <Project>3E0AAE55-CC97-4CDA-9F12-493D8E5BF4CE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_file_io_example1.vcxproj">
+      <Project>167219AC-3A12-492F-8A50-D49A53726468</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_file_io_mmap_string_example.vcxproj">
+      <Project>D89D9844-7994-4B8D-8E40-31AEDEA878E8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_file_io_solution1.vcxproj">
+      <Project>0A810754-08E7-4A26-A6DE-83B103D253F6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_file_io_solution2.vcxproj">
+      <Project>3344C41D-D550-49A9-A39A-D90F9BA0723D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_file_io_stream_compression_formats.vcxproj">
+      <Project>96309FDB-5D36-4520-A8B7-FA94209944EA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_find_find_approx.vcxproj">
+      <Project>C97839AD-1552-49C9-A4B5-BF3A2AD61838</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_find_find_assignment1.vcxproj">
+      <Project>B28FA34B-ABBE-46E8-8F2C-4995C316BD25</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_find_find_assignment2.vcxproj">
+      <Project>E095E79E-1AEB-4BCC-A25D-3BCB9BD7E793</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_find_find_assignment3.vcxproj">
+      <Project>23A4D81D-A9A0-4126-BC27-7CF7901EBEC7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_find_find_exact.vcxproj">
+      <Project>40F53D0D-4B1D-48F0-A861-6D45AF296354</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_find_find_index.vcxproj">
+      <Project>15838720-8826-4861-AB41-BB75D07603F9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_find_find_index_multiple.vcxproj">
+      <Project>6DFB3FA1-B278-43D4-8506-C7B8CE1813F1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_find_motif.vcxproj">
+      <Project>60054F84-45CC-4466-80B5-812C6EC37023</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_find_motif_pms1.vcxproj">
+      <Project>CDAB0109-2213-428F-BB66-EC11C4E333E2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_basic_code.vcxproj">
+      <Project>2C808D9E-1C90-43B8-A60B-31C5A9C6B277</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_basic_code_detailed.vcxproj">
+      <Project>992964E7-3E03-47B2-8AFD-F5962CCC4165</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_code_encapsulation.vcxproj">
+      <Project>4F53CBCB-00A2-4C6E-B022-BA7D461BC546</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_final_result.vcxproj">
+      <Project>94F82295-0B87-4F95-82D9-59A7FC8D4936</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_solution_1.vcxproj">
+      <Project>81D249A9-27F5-4F2E-8DA0-09BD553F8B9A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_solution_2.vcxproj">
+      <Project>15C15F9D-6D09-4DE0-9C6A-2793B746ED7C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_solution_3.vcxproj">
+      <Project>D113DC1A-7489-4869-A9B3-9111E4E97056</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_solution_4.vcxproj">
+      <Project>3FA750F0-6F76-46EB-87CE-B3588DBCC8A9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_solution_5.vcxproj">
+      <Project>BF33A020-F7B1-4A42-A4C8-2A0F6249A410</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_first_steps_solution_6.vcxproj">
+      <Project>A38EC115-D7B8-48D0-9F1A-A697B5B13868</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_graph_graph_algo_scc.vcxproj">
+      <Project>2E764560-E797-45CE-BB93-74048A8B8C70</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_graph_graph_dijkstra.vcxproj">
+      <Project>F93784BF-B102-4BE5-8509-357480BF4814</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_graph_graph_hmm.vcxproj">
+      <Project>EBA9B23E-CE85-42C3-A8C1-982623C85712</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_assignment1.vcxproj">
+      <Project>DE7A6E0E-7BD9-451A-8CA4-2A442EBC01B4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_assignment2.vcxproj">
+      <Project>49AFCE21-22A4-4455-95B9-CBD0EA9EFB62</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_assignment3.vcxproj">
+      <Project>4EF4201F-F58C-465A-AACE-2007BA9DC459</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_assignment4.vcxproj">
+      <Project>B77A49E6-364B-4DAA-87B5-F82635A018EE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_assignment5.vcxproj">
+      <Project>6BAF290E-B62A-4A7A-AF84-B8DE29F5D4A7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_assignment6.vcxproj">
+      <Project>C125D311-BA14-466A-BBE1-C191910A8541</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_preorder.vcxproj">
+      <Project>614AAA44-1159-433B-A69A-2B40794BEDD0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_property_maps.vcxproj">
+      <Project>16AAA31A-DACF-44C9-AC8C-13BC046B6968</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_qgram.vcxproj">
+      <Project>29B4B487-0C65-465B-BEE1-53E72F636AF6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_search.vcxproj">
+      <Project>F9CCAE54-D0F1-4867-8132-A3C51CC03BF5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_index_search2.vcxproj">
+      <Project>BAC29FA6-7354-4F72-867B-0D8E11DD4ECA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_indices_assignment_1.vcxproj">
+      <Project>DC6E9670-16A0-41CF-85F9-46DAAD9C6FBC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_indices_assignment_2.vcxproj">
+      <Project>D6A9094C-D076-403B-BD99-9BA84B6B8F96</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_iterator_solution1.vcxproj">
+      <Project>5AD10141-E3FB-45E7-8380-BC2AF42E79C1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_index_iterator_solution2.vcxproj">
+      <Project>3D1A36BF-8416-4B12-9E3E-C891701D934D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_indexed_fasta_io_solution1.vcxproj">
+      <Project>658BB8DA-21F5-4BF9-913D-A7A14C3B7F8E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_indexed_fasta_io_solution2.vcxproj">
+      <Project>26EA6389-7CDE-4B58-89DC-3C747897FAC4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_iterators_iterators_assignment_1_solution.vcxproj">
+      <Project>299A3930-6A51-4E3B-9FBB-721A2A834800</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_iterators_iterators_assignment_2_solution.vcxproj">
+      <Project>319DAEE7-D3E1-4A67-A70B-16D3C904DD26</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_iterators_iterators_assignment_3_workshop_solution.vcxproj">
+      <Project>68C8E0D1-B686-4C06-B959-BFEAEEEE2478</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_iterators_iterators_assignment_4_workshop_solution.vcxproj">
+      <Project>EE7C0D8F-566D-4E9B-96D2-3834DA90B1C9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_iterators_sequence_iterator_demo.vcxproj">
+      <Project>91F9C6C2-105F-4CA9-80DC-48B439188E7C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_lexical_casting_solution1.vcxproj">
+      <Project>F8954D91-127F-41D7-9875-31EF96BC1EE7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_mini_bowtie_mini_bowtie.vcxproj">
+      <Project>62D7AD13-326C-4E74-AD2C-D2DEEFCD7671</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_mini_bowtie_solution1.vcxproj">
+      <Project>44B3A8AA-2CE5-47CF-A505-6CE4A6168740</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_mini_bowtie_solution2.vcxproj">
+      <Project>4F17C8CA-3240-4CE4-96D6-E24ED9CA59C0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_mini_bowtie_solution3.vcxproj">
+      <Project>1073C56F-22A1-4AC2-A9CA-3AFE61548598</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_mini_bowtie_solution4.vcxproj">
+      <Project>D66A3C05-1CA5-4F59-B006-92E003FE1914</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_mini_bowtie_solution5.vcxproj">
+      <Project>6BD8958E-8AA0-4171-A9D6-7A8E21A680FC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_parsing_example1.vcxproj">
+      <Project>2F5CFC8F-816F-43FC-B7FE-CD268A04A631</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_parsing_parse_blastn.vcxproj">
+      <Project>B69BBB1D-3ED4-4BF8-9614-B214119C4C2F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_parsing_parse_gff2.vcxproj">
+      <Project>D92A203C-62B1-4FE3-97F0-DC502E48C3C5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_parsing_parse_newick.vcxproj">
+      <Project>DEECE3A0-41BA-4FED-AECF-473BFDE859E2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_parsing_reader_double_demo.vcxproj">
+      <Project>CF8ADFB4-7E9C-4D49-B77F-1FB45505B89C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_parsing_reader_single_demo.vcxproj">
+      <Project>8BFF1E5C-7557-48AF-835C-D660FD242886</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_parsing_solution1.vcxproj">
+      <Project>F5860928-4E1B-496D-98BE-FFFB7F6F761A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_parsing_solution2.vcxproj">
+      <Project>04311AAE-08D2-4CC6-87C0-749D3585070E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_parsing_solution3.vcxproj">
+      <Project>B3D16F35-CEB4-45BB-B570-A3E96FDA257B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_random_random_examples.vcxproj">
+      <Project>2FBE5B76-C0DA-44EE-9ACD-6CFEC05A184A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_read_mapping_minimapper.vcxproj">
+      <Project>8A7E4911-64E8-4ABC-A114-B99A7F76AA39</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_assignment1.vcxproj">
+      <Project>375FAAA7-41FC-4685-ACB3-4AE91E931435</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_assignment2.vcxproj">
+      <Project>BB0D806D-40CD-4471-9B35-D28AECD950C1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_assignment3.vcxproj">
+      <Project>66455465-3AF6-4C04-8EA2-8F06D842CEBC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_assignment4.vcxproj">
+      <Project>F023E096-7455-49E5-A245-3681E539FD86</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_assignment5.vcxproj">
+      <Project>F7708229-459A-4C9E-9B53-AD65ED9CB1C8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_solution1.vcxproj">
+      <Project>415371F5-C46C-478A-9791-D1C2FA3D3FD7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_solution2.vcxproj">
+      <Project>71069182-8B6F-4A36-97A4-0F3B3C5A0F4D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_solution3.vcxproj">
+      <Project>80FCD623-7E59-46CE-9610-411466AF46FA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_solution4.vcxproj">
+      <Project>921D9497-1B6D-49D8-B02D-D9935A4BD77C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_rnaseq_genequant_solution5.vcxproj">
+      <Project>FC45ECF1-B77D-427D-94F7-0F58F2CD5A91</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_example1.vcxproj">
+      <Project>F8A06249-F342-49DC-B83C-44C6D91CD582</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_example2.vcxproj">
+      <Project>B1313829-8CFC-4EE6-AB85-2D0A2A88EE74</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_example3.vcxproj">
+      <Project>00350C89-1DD6-42BD-80F5-2E707FA4D800</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_example4.vcxproj">
+      <Project>4E8A277C-1A95-4F18-AC10-07EB0605295C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_example5.vcxproj">
+      <Project>251619FF-5F0E-4E40-BB75-D9E05F4C404E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_example6.vcxproj">
+      <Project>9C332C41-94E1-4900-8E69-D3D0A798F1C8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_example7.vcxproj">
+      <Project>3A5DF034-5004-413D-B5EF-CF7C15D28ADC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_example8.vcxproj">
+      <Project>5BDADF83-3461-4810-A019-679142EEC6A4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_solution1.vcxproj">
+      <Project>AABC247C-E8A0-4493-9D33-5D0954295A1F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_solution2.vcxproj">
+      <Project>5B93094C-E0A9-4BDA-B60B-EB895234D944</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_solution3.vcxproj">
+      <Project>F3A18F16-3083-4200-86B9-5781A64ECA14</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_solution4.vcxproj">
+      <Project>68931E06-4245-4C10-801E-1A1972AC642F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_solution5.vcxproj">
+      <Project>0C01B8CB-C51A-418B-ACE8-04766578BD24</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_solution6.vcxproj">
+      <Project>C00F2657-62EE-4F2E-8661-B73AD7C1A325</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_seed_and_extend_solution7.vcxproj">
+      <Project>CDA77AC4-551D-46FF-89AD-2A0BD0D91D6C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_count_characters.vcxproj">
+      <Project>5130C957-62B6-4E90-A8A6-919336F18908</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_count_generic_characters.vcxproj">
+      <Project>A76636E7-EF0C-4F3E-9FD0-FA9EA1C42E26</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_example1.vcxproj">
+      <Project>1D5E9FEC-959E-410A-9561-31F72A67A7C5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_example2.vcxproj">
+      <Project>1879B7E5-4996-4B35-ABD3-AACF6FABFFC2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_example3.vcxproj">
+      <Project>75AD894D-9266-4BF5-83A2-1BEE786A858B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_example4.vcxproj">
+      <Project>848C4049-CF5D-4981-A952-4401E3EF992C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_example5.vcxproj">
+      <Project>0D21662F-8738-4191-A702-72070F884E14</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_example6.vcxproj">
+      <Project>B515542B-80E5-4094-A02D-435A22178143</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_example7.vcxproj">
+      <Project>F49ACB55-BB30-4764-AC89-84FE7D684FA1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_example8.vcxproj">
+      <Project>9A15B4DB-8DEB-49D0-BC23-B5F764C41568</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_example9.vcxproj">
+      <Project>019A051D-DFB8-47D7-85BC-A0CA697E507B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_solution1.vcxproj">
+      <Project>EAAA5BCE-E629-436E-8638-B73201A7713E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_solution2.vcxproj">
+      <Project>4D508A19-6386-4E75-B0E0-7B42F650B129</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_solution3.vcxproj">
+      <Project>D2233C31-C39D-41B3-B013-AA24A84502D7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_solution4.vcxproj">
+      <Project>A2BE6730-CCA0-4759-9963-2D15EDC77B56</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_solution5.vcxproj">
+      <Project>22A54F45-2A6C-444C-A5AB-4FDE32E28643</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_io_solution6.vcxproj">
+      <Project>79FB2265-32B7-4A4B-AF1A-38EF63AEE334</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_replace_as.vcxproj">
+      <Project>683A3385-E4CD-4D74-81BC-21FCB037778A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_sequence_all_strings.vcxproj">
+      <Project>0F5DA35A-7625-4033-B4CC-D3EB0680251E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequence_sequence_iterator_demo.vcxproj">
+      <Project>DBE4EDEB-C371-4A87-9646-2B38BFD4C3FC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequences_in_depth_assignment_exact_generous_solution.vcxproj">
+      <Project>0057EE82-1B08-40BC-9AFC-38BC5109870C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequences_lexical_assignment_solution.vcxproj">
+      <Project>5BAAFFB3-71D6-415A-AE3F-E0C1CF10BFA7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequences_segments_assignment_2_solution.vcxproj">
+      <Project>190619AE-4CB8-4003-AC1D-3527B6ABB0A3</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequences_segments_assignment_hint.vcxproj">
+      <Project>CAE65725-FDE5-4AD8-8920-D354DE299F60</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequences_segments_assignment_solution.vcxproj">
+      <Project>DC445EAB-1F88-44D9-B9CD-4AF97BCA5556</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_sequences_string_assignment_1_solution.vcxproj">
+      <Project>73640824-F4B8-4961-B08E-CD2A83E73187</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_store_store_access_aligned_reads.vcxproj">
+      <Project>C329E824-DA83-4A5A-ACDC-984CE8BE0E9F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_store_store_access_aligned_reads2.vcxproj">
+      <Project>A9756EA9-CB49-41D0-9B75-F72004723178</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_store_store_diplay_aligned_reads.vcxproj">
+      <Project>BD07040C-F1DA-43BC-903B-517ADE88E4F7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_stream_lexical_cast_example.vcxproj">
+      <Project>6CBEAD48-A7F5-4993-95B5-DDF5BAF5D892</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_stream_stream_read2_fastq.vcxproj">
+      <Project>FA94CD0F-A39C-4389-8517-9E3A7F14D531</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_stream_stream_read_record_auto_format.vcxproj">
+      <Project>7025EC1E-D0AE-4BE0-B8BC-D4BBB29BA202</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_tutorial_stream_stream_read_record_fasta.vcxproj">
+      <Project>074F9E3B-5CBF-4206-A9B6-A486ED383E8B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_string_sets_assignment_1_solution.vcxproj">
+      <Project>A64956A8-0945-47E8-A77E-23E680819A4A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_string_sets_assignment_2_solution.vcxproj">
+      <Project>B605C3EE-BDFC-4C95-A741-ED7951252654</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_string_sets_assignment_3_workshop_solution.vcxproj">
+      <Project>FE3DA9E8-8FD1-47FD-953A-EB8FB7D520BF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_string_sets_assignment_3b_workshop_solution.vcxproj">
+      <Project>8F237E59-B0C3-48E1-9C08-8BC703FE11A0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/demos/demo_tutorial_string_sets_assignment_4_workshop_solution.vcxproj">
+      <Project>45F58A36-A088-4F6C-8B1A-9915B0EAD792</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/demos/demo_zscore.vcxproj">
+      <Project>05F1BAD0-CC33-487A-BFC2-16B6EBF7913A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/dfi/dfi.vcxproj">
+      <Project>5153EC49-5FD4-426B-BEB1-69D3D11778B9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/eigth_app.vcxproj">
+      <Project>215C9D71-C829-47DF-8B0E-B20AC17BB438</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/first_app/first_app.vcxproj">
+      <Project>707744F4-6734-44A2-BF9B-325469FB255D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/five_app/five_app.vcxproj">
+      <Project>5EA0CC6B-1709-43D8-8689-A6F9E88D55F9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/fourth_app/fourth_app.vcxproj">
+      <Project>78C50E76-4330-4F7A-8E86-EBC28709AFA5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/insegt/insegt.vcxproj">
+      <Project>C7EDE2F8-CCB6-41B5-9879-D9F3AAB2B6C6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/searchjoin/join.vcxproj">
+      <Project>3C24833B-7F65-4294-9708-A28904EFE70E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/masai/masai_indexer.vcxproj">
+      <Project>2EB6DC44-761F-410F-818B-9D9CB6A9F3A0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/masai/masai_mapper.vcxproj">
+      <Project>5616D85F-C841-493F-8A8C-0EDBAAF3F922</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/masai/masai_output_pe.vcxproj">
+      <Project>83A43F93-629E-4DA8-B7CC-6EAD071C36C1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/masai/masai_output_se.vcxproj">
+      <Project>9627D908-DB5F-4492-9497-6FBA4899FD50</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/mason/mason.vcxproj">
+      <Project>856A8FC7-D0BA-44F2-B4CD-1127C43DB76A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/micro_razers/micro_razers.vcxproj">
+      <Project>D9461A0E-9032-4E38-A622-784E82B8222E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/nine.app/nine.app.vcxproj">
+      <Project>0A6A2A52-2838-4C21-ACA3-F913143BE8DA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/pair_align/pair_align.vcxproj">
+      <Project>0DAED1C4-2231-4792-AE67-CA63B0BAB095</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/param_chooser/param_chooser.vcxproj">
+      <Project>528E4D6A-4EFB-442D-9B05-80371E7AE199</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/razers/razers.vcxproj">
+      <Project>5DEDA31A-F091-475A-91D6-1B2D0AFE7C47</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/razers2/razers2.vcxproj">
+      <Project>22C8CA00-30FF-4BF3-B447-DF5CC1A6C88D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/razers3/razers3.vcxproj">
+      <Project>5BE39438-BAD2-4796-B460-8FCE70462F43</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/razers3/razers3_quality2prob.vcxproj">
+      <Project>8D1A15C8-2776-4BDA-9931-F1FEF0E820D0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/razers3/razers3_simulate_reads.vcxproj">
+      <Project>CE4571EE-E7EE-473D-8363-FC337C85F022</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/rep_sep/rep_sep.vcxproj">
+      <Project>D44BF3CB-0BFA-4D3D-807A-D61F9E38A368</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/sak/sak.vcxproj">
+      <Project>E42DC49C-1660-4410-BD2F-640664581F2A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/searchjoin/search.vcxproj">
+      <Project>30F642CD-34D8-4582-AD04-7377A4D48AF2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/second_app/second_app.vcxproj">
+      <Project>C0D7F5F6-C876-40D0-BC7B-C0BE6038C5A5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/seqan_tcoffee/seqan_tcoffee.vcxproj">
+      <Project>76B75380-D158-4650-B7EE-A2DFBFB4064B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/seqcons/seqcons.vcxproj">
+      <Project>6E013A30-438E-4804-8D89-9BA1094F3DCE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/seven_app/seven_app.vcxproj">
+      <Project>7FB6F2B7-27D9-4809-9AC1-FA40AAF28EFF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/sgip/sgip.vcxproj">
+      <Project>B7F080D3-32D2-4042-A375-14ED763F20B0</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/six_app/six_app.vcxproj">
+      <Project>AAC2B3E7-C00D-413F-B60A-B22D2E3A410D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/splazers/splazers.vcxproj">
+      <Project>9FFBAF8E-263D-4E3D-B331-158E0160A1E7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/stellar/stellar.vcxproj">
+      <Project>9DD6A278-EBFC-4020-83A3-D23CC81AAEC7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/align/test_align.vcxproj">
+      <Project>643D5BA4-96E7-4FC9-A7E6-72A8DCDB88CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/tests/align_split/test_align_split.vcxproj">
+      <Project>22C44C4B-EE95-4639-8BAF-4426FA3D6D9B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/tests/alignment_free/test_alignment_free.vcxproj">
+      <Project>9ABEB6E2-1ACB-4AF4-B2CA-B483A2A2C3B9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/arg_parse/test_arg_parse.vcxproj">
+      <Project>D6C94FA5-2EFA-49D7-9CF1-8991DF579564</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/bam_io/test_bam_io.vcxproj">
+      <Project>75E4E6B3-FF4D-4923-BCDA-2007F222C7E8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_aggregate.vcxproj">
+      <Project>8DB7DC4C-C0EB-43EB-8025-958A15A89413</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_allocator.vcxproj">
+      <Project>46B62EAE-62BA-4C24-9AED-764C4C07B300</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_alphabet.vcxproj">
+      <Project>AD0B12B4-F853-4FF2-8085-B8A2BA2515A9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_concept.vcxproj">
+      <Project>FAF054FB-8484-4C53-AC5B-9E6597503C03</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_container.vcxproj">
+      <Project>711CF3B9-737E-4330-A67E-0E85EA6E21D7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_fundamental.vcxproj">
+      <Project>B0B66D45-D9E1-4DDA-8E8F-CA39A9D38984</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_iterator.vcxproj">
+      <Project>3B9BD454-3F04-420A-B01C-8C1DE4613B41</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_math.vcxproj">
+      <Project>9D6A8307-CC27-48B8-AFF3-8FD19F6E9A67</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_metaprogramming.vcxproj">
+      <Project>0D0255B5-3372-4BB5-9749-571758C99989</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_parallelism.vcxproj">
+      <Project>EFA42014-ED3A-4209-9F07-4A76B85E427A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_proxy.vcxproj">
+      <Project>D08CAD7E-97C7-4E1C-81ED-E42ADC2AC2D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/basic/test_basic_smart_pointer.vcxproj">
+      <Project>6F6408F2-6DFF-4054-B31E-7A39910BFCB7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/consensus/test_consensus.vcxproj">
+      <Project>60A221EE-6423-4544-B73E-D102F9F93D5A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/file/test_file.vcxproj">
+      <Project>5806D84E-32CE-46A6-8519-0AB21C66D338</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/find/test_find.vcxproj">
+      <Project>44E9D991-1BAE-4719-88A7-6074E7BFD901</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/tests/find_motif/test_find_motif.vcxproj">
+      <Project>D99991DF-CC03-4801-95BF-C484577F7DE6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/swift_local/test_find_swift.vcxproj">
+      <Project>9CA1CEC2-C939-441A-BEB2-97AB3CC38E28</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/param_chooser/test_funcs_param_chooser.vcxproj">
+      <Project>FA7E8CA3-C1CE-463C-9746-81F75FB36FEC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/gff_io/test_gff_io.vcxproj">
+      <Project>07D72F9F-BA0F-47BB-9035-F095FD202861</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/graph_algorithms/test_graph_algorithms.vcxproj">
+      <Project>330729B5-C32A-4FB7-91B8-C0FD7DFAA482</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/graph_align/test_graph_align.vcxproj">
+      <Project>B895ABB6-666E-4C3B-A789-E73F8A2EE12D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/graph_msa/test_graph_msa.vcxproj">
+      <Project>200D312F-8688-4155-ACD2-F83800B93CFD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/graph_types/test_graph_types.vcxproj">
+      <Project>A154E239-BE6A-401F-8746-C1F850BBDA4B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_creation.vcxproj">
+      <Project>A7369BCC-0FE6-481D-AF88-B857716B0B2B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_crosscompare_char.vcxproj">
+      <Project>2AE83B3B-FD92-4668-A385-79DBF9A1CE2F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_crosscompare_char_dfi.vcxproj">
+      <Project>747384C5-6146-43CB-BF52-364DC81D964A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_crosscompare_dna.vcxproj">
+      <Project>8591C993-2BC9-4EA4-AD8F-286F0FC93AAD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_crosscompare_dna_dfi.vcxproj">
+      <Project>4F4F935E-ACBF-4C8F-9B43-425EB685E315</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_drawing.vcxproj">
+      <Project>5B9A76FD-A198-4152-8320-C9FBB0F8A214</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_fm.vcxproj">
+      <Project>6D6AB5E3-A71E-4CC3-8C64-2B516BBAA5C5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_fm_rank_dictionary.vcxproj">
+      <Project>B121A525-B3F3-483C-8366-9BCCDF385DFC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_qgram.vcxproj">
+      <Project>B16B2B4A-2D44-4170-9BB0-D27863DA5067</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_repeats.vcxproj">
+      <Project>A2ACB008-E078-45EB-9693-4F6B7EBAE23A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_sa_bwtwalk.vcxproj">
+      <Project>7A238FBD-AF36-4215-A650-97069798A95A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_shapes.vcxproj">
+      <Project>0C061E8A-3D1D-4E79-A90B-56B5A45F5E10</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/index/test_index_stree_iterators.vcxproj">
+      <Project>B01CD510-CFA5-41C6-89F1-F14DCAADAABC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/map/test_map.vcxproj">
+      <Project>6C9E4B23-1088-410F-89C9-356B665B9773</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/misc/test_misc.vcxproj">
+      <Project>540499D9-0F0C-4898-A28C-8711E79D45DD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/misc/test_misc_cmdparser.vcxproj">
+      <Project>E854A620-62DA-4097-9E86-7CA1CFAC429A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/modifier/test_modifier.vcxproj">
+      <Project>F097E896-8884-455A-9EAC-4E23ED2C0684</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/tests/multiple_translation_units/test_multiple_translation_units.vcxproj">
+      <Project>55E3230E-4226-4680-9B03-3ED55AD429C5</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/parallel/test_parallel.vcxproj">
+      <Project>1DFCFD9A-A47E-476A-9707-085A524816ED</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/tests/parse_lm/test_parse_lm.vcxproj">
+      <Project>49D499D9-76B9-47E2-BD7F-5FD11370DC9A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/pipe/test_pipe.vcxproj">
+      <Project>343D20CB-D1FD-443C-A8B2-F79E6F08F0EA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/random/test_random.vcxproj">
+      <Project>06865BED-66FE-4753-A771-4B3881DF3E86</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/score/test_score.vcxproj">
+      <Project>A30E5F3A-AF33-4A79-AC70-63B963BEEC65</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/seeds/test_seeds.vcxproj">
+      <Project>DAEB8B23-52A9-42AE-8657-D596E80E1AD3</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/seq_io/test_seq_io.vcxproj">
+      <Project>9E7E934F-8AD2-4DFC-8576-FF91B4BF51A4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/sequence/test_sequence.vcxproj">
+      <Project>A9930D05-1F62-4C33-94A9-961D4D7CFF7D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/sequence_journaled/test_sequence_journaled.vcxproj">
+      <Project>0DF24127-77DB-46CC-A4D7-263012F46EDB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/tests/statistics/test_statistics.vcxproj">
+      <Project>BAE8F382-9482-44CC-A5D2-30A30829C736</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/store/test_store.vcxproj">
+      <Project>B27329AD-C41B-459B-840B-DA7339D88152</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/tests/stream/test_stream.vcxproj">
+      <Project>21D23D53-8F6F-4EE8-996C-0F240137C054</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/third_app/third_app.vcxproj">
+      <Project>A138B401-8406-4F52-AE4D-F87E89D17D9F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/apps/tree_recon/tree_recon.vcxproj">
+      <Project>73F0924A-67E8-4D8B-8EE0-967D54DD39BD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/apps/variant_comp/variant_comp.vcxproj">
+      <Project>DA1F93AB-EAE4-4259-ABCC-8DE16C4153B8</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

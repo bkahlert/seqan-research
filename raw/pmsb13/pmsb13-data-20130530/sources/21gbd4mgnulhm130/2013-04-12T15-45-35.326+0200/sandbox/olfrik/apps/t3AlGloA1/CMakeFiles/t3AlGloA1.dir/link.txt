@@ -1,0 +1,1 @@
+/usr/bin/c++    -DSEQAN_ENABLE_TESTING=0 -W -Wall -Wno-long-long -fstrict-aliasing -Wstrict-aliasing -pedantic -Wno-variadic-macros -fopenmp -O3 -DNDEBUG -DSEQAN_ENABLE_DEBUG=0    CMakeFiles/t3AlGloA1.dir/t3AlGloA1.cpp.o  -o ../../../../bin/t3AlGloA1 -rdynamic -lrt -lz 

@@ -1,0 +1,1 @@
+clang++    -DSEQAN_ENABLE_TESTING=0  -fno-omit-frame-pointer -fopenmp   CMakeFiles/seqc_test.dir/seqc_test.cpp.o CMakeFiles/seqc_test.dir/read_stats.cpp.o  -o ../../../../bin/seqc_test -rdynamic 

@@ -1,0 +1,103 @@
+\hypertarget{namespaceseqan}{\section{seqan Namespace Reference}
+\label{namespaceseqan}\index{seqan@{seqan}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structseqan_1_1_g_fasta_record}{G\-Fasta\-Record}
+\item 
+struct \hyperlink{structseqan_1_1_g_match}{G\-Match}
+\begin{DoxyCompactList}\small\item\em Struct in which a computed match is saved. \end{DoxyCompactList}\item 
+struct \hyperlink{structseqan_1_1_g_score_storage}{G\-Score\-Storage}
+\begin{DoxyCompactList}\small\item\em Struct to contain the momentarily highest score and the related max\-Id, to determine the best match. \end{DoxyCompactList}\item 
+struct \hyperlink{structseqan_1_1_memory_sample}{Memory\-Sample}
+\item 
+struct \hyperlink{structseqan_1_1_performance_sample}{Performance\-Sample}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\-Stream , typename T\-Record $>$ }\\int \hyperlink{namespaceseqan_a845eac8229b25534b1893d9547ff86db}{G\-Assign\-Cluster} (T\-Stream \&out\-Stream, T\-Record \&new\-Record, T\-Record \&cluster\-Record)
+\begin{DoxyCompactList}\small\item\em assigns a cluster I\-D to the relevant Record\-I\-D \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Score , typename T\-Sequence $>$ }\\bool \hyperlink{namespaceseqan_aeda48428fe6fb5b47547739a2e304d55}{G\-Check\-Cluster\-Assign} (T\-Score \&score, T\-Score \&threshold, \hyperlink{structseqan_1_1_g_fasta_record}{G\-Fasta\-Record}$<$ T\-Sequence $>$ \&new\-Record, \hyperlink{structseqan_1_1_g_fasta_record}{G\-Fasta\-Record}$<$ T\-Sequence $>$ \&cluster\-Record, double \&length\-Threshold)
+\begin{DoxyCompactList}\small\item\em checks whether the new record should be assigned to the cluster (represented by cluster\-Record). The function checks whether the new record should be assigned to the cluster (represented by cluster\-Record). If the given score is greater or equal the threshold and if the length of the new record's sequence does not exceed ($<$= and $>$=) the length of the cluster master (+-\/ relative length\-Threshold), the function returns true. \end{DoxyCompactList}\item 
+int \hyperlink{namespaceseqan_abfc1b9b4fd3e0c63871678c69eab5bf2}{parse\-Line} (char $\ast$line)
+\item 
+int \hyperlink{namespaceseqan_abfe039b148512fc0d59f04e901432c92}{get\-V\-Value} ()
+\item 
+int \hyperlink{namespaceseqan_a943905857877eecc596a716ee29e2d63}{get\-P\-Value} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceseqan_a845eac8229b25534b1893d9547ff86db}{\index{seqan@{seqan}!G\-Assign\-Cluster@{G\-Assign\-Cluster}}
+\index{G\-Assign\-Cluster@{G\-Assign\-Cluster}!seqan@{seqan}}
+\subsubsection[{G\-Assign\-Cluster}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Stream , typename T\-Record $>$ int seqan\-::\-G\-Assign\-Cluster (
+\begin{DoxyParamCaption}
+\item[{T\-Stream \&}]{out\-Stream, }
+\item[{T\-Record \&}]{new\-Record, }
+\item[{T\-Record \&}]{cluster\-Record}
+\end{DoxyParamCaption}
+)}}\label{namespaceseqan_a845eac8229b25534b1893d9547ff86db}
+
+
+assigns a cluster I\-D to the relevant Record\-I\-D 
+
+this function gets a stream, in which the output is written, the record which should be assigned and the cluster to which the record should be assigned, so that the output stream contains the record with a cluster\-I\-D. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em out\-Stream} & stream, in which the output is written \\
+\hline
+\mbox{\tt in}  & {\em new\-Record} & record which will be assigned to a cluster \\
+\hline
+\mbox{\tt in}  & {\em cluster\-Record} & cluster to which the record will be assigned \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceseqan_aeda48428fe6fb5b47547739a2e304d55}{\index{seqan@{seqan}!G\-Check\-Cluster\-Assign@{G\-Check\-Cluster\-Assign}}
+\index{G\-Check\-Cluster\-Assign@{G\-Check\-Cluster\-Assign}!seqan@{seqan}}
+\subsubsection[{G\-Check\-Cluster\-Assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Score , typename T\-Sequence $>$ bool seqan\-::\-G\-Check\-Cluster\-Assign (
+\begin{DoxyParamCaption}
+\item[{T\-Score \&}]{score, }
+\item[{T\-Score \&}]{threshold, }
+\item[{G\-Fasta\-Record$<$ T\-Sequence $>$ \&}]{new\-Record, }
+\item[{G\-Fasta\-Record$<$ T\-Sequence $>$ \&}]{cluster\-Record, }
+\item[{double \&}]{length\-Threshold}
+\end{DoxyParamCaption}
+)}}\label{namespaceseqan_aeda48428fe6fb5b47547739a2e304d55}
+
+
+checks whether the new record should be assigned to the cluster (represented by cluster\-Record). The function checks whether the new record should be assigned to the cluster (represented by cluster\-Record). If the given score is greater or equal the threshold and if the length of the new record's sequence does not exceed ($<$= and $>$=) the length of the cluster master (+-\/ relative length\-Threshold), the function returns true. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em score} & score of comparison of new\-Record to cluster\-Master (cluster\-Record) \\
+\hline
+\mbox{\tt in}  & {\em threshold} & threshold to compare against \\
+\hline
+\mbox{\tt in}  & {\em new\-Record} & record which is either assigned to a cluster or forms a new cluster \\
+\hline
+\mbox{\tt in}  & {\em cluster\-Record} & cluster master of the cluster to which the new\-Record would be assigned \\
+\hline
+\mbox{\tt in}  & {\em length\-Threshold} & relative acceptable sequence length difference of cluster master to new\-Record \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceseqan_a943905857877eecc596a716ee29e2d63}{\index{seqan@{seqan}!get\-P\-Value@{get\-P\-Value}}
+\index{get\-P\-Value@{get\-P\-Value}!seqan@{seqan}}
+\subsubsection[{get\-P\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int seqan\-::get\-P\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceseqan_a943905857877eecc596a716ee29e2d63}
+\hypertarget{namespaceseqan_abfe039b148512fc0d59f04e901432c92}{\index{seqan@{seqan}!get\-V\-Value@{get\-V\-Value}}
+\index{get\-V\-Value@{get\-V\-Value}!seqan@{seqan}}
+\subsubsection[{get\-V\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int seqan\-::get\-V\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceseqan_abfe039b148512fc0d59f04e901432c92}
+\hypertarget{namespaceseqan_abfc1b9b4fd3e0c63871678c69eab5bf2}{\index{seqan@{seqan}!parse\-Line@{parse\-Line}}
+\index{parse\-Line@{parse\-Line}!seqan@{seqan}}
+\subsubsection[{parse\-Line}]{\setlength{\rightskip}{0pt plus 5cm}int seqan\-::parse\-Line (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line}
+\end{DoxyParamCaption}
+)}}\label{namespaceseqan_abfc1b9b4fd3e0c63871678c69eab5bf2}

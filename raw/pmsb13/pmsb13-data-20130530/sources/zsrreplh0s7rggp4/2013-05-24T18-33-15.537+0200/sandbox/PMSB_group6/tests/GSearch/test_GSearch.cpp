@@ -1,0 +1,78 @@
+//autor:Jakob und Hannes
+
+#include <seqan/basic.h>
+#include <seqan/file.h>
+
+#include "test_GSearch_systemTest.h"
+#include "test_GCheckClusterMaster.h"
+#include "test_GComputeMatch.h"
+#include "test_GParseMasterId.h"
+#include "test_GEvaluateScore.h"
+#include "test_GPostProcessMatches.h"
+#include "test_GWriteMatches.h"
+#include "test_GScore.h"
+#include "test_GScorePeptideQGram.h"
+
+
+SEQAN_BEGIN_TESTSUITE(test_Search)
+{
+	// Call tests.
+	SEQAN_CALL_TEST(test_GScore_CQ_Dna);
+	SEQAN_CALL_TEST(test_GScore_CQ_Rna);
+	SEQAN_CALL_TEST(test_GScore_LA_Dna);
+	SEQAN_CALL_TEST(test_GScore_LA_Rna);
+	SEQAN_CALL_TEST(test_GScore_GA_Dna);
+	SEQAN_CALL_TEST(test_GScore_GA_Rna);
+	SEQAN_CALL_TEST(test_GScore_CQ_Rna_empty);
+	SEQAN_CALL_TEST(test_GScore_LA_Rna_empty);
+	SEQAN_CALL_TEST(test_GScore_GA_Rna_empty);
+	SEQAN_CALL_TEST(test_GScore_CQ_Dna_OneShort);
+	SEQAN_CALL_TEST(test_GScore_CQ_Dna_OtherShort);
+	SEQAN_CALL_TEST(test_GScore_CQ_Dna_BothShort);
+	SEQAN_CALL_TEST(test_GScorePeptideQGram_CQ_AA);
+	SEQAN_CALL_TEST(test_GScorePeptideQGram_LA_AA);
+	SEQAN_CALL_TEST(test_GScorePeptideQGram_GA_AA);
+	SEQAN_CALL_TEST(test_GScorePeptideQGram_CQ_AA_empty);
+	SEQAN_CALL_TEST(test_GScorePeptideQGram_LA_AA_empty);
+	SEQAN_CALL_TEST(test_GScorePeptideQGram_GA_AA_empty);
+	SEQAN_CALL_TEST(test_GParseMasterID_dummy);
+	SEQAN_CALL_TEST(test_GParseMasterID_noMaster);
+	SEQAN_CALL_TEST(test_GWriteMatches_dummy);
+	SEQAN_CALL_TEST(test_GEvaluateScore_dummy);
+	SEQAN_CALL_TEST(test_GEvaluateScore_dummy2);
+	SEQAN_CALL_TEST(test_GEvaluateScore_sameId);
+	SEQAN_CALL_TEST(test_GEvaluateScore_sameScore);
+	SEQAN_CALL_TEST(test_GEvaluateScore_noId);
+	SEQAN_CALL_TEST(test_GEvaluateScore_noScore);
+	SEQAN_CALL_TEST(test_GPostProcessMatches_dummy1);
+	SEQAN_CALL_TEST(test_GPostProcessMatches_dummy2);
+	SEQAN_CALL_TEST(test_GPostProcessMatches_short1);
+	SEQAN_CALL_TEST(test_GPostProcessMatches_short2);
+	SEQAN_CALL_TEST(test_GPostProcessMatches_alreadySorted);
+	SEQAN_CALL_TEST(test_GPostProcessMatches_empty);
+	SEQAN_CALL_TEST(test_GComputeMatch_dummy);
+	SEQAN_CALL_TEST(test_GComputeMatch_empty);
+	SEQAN_CALL_TEST(test_GCheckClusterMaster_dummy);
+	SEQAN_CALL_TEST(test_GCheckClusterMaster_halfMaster);
+	SEQAN_CALL_TEST(test_GCheckClusterMaster_withoutMaster);
+	SEQAN_CALL_TEST(test_GCheckClusterMaster_empty);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_emptyFiles_LAMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_emptyFiles_CQMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_emptyFiles_CQMode_unclustered);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_toyFiles_LAMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_toyFiles_CQMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_toyFiles_CQMode_unclustered);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_rfamFiles_LAMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_rfamFiles_GAMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_rfamFiles_LAMode_unclustered);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_rfamFiles_CQMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_rfamFiles_CQMode_unclustered);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_pfamFiles_LAMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_pfamFiles_GAMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_pfamFiles_LAMode_unclustered);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_pfamFiles_CQMode);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_pfamFiles_CQMode_unclustered);
+	SEQAN_CALL_TEST(test_GSearch_systemTest_speicherzugriffsfehler_0517);
+	
+}
+SEQAN_END_TESTSUITE

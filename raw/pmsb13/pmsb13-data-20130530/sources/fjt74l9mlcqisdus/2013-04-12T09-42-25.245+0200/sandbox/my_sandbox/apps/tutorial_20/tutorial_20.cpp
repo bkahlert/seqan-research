@@ -1,0 +1,14 @@
+#include <iostream>
+#include <seqan/graph_types.h>
+#include <seqan/graph_algorithms.h>
+
+
+using namespace seqan;
+
+int main ()
+{
+    String<int,int> x;
+	addValue(x,(1,2));
+	std::cout<<"x"<<std::endl;
+	return 0;
+}

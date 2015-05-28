@@ -1,0 +1,1443 @@
+QueryRecordID	MatchId	Q-Gram-Score	Global-Alignment-Score
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01552205.1/338-220   8030:Salmo salar (Atlantic salmon) 	482	74
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         | |||||||||||||| |||||||||| || ||||||||||||||||||
+        GC-UUACGGCCAUACCAACCUGGGUACG-CCUGAUCUCGUCUGAUCUCGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+        |||| ||| || |||| |||| ||||||||||||||||||||| |     
+        AAGC-UAAGCAGGGUCUGGCC-UGGUUAGUACUUGGAUGGGAA-ACCGCC
+
+    100     .    :    .    :     
+        ------------------------
+                                
+        UGGGAAAACCAAGCGCAGCAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01000620.1/8903-8780   8030:Salmo salar (Atlantic salmon) 	402	72
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGC-CAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCG
+         | ||||||| |||||  ||||||||| | ||||||||||||||||||||
+        GC-UUACGGCUCAUACUUGCCUGGGUAAG-CCCGAUCUCGUCUGAUCUCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGCUUAACCAAGGUCGGGCCUUG-GUUAGUACUUGGAUGGGAAGA---
+        ||||||||| || ||||| ||| || ||||||||||||||||| |||   
+        GAAGCUUAAGCAGGGUCGUGCC-UGCGUUAGUACUUGGAUGGG-AGACCG
+
+    100     .    :    .    :    .    
+        ----------------------------
+                                    
+        CCUUGGAAUUUACCAGGUGCUGUAAUCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01466351.1/1347-1461   8030:Salmo salar (Atlantic salmon) 	379	42
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         | |||||||||||||||||||||||||  | ||||||||||||||||||
+        GC-UUACGGCCAUACCAGCCUGGGUACG-UCUGAUCUCGUCUGAUCUCGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGC-UUA-AC---CA-AGGU-CGGGCCU-U----GGU-UAGU-ACUUGG
+        ||||  || ||    | |  | |     | |    ||| || | ||||  
+        AAGCGAUAUACUUAAAUAUUUACAAAAAUAUGAGGGGUGUACUCACUU--
+
+    100     .    :    .    : 
+        AUGGGAAGA-----------
+         || | |||           
+        UUGUG-AGAUACUGUAGAUA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01465892.1/5371-5484   8030:Salmo salar (Atlantic salmon) 	367	61
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUAC--GGCCAUACCAGCCUGGGUAC-GCCCCGAUCUCGUCUGAUCUC
+            ||  |   ||||| |||||  ||| | |||||||||||||||||||
+        ----ACAAGAAUAUACCUGCCUGAAUACAG-CCCGAUCUCGUCUGAUCUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA---
+        |||||| ||| || ||||| ||| ||||||||||||||||||| |||   
+        GGAAGC-UAAGCAGGGUCGUGCC-UGGUUAGUACUUGGAUGGG-AGACCG
+
+    100     .    :    .    :   
+        ----------------------
+                              
+        CCUGGGAAUACCAGGUGCUGUA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01473036.1/227-97   8030:Salmo salar (Atlantic salmon) 	333	74
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAG-CCUGGGUACGCCCCGAUCU-CGUCUGAUCU-
+         | ||||||||||||||| ||||||||| ||||||||| |||||||||| 
+        GC-UUACGGCCAUACCAGCCCUGGGUACUCCCCGAUCUCCGUCUGAUCUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAA-CCAAGG-UCGGGCCUUGGUUAGUACUUGG-AUGGGAAG
+        ||||||| ||| ||| || | |||||| ||||||||||||| ||||| ||
+        CGGAAGC-UAAGCCAGGGUUGGGGCCUGGGUUAGUACUUGGAAUGGGGAG
+
+    100     .    :    .    :    .    :    
+        A--------------------------------
+        |                                
+        ACCCCCCUGGGGAAUACCAAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01489104.1/1288-1170   8030:Salmo salar (Atlantic salmon) 	333	66
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGGA
+          |||||||||||||||| ||  |||| || ||| ||||||||| |||||
+        GAUUACGGCCAUACCAGCAUGAAUACG-CCAGAUAUCGUCUGAUGUCGGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA------
+        ||| ||| || ||||||||| ||||||||||||||||||| |||      
+        AGC-UAAGCAGGGUCGGGCC-UGGUUAGUACUUGGAUGGG-AGACCGCGU
+
+    100     .    :    .    :    
+        -----------------------
+                               
+        GGGAAUACCAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01554940.1/152-42   8030:Salmo salar (Atlantic salmon) 	333	54
+      0     .    :    .    :    .    :    .    :    .    : 
+        CU-UUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         | ||||||||||| |||||||||||     ||    |  |||||||| |
+        -UCUUACGGCCAUAUCAGCCUGGGUA-----CG----C--CUGAUCUCAG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+        || | ||| || ||||||||| ||||||||||||||||||| |||     
+        AA-CCUAAGCAGGGUCGGGCC-UGGUUAGUACUUGGAUGGG-AGACCGCC
+
+    100     .    :    .    :    .  
+        --------------------------
+                                  
+        UGGUACAUACCAAGUGCUGUACAGAU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01511570.1/98-1   8030:Salmo salar (Atlantic salmon) 	321	59
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGGA
+                 |||||||||||||||||||||||||||| |||||||||   
+        ---------CAUACCAGCCUGGGUACGCCCCGAUCUCUUCUGAUCUCCUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA------
+        ||| ||| || |||||||||  || ||| | ||||||||| |||      
+        AGC-UAAUCAGGGUCGGGCC-CGGGUAGAAAUUGGAUGGG-AGACCGCCU
+
+    100     .    : 
+        ----------
+                  
+        GAGAAUACCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01060884.1/637-755   8030:Salmo salar (Atlantic salmon) 	310	56
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         |  || |   |||| |  ||   |||| |||||||||||| ||||||||
+        GC-AUAAGAAAAUACAAAACUAAAUACG-CCCGAUCUCGUCCGAUCUCGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+        |||| ||| || ||||||||| ||||||||||||||||||| |||     
+        AAGC-UAAGCAGGGUCGGGCC-UGGUUAGUACUUGGAUGGG-AGACCGCC
+
+    100     .    :    .    :     
+        ------------------------
+                                
+        UGGGAAUACCAGGUGCUGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01237087.1/5060-4939   8030:Salmo salar (Atlantic salmon) 	310	69
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCU-GGGUACGCCCCG-AUCUCGUCUG-AUCU
+         | || ||||||||||||||| |||||  ||||| ||||| |||| ||||
+        GC-UUGCGGCCAUACCAGCCUGGGGUA--CCCCGAAUCUC-UCUGAAUCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUAC--UUGGAUGGGAAGA
+        ||||||| ||| || ||||||||| ||||||||||  ||||||||| |||
+        CGGAAGC-UAAGCAGGGUCGGGCC-UGGUUAGUACUUUUGGAUGGG-AGA
+
+    100     .    :    .    :    .     
+        -----------------------------
+                                     
+        CCGCCUGGGAAUACCAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01550307.1/724-848   8030:Salmo salar (Atlantic salmon) 	287	75
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGU-ACGCCCCGAUCUCGUCUGAUCU-C
+         | |||||||||||||||||||||| ||| ||||||||| |||||||| |
+        GC-UUACGGCCAUACCAGCCUGGGUAACG-CCCGAUCUCAUCUGAUCUAC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAAGCUUAACCAAGG-UCGGGCCUUGG-UUAGUACUUGG-AUGGGAAGA
+        |||||| |||||| || ||||||| ||| ||||||||||| || ||||||
+        GGAAGC-UAACCAGGGUUCGGGCCCUGGUUUAGUACUUGGAAU-GGAAGA
+
+    100     .    :    .    :    .     
+        -----------------------------
+                                     
+        CCGCCCUGGGAAUACCAGUGCUGUAAGCC
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01463455.1/1442-1324   8030:Salmo salar (Atlantic salmon) 	287	63
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCU-GGGUACGCCCCGAUCUCGUCUGAUCUCG
+         | ||||| ||||| | | || | ||||| || ||||||||  |||||||
+        GC-UUACGUCCAUAUCUG-CUCGUGUACG-CCUGAUCUCGUGGGAUCUCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA----
+        ||||| ||| || ||||||||| ||||||||||||||||||| |||    
+        GAAGC-UAAGCAGGGUCGGGCC-UGGUUAGUACUUGGAUGGG-AGACCGC
+
+    100     .    :    .    :    . 
+        -------------------------
+                                 
+        CUGGGAAUACCAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01489878.1/490-608   8030:Salmo salar (Atlantic salmon) 	264	66
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         | | ||||||||| ||||| ||||||| |||||| | ||||||||| ||
+        GC-UCACGGCCAUAUCAGCCGGGGUACG-CCCGAUAUAGUCUGAUCUUGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+        |||  ||| || ||||||||| ||||||||||||||||||| |||     
+        AAG-GUAAGCAGGGUCGGGCC-UGGUUAGUACUUGGAUGGG-AGACGCAA
+
+    100     .    :    .    :     
+        ------------------------
+                                
+        CCAGAAUCCCAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01551805.1/121-239   8030:Salmo salar (Atlantic salmon) 	264	63
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACC-AGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCG
+         | |||||||| |||| | |||||||| | ||||||||| ||||||||||
+        GC-UUACGGCCUUACCUA-CCUGGGUA-GUCCCGAUCUCUUCUGAUCUCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA----
+        ||| | ||| || ||| ||  | ||||||||||||||||||| |||    
+        GAAAC-UAAUCAGGGUUGGUUC-UGGUUAGUACUUGGAUGGG-AGACUGC
+
+    100     .    :    .    :    . 
+        -------------------------
+                                 
+        CUGGGAAUAGCACGUGCUGUACGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01553047.1/154-29   8030:Salmo salar (Atlantic salmon) 	241	65
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         | |||| |||||||||||||| |||| |||| ||||||| |||||||||
+        GC-UUACUGCCAUACCAGCCUGAGUAC-CCCCCAUCUCGUUUGAUCUCGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCU-UAA-CCAAGGUCGGGCCUUGGUUAGUACUUG-GAUGGGAAGA--
+        ||  | |||  |||||||||||| ||||||||||| | |||| | |||  
+        AA-AUCUAAGACAAGGUCGGGCC-UGGUUAGUACUAGUGAUGAG-AGACC
+
+    100     .    :    .    :    .    :  
+        -------------------------------
+                                       
+        GUCCUGAGGAAUACCAUCGAUGCUGUACGCC
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01554980.1/147-14   8030:Salmo salar (Atlantic salmon) 	241	70
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUA-CGGCCAUACCAG-CCUGG-GUACGCCCCGAUCUCG-UCUGAUCU
+        | ||| |||||||||||| ||||| |||||||||||||||| || |||||
+        C-UUACCGGCCAUACCAGCCCUGGAGUACGCCCCGAUCUCGUUCAGAUCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        C-GGAAGCUUAACCAA-GGU-CGGGCCUUGGU-U-AGUAC-UUGGAUGGG
+        | ||||||  || ||| ||| |||||| |||| | ||||| |||||||||
+        CUGGAAGCCAAAGCAAGGGUCCGGGCC-UGGUCUAAGUACUUUGGAUGGG
+
+    100     .    :    .    :    .    :    .  
+        AAGA--------------------------------
+        || |                                
+        AACAACCGCCUUGGGAAUACCCACGUGCUGUUAAGC
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01490626.1/108-226   8030:Salmo salar (Atlantic salmon) 	241	65
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCC-UGGGUACGCCCCGAUCUCGUCUGAUCUCG
+         |  || ||||||| ||||| | |||||| ||||||||||| ||||||||
+        GC-CUAUGGCCAUAUCAGCCAU-GGUACG-CCCGAUCUCGUUUGAUCUCG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA----
+        |||| |||| || |||||||| || | ||||||||||||||| |||    
+        GAAG-UUAAGCAGGGUCGGGCGUU-GCUAGUACUUGGAUGGG-AGACCGC
+
+    100     .    :    .    :    . 
+        -------------------------
+                                 
+        CUGGGAAUACCAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01146017.1/1105-983   8030:Salmo salar (Atlantic salmon) 	218	33
+      0     .    :    .    :    .    :    .    :    .    : 
+        -------CUUU---A-CG-GCCAUACCAGCCUGGGUACGCCCCGAUCUCG
+                |||   | ||   ||||  |   |   ||       ||  ||
+        ACAGACAAUUUGACAUCGUUUCAUAAUA-AAU-AAUA--AAAAAAU-ACG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCUGAUCUCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUG
+         | ||||||| |||| ||| || ||||||||| |||||||||||||||||
+        CCCGAUCUCGAAAGC-UAAGCAGGGUCGGGCC-UGGUUAGUACUUGGAUG
+
+    100     .    :    .    :    .    :  
+        GGAAGA-------------------------
+        || |||                         
+        GG-AGACCGCCUGGGAAUACCAGGUGCUGUA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01549531.1/367-492   8030:Salmo salar (Atlantic salmon) 	218	68
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGG-CCAUACCAGC-CUGGGUACGCCCCGAUCUCGU-CUGAUCU
+         | |||||| |||||||||| |||||||| || |||||||||  ||||||
+        GC-UUACGGACCAUACCAGCUCUGGGUACUCCACGAUCUCGUGAUGAUCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAA-GCUUAACCA-AGGUCGGG-CCUUGGUUAGUACUUGGAUGGGAAG
+         |||| || ||| ||  ||||||| || ||||||||||||||||||| ||
+        UGGAACGC-UAAGCACGGGUCGGGUCC-UGGUUAGUACUUGGAUGGG-AG
+
+    100     .    :    .    :    .    : 
+        A-----------------------------
+        |                             
+        ACUGCCUGGGAAUACUAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01114645.1/2182-2078   8030:Salmo salar (Atlantic salmon) 	195	46
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGG---UACGC-CCC-GAUCUCGUCUGAUC
+                       | ||||||   ||| | ||| || | || ||||||
+        ---------------ACCCUGGGCCAUAC-CACCCUGAACACGCCUGAUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-
+        |||| ||| ||| || |||| |||| |||||||||||||||| || ||  
+        UCGGUAGC-UAAGCAGGGUCAGGCC-UGGUUAGUACUUGGAU-GG-AG-G
+
+    100     .    :    .    :    .  
+        --------------------------
+                                  
+        UCCACCUGGUAAUAUCAAGUGCUGUA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01506437.1/32-95   8030:Salmo salar (Atlantic salmon) 	192	27
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGGA
+                                                          
+        --------------------------------------------------
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA------
+         || | | | |||||||||| ||| |||||||||||| || |||      
+        -GC-U-AGC-AGGUCGGGCC-UGG-UAGUACUUGGAU-GG-AGACCGCCU
+
+    100     .    :    .    :   
+        ----------------------
+                              
+        GGGAUACCAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01018840.1/13688-13595   8030:Salmo salar (Atlantic salmon) 	183	36
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGGA
+                            |  ||||  || |  |   ||||||| | |
+        --------------------GCUUACG-GCC-A--U--ACUGAUCUUGCA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA------
+        ||| ||| ||||||| ||||   ||||||||||||||||| |||      
+        AGC-UAAGCAAGGUCAGGCC-AAGUUAGUACUUGGAUGGG-AGACUGCUU
+
+    100     .    :    .    :    
+        -----------------------
+                               
+        GGGAAUACCAGGUGCUGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01012929.1/10036-10142   8030:Salmo salar (Atlantic salmon) 	172	33
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CA-UAC-CAGCCUGGGUACGCCCCGAUCUCGUCUGAUCU
+         ||||||||   | |||  | | |   ||   | | |  |   | | |||
+        GUUUACGGCAUUAUUACAUAUCAU--AUA-AACAC-A-AU--ACAG-UCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUG--G-AUGGGAAG
+        ||||||| |||  | ||||||||| |||||||||||||  |  |||||| 
+        CGGAAGC-UAAGUAGGGUCGGGCC-UGGUUAGUACUUGCUGCCUGGGAAU
+
+    100     .    :    .   
+        A----------------
+        |                
+        ACCAGCUGCAGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01553177.1/125-8   8030:Salmo salar (Atlantic salmon) 	160	54
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAG-CCUG-GGUACGCCCCGAUCUCGUCUGAUCUC
+         | |||||||||||   | |||| | | | |||| |||| || |||||||
+        GC-UUACGGCCAUA-UGGACCUGUGCU-CACCCC-AUCUUGUAUGAUCUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA---
+        | | || | |||  ||||||||| |||| ||||||||||| ||||||   
+        GCAGGC-UCACCUCGGUCGGGCC-UGGUGAGUACUUGGAU-GGAAGAUCG
+
+    100     .    :    .    :    . 
+        -------------------------
+                                 
+        CAUAGGAACCCAAGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01465935.1/146-28   8030:Salmo salar (Atlantic salmon) 	160	50
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUAC-CAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCG
+         | |||||||||  | ||||||||||||  ||| ||||| ||||||||| 
+        GC-UUACGGCCA-GCACAGCCUGGGUAC-ACCCUAUCUCCUCUGAUCUCA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGCUUAACCAAGGUCGGGCCUUGGUUAG-UACUUGGAUGGGAAGA---
+           || |||    ||||||||| ||| ||| | | |||||||| |||   
+        UUCGC-UAAUGUCGGUCGGGCC-UGGGUAGAUGC-UGGAUGGG-AGACCG
+
+    100     .    :    .    :    .  
+        --------------------------
+                                  
+        CCUGGGAAUACUACUAGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01489356.1/323-441   8030:Salmo salar (Atlantic salmon) 	160	37
+      0     .    :    .    :    .    :    .    :    .    : 
+        CU-UUAC-GGCCAU-ACCAGCCUGGGUACGCCCCGAUCUCG-UCUGAUCU
+         | ||||   || |    ||  |  |||   | |||| | | ||||||||
+        -UCUUACAUCCCUUGGGGAG-AU-UGUA-AUCACGAUAU-GCUCUGAUCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA--
+        ||||||| |||   ||| | |||| || |||| ||||||||||| |||  
+        CGGAAGC-UAAGGGAGGCCUGGCC-UGAUUAGAACUUGGAUGGG-AGACC
+
+    100     .    :    .    :    .   
+        ---------------------------
+                                   
+        GCCUGGGAAUACCAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01498758.1/128-12   8030:Salmo salar (Atlantic salmon) 	160	60
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGGA
+          ||||| ||||||||||| ||||||| || ||||||||||||| | |||
+        GGUUACGUCCAUACCAGCCAGGGUACG-CCAGAUCUCGUCUGAUGUUGGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA------
+        ||| ||| || ||||||| | ||||||||| ||||  ||| |||      
+        AGC-UAAGCAGGGUCGGGGC-UGGUUAGUAAUUGG-CGGG-AGACACCCU
+
+    100     .    :    .    :   
+        ----------------------
+                              
+        AGGAAUCACAGGUGCCUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01044604.1/18335-18443   8030:Salmo salar (Atlantic salmon) 	149	40
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         | ||||||||| ||||||||  | |       || | | | ||||||||
+        GC-UUACGGCCAGACCAGCCU--G-A-------AUAU-GCCCGAUCUCGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+        |||| ||| || |||| |  | |||| | ||||||| |||| |||     
+        AAGC-UAAGCAGGGUCAGAAC-UGGUCACUACUUGGUUGGG-AGACUGCU
+
+    100     .    :    .    :     
+        ------------------------
+                                
+        UGGGAAUAUCAGGUGCUGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01476214.1/3523-3401   8030:Salmo salar (Atlantic salmon) 	149	69
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGG-CCA-UACCA-GCCUGGGUACGCCCCGAU-CUCGUCUGA-UC
+          |||||| ||| ||||| ||||||||||| ||||||  | |||||| ||
+        --UUACGGACCAUUACCAGGCCUGGGUACGACCCGAUAUUAGUCUGAUUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-
+        || ||||||||| || ||||||||| ||||||||||| ||||||| ||| 
+        UCAGAAGCUUAAGCAGGGUCGGGCCCUGGUUAGUACUGGGAUGGG-AGAC
+
+    100     .    :    .    :    .  
+        --------------------------
+                                  
+        CGCCUGUGAAUACCAGGUGCUGUAAG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01000620.1/8630-8508   8030:Salmo salar (Atlantic salmon) 	149	55
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUC-U-CGUCUG-AUCU
+         | ||||||||||| || | || ||||| || |||| | |||||| ||||
+        GC-UUACGGCCAUAGCAUCUUGUGUACG-CCUGAUCUUGCGUCUGCAUCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA--
+         || ||| ||  || ||||| ||| ||| ||||||||||||||| ||   
+        UGGUAGC-UAUGCAGGGUCGUGCC-UGGAUAGUACUUGGAUGGG-AG-GC
+
+    100     .    :    .    :    .     
+        -----------------------------
+                                     
+        UGCUCUGGGAAUACCACUUGCUGUAAUCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01140322.1/336-221   8030:Salmo salar (Atlantic salmon) 	137	43
+      0     .    :    .    :    .    :    .    :    .    : 
+        -----C-UUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAU
+             |  ||  ||  | |||  |||  ||    |||  |||| ||||||
+        GAACACAAUU--GG--A-ACC-CCCU--GU-UUUCCC-UUCUCAUCUGAU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CUCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA
+        || |||||  ||| || |||| |||| |||||||||||||||| ||||||
+        CUAGGAAG-GUAAGCAGGGUCAGGCC-UGGUUAGUACUUGGAU-GGAAGA
+
+    100     .    :    .    :    .     
+        -----------------------------
+                                     
+        CUGCCUGGGAAUACCAGGUUCUGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01551964.1/703-799   8030:Salmo salar (Atlantic salmon) 	126	56
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUA-CCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+                 |||| || ||||||||||| |||||| |||| ||||| |||
+        ---------CAUAUCC-GCCUGGGUACG-CCCGAUGUCGUAUGAUCCCGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+         ||| ||| || ||||| ||| |||||||||| | |||||| |||     
+        CAGC-UAAGCAGGGUCGCGCC-UGGUUAGUAC-UCGAUGGG-AGACCGCC
+
+    100     .    :   
+        ------------
+                    
+        UGGGAAUACCAC
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01018840.1/14083-13965   8030:Salmo salar (Atlantic salmon) 	126	53
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         | |||||||||||| | |||   |||| ||||||||| |||||||||  
+        GC-UUACGGCCAUACUAUCCUCAAUACG-CCCGAUCUCUUCUGAUCUCAA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAG-GUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA----
+        |||| ||  | || ||| |||| |||| ||||||||| ||||  ||    
+        AAGC-UAUGC-AGCGUCAGGCC-UGGUCAGUACUUGGUUGGG-GGACCGC
+
+    100     .    :    .    :    . 
+        -------------------------
+                                 
+        UAGGGAAUAUCAGGUGCUGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01381121.1/242-163   8030:Salmo salar (Atlantic salmon) 	123	18
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCG-G
+                                                   ||| | |
+        -------------------------------------------UCUUGUG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAG-CUUA--A-CC--AAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAG
+          | | ||  | ||  ||   |  ||| ||||||||||| ||| ||| ||
+        --GCCAUACCACCCUGAA-AAC--GCC-UGGUUAGUACUGGGACGGG-AG
+
+    100     .    :    .    :    .    : 
+        A-----------------------------
+        |                             
+        ACAGCCUGGGAAUGCCCGAUGCUAAAAAUA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01475470.1/226-344   8030:Salmo salar (Atlantic salmon) 	114	62
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         | |||||||||||||| ||||||||| |||| |||||| ||||||| ||
+        GC-UUACGGCCAUACCAUCCUGGGUAC-CCCCCAUCUCGGCUGAUCUUGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+        ||||  || || ||||| ||| ||||||  ||| ||||||| |||     
+        AAGC-AAAUCAUGGUCGAGCC-UGGUUAACACUAGGAUGGG-AGACUGCC
+
+    100     .    :    .    :     
+        ------------------------
+                                
+        UGGGAAUACCAGGUGCUGUAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01028246.1/15052-15159   8030:Salmo salar (Atlantic salmon) 	103	42
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         ||||  |||||||||| |||  | |     | | | |  |||||||| |
+        GCUUU--GGCCAUACCACCCU--G-A----AC-A-CAC--CUGAUCUCAG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+         ||| ||| || |||| |||| ||||| | ||||||||||| |||     
+        UAGC-UAAGCAGGGUCAGGCC-UGGUUUGAACUUGGAUGGG-AGACCAAC
+
+    100     .    :    .    :     
+        ------------------------
+                                
+        UGGGAAUACCAGGUGCUCUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01210105.1/412-294   8030:Salmo salar (Atlantic salmon) 	103	48
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUU-UACGGCCAUACCAGCCUGGGUACGC-CCCGAUCUCGUCUGAUCUC
+         ||| |  |||| ||| | ||   | || | || ||||||  ||||||| 
+        GCUUGU--GGCCGUACUA-CC-CAGAACACACCUGAUCUCACCUGAUCUU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA---
+        || ||| ||| || ||| ||||| ||||||||||||||| ||| |||   
+        GGUAGC-UAAGCAGGGUUGGGCC-UGGUUAGUACUUGGACGGG-AGACCA
+
+    100     .    :    .    :    .  
+        --------------------------
+                                  
+        CCUGAGAAUACCAGGUGCUGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01042860.1/5072-5164   8030:Salmo salar (Atlantic salmon) 	93	26
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUG-GGUACGCCCCGAUCUCGUCUGAUCUCGG
+                           || ||  |   || | | |  |||| | || 
+        -------------------UGUGG-CCAUACC-A-C-C--CUGAACACGC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+          | ||   || ||||||||| |||||||| || ||||||| |||     
+        CUG-UU---CAGGGUCGGGCC-UGGUUAGUCCUGGGAUGGG-AGACCACC
+
+    100     .    :    .    :     
+        ------------------------
+                                
+        UGGGAAUACAGUACAUAGAUAUAU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01018840.1/13932-13825   8030:Salmo salar (Atlantic salmon) 	80	44
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCA-UACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCG
+         | ||| ||||| || || ||||  |||  |||||||||||||| |||| 
+        GC-UUAUGGCCAUUA-CAUCCUGAAUAC-UCCCGAUCUCGUCUGGUCUCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGCUUAACCAAGGUC-GGGCCUUGGUU---AGUAC-UUGGAUGGGAAG
+        ||||| ||  ||  ||| ||| | |||||   || || ||   |||||| 
+        GAAGC-UAUGCAUUGUCAGGG-C-UGGUUGGGAGAACAUU---UGGGAAU
+
+    100     .    :    .   
+        A----------------
+        |                
+        ACCAGGUGCAGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01271757.1/328-436   8030:Salmo salar (Atlantic salmon) 	80	33
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGU--A--CGCCCCGAUC-UCGUCUGAUC
+                  |||  |   |||||  |   |    || | | | ||||||
+        ---------GAUA--A---UGGGUCAAUUUGGUGAGAACAU-GCCUGAUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUC-GGGCCUUGGUUAGUACUUGGAUGGGAAGA
+        | || ||| ||| || |||| ||| | ||||| ||||||||||||| |||
+        UUGGUAGC-UAAGCAGGGUCAGGG-C-UGGUUGGUACUUGGAUGGG-AGA
+
+    100     .    :    .    :    .    
+        ----------------------------
+                                    
+        CUGCCUGGAAUACCAGGUGCUGUAAUCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01035646.1/893-804   8030:Salmo salar (Atlantic salmon) 	72	18
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUU-UACGGCCAUACCAGCCUGGGUACGCCCCGAU-CUCGUCUGAUCUC
+         ||| |  |||||||||| ||||   ||| || | |    ||| |  || 
+        GCUUGU--GGCCAUACCAACCUGAACACG-CCUGUUGAGGGUCAGGCCU-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GG-AAGCUUAACCAAGGUCGGGC-CUUGGUUAGUACUUGGAUG--GGAAG
+        ||  ||  | | | |||  |  | | |||  | |||  || ||  | |||
+        GGUUAG--U-A-C-AGG-AGACCACCUGG-GAAUACCAGG-UGCUGUAAG
+
+    100     
+        A--
+           
+        -UU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01065891.1/1866-1948   8030:Salmo salar (Atlantic salmon) 	65	26
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGGA
+                                            | | ||| | |  |
+        -----------------------------------GCUUGUGA-C-C--A
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGCUUAACC-AA-GGUCGGGCCUUGGUUAGUACUU-GGAUGGGAAGA---
+         ||  | || || ||||||||| ||||||||| || ||| ||| |||   
+        UGC-CACCCUAAGGGUCGGGCC-UGGUUAGUA-UUGGGACGGG-AGACCG
+
+    100     .    :    .    :    .  
+        --------------------------
+                                  
+        CCUGGGAAUAUCAGGUGCCGUAAUCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01074160.1/9263-9374   8030:Salmo salar (Atlantic salmon) 	57	34
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUC
+           |  | | | ||||||| ||||  | | || |  | || | | ||  |
+        CAAC--U-CUG-CAUACCAUCCUGCAU-C-CCAC--UGCU-GACUUG-CC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-
+        || || ||  || || ||| || || |||| ||| |||||||||||| | 
+        UCUGAGGC-AAAGCAGGGUUGGUCC-UGGUCAGUCCUUGGAUGGGAA-AC
+
+    100     .    :    .    :    . 
+        -------------------------
+                                 
+        CAGAUACUGCUGGAAGUGGGGUUGG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01008112.1/15332-15430   8030:Salmo salar (Atlantic salmon) 	57	35
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUCU
+             | ||  ||||||||||||  | | || |  | || | | ||  ||
+        ---GCCAGCAGCAUACCAGCCUGCAU-C-CCAC--UGCU-GGCUUG-CCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA--
+        | ||||| ||| || |||  || ||||||  || | ||||| ||||||  
+        CUGAAGC-UAAGCAGGGU-UGGUCUUGGUCGGUCCCUGGAU-GGAAGACA
+
+    100     .    :  
+        -----------
+                   
+        UGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01152287.1/1023-1118   8030:Salmo salar (Atlantic salmon) 	57	24
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUAC--G-CCCCGAU-CUC-GUCUGAUC
+                                ||  |  ||| || | |   |||| |
+        ------------------------ACUUGUGCCC-AUGC-CACCCUGAAC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUG-GAUGGGAAGA
+         ||   || |   || ||||||||| ||||||||  | | |||||||| |
+        ACGCCUGC-U---CAGGGUCGGGCC-UGGUUAGU-GUCGAGAUGGGAA-A
+
+    100     .    :    .    :    .     
+        -----------------------------
+                                     
+        CCACCUGGGAAUACCAGGUGCCGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01174412.1/3203-3291   8030:Salmo salar (Atlantic salmon) 	48	32
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGGA
+                                        || | | |  ||||| ||
+        ------------------------------AAAUAU-GACCAAUCUCAGA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA------
+        ||| ||| || ||| ||||| ||||| || |||||||||| |||      
+        AGC-UAAGCAGGGUAGGGCC-UGGUUUGUUCUUGGAUGGG-AGACCGCCU
+
+    100     .    :    .    :    
+        -----------------------
+                               
+        GGGAAUACCAGGUGCUGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01060804.1/8751-8680   8030:Salmo salar (Atlantic salmon) 	46	18
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGGA
+                                                  || | || 
+        ------------------------------------------AUUUAGGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AGCUUAACCAAGGUC-GGGCCUUGGUUAGUACUUG-GAUGGGAAGA----
+        ||   ||  ||   | ||| | ||||||||||  | |||||| |||    
+        AG---AA--AA---CAGGGUC-UGGUUAGUAC-GGAGAUGGG-AGACCAU
+
+    100     .    :    .    :    . 
+        -------------------------
+                                 
+        CUGGGAAUACCAGGUGCCUUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01214836.1/743-642   8030:Salmo salar (Atlantic salmon) 	45	34
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAU-CUCGUCUGAUCUC
+            || ||  ||||||| ||||  | | || |  | || | || | |||
+        ---AACAGCAGCAUACCACCCUGCAU-C-CCAC--UGCU-GGCUUACCUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA---
+         ||||| ||  || || ||| || ||||  || |||||||||| ||    
+        UGAAGC-UAUGCAUGGCCGGUCC-UGGUCGGUCCUUGGAUGGG-AG-CCC
+
+    100     .    :     
+        --------------
+                      
+        AGAUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01060750.1/6768-6667   8030:Salmo salar (Atlantic salmon) 	45	36
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUA-CGGC--CAUACCAGCCUGGGUACGC-C-CC-GAUCUCGUCUGAU
+            | | ||  ||||||| || |  ||| | | || ||   | | ||  
+        ----ACCAGCAGCAUACCACCCAGCAUAC-CACUCCUGA---C-U-UG-C
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CUCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA
+        ||| ||||| ||| || ||| || || | || ||| |||||||||| |||
+        CUCUGAAGC-UAAGCAGGGUUGGUCC-UAGUCAGUCCUUGGAUGGG-AGA
+
+    100     .    :    .  
+        ----------------
+                        
+        CCGGAUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01370848.1/608-518   8030:Salmo salar (Atlantic salmon) 	35	16
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCG-AUCUCGUC-UGAU-CUC
+                                       |  | | ||| | || | |
+        -------------------------------GUUUGUAGUCAUAAUACCC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAA-GC-U-UAACCAAGGUCGGGCCUUGGUUAGUACUUGG--A-----U
+         |||  | | |   || ||||||| | ||||||||||  ||  |     |
+        UGAACACGUCUGUUCAGGGUCGGGGC-UGGUUAGUACCGGGACACCGCCU
+
+    100     .    :    .    :    . 
+        GGGAAGA------------------
+        ||| | |                  
+        GGG-A-AUUCCAGGUGCCGUAAGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01123011.1/3304-3418   8030:Salmo salar (Atlantic salmon) 	34	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGC-C-CC-G-AUCUC-GU-CU-
+             | ||  ||||||| || |  | | | | || | ||| |  | || 
+        ---GCCAGCAGCAUACCACCCAGCAU-CCCACUCCUGCAUCCCACUGCUG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        G-AU--CUCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUG
+        |  |  ||| || || ||| || ||| || || |||| ||| | ||||||
+        GCUUGGCUCUGAUGC-UAAGCAGGGUUGGUCC-UGGUCAGUCCCUGGAUG
+
+    100     .    :    .    :   
+        GGAAGA----------------
+        |||| |                
+        GGAA-ACCAGAUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01150683.1/5885-5786   8030:Salmo salar (Atlantic salmon) 	34	33
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUA-CGGC--CAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUC
+            | | ||  ||||||| ||||  | | || |  | || | | ||  |
+        ----ACCAGCAGCAUACCACCCUGCAU-C-CCUC--UGCU-GGCUUG-CC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-
+        ||  |||| ||| || ||| || || || | ||| | |||||||||| | 
+        UC--AAGC-UAAGCAGGGUUGGUCC-UGAUCAGUCCCUGGAUGGGAA-AC
+
+    100     .    :    . 
+        ---------------
+                       
+        CAGAUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01106945.1/2677-2576   8030:Salmo salar (Atlantic salmon) 	34	38
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUA-C-G-GCCAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUC
+            | | | | ||||||| ||||  | | || |  | || | | ||  |
+        ----ACCAGCGGCAUACCACCCUGCAU-C-CCAC--UGCU-GGCUUG-CC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACU-UGGAUGGGAAGA
+        || |||||| ||||  |||| | || ||||| || || |||||||||| |
+        UCUGAAGCUAAACC-GGGUCAGUCC-UGGUUGGU-CUCUGGAUGGGAA-A
+
+    100     .    :    .  
+        ----------------
+                        
+        CCAGAUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01039282.1/4081-4199   8030:Salmo salar (Atlantic salmon) 	34	44
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAUCUCGG
+         | ||| |||||||||| ||     |||  || ||||  | |||||| ||
+        GC-UUAUGGCCAUACCACCCACAACACG-GCCAAUCUUAUUUGAUCUUGG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+        |||| ||| || |||| |||| |||||||  |||||||  | |||     
+        AAGC-UAAGCAGGGUCAGGCC-UGGUUAGGGCUUGGAUCAG-AGACCGCC
+
+    100     .    :    .    :     
+        ------------------------
+                                
+        UGGGAAUACCAGGUGCUGUAAGCC
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01024793.1/10185-10297   8030:Salmo salar (Atlantic salmon) 	34	35
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUA-CGGCCAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUCUC
+        | | | | | ||||||| ||||  | | || |  | || | | || | ||
+        CAUCAUCAG-CAUACCACCCUGCAU-C-CCAC--UGCU-GGCUUGCU-UC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA---
+         ||| ||| | || ||| || || |||| ||| | |||||||||| |   
+        UGAAACUU-AGCAGGGUUGGUCC-UGGUCAGUCCCUGGAUGGGAA-ACCA
+
+    100     .    :    .    :    
+        -----------------------
+                               
+        GAUGCUGCUGGAAGUGGUGUUGG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01474620.1/291-183   8030:Salmo salar (Atlantic salmon) 	34	40
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUAC-GGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGA-UCUCG
+        | |||| | || ||||| ||||||| || ||| ||||||   ||  ||  
+        CCUUACUGACC-UACCAACCUGGGUUCG-CCCUAUCUCG---GAGGCU--
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA----
+         ||||||      ||| ||||| ||| ||||||||| ||||| | |    
+        -AAGCUU------GGUUGGGCC-UGGAUAGUACUUGCAUGGG-AUACCUC
+
+    100     .    :    .    :    . 
+        -------------------------
+                                 
+        CUGGGAUUUUCAAGCGCUGAAAGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01028659.1/9067-9156   8030:Salmo salar (Atlantic salmon) 	24	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUC-UGAUCUCGG
+                     |||| | |  ||| | | |  || | | || | || |
+        ------------GCCAG-CAGCAUAC-CACUG--CU-GGCUUGCU-UCUG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        AAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-----
+        |||| ||| || ||| ||||| |||| ||| | |||||||| ||      
+        AAGC-UAAGCAGGGUUGGGCC-UGGUCAGUCCCUGGAUGGG-AG-UCCAG
+
+    100     .    :   
+        ------------
+                    
+        AUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01051251.1/15545-15455   8030:Salmo salar (Atlantic salmon) 	23	24
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGC-CCC-G-AUCUC-GU-CU-G-A
+                     |||| | |  ||| | ||| | |||||  | || |  
+        ------------GCCAG-CAGCAUAC-CACCCUGCAUCUCACUGCUGGCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        U--CUCGGAAGCUUAACCAAGGUCGGGCCUUGG-U--UAGUACUUG--GA
+        |  ||| ||||| ||| || ||| || || ||| |   || ||  |  | 
+        UGCCUCUGAAGC-UAAGCAGGGUUGGUCC-UGGAUGGGAG-ACCAGAUGC
+
+    100     .    : 
+        UG--GGAAGA
+        ||  ||||  
+        UGCUGGAA--
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01158474.1/731-832   8030:Salmo salar (Atlantic salmon) 	22	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUA-CGGC--CAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUC
+            | | ||  || || | ||||  | | || |  | || | | |||| 
+        ----ACCAGCAGCACACUACCCUGCAU-C-CCAC--UGCU-GGCUUGAU-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-
+        || || || ||| || ||| || || | || ||| | |||||||| ||| 
+        UCUGACGC-UAAGCAGGGUUGGUCC-UAGUCAGUCCCUGGAUGGG-AGAC
+
+    100     .    :    . 
+        ---------------
+                       
+        CAGAUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01397109.1/595-697   8030:Salmo salar (Atlantic salmon) 	22	36
+      0     .    :    .    :    .    :    .    :    .    : 
+        CU-UUACGGCCAUACCAGCCUGGGUACGCCCCGAU-CUCGUCUGAUCUCG
+         |  | | ||||||||| |||  | || || |  | ||| ||||  ||| 
+        -UGCUGCAGCCAUACCACCCU--GCAC-CCAC--UGCUCAUCUG-CCUCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGCUUAACCAAGGUCGGGCCUUGGUUAG-UACUUGGAUGGGAAGA---
+         |||| ||| || ||| ||| | ||||| | | |||| ||  |||||   
+        UAAGC-UAAGCAGGGUUGGGUC-UGGUU-GAUCCUUGUAU-UGAAGAUCA
+
+    100     .    :     
+        --------------
+                      
+        AGAUGCUGCUAGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01162994.1/1991-2086   8030:Salmo salar (Atlantic salmon) 	22	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGC-CCC-GA-U-CUCGUC-UGAUC
+                     |||| | |  ||| | |||  | | || | | || | 
+        ------------GCCAG-CAGCAUAC-CACCCACACUGCUAG-CUUGCU-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-
+        || ||| | ||| || ||| || || |||| ||| | |||||||| ||| 
+        UCUGAAAC-UAAGCAGGGUUGGUCC-UGGUCAGUCCCUGGAUGGG-AGAC
+
+    100     .    :    . 
+        ---------------
+                       
+        CAGAUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01027311.1/7790-7675   8030:Salmo salar (Atlantic salmon) 	22	28
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUA-CGGC--CAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUC
+            | | ||  ||||||| ||||  | | || |  | || | | || | 
+        ---CACCAGCAGCAUACCACCCUGCAU-C-CCAC--UGCU-GGCUUGCU-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-
+        || || || ||| || |||||   | ||||  || | |||||||| | | 
+        UCUGAUGC-UAAGCAGGGUCGAUUC-UGGUCGGUCCAUGGAUGGG-ACAC
+
+    100     .    :    .    :    .    
+        ----------------------------
+                                    
+        CAAAUGAUGCUGGAGGUGGUGUUGGUGA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01029878.1/10411-10512   8030:Salmo salar (Atlantic salmon) 	22	34
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUA-CGGCCAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUCUC
+         | || | | ||||||| ||||  | | || |  | || | | || | ||
+        -UCUAGCAG-CAUACCACCCUGCAU-C-CCAC--UGCU-GGCUUGCU-UC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA---
+         ||| |  || || ||| || || ||||| || | |||||||| |||   
+        UGAAUC-CAAGCAGGGUUGGUCC-UGGUUGGUCCCUGGAUGGG-AGACCA
+
+    100     .    :    
+        -------------
+                     
+        GAUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01016561.1/11035-11138   8030:Salmo salar (Atlantic salmon) 	22	34
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUC
+           |  ||  | ||||||| ||||  | | || |  | || | | || | 
+        UGCCAGUA--G-CAUACCAUCCUGCAU-C-CCAC--UGCUAG-CUUG-UU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-
+        || ||||| ||| || ||| || || |||| ||| | |||||||| ||  
+        UCUGAAGC-UAAGCAGGGUUGGUCC-UGGUCAGUCCCUGGAUGGG-AG-C
+
+    100     .    :    .   
+        -----------------
+                         
+        CCAGAUGCUAGUGGAAG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01171818.1/1364-1474   8030:Salmo salar (Atlantic salmon) 	22	33
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAU-CUCGUCUGAUC-U
+            || ||   |||||| ||||  | | || |  | || | ||  || |
+        ---CACAGCAGUAUACCACCCUGCAU-C-CCAC--UGCU-GGCU-UUCUU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA--
+        | |||| |||| || |||  || | |||| ||| | |||||||| |||  
+        CUGAAG-UUAAGCAGGGU-UGGUCAUGGUCAGUCCCUGGAUGGG-AGACC
+
+    100     .    :    .    :    
+        -----------------------
+                               
+        AGAUGCUGAUGAAAGUGUUGUUG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01182626.1/2510-2409   8030:Salmo salar (Atlantic salmon) 	22	35
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGCCAUACCAGCCUGGGUACGC-CCC-G-AU-CU-C-G--U-C-
+                     |||| | |  ||| | ||| | || || | |  | | 
+        ------------GCCAG-CAGAAUAC-CACCCUGCAUCCUACUGCUUACU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UGAUCUCGGAAGCUUAACCAAGGUC-GGGCCUUGGUUAGUACUUGGAUGG
+        ||  ||| ||||| ||| ||||| | || || |||| | ||| |||||||
+        UG-CCUCUGAAGC-UAAGCAAGG-CUGGUCC-UGGUCAAUACCUGGAUGG
+
+    100     .    :    .    :  
+        GAAGA----------------
+        | |||                
+        G-AGACUAGAAGCUGUUGGAG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01013450.1/2866-2753   8030:Salmo salar (Atlantic salmon) 	22	36
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAU-CUCGUCUGAUCUC
+             | ||  ||||||| ||||  | | || |  | || | || | |||
+        ---GCCAGCAGCAUACCACCCUGCAU-C-CCAC--UGCU-GGCUUACCUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA---
+         ||||| |||||| ||| || || || | ||| | |||||||| |||   
+        UGAAGC-UAACCAGGGUUGGUCC-UGCUCAGUCCCUGGAUGGG-AGACCA
+
+    100     .    :    .    :    . 
+        -------------------------
+                                 
+        GAUGUUACAGGAAGUGGUGUAGGAG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01054432.1/1104-1214   8030:Salmo salar (Atlantic salmon) 	22	28
+      0     .    :    .    :    .    :    .    :    .    : 
+        -------CUUUACGGCCAUACCAGCCUGGGUACGC-CCC-G-AUCUC-GU
+                | |||  || | |||| | |  ||| | ||| | |||||  |
+        GCCAGCAGUAUACCACCCUGCCAG-CAGUAUAC-CACCCUGCAUCUCACU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        -CUGA--U--CUCGGAAGCUUAACCAAGGUCGGGCCUUGG-U--UAGUAC
+         ||||  |  ||| ||||| ||| || ||| || || ||| |   || ||
+        GCUGACUUGCCUCUGAAGC-UAAGCAGGGUUGGUCCCUGGAUGGGAG-AC
+
+    100     .    :    .   
+        UUG-GA-UG--GGAAGA
+          |  | ||  ||||  
+        CAGAUACUGCUGGAA--
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01047255.1/10416-10314   8030:Salmo salar (Atlantic salmon) 	22	36
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAUCU-C-GUC-UGAUC
+             | ||  ||||||| |||  |  | |||| | || | | | || | 
+        ---GCCAGCAGCAUACCACCCU--G--CACCCC-A-CUGCUGGCUUG-UU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGU-UAGUACU-UGGAUGGGAAG
+        | |||||| ||| || ||| || || |||| | || || |||||||| ||
+        UUGGAAGC-UAAGCAGGGUUGGUCC-UGGUCUGGU-CUCUGGAUGGG-AG
+
+    100     .    :    .   
+        A----------------
+        |                
+        ACUAGAUGCUGAUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01237681.1/4586-4485   8030:Salmo salar (Atlantic salmon) 	22	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUA-CGGCCAUACCAGCCUGGGUACGCCCCGAUCU-C-GUCUGAUC-
+         |  || | | ||||||| |||  |  | |||| | || | | || | | 
+        GC--UAGCAG-CAUACCACCCU--G--CACCCC-A-CUGCUGGCUUA-CA
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAG-GUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA
+        ||  |||| ||| | ||  | || || ||||  || | |||||||| |||
+        UCUAAAGC-UAAGC-AGCAUUGGUCC-UGGUCGGUCCCUGGAUGGG-AGA
+
+    100     .    :    .  
+        ----------------
+                        
+        CCAGAUGCUGCUGGAA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01006827.1/18083-18196   8030:Salmo salar (Atlantic salmon) 	22	32
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAUCUCGUC-UG-AUCU
+             | ||  ||||||| ||||  | | || | | || | | || ||||
+        ---GCCAGCAGCAUACCACCCUGCAU-C-CCACUA-CU-GGCUUGCAUCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAG-UACUUGGAUGGGAAGA-
+          ||| | ||| || ||| || || || | || | | |||||||| ||| 
+        --GAAAC-UAAGCAGGGUUGGUCC-UGAUCAGUUGC-UGGAUGGG-AGAC
+
+    100     .    :    .    :    .   
+        ---------------------------
+                                   
+        CAGAUGCUGAUGGAAGUGGUGUUGGAG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01001907.1/7893-8001   8030:Salmo salar (Atlantic salmon) 	22	34
+      0     .    :    .    :    .    :    .    :    .    : 
+        ---CUUUACGGCCAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUC
+            ||||     |||||| ||||  | | || |  | || | | || | 
+        ACUAUUUA---UUAUACCACCCUGCAU-C-CCAC--UGCU-GGCUUGCU-
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA-
+        || ||||| ||| || ||| || || |||| ||| | |||||||| ||| 
+        UCUGAAGC-UAAGCAGGGUUGGUCC-UGGUCAGUCCCUGGAUGGG-AGAC
+
+    100     .    :    .    :  
+        ---------------------
+                             
+        CACAUGCUGCUGGAAGUGGUG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01069692.1/7601-7694   8030:Salmo salar (Atlantic salmon) 	22	37
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUCU
+               ||  ||||||| ||||  | | || |  | || | | || | |
+        -------GCAGCAUACCACCCUGCAU-C-CCAC--UGCU-GGCUUGCU-U
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA--
+        | ||||| ||| || ||| || || |||| ||| | |||||||| |||  
+        CUGAAGC-UAAGCAGGGUUGGUCC-UGGUCAGUCCCUGGAUGGG-AGACC
+
+    100     .    : 
+        ----------
+                  
+        AGAUUCUGCU
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01118789.1/9986-9891   8030:Salmo salar (Atlantic salmon) 	22	35
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUA-CGGCCAUACCAGCCUGGGUACGCCCCGAUCUCGUCUGAU-CUCG
+            | | | ||||||| ||||  | | || | | || | ||  | ||| 
+        ----AGCAG-CAUACCACCCUGCAU-C-CCACUA-CU-GGCU-UUCCUCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GAAGCUUAACCAAGGUCGGGCCUUGGU-UAGUACUUGGAUGGGAAGA---
+        |||  |||| || ||| || || |||| | || | |||||||| |||   
+        GAA-UUUAAGCAGGGUUGGUCC-UGGUCU-GUCCCUGGAUGGG-AGACCA
+
+    100     .    : 
+        ----------
+                  
+        GAUACUGCUA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01111613.1/2563-2462   8030:Salmo salar (Atlantic salmon) 	22	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAUCU-C-GUC-UGAUC
+           | | ||  |||||| |||    |||  | | || | | | | || | 
+        --GU-CAGCAGCAUACC-GCC---CUACAUCUC-AU-UGCUGGCUUG-UG
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCG-GAAGCUUAACCAAGG-UCGGGCCUUGGUUAGUACUUGGAUGGGAAG
+        | | ||||| ||| | ||| | || || |||| ||| | |||||||| ||
+        U-GUGAAGC-UAAGC-AGGAUUGGUCC-UGGUCAGUCCCUGGAUGGG-AG
+
+    100     .    :    .   
+        A----------------
+        |                
+        ACCAGAUGCUGCUGAAG
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01052784.1/8127-8234   8030:Salmo salar (Atlantic salmon) 	11	28
+      0     .    :    .    :    .    :    .    :    .    : 
+        --CUUUA-CGGCCAUACCAGCCUGGGUACGCCCCGAU-CUCGUCUGAUC-
+          |   | | | ||||||| ||||  | | || |  | || | || | | 
+        GGC--CAGCAG-CAUACCACCCUGAAU-C-CCAC--UGCU-GGCUUA-CU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UCGGAAGCUUAACCAAGGUCGGGCCUUG-GUUAGUACUUGGAUGGGAAGA
+        |  ||||| ||| || ||| || ||  | || ||| | ||||||||  ||
+        UUUGAAGC-UAAGCAGGGUUGGUCC--GAGUCAGUCCCUGGAUGGG-GGA
+
+    100     .    :    .    :  
+        ---------------------
+                             
+        CCAGAUGGUGUUGGAGGGCCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01041931.1/6284-6181   8030:Salmo salar (Atlantic salmon) 	11	30
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUAC-G-GCCAUACCAGCCUGGGUACGCC-CCGAUCUCGUC-UGAUCU
+             | |  |||||||| ||||  | | || ||| | | | | ||  ||
+        ---GCCAGCACCAUACCACCCUGCAU-C-CCACCG-U-U-GGCUUG-CCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUA-CUUGGAUGGGAAGA-
+        |  |||| ||| || ||| || || |||| || | | | ||||||  || 
+        CAAAAGC-UAAGCAGGGUUGGUCC-UGGUCAG-ACCCUAGAUGGG--GAC
+
+    100     .    :    .    
+        ------------------
+                          
+        ACCAGAAUGCUGCUGGGA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01002329.1/7250-7368   8030:Salmo salar (Atlantic salmon) 	11	36
+      0     .    :    .    :    .    :    .    :    .    : 
+        -CUUUACGGCCAUACCAGCCUGGGUACGCCC-C-GAUCUCGUCUGAUCUC
+         |||| | | ||||||  |||  | || ||| | | | || | ||  |||
+        GCUUUUCAG-CAUACCUCCCU--GCAC-CCCACUGCUAUC-U-UG-CCUC
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        GGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA---
+         ||||| ||| |||||| ||  | ||||  || | ||||||||  ||   
+        UGAAGC-UAAGCAAGGUUGGUAC-UGGUGGGUCCCUGGAUGGG-CGACCA
+
+    100     .    :    .    :    .     
+        -----------------------------
+                                     
+        GAUGCUGCUGGAAGUGGUGUUGGAGGGCC
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01049267.1/10285-10184   8030:Salmo salar (Atlantic salmon) 	11	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAUCU-C-GUC-UGAUC
+             | ||  ||||||| ||    |||  ||| | || | | | ||| |
+        ---GCCAGCAGCAUACCA-CC---CUACAUCCC-A-CUGCUGGCUUGA-C
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        UC-GGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA
+         | || ||| ||| || ||| || || ||||| || |  ||||||| |||
+        GCUGG-AGC-UAAACAGGGUUGGUCC-UGGUUGGUCCCCGGAUGGG-AGA
+
+    100     .    :    .  
+        ----------------
+                        
+        CCAGGUGCUGCUGGCA
+
+
+
+RF00001;5S_rRNA;AGKD01510675.1/94-1   8030:Salmo salar (Atlantic salmon)	RF00001;5S_rRNA;AGKD01039603.1/5412-5513   8030:Salmo salar (Atlantic salmon) 	11	31
+      0     .    :    .    :    .    :    .    :    .    : 
+        CUUUACGGC--CAUACCAGCCUGGGUACGCCCCGAU-CUCGUC-UGAUCU
+             | ||  ||||||| ||||  | | || |  | | || | ||  ||
+        ---GCCAGCAGCAUACCACCCUGCAU-C-CCAC--UGCCCG-CUUG-CCU
+
+     50     .    :    .    :    .    :    .    :    .    : 
+        CGGAAGCUUAACCAAGGUCGGGCCUUGGUUAGUACUUGGAUGGGAAGA--
+        | |||| |||| || ||| || || ||||  || | ||||||||  ||  
+        CUGAAG-UUAAGCAGGGUUGGUCC-UGGUCGGUCCCUGGAUGGG-GGACC
+
+    100     .    :     
+        --------------
+                      
+        AGAUGCUGCUGGAU
+
+
+
+

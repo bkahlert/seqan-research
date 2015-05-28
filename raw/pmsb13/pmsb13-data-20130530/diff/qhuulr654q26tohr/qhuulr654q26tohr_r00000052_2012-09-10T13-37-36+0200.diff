@@ -1,0 +1,250 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_test/ws_test.cpp ./sandbox/robinson/apps/ws_test/ws_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_test/ws_test.cpp	2012-09-10 11:13:30.000000000 +0200
++++ ./sandbox/robinson/apps/ws_test/ws_test.cpp	2012-09-10 13:37:03.625899759 +0200
+@@ -1,21 +1,42 @@
+ #include <iostream>
++#include <fstream>
+ #include <seqan/store.h>
+ #include <seqan/basic.h>
++#include <seqan/sequence.h>
++#include <seqan/stream.h>
+ #include <seqan/arg_parse.h>
+ #include <seqan/misc/misc_interval_tree.h>
+ #include <seqan/parallel.h>
++#include </home/Development/seqan-trunk/sandbox/robinson/include/seqan/readJaspar.h>
++
+ 
+ using namespace seqan;
+ using namespace std;
+ 
+ 
+-int main(int argc, char const * argv[])
+-{
+-	ProfileChar<Dna> pc1;
+-	ProfileChar<Dna, double> pc2;
+-	pc1.count[0]=0.3;
+-	pc2.count[0]=0.4;
+-	cout << pc1.count[0] << endl;
+-	cout << pc2.count[0] << endl;
+-    return 0;
++int main(int argc, char const ** argv) {
++	// Handle command line arguments, open files.
++	if (argc != 2)
++		return 1;
++	std::fstream stream(argv[1], std::ios::binary | std::ios::in);
++	if (!stream.good())
++		return 1;
++
++	// Read file.
++	RecordReader < fstream, SinglePass<> > reader(stream);
++	CharString name;
++	CharString id;
++	String < ProfileChar<Dna> > matrix;
++
++	int res = readRecord(id, name, matrix, reader, Jaspar());
++	if (res != 0)
++		return res;
++
++	// Write out some of the data to stdout.
++	cout << id << "\t" << name << endl;
++	cout << matrix[0].count[0] << endl;
++	cout << matrix[0].count[1] << endl;
++	cout << matrix[0].count[2] << endl;
++	cout << matrix[0].count[3] << endl;
++	return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/include/seqan/readJasper/readJasper_base.h ./sandbox/robinson/include/seqan/readJasper/readJasper_base.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/include/seqan/readJasper/readJasper_base.h	2012-09-10 13:18:29.000000000 +0200
++++ ./sandbox/robinson/include/seqan/readJasper/readJasper_base.h	2012-09-10 13:33:08.129110154 +0200
+@@ -46,52 +46,54 @@
+ // ============================================================================
+ 
+ /**
+-.Concept:MyConcept
+-..
+-..include:seqan/readJasper.h
++ .Concept:MyConcept
++ ..
++ ..include:seqan/readJasper.h
+  */
+ 
+ // If your define a lot of very generic functions for our concept, consider
+ // putting it into its own directory.
+ 
+ /**
+-.Class.MyClass
+-..concept:Concept.MyConcept
+-..summary:This is my class.
+-..cat:My Classes
+-..signature:MyClass<TSpec>
+-..param.TSpec:Tag to select the specialization.
+-...default:MyTag
+-..include:seqan/readJasper.h
++ .Class.MyClass
++ ..concept:Concept.MyConcept
++ ..summary:This is my class.
++ ..cat:My Classes
++ ..signature:MyClass<TSpec>
++ ..param.TSpec:Tag to select the specialization.
++ ...default:MyTag
++ ..include:seqan/readJasper.h
+  */
+ 
+ // NOTE: Assigning classes to concepts is optional.
+ 
+ // struct Our_;
+ // typedef Tag<Our_> Our;
++struct Jaspar_;
++typedef Tag<Jaspar_> Jaspar;
+ 
+ // template <typename TSpec = Our>
+ // class MyClass;
+ 
+ /*
+-.Spec.Our MyClass
+-..cat:My Classes
+-..general:Class.MyClass
+-..summary:This is the "our" specialization of my class!
+-..signature:MyClass<Our>
+-..include:seqan/readJasper.h
++ .Spec.Our MyClass
++ ..cat:My Classes
++ ..general:Class.MyClass
++ ..summary:This is the "our" specialization of my class!
++ ..signature:MyClass<Our>
++ ..include:seqan/readJasper.h
+  
+-.Memfunc.Our MyClass#MyClass
+-..cat:My Classes
+-..class:Spec.Our MyClass
+-..signature:Class()
+-..signature:Class(foo, barBaz)
+-..param.foo:A foo parameter.
+-...type:Spec.CharString
+-..param.barBaz:Another parameter.
+-...type:nolink:$int$
++ .Memfunc.Our MyClass#MyClass
++ ..cat:My Classes
++ ..class:Spec.Our MyClass
++ ..signature:Class()
++ ..signature:Class(foo, barBaz)
++ ..param.foo:A foo parameter.
++ ...type:Spec.CharString
++ ..param.barBaz:Another parameter.
++ ...type:nolink:$int$
+  */
+-	
++
+ // template <>
+ // class MyClass<Our>
+ // {
+@@ -124,15 +126,15 @@
+ // ----------------------------------------------------------------------------
+ 
+ /**
+-.Function.someFunction
+-..concept:Concept.MyConcept
+-..cat:My Classes
+-..signature:someFunction(obj)
+-..summary:Executes some functionality on a @Class.MyClass@.
+-..param.obj:Object to call function on.
+-...type:Class.MyClass
+-..returns:$void$
+-..include:seqan/readJasper.h
++ .Function.someFunction
++ ..concept:Concept.MyConcept
++ ..cat:My Classes
++ ..signature:someFunction(obj)
++ ..summary:Executes some functionality on a @Class.MyClass@.
++ ..param.obj:Object to call function on.
++ ...type:Class.MyClass
++ ..returns:$void$
++ ..include:seqan/readJasper.h
+  */
+ 
+ // NOTE: Functions can belong to concepts but do not have to.  You can use
+@@ -146,6 +148,83 @@
+ //     return;
+ // }
+ 
+-}  // namespace seqan
++
++template<typename TStream, typename TPass>
++inline int readRecord(CharString & id, CharString & name,
++		String<ProfileChar<Dna> > & matrix,
++		RecordReader<TStream, TPass> & reader, // record splitten in id name matrix
++		Jaspar const & /*tag*/) {
++	// Jaspar records look like this:
++	//
++	// ><id> <name>
++	// A  [ x x x ... x ]
++	// C  [ x x x ... xx ]
++	// G  [xx x xx ... x ]
++	// T  [xx xx xx ... x ]
++
++	int res = 0;
++
++	// skip until record begin
++	res = skipUntilChar(reader, '>');
++	if (res != 0)
++		return res;
++
++	// <id>
++	if (goNext(reader)) // skip the '>'
++		return EOF_BEFORE_SUCCESS;
++
++	res = readUntilWhitespace(id, reader);
++	if (res != 0)
++		return res;
++
++	if (goNext(reader))
++		return EOF_BEFORE_SUCCESS;
++
++	// <name>
++	res = readLine(name, reader);
++	if (res != 0)
++		return res;
++
++	// <matrix>
++	for (int rowIndex = 0; rowIndex < 4; ++rowIndex) { // for 0 to 3 meaning for A, C, G, T
++
++		res = skipNCharsIgnoringWhitespace(reader, 2);
++		if (res != 0)
++			return res;
++
++		res = skipWhitespaces(reader);
++		if (res != 0)
++			return res;
++
++		int columnIndex = 0;
++		while (value(reader) != ']') {
++			CharString bufferString;
++
++			res = readUntilWhitespace(bufferString, reader);
++			if (res != 0)
++				return res;
++
++			if (rowIndex == 0)
++				resize(matrix, length(matrix) + 1);
++
++			if (!lexicalCast2<unsigned> (matrix[columnIndex].count[rowIndex],
++					bufferString))
++				return 1; // Could not cast or could not write into matrix!
++
++			res = skipWhitespaces(reader);
++			if (res != 0)
++				return res;
++
++			++columnIndex;
++		} // while loop
++		res = skipLine(reader);
++		if (res != 0)
++			return res;
++	} // for loop
++
++	return 0;
++} // readRecord()
++
++} // namespace seqan
+ 
+ #endif  // SANDBOX_ROBINSON_INCLUDE_SEQAN_READJASPER_READJASPER_BASE_H_

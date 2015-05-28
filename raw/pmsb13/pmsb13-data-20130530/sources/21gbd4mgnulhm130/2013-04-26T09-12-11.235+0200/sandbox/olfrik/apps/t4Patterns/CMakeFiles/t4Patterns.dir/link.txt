@@ -1,0 +1,1 @@
+clang++    -DSEQAN_ENABLE_TESTING=0  -fno-omit-frame-pointer -fopenmp   CMakeFiles/t4Patterns.dir/t4Patterns.cpp.o  -o ../../../../bin/t4Patterns -rdynamic -lrt -lz 

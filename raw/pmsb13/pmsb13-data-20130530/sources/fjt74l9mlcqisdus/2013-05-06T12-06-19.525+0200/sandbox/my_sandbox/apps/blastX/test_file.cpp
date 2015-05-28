@@ -1,0 +1,243 @@
+// BLASTX IMPLEMENTIERUNG VON ANNKATRIN BRESSIN UND MARJAN FAIZI
+// SOFTWAREPROJEKT VOM 2.4. - 29.5.2012
+// VERSION VOM 04.MAI.2013
+
+#undef SEQAN_ENABLE_TESTING
+#define SEQAN_ENABLE_TESTING 1
+#include "own_functions.h"
+
+
+
+// TEST HASH FUNKTION --------------------------------------------------------------------------------------------------
+SEQAN_DEFINE_TEST(test_my_app_hash)
+{
+	// normaler Eingabewert fuer hash funktion
+	int result = hash(1,0,3);				
+	SEQAN_ASSERT(result>=0 && result<=63);
+	// zu hoher Eingabewert in hash funktion
+	result = hash(4,7,900);
+	SEQAN_ASSERT_EQ(result,-1);
+	// zu niedriger Eingabewert in hash funktion
+	result = hash(4,-7,-900);
+	SEQAN_ASSERT_EQ(result,-1);
+	// Eingabewert N
+	result = hash(4,0,1);
+	SEQAN_ASSERT_EQ(result,-1);
+	// cast von normalen char
+	result = hash((int)'G',(int)'K',(int)'J');
+	SEQAN_ASSERT_EQ(result,-1);
+}
+// TEST HASH FUNKTION --------------------------------------------------------------------------------------------------
+
+
+// TEST GET AMINOACID POS FUNKTION -------------------------------------------------------------------------------------
+SEQAN_DEFINE_TEST(test_my_app_get_amino_acid_pos)
+{
+	int result;
+	// alle Moeglichen Eingabewerte fuer get_amino_acid_pos
+	for (int i=0;i<=63;++i){
+		result = get_Amino_Acid_Pos(i);
+		SEQAN_ASSERT(result>=0 && result<=21);
+	}
+	// alle Moegliche und nicht Moegliche Eingabewerte
+	for (int i=-100;i<=100;++i){
+		result = get_Amino_Acid_Pos(i);
+		SEQAN_ASSERT(result>=0 && result<=21 || result==-1);
+	}
+	// Punktprobe
+	result = get_Amino_Acid_Pos(7); // Threonin Eingabe
+	SEQAN_ASSERT_EQ(result,16);
+}
+// TEST GET AMINOACID POS FUNKTION -------------------------------------------------------------------------------------
+
+
+// TEST GET AMINOACID POS UND HASH FUNKTION ----------------------------------------------------------------------------
+SEQAN_DEFINE_TEST(test_my_apps_get_amino_acid_pos_and_hash)
+{
+	// Punkttest hash funktion und get_amino_acid_pos	
+	int hash_value = hash(0,0,0);	// Lysin
+	int result = get_Amino_Acid_Pos(hash_value);	
+	SEQAN_ASSERT(result==11);
+
+	hash_value = hash(3,3,3);	// Phenylalanin
+	result = get_Amino_Acid_Pos(hash_value);	
+	SEQAN_ASSERT(result==13);
+
+	hash_value = hash(1,0,3);	// Histidin
+	result = get_Amino_Acid_Pos(hash_value);	
+	SEQAN_ASSERT(result==8);
+
+	hash_value = hash(0,2,3);	// Serin
+	result = get_Amino_Acid_Pos(hash_value);	
+	SEQAN_ASSERT(result==15);
+
+	hash_value = hash(3,2,0);	// stop
+	result = get_Amino_Acid_Pos(hash_value);	
+	SEQAN_ASSERT(result==20);
+}
+// TEST GET AMINOACID POS UND HASH FUNKTION ----------------------------------------------------------------------------
+
+
+// TEST GET_TRANSLATE_FROM_CODON ---------------------------------------------------------------------------------------
+SEQAN_DEFINE_TEST(test_my_app_get_translate_from_codon)
+{
+	// Punkttest für gültige Eingabeparameter
+	int x = 0;
+	StrSetSA alphabet = GET_ALPHABET(x,x);
+
+	String<Dna> triplet = "GCT"; 
+	int result = get_translate_from_codon(triplet,alphabet[0]);	// Alanin
+	SEQAN_ASSERT(result==4);
+
+	triplet = "CTA";
+	result = get_translate_from_codon(triplet,alphabet[0]);	// Leucin
+	SEQAN_ASSERT(result==4);
+
+	triplet = "GTT";
+	result = get_translate_from_codon(triplet,alphabet[0]);	// Valin
+	SEQAN_ASSERT(result==4);
+
+	triplet = "TGG";
+	result = get_translate_from_codon(triplet,alphabet[0]);	// Tryptophan
+	SEQAN_ASSERT(result==5);
+
+	triplet = "GAA";
+	result = get_translate_from_codon(triplet,alphabet[0]);	// Glutaminsäure
+	SEQAN_ASSERT(result==2);
+
+}
+// TEST GET_TRANSLATE_FROM_CODON ---------------------------------------------------------------------------------------
+
+
+
+// TEST TRANSLATE ------------------------------------------------------------------------------------------------------
+SEQAN_DEFINE_TEST(test_my_app_translate)
+{
+	StrSetSA trans_reads;
+	int x = 0;
+	StrSetSA alphabet = GET_ALPHABET(x,x);
+	String<Dna> read = "ACGATGACGATCAGTACGATACAGTAC";
+	for (int frame=0;frame<6;++frame){
+		int result = translate(trans_reads,read,alphabet[0],frame);
+		SEQAN_ASSERT_EQ(result,0);
+		SEQAN_ASSERT_EQ(length(trans_reads),frame+1);
+
+	}
+	clear(trans_reads);
+	read = "";
+	for (int frame=0;frame<6;++frame){
+		int result = translate(trans_reads,read,alphabet[0],frame);
+		SEQAN_ASSERT_EQ(result,0);
+		SEQAN_ASSERT_EQ(length(trans_reads),frame+1);
+
+	}
+}
+// TEST TRANSLATE ------------------------------------------------------------------------------------------------------
+
+
+// TEST TRANSLATE_READS ------------------------------------------------------------------------------------------------
+SEQAN_DEFINE_TEST(test_my_app_translate_reads)
+{
+	StrSetSA trans_reads;
+	int x = 0;
+	StrSetSA alphabet = GET_ALPHABET(x,x);
+	StringSet<String<Dna>> read;
+	appendValue(read,"ACGATGCAGTCAGTGTCA");
+	appendValue(read,"GTGATCGTACGTCAGGTA");
+	int result = translate_reads(read,trans_reads,alphabet[0]);
+	SEQAN_ASSERT_EQ(length(trans_reads),12);
+	
+	
+	SEQAN_ASSERT_EQ(trans_reads[0],"QRQQCQ");
+	SEQAN_ASSERT_EQ(trans_reads[1],"DRQQR");
+	SEQAN_ASSERT_EQ(trans_reads[2],"NCCQC");
+	
+	SEQAN_ASSERT_EQ(trans_reads[3],"EDECDD");
+	SEQAN_ASSERT_EQ(trans_reads[4],"NQNRC");
+	SEQAN_ASSERT_EQ(trans_reads[5],"QCQCQ");
+
+	
+	SEQAN_ASSERT_EQ(trans_reads[6],"CCCDQC");
+	SEQAN_ASSERT_EQ(trans_reads[7],"EQQCD");
+	SEQAN_ASSERT_EQ(trans_reads[8],"NDQQC");
+
+	SEQAN_ASSERT_EQ(trans_reads[9],"QCQQND");
+	SEQAN_ASSERT_EQ(trans_reads[10],"QEDQC");
+	SEQAN_ASSERT_EQ(trans_reads[11],"CNCDQ");
+}
+// TEST TRANSLATE_READS ------------------------------------------------------------------------------------------------
+
+
+// TEST TRANSLATE_DATABASE ---------------------------------------------------------------------------------------------
+SEQAN_DEFINE_TEST(test_my_app_translate_database)
+{
+	StrSetSA trans_proteine;
+	int x = 0;
+	StrSetSA alphabet = GET_ALPHABET(x,x);
+	StrSetSA proteine;
+	appendValue(proteine,"QNEVGNATILNVWPF");
+	appendValue(proteine,"ARNDCQEGHILKMFPSTWYV");
+	int result = translate_database(trans_proteine,proteine,alphabet[0]);
+	SEQAN_ASSERT_EQ(length(trans_proteine),2);
+	SEQAN_ASSERT_EQ(trans_proteine[0],"QQNCCQCQCCQCQCC");
+	SEQAN_ASSERT_EQ(trans_proteine[1],"CDQNRQNCDCCDRCCQQQQC");
+}
+// TEST TRANSLATE_DATABASE ---------------------------------------------------------------------------------------------
+
+// TEST APPEND_TO_MATCH_FOUND ------------------------------------------------------------------------------------------
+SEQAN_DEFINE_TEST(test_my_app_append_to_match_found)
+{
+	Match_found test;
+	Pair<unsigned int,unsigned int> x (4,5);
+	Pair<unsigned int,unsigned int> y (0,6);
+	append_to_match_found(test,1,2,1,x,y);
+	SEQAN_ASSERT_EQ(test.position_read,1);
+	SEQAN_ASSERT_EQ(test.begin_read,2);
+	SEQAN_ASSERT_EQ(test.end_read,3);
+	SEQAN_ASSERT_EQ(test.position_protein,4);
+	SEQAN_ASSERT_EQ(test.begin_protein,5);
+	SEQAN_ASSERT_EQ(test.end_protein,6);
+
+}
+// TEST APPEND_TO_MATCH_FOUND ------------------------------------------------------------------------------------------
+
+// TEST APPEND_TO_MATCH_FOUND ------------------------------------------------------------------------------------------
+SEQAN_DEFINE_TEST(test_my_app_find_matches)
+{
+	StrSetSA trans_proteine;
+	StrSetSA trans_reads;
+	appendValue (trans_reads,"CRC");
+	appendValue (trans_reads,"CQQ");
+	appendValue(trans_proteine,"CRCQQCQQ");
+	appendValue(trans_proteine,"QCQQCRCQ");
+	Match_found test;
+	int result = find_matches(trans_proteine,trans_reads,3,test);
+	cout <<test.position_read<<endl;
+	cout <<test.position_protein<<endl;
+	SEQAN_ASSERT_EQ(test.position_read[0],0);
+	SEQAN_ASSERT_EQ(test.begin_read[0],0);
+	SEQAN_ASSERT_EQ(test.end_read[0],3);
+	SEQAN_ASSERT_EQ(test.position_protein[0],0);
+	SEQAN_ASSERT_EQ(test.begin_protein[0],0);
+	SEQAN_ASSERT_EQ(test.end_protein[0],3);
+}
+// TEST APPEND_TO_MATCH_FOUND ------------------------------------------------------------------------------------------
+
+
+// TEST DURCHLAUF ------------------------------------------------------------------------------------------------------
+// Normale eingabe
+SEQAN_BEGIN_TESTSUITE(test_my_app_funcs)
+{
+    SEQAN_CALL_TEST(test_my_app_hash);
+	SEQAN_CALL_TEST(test_my_app_get_amino_acid_pos);
+	SEQAN_CALL_TEST(test_my_apps_get_amino_acid_pos_and_hash);
+	SEQAN_CALL_TEST(test_my_app_get_translate_from_codon);
+	SEQAN_CALL_TEST(test_my_app_translate);
+	SEQAN_CALL_TEST(test_my_app_translate_reads);
+	SEQAN_CALL_TEST(test_my_app_translate_database);
+	SEQAN_CALL_TEST(test_my_app_append_to_match_found);
+	SEQAN_CALL_TEST(test_my_app_find_matches);
+	
+}
+SEQAN_END_TESTSUITE
+// TEST DURCHLAUF ------------------------------------------------------------------------------------------------------

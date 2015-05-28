@@ -1,0 +1,7 @@
+[FIX,LOG]
+A proper message appears if SUA could not connect to dalak.
+The requests import has been moved to the sync functionality.
+--This line, and those below, will be ignored--
+
+M    misc/seqan_instrumentation/bin/classes/diff.py
+M    misc/seqan_instrumentation/bin/seqan_instrumentation.py

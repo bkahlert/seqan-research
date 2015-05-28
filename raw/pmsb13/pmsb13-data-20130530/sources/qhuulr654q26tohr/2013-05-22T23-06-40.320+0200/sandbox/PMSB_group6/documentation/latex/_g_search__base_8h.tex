@@ -1,0 +1,56 @@
+\hypertarget{_g_search__base_8h}{\section{include/seqan/\-G\-Search/\-G\-Search\-\_\-base.h File Reference}
+\label{_g_search__base_8h}\index{include/seqan/\-G\-Search/\-G\-Search\-\_\-base.\-h@{include/seqan/\-G\-Search/\-G\-Search\-\_\-base.\-h}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$seqan/sequence.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/seq\-\_\-io.\-h$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Fasta\-Record.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Match.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Score\-Storage.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-Performance\-Sample.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-Memory\-Sample.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Score.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Score\-Peptide\-Q\-Gram.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Evaluate\-Score.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Parse\-Master\-Id.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Check\-Cluster\-Master.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Compute\-Match.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Post\-Process\-Matches.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Write\-Matches.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_g_search__base_8h_a9966e6517d5f0b9f3ed2d84402fa4621}{check\-Streams} (Sequence\-Stream \&my\-Cluster, Sequence\-Stream \&my\-Master, Sequence\-Stream \&my\-Queries, fstream \&my\-Output, bool M\-A\-S\-T\-E\-R\-\_\-\-F\-I\-L\-E\-\_\-\-G\-I\-V\-E\-N)
+\item 
+{\footnotesize template$<$typename T\-Score , typename T\-Sequence $>$ }\\int \hyperlink{_g_search__base_8h_a721e41d9e064ca3ff24840bfbe89f016}{G\-Search} (String$<$ \hyperlink{structseqan_1_1_g_match}{G\-Match}$<$ T\-Score, T\-Sequence $>$ $>$ \&matches\-Collection, int \&data\-Base\-Length, String$<$ \hyperlink{structseqan_1_1_performance_sample}{Performance\-Sample} $>$ \&performance, const char $\ast$clustered\-Database, const char $\ast$cluster\-Representanten, const char $\ast$queries, const char $\ast$out\-File, T\-Score threshold, string score\-Mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_g_search__base_8h_a9966e6517d5f0b9f3ed2d84402fa4621}{\index{G\-Search\-\_\-base.\-h@{G\-Search\-\_\-base.\-h}!check\-Streams@{check\-Streams}}
+\index{check\-Streams@{check\-Streams}!GSearch_base.h@{G\-Search\-\_\-base.\-h}}
+\subsubsection[{check\-Streams}]{\setlength{\rightskip}{0pt plus 5cm}int check\-Streams (
+\begin{DoxyParamCaption}
+\item[{Sequence\-Stream \&}]{my\-Cluster, }
+\item[{Sequence\-Stream \&}]{my\-Master, }
+\item[{Sequence\-Stream \&}]{my\-Queries, }
+\item[{fstream \&}]{my\-Output, }
+\item[{bool}]{M\-A\-S\-T\-E\-R\-\_\-\-F\-I\-L\-E\-\_\-\-G\-I\-V\-E\-N}
+\end{DoxyParamCaption}
+)}}\label{_g_search__base_8h_a9966e6517d5f0b9f3ed2d84402fa4621}
+\hypertarget{_g_search__base_8h_a721e41d9e064ca3ff24840bfbe89f016}{\index{G\-Search\-\_\-base.\-h@{G\-Search\-\_\-base.\-h}!G\-Search@{G\-Search}}
+\index{G\-Search@{G\-Search}!GSearch_base.h@{G\-Search\-\_\-base.\-h}}
+\subsubsection[{G\-Search}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Score , typename T\-Sequence $>$ int G\-Search (
+\begin{DoxyParamCaption}
+\item[{String$<$ {\bf G\-Match}$<$ T\-Score, T\-Sequence $>$ $>$ \&}]{matches\-Collection, }
+\item[{int \&}]{data\-Base\-Length, }
+\item[{String$<$ {\bf Performance\-Sample} $>$ \&}]{performance, }
+\item[{const char $\ast$}]{clustered\-Database, }
+\item[{const char $\ast$}]{cluster\-Representanten, }
+\item[{const char $\ast$}]{queries, }
+\item[{const char $\ast$}]{out\-File, }
+\item[{T\-Score}]{threshold, }
+\item[{string}]{score\-Mode}
+\end{DoxyParamCaption}
+)}}\label{_g_search__base_8h_a721e41d9e064ca3ff24840bfbe89f016}

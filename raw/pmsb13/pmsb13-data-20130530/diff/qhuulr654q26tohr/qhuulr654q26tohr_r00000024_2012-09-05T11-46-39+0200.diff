@@ -1,0 +1,21 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_ind/ws_ind.cpp ./sandbox/robinson/apps/ws_ind/ws_ind.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_ind/ws_ind.cpp	2012-09-05 11:28:16.000000000 +0200
++++ ./sandbox/robinson/apps/ws_ind/ws_ind.cpp	2012-09-05 11:45:50.901235593 +0200
+@@ -22,12 +22,12 @@
+ 			Preorder> > >::Type TIterator;
+ 
+ 	TIterator it(esaindex2);
+-
+ 	do {
+-		do {
+-			cout << representative(it) << endl;
+-		} while (goDown(it));
+-	} while (goUp(it) && goRight(it));
++		cout << representative(it) << endl;
++		if (!goDown(it) && !goRight(it))
++			while (goUp(it) && !goRight(it))
++				;
++	} while (!root(it));
+ 
+ 	return 0;
+ }

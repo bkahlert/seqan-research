@@ -1,0 +1,1 @@
+/usr/bin/c++    -W -Wall -Wno-long-long -fstrict-aliasing -Wstrict-aliasing -pedantic -Wno-variadic-macros -fopenmp -O3 -DNDEBUG    CMakeFiles/test_test_lagan.dir/test_test_lagan.cpp.o CMakeFiles/test_test_lagan.dir/__/__/apps/lagan_omp/lagan_functions.cpp.o  -o ../../../../bin/test_test_lagan -rdynamic -lrt 

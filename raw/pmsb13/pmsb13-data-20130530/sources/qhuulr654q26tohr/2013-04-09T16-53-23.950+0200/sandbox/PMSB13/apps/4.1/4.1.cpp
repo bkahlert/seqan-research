@@ -1,0 +1,22 @@
+#include <seqan/sequence.h>
+#include <seqan/basic.h>
+#include <iostream>
+
+using namespace seqan;
+
+// We want to define a function, which takes 
+// the alphabet type as an argument
+template <typename TAlphabet>
+void showAllLettersOfMyAlphabet(TAlphabet const & a)
+{
+    //ValueSize<TAlphabet>::VALUE
+}
+
+int main()
+{
+    showAllLettersOfMyAlphabet(AminoAcid());
+    showAllLettersOfMyAlphabet(Dna());
+    showAllLettersOfMyAlphabet(Dna5());
+    std::cout << Dna[0] << endl;
+    return 0;
+}

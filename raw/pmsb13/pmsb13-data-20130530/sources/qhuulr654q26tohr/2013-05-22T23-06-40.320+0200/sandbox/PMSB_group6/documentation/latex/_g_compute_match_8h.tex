@@ -1,0 +1,28 @@
+\hypertarget{_g_compute_match_8h}{\section{include/seqan/\-G\-Search/\-G\-Compute\-Match.h File Reference}
+\label{_g_compute_match_8h}\index{include/seqan/\-G\-Search/\-G\-Compute\-Match.\-h@{include/seqan/\-G\-Search/\-G\-Compute\-Match.\-h}}
+}
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Fasta\-Record.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Match.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Score.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Score\-Peptide\-Q\-Gram.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/sequence.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\-Score , typename T\-Sequence , typename T\-Scoring\-Scheme $>$ }\\int \hyperlink{_g_compute_match_8h_a838fc06a0e80f7e3ffa8c09ed09e907d}{G\-Compute\-Match} (String$<$ \hyperlink{structseqan_1_1_g_match}{G\-Match}$<$ T\-Score, T\-Sequence $>$ $>$ \&matches, \hyperlink{structseqan_1_1_g_fasta_record}{G\-Fasta\-Record}$<$ T\-Sequence $>$ \&query\-Record, \hyperlink{structseqan_1_1_g_fasta_record}{G\-Fasta\-Record}$<$ T\-Sequence $>$ \&cluster\-Record, T\-Scoring\-Scheme \&scoring\-Scheme, T\-Score threshold, string \&score\-Mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_g_compute_match_8h_a838fc06a0e80f7e3ffa8c09ed09e907d}{\index{G\-Compute\-Match.\-h@{G\-Compute\-Match.\-h}!G\-Compute\-Match@{G\-Compute\-Match}}
+\index{G\-Compute\-Match@{G\-Compute\-Match}!GComputeMatch.h@{G\-Compute\-Match.\-h}}
+\subsubsection[{G\-Compute\-Match}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Score , typename T\-Sequence , typename T\-Scoring\-Scheme $>$ int G\-Compute\-Match (
+\begin{DoxyParamCaption}
+\item[{String$<$ {\bf G\-Match}$<$ T\-Score, T\-Sequence $>$ $>$ \&}]{matches, }
+\item[{{\bf G\-Fasta\-Record}$<$ T\-Sequence $>$ \&}]{query\-Record, }
+\item[{{\bf G\-Fasta\-Record}$<$ T\-Sequence $>$ \&}]{cluster\-Record, }
+\item[{T\-Scoring\-Scheme \&}]{scoring\-Scheme, }
+\item[{T\-Score}]{threshold, }
+\item[{string \&}]{score\-Mode}
+\end{DoxyParamCaption}
+)}}\label{_g_compute_match_8h_a838fc06a0e80f7e3ffa8c09ed09e907d}

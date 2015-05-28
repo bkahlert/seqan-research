@@ -1,0 +1,82 @@
+\hypertarget{structReadStats}{\section{\-Read\-Stats \-Struct \-Reference}
+\label{structReadStats}\index{\-Read\-Stats@{\-Read\-Stats}}
+}
+
+
+{\ttfamily \#include $<$read\-\_\-stats.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structReadStats_a42157da1cf5611d9d6dc7446f1aeffaf}{\-Read\-Stats} (unsigned read\-Length)
+\item 
+void \hyperlink{structReadStats_aa61f5f9bb9e9302e0b22e6909c52762c}{collect\-Read\-Stats} (seqan\-::\-Char\-String const \&id, seqan\-::\-Dna5\-String const \&seq, seqan\-::\-Char\-String const \&qual)
+\item 
+void \hyperlink{structReadStats_a4c8ded2f5f88cce65350f752774e463b}{to\-String} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+seqan\-::\-String$<$ seqan\-::\-String\*
+$<$ unsigned $>$ $>$ \hyperlink{structReadStats_a301a09b8d357a68ece8140731f0c7a62}{score\-Count}
+\item 
+seqan\-::\-String$<$ seqan\-::\-String\*
+$<$ unsigned $>$ $>$ \hyperlink{structReadStats_aa8ce6cf2b6feee564b6d30190f5e9229}{nuc\-Count}
+\item 
+std\-::map$<$ int, int $>$ \hyperlink{structReadStats_a2f389e19dcd24901f024df8e3cb41b25}{read\-Len\-Count}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Collects and holds all information gathered from input 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{structReadStats_a42157da1cf5611d9d6dc7446f1aeffaf}{\index{\-Read\-Stats@{\-Read\-Stats}!\-Read\-Stats@{\-Read\-Stats}}
+\index{\-Read\-Stats@{\-Read\-Stats}!ReadStats@{\-Read\-Stats}}
+\subsubsection[{\-Read\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Read\-Stats\-::\-Read\-Stats} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{read\-Length}
+\end{DoxyParamCaption}
+)}}\label{structReadStats_a42157da1cf5611d9d6dc7446f1aeffaf}
+\-The object needs to know maximal readlength at construction time 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{structReadStats_aa61f5f9bb9e9302e0b22e6909c52762c}{\index{\-Read\-Stats@{\-Read\-Stats}!collect\-Read\-Stats@{collect\-Read\-Stats}}
+\index{collect\-Read\-Stats@{collect\-Read\-Stats}!ReadStats@{\-Read\-Stats}}
+\subsubsection[{collect\-Read\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Read\-Stats\-::collect\-Read\-Stats} (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-Char\-String const \&}]{id, }
+\item[{seqan\-::\-Dna5\-String const \&}]{seq, }
+\item[{seqan\-::\-Char\-String const \&}]{qual}
+\end{DoxyParamCaption}
+)}}\label{structReadStats_aa61f5f9bb9e9302e0b22e6909c52762c}
+collects basic statistics from the reads\-:
+\begin{DoxyItemize}
+\item nucleotide count per position in read for each \-Dna5 member
+\item count encountered score chars per position in read
+\item read length statistics 
+\end{DoxyItemize}\hypertarget{structReadStats_a4c8ded2f5f88cce65350f752774e463b}{\index{\-Read\-Stats@{\-Read\-Stats}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!ReadStats@{\-Read\-Stats}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Read\-Stats\-::to\-String} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structReadStats_a4c8ded2f5f88cce65350f752774e463b}
+generates a string representation of collected statistics 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structReadStats_aa8ce6cf2b6feee564b6d30190f5e9229}{\index{\-Read\-Stats@{\-Read\-Stats}!nuc\-Count@{nuc\-Count}}
+\index{nuc\-Count@{nuc\-Count}!ReadStats@{\-Read\-Stats}}
+\subsubsection[{nuc\-Count}]{\setlength{\rightskip}{0pt plus 5cm}seqan\-::\-String$<$seqan\-::\-String $<$unsigned$>$ $>$ {\bf \-Read\-Stats\-::nuc\-Count}}}\label{structReadStats_aa8ce6cf2b6feee564b6d30190f5e9229}
+2-\/dim table that holds the count for each \-Dna5 element and position in read \hypertarget{structReadStats_a2f389e19dcd24901f024df8e3cb41b25}{\index{\-Read\-Stats@{\-Read\-Stats}!read\-Len\-Count@{read\-Len\-Count}}
+\index{read\-Len\-Count@{read\-Len\-Count}!ReadStats@{\-Read\-Stats}}
+\subsubsection[{read\-Len\-Count}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$int,int$>$ {\bf \-Read\-Stats\-::read\-Len\-Count}}}\label{structReadStats_a2f389e19dcd24901f024df8e3cb41b25}
+holds counts for encountered read lengths, read lengths as keys \hypertarget{structReadStats_a301a09b8d357a68ece8140731f0c7a62}{\index{\-Read\-Stats@{\-Read\-Stats}!score\-Count@{score\-Count}}
+\index{score\-Count@{score\-Count}!ReadStats@{\-Read\-Stats}}
+\subsubsection[{score\-Count}]{\setlength{\rightskip}{0pt plus 5cm}seqan\-::\-String$<$seqan\-::\-String $<$unsigned$>$ $>$ {\bf \-Read\-Stats\-::score\-Count}}}\label{structReadStats_a301a09b8d357a68ece8140731f0c7a62}
+2-\/dim table that holds the count for each possible score char and position in read 
+
+\-The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+read\-\_\-stats.\-h\item 
+read\-\_\-stats.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+#include <iostream>
+#include <seqan/sequence.h>
+#include <seqan/seq_io.h>
+
+int main(int argc, char* argv[])
+{	if (argc < 2)
+	{
+		std::cout << "Kein Parameter uebergeben" <<std::endl;
+		return 1;
+	}
+	else
+	{
+		seqan::CharString id;
+		seqan::String<seqan::Dna5Q> seq;
+		seqan::CharString quals;
+		seqan::SequenceStream seqStream(argv[1]);
+		if (!isGood(seqStream))
+		{
+			std::cerr << "ERROR: Could not open the file.\n";
+			return 1;
+		}
+		
+		while(!atEnd(seqStream))
+		{
+			
+			if (readRecord(id, seq, quals, seqStream) != 0)
+			{
+				std::cerr << "ERROR: Could not read from example.fa!\n";
+				return 1;
+			}
+			std::cout << id << '\t' << seq << '\t' << '\n';
+		}
+
+	}
+    return 0;
+}

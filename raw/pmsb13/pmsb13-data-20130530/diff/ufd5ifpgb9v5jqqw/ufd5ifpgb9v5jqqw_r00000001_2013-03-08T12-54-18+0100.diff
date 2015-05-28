@@ -1,0 +1,443 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/demos/index_sa_bpr_demo.cpp ./sandbox/iwanowit/demos/index_sa_bpr_demo.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/demos/index_sa_bpr_demo.cpp	2013-03-08 12:34:35.000000000 +0100
++++ ./sandbox/iwanowit/demos/index_sa_bpr_demo.cpp	2013-03-08 12:50:10.206866699 +0100
+@@ -37,7 +37,6 @@
+ #include <seqan/basic.h>
+ #include <seqan/sequence.h>
+ #include <seqan/index.h>
+-#include <seqan/index_iwanowit.h>
+ #include <seqan/file.h>      // For printing SeqAn Strings.
+ 
+ using namespace seqan;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/demos/index_sa_bpr_demo.cpp~ ./sandbox/iwanowit/demos/index_sa_bpr_demo.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/demos/index_sa_bpr_demo.cpp~	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/iwanowit/demos/index_sa_bpr_demo.cpp~	2013-03-08 12:50:10.186866697 +0100
+@@ -0,0 +1,70 @@
++// ==========================================================================
++//                             index_sa_bpr_demo
++// ==========================================================================
++// Copyright (c) 2006-2012, Knut Reinert, FU Berlin
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are met:
++//
++//     * Redistributions of source code must retain the above copyright
++//       notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above copyright
++//       notice, this list of conditions and the following disclaimer in the
++//       documentation and/or other materials provided with the distribution.
++//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
++//       its contributors may be used to endorse or promote products derived
++//       from this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
++// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
++// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
++// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++// DAMAGE.
++//
++// ==========================================================================
++// Author: David Iwanowitsch <iwanowit@inf.fu-berlin.de>
++// ==========================================================================
++
++#include <iostream>
++
++#include <seqan/basic.h>
++#include <seqan/sequence.h>
++#include <seqan/index.h>
++#include <seqan/index_iwanowit.h>
++#include <seqan/file.h>      // For printing SeqAn Strings.
++
++using namespace seqan;
++
++int main(int argc, char const ** argv)
++{
++    seqan::CharString x = "Hello SeqAn!";
++    std::cout << x << std::endl;
++
++	String<char> text = "hello world!";
++	String<char> pattern = "l";
++	String<unsigned> sa;
++
++///Build a suffix array using the Bpr algorithm.
++	resize(sa, length(text));
++	//createSuffixArray(sa, text, Skew7());
++	createSuffixArray(sa, text, Bpr());
++
++///Search the interval of suffices beginning with the pattern.
++	Pair<unsigned> hitRange;
++	hitRange = equalRangeSA(text, sa, pattern);
++
++///Output the suffix indices, i.e. the occurrences of the pattern.
++	for(unsigned i = hitRange.i1; i < hitRange.i2; ++i)
++		std::cout << sa[i] << " ";
++	std::cout << std::endl;
++
++    return 0;
++}
++
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit/header_test.h ./sandbox/iwanowit/include/seqan/iwanowit/header_test.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit/header_test.h	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/iwanowit/include/seqan/iwanowit/header_test.h	2013-03-08 12:51:46.694868199 +0100
+@@ -0,0 +1,54 @@
++// ==========================================================================
++//                               header_test.h
++// ==========================================================================
++// Copyright (c) 2006-2012, Knut Reinert, FU Berlin
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are met:
++//
++//     * Redistributions of source code must retain the above copyright
++//       notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above copyright
++//       notice, this list of conditions and the following disclaimer in the
++//       documentation and/or other materials provided with the distribution.
++//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
++//       its contributors may be used to endorse or promote products derived
++//       from this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
++// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
++// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
++// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++// DAMAGE.
++//
++// ==========================================================================
++// Author: David Iwanowitsch <iwanowit@inf.fu-berlin.de>
++// ==========================================================================
++
++#ifndef SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_HEADER_TEST_H_
++#define SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_HEADER_TEST_H_
++
++// ============================================================================
++// Forwards
++// ============================================================================
++
++// ============================================================================
++// Tags, Classes, Enums
++// ============================================================================
++
++// ============================================================================
++// Metafunctions
++// ============================================================================
++
++// ============================================================================
++// Functions
++// ============================================================================
++
++#endif  // #ifndef SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_HEADER_TEST_H_
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit/INFO ./sandbox/iwanowit/include/seqan/iwanowit/INFO
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit/INFO	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/iwanowit/include/seqan/iwanowit/INFO	2013-03-08 12:51:13.382867679 +0100
+@@ -0,0 +1,21 @@
++Name: iwanowit
++Author: David Iwanowitsch <iwanowit@inf.fu-berlin.de>
++Maintainer: David Iwanowitsch <iwanowit@inf.fu-berlin.de>
++License: BSD 3-clause
++Copyright: 2008-2012, FU Berlin
++Status: under development
++Description: One-line description for module iwanowit.
++ This is the long text description for the module.  You should wrap text to 78
++ characters and you have to wrap it to 80 characters.  The lines must have one
++ leading space.  Successive lines in this format will be word-wrapped when
++ displayed.  Leading space is stripped off.
++ .
++ Use empty lines with one dot to insert an empty line / break paragraphs.
++ .
++  Start lines with two spaces to make them display verbatim.  Lines that
++  cannot be displayed horizontally will be hard-wrapped (not at word bor-
++  ders), so maybe do your own hyphenation.
++ .
++ Do not use tab characters, their effect is not predictable.
++ .
++ The INFO file format is oriented after the Debian controfields format.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit/iwanowit_base.h ./sandbox/iwanowit/include/seqan/iwanowit/iwanowit_base.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit/iwanowit_base.h	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/iwanowit/include/seqan/iwanowit/iwanowit_base.h	2013-03-08 12:51:13.382867679 +0100
+@@ -0,0 +1,151 @@
++// ==========================================================================
++//                                  iwanowit
++// ==========================================================================
++// Copyright (c) 2006-2012, Knut Reinert, FU Berlin
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are met:
++//
++//     * Redistributions of source code must retain the above copyright
++//       notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above copyright
++//       notice, this list of conditions and the following disclaimer in the
++//       documentation and/or other materials provided with the distribution.
++//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
++//       its contributors may be used to endorse or promote products derived
++//       from this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
++// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
++// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
++// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++// DAMAGE.
++//
++// ==========================================================================
++// Author: David Iwanowitsch <iwanowit@inf.fu-berlin.de>
++// ==========================================================================
++
++#ifndef SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_IWANOWIT_BASE_H_
++#define SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_IWANOWIT_BASE_H_
++
++namespace seqan {
++
++// ============================================================================
++// Forwards
++// ============================================================================
++
++// ============================================================================
++// Tags, Classes, Enums
++// ============================================================================
++
++/**
++.Concept:MyConcept
++..
++..include:seqan/iwanowit.h
++ */
++
++// If your define a lot of very generic functions for our concept, consider
++// putting it into its own directory.
++
++/**
++.Class.MyClass
++..concept:Concept.MyConcept
++..summary:This is my class.
++..cat:My Classes
++..signature:MyClass<TSpec>
++..param.TSpec:Tag to select the specialization.
++...default:MyTag
++..include:seqan/iwanowit.h
++ */
++
++// NOTE: Assigning classes to concepts is optional.
++
++// struct Our_;
++// typedef Tag<Our_> Our;
++
++// template <typename TSpec = Our>
++// class MyClass;
++
++/*
++.Spec.Our MyClass
++..cat:My Classes
++..general:Class.MyClass
++..summary:This is the "our" specialization of my class!
++..signature:MyClass<Our>
++..include:seqan/iwanowit.h
++ 
++.Memfunc.Our MyClass#MyClass
++..cat:My Classes
++..class:Spec.Our MyClass
++..signature:Class()
++..signature:Class(foo, barBaz)
++..param.foo:A foo parameter.
++...type:Spec.CharString
++..param.barBaz:Another parameter.
++...type:nolink:$int$
++ */
++	
++// template <>
++// class MyClass<Our>
++// {
++// public:
++//     // ...
++// };
++
++// ============================================================================
++// Metafunctions
++// ============================================================================
++
++// ----------------------------------------------------------------------------
++// Metafunction Value
++// ----------------------------------------------------------------------------
++
++///.Metafunction.Value.param.T.value:Class.MyClass
++
++// template <typename TSpec>
++// struct Value<MyClass<TSpec> >
++// {
++//     typedef int Type;
++// };
++
++// ============================================================================
++// Functions
++// ============================================================================
++
++// ----------------------------------------------------------------------------
++// Function someFunction()
++// ----------------------------------------------------------------------------
++
++/**
++.Function.someFunction
++..concept:Concept.MyConcept
++..cat:My Classes
++..signature:someFunction(obj)
++..summary:Executes some functionality on a @Class.MyClass@.
++..param.obj:Object to call function on.
++...type:Class.MyClass
++..returns:$void$
++..include:seqan/iwanowit.h
++ */
++
++// NOTE: Functions can belong to concepts but do not have to.  You can use
++//       function documentations and link them to concepts in a concept_name.h
++//       header to document your concept.
++
++// template <typename TSpec>
++// inline void
++// someFunction(MyClass<TSpec> const & /*obj*/)
++// {
++//     return;
++// }
++
++}  // namespace seqan
++
++#endif  // SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_IWANOWIT_BASE_H_
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit/lheader_test.h ./sandbox/iwanowit/include/seqan/iwanowit/lheader_test.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit/lheader_test.h	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/iwanowit/include/seqan/iwanowit/lheader_test.h	2013-03-08 12:52:34.630868946 +0100
+@@ -0,0 +1,58 @@
++// ==========================================================================
++//                 SeqAn - The Library for Sequence Analysis
++// ==========================================================================
++// Copyright (c) 2006-2012, Knut Reinert, FU Berlin
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are met:
++//
++//     * Redistributions of source code must retain the above copyright
++//       notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above copyright
++//       notice, this list of conditions and the following disclaimer in the
++//       documentation and/or other materials provided with the distribution.
++//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
++//       its contributors may be used to endorse or promote products derived
++//       from this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
++// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
++// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
++// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++// DAMAGE.
++//
++// ==========================================================================
++// Author: David Iwanowitsch <iwanowit@inf.fu-berlin.de>
++// ==========================================================================
++
++#ifndef SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_LHEADER_TEST_H_
++#define SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_LHEADER_TEST_H_
++
++namespace seqan {
++
++// ============================================================================
++// Forwards
++// ============================================================================
++
++// ============================================================================
++// Tags, Classes, Enums
++// ============================================================================
++
++// ============================================================================
++// Metafunctions
++// ============================================================================
++
++// ============================================================================
++// Functions
++// ============================================================================
++
++}  // namespace seqan
++
++#endif  // #ifndef SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_LHEADER_TEST_H_
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata/ufd5ifpgb9v5jqqw_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/david/Development/Seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit.h ./sandbox/iwanowit/include/seqan/iwanowit.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/iwanowit/include/seqan/iwanowit.h	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/iwanowit/include/seqan/iwanowit.h	2013-03-08 12:51:13.382867679 +0100
+@@ -0,0 +1,54 @@
++// ==========================================================================
++//                                  iwanowit
++// ==========================================================================
++// Copyright (c) 2006-2012, Knut Reinert, FU Berlin
++// All rights reserved.
++//
++// Redistribution and use in source and binary forms, with or without
++// modification, are permitted provided that the following conditions are met:
++//
++//     * Redistributions of source code must retain the above copyright
++//       notice, this list of conditions and the following disclaimer.
++//     * Redistributions in binary form must reproduce the above copyright
++//       notice, this list of conditions and the following disclaimer in the
++//       documentation and/or other materials provided with the distribution.
++//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
++//       its contributors may be used to endorse or promote products derived
++//       from this software without specific prior written permission.
++//
++// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
++// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
++// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
++// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
++// DAMAGE.
++//
++// ==========================================================================
++// Author: David Iwanowitsch <iwanowit@inf.fu-berlin.de>
++// ==========================================================================
++// Facade header for module iwanowit.
++// ==========================================================================
++
++#ifndef SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_H_
++#define SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_H_
++
++// ===========================================================================
++// Prerequisites.
++// ===========================================================================
++
++#include <seqan/basic.h>
++#include <seqan/file.h>
++#include <seqan/sequence.h>
++
++// ===========================================================================
++// First Header Group.
++// ===========================================================================
++
++#include <seqan/iwanowit/iwanowit_base.h>
++
++#endif  // SANDBOX_IWANOWIT_INCLUDE_SEQAN_IWANOWIT_H_

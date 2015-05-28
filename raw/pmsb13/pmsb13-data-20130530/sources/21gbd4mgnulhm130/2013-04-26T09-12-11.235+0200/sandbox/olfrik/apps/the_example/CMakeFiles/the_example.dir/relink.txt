@@ -1,0 +1,1 @@
+clang++    -DSEQAN_ENABLE_TESTING=0  -fno-omit-frame-pointer -fopenmp   CMakeFiles/the_example.dir/the_example.cpp.o  -o CMakeFiles/CMakeRelink.dir/the_example -rdynamic -lrt -lz 

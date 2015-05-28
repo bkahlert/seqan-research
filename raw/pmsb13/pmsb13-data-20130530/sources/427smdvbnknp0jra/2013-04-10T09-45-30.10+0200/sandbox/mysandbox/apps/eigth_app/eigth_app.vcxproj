@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{215C9D71-C829-47DF-8B0E-B20AC17BB438}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>eigth_app</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Informatik\Development\SeqAn\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">eigth_app.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">eigth_app</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Informatik\Development\SeqAn\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">eigth_app.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">eigth_app</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Informatik\Development\SeqAn\bin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">eigth_app.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">eigth_app</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Informatik\Development\SeqAn\bin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">eigth_app.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">eigth_app</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level2</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;SEQAN_ENABLE_TESTING=0;_DEBUG;SEQAN_ENABLE_DEBUG=1;NOMINMAX;_SCL_SECURE_NO_WARNINGS;SEQAN_ENABLE_TESTING=0;SEQAN_ENABLE_DEBUG=0;SEQAN_HAS_OPENMP=1;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:/Informatik/Development/SeqAn/bin/Debug/eigth_app.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;SEQAN_ENABLE_TESTING=0;_DEBUG;SEQAN_ENABLE_DEBUG=1;NOMINMAX;_SCL_SECURE_NO_WARNINGS;SEQAN_ENABLE_TESTING=0;SEQAN_ENABLE_DEBUG=0;SEQAN_HAS_OPENMP=1;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Pre Build Instrumentation...</Message>
+      <Command>setlocal
+D:\Informatik\Python27_64\python.exe D:/Informatik/Development/SeqAn/misc/seqan_instrumentation/bin/seqan_instrumentation.py pre_build D:/Informatik/Development/SeqAn D:/Informatik/Development/SeqAn eigth_app
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Post Build Instrumentation...</Message>
+      <Command>setlocal
+D:\Informatik\Python27_64\python.exe D:/Informatik/Development/SeqAn/misc/seqan_instrumentation/bin/seqan_instrumentation.py post_build D:/Informatik/Development/SeqAn D:/Informatik/Development/SeqAn eigth_app
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/Debug/eigth_app.lib</ImportLibrary>
+      <LinkIncremental>true</LinkIncremental>
+      <ProgramDataBaseFile>D:/Informatik/Development/SeqAn/bin/Debug/eigth_app.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;SEQAN_ENABLE_TESTING=0;NDEBUG;SEQAN_ENABLE_DEBUG=0;NOMINMAX;_SCL_SECURE_NO_WARNINGS;SEQAN_ENABLE_TESTING=0;SEQAN_ENABLE_DEBUG=0;SEQAN_HAS_OPENMP=1;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:/Informatik/Development/SeqAn/bin/Release/eigth_app.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;SEQAN_ENABLE_TESTING=0;NDEBUG;SEQAN_ENABLE_DEBUG=0;NOMINMAX;_SCL_SECURE_NO_WARNINGS;SEQAN_ENABLE_TESTING=0;SEQAN_ENABLE_DEBUG=0;SEQAN_HAS_OPENMP=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Pre Build Instrumentation...</Message>
+      <Command>setlocal
+D:\Informatik\Python27_64\python.exe D:/Informatik/Development/SeqAn/misc/seqan_instrumentation/bin/seqan_instrumentation.py pre_build D:/Informatik/Development/SeqAn D:/Informatik/Development/SeqAn eigth_app
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Post Build Instrumentation...</Message>
+      <Command>setlocal
+D:\Informatik\Python27_64\python.exe D:/Informatik/Development/SeqAn/misc/seqan_instrumentation/bin/seqan_instrumentation.py post_build D:/Informatik/Development/SeqAn D:/Informatik/Development/SeqAn eigth_app
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/Release/eigth_app.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Informatik/Development/SeqAn/bin/Release/eigth_app.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;SEQAN_ENABLE_TESTING=0;NDEBUG;NOMINMAX;_SCL_SECURE_NO_WARNINGS;SEQAN_ENABLE_TESTING=0;SEQAN_ENABLE_DEBUG=0;SEQAN_HAS_OPENMP=1;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:/Informatik/Development/SeqAn/bin/MinSizeRel/eigth_app.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;SEQAN_ENABLE_TESTING=0;NDEBUG;NOMINMAX;_SCL_SECURE_NO_WARNINGS;SEQAN_ENABLE_TESTING=0;SEQAN_ENABLE_DEBUG=0;SEQAN_HAS_OPENMP=1;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Pre Build Instrumentation...</Message>
+      <Command>setlocal
+D:\Informatik\Python27_64\python.exe D:/Informatik/Development/SeqAn/misc/seqan_instrumentation/bin/seqan_instrumentation.py pre_build D:/Informatik/Development/SeqAn D:/Informatik/Development/SeqAn eigth_app
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Post Build Instrumentation...</Message>
+      <Command>setlocal
+D:\Informatik\Python27_64\python.exe D:/Informatik/Development/SeqAn/misc/seqan_instrumentation/bin/seqan_instrumentation.py post_build D:/Informatik/Development/SeqAn D:/Informatik/Development/SeqAn eigth_app
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/MinSizeRel/eigth_app.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Informatik/Development/SeqAn/bin/MinSizeRel/eigth_app.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level2</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;SEQAN_ENABLE_TESTING=0;NDEBUG;SEQAN_ENABLE_DEBUG=0;NOMINMAX;_SCL_SECURE_NO_WARNINGS;SEQAN_ENABLE_TESTING=0;SEQAN_ENABLE_DEBUG=0;SEQAN_HAS_OPENMP=1;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:/Informatik/Development/SeqAn/bin/RelWithDebInfo/eigth_app.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;SEQAN_ENABLE_TESTING=0;NDEBUG;SEQAN_ENABLE_DEBUG=0;NOMINMAX;_SCL_SECURE_NO_WARNINGS;SEQAN_ENABLE_TESTING=0;SEQAN_ENABLE_DEBUG=0;SEQAN_HAS_OPENMP=1;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/Informatik/Development/SeqAn/sandbox/mysandbox/include;D:/Informatik/Development/SeqAn/extras/include;D:/Informatik/Development/SeqAn/core/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Pre Build Instrumentation...</Message>
+      <Command>setlocal
+D:\Informatik\Python27_64\python.exe D:/Informatik/Development/SeqAn/misc/seqan_instrumentation/bin/seqan_instrumentation.py pre_build D:/Informatik/Development/SeqAn D:/Informatik/Development/SeqAn eigth_app
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Post Build Instrumentation...</Message>
+      <Command>setlocal
+D:\Informatik\Python27_64\python.exe D:/Informatik/Development/SeqAn/misc/seqan_instrumentation/bin/seqan_instrumentation.py post_build D:/Informatik/Development/SeqAn D:/Informatik/Development/SeqAn eigth_app
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/RelWithDebInfo/eigth_app.lib</ImportLibrary>
+      <LinkIncremental>true</LinkIncremental>
+      <ProgramDataBaseFile>D:/Informatik/Development/SeqAn/bin/RelWithDebInfo/eigth_app.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"D:\Informatik\CMake 2.8\bin\cmake.exe" -HD:/Informatik/Development/SeqAn -BD:/Informatik/Development/SeqAn --check-stamp-file D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/CMakeLists.txt;D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeLists.txt;D:\Informatik\Development\SeqAn\util\cmake\FindSeqAn.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindZLIB.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\Development\SeqAn\util\cmake\CMakeMacroParseArguments.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindOpenMP.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\Development\SeqAn\util\cmake\CMakeMacroParseArguments.cmake;D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"D:\Informatik\CMake 2.8\bin\cmake.exe" -HD:/Informatik/Development/SeqAn -BD:/Informatik/Development/SeqAn --check-stamp-file D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/CMakeLists.txt;D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeLists.txt;D:\Informatik\Development\SeqAn\util\cmake\FindSeqAn.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindZLIB.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\Development\SeqAn\util\cmake\CMakeMacroParseArguments.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindOpenMP.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\Development\SeqAn\util\cmake\CMakeMacroParseArguments.cmake;D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"D:\Informatik\CMake 2.8\bin\cmake.exe" -HD:/Informatik/Development/SeqAn -BD:/Informatik/Development/SeqAn --check-stamp-file D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/CMakeLists.txt;D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeLists.txt;D:\Informatik\Development\SeqAn\util\cmake\FindSeqAn.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindZLIB.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\Development\SeqAn\util\cmake\CMakeMacroParseArguments.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindOpenMP.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\Development\SeqAn\util\cmake\CMakeMacroParseArguments.cmake;D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"D:\Informatik\CMake 2.8\bin\cmake.exe" -HD:/Informatik/Development/SeqAn -BD:/Informatik/Development/SeqAn --check-stamp-file D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Informatik/Development/SeqAn/sandbox/mysandbox/apps/eigth_app/CMakeLists.txt;D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeLists.txt;D:\Informatik\Development\SeqAn\util\cmake\FindSeqAn.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindZLIB.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\Development\SeqAn\util\cmake\CMakeMacroParseArguments.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindOpenMP.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Informatik\Development\SeqAn\util\cmake\FindPackageHandleStandardArgs.cmake;D:\Informatik\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\Informatik\Development\SeqAn\util\cmake\CMakeMacroParseArguments.cmake;D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Informatik\Development\SeqAn\sandbox\mysandbox\apps\eigth_app\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="eigth_app.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/ZERO_CHECK.vcxproj">
+      <Project>EBA3EC0D-486B-42AA-9B4C-46F44F0D2D0B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/core/seqan_core.vcxproj">
+      <Project>56C92891-DCAE-4ADE-AEF9-58B6995A18D4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/extras/seqan_extras.vcxproj">
+      <Project>2D4723D0-E026-4A61-B8D6-0ED7CF56EEFE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/sandbox/mysandbox/seqan_sandbox_mysandbox.vcxproj">
+      <Project>68D516E9-C76D-4058-AE4F-72FCB94E4E5C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Informatik/Development/SeqAn/seqan_sua_target.vcxproj">
+      <Project>A0F6FC0E-16CE-4AA5-B304-BBA297ACBA92</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,1 @@
+/usr/bin/c++    -DSEQAN_ENABLE_TESTING=0 -W -Wall -Wno-long-long -fstrict-aliasing -Wstrict-aliasing -pedantic -Wno-variadic-macros -fopenmp -O3 -DNDEBUG -DSEQAN_ENABLE_DEBUG=0    CMakeFiles/align1.dir/align1.cpp.o  -o ../../../../bin/align1 -rdynamic -lrt -lz 

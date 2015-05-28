@@ -1,0 +1,6 @@
+TODOs:
+
+in seed joining the following case is mishhandled:
+
+seed1 maps unto repeated region repeatedly r1, r2, r3
+-> thes hits are joined as seed1 -> (r1+r2+r3)

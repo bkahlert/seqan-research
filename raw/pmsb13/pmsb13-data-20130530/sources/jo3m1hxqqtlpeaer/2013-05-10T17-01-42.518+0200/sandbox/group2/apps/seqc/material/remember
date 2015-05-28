@@ -1,0 +1,1 @@
+sed -n '2~4 s/[ATN]//gp' s_6_1_small.fastq | awk '{ print length() ":" $0 } ' | sort

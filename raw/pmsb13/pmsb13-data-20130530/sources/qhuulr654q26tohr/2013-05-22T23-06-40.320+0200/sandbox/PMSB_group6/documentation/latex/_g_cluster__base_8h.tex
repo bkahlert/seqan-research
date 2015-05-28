@@ -1,0 +1,46 @@
+\hypertarget{_g_cluster__base_8h}{\section{include/seqan/\-G\-Cluster/\-G\-Cluster\-\_\-base.h File Reference}
+\label{_g_cluster__base_8h}\index{include/seqan/\-G\-Cluster/\-G\-Cluster\-\_\-base.\-h@{include/seqan/\-G\-Cluster/\-G\-Cluster\-\_\-base.\-h}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$seqan/sequence.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/seq\-\_\-io.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Fasta\-Record.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-Performance\-Sample.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-Memory\-Sample.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Score.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Search/\-G\-Score\-Peptide\-Q\-Gram.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Cluster/\-G\-Assign\-Cluster.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Cluster/\-G\-Check\-Cluster\-Assign.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_g_cluster__base_8h_a1d2f7cf88f406bc6f82029b9dd15a1c5}{check\-Streams} (Sequence\-Stream \&in\-Stream, Sequence\-Stream \&out\-Stream, Sequence\-Stream \&out\-Master\-Stream)
+\item 
+{\footnotesize template$<$typename T\-Sequence , typename T\-Score $>$ }\\int \hyperlink{_g_cluster__base_8h_ac3280d7f11f25d211638cc97fb684cf7}{G\-Cluster} (String$<$ \hyperlink{structseqan_1_1_performance_sample}{Performance\-Sample} $>$ \&performance, const char $\ast$in\-Path, const char $\ast$out\-Path, const char $\ast$out\-Master\-Path, T\-Sequence \&sequence\-Format\-Example, T\-Score threshold, double length\-Threshold, string \&score\-Mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_g_cluster__base_8h_a1d2f7cf88f406bc6f82029b9dd15a1c5}{\index{G\-Cluster\-\_\-base.\-h@{G\-Cluster\-\_\-base.\-h}!check\-Streams@{check\-Streams}}
+\index{check\-Streams@{check\-Streams}!GCluster_base.h@{G\-Cluster\-\_\-base.\-h}}
+\subsubsection[{check\-Streams}]{\setlength{\rightskip}{0pt plus 5cm}int check\-Streams (
+\begin{DoxyParamCaption}
+\item[{Sequence\-Stream \&}]{in\-Stream, }
+\item[{Sequence\-Stream \&}]{out\-Stream, }
+\item[{Sequence\-Stream \&}]{out\-Master\-Stream}
+\end{DoxyParamCaption}
+)}}\label{_g_cluster__base_8h_a1d2f7cf88f406bc6f82029b9dd15a1c5}
+\hypertarget{_g_cluster__base_8h_ac3280d7f11f25d211638cc97fb684cf7}{\index{G\-Cluster\-\_\-base.\-h@{G\-Cluster\-\_\-base.\-h}!G\-Cluster@{G\-Cluster}}
+\index{G\-Cluster@{G\-Cluster}!GCluster_base.h@{G\-Cluster\-\_\-base.\-h}}
+\subsubsection[{G\-Cluster}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Sequence , typename T\-Score $>$ int G\-Cluster (
+\begin{DoxyParamCaption}
+\item[{String$<$ {\bf Performance\-Sample} $>$ \&}]{performance, }
+\item[{const char $\ast$}]{in\-Path, }
+\item[{const char $\ast$}]{out\-Path, }
+\item[{const char $\ast$}]{out\-Master\-Path, }
+\item[{T\-Sequence \&}]{sequence\-Format\-Example, }
+\item[{T\-Score}]{threshold, }
+\item[{double}]{length\-Threshold, }
+\item[{string \&}]{score\-Mode}
+\end{DoxyParamCaption}
+)}}\label{_g_cluster__base_8h_ac3280d7f11f25d211638cc97fb684cf7}

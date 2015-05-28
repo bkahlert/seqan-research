@@ -1,0 +1,28 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x16\x00s\x00e\x00q\x00a\x00n\x00-\x00t\x00r\x00u\x00n\x00k)
+
+[CMake]
+Build Directory Count=1
+CMakeDir=/usr/share/cmake-2.8/Modules
+Current Build Directory Index=0
+ProjectRootRelative=./
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=file:///home/david/Dokumente/Seqan/seqan-trunk-build/debug
+Build Type=Debug
+CMake Binary=file:///usr/bin/cmake
+Environment Profile=
+Extra Arguments=
+Install Directory=file:///usr/local
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=New Native Application Configuration
+Type=Native Application
+
+[Project]
+VersionControlSupport=kdevsubversion

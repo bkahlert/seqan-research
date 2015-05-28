@@ -1,0 +1,1 @@
+clang++    -DSEQAN_ENABLE_TESTING=0  -fno-omit-frame-pointer -fopenmp   CMakeFiles/t3BuildFai.dir/t3BuildFai.cpp.o  -o ../../../../bin/t3BuildFai -rdynamic -lrt -lz 

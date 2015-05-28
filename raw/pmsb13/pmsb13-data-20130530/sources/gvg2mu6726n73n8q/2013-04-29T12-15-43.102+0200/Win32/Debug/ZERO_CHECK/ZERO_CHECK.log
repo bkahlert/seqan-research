@@ -1,0 +1,95 @@
+﻿Build started 29.04.2013 12:15:39.
+     1>Project "C:\Users\Dennis\Documents\Seqan\seqan-trunk\ZERO_CHECK.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "C:\Users\Dennis\Documents\Seqan\seqan-trunk\sandbox\my_sandbox\apps\Debug\".
+       InitializeBuildStatus:
+         Creating "Win32\Debug\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/dfi/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/mason/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/micro_razers/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/pair_align/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/rabema/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/razers/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/razers2/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/sak/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/seqan_tcoffee/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/seqcons/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/snp_store/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/splazers/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/stellar/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/tree_recon/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/align/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/arg_parse/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/bam_io/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/consensus/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/file/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/find/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/gff_io/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/graph_algorithms/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/graph_align/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/graph_msa/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/graph_types/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/map/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/misc/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/modifier/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/parallel/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/pipe/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/random/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/score/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/seeds/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/sequence/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/sequence_journaled/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/seq_io/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/store/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/stream/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/swift_local/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/alf/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/breakpoint_calculator/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/insegt/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/masai/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/param_chooser/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/razers3/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/rep_sep/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/searchjoin/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/sgip/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/variant_comp/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/alignment_free/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/align_split/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/find_motif/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/multiple_translation_units/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/parse_lm/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/statistics/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/docs/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/group4/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/group4/apps/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/group4/demos/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/group4/tests/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/first_app/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/lagan_app/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/the_example/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/demos/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/tests/CMakeFiles/generate.stamp is up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "Win32\Debug\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild".
+         Touching "Win32\Debug\ZERO_CHECK\ZERO_CHECK.lastbuildstate".
+     1>Done Building Project "C:\Users\Dennis\Documents\Seqan\seqan-trunk\ZERO_CHECK.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.59

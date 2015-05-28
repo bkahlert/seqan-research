@@ -1,0 +1,114 @@
+Determining if files execinfo.h exist failed with the following output:
+Change Dir: D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp
+
+Run Build Command:d:\INFORM~1\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec4265983317
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: cmTryCompileExec4265983317, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:25 gestartet.
+1>PrepareForBuild:
+1>  Das Verzeichnis "D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+1>InitializeBuildStatus:
+1>  "cmTryCompileExec4265983317.dir\Debug\cmTryCompileExec4265983317.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  Microsoft (R) 32-Bit C/C++-Optimierungscompiler Version 16.00.30319.01 fÅr 80x86
+1>  Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec4265983317.dir\Debug\\" /Fd"D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4265983317.pdb" /Gd /TC /analyze- /errorReport:prompt CheckIncludeFiles.c  /Zm1000 
+1>  
+1>  CheckIncludeFiles.c
+1>CheckIncludeFiles.c(2): fatal error C1083: Datei (Include) kann nicht geîffnet werden: "execinfo.h": No such file or directory
+1>
+1>Fehler beim Erstellen
+1>
+1>Verstrichene Zeit 00:00:00.09
+========== Erstellen: 0 erfolgreich, Fehler bei 1, 0 aktuell, 0 Åbersprungen ==========
+
+Source:
+/* */
+#include <execinfo.h>
+
+
+int main(){return 0;}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp
+
+Run Build Command:d:\INFORM~1\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec3967195167
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: cmTryCompileExec3967195167, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:34 gestartet.
+1>PrepareForBuild:
+1>  Das Verzeichnis "D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+1>InitializeBuildStatus:
+1>  "cmTryCompileExec3967195167.dir\Debug\cmTryCompileExec3967195167.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  Microsoft (R) 32-Bit C/C++-Optimierungscompiler Version 16.00.30319.01 fÅr 80x86
+1>  Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D OpenMP_FLAG_DETECTED /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3967195167.dir\Debug\\" /Fd"D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3967195167.pdb" /Gd /TC /analyze- /errorReport:prompt src.c  /Zm1000 -fopenmp 
+1>  
+1>cl : Befehlszeile warning D9002: Unbekannte Option "-fopenmp" wird ignoriert.
+1>  src.c
+1>src.c(9): error C2065: 'breaks_on_purpose': nichtdeklarierter Bezeichner
+1>src.c(9): error C2143: Syntaxfehler: Es fehlt ';' vor '}'
+1>
+1>Fehler beim Erstellen
+1>
+1>Verstrichene Zeit 00:00:00.12
+========== Erstellen: 0 erfolgreich, Fehler bei 1, 0 aktuell, 0 Åbersprungen ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp
+
+Run Build Command:d:\INFORM~1\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec3733703766
+
+Microsoft (R) Visual Studio Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Alle Rechte vorbehalten.
+1>------ Erstellen gestartet: Projekt: cmTryCompileExec3733703766, Konfiguration: Debug Win32 ------
+1>Der Buildvorgang wurde am 10.04.2013 09:44:41 gestartet.
+1>PrepareForBuild:
+1>  Das Verzeichnis "D:\Informatik\Development\SeqAn\CMakeFiles\CMakeTmp\Debug\" wird erstellt.
+1>InitializeBuildStatus:
+1>  "cmTryCompileExec3733703766.dir\Debug\cmTryCompileExec3733703766.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+1>ClCompile:
+1>  Microsoft (R) 32-Bit C/C++-Optimierungscompiler Version 16.00.30319.01 fÅr 80x86
+1>  Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D OpenMP_FLAG_DETECTED /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3733703766.dir\Debug\\" /Fd"D:/Informatik/Development/SeqAn/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3733703766.pdb" /Gd /TP /analyze- /errorReport:prompt src.cxx  /Zm1000 -fopenmp 
+1>  
+1>cl : Befehlszeile warning D9002: Unbekannte Option "-fopenmp" wird ignoriert.
+1>  src.cxx
+1>src.cxx(9): error C2065: 'breaks_on_purpose': nichtdeklarierter Bezeichner
+1>src.cxx(9): error C2143: Syntaxfehler: Es fehlt ';' vor '}'
+1>
+1>Fehler beim Erstellen
+1>
+1>Verstrichene Zeit 00:00:00.28
+========== Erstellen: 0 erfolgreich, Fehler bei 1, 0 aktuell, 0 Åbersprungen ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+

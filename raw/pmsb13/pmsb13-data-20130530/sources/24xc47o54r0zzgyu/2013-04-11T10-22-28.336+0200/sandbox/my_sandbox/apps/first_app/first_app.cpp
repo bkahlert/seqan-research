@@ -1,0 +1,13 @@
+#include <seqan/sequence.h>
+#include <seqan/index.h>
+
+using namespace seqan;
+
+int main()
+{
+	typedef Index<CharString> TIndex;
+	TIndex index("tobeornottobe");
+	Iterator< TIndex, TopDown<> >::Type it(index);
+
+    return 0;
+}

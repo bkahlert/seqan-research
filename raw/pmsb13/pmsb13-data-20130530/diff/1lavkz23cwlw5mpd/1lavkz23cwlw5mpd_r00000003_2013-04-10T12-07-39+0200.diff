@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/takifugu2/data/teaching/hauswede/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/1lavkz23cwlw5mpd_stats.txt -x /home/takifugu2/data/teaching/hauswede/seqan-trunk/misc/seqan_instrumentation/userdata/1lavkz23cwlw5mpd_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/takifugu2/data/teaching/hauswede/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/takifugu2/data/teaching/hauswede/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/takifugu2/data/teaching/hauswede/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/takifugu2/data/teaching/hauswede/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/takifugu2/data/teaching/hauswede/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/.kdev4/seqan-trunk.kdev4 ./.kdev4/seqan-trunk.kdev4
+--- ./misc/seqan_instrumentation/last_revision_copy/.kdev4/seqan-trunk.kdev4	2013-04-10 11:38:49.000000000 +0200
++++ ./.kdev4/seqan-trunk.kdev4	2013-04-10 11:57:55.748314108 +0200
+@@ -21,7 +21,7 @@
+ 
+ [MakeBuilder]
+ Default Target=blast_io
+-Number Of Jobs=1
++Number Of Jobs=2
+ 
+ [Project]
+ VersionControlSupport=kdevsubversion

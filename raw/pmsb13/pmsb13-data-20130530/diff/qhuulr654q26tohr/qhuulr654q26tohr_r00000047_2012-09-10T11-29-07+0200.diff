@@ -1,0 +1,52 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/jasparParser/jasparParser.cpp ./sandbox/robinson/apps/jasparParser/jasparParser.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/jasparParser/jasparParser.cpp	2012-09-10 11:25:12.000000000 +0200
++++ ./sandbox/robinson/apps/jasparParser/jasparParser.cpp	2012-09-10 11:28:40.119717781 +0200
+@@ -45,15 +45,13 @@
+ 	if (res != 0)
+ 		return res;
+ 
++	// <matrix>
+ 	for (int rowIndex = 0; rowIndex < 4; ++rowIndex) { // for 0 to 3 meaning for A, C, G, T
+ 
+-		res = skipNCharsIgnoringWhitespace(reader, 1);
++		res = skipNCharsIgnoringWhitespace(reader, 2);
+ 		if (res != 0)
+ 			return res;
+ 
+-		if (goNext(reader)) // skip the '['
+-			return EOF_BEFORE_SUCCESS;
+-
+ 		res = skipWhitespaces(reader);
+ 		if (res != 0)
+ 			return res;
+@@ -79,6 +77,8 @@
+ 
+ 			++columnIndex;
+ 		}
++		if (goNext(reader))
++			return EOF_BEFORE_SUCCESS;
+ 	}
+ 
+ 	return 0;
+@@ -87,10 +87,10 @@
+ int main(int argc, char const ** argv) {
+ 	// Handle command line arguments, open files.
+ 	if (argc != 2)
+-		cerr << "argc fail" << endl;
++		return 1;
+ 	std::fstream stream(argv[1], std::ios::binary | std::ios::in);
+ 	if (!stream.good())
+-		cerr << "stream fail" << endl;
++		return 1;
+ 	// Read file.
+ 	RecordReader < std::fstream, SinglePass<> > reader(stream);
+ 	CharString name;
+@@ -98,7 +98,7 @@
+ 	String < ProfileChar<Dna> > matrix;
+ 	int res = readRecord(id, name, matrix, reader, Jaspar());
+ 	if (res != 0)
+-		cerr << "read fail" << endl;
++		return res;
+ 
+ 	// Write out some of the data to stdout.
+ 	cout << id << "\t" << name << endl;

@@ -1,0 +1,64 @@
+\hypertarget{struct_adapter_trimming_params}{\section{Adapter\-Trimming\-Params Struct Reference}
+\label{struct_adapter_trimming_params}\index{Adapter\-Trimming\-Params@{Adapter\-Trimming\-Params}}
+}
+
+
+Struct holding all adapter trimming parameters.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{struct_adapter_trimming_params_a9c442bd3226e26f0becce6eba5f40359}{paired}
+\item 
+bool \hyperlink{struct_adapter_trimming_params_a8386f1819859d97bb58011903f5dd847}{no\-Adapter}
+\item 
+bool \hyperlink{struct_adapter_trimming_params_a61f37e8fe2d242947cfd358b85a0380e}{run}
+\item 
+Dna5\-Q\-String \hyperlink{struct_adapter_trimming_params_a2ce2d426a36e328f4fceb715910db488}{adapter1}
+\item 
+Dna5\-Q\-String \hyperlink{struct_adapter_trimming_params_aa7d555b99c145cd062e7caa12f4161ab}{adapter2}
+\item 
+\hyperlink{struct_mode}{Mode} \hyperlink{struct_adapter_trimming_params_a9e78ea3942b231eccb2243a70953c560}{mode}
+\item 
+Match\-Mode \hyperlink{struct_adapter_trimming_params_ae69ec37f149e6b9234746ae275c5ff3e}{mmode}
+\item 
+\hyperlink{struct_adapter_trimming_stats}{Adapter\-Trimming\-Stats} \hyperlink{struct_adapter_trimming_params_a557d501f056a0ba2ae35560ed8d72a9d}{stats}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct holding all adapter trimming parameters. 
+
+Struct holding the parameters needed for adapter trimming. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_adapter_trimming_params_a2ce2d426a36e328f4fceb715910db488}{\index{Adapter\-Trimming\-Params@{Adapter\-Trimming\-Params}!adapter1@{adapter1}}
+\index{adapter1@{adapter1}!AdapterTrimmingParams@{Adapter\-Trimming\-Params}}
+\subsubsection[{adapter1}]{\setlength{\rightskip}{0pt plus 5cm}Dna5\-Q\-String Adapter\-Trimming\-Params\-::adapter1}}\label{struct_adapter_trimming_params_a2ce2d426a36e328f4fceb715910db488}
+Holds the first adapter. \hypertarget{struct_adapter_trimming_params_aa7d555b99c145cd062e7caa12f4161ab}{\index{Adapter\-Trimming\-Params@{Adapter\-Trimming\-Params}!adapter2@{adapter2}}
+\index{adapter2@{adapter2}!AdapterTrimmingParams@{Adapter\-Trimming\-Params}}
+\subsubsection[{adapter2}]{\setlength{\rightskip}{0pt plus 5cm}Dna5\-Q\-String Adapter\-Trimming\-Params\-::adapter2}}\label{struct_adapter_trimming_params_aa7d555b99c145cd062e7caa12f4161ab}
+Holds the second adapter \hypertarget{struct_adapter_trimming_params_ae69ec37f149e6b9234746ae275c5ff3e}{\index{Adapter\-Trimming\-Params@{Adapter\-Trimming\-Params}!mmode@{mmode}}
+\index{mmode@{mmode}!AdapterTrimmingParams@{Adapter\-Trimming\-Params}}
+\subsubsection[{mmode}]{\setlength{\rightskip}{0pt plus 5cm}Match\-Mode Adapter\-Trimming\-Params\-::mmode}}\label{struct_adapter_trimming_params_ae69ec37f149e6b9234746ae275c5ff3e}
+Enum, indicating which trimming mode is used. Necessary for casting mode. \hypertarget{struct_adapter_trimming_params_a9e78ea3942b231eccb2243a70953c560}{\index{Adapter\-Trimming\-Params@{Adapter\-Trimming\-Params}!mode@{mode}}
+\index{mode@{mode}!AdapterTrimmingParams@{Adapter\-Trimming\-Params}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mode} Adapter\-Trimming\-Params\-::mode}}\label{struct_adapter_trimming_params_a9e78ea3942b231eccb2243a70953c560}
+Hold the \hyperlink{struct_mode}{Mode}-\/object which determines which trimming mode shall be used. \hypertarget{struct_adapter_trimming_params_a8386f1819859d97bb58011903f5dd847}{\index{Adapter\-Trimming\-Params@{Adapter\-Trimming\-Params}!no\-Adapter@{no\-Adapter}}
+\index{no\-Adapter@{no\-Adapter}!AdapterTrimmingParams@{Adapter\-Trimming\-Params}}
+\subsubsection[{no\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}bool Adapter\-Trimming\-Params\-::no\-Adapter}}\label{struct_adapter_trimming_params_a8386f1819859d97bb58011903f5dd847}
+T\-R\-U\-E if no adapter file is provided. \hypertarget{struct_adapter_trimming_params_a9c442bd3226e26f0becce6eba5f40359}{\index{Adapter\-Trimming\-Params@{Adapter\-Trimming\-Params}!paired@{paired}}
+\index{paired@{paired}!AdapterTrimmingParams@{Adapter\-Trimming\-Params}}
+\subsubsection[{paired}]{\setlength{\rightskip}{0pt plus 5cm}bool Adapter\-Trimming\-Params\-::paired}}\label{struct_adapter_trimming_params_a9c442bd3226e26f0becce6eba5f40359}
+T\-R\-U\-E if paired-\/end data is used. \hypertarget{struct_adapter_trimming_params_a61f37e8fe2d242947cfd358b85a0380e}{\index{Adapter\-Trimming\-Params@{Adapter\-Trimming\-Params}!run@{run}}
+\index{run@{run}!AdapterTrimmingParams@{Adapter\-Trimming\-Params}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}bool Adapter\-Trimming\-Params\-::run}}\label{struct_adapter_trimming_params_a61f37e8fe2d242947cfd358b85a0380e}
+T\-R\-U\-E if the adapter trimming shall be run. \hypertarget{struct_adapter_trimming_params_a557d501f056a0ba2ae35560ed8d72a9d}{\index{Adapter\-Trimming\-Params@{Adapter\-Trimming\-Params}!stats@{stats}}
+\index{stats@{stats}!AdapterTrimmingParams@{Adapter\-Trimming\-Params}}
+\subsubsection[{stats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adapter\-Trimming\-Stats} Adapter\-Trimming\-Params\-::stats}}\label{struct_adapter_trimming_params_a557d501f056a0ba2ae35560ed8d72a9d}
+Holds interesting numbers about trimmed adapters. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/Seq\-D\-P\-T.\-cpp\end{DoxyCompactItemize}

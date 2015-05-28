@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/testTest/testTest.cpp ./sandbox/robinson/apps/testTest/testTest.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/testTest/testTest.cpp	2012-09-14 11:50:35.000000000 +0200
++++ ./sandbox/robinson/apps/testTest/testTest.cpp	2012-09-14 11:52:25.408743143 +0200
+@@ -22,7 +22,7 @@
+ 
+ 	appendValue(sequenceList, "at");
+ 	appendValue(sequenceList, "ac");
+-	createTrie(g, terminalStateMap, sequenceList)
++	createTrie(g, terminalStateMap, sequenceList);
+ 	// Write out some of the data to stdout.
+ 	cout << "length(terminalStateMap) = " << length(terminalStateMap) << endl;
+ 	return 0;

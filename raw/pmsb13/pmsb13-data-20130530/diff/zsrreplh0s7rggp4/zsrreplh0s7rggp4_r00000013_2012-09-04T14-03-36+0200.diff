@@ -1,0 +1,51 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/basic_sec_io_example/basic_sec_io_example.cpp ./sandbox/my_sandbox/apps/basic_sec_io_example/basic_sec_io_example.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/basic_sec_io_example/basic_sec_io_example.cpp	2012-09-04 13:46:56.000000000 +0200
++++ ./sandbox/my_sandbox/apps/basic_sec_io_example/basic_sec_io_example.cpp	2012-09-04 14:03:28.884290584 +0200
+@@ -2,11 +2,27 @@
+ #include <seqan/sequence.h>
+ #include <seqan/seq_io.h>
+ 
+-int main()
++int main(int argc, char const ** argv)
+ {
++    if (argv<2)
++    {
++        std::cerr << "USAGE: basic_seq_io_example FILENAME\n";
++        return 1;
++    }
+     seqan::CharString id;
+     seqan::Dna5String seq;
+-    seqan::SequenceStream seqStream("/home/gabriel/Arbeitsfläche/example.fa");
++    seqan::SequenceStream seqStream(argv[1]);
++    if (!isGood(seqStream))
++    {
++        std::cerr << "ERROR: Could not open the file.\n";
++        return 1;
++    }
++    while(!atEnd(seqStream))
++    if (readRecord(id, seq, seqStream) != 0)
++    {
++        std::cerr << "ERROR: Could not read from example.fa!\n";
++        return 1;
++    }
+     readRecord(id, seq, seqStream);
+     std::cout << id << '\t' << seq << '\n';
+     return 0;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/basic_sec_io_example/basic_sec_io_example.cpp~ ./sandbox/my_sandbox/apps/basic_sec_io_example/basic_sec_io_example.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/basic_sec_io_example/basic_sec_io_example.cpp~	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/basic_sec_io_example/basic_sec_io_example.cpp~	2012-09-04 14:03:28.856290808 +0200
+@@ -0,0 +1,13 @@
++#include <iostream>
++#include <seqan/sequence.h>
++#include <seqan/seq_io.h>
++
++int main()
++{
++    seqan::CharString id;
++    seqan::Dna5String seq;
++    seqan::SequenceStream seqStream("/home/gabriel/Arbeitsfläche/example.fa");
++    readRecord(id, seq, seqStream);
++    std::cout << id << '\t' << seq << '\n';
++    return 0;
++}
+\ Kein Zeilenumbruch am Dateiende.

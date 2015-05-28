@@ -1,0 +1,44 @@
+\hypertarget{_g_score_8h}{\section{include/seqan/\-G\-Search/\-G\-Score.h File Reference}
+\label{_g_score_8h}\index{include/seqan/\-G\-Search/\-G\-Score.\-h@{include/seqan/\-G\-Search/\-G\-Score.\-h}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$seqan/sequence.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/align.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/index.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/\-G\-Structs/\-G\-Fasta\-Record.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\-Score , typename T\-Sequence , typename T\-Scoring\-Scheme $>$ }\\int \hyperlink{_g_score_8h_a7cdb45d0f4e7077470991c32e721f7c9}{G\-Score} (T\-Score \&score, \hyperlink{structseqan_1_1_g_fasta_record}{G\-Fasta\-Record}$<$ T\-Sequence $>$ \&new\-Record, \hyperlink{structseqan_1_1_g_fasta_record}{G\-Fasta\-Record}$<$ T\-Sequence $>$ \&cluster\-Record, T\-Scoring\-Scheme \&scoring\-Scheme, string \&score\-Mode)
+\begin{DoxyCompactList}\small\item\em scoring function for D\-N\-A and R\-N\-A mode This function can compute a similarity score of the two sequences of the two fasta records in three different ways. It is strongly recommended to use C\-O\-M\-M\-O\-N\-\_\-\-Q\-G\-R\-A\-M\-\_\-\-M\-O\-D\-E because the other two modi are significantly slower and were mainly used as a first approach to scoring. L\-O\-C\-A\-L\-\_\-\-A\-L\-I\-G\-N\-M\-E\-N\-T\-\_\-\-M\-O\-D\-E\-: Computes all local alignments whose score is 20 or higher and sums up those scores. G\-L\-O\-B\-A\-L\-\_\-\-A\-L\-I\-G\-N\-M\-E\-N\-T\-\_\-\-M\-O\-D\-E\-: Computes a global alignment with match benefit 1, mismatch penalty -\/1 and no gap costs. C\-O\-M\-M\-O\-N\-\_\-\-Q\-G\-R\-A\-M\-\_\-\-M\-O\-D\-E\-: Counts all 8-\/grams in the two sequences. The fraction of 8-\/grams from the smaller sequence which also occur in the bigger sequence is muliplied with 1000 and stored as an integer score value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_g_score_8h_a7cdb45d0f4e7077470991c32e721f7c9}{\index{G\-Score.\-h@{G\-Score.\-h}!G\-Score@{G\-Score}}
+\index{G\-Score@{G\-Score}!GScore.h@{G\-Score.\-h}}
+\subsubsection[{G\-Score}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Score , typename T\-Sequence , typename T\-Scoring\-Scheme $>$ int G\-Score (
+\begin{DoxyParamCaption}
+\item[{T\-Score \&}]{score, }
+\item[{{\bf G\-Fasta\-Record}$<$ T\-Sequence $>$ \&}]{new\-Record, }
+\item[{{\bf G\-Fasta\-Record}$<$ T\-Sequence $>$ \&}]{cluster\-Record, }
+\item[{T\-Scoring\-Scheme \&}]{scoring\-Scheme, }
+\item[{string \&}]{score\-Mode}
+\end{DoxyParamCaption}
+)}}\label{_g_score_8h_a7cdb45d0f4e7077470991c32e721f7c9}
+
+
+scoring function for D\-N\-A and R\-N\-A mode This function can compute a similarity score of the two sequences of the two fasta records in three different ways. It is strongly recommended to use C\-O\-M\-M\-O\-N\-\_\-\-Q\-G\-R\-A\-M\-\_\-\-M\-O\-D\-E because the other two modi are significantly slower and were mainly used as a first approach to scoring. L\-O\-C\-A\-L\-\_\-\-A\-L\-I\-G\-N\-M\-E\-N\-T\-\_\-\-M\-O\-D\-E\-: Computes all local alignments whose score is 20 or higher and sums up those scores. G\-L\-O\-B\-A\-L\-\_\-\-A\-L\-I\-G\-N\-M\-E\-N\-T\-\_\-\-M\-O\-D\-E\-: Computes a global alignment with match benefit 1, mismatch penalty -\/1 and no gap costs. C\-O\-M\-M\-O\-N\-\_\-\-Q\-G\-R\-A\-M\-\_\-\-M\-O\-D\-E\-: Counts all 8-\/grams in the two sequences. The fraction of 8-\/grams from the smaller sequence which also occur in the bigger sequence is muliplied with 1000 and stored as an integer score value. 
+
+Please note that this function is only called on Dna\-String and Rna\-String. For Peptide see function G\-Score\-Peptide\-Q\-Gram. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em score} & computed score \\
+\hline
+\mbox{\tt in}  & {\em new\-Record} & one fasta record \\
+\hline
+\mbox{\tt in}  & {\em cluster\-Record} & another fasta record \\
+\hline
+\mbox{\tt in}  & {\em scoring\-Scheme} & scoring scheme used for L\-O\-C\-A\-L\-\_\-\-A\-L\-I\-G\-N\-M\-E\-N\-T\-\_\-\-M\-O\-D\-E \\
+\hline
+\mbox{\tt in}  & {\em score\-Mode} & scoring mode to use \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,58 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_ind/ws_ind.cpp ./sandbox/robinson/apps/ws_ind/ws_ind.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_ind/ws_ind.cpp	2012-09-05 11:18:05.000000000 +0200
++++ ./sandbox/robinson/apps/ws_ind/ws_ind.cpp	2012-09-05 11:25:23.973351620 +0200
+@@ -5,27 +5,32 @@
+ using namespace std;
+ using namespace seqan;
+ 
+-int main()
+-{
+-    String<Dna> text = "TTATTAAGCGTATAGCCCTATAAATATAA";
+-    String<Dna> pattern = "TATAA";
+-    Index<String<Dna>, IndexEsa< > > esaIndex(text);
+-    Finder<Index<String<Dna>, IndexEsa<> > > esaFinder(esaIndex);
+-
+-    while (find(esaFinder, pattern)) {
+-    	cout << "Found " << pattern << " at position " << position(esaFinder) << endl;
+-    }
+-
+-
+-    CharString text2 = "tobeornottobe";
+-    Index<CharString, IndexEsa<> > esaindex2(text2);
+-    typedef Iterator<Index<CharString, IndexEsa<> >, TopDown<ParentLinks<Preorder> > >::Type TIterator;
+-
+-    TIterator it;
+-
+-
+-
+-
++int main() {
++	String < Dna > text = "TTATTAAGCGTATAGCCCTATAAATATAA";
++	String < Dna > pattern = "TATAA";
++	Index < String<Dna> , IndexEsa<> > esaIndex(text);
++	Finder < Index<String<Dna> , IndexEsa<> > > esaFinder(esaIndex);
++
++	while (find(esaFinder, pattern)) {
++		cout << "Found " << pattern << " at position " << position(esaFinder)
++				<< endl;
++	}
++
++	CharString text2 = "tobeornottobe";
++	Index < CharString, IndexEsa<> > esaindex2(text2);
++	typedef Iterator<Index<CharString, IndexEsa<> > , TopDown<ParentLinks<
++			Preorder> > >::Type TIterator;
++
++	TIterator it(esaindex2);
++
++do {
++	do
++	{
++		cout << representative(it) << endl;
++	}
++	while (goDown(it))
++}
++while (goUp(it) && go(Right))
+ 
+-    return 0;
++return 0;
+ }

@@ -1,0 +1,36 @@
+
+#include <seqan/modifier.h>
+#include <seqan/sequence.h>
+#include <iostream>
+
+using namespace std;
+using namespace seqan;
+
+
+
+
+void f(StringSet<String<int>> & x){
+	reverseComplement(x);
+
+}
+
+
+
+int main(){
+	StringSet<String<Dna>> x;
+	String<Dna>y;
+	appendValue(y,'A');
+	appendValue(y,'C');
+	appendValue(y,'G');
+	
+	appendValue(x,y);
+	
+	appendValue(y,'T');
+	appendValue(y,'A');
+	appendValue(y,'A');
+	
+	appendValue(x,y);
+	
+	f(x);
+	return 0;
+}

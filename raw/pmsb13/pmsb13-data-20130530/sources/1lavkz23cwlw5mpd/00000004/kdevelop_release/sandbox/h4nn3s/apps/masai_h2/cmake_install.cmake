@@ -1,0 +1,105 @@
+# Install script for directory: /home/takifugu2/data/teaching/hauswede/seqan-trunk/sandbox/h4nn3s/apps/masai_h2
+
+# Set the install prefix
+IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  SET(CMAKE_INSTALL_PREFIX "/usr/local")
+ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
+STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+
+# Set the install configuration name.
+IF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  IF(BUILD_TYPE)
+    STRING(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+  ELSE(BUILD_TYPE)
+    SET(CMAKE_INSTALL_CONFIG_NAME "Release")
+  ENDIF(BUILD_TYPE)
+  MESSAGE(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+ENDIF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+
+# Set the component getting installed.
+IF(NOT CMAKE_INSTALL_COMPONENT)
+  IF(COMPONENT)
+    MESSAGE(STATUS "Install component: \"${COMPONENT}\"")
+    SET(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  ELSE(COMPONENT)
+    SET(CMAKE_INSTALL_COMPONENT)
+  ENDIF(COMPONENT)
+ENDIF(NOT CMAKE_INSTALL_COMPONENT)
+
+# Install shared libraries without execute permission?
+IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  SET(CMAKE_INSTALL_SO_NO_EXE "1")
+ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_indexer" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_indexer")
+    FILE(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_indexer"
+         RPATH "")
+  ENDIF()
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/takifugu2/data/teaching/hauswede/seqan-trunk/kdevelop_release/bin/masai_h2_indexer")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_indexer" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_indexer")
+    IF(CMAKE_INSTALL_DO_STRIP)
+      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_indexer")
+    ENDIF(CMAKE_INSTALL_DO_STRIP)
+  ENDIF()
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_mapper" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_mapper")
+    FILE(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_mapper"
+         RPATH "")
+  ENDIF()
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/takifugu2/data/teaching/hauswede/seqan-trunk/kdevelop_release/bin/masai_h2_mapper")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_mapper" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_mapper")
+    IF(CMAKE_INSTALL_DO_STRIP)
+      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_mapper")
+    ENDIF(CMAKE_INSTALL_DO_STRIP)
+  ENDIF()
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_se" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_se")
+    FILE(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_se"
+         RPATH "")
+  ENDIF()
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/takifugu2/data/teaching/hauswede/seqan-trunk/kdevelop_release/bin/masai_h2_output_se")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_se" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_se")
+    IF(CMAKE_INSTALL_DO_STRIP)
+      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_se")
+    ENDIF(CMAKE_INSTALL_DO_STRIP)
+  ENDIF()
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_pe" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_pe")
+    FILE(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_pe"
+         RPATH "")
+  ENDIF()
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/takifugu2/data/teaching/hauswede/seqan-trunk/kdevelop_release/bin/masai_h2_output_pe")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_pe" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_pe")
+    IF(CMAKE_INSTALL_DO_STRIP)
+      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/masai_h2_output_pe")
+    ENDIF(CMAKE_INSTALL_DO_STRIP)
+  ENDIF()
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/masai_h2" TYPE FILE FILES
+    "/home/takifugu2/data/teaching/hauswede/seqan-trunk/sandbox/h4nn3s/apps/masai_h2/LICENSE"
+    "/home/takifugu2/data/teaching/hauswede/seqan-trunk/sandbox/h4nn3s/apps/masai_h2/README"
+    )
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+

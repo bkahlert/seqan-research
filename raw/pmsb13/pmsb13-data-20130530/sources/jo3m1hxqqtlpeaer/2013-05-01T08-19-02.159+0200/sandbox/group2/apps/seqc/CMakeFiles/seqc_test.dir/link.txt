@@ -1,0 +1,1 @@
+/usr/bin/c++    -DSEQAN_ENABLE_TESTING=0 -W -Wall -Wno-long-long -fstrict-aliasing -Wstrict-aliasing -pedantic -Wno-variadic-macros -O3 -DNDEBUG -DSEQAN_ENABLE_DEBUG=0    CMakeFiles/seqc_test.dir/seqc_test.cpp.o CMakeFiles/seqc_test.dir/read_stats.cpp.o CMakeFiles/seqc_test.dir/output.cpp.o  -o ../../../../bin/seqc_test -rdynamic -lrt -lz 

@@ -1,0 +1,1342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{639891C3-05A7-456F-BE87-33BE3E32140D}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Dennis/Documents/Seqan/seqan-trunk -BC:/Users/Dennis/Documents/Seqan/seqan-trunk --check-stamp-file C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeLists.txt;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnContribs.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnBuildSystem.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnUsabilityAnalyzer.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnLegacyBuildSystem.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\package.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnCtdSetup.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindJava.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Dennis/Documents/Seqan/seqan-trunk -BC:/Users/Dennis/Documents/Seqan/seqan-trunk --check-stamp-file C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeLists.txt;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnContribs.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnBuildSystem.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnUsabilityAnalyzer.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnLegacyBuildSystem.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\package.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnCtdSetup.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindJava.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Dennis/Documents/Seqan/seqan-trunk -BC:/Users/Dennis/Documents/Seqan/seqan-trunk --check-stamp-file C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeLists.txt;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnContribs.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnBuildSystem.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnUsabilityAnalyzer.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnLegacyBuildSystem.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\package.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnCtdSetup.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindJava.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Dennis/Documents/Seqan/seqan-trunk -BC:/Users/Dennis/Documents/Seqan/seqan-trunk --check-stamp-file C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeLists.txt;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\2.8.10.2\CMakeCXXCompiler.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnContribs.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnBuildSystem.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnUsabilityAnalyzer.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnLegacyBuildSystem.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\package.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\util\cmake\SeqAnCtdSetup.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindJava.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\0c0e4572db781ee3aedf9cde3f70e8b7\ALL_BUILD.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeFiles/0c0e4572db781ee3aedf9cde3f70e8b7/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeFiles/0c0e4572db781ee3aedf9cde3f70e8b7/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeFiles/0c0e4572db781ee3aedf9cde3f70e8b7/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Dennis/Documents/Seqan/seqan-trunk/CMakeFiles/0c0e4572db781ee3aedf9cde3f70e8b7/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Dennis\Documents\Seqan\seqan-trunk\CMakeFiles\ALL_BUILD</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ALL_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/ZERO_CHECK.vcxproj">
+      <Project>071190D4-B83C-41F6-8FED-20AC4F13F9F5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/alf/alf.vcxproj">
+      <Project>3BE5FCFF-24A8-4177-BD05-FF31DC7AB388</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_align_gaps_clipping.vcxproj">
+      <Project>48AABE4E-9D5E-469F-9B62-16704FF1D85D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_alignment.vcxproj">
+      <Project>DD360C3A-5875-4842-92AB-E4D27A9EA0C7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_alignment_local.vcxproj">
+      <Project>61600269-99B7-4B84-BB32-C773ACD54539</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_alignment_msa.vcxproj">
+      <Project>B3F9B61E-8C82-46BE-9CD5-AE76775CF3D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_allocator.vcxproj">
+      <Project>1890C332-6931-485E-8EAA-12CD0A67C6AB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_alphabet.vcxproj">
+      <Project>8BC78A33-AC55-41B8-9B96-962130FE8433</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_annotation_converter.vcxproj">
+      <Project>A2632491-318D-40B6-A9B1-10EA34326827</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_arg_align.vcxproj">
+      <Project>99B2D1C0-5691-447B-AD79-BA15ACA8420D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_arg_parse.vcxproj">
+      <Project>EEE77BB0-4666-4456-A6A2-4B3D842B7118</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_bam_library_size.vcxproj">
+      <Project>D2558786-3A17-454A-8687-7A5E6F284BDE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_bam_print_alignments.vcxproj">
+      <Project>EFC845FB-7CCC-4256-AB68-C29ACBE08A5C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_bam_stats.vcxproj">
+      <Project>A92F8F9B-CA77-46A8-A805-02BC21DAFC65</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_bamutil.vcxproj">
+      <Project>CEEA461D-A89B-4C73-B6B2-07364BDDA9FF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_benchmark_stream.vcxproj">
+      <Project>D5D82037-E24D-4C08-A93F-CE8FEAD9CF51</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_benchmark_stream_write.vcxproj">
+      <Project>59BAC594-6156-4927-8291-D541D127C733</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_enumerate_strings.vcxproj">
+      <Project>9BABEF98-0186-4C1E-BB0B-0D851BF7D03A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_example_seq_io.vcxproj">
+      <Project>0AC7AA8C-E125-4811-89A3-19C570500212</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_file_format.vcxproj">
+      <Project>DAFD117E-57B3-4031-9E83-54590ADE2338</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_file_readwrite.vcxproj">
+      <Project>E07F57C3-15AE-4C54-984D-9819F6FE8FCB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_file_speed.vcxproj">
+      <Project>D8C66F46-3847-4CFD-9EED-9B216DA0B213</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_filter_sam.vcxproj">
+      <Project>73455DDF-F939-4293-8079-73DEBAF3421D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_find_approx.vcxproj">
+      <Project>011E8007-595A-427D-B572-F33B1D70B873</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_find_exact.vcxproj">
+      <Project>AAEC73B8-B3A0-47AC-8EF3-989D756B548F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_find_motif.vcxproj">
+      <Project>0549DBC5-6BC1-4047-8524-D9840448AB7A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_find_wild.vcxproj">
+      <Project>1307EC2D-17CA-4BB6-8DCA-6A60E46BD667</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_gff2gtf.vcxproj">
+      <Project>683F2D0A-C96D-48C3-A19E-23F80A686A45</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_bfs.vcxproj">
+      <Project>FD7373E6-2FF6-4614-9A74-3A17B01169AB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_dfs.vcxproj">
+      <Project>D3849155-66FC-4752-89B2-13F2871644E9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_flow_fordfulkerson.vcxproj">
+      <Project>CA157F81-3D04-4B72-A56F-CADFC6B4851F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_his.vcxproj">
+      <Project>3A487B13-208E-481A-9251-2654188C946C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_lcs.vcxproj">
+      <Project>C8B0855C-AAB4-4A0A-B4FE-43AC457A8F3F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_lis.vcxproj">
+      <Project>8793073E-969B-4401-A648-812CC262F730</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_path_allpairs.vcxproj">
+      <Project>5102B301-3093-499E-8C84-E3D72FBF1B0E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_path_bellmanford.vcxproj">
+      <Project>5E2AECC4-B77C-49F2-A19C-9CBFE1329654</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_path_dag.vcxproj">
+      <Project>0EFE5BD8-AA2F-44F8-9F70-6EB6330403E0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_path_dijkstra.vcxproj">
+      <Project>D6DFC625-DF28-4680-972E-BD0D51D881FC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_path_floydwarshall.vcxproj">
+      <Project>98481E97-5DF0-4A9D-BD87-322F010A2BE0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_path_transitive.vcxproj">
+      <Project>5AE5FEAD-E9A2-49A8-9D0D-72E4D0E76992</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_scc.vcxproj">
+      <Project>C2C7A3F6-FEC0-4F60-81E9-49110B351B2F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_topsort.vcxproj">
+      <Project>A7BDCDB3-46C7-42DB-AD72-490208846C81</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_tree_kruskal.vcxproj">
+      <Project>598DD005-793C-4D82-AC82-AF4D6B697BD5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_algo_tree_prim.vcxproj">
+      <Project>63C75129-6070-4B2A-A50F-6CA829F5B2EF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_hmm.vcxproj">
+      <Project>F4E8BA9A-A47E-444D-9F6F-CF3CA4C1571A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_graph_hmm_silent.vcxproj">
+      <Project>C1B1B135-97BD-477C-A172-9342F0DF8E02</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_howto_clip_alignments.vcxproj">
+      <Project>64AC57F2-5AC0-4877-B6CA-907DA6E7DF06</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_howto_cmdparser_example.vcxproj">
+      <Project>B4D9FA42-7051-49FC-98B4-6165B3A1196D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_howto_efficiently_import_sequences.vcxproj">
+      <Project>45AC3E6C-8378-489A-B7CB-8ACA63F2E7F6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_howto_filter_similar_sequences.vcxproj">
+      <Project>D453E1AE-1248-42C0-9B22-29AE8EEF7B53</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_howto_scores_init_score.vcxproj">
+      <Project>D471EA6D-3B00-4A46-A20C-BD2AB78C1C58</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_howto_scores_load_score.vcxproj">
+      <Project>D42BB428-30E7-4B25-B81C-96FB166F8CB8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_counting.vcxproj">
+      <Project>180A66E6-451A-4566-A3E2-FB49A8844828</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_find.vcxproj">
+      <Project>ED0AD399-90D6-4871-921B-4C93F5196B29</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_find_stringset.vcxproj">
+      <Project>78B3DD8C-9745-4E6C-8518-5EFDD293C41C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_lcp.vcxproj">
+      <Project>15631D6E-C112-41B9-95BC-AFFE7CF68C23</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_maxrepeats.vcxproj">
+      <Project>9F12B551-C000-4A21-8830-1EC54CAFEB89</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_mummy.vcxproj">
+      <Project>059A45FB-26B6-4BE2-87E7-E7D0A4DE680F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_mums.vcxproj">
+      <Project>3484D3A5-DC83-46C8-929D-375CC71E5B10</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_node_predicate.vcxproj">
+      <Project>065EF19B-EC77-4999-944B-8F3F28A1D3E5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_qgram_counts.vcxproj">
+      <Project>2804C95F-6F5A-432D-94C1-E2ABF1D6C2B8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_sufarray.vcxproj">
+      <Project>59DCDCBD-BE50-4EDD-80EF-C2E58ECCB9FB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_index_supermaxrepeats.vcxproj">
+      <Project>6DD66D6D-CE82-4197-B99A-388622D48108</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_interval_tree.vcxproj">
+      <Project>8B60AB06-223F-49F7-8740-CF2FBEE5B0DF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_iterator.vcxproj">
+      <Project>515D1124-9B18-4006-9D19-7BDF3AE13631</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_modifier_modreverse.vcxproj">
+      <Project>7191C428-5CD1-4E44-B049-372A7E16357C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_modifier_modview.vcxproj">
+      <Project>4D9D7E1E-715F-4474-A4A3-6C6CCCB4F82C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_modifier_nested.vcxproj">
+      <Project>BE6B87EE-0BB9-4158-B01C-95214BBE238F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_parse_lm_stellar.vcxproj">
+      <Project>A3D4137E-5A37-4944-B5C5-79CDF38BB278</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_pipe_sort.vcxproj">
+      <Project>F1C6982E-C847-4B7F-8361-FBF7241D241A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_repeats_demo.vcxproj">
+      <Project>A753A45C-813F-4226-B6EB-27712968D6E2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_rooted_iterator.vcxproj">
+      <Project>490757D7-E906-4E93-BCB8-B1482D5C7B10</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_sam2svg.vcxproj">
+      <Project>C5D91236-B0C6-431B-9A5B-F8A016E13B8F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_sample_seqs.vcxproj">
+      <Project>DE73D10D-C32B-48E5-A8D4-4C66D496EEEB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_seeds.vcxproj">
+      <Project>A4E74C88-DF76-4B49-9971-DECB83294E83</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_segmentalignment.vcxproj">
+      <Project>C4F9E87A-898B-4B9C-9F12-F23ED3C21A0A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_sequence_length.vcxproj">
+      <Project>B66ACAEF-51F6-434D-834F-50CFFBC7F044</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_soft_to_hard_masking.vcxproj">
+      <Project>1E9D5A22-148A-481E-9E4D-1F153CBE7C9A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_stream_read_fastq_gz.vcxproj">
+      <Project>B977C79B-CD89-4A3C-A75F-309C4BE428FF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_template_subclassing.vcxproj">
+      <Project>76EF18A9-3135-47DC-AE48-01A7D059C67D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_terminal_demo.vcxproj">
+      <Project>7292D0B7-A6ED-48A5-8DEB-3F01F8BDB44D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment2_align.vcxproj">
+      <Project>D08CBAB5-9C55-43AB-9E7F-D8A7FD28E9DF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_align_assignment1.vcxproj">
+      <Project>AB572446-9EDC-4447-AD5F-BA2598636C0E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_banded.vcxproj">
+      <Project>643FA4D1-AF07-4645-AAF7-A0049D60AC34</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_gaps.vcxproj">
+      <Project>2983804E-7CC7-4DF7-B34F-ED0BBA5090AB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_global_assignment1.vcxproj">
+      <Project>C9E98840-CED1-4160-8BDD-CD972C82ACAB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_global_assignment2.vcxproj">
+      <Project>346A6BB2-4EFC-4D2D-A3D0-2B6C72FD9F26</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_global_assignment3.vcxproj">
+      <Project>A2B5D093-30C4-48D4-A177-E316ADD242FC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_global_assignment4_part1.vcxproj">
+      <Project>B06C5F84-234D-4B08-A33F-77A17575267F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_global_assignment4_part2.vcxproj">
+      <Project>155C52F4-8017-40DE-8A4A-E4BCF0444ACB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_global_overlap.vcxproj">
+      <Project>166362CA-A0D5-474F-992D-F6EDE6ACB235</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_global_specialised.vcxproj">
+      <Project>ABC593B9-14FF-44EE-859F-0988A4673532</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_global_standard.vcxproj">
+      <Project>F042973A-FE8F-43E2-A400-D98B1D706CA7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_local_standard.vcxproj">
+      <Project>575FFEC4-BB9D-4B38-B8FB-A26EACE7FA70</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_local_waterman_eggert.vcxproj">
+      <Project>21062B48-1286-4C0B-8078-26F31495A0BE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_msa.vcxproj">
+      <Project>2D40EF15-011F-429B-B17C-AB8B3F1CB2DD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_msa_assignment1.vcxproj">
+      <Project>49F45E5B-7B9D-43CC-A22F-1F83573179DD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_pairwise_global.vcxproj">
+      <Project>87EDD1AF-3106-4746-98CF-6E15AC3E2710</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_pairwise_global2.vcxproj">
+      <Project>CF3BFBD8-25B9-4D40-9EDC-450282280506</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_pairwise_global_assignment1.vcxproj">
+      <Project>F9390AB5-2592-4F98-A273-6E4CE1ABA566</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_pairwise_global_assignment2.vcxproj">
+      <Project>B349A6DB-F181-4434-8E72-B54137583EB0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_pairwise_local.vcxproj">
+      <Project>ACF926AC-4885-4626-8C6D-D9C6DDDF20E6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_pairwise_local_assignment1.vcxproj">
+      <Project>3F3458C2-AEE3-406E-B893-C19ACD38D2BD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_representation_alignment_graph.vcxproj">
+      <Project>3B56FDD8-FD18-4219-ADDE-0AA94438F84E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_alignment_representation_alignment_graph_assignment1.vcxproj">
+      <Project>592D79B4-7D8B-4755-AA98-545AFD08EB81</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5.vcxproj">
+      <Project>FA3D7BB3-D4A8-489F-923B-DC7BA161AC28</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step1.vcxproj">
+      <Project>B74F8B8F-1BB4-4CED-9001-EF271A8476F3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step2.vcxproj">
+      <Project>95ADCB58-83B8-4DC4-B3A3-B086FCB74B93</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step3.vcxproj">
+      <Project>A56A21D1-B13D-4F8C-A1F5-955722C4FABD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step4.vcxproj">
+      <Project>7D3DFA1D-9503-4F06-8DD7-4FD85759DBF1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step5.vcxproj">
+      <Project>ACAD6E4B-6361-4DEA-B53D-822409185D99</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alignments_pairwise_sequence_alignment_assignment5_step6.vcxproj">
+      <Project>9A390CE9-6025-47B3-8353-461308F06F5B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_alphabets_alphabet_assignment_1_solution.vcxproj">
+      <Project>6F5E9D6C-9E82-4C1E-A549-18E24DAC27E6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_annotation_store_assignment_1_hint.vcxproj">
+      <Project>6D3B7F0E-21D5-4CCD-A73C-1999702F52F0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_annotation_store_assignment_1_solution.vcxproj">
+      <Project>0A629B23-A821-4956-94BC-24FE42FA3B7D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_annotation_store_assignment_2_solution.vcxproj">
+      <Project>A42143E1-13CF-4D24-8473-C8AC0D8F2673</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_annotation_store_assignment_3_solution.vcxproj">
+      <Project>35EBC9CC-4DAA-4100-BD5B-35CB04EA9BFC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_annotation_store_assignment_4_solution.vcxproj">
+      <Project>4486CE68-60C0-4529-B2D4-7F9CD143B6FF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_example1.vcxproj">
+      <Project>FF3E7035-537A-41C3-9050-597DCB691371</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_example2.vcxproj">
+      <Project>4942E087-1A9C-4455-AE97-260C1CDF79BF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_example3.vcxproj">
+      <Project>CCB9E6C2-FC9A-42AB-978C-C424A36E5658</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_example4.vcxproj">
+      <Project>382CBFD8-22D3-445B-9673-7C01EE9D8F63</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_example5.vcxproj">
+      <Project>A94566EB-2AC5-4937-82EC-F31C3082D9C5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_example6.vcxproj">
+      <Project>63B46259-CA4C-46A9-B3DB-CCAC9E0B349F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_example7.vcxproj">
+      <Project>7071CCEB-A2E4-4CC3-A01B-0856450AEFA7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_solution1.vcxproj">
+      <Project>3DFC81E8-4B7C-422B-91AE-2A976F8684A3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_solution2.vcxproj">
+      <Project>B68F72DA-D405-438C-B8DD-2E17A3278EE0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_bam_io_solution3.vcxproj">
+      <Project>2E7273FE-C920-4736-B2C3-33E3CDA2843D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sam_bam_io_example1.vcxproj">
+      <Project>5EA4547B-A2D1-4CB1-8AE9-96173B3A3CB9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sam_bam_io_example2.vcxproj">
+      <Project>3B753E4A-FE87-4A76-ABA2-9253F0B4F413</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sam_bam_io_example3.vcxproj">
+      <Project>4645C703-0CCD-4F56-8DFB-077886E54C3C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sam_bam_io_solution1.vcxproj">
+      <Project>000671DB-EEA8-45B3-8084-30EF002A7712</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sam_bam_io_solution2.vcxproj">
+      <Project>8E9F9744-DB40-4CF5-AC59-604DA1A0A07F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sam_bam_io_solution3.vcxproj">
+      <Project>3688BAB3-2A09-4873-816B-6AF199D87FAE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sam_bam_io_solution4.vcxproj">
+      <Project>23EE043E-E345-4C3E-B2CA-DC0D0D238590</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sequence_io_example1.vcxproj">
+      <Project>0EF7D991-A4B2-4E7B-92E2-7C42C4841816</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sequence_io_example2.vcxproj">
+      <Project>21BDC49F-54E8-4BC2-9CE3-FC7C171BAF85</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sequence_io_example3.vcxproj">
+      <Project>9FF705CA-94F2-4896-9D06-12EFBB18AAEF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sequence_io_solution1.vcxproj">
+      <Project>6E8ECD2B-EE16-491A-B8A6-1A6D60B51B97</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sequence_io_solution2.vcxproj">
+      <Project>213660CF-950F-4B6B-B1BB-0B3621FA5674</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sequence_io_solution3.vcxproj">
+      <Project>5D444BEC-78D1-4CFA-82C1-F78539D6DB3D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sequence_io_solution4.vcxproj">
+      <Project>F79A3680-1269-4BDE-AB67-3FA39332B6D4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sequence_io_solution5.vcxproj">
+      <Project>E0628564-87FF-46C5-AA84-9215CEEA0074</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_basic_sequence_io_solution6.vcxproj">
+      <Project>76C7288A-83D3-441A-B2EA-575C06E3C5C3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_basics_allocator.vcxproj">
+      <Project>D5078539-1C43-49B1-B485-797B4C2134FE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_basics_show_alphabets.vcxproj">
+      <Project>C939E52C-7B6E-4F63-BFD9-5FDD2BE74DC8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_basics_strings.vcxproj">
+      <Project>8720D3A0-6E38-4C4E-A344-E9D13062B843</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_basics_swap.vcxproj">
+      <Project>C23EB2A0-0E54-4CEB-B917-F5C0A555EC9D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_example_join.vcxproj">
+      <Project>813F37F9-777C-4EE8-A946-09BF58DFEAA2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_example_journal_string_basic.vcxproj">
+      <Project>C03713B9-3350-4759-8A92-89341CB658E6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_example_online_search.vcxproj">
+      <Project>4CBF3083-9C76-4A21-AFBD-88C591804503</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_example_online_search_assignment1_hint.vcxproj">
+      <Project>E27072E9-D06C-40B1-BD4E-79B41A267DE4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_example_online_search_assignment2_hint.vcxproj">
+      <Project>E7C7A3E2-3041-4932-8D48-B022566108DC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_example_online_search_assignment3_hint.vcxproj">
+      <Project>CB5AB508-146F-4E2A-A5C3-F96CC868496D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_example_online_search_assignment4_hint.vcxproj">
+      <Project>000071A1-4257-443E-8B73-0D0D34407731</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_solution_online_search_assignment1.vcxproj">
+      <Project>85FF197E-27DF-48C4-BF52-02B73320FE24</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_solution_online_search_assignment2.vcxproj">
+      <Project>DA9DF77B-E3C7-4DBC-9D46-026F8B51463F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_solution_online_search_assignment3.vcxproj">
+      <Project>97C2DA69-0C68-4F07-918A-819D5E0E04A2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_solution_online_search_assignment4.vcxproj">
+      <Project>08919009-9B37-47D0-BA23-343681687FF9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_data_journaling_solution_online_search_finder.vcxproj">
+      <Project>A60B7EB6-2B67-4FEF-93CD-BC41A1439B1D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_file_io_example1.vcxproj">
+      <Project>635D4755-980F-4491-AE61-19E4850DEFF2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_file_io_mmap_string_example.vcxproj">
+      <Project>CCDCF637-4E25-4C52-A1E4-D61A3C8518AC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_file_io_solution1.vcxproj">
+      <Project>C7D42AF9-7C34-4C46-9A65-E5FEDB49B171</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_file_io_solution2.vcxproj">
+      <Project>5FE04E44-3188-43DA-A77F-F397E55AA740</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_file_io_stream_compression_formats.vcxproj">
+      <Project>9F1B887A-8583-4B1F-82BD-7F41EDB02FF0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_find_find_approx.vcxproj">
+      <Project>D3FE6152-1833-48F3-85CC-7CDE5F06D45A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_find_find_assignment1.vcxproj">
+      <Project>6B33FB29-A9CC-4CD4-8A99-7B317DA82C0C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_find_find_assignment2.vcxproj">
+      <Project>D131D885-920C-4E04-ACC6-3530905E48BE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_find_find_assignment3.vcxproj">
+      <Project>4D909E91-B2FE-4643-B4AD-3E1F974DEA2D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_find_find_exact.vcxproj">
+      <Project>ACBB153F-425C-495D-ACD3-FD773F83E84E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_find_find_index.vcxproj">
+      <Project>5F9F798F-4179-4D27-A824-0E0B03B4C75D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_find_find_index_multiple.vcxproj">
+      <Project>889BA0FB-06F2-4F56-959F-F6C2715A2109</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_find_motif.vcxproj">
+      <Project>5F596624-1190-4D58-861C-DF9585A2CD68</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_find_motif_pms1.vcxproj">
+      <Project>B8301866-CE34-4B5C-B2BA-EBB114A8232D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_basic_code.vcxproj">
+      <Project>C9CEE9A0-0952-4739-9058-2A06484F04C4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_basic_code_detailed.vcxproj">
+      <Project>9B6E5905-A1CA-4857-8B6B-E43D2EC30B62</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_code_encapsulation.vcxproj">
+      <Project>BBF941AF-483E-4147-837B-E31BEDE5F60B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_final_result.vcxproj">
+      <Project>6F7624D1-3035-4EEB-AE20-B90543596DCA</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_solution_1.vcxproj">
+      <Project>00CBEECA-8355-4546-96CA-DE4A96AF6782</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_solution_2.vcxproj">
+      <Project>5F23C823-59C2-4D15-AFD5-4F362955C33F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_solution_3.vcxproj">
+      <Project>10B5512D-AB0B-4F76-8856-C06B5481AEFE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_solution_4.vcxproj">
+      <Project>EE12F256-5F62-4576-B6F4-7827C90A683F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_solution_5.vcxproj">
+      <Project>E30A1E1E-F3A4-4D3E-B935-F1C5AC8CD0BB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_first_steps_solution_6.vcxproj">
+      <Project>472D00F7-9797-4192-B2F1-F041B652DE8B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_graph_graph_algo_scc.vcxproj">
+      <Project>CC2B666D-6C0F-45A8-8C29-6AADD502430C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_graph_graph_dijkstra.vcxproj">
+      <Project>D740C521-8C1B-4F48-A0AB-B8EFD15C4522</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_graph_graph_hmm.vcxproj">
+      <Project>844CCB53-3A92-40DF-B3F6-833202DED2BB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_assignment1.vcxproj">
+      <Project>E84491CC-CDB0-49FE-80C7-FE00EF50D0C3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_assignment2.vcxproj">
+      <Project>8C614525-D9FE-48E0-8462-50B983145E66</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_assignment3.vcxproj">
+      <Project>DD4C35A9-C10F-4584-A83C-E80AF4F41E43</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_assignment4.vcxproj">
+      <Project>6CABA699-D2BE-459D-8C32-FF312FCDB85F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_assignment5.vcxproj">
+      <Project>5BE34F94-3CED-495C-967E-FEEC4B08708F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_assignment6.vcxproj">
+      <Project>E35142F2-8EEE-466D-AFA8-D2C96B091D49</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_preorder.vcxproj">
+      <Project>B5C3899B-DBA0-440C-AA3C-D8F46221D7A9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_property_maps.vcxproj">
+      <Project>1112B760-EA1F-4694-87EC-B104723027AB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_qgram.vcxproj">
+      <Project>D0768F4C-7BA5-4B23-80DB-5326BBD928C1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_search.vcxproj">
+      <Project>91737609-3C8D-4FAB-A1C6-171189EA8B8D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_index_search2.vcxproj">
+      <Project>0B8B07E7-9672-44FF-AF7E-E8EBEEB2F9E6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_indices_assignment_1.vcxproj">
+      <Project>8E1FE94D-AD01-4DF0-9EE7-65A39C5C2109</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_indices_assignment_2.vcxproj">
+      <Project>52326902-F4A9-4A10-A58B-9FCED0C47D28</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_iterator_solution1.vcxproj">
+      <Project>0826CAA9-A230-4B98-8960-0A3B4237CF9F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_index_iterator_solution2.vcxproj">
+      <Project>0672BA28-5B2D-4AA8-BC38-2151A32BD7FC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_indexed_fasta_io_solution1.vcxproj">
+      <Project>3576CD0D-9BE9-4410-BB5E-386AA17F78F0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_indexed_fasta_io_solution2.vcxproj">
+      <Project>3B87D05E-AD80-4E57-B056-CE67B59672FE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_iterators_iterators_assignment_1_solution.vcxproj">
+      <Project>801AA7A0-B946-4A6D-A467-DF773CE88DA8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_iterators_iterators_assignment_2_solution.vcxproj">
+      <Project>4FD81716-930D-4E1E-B036-BEFE4618C66B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_iterators_iterators_assignment_3_workshop_solution.vcxproj">
+      <Project>99C7BC91-B2BE-439D-983F-A9F84B9F525A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_iterators_iterators_assignment_4_workshop_solution.vcxproj">
+      <Project>CCACB34B-36EF-4343-9621-604FD67D970E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_iterators_sequence_iterator_demo.vcxproj">
+      <Project>A9BD373C-7E7E-4C5D-9860-23447ACA165C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_lexical_casting_solution1.vcxproj">
+      <Project>37496F8E-C351-4792-BC80-644CFF4DD7D4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_mini_bowtie_mini_bowtie.vcxproj">
+      <Project>9C825718-3DEC-4BC5-AB75-08B6C556DCAC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_mini_bowtie_solution1.vcxproj">
+      <Project>253CD836-B06F-4868-B6C2-DEBA4F1AF507</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_mini_bowtie_solution2.vcxproj">
+      <Project>A7D910DB-C47D-442E-91BD-B0A82BA0B81B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_mini_bowtie_solution3.vcxproj">
+      <Project>195E59C5-326F-428A-AF36-A3336428E2CE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_mini_bowtie_solution4.vcxproj">
+      <Project>B90EEBD6-DF70-4403-B10E-03F989627961</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_mini_bowtie_solution5.vcxproj">
+      <Project>FF05A8C0-7728-4FDE-AB69-BEEA4797930A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_parsing_example1.vcxproj">
+      <Project>841D5F61-E2BD-4D0F-878A-7B4ACF2833FC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_parsing_parse_blastn.vcxproj">
+      <Project>2CB7F974-A62D-489B-82C2-01CA6E395BF9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_parsing_parse_gff2.vcxproj">
+      <Project>FA0EF4BF-E3B0-4577-94F5-D5322F77BA81</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_parsing_parse_newick.vcxproj">
+      <Project>7CA8FF7D-E9AA-4B98-8970-2162746B9498</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_parsing_reader_double_demo.vcxproj">
+      <Project>BDD7C166-E10D-47B7-BC73-8E324FD40832</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_parsing_reader_single_demo.vcxproj">
+      <Project>F66864F1-1CC6-477F-A898-4713136B3374</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_parsing_solution1.vcxproj">
+      <Project>7066CD5B-479C-49A5-9E01-527F0694D770</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_parsing_solution2.vcxproj">
+      <Project>C4E69AAB-0679-43F2-AD20-2D41A6045175</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_parsing_solution3.vcxproj">
+      <Project>4421D9E1-ADE5-4F6C-A1AD-84E950604B4B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_random_random_examples.vcxproj">
+      <Project>3E89477E-707B-43D7-9922-DC1A1E519EE0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_read_mapping_minimapper.vcxproj">
+      <Project>9D3CD0FE-4FE4-4CA9-B1CF-ECCB7ECCC03B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_assignment1.vcxproj">
+      <Project>0B5428C6-D198-4571-A63B-3E04AA4EF80C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_assignment2.vcxproj">
+      <Project>73DC5281-BF1B-49D0-AB54-A1A704452CA6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_assignment3.vcxproj">
+      <Project>6D3A0811-40F3-4E24-83E9-00C407A44DBE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_assignment4.vcxproj">
+      <Project>EB06D8FD-82F7-47A8-AB49-255E96EA69B8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_assignment5.vcxproj">
+      <Project>37368603-0CEB-4764-9AF8-99B774C58301</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_solution1.vcxproj">
+      <Project>9D07AD26-FF9B-432D-950E-D1DB8F61E8E3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_solution2.vcxproj">
+      <Project>FC4B465A-0BD4-43E4-88D0-2E1F6197F4F3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_solution3.vcxproj">
+      <Project>239425B2-A523-4477-98FC-03A1C5E4D772</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_solution4.vcxproj">
+      <Project>83E8A332-B960-4526-B277-D416028FB06E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_rnaseq_genequant_solution5.vcxproj">
+      <Project>57CBA5E2-97D4-458D-AA6F-52B691CE1AF6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_example1.vcxproj">
+      <Project>910ADB71-568E-4019-8E81-684BB40FAEDF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_example2.vcxproj">
+      <Project>DCC03C84-2EEA-4FE3-8FC0-C064344DF3D3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_example3.vcxproj">
+      <Project>0968CF98-D163-48AA-BE61-94B4AA551A9D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_example4.vcxproj">
+      <Project>A0E24002-C5B0-4C10-8E8B-5EA93FD2A896</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_example5.vcxproj">
+      <Project>A869A0DB-6D3E-4D56-B82B-81D888ADF868</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_example6.vcxproj">
+      <Project>8F129B93-7FA9-4DEB-A226-377A8B71C670</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_example7.vcxproj">
+      <Project>3C95B5D4-C6A7-47CF-9E86-6BADB99928D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_example8.vcxproj">
+      <Project>0A7733EA-31C7-49F1-AC57-FB9BF750A6E1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_solution1.vcxproj">
+      <Project>70763BF2-B313-47F8-AD05-A86D69D86F2E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_solution2.vcxproj">
+      <Project>9434C599-B925-4712-8145-02FCAA29C650</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_solution3.vcxproj">
+      <Project>7DDE53F6-7EE9-4CC9-894F-58C7DDC4F38E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_solution4.vcxproj">
+      <Project>E0A4CE65-41AC-464C-9871-BD0C5D48018F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_solution5.vcxproj">
+      <Project>462D5770-4001-4B2F-8102-6334154DC9C8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_solution6.vcxproj">
+      <Project>191F9B32-260E-4F22-84B5-8EEAA930686F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_seed_and_extend_solution7.vcxproj">
+      <Project>942BAEFA-E5DF-441B-99BC-61D9975A207D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_count_characters.vcxproj">
+      <Project>6A023F28-A710-4767-8E27-5F6FE00AF52F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_count_generic_characters.vcxproj">
+      <Project>1EF7F672-01A4-4451-A565-DB8FC195C328</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_example1.vcxproj">
+      <Project>9F26F061-4BDC-4583-AEF5-EE910F8965EF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_example2.vcxproj">
+      <Project>49CBDA58-C02C-4A7C-ABB9-51C778094568</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_example3.vcxproj">
+      <Project>D7DF4554-4F27-40C3-AE68-528825F25EBA</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_example4.vcxproj">
+      <Project>4468CBF7-7F80-4F22-93C4-20A6BCD81744</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_example5.vcxproj">
+      <Project>D08D7BF3-24D3-45FD-B7D0-CB48FFFFBE0A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_example6.vcxproj">
+      <Project>B1FE1325-D59D-4B72-B8BD-68746C1760CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_example7.vcxproj">
+      <Project>63A47285-7422-4664-B2A0-DB6F4BA2E3C6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_example8.vcxproj">
+      <Project>306C8954-ADA2-405A-8D8B-8F33ECC05B0E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_example9.vcxproj">
+      <Project>32651C03-039F-4E99-86EC-5B2233ACA054</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_solution1.vcxproj">
+      <Project>10F8A4F5-52E6-4724-94E7-05456333F2AF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_solution2.vcxproj">
+      <Project>4DAB8045-119E-4865-B113-9CEEF38912B0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_solution3.vcxproj">
+      <Project>7C2B7709-9E33-437F-ABB4-66DB148CE429</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_solution4.vcxproj">
+      <Project>DCF218F2-226E-4079-A3A1-3E8F8F000D21</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_solution5.vcxproj">
+      <Project>04ACEE99-95FB-47CF-BDE7-ABDC646D69ED</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_io_solution6.vcxproj">
+      <Project>88CD8AD4-5A90-41DB-BB27-984F9D9AAD02</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_replace_as.vcxproj">
+      <Project>B0C88995-E128-4768-A07E-C48A36765982</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_sequence_all_strings.vcxproj">
+      <Project>AA395A82-46E7-4D9E-80B3-D986FA7594C1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequence_sequence_iterator_demo.vcxproj">
+      <Project>0403AA7C-3630-4B03-9EA8-E4B7C8D8A97F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequences_in_depth_assignment_exact_generous_solution.vcxproj">
+      <Project>E436D706-9769-465A-88A2-B40436910FD1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequences_lexical_assignment_solution.vcxproj">
+      <Project>7A651096-F951-4965-8F1F-B43F91E62398</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequences_segments_assignment_2_solution.vcxproj">
+      <Project>BEB8AD3E-075B-47CD-88A9-ACE11E01AC41</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequences_segments_assignment_hint.vcxproj">
+      <Project>895BB548-B754-4547-B28E-7AC306356E3D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequences_segments_assignment_solution.vcxproj">
+      <Project>3CBCDE2C-5705-48CA-8B61-0795A72D3D72</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_sequences_string_assignment_1_solution.vcxproj">
+      <Project>A1FE1B96-6902-45E0-AACD-3AD801907C43</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_store_store_access_aligned_reads.vcxproj">
+      <Project>A5581E5B-C2A7-4F7E-9D0F-9F4F14C5FE36</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_store_store_access_aligned_reads2.vcxproj">
+      <Project>4CACDB48-DE50-4D9B-9F89-471E2E6F450B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_store_store_diplay_aligned_reads.vcxproj">
+      <Project>366DE216-6514-442E-818E-3E93C6D927E6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_stream_lexical_cast_example.vcxproj">
+      <Project>7905D200-4206-4B7A-9D20-4597E724743D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_stream_stream_read2_fastq.vcxproj">
+      <Project>7ADB1B2C-3F8A-402F-98E5-394A2B8EA011</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_stream_stream_read_record_auto_format.vcxproj">
+      <Project>23CB83B8-2F5E-411F-AEBD-C49D7E4A220B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_tutorial_stream_stream_read_record_fasta.vcxproj">
+      <Project>0C7FA2EA-7194-490A-B943-670C41F15484</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_string_sets_assignment_1_solution.vcxproj">
+      <Project>B63CD865-A92A-4A9C-B494-67E5FDF79E01</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_string_sets_assignment_2_solution.vcxproj">
+      <Project>394008E6-E34E-4D7C-9BEA-C51EE1F532E0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_string_sets_assignment_3_workshop_solution.vcxproj">
+      <Project>FA5F1BF0-7B6D-468D-B987-39E54472AA49</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_string_sets_assignment_3b_workshop_solution.vcxproj">
+      <Project>AECCD985-69E2-4D09-8687-54B2B024B626</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/demos/demo_tutorial_string_sets_assignment_4_workshop_solution.vcxproj">
+      <Project>4A3CB5E3-18E0-4A55-B387-49C0254BE383</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/demos/demo_zscore.vcxproj">
+      <Project>4FA39B37-8407-4679-8C18-D64AD7C4B0EE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/dfi/dfi.vcxproj">
+      <Project>78C6E043-89B7-490F-9A6E-EAB6580832FC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/first_app/first_app.vcxproj">
+      <Project>CBD35C73-8373-49C7-B7CF-182F70845382</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/insegt/insegt.vcxproj">
+      <Project>B15A6772-4411-4968-A4B7-DE4A49EA1BDE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/searchjoin/join.vcxproj">
+      <Project>948183E5-120D-4D73-9243-4D35FBB883E2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/lagan_app/lagan_app.vcxproj">
+      <Project>AF7FED2D-1384-4427-BD8D-1963AD42F31E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/masai/masai_indexer.vcxproj">
+      <Project>E34860AC-DEAC-4819-B267-A299EE1EF5D6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/masai/masai_mapper.vcxproj">
+      <Project>4CE85870-EAE5-4622-8A99-E8BBD217BCF9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/masai/masai_output_pe.vcxproj">
+      <Project>04B49F43-ABD5-4B9C-9C1A-7CBD00CC492E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/masai/masai_output_se.vcxproj">
+      <Project>17902645-C872-4902-85B6-39F77BC54568</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/mason/mason.vcxproj">
+      <Project>93656809-7477-47BB-8853-163B86CC024A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/micro_razers/micro_razers.vcxproj">
+      <Project>34DCCCB4-B9B5-474A-B981-C783DE466FDB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/pair_align/pair_align.vcxproj">
+      <Project>949F043F-14A0-4505-B62E-F45F63B29660</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/param_chooser/param_chooser.vcxproj">
+      <Project>00D8ABF4-0776-4973-BD3E-60A1A54A58B0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/razers/razers.vcxproj">
+      <Project>9C28BD2C-6E13-496F-904D-2290D46C80AB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/razers2/razers2.vcxproj">
+      <Project>F9F59894-FFE1-4683-9820-690D13ACB3F2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/razers3/razers3.vcxproj">
+      <Project>4FE3EB0E-67FC-40AE-ABC7-827EEC41AEA7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/razers3/razers3_quality2prob.vcxproj">
+      <Project>40151F47-9AD7-413E-851C-0ECB15DE1F2B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/razers3/razers3_simulate_reads.vcxproj">
+      <Project>09592E60-73F1-45D3-BD55-4AE6BC722194</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/rep_sep/rep_sep.vcxproj">
+      <Project>9627BE6E-B0E9-4904-95B5-39FF4F773787</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/sak/sak.vcxproj">
+      <Project>5B2E97F3-78D9-41EA-AF6D-645AADF9E31C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/searchjoin/search.vcxproj">
+      <Project>091CA551-D8CA-4DD5-B59E-4E75E87BFCDF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/seqan_tcoffee/seqan_tcoffee.vcxproj">
+      <Project>E771A07B-0A57-4FA3-B4B0-A7FF72E45C5C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/seqcons/seqcons.vcxproj">
+      <Project>EDF3C90A-258E-4283-8902-1AB980A643F2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/sgip/sgip.vcxproj">
+      <Project>A780AEE9-4988-406B-B5C3-4F10909AF210</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/splazers/splazers.vcxproj">
+      <Project>A7EB0885-FBA6-4C44-9FE4-590D495FDBBF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/stellar/stellar.vcxproj">
+      <Project>9E471E83-F151-433E-AE7F-2774DA544E97</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/align/test_align.vcxproj">
+      <Project>56CE08B5-F466-4C5A-9378-A08C7E86ABAE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/align_split/test_align_split.vcxproj">
+      <Project>BCBA4B8A-73BE-4D6F-8F1A-18B06CDAD247</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/alignment_free/test_alignment_free.vcxproj">
+      <Project>94EF485A-B80A-49A0-8F07-D6CB6BF84710</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/arg_parse/test_arg_parse.vcxproj">
+      <Project>A830104C-DF32-4048-9E6A-F57716D6AAB9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/bam_io/test_bam_io.vcxproj">
+      <Project>136623AC-9412-4255-ACDE-F3EA252CAE2C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_aggregate.vcxproj">
+      <Project>715E8EEF-A734-4F6D-AD06-7F6BA6EE9CD8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_allocator.vcxproj">
+      <Project>05DBE0DD-C259-44D9-9630-04A8C3CA62CF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_alphabet.vcxproj">
+      <Project>F608D602-7720-4F27-BAF8-358B432B2F1B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_concept.vcxproj">
+      <Project>407E99E9-DEA8-46A3-9172-DFC1AE59BD35</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_container.vcxproj">
+      <Project>075CCA8A-BBF4-402B-8BCD-BB72B9E17EBD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_fundamental.vcxproj">
+      <Project>F223FF8B-5996-4C0E-B3BF-96C72B5D16CD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_iterator.vcxproj">
+      <Project>09463BD7-53D3-4A69-B312-F9F2C7B24818</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_math.vcxproj">
+      <Project>9B0A520F-920C-4DA6-913A-8148D00BFADC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_metaprogramming.vcxproj">
+      <Project>23EFD635-C0E2-4E6E-885C-F9F6281606D3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_parallelism.vcxproj">
+      <Project>EFC14645-BDDE-4AD4-A45C-A5968D6457F0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_proxy.vcxproj">
+      <Project>5CBA6D43-EF37-4552-9DE7-2D9AC5A69BCF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/basic/test_basic_smart_pointer.vcxproj">
+      <Project>743D54AD-0AD7-4AFD-AFCD-CA6106A1884E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/consensus/test_consensus.vcxproj">
+      <Project>08875266-7A4E-43D1-9ADC-63A58CE7A085</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/file/test_file.vcxproj">
+      <Project>36188193-45E9-47E8-B582-EFDAA5597988</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/find/test_find.vcxproj">
+      <Project>93A158A5-DCC5-450B-A393-C9219C035F70</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/find_motif/test_find_motif.vcxproj">
+      <Project>A447FB4F-C38B-480C-8AAA-D03037CA7936</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/swift_local/test_find_swift.vcxproj">
+      <Project>D7D017EE-CA0E-4C3C-B30D-A931E087A0C1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/param_chooser/test_funcs_param_chooser.vcxproj">
+      <Project>7E67610A-C354-4783-BC41-7E9D976E01DF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/gff_io/test_gff_io.vcxproj">
+      <Project>1A8FC1AF-0964-4DF3-8A48-10CDD6F6EC58</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/graph_algorithms/test_graph_algorithms.vcxproj">
+      <Project>00AA0E50-CEFE-4D9C-9D56-D5F78858DA40</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/graph_align/test_graph_align.vcxproj">
+      <Project>B7C12F67-ED1C-4206-B996-CC759AEF62BA</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/graph_msa/test_graph_msa.vcxproj">
+      <Project>F12AE802-397D-4C64-897B-9C7DB7C3568D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/graph_types/test_graph_types.vcxproj">
+      <Project>6CA1A55B-ACF6-408C-A69D-B4A4C4607C9E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_creation.vcxproj">
+      <Project>F53F62C2-B58B-4EE9-A513-51CF11AEE147</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_crosscompare_char.vcxproj">
+      <Project>C08D6A9B-9CBC-446A-AC0D-B6BDAF31303B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_crosscompare_char_dfi.vcxproj">
+      <Project>D27CF8A6-7326-4FFB-86D5-66FA81B36E3F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_crosscompare_dna.vcxproj">
+      <Project>F64E4555-19AC-44B1-8459-2B0044DE132F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_crosscompare_dna_dfi.vcxproj">
+      <Project>7AD2A256-35CF-4CE0-990D-89FDFC56DD85</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_drawing.vcxproj">
+      <Project>81515405-3843-4F18-A259-08370EEA0E51</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_fm.vcxproj">
+      <Project>85DA5935-DB4F-478E-A994-AA51FD11FE1C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_fm_rank_dictionary.vcxproj">
+      <Project>D0B38168-800D-40AB-9056-E5F6B97A5D45</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_qgram.vcxproj">
+      <Project>E737DA1E-34E1-4B5F-9ADE-37051C1CFDB8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_repeats.vcxproj">
+      <Project>4687FB71-6B03-4699-B0AD-44C0F9EBD8DE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_sa_bwtwalk.vcxproj">
+      <Project>2DAFAAA7-B136-4A25-926D-35F134EE418F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_shapes.vcxproj">
+      <Project>E597DB48-FC22-475A-83E1-123AA3834D93</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/index/test_index_stree_iterators.vcxproj">
+      <Project>E033C3E0-B63D-4C6F-9FD1-5BC1D60C0C10</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/map/test_map.vcxproj">
+      <Project>357870E0-6E82-4E14-96DC-DCD8E14FCA20</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/misc/test_misc.vcxproj">
+      <Project>3E610B6E-5369-4EAE-A90D-5AA87BE9469B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/misc/test_misc_cmdparser.vcxproj">
+      <Project>23ECBF92-561F-460F-864A-E8CC7A59F6FF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/modifier/test_modifier.vcxproj">
+      <Project>EDCF95CD-06BB-45B7-8482-EDA2E49D7C6A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/multiple_translation_units/test_multiple_translation_units.vcxproj">
+      <Project>2E38F9B9-4F6E-400F-B3B7-7EFAFBB456C0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/parallel/test_parallel.vcxproj">
+      <Project>EE1C2945-CE5F-42B1-851E-263BCEAA8E41</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/parse_lm/test_parse_lm.vcxproj">
+      <Project>B4BB0FBA-589F-42F3-8BC7-19FF73BE62BC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/pipe/test_pipe.vcxproj">
+      <Project>2E8DD8F3-9C88-493A-9B44-5678C1319CD3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/random/test_random.vcxproj">
+      <Project>5B51DBCE-40AB-47A2-B691-70EE54C9BD1A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/score/test_score.vcxproj">
+      <Project>3628001F-92D5-4CD6-90F3-5138D768B9BB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/seeds/test_seeds.vcxproj">
+      <Project>1EA0A2EC-E18E-4B83-8718-2CEC6C1D3AE0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/seq_io/test_seq_io.vcxproj">
+      <Project>A3819F3B-664A-4BF7-A037-0F0E3243B836</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/sequence/test_sequence.vcxproj">
+      <Project>9163DC78-3A87-4BD3-B4E3-497CED012B63</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/sequence_journaled/test_sequence_journaled.vcxproj">
+      <Project>CDE77B51-000E-4106-9F0E-289646B1340F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/tests/statistics/test_statistics.vcxproj">
+      <Project>9FF836E8-92A5-4CB3-AC28-E21ECB7F91BF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/store/test_store.vcxproj">
+      <Project>06CBEE9E-A2B2-4244-8D3B-E05798CD67A2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/tests/stream/test_stream.vcxproj">
+      <Project>37859FAB-56ED-4FAD-BC7B-2EBD656C8D49</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/the_example/the_example.vcxproj">
+      <Project>5FFF5623-3B4C-43DE-AE13-0C532179CA77</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/sandbox/my_sandbox/apps/the_example/the_example_test.vcxproj">
+      <Project>2873F70C-1AF7-4A35-99D8-B1315C6EFDE7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/core/apps/tree_recon/tree_recon.vcxproj">
+      <Project>2369C2A9-26C6-4476-A13B-023E543124B0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Dennis/Documents/Seqan/seqan-trunk/extras/apps/variant_comp/variant_comp.vcxproj">
+      <Project>AB2569B9-BB14-4D90-8B7C-D89DAB55C268</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

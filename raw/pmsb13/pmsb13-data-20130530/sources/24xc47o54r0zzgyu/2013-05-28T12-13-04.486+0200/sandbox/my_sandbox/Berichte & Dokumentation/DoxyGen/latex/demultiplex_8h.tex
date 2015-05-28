@@ -1,0 +1,667 @@
+\hypertarget{demultiplex_8h}{\section{D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/demultiplex.h File Reference}
+\label{demultiplex_8h}\index{D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/demultiplex.\-h@{D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/demultiplex.\-h}}
+}
+
+
+Contains the functions for barcode demultiplexing.  
+
+
+{\ttfamily \#include $<$seqan/find.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/basic.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/sequence.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/index.\-h$>$}\\*
+{\ttfamily \#include $<$seqan/seq\-\_\-io.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_demultiplex_stats}{Demultiplex\-Stats}
+\begin{DoxyCompactList}\small\item\em Struct holding information on demultiplexing statistics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{demultiplex_8h_a3631a421fda958364b448134fbe22d78}{typedef String$<$ Dna5\-Q $>$ {\bfseries T\-Alphabet}}\label{demultiplex_8h_a3631a421fda958364b448134fbe22d78}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\-Seqs , typename T\-Ids , typename T\-Barcodes $>$ }\\bool \hyperlink{demultiplex_8h_ac3b2d77bf5a4a5c24a5c6c39f2f14db2}{check} (T\-Seqs \&seqs, T\-Seqs \&seqs\-Rev, T\-Ids \&ids, T\-Barcodes \&barcodes)
+\begin{DoxyCompactList}\small\item\em Function for controlling the sequences and deleting too short ones. Also checks the barcodes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seqs , typename T\-Ids , typename T\-Barcodes $>$ }\\bool \hyperlink{demultiplex_8h_a477c711488d93a6c74d678003d564f6e}{check} (T\-Seqs \&seqs, T\-Ids \&ids, T\-Barcodes \&barcodes)
+\begin{DoxyCompactList}\small\item\em Overload of \hyperlink{demultiplex_8h_ac3b2d77bf5a4a5c24a5c6c39f2f14db2}{check(\-T\-Seqs\& seqs, T\-Seqs\& seqs\-Rev, T\-Ids\& ids, T\-Barcodes\& barcodes)} for single-\/end data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seqs $>$ }\\T\-Seqs \hyperlink{demultiplex_8h_a53164dfc669a1636d5fcb8b67e26545c}{get\-Prefix} (T\-Seqs \&seqs, unsigned len)
+\begin{DoxyCompactList}\small\item\em Function for extracting the prefices of all given sequences. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Prefix , typename T\-Finder $>$ }\\int \hyperlink{demultiplex_8h_a86616c3ae45c3b7d726dd7044088a772}{find\-Exact\-Index} (const T\-Prefix \&prefix, T\-Finder \&finder)
+\begin{DoxyCompactList}\small\item\em Function for exact search for one prefix in the barcode indices. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Prefices , typename T\-Finder , typename T\-Stats $>$ }\\std\-::vector$<$ int $>$ \hyperlink{demultiplex_8h_a4fd16489e70f62f63808c5ce7cccf614}{find\-All\-Exact\-Index} (const T\-Prefices \&prefices, T\-Finder \&finder, T\-Stats \&stats)
+\begin{DoxyCompactList}\small\item\em Function for performing \hyperlink{demultiplex_8h_a86616c3ae45c3b7d726dd7044088a772}{find\-Exact\-Index} on all given prefices and barcodes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Barcodes $>$ }\\std\-::vector$<$ Pattern$<$ String\\*
+$<$ Dna5\-Q $>$, D\-P\-Search\\*
+$<$ Simple\-Score $>$ $>$ $>$ \hyperlink{demultiplex_8h_ac36c5f6999d5913d122814e156ccbf4d}{make\-Patterns} (T\-Barcodes \&barcodes)
+\begin{DoxyCompactList}\small\item\em Function for creating a vector of patterns used by \hyperlink{demultiplex_8h_aa13cdb6d68e31c67d3e9a199908bd74e}{find\-Approx} and \hyperlink{demultiplex_8h_a44cb13c1c91451c8b7328dc5478c0be5}{find\-All\-Approx}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Prefix , typename T\-Patterns $>$ }\\int \hyperlink{demultiplex_8h_aa13cdb6d68e31c67d3e9a199908bd74e}{find\-Approx} (T\-Prefix \&prefix, T\-Patterns \&patterns)
+\begin{DoxyCompactList}\small\item\em Function for approximate search for one prefix in all barcodes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Prefices , typename T\-Patterns , typename T\-Stats $>$ }\\std\-::vector$<$ int $>$ \hyperlink{demultiplex_8h_a44cb13c1c91451c8b7328dc5478c0be5}{find\-All\-Approx} (const T\-Prefices \&prefices, T\-Patterns \&patterns, T\-Stats \&stats)
+\begin{DoxyCompactList}\small\item\em Function for performing \hyperlink{demultiplex_8h_aa13cdb6d68e31c67d3e9a199908bd74e}{find\-Approx} on all given prefices and barcodes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seqs $>$ }\\void \hyperlink{demultiplex_8h_ab5a50e84f98a28e69180e1b7b9794e66}{clip\-Barcodes} (T\-Seqs \&seqs, const std\-::vector$<$ int $>$ \&matches, unsigned len)
+\begin{DoxyCompactList}\small\item\em Function for clipping the barcodes from the sequences if they could be matched beforehand. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seqs $>$ }\\void \hyperlink{demultiplex_8h_afd6d6a19f9f658b9033c14f61bbd154f}{clip\-Barcodes} (T\-Seqs \&seqs, int len)
+\begin{DoxyCompactList}\small\item\em Overload of \hyperlink{demultiplex_8h_afd6d6a19f9f658b9033c14f61bbd154f}{clip\-Barcodes$<$seqs, matches, len$>$} if the first len bases of every sequence shall be clipped regardless of the matching(or not matching) barcodes. \end{DoxyCompactList}\item 
+void \hyperlink{demultiplex_8h_ab8570a5ec49e672244deb3ec94154906}{resize\-Groups} (std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \&groups)
+\begin{DoxyCompactList}\small\item\em Function for resizing the groups of the vector produced by \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group} and used by it. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Matches , typename T\-Barcodes $>$ }\\std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group} (const T\-Matches \&matches, const T\-Barcodes \&barcodes)
+\begin{DoxyCompactList}\small\item\em Function for sorting the matched and clipped sequences into one vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Barcodes , typename T\-Multiplex , typename T\-Finder , typename T\-Stats $>$ }\\std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \hyperlink{demultiplex_8h_a07f4a4bff8995b9ea9cd8e5d8ff0ddfd}{Do\-All} (T\-Multiplex \&multiplex, T\-Barcodes \&barcodes, T\-Finder \&esa\-Finder, T\-Stats \&stats)
+\begin{DoxyCompactList}\small\item\em Function for performing all demultiplexing operations. Using exact search and multiplex barcodes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Barcodes , typename T\-Multiplex , typename T\-Stats $>$ }\\std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \hyperlink{demultiplex_8h_af01bbc92deb2f0e2457a65abe848f81b}{Do\-All} (T\-Multiplex \&multiplex, T\-Barcodes \&barcodes, T\-Stats \&stats)
+\begin{DoxyCompactList}\small\item\em Overload of \-::\-Do\-All(\-T\-Barcodes\& multiplex, T\-Barcodes\& barcodes, T\-Finder\& esa\-Finder). Using approximate search and multiplex barcodes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seqs , typename T\-Barcodes , typename T\-Finder , typename T\-Stats $>$ }\\std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \hyperlink{demultiplex_8h_a107b0a518ebc018518c2f223cc40c052}{Do\-All} (T\-Seqs \&seqs, T\-Barcodes \&barcodes, T\-Finder \&esa\-Finder, bool hard\-Clip, T\-Stats \&stats)
+\begin{DoxyCompactList}\small\item\em Overload of \-::\-Do\-All(\-T\-Barcodes\& multiplex, T\-Barcodes\& barcodes, T\-Finder\& esa\-Finder). Using exact search and inline barcodes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seqs , typename T\-Barcodes , typename T\-Stats $>$ }\\std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \hyperlink{demultiplex_8h_aa740b5e5a2495ee090bca9d6685b2364}{Do\-All} (T\-Seqs \&seqs, T\-Barcodes \&barcodes, bool hard\-Clip, T\-Stats \&stats)
+\begin{DoxyCompactList}\small\item\em Overload of \-::\-Do\-All(\-T\-Barcodes\& multiplex, T\-Barcodes\& barcodes, T\-Finder\& esa\-Finder). Using approximate search and inline barcodes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seqs , typename T\-Ids $>$ }\\void \hyperlink{demultiplex_8h_a1b5de89336b8aec313bd0de7c5d308ee}{build\-Sets} (T\-Seqs \&seqs, T\-Seqs \&seqs\-Rev, T\-Ids \&ids, T\-Ids \&ids\-Rev, const std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \&groups, std\-::vector$<$ T\-Seqs $>$ \&g\-Seqs, std\-::vector$<$ T\-Seqs $>$ \&g\-Seqs\-Rev, std\-::vector$<$ T\-Ids $>$ \&g\-Ids, std\-::vector$<$ T\-Ids $>$ \&g\-Ids\-Rev)
+\begin{DoxyCompactList}\small\item\em Function for creating Vectors of String\-Sets from the vector produced by \hyperlink{demultiplex_8h_aa740b5e5a2495ee090bca9d6685b2364}{Do\-All}, or \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seqs , typename T\-Ids $>$ }\\void \hyperlink{demultiplex_8h_a0f8743c5f7be560f5525171fa3d57048}{build\-Sets} (T\-Seqs \&seqs, T\-Ids \&ids, const std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \&groups, std\-::vector$<$ T\-Seqs $>$ \&g\-Seqs, std\-::vector$<$ T\-Ids $>$ \&g\-Ids)
+\begin{DoxyCompactList}\small\item\em Overload of \hyperlink{demultiplex_8h_a1b5de89336b8aec313bd0de7c5d308ee}{build\-Sets(\-T\-Seqs\& seqs, T\-Seqs\& seqs\-Rev, T\-Ids\& ids, T\-Ids\& ids\-Rev, const std\-::vector$<$std\-::vector$<$int$>$ $>$\& groups, std\-::vector$<$\-T\-Seqs$>$\& g\-Seqs, std\-::vector$<$\-T\-Seqs$>$\& g\-Seqs\-Rev, std\-::vector$<$\-T\-Ids$>$\& g\-Ids, std\-::vector$<$\-T\-Ids$>$\& g\-Ids\-Rev)} for single-\/end data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Tg\-Seqs , typename Tg\-Ids , typename T\-Barcode\-Ids $>$ }\\int \hyperlink{demultiplex_8h_a7a471145751300d281f7de04b5fa66c3}{write\-Groups} (Tg\-Seqs \&g\-Seqs, Tg\-Seqs \&g\-Seqs\-Rev, Tg\-Ids \&g\-Ids, T\-Barcode\-Ids \&barcode\-Ids, std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \&groups, String$<$ char $>$ \&path)
+\begin{DoxyCompactList}\small\item\em Function for Writing out the demultiplexed sequences. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Tg\-Seqs , typename Tg\-Ids , typename T\-Barcode\-Ids , typename Tgroups $>$ }\\int \hyperlink{demultiplex_8h_a7d786671ac0782c001322ecece0465e9}{write\-Groups} (Tg\-Seqs \&g\-Seqs, Tg\-Ids \&g\-Ids, T\-Barcode\-Ids \&barcode\-Ids, Tgroups \&groups, String$<$ char $>$ \&path)
+\begin{DoxyCompactList}\small\item\em Function for Writing out the demultiplexed sequences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the functions for barcode demultiplexing. 
+
+\subsection{Function Documentation}
+\hypertarget{demultiplex_8h_a1b5de89336b8aec313bd0de7c5d308ee}{\index{demultiplex.\-h@{demultiplex.\-h}!build\-Sets@{build\-Sets}}
+\index{build\-Sets@{build\-Sets}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{build\-Sets}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seqs , typename T\-Ids $>$ void build\-Sets (
+\begin{DoxyParamCaption}
+\item[{T\-Seqs \&}]{seqs, }
+\item[{T\-Seqs \&}]{seqs\-Rev, }
+\item[{T\-Ids \&}]{ids, }
+\item[{T\-Ids \&}]{ids\-Rev, }
+\item[{const std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \&}]{groups, }
+\item[{std\-::vector$<$ T\-Seqs $>$ \&}]{g\-Seqs, }
+\item[{std\-::vector$<$ T\-Seqs $>$ \&}]{g\-Seqs\-Rev, }
+\item[{std\-::vector$<$ T\-Ids $>$ \&}]{g\-Ids, }
+\item[{std\-::vector$<$ T\-Ids $>$ \&}]{g\-Ids\-Rev}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a1b5de89336b8aec313bd0de7c5d308ee}
+
+
+Function for creating Vectors of String\-Sets from the vector produced by \hyperlink{demultiplex_8h_aa740b5e5a2495ee090bca9d6685b2364}{Do\-All}, or \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seqs} & String\-Set of forward reads. \\
+\hline
+{\em seqs\-Rev} & String\-Set backward reads. \\
+\hline
+{\em ids} & String\-Set of I\-Ds of forward reads. \\
+\hline
+{\em ids\-Rev} & String\-Set of I\-Ds of backward reads. \\
+\hline
+{\em groups} & Two-\/dimensional vector of integers representing the indices of the sequences. Produced by \hyperlink{demultiplex_8h_aa740b5e5a2495ee090bca9d6685b2364}{Do\-All}, or \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group}. \\
+\hline
+{\em g\-Seq} & Vector of String\-Sets to be filled with the forward reads. \\
+\hline
+{\em g\-Seq\-Rev} & Vector of String\-Sets to be filled with the backward reads. \\
+\hline
+{\em g\-Ids} & Vector of String\-Sets to be filled with the I\-Ds of forwad reads. \\
+\hline
+{\em g\-Ids} & Vector of String\-Sets to be filled with the I\-Ds of backward reads. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+the given String\-Sets are deleted. 
+\end{DoxyRemark}
+\hypertarget{demultiplex_8h_a0f8743c5f7be560f5525171fa3d57048}{\index{demultiplex.\-h@{demultiplex.\-h}!build\-Sets@{build\-Sets}}
+\index{build\-Sets@{build\-Sets}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{build\-Sets}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seqs , typename T\-Ids $>$ void build\-Sets (
+\begin{DoxyParamCaption}
+\item[{T\-Seqs \&}]{seqs, }
+\item[{T\-Ids \&}]{ids, }
+\item[{const std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \&}]{groups, }
+\item[{std\-::vector$<$ T\-Seqs $>$ \&}]{g\-Seqs, }
+\item[{std\-::vector$<$ T\-Ids $>$ \&}]{g\-Ids}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a0f8743c5f7be560f5525171fa3d57048}
+
+
+Overload of \hyperlink{demultiplex_8h_a1b5de89336b8aec313bd0de7c5d308ee}{build\-Sets(\-T\-Seqs\& seqs, T\-Seqs\& seqs\-Rev, T\-Ids\& ids, T\-Ids\& ids\-Rev, const std\-::vector$<$std\-::vector$<$int$>$ $>$\& groups, std\-::vector$<$\-T\-Seqs$>$\& g\-Seqs, std\-::vector$<$\-T\-Seqs$>$\& g\-Seqs\-Rev, std\-::vector$<$\-T\-Ids$>$\& g\-Ids, std\-::vector$<$\-T\-Ids$>$\& g\-Ids\-Rev)} for single-\/end data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seqs} & String\-Set of forward reads. \\
+\hline
+{\em ids} & String\-Set of I\-Ds. \\
+\hline
+{\em groups} & Two-\/dimensional vector of integers representing the indices of the sequences. Produced by \hyperlink{demultiplex_8h_aa740b5e5a2495ee090bca9d6685b2364}{Do\-All}, or \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group}. \\
+\hline
+{\em g\-Seq} & Vector of String\-Sets to be filled with the forward reads. \\
+\hline
+{\em g\-Ids} & Vector of String\-Sets to be filled with the I\-Ds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+the given String\-Sets are deleted. 
+\end{DoxyRemark}
+\hypertarget{demultiplex_8h_ac3b2d77bf5a4a5c24a5c6c39f2f14db2}{\index{demultiplex.\-h@{demultiplex.\-h}!check@{check}}
+\index{check@{check}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seqs , typename T\-Ids , typename T\-Barcodes $>$ bool check (
+\begin{DoxyParamCaption}
+\item[{T\-Seqs \&}]{seqs, }
+\item[{T\-Seqs \&}]{seqs\-Rev, }
+\item[{T\-Ids \&}]{ids, }
+\item[{T\-Barcodes \&}]{barcodes}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_ac3b2d77bf5a4a5c24a5c6c39f2f14db2}
+
+
+Function for controlling the sequences and deleting too short ones. Also checks the barcodes. 
+
+The Function deletes the I\-D and sequence from the given String\-Set if the sequence length is $<$= barcode length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seqs} & String\-Set of forward reads. \\
+\hline
+{\em seqs\-Rev} & String\-Set of backward reads. \\
+\hline
+{\em ids} & String\-Set of I\-Ds. \\
+\hline
+{\em barcodes} & String\-Set of barcodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A bool\-: {\bfseries false} on different lengths of the barcodes, {\bfseries true} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The n-\/th entries of all given String\-Sets must be associated. 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+If the programm is not terminated uppon return of {\bfseries false}, crashes or wrong results are to be exspected. 
+\end{DoxyWarning}
+\hypertarget{demultiplex_8h_a477c711488d93a6c74d678003d564f6e}{\index{demultiplex.\-h@{demultiplex.\-h}!check@{check}}
+\index{check@{check}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seqs , typename T\-Ids , typename T\-Barcodes $>$ bool check (
+\begin{DoxyParamCaption}
+\item[{T\-Seqs \&}]{seqs, }
+\item[{T\-Ids \&}]{ids, }
+\item[{T\-Barcodes \&}]{barcodes}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a477c711488d93a6c74d678003d564f6e}
+
+
+Overload of \hyperlink{demultiplex_8h_ac3b2d77bf5a4a5c24a5c6c39f2f14db2}{check(\-T\-Seqs\& seqs, T\-Seqs\& seqs\-Rev, T\-Ids\& ids, T\-Barcodes\& barcodes)} for single-\/end data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seqs} & String\-Set of reads. \\
+\hline
+{\em ids} & String\-Set of I\-Ds. \\
+\hline
+{\em barcodes} & String\-Set of barcodes \\
+\hline
+\end{DoxyParams}
+\hypertarget{demultiplex_8h_ab5a50e84f98a28e69180e1b7b9794e66}{\index{demultiplex.\-h@{demultiplex.\-h}!clip\-Barcodes@{clip\-Barcodes}}
+\index{clip\-Barcodes@{clip\-Barcodes}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{clip\-Barcodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seqs $>$ void clip\-Barcodes (
+\begin{DoxyParamCaption}
+\item[{T\-Seqs \&}]{seqs, }
+\item[{const std\-::vector$<$ int $>$ \&}]{matches, }
+\item[{unsigned}]{len}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_ab5a50e84f98a28e69180e1b7b9794e66}
+
+
+Function for clipping the barcodes from the sequences if they could be matched beforehand. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seqs} & String\-Set of sequences. \\
+\hline
+{\em matches} & Vector produced by \hyperlink{demultiplex_8h_a4fd16489e70f62f63808c5ce7cccf614}{find\-All\-Exact\-Index} or \hyperlink{demultiplex_8h_a44cb13c1c91451c8b7328dc5478c0be5}{find\-All\-Approx}, holding information about the matched barcodes. \\
+\hline
+{\em len} & Unsigned integer representing the length of the barcodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The n-\/th element of {\bfseries seq} must be associated with the n-\/th element of {\bfseries matches}. 
+\end{DoxyPrecond}
+\begin{DoxyWarning}{Warning}
+If the length of the sequences in seq has not been controlled beforehand by \hyperlink{demultiplex_8h_a477c711488d93a6c74d678003d564f6e}{check} the program might crash. 
+\end{DoxyWarning}
+\hypertarget{demultiplex_8h_afd6d6a19f9f658b9033c14f61bbd154f}{\index{demultiplex.\-h@{demultiplex.\-h}!clip\-Barcodes@{clip\-Barcodes}}
+\index{clip\-Barcodes@{clip\-Barcodes}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{clip\-Barcodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seqs $>$ void clip\-Barcodes (
+\begin{DoxyParamCaption}
+\item[{T\-Seqs \&}]{seqs, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_afd6d6a19f9f658b9033c14f61bbd154f}
+
+
+Overload of \hyperlink{demultiplex_8h_afd6d6a19f9f658b9033c14f61bbd154f}{clip\-Barcodes$<$seqs, matches, len$>$} if the first len bases of every sequence shall be clipped regardless of the matching(or not matching) barcodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seqs} & String\-Set of sequences. \\
+\hline
+{\em len} & unsigned integer representing the length of the barcodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The n-\/th element of {\bfseries seq} must be associated with the n-\/th element of {\bfseries matches}. 
+\end{DoxyPrecond}
+\begin{DoxyWarning}{Warning}
+Only to be used if the first len bases of every sequence are sure to hold a barcode. 
+
+If the length of the sequences in seq has not been controlled beforehand by \hyperlink{demultiplex_8h_a477c711488d93a6c74d678003d564f6e}{check} the program might crash. 
+\end{DoxyWarning}
+\hypertarget{demultiplex_8h_a07f4a4bff8995b9ea9cd8e5d8ff0ddfd}{\index{demultiplex.\-h@{demultiplex.\-h}!Do\-All@{Do\-All}}
+\index{Do\-All@{Do\-All}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{Do\-All}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Barcodes , typename T\-Multiplex , typename T\-Finder , typename T\-Stats $>$ std\-::vector$<$std\-::vector$<$int$>$ $>$ Do\-All (
+\begin{DoxyParamCaption}
+\item[{T\-Multiplex \&}]{multiplex, }
+\item[{T\-Barcodes \&}]{barcodes, }
+\item[{T\-Finder \&}]{esa\-Finder, }
+\item[{T\-Stats \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a07f4a4bff8995b9ea9cd8e5d8ff0ddfd}
+
+
+Function for performing all demultiplexing operations. Using exact search and multiplex barcodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplex} & String\-Set of multiplex barcodes. \\
+\hline
+{\em barcodes} & String\-Set of barcodes. \\
+\hline
+{\em esa\-Finder} & esa\-Finder-\/object of the barcode-\/index. \\
+\hline
+{\em stats} & The \hyperlink{struct_demultiplex_stats}{Demultiplex\-Stats}-\/\-Object holding statistic information on the oemultiplexing process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A two-\/dimensional vector of integers representing the indices of the sequences. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The 0-\/th group (i.\-e. 0-\/th collum of the vector) contains the unidentified sequences. 
+
+All following groups hold the sequences associated with the i-\/1-\/th barcode. 
+\end{DoxyRemark}
+\hypertarget{demultiplex_8h_af01bbc92deb2f0e2457a65abe848f81b}{\index{demultiplex.\-h@{demultiplex.\-h}!Do\-All@{Do\-All}}
+\index{Do\-All@{Do\-All}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{Do\-All}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Barcodes , typename T\-Multiplex , typename T\-Stats $>$ std\-::vector$<$std\-::vector$<$int$>$ $>$ Do\-All (
+\begin{DoxyParamCaption}
+\item[{T\-Multiplex \&}]{multiplex, }
+\item[{T\-Barcodes \&}]{barcodes, }
+\item[{T\-Stats \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_af01bbc92deb2f0e2457a65abe848f81b}
+
+
+Overload of \-::\-Do\-All(\-T\-Barcodes\& multiplex, T\-Barcodes\& barcodes, T\-Finder\& esa\-Finder). Using approximate search and multiplex barcodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplex} & String\-Set of multiplex barcodes. \\
+\hline
+{\em barcodes} & String\-Set of barcodes. \\
+\hline
+{\em stats} & The \hyperlink{struct_demultiplex_stats}{Demultiplex\-Stats}-\/\-Object holding statistic information on the oemultiplexing process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A two-\/dimensional vector of integers representing the indices of the sequences. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The 0-\/th group (i.\-e. 0-\/th collum of the vector) contains the unidentified sequences. 
+
+All following groups hold the sequences associated with the i-\/1-\/th barcode. 
+\end{DoxyRemark}
+\hypertarget{demultiplex_8h_a107b0a518ebc018518c2f223cc40c052}{\index{demultiplex.\-h@{demultiplex.\-h}!Do\-All@{Do\-All}}
+\index{Do\-All@{Do\-All}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{Do\-All}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seqs , typename T\-Barcodes , typename T\-Finder , typename T\-Stats $>$ std\-::vector$<$std\-::vector$<$int$>$ $>$ Do\-All (
+\begin{DoxyParamCaption}
+\item[{T\-Seqs \&}]{seqs, }
+\item[{T\-Barcodes \&}]{barcodes, }
+\item[{T\-Finder \&}]{esa\-Finder, }
+\item[{bool}]{hard\-Clip, }
+\item[{T\-Stats \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a107b0a518ebc018518c2f223cc40c052}
+
+
+Overload of \-::\-Do\-All(\-T\-Barcodes\& multiplex, T\-Barcodes\& barcodes, T\-Finder\& esa\-Finder). Using exact search and inline barcodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seqs} & String\-Set of sequences. \\
+\hline
+{\em barcodes} & String\-Set of barcodes. \\
+\hline
+{\em esa\-Finder} & esa\-Finder-\/object of the barcode-\/index. \\
+\hline
+{\em hard\-Clip} & Boolean indicating wheter the first Bases of each sequence shall be clipped without considering the barcodes (true). \\
+\hline
+{\em stats} & The \hyperlink{struct_demultiplex_stats}{Demultiplex\-Stats}-\/\-Object holding statistic information on the oemultiplexing process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A two-\/dimensional vector of integers representing the indices of the sequences. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The 0-\/th group (i.\-e. 0-\/th collum of the vector) contains the unidentified sequences. 
+
+All following groups hold the sequences associated with the i-\/1-\/th barcode. 
+\end{DoxyRemark}
+\hypertarget{demultiplex_8h_aa740b5e5a2495ee090bca9d6685b2364}{\index{demultiplex.\-h@{demultiplex.\-h}!Do\-All@{Do\-All}}
+\index{Do\-All@{Do\-All}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{Do\-All}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seqs , typename T\-Barcodes , typename T\-Stats $>$ std\-::vector$<$std\-::vector$<$int$>$ $>$ Do\-All (
+\begin{DoxyParamCaption}
+\item[{T\-Seqs \&}]{seqs, }
+\item[{T\-Barcodes \&}]{barcodes, }
+\item[{bool}]{hard\-Clip, }
+\item[{T\-Stats \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_aa740b5e5a2495ee090bca9d6685b2364}
+
+
+Overload of \-::\-Do\-All(\-T\-Barcodes\& multiplex, T\-Barcodes\& barcodes, T\-Finder\& esa\-Finder). Using approximate search and inline barcodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seqs} & String\-Set of sequences. \\
+\hline
+{\em barcodes} & String\-Set of barcodes. \\
+\hline
+{\em hard\-Clip} & Boolean indicating wheter the first Bases of each sequence shall be clipped without considering the barcodes (true). \\
+\hline
+{\em stats} & The \hyperlink{struct_demultiplex_stats}{Demultiplex\-Stats}-\/\-Object holding statistic information on the oemultiplexing process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A two-\/dimensional vector of integers representing the indices of the sequences. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The 0-\/th group (i.\-e. 0-\/th collum of the vector) contains the unidentified sequences. 
+
+All following groups hold the sequences associated with the i-\/1-\/th barcode. 
+\end{DoxyRemark}
+\hypertarget{demultiplex_8h_a44cb13c1c91451c8b7328dc5478c0be5}{\index{demultiplex.\-h@{demultiplex.\-h}!find\-All\-Approx@{find\-All\-Approx}}
+\index{find\-All\-Approx@{find\-All\-Approx}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{find\-All\-Approx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Prefices , typename T\-Patterns , typename T\-Stats $>$ std\-::vector$<$int$>$ find\-All\-Approx (
+\begin{DoxyParamCaption}
+\item[{const T\-Prefices \&}]{prefices, }
+\item[{T\-Patterns \&}]{patterns, }
+\item[{T\-Stats \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a44cb13c1c91451c8b7328dc5478c0be5}
+
+
+Function for performing \hyperlink{demultiplex_8h_aa13cdb6d68e31c67d3e9a199908bd74e}{find\-Approx} on all given prefices and barcodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefices} & String\-Set of prefices. \\
+\hline
+{\em patterns} & Vector of pattern-\/objects generated by \hyperlink{demultiplex_8h_ac36c5f6999d5913d122814e156ccbf4d}{make\-Patterns}. \\
+\hline
+{\em stats} & The \hyperlink{struct_demultiplex_stats}{Demultiplex\-Stats}-\/\-Object holding statistic information on the oemultiplexing process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of integers representing the positions of the matched barcodes. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The n-\/th element of the vector is associated with the n-\/th sequence. 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+Only the first hit of each is reported. 
+\end{DoxyWarning}
+\hypertarget{demultiplex_8h_a4fd16489e70f62f63808c5ce7cccf614}{\index{demultiplex.\-h@{demultiplex.\-h}!find\-All\-Exact\-Index@{find\-All\-Exact\-Index}}
+\index{find\-All\-Exact\-Index@{find\-All\-Exact\-Index}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{find\-All\-Exact\-Index}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Prefices , typename T\-Finder , typename T\-Stats $>$ std\-::vector$<$int$>$ find\-All\-Exact\-Index (
+\begin{DoxyParamCaption}
+\item[{const T\-Prefices \&}]{prefices, }
+\item[{T\-Finder \&}]{finder, }
+\item[{T\-Stats \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a4fd16489e70f62f63808c5ce7cccf614}
+
+
+Function for performing \hyperlink{demultiplex_8h_a86616c3ae45c3b7d726dd7044088a772}{find\-Exact\-Index} on all given prefices and barcodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefices} & String\-Set of prefices. \\
+\hline
+{\em finder} & Finder-\/object holding the preprocessed barcodes. \\
+\hline
+{\em stats} & The \hyperlink{struct_demultiplex_stats}{Demultiplex\-Stats}-\/\-Object holding statistic information on the oemultiplexing process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Vector of integers representing the positions of the matched barcodes. If a sequence could not be matched, the position is replaced by {\bfseries -\/1}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The n-\/th element of the resulting vector is associated with the n-\/th prefix/sequence. 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+Only the first hit of each prefix is repoted. 
+\end{DoxyWarning}
+\hypertarget{demultiplex_8h_aa13cdb6d68e31c67d3e9a199908bd74e}{\index{demultiplex.\-h@{demultiplex.\-h}!find\-Approx@{find\-Approx}}
+\index{find\-Approx@{find\-Approx}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{find\-Approx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Prefix , typename T\-Patterns $>$ int find\-Approx (
+\begin{DoxyParamCaption}
+\item[{T\-Prefix \&}]{prefix, }
+\item[{T\-Patterns \&}]{patterns}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_aa13cdb6d68e31c67d3e9a199908bd74e}
+
+
+Function for approximate search for one prefix in all barcodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & Prefix of a sequence. \\
+\hline
+{\em patterns} & Vector of pattern-\/objects generated by \hyperlink{demultiplex_8h_ac36c5f6999d5913d122814e156ccbf4d}{make\-Patterns}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer representing the position of the matched barcode. If no hit occured {\bfseries -\/1} is returned. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Only the first hit is reported. 
+\end{DoxyWarning}
+\hypertarget{demultiplex_8h_a86616c3ae45c3b7d726dd7044088a772}{\index{demultiplex.\-h@{demultiplex.\-h}!find\-Exact\-Index@{find\-Exact\-Index}}
+\index{find\-Exact\-Index@{find\-Exact\-Index}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{find\-Exact\-Index}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Prefix , typename T\-Finder $>$ int find\-Exact\-Index (
+\begin{DoxyParamCaption}
+\item[{const T\-Prefix \&}]{prefix, }
+\item[{T\-Finder \&}]{finder}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a86616c3ae45c3b7d726dd7044088a772}
+
+
+Function for exact search for one prefix in the barcode indices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & Prefix of a sequence. \\
+\hline
+{\em finder} & Finder-\/object holding the preprocessed barcodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer representing the position of the matching barcode. If no hit occured {\bfseries -\/1} is returned. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Only the first hit is reported. 
+\end{DoxyWarning}
+\hypertarget{demultiplex_8h_a53164dfc669a1636d5fcb8b67e26545c}{\index{demultiplex.\-h@{demultiplex.\-h}!get\-Prefix@{get\-Prefix}}
+\index{get\-Prefix@{get\-Prefix}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{get\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seqs $>$ T\-Seqs get\-Prefix (
+\begin{DoxyParamCaption}
+\item[{T\-Seqs \&}]{seqs, }
+\item[{unsigned}]{len}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a53164dfc669a1636d5fcb8b67e26545c}
+
+
+Function for extracting the prefices of all given sequences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seqs} & String\-Set of sequences. \\
+\hline
+{\em len} & Unsigned integer representing the desired prefix length. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A String\-Set of prefices of length {\bfseries len} 
+\end{DoxyReturn}
+\hypertarget{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{\index{demultiplex.\-h@{demultiplex.\-h}!group@{group}}
+\index{group@{group}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{group}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Matches , typename T\-Barcodes $>$ std\-::vector$<$std\-::vector$<$int$>$ $>$ group (
+\begin{DoxyParamCaption}
+\item[{const T\-Matches \&}]{matches, }
+\item[{const T\-Barcodes \&}]{barcodes}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}
+
+
+Function for sorting the matched and clipped sequences into one vector. 
+
+The function takes the results of \hyperlink{demultiplex_8h_a4fd16489e70f62f63808c5ce7cccf614}{find\-All\-Exact\-Index} or \hyperlink{demultiplex_8h_a44cb13c1c91451c8b7328dc5478c0be5}{find\-All\-Approx} and the sequnce indices into a vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em matches} & Vector holding information about the matched barcodes. Produced by \hyperlink{demultiplex_8h_a4fd16489e70f62f63808c5ce7cccf614}{find\-All\-Exact\-Index} or \hyperlink{demultiplex_8h_a44cb13c1c91451c8b7328dc5478c0be5}{find\-All\-Approx} functions. \\
+\hline
+{\em barcodes} & String\-Set of barcodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A two-\/dimensional vector of integers representing the indices of the sequences. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The 0-\/th group (i.\-e. 0-\/th collum of the vector) contains the unidentified sequences. 
+
+All following groups hold the sequences associated with the i-\/1-\/th barcode. 
+\end{DoxyRemark}
+\hypertarget{demultiplex_8h_ac36c5f6999d5913d122814e156ccbf4d}{\index{demultiplex.\-h@{demultiplex.\-h}!make\-Patterns@{make\-Patterns}}
+\index{make\-Patterns@{make\-Patterns}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{make\-Patterns}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Barcodes $>$ std\-::vector$<$Pattern$<$String$<$Dna5\-Q$>$, D\-P\-Search$<$Simple\-Score$>$ $>$ $>$ make\-Patterns (
+\begin{DoxyParamCaption}
+\item[{T\-Barcodes \&}]{barcodes}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_ac36c5f6999d5913d122814e156ccbf4d}
+
+
+Function for creating a vector of patterns used by \hyperlink{demultiplex_8h_aa13cdb6d68e31c67d3e9a199908bd74e}{find\-Approx} and \hyperlink{demultiplex_8h_a44cb13c1c91451c8b7328dc5478c0be5}{find\-All\-Approx}. 
+
+The pattern-\/objects generated use D\-P\-Search and a simple score of 0,-\/1,-\/2 (match, mismatch, gap) 
+\begin{DoxyParams}{Parameters}
+{\em barcodes} & String\-Set of barcodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of pattern-\/\-Objects. 
+\end{DoxyReturn}
+\hypertarget{demultiplex_8h_ab8570a5ec49e672244deb3ec94154906}{\index{demultiplex.\-h@{demultiplex.\-h}!resize\-Groups@{resize\-Groups}}
+\index{resize\-Groups@{resize\-Groups}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{resize\-Groups}]{\setlength{\rightskip}{0pt plus 5cm}void resize\-Groups (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \&}]{groups}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_ab8570a5ec49e672244deb3ec94154906}
+
+
+Function for resizing the groups of the vector produced by \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group} and used by it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em groups} & Two-\/dimensional vector containing integers representing the indices of the sequences. Produced by \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{demultiplex_8h_a7a471145751300d281f7de04b5fa66c3}{\index{demultiplex.\-h@{demultiplex.\-h}!write\-Groups@{write\-Groups}}
+\index{write\-Groups@{write\-Groups}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{write\-Groups}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tg\-Seqs , typename Tg\-Ids , typename T\-Barcode\-Ids $>$ int write\-Groups (
+\begin{DoxyParamCaption}
+\item[{Tg\-Seqs \&}]{g\-Seqs, }
+\item[{Tg\-Seqs \&}]{g\-Seqs\-Rev, }
+\item[{Tg\-Ids \&}]{g\-Ids, }
+\item[{T\-Barcode\-Ids \&}]{barcode\-Ids, }
+\item[{std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \&}]{groups, }
+\item[{String$<$ char $>$ \&}]{path}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a7a471145751300d281f7de04b5fa66c3}
+
+
+Function for Writing out the demultiplexed sequences. 
+
+The output consists of one or more Fast\-Q files, one for each used barcode. The filenames are derived from the barcode I\-Ds. 
+\begin{DoxyParams}{Parameters}
+{\em g\-Seqs} & Vector of String\-Sets of sequences, generated by \hyperlink{demultiplex_8h_a0f8743c5f7be560f5525171fa3d57048}{build\-Sets}. \\
+\hline
+{\em g\-Ids} & Vector of Sring\-Sets of I\-Ds, generated by build\-Sets. \\
+\hline
+{\em barcode\-Ids} & String\-Set of barcode I\-Ds. \\
+\hline
+{\em groups} & Two-\/dimensional vector of integers representing the indices of the sequences. Produced by \hyperlink{demultiplex_8h_aa740b5e5a2495ee090bca9d6685b2364}{Do\-All}, or \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group}. \\
+\hline
+{\em path} & String$<$char$>$ indicating the output folder. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer. 1 on errors, 0 otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+When giving the path to the output-\/folder, the last slash must be written. Otherwise everything after the last slash will be added to the filenames. 
+
+Not used in final code, but used in a test of the demultiplexing functions. 
+\end{DoxyRemark}
+\hypertarget{demultiplex_8h_a7d786671ac0782c001322ecece0465e9}{\index{demultiplex.\-h@{demultiplex.\-h}!write\-Groups@{write\-Groups}}
+\index{write\-Groups@{write\-Groups}!demultiplex.h@{demultiplex.\-h}}
+\subsubsection[{write\-Groups}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tg\-Seqs , typename Tg\-Ids , typename T\-Barcode\-Ids , typename Tgroups $>$ int write\-Groups (
+\begin{DoxyParamCaption}
+\item[{Tg\-Seqs \&}]{g\-Seqs, }
+\item[{Tg\-Ids \&}]{g\-Ids, }
+\item[{T\-Barcode\-Ids \&}]{barcode\-Ids, }
+\item[{Tgroups \&}]{groups, }
+\item[{String$<$ char $>$ \&}]{path}
+\end{DoxyParamCaption}
+)}}\label{demultiplex_8h_a7d786671ac0782c001322ecece0465e9}
+
+
+Function for Writing out the demultiplexed sequences. 
+
+The output consists of one or more Fast\-Q files, two for each used barcode. The filenames are derived from the barcode I\-Ds. The files containing the backward-\/reads end with \char`\"{}\-\_\-\-R\-E\-V.\-fq\char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em g\-Seqs} & Vector of String\-Sets of forward-\/reads, generated by \hyperlink{demultiplex_8h_a0f8743c5f7be560f5525171fa3d57048}{build\-Sets}. \\
+\hline
+{\em g\-Seqs\-Rev} & Vector of String\-Sets of backward-\/reads, generated by \hyperlink{demultiplex_8h_a0f8743c5f7be560f5525171fa3d57048}{build\-Sets}. \\
+\hline
+{\em g\-Ids} & Vector of Sring\-Sets of I\-Ds, generated by build\-Sets. \\
+\hline
+{\em barcode\-Ids} & String\-Set of barcode I\-Ds. \\
+\hline
+{\em groups} & Two-\/dimensional vector of integers representing the indices of the sequences. Produced by \hyperlink{demultiplex_8h_aa740b5e5a2495ee090bca9d6685b2364}{Do\-All}, or \hyperlink{demultiplex_8h_a51c1b637cfe518cdb968089aab2fb462}{group}. \\
+\hline
+{\em path} & String$<$char$>$ indicating the output folder. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer. 1 on errors, 0 otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+When giving the path to the output-\/folder, the last slash must be written. Otherwise everything after the last slash will be added to the filenames. 
+
+Not used in final code, but used in a test of the demultiplexing functions. 
+\end{DoxyRemark}

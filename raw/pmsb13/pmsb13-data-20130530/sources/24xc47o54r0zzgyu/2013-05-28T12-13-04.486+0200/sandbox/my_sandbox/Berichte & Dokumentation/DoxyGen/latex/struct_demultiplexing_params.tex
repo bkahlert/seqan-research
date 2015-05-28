@@ -1,0 +1,75 @@
+\hypertarget{struct_demultiplexing_params}{\section{Demultiplexing\-Params Struct Reference}
+\label{struct_demultiplexing_params}\index{Demultiplexing\-Params@{Demultiplexing\-Params}}
+}
+
+
+Struct holding all demultiplexing parameters.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+seqan\-::\-String$<$ char $>$ \hyperlink{struct_demultiplexing_params_a2b2b682fbf21f3ca8daafe3e9b83c0ca}{barcode\-File}
+\item 
+seqan\-::\-String\-Set\\*
+$<$ seqan\-::\-String$<$ seqan\-::\-Dna $>$ $>$ \hyperlink{struct_demultiplexing_params_aaeea114c00f19f6565047e507a74f90f}{barcodes}
+\item 
+seqan\-::\-String\-Set\\*
+$<$ seqan\-::\-String$<$ char $>$ $>$ \hyperlink{struct_demultiplexing_params_a1721fa9ad83112b0d2df9c2932bd00be}{barcode\-Ids}
+\item 
+seqan\-::\-String$<$ char $>$ \hyperlink{struct_demultiplexing_params_a93d9e02c35225dac383b7c52f7b539f7}{multiplex\-File}
+\item 
+seqan\-::\-String\-Set\\*
+$<$ seqan\-::\-String$<$ seqan\-::\-Dna5\-Q $>$ $>$ \hyperlink{struct_demultiplexing_params_a6d5a685bccab390519e4b423018443f7}{multiplex}
+\item 
+bool \hyperlink{struct_demultiplexing_params_ae76872bea7b75ea020035f7825fc8210}{approximate}
+\item 
+bool \hyperlink{struct_demultiplexing_params_a28920791fd2dfa590dade23f2924b93a}{hard\-Clip}
+\item 
+bool \hyperlink{struct_demultiplexing_params_a4a52e0b0dbbacf3e1d4e2b115f3d8cf7}{run}
+\item 
+bool \hyperlink{struct_demultiplexing_params_aa7bf93a371b34c9ad7ae0a5dc8edc8c5}{runx}
+\item 
+\hyperlink{struct_demultiplex_stats}{Demultiplex\-Stats} \hyperlink{struct_demultiplexing_params_a1017a69229d12a8a3714f80e75c3dbb9}{stats}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct holding all demultiplexing parameters. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_demultiplexing_params_ae76872bea7b75ea020035f7825fc8210}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!approximate@{approximate}}
+\index{approximate@{approximate}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{approximate}]{\setlength{\rightskip}{0pt plus 5cm}bool Demultiplexing\-Params\-::approximate}}\label{struct_demultiplexing_params_ae76872bea7b75ea020035f7825fc8210}
+T\-R\-U\-E if approximate search shall be used \hypertarget{struct_demultiplexing_params_a2b2b682fbf21f3ca8daafe3e9b83c0ca}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!barcode\-File@{barcode\-File}}
+\index{barcode\-File@{barcode\-File}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{barcode\-File}]{\setlength{\rightskip}{0pt plus 5cm}seqan\-::\-String$<$char$>$ Demultiplexing\-Params\-::barcode\-File}}\label{struct_demultiplexing_params_a2b2b682fbf21f3ca8daafe3e9b83c0ca}
+Holds the path to the barcode-\/file \hypertarget{struct_demultiplexing_params_a1721fa9ad83112b0d2df9c2932bd00be}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!barcode\-Ids@{barcode\-Ids}}
+\index{barcode\-Ids@{barcode\-Ids}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{barcode\-Ids}]{\setlength{\rightskip}{0pt plus 5cm}seqan\-::\-String\-Set$<$seqan\-::\-String$<$char$>$ $>$ Demultiplexing\-Params\-::barcode\-Ids}}\label{struct_demultiplexing_params_a1721fa9ad83112b0d2df9c2932bd00be}
+Holds the String\-Set of barcode-\/\-I\-Ds \hypertarget{struct_demultiplexing_params_aaeea114c00f19f6565047e507a74f90f}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!barcodes@{barcodes}}
+\index{barcodes@{barcodes}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{barcodes}]{\setlength{\rightskip}{0pt plus 5cm}seqan\-::\-String\-Set$<$seqan\-::\-String$<$seqan\-::\-Dna$>$ $>$ Demultiplexing\-Params\-::barcodes}}\label{struct_demultiplexing_params_aaeea114c00f19f6565047e507a74f90f}
+Holds the String\-Set of barcodes \hypertarget{struct_demultiplexing_params_a28920791fd2dfa590dade23f2924b93a}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!hard\-Clip@{hard\-Clip}}
+\index{hard\-Clip@{hard\-Clip}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{hard\-Clip}]{\setlength{\rightskip}{0pt plus 5cm}bool Demultiplexing\-Params\-::hard\-Clip}}\label{struct_demultiplexing_params_a28920791fd2dfa590dade23f2924b93a}
+T\-R\-U\-E if hard\-Clip shall be used \hypertarget{struct_demultiplexing_params_a6d5a685bccab390519e4b423018443f7}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!multiplex@{multiplex}}
+\index{multiplex@{multiplex}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{multiplex}]{\setlength{\rightskip}{0pt plus 5cm}seqan\-::\-String\-Set$<$seqan\-::\-String$<$seqan\-::\-Dna5\-Q$>$ $>$ Demultiplexing\-Params\-::multiplex}}\label{struct_demultiplexing_params_a6d5a685bccab390519e4b423018443f7}
+Holds the String\-Set of multiplex barcodes \hypertarget{struct_demultiplexing_params_a93d9e02c35225dac383b7c52f7b539f7}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!multiplex\-File@{multiplex\-File}}
+\index{multiplex\-File@{multiplex\-File}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{multiplex\-File}]{\setlength{\rightskip}{0pt plus 5cm}seqan\-::\-String$<$char$>$ Demultiplexing\-Params\-::multiplex\-File}}\label{struct_demultiplexing_params_a93d9e02c35225dac383b7c52f7b539f7}
+Holds the path to the multiplex-\/file \hypertarget{struct_demultiplexing_params_a4a52e0b0dbbacf3e1d4e2b115f3d8cf7}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!run@{run}}
+\index{run@{run}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}bool Demultiplexing\-Params\-::run}}\label{struct_demultiplexing_params_a4a52e0b0dbbacf3e1d4e2b115f3d8cf7}
+T\-R\-U\-E if demultiplexing shall run \hypertarget{struct_demultiplexing_params_aa7bf93a371b34c9ad7ae0a5dc8edc8c5}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!runx@{runx}}
+\index{runx@{runx}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{runx}]{\setlength{\rightskip}{0pt plus 5cm}bool Demultiplexing\-Params\-::runx}}\label{struct_demultiplexing_params_aa7bf93a371b34c9ad7ae0a5dc8edc8c5}
+T\-R\-U\-E if multiplex demultiplexing shall run \hypertarget{struct_demultiplexing_params_a1017a69229d12a8a3714f80e75c3dbb9}{\index{Demultiplexing\-Params@{Demultiplexing\-Params}!stats@{stats}}
+\index{stats@{stats}!DemultiplexingParams@{Demultiplexing\-Params}}
+\subsubsection[{stats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Demultiplex\-Stats} Demultiplexing\-Params\-::stats}}\label{struct_demultiplexing_params_a1017a69229d12a8a3714f80e75c3dbb9}
+Holds interesting numbers about demultiplexing. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/Seq\-D\-P\-T.\-cpp\end{DoxyCompactItemize}

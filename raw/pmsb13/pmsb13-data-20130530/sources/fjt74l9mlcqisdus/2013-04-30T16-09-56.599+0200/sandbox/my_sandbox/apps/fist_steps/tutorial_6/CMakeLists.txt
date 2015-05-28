@@ -1,0 +1,80 @@
+# ===========================================================================
+#                  SeqAn - The Library for Sequence Analysis
+# ===========================================================================
+# File: /sandbox\\my_sandbox\\apps\\tutorial_6/CMakeLists.txt
+#
+# CMakeLists.txt file for tutorial_6.
+# ===========================================================================
+
+cmake_minimum_required (VERSION 2.8.2)
+project (seqan_sandbox_my_sandbox_apps_tutorial_6)
+message (STATUS "Configuring sandbox\\my_sandbox\\apps\\tutorial_6")
+
+# ----------------------------------------------------------------------------
+# Dependencies
+# ----------------------------------------------------------------------------
+
+# Search SeqAn and select dependencies.
+#set (SEQAN_FIND_DEPENDENCIES NONE)
+find_package (SeqAn REQUIRED)
+
+# ----------------------------------------------------------------------------
+# Build Setup
+# ----------------------------------------------------------------------------
+
+# Add include directories.
+include_directories (${SEQAN_INCLUDE_DIRS})
+
+# Add definitions set by find_package (SeqAn).
+add_definitions (${SEQAN_DEFINITIONS})
+
+# Update the list of file names below if you add source files to your application.
+add_executable (tutorial_6 tutorial_6.cpp)
+
+# Add dependencies found by find_package (SeqAn).
+target_link_libraries (tutorial_6 ${SEQAN_LIBRARIES})
+
+# Add CXX flags found by find_package (SeqAn).
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${SEQAN_CXX_FLAGS}")
+
+# ----------------------------------------------------------------------------
+# Installation
+# ----------------------------------------------------------------------------
+
+# Set variables for installing, depending on the selected build type.
+if (NOT SEQAN_PREFIX_SHARE_DOC)
+  seqan_setup_install_vars (tutorial_6)
+endif (NOT SEQAN_PREFIX_SHARE_DOC)
+
+# Install tutorial_6 in ${PREFIX}/bin directory
+install (TARGETS tutorial_6
+         DESTINATION bin)
+
+# Install non-binary files for the package to "." for app builds and
+# ${PREFIX}/share/doc/tutorial_6 for SeqAn release builds.
+install (FILES LICENSE
+               README
+         DESTINATION ${SEQAN_PREFIX_SHARE_DOC})
+#install (FILES example/fasta1.fa
+#               example/fasta2.fa
+#         DESTINATION ${SEQAN_PREFIX_SHARE_DOC}/example)
+
+# ----------------------------------------------------------------------------
+# App Test
+# ----------------------------------------------------------------------------
+
+#seqan_add_app_test (tutorial_6)
+
+# ----------------------------------------------------------------------------
+# CPack Install
+# ----------------------------------------------------------------------------
+
+if (SEQAN_BUILD_SYSTEM STREQUAL "APP:tutorial_6")
+  set (CPACK_PACKAGE_NAME "tutorial_6")
+  set (CPACK_PACKAGE_DESCRIPTION_SUMMARY "tutorial_6")
+  set (CPACK_DEBIAN_PACKAGE_MAINTAINER "Your Name <your.email@example.net>")
+  set (CPACK_PACKAGE_VENDOR "Your Name <your.email@example.net>")
+
+  seqan_configure_cpack_app (tutorial_6 "tutorial_6")
+endif (SEQAN_BUILD_SYSTEM STREQUAL "APP:tutorial_6")
+

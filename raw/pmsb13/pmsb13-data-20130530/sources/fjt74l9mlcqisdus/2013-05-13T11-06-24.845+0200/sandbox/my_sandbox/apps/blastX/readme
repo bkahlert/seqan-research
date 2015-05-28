@@ -1,0 +1,27 @@
+ÄNDERUNG
+OUTPUT PFAD VERÄNDERT!!!!
+Test hinzugefügt, weiß aber nicht ob es funktioniert
+
+Neue Version vom 8.5 Rohversion compelieren nicht möglich
+Reads müssen alle gleiche Länge haben !!!!!
+
+
+SEQAN_DEFINE_TEST(test_my_app_get_alphabet_force)
+{
+	StringSet<String<AminoAcid> > result;	
+	String<AminoAcid> temp;
+	append(temp, "CDQNRQNCDCCDRCCQQQQCE");
+	appendValue(result, temp);
+	StringSet<String<AminoAcid> > alphabet = GET_ALPHABET_FORCE();
+	//SEQAN_ASSERT_EQ(result, alphabet);		<- abfrage nicht möglich
+}
+ 
+
+
+
+FRAGEN:
+reduziert in translate.cpp????
+Funktion get_read_posiiton in finder.cpp?????
+Funktion append_to_match_found in finder.cpp????
+intervall_protein in verify.cpp????
+get_position_in_prot, known_position, verify_seed_match in verify.cpp???

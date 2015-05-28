@@ -1,0 +1,53 @@
+\hypertarget{struct_adapter_trimming_stats}{\section{Adapter\-Trimming\-Stats Struct Reference}
+\label{struct_adapter_trimming_stats}\index{Adapter\-Trimming\-Stats@{Adapter\-Trimming\-Stats}}
+}
+
+
+Struct to hold information about certain adapter trimming statistics.  
+
+
+
+
+{\ttfamily \#include $<$adapter\-Trimming.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_adapter_trimming_stats_aba2db4f8bdfbf1f9d389bf20a752b8f3}{void {\bfseries clear} ()}\label{struct_adapter_trimming_stats_aba2db4f8bdfbf1f9d389bf20a752b8f3}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_adapter_trimming_stats_ac2e7c09b2e9b8a080afb148c6f8d4026}{unsigned {\bfseries a1count}}\label{struct_adapter_trimming_stats_ac2e7c09b2e9b8a080afb148c6f8d4026}
+
+\item 
+unsigned \hyperlink{struct_adapter_trimming_stats_aabec417e43e59c829ab9172399c2961f}{a2count}
+\item 
+unsigned \hyperlink{struct_adapter_trimming_stats_a1a223cef64dde7c1a3eb5f7a8da182b5}{overlap\-Sum}
+\item 
+\hypertarget{struct_adapter_trimming_stats_ac893758e439beec68892ce129b16bc82}{unsigned {\bfseries min\-Overlap}}\label{struct_adapter_trimming_stats_ac893758e439beec68892ce129b16bc82}
+
+\item 
+unsigned \hyperlink{struct_adapter_trimming_stats_a3a8e65c4bb3dbd65a51289d07699ad11}{max\-Overlap}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct to hold information about certain adapter trimming statistics. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_adapter_trimming_stats_aabec417e43e59c829ab9172399c2961f}{\index{Adapter\-Trimming\-Stats@{Adapter\-Trimming\-Stats}!a2count@{a2count}}
+\index{a2count@{a2count}!AdapterTrimmingStats@{Adapter\-Trimming\-Stats}}
+\subsubsection[{a2count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Adapter\-Trimming\-Stats\-::a2count}}\label{struct_adapter_trimming_stats_aabec417e43e59c829ab9172399c2961f}
+The number of adapters present in forward and backward reads. \hypertarget{struct_adapter_trimming_stats_a3a8e65c4bb3dbd65a51289d07699ad11}{\index{Adapter\-Trimming\-Stats@{Adapter\-Trimming\-Stats}!max\-Overlap@{max\-Overlap}}
+\index{max\-Overlap@{max\-Overlap}!AdapterTrimmingStats@{Adapter\-Trimming\-Stats}}
+\subsubsection[{max\-Overlap}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Adapter\-Trimming\-Stats\-::max\-Overlap}}\label{struct_adapter_trimming_stats_a3a8e65c4bb3dbd65a51289d07699ad11}
+Minimum and maximum overlap between adapter and reads. \hypertarget{struct_adapter_trimming_stats_a1a223cef64dde7c1a3eb5f7a8da182b5}{\index{Adapter\-Trimming\-Stats@{Adapter\-Trimming\-Stats}!overlap\-Sum@{overlap\-Sum}}
+\index{overlap\-Sum@{overlap\-Sum}!AdapterTrimmingStats@{Adapter\-Trimming\-Stats}}
+\subsubsection[{overlap\-Sum}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Adapter\-Trimming\-Stats\-::overlap\-Sum}}\label{struct_adapter_trimming_stats_a1a223cef64dde7c1a3eb5f7a8da182b5}
+The sum of the removed adapter bases. Later used to calculate mean adapter size. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/\hyperlink{adapter_trimming_8h}{adapter\-Trimming.\-h}\end{DoxyCompactItemize}

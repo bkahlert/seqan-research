@@ -1,0 +1,26 @@
+{
+    "machine": {
+        "machine": "x86_64",
+        "processor": "i386",
+        "architecture": [
+            [
+                "64bit",
+                ""
+            ],
+            "64"
+        ]
+    },
+    "ip": [
+        "192.168.16.101",
+        "fe80::6233:4bff:fe17:4c47%en1"
+    ],
+    "os": {
+        "node": "wensicia.local",
+        "sys.platform": "darwin",
+        "system": "Darwin",
+        "platform": "Darwin-12.3.0-x86_64-i386-64bit",
+        "version": "Darwin Kernel Version 12.3.0: Sun Jan  6 22:37:10 PST 2013; root:xnu-2050.22.13~1/RELEASE_X86_64",
+        "release": "12.3.0"
+    },
+    "id": "bkahlert"
+}

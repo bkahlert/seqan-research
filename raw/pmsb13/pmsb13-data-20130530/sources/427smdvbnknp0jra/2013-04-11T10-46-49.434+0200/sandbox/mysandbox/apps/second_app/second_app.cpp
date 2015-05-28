@@ -1,0 +1,24 @@
+#include <seqan/sequence.h>
+#include <seqan/index.h>
+
+using namespace seqan;
+
+int main()
+{
+	typedef Index<CharString> TIndex;
+	TIndex index("tobeornottobe");
+	Iterator<TIndex,TopDown<ParentLinks<>>>::Type it(index);
+	goDown(it);
+	std::cout << representative(it) << std::endl;
+	while(!isRoot(it))
+	{
+	    std::cout << representative(it) << std::endl;
+		if (!goDown(it) && !goRight(it))
+		{
+			goUp(it);
+		}
+	}
+	
+	return 0;
+
+}

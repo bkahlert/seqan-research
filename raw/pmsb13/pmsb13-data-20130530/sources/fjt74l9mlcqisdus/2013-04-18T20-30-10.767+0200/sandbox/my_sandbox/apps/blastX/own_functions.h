@@ -1,0 +1,23 @@
+
+#ifndef SANDBOX_MY_SANDBOX_APPS_BLASTX_OWN_FUNCTIONS_
+#include <iostream>
+#include <seqan/arg_parse.h>
+
+using namespace std;
+using namespace seqan;
+
+class Variable{
+public:
+	String<char> fasta_file;
+	String<char> fastq_file;
+	int seed;
+	int size_alp;
+	int numb_alp;
+};
+
+void dafault_values(Variable & comVal);
+int PARSE_ARGUMENTS(int argc,char const ** argv,Variable & comVal);
+
+
+#define SANDBOX_MY_SANDBOX_APPS_BLASTX_OWN_FUNCTIONS_
+#endif

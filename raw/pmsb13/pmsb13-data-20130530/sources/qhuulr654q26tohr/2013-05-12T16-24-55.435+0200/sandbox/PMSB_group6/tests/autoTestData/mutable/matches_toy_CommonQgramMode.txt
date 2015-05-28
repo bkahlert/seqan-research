@@ -1,0 +1,18 @@
+
+ Query ID =seq1
+ 	 Match ID =seq1 $seq1$	 AlignmentScore =1000
+ 	 Match ID =seq5 $seq1$	 AlignmentScore =1000
+ Query ID =seq2
+ 	 Match ID =seq10 $seq9$	 AlignmentScore =750
+ 	 Match ID =seq9 $seq9$	 AlignmentScore =1000
+ Query ID =seq3
+ 	 Match ID =seq3 $seq3$	 AlignmentScore =250
+ 	 Match ID =seq7 $seq3$	 AlignmentScore =250
+ 	 Match ID =seq11 $seq3$	 AlignmentScore =750
+ Query ID =seq4
+ 	 Match ID =seq4 $seq4$	 AlignmentScore =1000
+ 	 Match ID =seq8 $seq4$	 AlignmentScore =1000
+ 	 Match ID =seq12 $seq4$	 AlignmentScore =1000
+ Query ID =seq5
+ 	 Match ID =seq10 $seq9$	 AlignmentScore =250
+ 	 Match ID =seq9 $seq9$	 AlignmentScore =1000

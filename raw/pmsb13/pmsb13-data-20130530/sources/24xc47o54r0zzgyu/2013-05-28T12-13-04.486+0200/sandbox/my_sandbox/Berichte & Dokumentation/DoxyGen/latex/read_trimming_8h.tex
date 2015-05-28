@@ -1,0 +1,402 @@
+\hypertarget{read_trimming_8h}{\section{D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/read\-Trimming.h File Reference}
+\label{read_trimming_8h}\index{D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/read\-Trimming.\-h@{D\-:/\-Seq\-An/\-Development/seqan-\/trunk/sandbox/my\-\_\-sandbox/apps/\-Seq\-D\-P\-T/read\-Trimming.\-h}}
+}
+
+
+Contains the functions for read trimming.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_tail}{Tail}
+\begin{DoxyCompactList}\small\item\em The tagging structure for the \hyperlink{struct_tail}{Tail} trimming algorithm. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_b_w_a}{B\-W\-A}
+\begin{DoxyCompactList}\small\item\em The tagging structure for the \hyperlink{struct_b_w_a}{B\-W\-A} trimming algorithm. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_mean}{Mean}
+\begin{DoxyCompactList}\small\item\em The tagging structure for the window trimming algorithm. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_dna5_q_adapter}{Dna5\-Q\-Adapter}
+\begin{DoxyCompactList}\small\item\em This structure wraps a sequence with dedicated Dna5 and quality strings so we can use it with our trimming function. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_quality_trimming_stats}{Quality\-Trimming\-Stats}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{read_trimming_8h_aabaf57d5f62dfb5270a79b367c5c8a9d}{get\-Quality} (const seqan\-::\-String$<$ seqan\-::\-Dna5\-Q $>$ \&seq, unsigned i)
+\begin{DoxyCompactList}\small\item\em Determines the quality at position i of the Dna5\-Q\-String. \end{DoxyCompactList}\item 
+unsigned \hyperlink{read_trimming_8h_a73e688ebd64d5101bf3ac782c886b705}{get\-Quality} (const \hyperlink{struct_dna5_q_adapter}{Dna5\-Q\-Adapter} \&seq, unsigned i)
+\begin{DoxyCompactList}\small\item\em Determines the quality at position i in the quality string of the \hyperlink{struct_dna5_q_adapter}{Dna5\-Q\-Adapter}. \end{DoxyCompactList}\item 
+\hypertarget{read_trimming_8h_ae9a50a2ac2fc08f431e0657e575f7a56}{unsigned \hyperlink{read_trimming_8h_ae9a50a2ac2fc08f431e0657e575f7a56}{length} (const \hyperlink{struct_dna5_q_adapter}{Dna5\-Q\-Adapter} \&seq)}\label{read_trimming_8h_ae9a50a2ac2fc08f431e0657e575f7a56}
+
+\begin{DoxyCompactList}\small\item\em A specialization of the length function for use with the wrapper \hyperlink{struct_dna5_q_adapter}{Dna5\-Q\-Adapter}. Returns the length of the sequence contained in the wrapper. \end{DoxyCompactList}\item 
+\hypertarget{read_trimming_8h_aa6e7d909096e031df27e38d40bf3cba8}{void \hyperlink{read_trimming_8h_aa6e7d909096e031df27e38d40bf3cba8}{erase} (const \hyperlink{struct_dna5_q_adapter}{Dna5\-Q\-Adapter} \&seq, unsigned begin, unsigned end)}\label{read_trimming_8h_aa6e7d909096e031df27e38d40bf3cba8}
+
+\begin{DoxyCompactList}\small\item\em A specialization of the erase function for use with the wrapper \hyperlink{struct_dna5_q_adapter}{Dna5\-Q\-Adapter}. Simply trimmes both sequence and quality strings separately. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq $>$ }\\unsigned \hyperlink{read_trimming_8h_a5c2564491957a121f99d11b1beb0c87a}{\-\_\-trim\-Read} (const T\-Seq \&seq, unsigned const cutoff, \hyperlink{struct_tail}{Tail} const \&)
+\begin{DoxyCompactList}\small\item\em A very simple trimming mechanism that removes low quality bases from the end. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq $>$ }\\unsigned \hyperlink{read_trimming_8h_aa5246d3d39615311f5a9c08c5ebc5275}{\-\_\-trim\-Read} (const T\-Seq \&seq, unsigned const cutoff, \hyperlink{struct_b_w_a}{B\-W\-A} const \&)
+\begin{DoxyCompactList}\small\item\em A trimming algorithm using the method implemented in \hyperlink{struct_b_w_a}{B\-W\-A}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq $>$ }\\unsigned \hyperlink{read_trimming_8h_a012119ccfbc2dc4593e80fc3ad545935}{\-\_\-trim\-Read} (const T\-Seq \&seq, unsigned const \-\_\-cutoff, \hyperlink{struct_mean}{Mean} const \&spec)
+\begin{DoxyCompactList}\small\item\em A trimming algorithm using a sliding window method to find the trimming position. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq , typename T\-Qual , typename T\-Spec $>$ }\\unsigned \hyperlink{read_trimming_8h_a99aa7d149d67d5e4ace1d99f2737e3d9}{trim\-Read} (T\-Seq \&seq, T\-Qual \&qual, unsigned const cutoff, T\-Spec const \&spec)
+\begin{DoxyCompactList}\small\item\em Interface that trims a sequence. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq , typename T\-Spec $>$ }\\unsigned \hyperlink{read_trimming_8h_ad7c9266b8f2b2486d5c27dc2daf71de6}{trim\-Read} (T\-Seq \&seq, unsigned const cutoff, T\-Spec const \&spec)
+\begin{DoxyCompactList}\small\item\em Interface that trims a sequence. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Set , typename T\-Spec $>$ }\\unsigned \hyperlink{read_trimming_8h_a818bc0bf0d601b8b75ba685dd15879f7}{\-\_\-trim\-Reads} (T\-Set \&seq\-Set, unsigned const cutoff, T\-Spec const \&spec)
+\begin{DoxyCompactList}\small\item\em Trims a set of reads and marks reads that are too short for removal. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Set1 , typename T\-Set2 , typename T\-Id $>$ }\\void \hyperlink{read_trimming_8h_a26243ec33bde09878c5a81d3074a9c57}{remove\-Values} (T\-Set1 \&set1, T\-Set2 \&set2, T\-Id id)
+\begin{DoxyCompactList}\small\item\em Removes two sequences at the position {\bfseries id} from two String\-Sets. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Id , typename T\-Seq $>$ }\\unsigned \hyperlink{read_trimming_8h_aab5753193ec94615160b06e41cf41081}{drop\-Reads} (seqan\-::\-String\-Set$<$ T\-Id $>$ \&id\-Set, seqan\-::\-String\-Set$<$ T\-Seq $>$ \&seq\-Set, unsigned const min\-\_\-length, \hyperlink{struct_quality_trimming_stats}{Quality\-Trimming\-Stats} \&stats)
+\begin{DoxyCompactList}\small\item\em Drop reads which are too short. This is done in a way such that the pair structure is conserved. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Id , typename T\-Seq $>$ }\\unsigned \hyperlink{read_trimming_8h_af42667d2b5578b36c5139254b2db2d89}{drop\-Reads} (seqan\-::\-String\-Set$<$ T\-Id $>$ \&id\-Set1, seqan\-::\-String\-Set$<$ T\-Seq $>$ \&seq\-Set1, seqan\-::\-String\-Set$<$ T\-Id $>$ \&id\-Set2, seqan\-::\-String\-Set$<$ T\-Seq $>$ \&seq\-Set2, unsigned const min\-\_\-length, \hyperlink{struct_quality_trimming_stats}{Quality\-Trimming\-Stats} \&stats)
+\begin{DoxyCompactList}\small\item\em Drop reads which are too short. This is done in a way such that the pair structure is conserved. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq , typename T\-Spec $>$ }\\unsigned \hyperlink{read_trimming_8h_aef500404f94a868b4089f69bc0848ea2}{trim\-Batch} (seqan\-::\-String\-Set$<$ T\-Seq $>$ \&seq\-Set, unsigned const cutoff, T\-Spec const \&spec)
+\begin{DoxyCompactList}\small\item\em Trims bad quality bases from a set of sequences. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\-Seq , typename T\-Spec $>$ }\\seqan\-::\-Pair$<$ unsigned, unsigned $>$ \hyperlink{read_trimming_8h_a75fd61ab491bb79116015f27ba1a4b9b}{trim\-Pair\-Batch} (seqan\-::\-String\-Set$<$ T\-Seq $>$ \&seq\-Set1, seqan\-::\-String\-Set$<$ T\-Seq $>$ \&seq\-Set2, unsigned const cutoff, T\-Spec const \&spec)
+\begin{DoxyCompactList}\small\item\em Trims bad quality bases from two sets of sequences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the functions for read trimming. 
+
+\subsection{Function Documentation}
+\hypertarget{read_trimming_8h_a5c2564491957a121f99d11b1beb0c87a}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!\-\_\-trim\-Read@{\-\_\-trim\-Read}}
+\index{\-\_\-trim\-Read@{\-\_\-trim\-Read}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{\-\_\-trim\-Read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq $>$ unsigned \-\_\-trim\-Read (
+\begin{DoxyParamCaption}
+\item[{const T\-Seq \&}]{seq, }
+\item[{unsigned const}]{cutoff, }
+\item[{{\bf Tail} const \&}]{}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_a5c2564491957a121f99d11b1beb0c87a}
+
+
+A very simple trimming mechanism that removes low quality bases from the end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The sequence that shall be trimmed. \\
+\hline
+{\em cutoff} & The minimum quality required. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The trimming position, i.\-e. the first base to be removed. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Simply cut off as many low quality bases from the end as possible before finding a good one. 
+\end{DoxyRemark}
+\hypertarget{read_trimming_8h_aa5246d3d39615311f5a9c08c5ebc5275}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!\-\_\-trim\-Read@{\-\_\-trim\-Read}}
+\index{\-\_\-trim\-Read@{\-\_\-trim\-Read}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{\-\_\-trim\-Read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq $>$ unsigned \-\_\-trim\-Read (
+\begin{DoxyParamCaption}
+\item[{const T\-Seq \&}]{seq, }
+\item[{unsigned const}]{cutoff, }
+\item[{{\bf B\-W\-A} const \&}]{}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_aa5246d3d39615311f5a9c08c5ebc5275}
+
+
+A trimming algorithm using the method implemented in \hyperlink{struct_b_w_a}{B\-W\-A}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The sequence that shall be trimmed. \\
+\hline
+{\em cutoff} & The minimum quality required. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The trimming position, i.\-e. the first base to be removed. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Trimming mechanism used in \hyperlink{struct_b_w_a}{B\-W\-A}. Trim to argmax\-\_\-x sum\-\_\-\{i=x+1\}$^\wedge$l \{cutoff -\/ q\-\_\-i\} 
+\end{DoxyRemark}
+\hypertarget{read_trimming_8h_a012119ccfbc2dc4593e80fc3ad545935}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!\-\_\-trim\-Read@{\-\_\-trim\-Read}}
+\index{\-\_\-trim\-Read@{\-\_\-trim\-Read}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{\-\_\-trim\-Read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq $>$ unsigned \-\_\-trim\-Read (
+\begin{DoxyParamCaption}
+\item[{const T\-Seq \&}]{seq, }
+\item[{unsigned const}]{\-\_\-cutoff, }
+\item[{{\bf Mean} const \&}]{spec}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_a012119ccfbc2dc4593e80fc3ad545935}
+
+
+A trimming algorithm using a sliding window method to find the trimming position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The sequence that shall be trimmed. \\
+\hline
+{\em cut\-Qual} & The minimum quality required. \\
+\hline
+{\em spec} & The algorithm tag containing the window size used for trimming. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An unsigned int representing the trimming position, i.\-e. the position of the first base to be removed. 
+\end{DoxyReturn}
+\hypertarget{read_trimming_8h_a818bc0bf0d601b8b75ba685dd15879f7}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!\-\_\-trim\-Reads@{\-\_\-trim\-Reads}}
+\index{\-\_\-trim\-Reads@{\-\_\-trim\-Reads}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{\-\_\-trim\-Reads}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Set , typename T\-Spec $>$ unsigned \-\_\-trim\-Reads (
+\begin{DoxyParamCaption}
+\item[{T\-Set \&}]{seq\-Set, }
+\item[{unsigned const}]{cutoff, }
+\item[{T\-Spec const \&}]{spec}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_a818bc0bf0d601b8b75ba685dd15879f7}
+
+
+Trims a set of reads and marks reads that are too short for removal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em removed\-I\-D} & A collection that stores the I\-Ds of sequences marked for removal. \\
+\hline
+{\em seq\-Set} & A collection of sequences that shall be trimmed. \\
+\hline
+{\em cutoff} & The minimum quality required from a base. \\
+\hline
+{\em min\-\_\-length} & The minimum length required after trimming. Shorter sequences are marked for removal in {\bfseries removed\-I\-D}. \\
+\hline
+{\em spec} & The trimming algorithm used for trimming. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of reads where bases were removed. 
+\end{DoxyReturn}
+\hypertarget{read_trimming_8h_aab5753193ec94615160b06e41cf41081}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!drop\-Reads@{drop\-Reads}}
+\index{drop\-Reads@{drop\-Reads}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{drop\-Reads}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Id , typename T\-Seq $>$ unsigned drop\-Reads (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-String\-Set$<$ T\-Id $>$ \&}]{id\-Set, }
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{seq\-Set, }
+\item[{unsigned const}]{min\-\_\-length, }
+\item[{{\bf Quality\-Trimming\-Stats} \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_aab5753193ec94615160b06e41cf41081}
+
+
+Drop reads which are too short. This is done in a way such that the pair structure is conserved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\-Set} & String\-Set of Fast\-A-\/\-I\-Ds for the set of sequences. \\
+\hline
+{\em seq\-Set} & String\-Set containing the reads. \\
+\hline
+{\em min\-\_\-length} & The minimum length required after trimming. Shorter sequences will be deleted. \\
+\hline
+{\em stats} & Quality statistic struct to store how many reads were dropped. \\
+\hline
+\end{DoxyParams}
+\hypertarget{read_trimming_8h_af42667d2b5578b36c5139254b2db2d89}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!drop\-Reads@{drop\-Reads}}
+\index{drop\-Reads@{drop\-Reads}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{drop\-Reads}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Id , typename T\-Seq $>$ unsigned drop\-Reads (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-String\-Set$<$ T\-Id $>$ \&}]{id\-Set1, }
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{seq\-Set1, }
+\item[{seqan\-::\-String\-Set$<$ T\-Id $>$ \&}]{id\-Set2, }
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{seq\-Set2, }
+\item[{unsigned const}]{min\-\_\-length, }
+\item[{{\bf Quality\-Trimming\-Stats} \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_af42667d2b5578b36c5139254b2db2d89}
+
+
+Drop reads which are too short. This is done in a way such that the pair structure is conserved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\-Set1} & String\-Set of Fast\-A-\/\-I\-Ds for the first set of sequences. \\
+\hline
+{\em seq\-Set1} & String\-Set containing the forward reads of the paired sequences. \\
+\hline
+{\em id\-Set2} & String\-Set of Fast\-A-\/\-I\-Ds for the second set of sequences. \\
+\hline
+{\em seq\-Set2} & String\-Set containing the backward reads of the paired sequences. \\
+\hline
+{\em min\-\_\-length} & The minimum length required after trimming. Shorter sequences will be deleted. (See remark). \\
+\hline
+{\em stats} & Quality statistic struct to store how many reads were dropped. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If one read is marked for removal, while its sibling is not, the read will be replaced by a single \char`\"{}\-N\char`\"{}. If both reads are marked for removal, they are removed. This way the relation between paired reads stays intact. 
+\end{DoxyRemark}
+\hypertarget{read_trimming_8h_aabaf57d5f62dfb5270a79b367c5c8a9d}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!get\-Quality@{get\-Quality}}
+\index{get\-Quality@{get\-Quality}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{get\-Quality}]{\setlength{\rightskip}{0pt plus 5cm}unsigned get\-Quality (
+\begin{DoxyParamCaption}
+\item[{const seqan\-::\-String$<$ seqan\-::\-Dna5\-Q $>$ \&}]{seq, }
+\item[{unsigned}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{read_trimming_8h_aabaf57d5f62dfb5270a79b367c5c8a9d}
+
+
+Determines the quality at position i of the Dna5\-Q\-String. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The Dna5\-Q\-String containing bases and qualities. \\
+\hline
+{\em i} & The index of the base whose quality shall be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Phred quality of the base at position {\bfseries i}. 
+\end{DoxyReturn}
+\hypertarget{read_trimming_8h_a73e688ebd64d5101bf3ac782c886b705}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!get\-Quality@{get\-Quality}}
+\index{get\-Quality@{get\-Quality}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{get\-Quality}]{\setlength{\rightskip}{0pt plus 5cm}unsigned get\-Quality (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dna5\-Q\-Adapter} \&}]{seq, }
+\item[{unsigned}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{read_trimming_8h_a73e688ebd64d5101bf3ac782c886b705}
+
+
+Determines the quality at position i in the quality string of the \hyperlink{struct_dna5_q_adapter}{Dna5\-Q\-Adapter}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The \hyperlink{struct_dna5_q_adapter}{Dna5\-Q\-Adapter} structure containing the quality string. \\
+\hline
+{\em i} & The index of the base whose quality shall be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Phred quality of the base at position {\bfseries i}. 
+\end{DoxyReturn}
+\hypertarget{read_trimming_8h_a26243ec33bde09878c5a81d3074a9c57}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!remove\-Values@{remove\-Values}}
+\index{remove\-Values@{remove\-Values}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{remove\-Values}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Set1 , typename T\-Set2 , typename T\-Id $>$ void remove\-Values (
+\begin{DoxyParamCaption}
+\item[{T\-Set1 \&}]{set1, }
+\item[{T\-Set2 \&}]{set2, }
+\item[{T\-Id}]{id}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_a26243ec33bde09878c5a81d3074a9c57}
+
+
+Removes two sequences at the position {\bfseries id} from two String\-Sets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set1} & The first set where position {\bfseries id} is removed. \\
+\hline
+{\em set2} & The second set where position {\bfseries id} is removed. \\
+\hline
+{\em id} & The id that identifies the read to be removed. \\
+\hline
+\end{DoxyParams}
+\hypertarget{read_trimming_8h_aef500404f94a868b4089f69bc0848ea2}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!trim\-Batch@{trim\-Batch}}
+\index{trim\-Batch@{trim\-Batch}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{trim\-Batch}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq , typename T\-Spec $>$ unsigned trim\-Batch (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{seq\-Set, }
+\item[{unsigned const}]{cutoff, }
+\item[{T\-Spec const \&}]{spec}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_aef500404f94a868b4089f69bc0848ea2}
+
+
+Trims bad quality bases from a set of sequences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\-Set} & String\-Set of Fast\-A-\/\-I\-Ds for the first set of sequences. \\
+\hline
+{\em seq\-Set} & String\-Set containing the forward reads of the paired sequences. \\
+\hline
+{\em cutoff} & The minimum quality required of a base. \\
+\hline
+{\em spec} & The trimming algorithm used to trim the sequences. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of sequences which had bases removed from. 
+\end{DoxyReturn}
+\hypertarget{read_trimming_8h_a75fd61ab491bb79116015f27ba1a4b9b}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!trim\-Pair\-Batch@{trim\-Pair\-Batch}}
+\index{trim\-Pair\-Batch@{trim\-Pair\-Batch}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{trim\-Pair\-Batch}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq , typename T\-Spec $>$ seqan\-::\-Pair$<$unsigned, unsigned$>$ trim\-Pair\-Batch (
+\begin{DoxyParamCaption}
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{seq\-Set1, }
+\item[{seqan\-::\-String\-Set$<$ T\-Seq $>$ \&}]{seq\-Set2, }
+\item[{unsigned const}]{cutoff, }
+\item[{T\-Spec const \&}]{spec}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_a75fd61ab491bb79116015f27ba1a4b9b}
+
+
+Trims bad quality bases from two sets of sequences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq\-Set1} & String\-Set containing the forward reads of the paired sequences. \\
+\hline
+{\em seq\-Set2} & String\-Set containing the backward reads of the paired sequences. \\
+\hline
+{\em cutoff} & The minimum quality required from a base. \\
+\hline
+{\em spec} & The trimming algorithm used to trim the sequences. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of unsigned ints containing the number of reads which had bases removed from. 
+\end{DoxyReturn}
+\hypertarget{read_trimming_8h_a99aa7d149d67d5e4ace1d99f2737e3d9}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!trim\-Read@{trim\-Read}}
+\index{trim\-Read@{trim\-Read}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{trim\-Read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq , typename T\-Qual , typename T\-Spec $>$ unsigned trim\-Read (
+\begin{DoxyParamCaption}
+\item[{T\-Seq \&}]{seq, }
+\item[{T\-Qual \&}]{qual, }
+\item[{unsigned const}]{cutoff, }
+\item[{T\-Spec const \&}]{spec}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_a99aa7d149d67d5e4ace1d99f2737e3d9}
+
+
+Interface that trims a sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The sequence that shall be trimmed. \\
+\hline
+{\em cutoff} & The minimum quality required from a base. \\
+\hline
+{\em spec} & The trimming algorithm used for trimming. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bases trimmed from the sequence. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+This function takes dedicated sequence and quality strings, puts them into a wrapper structure and calls \hyperlink{read_trimming_8h_ad7c9266b8f2b2486d5c27dc2daf71de6}{trim\-Read(\-T\-Seq\& seq, unsigned const cutoff, T\-Spec const \& spec)}. 
+\end{DoxyRemark}
+\hypertarget{read_trimming_8h_ad7c9266b8f2b2486d5c27dc2daf71de6}{\index{read\-Trimming.\-h@{read\-Trimming.\-h}!trim\-Read@{trim\-Read}}
+\index{trim\-Read@{trim\-Read}!readTrimming.h@{read\-Trimming.\-h}}
+\subsubsection[{trim\-Read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Seq , typename T\-Spec $>$ unsigned trim\-Read (
+\begin{DoxyParamCaption}
+\item[{T\-Seq \&}]{seq, }
+\item[{unsigned const}]{cutoff, }
+\item[{T\-Spec const \&}]{spec}
+\end{DoxyParamCaption}
+)}}\label{read_trimming_8h_ad7c9266b8f2b2486d5c27dc2daf71de6}
+
+
+Interface that trims a sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The sequence that shall be trimmed. \\
+\hline
+{\em cutoff} & The minimum quality required from a base. \\
+\hline
+{\em spec} & The trimming algorithm used for trimming. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bases trimmed from the sequence. 
+\end{DoxyReturn}

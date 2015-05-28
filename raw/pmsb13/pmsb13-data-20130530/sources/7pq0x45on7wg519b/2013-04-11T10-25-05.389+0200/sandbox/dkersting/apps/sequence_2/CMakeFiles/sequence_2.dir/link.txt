@@ -1,0 +1,1 @@
+/usr/bin/c++    -DSEQAN_ENABLE_TESTING=0 -W -Wall -Wno-long-long -fstrict-aliasing -Wstrict-aliasing -pedantic -Wno-variadic-macros -fopenmp -O3 -DNDEBUG -DSEQAN_ENABLE_DEBUG=0    CMakeFiles/sequence_2.dir/sequence_2.cpp.o  -o ../../../../bin/sequence_2 -rdynamic -lrt -lz 

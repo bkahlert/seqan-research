@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_journaling/ws_journaling.cpp ./sandbox/robinson/apps/ws_journaling/ws_journaling.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_journaling/ws_journaling.cpp	2012-09-05 13:55:05.000000000 +0200
++++ ./sandbox/robinson/apps/ws_journaling/ws_journaling.cpp	2012-09-05 13:56:51.496280843 +0200
+@@ -30,8 +30,9 @@
+ 	CharString id;
+ 	DnaString seq;
+ 
+-	if (!readRecord(id, seq, reader, Fasta()))
+-		return 1;
++	if (!readRecord(id, seq, reader, Fasta())){
++		cerr << "could not read reference" << endl;
++		return 1;}
+ 	setGlobalReference(journaledSet, seq);
+ 
+ 	while (readRecord(id, seq, reader, Fasta())) {
+@@ -41,8 +42,6 @@
+ 	for (unsigned i=0; i<length(journaledSet); ++i) {
+ 		join(journaledSet, i, JoinConfig<GlobalAlign<JournaledCompact> > ());
+ 	}
+-	join(journaledSet, 0, JoinConfig<GlobalAlign<JournaledManhatten> > ()); // Simply inserts the
+-	join(journaledSet, 1, JoinConfig<GlobalAlign<JournaledCompact> > ()); // Uses default scoring scheme to compute compact journal.
+ 
+ 	::std::cout << "Reference: " << globalReference(journaledSet)
+ 			<< ::std::endl;

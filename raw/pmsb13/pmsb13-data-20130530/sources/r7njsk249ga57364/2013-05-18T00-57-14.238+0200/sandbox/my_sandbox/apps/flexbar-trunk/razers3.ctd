@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool>
+	<name>Razers3</name>
+	<executableName>razers3</executableName>
+	<version>3.2 [13859]</version>
+	<description>Faster, fully sensitive read mapping</description>
+	<manual>RazerS 3 is a versatile full-sensitive read mapper based on k-mer counting and seeding filters. It supports single and paired-end mapping, shared-memory parallelism, and optimally parametrizes the filter based on a user-defined minimal sensitivity. See http://www.seqan.de/projects/razers for more information.
+Input to RazerS 3 is a reference genome file and either one file with single-end reads or two files containing left or right mates of paired-end reads. 
+(c) Copyright 2009-2013 by David Weese.
+</manual>
+	<docurl>http://www.seqan.de</docurl>
+	<category>Read Mapping</category>
+	<cli>
+		<clielement optionIdentifier="--percent-identity" isList="false">
+			<mapping referenceName="razers3.percent-identity" />
+		</clielement>
+		<clielement optionIdentifier="--recognition-rate" isList="false">
+			<mapping referenceName="razers3.recognition-rate" />
+		</clielement>
+		<clielement optionIdentifier="--no-gaps" isList="false">
+			<mapping referenceName="razers3.no-gaps" />
+		</clielement>
+		<clielement optionIdentifier="--forward" isList="false">
+			<mapping referenceName="razers3.forward" />
+		</clielement>
+		<clielement optionIdentifier="--reverse" isList="false">
+			<mapping referenceName="razers3.reverse" />
+		</clielement>
+		<clielement optionIdentifier="--max-hits" isList="false">
+			<mapping referenceName="razers3.max-hits" />
+		</clielement>
+		<clielement optionIdentifier="--unique" isList="false">
+			<mapping referenceName="razers3.unique" />
+		</clielement>
+		<clielement optionIdentifier="--trim-reads" isList="false">
+			<mapping referenceName="razers3.trim-reads" />
+		</clielement>
+		<clielement optionIdentifier="--output" isList="false">
+			<mapping referenceName="razers3.output" />
+		</clielement>
+		<clielement optionIdentifier="--verbose" isList="false">
+			<mapping referenceName="razers3.verbose" />
+		</clielement>
+		<clielement optionIdentifier="--vverbose" isList="false">
+			<mapping referenceName="razers3.vverbose" />
+		</clielement>
+		<clielement optionIdentifier="--library-length" isList="false">
+			<mapping referenceName="razers3.library-length" />
+		</clielement>
+		<clielement optionIdentifier="--library-error" isList="false">
+			<mapping referenceName="razers3.library-error" />
+		</clielement>
+		<clielement optionIdentifier="--alignment" isList="false">
+			<mapping referenceName="razers3.alignment" />
+		</clielement>
+		<clielement optionIdentifier="--purge-ambiguous" isList="false">
+			<mapping referenceName="razers3.purge-ambiguous" />
+		</clielement>
+		<clielement optionIdentifier="--distance-range" isList="false">
+			<mapping referenceName="razers3.distance-range" />
+		</clielement>
+		<clielement optionIdentifier="--genome-naming" isList="false">
+			<mapping referenceName="razers3.genome-naming" />
+		</clielement>
+		<clielement optionIdentifier="--read-naming" isList="false">
+			<mapping referenceName="razers3.read-naming" />
+		</clielement>
+		<clielement optionIdentifier="--full-readid" isList="false">
+			<mapping referenceName="razers3.full-readid" />
+		</clielement>
+		<clielement optionIdentifier="--sort-order" isList="false">
+			<mapping referenceName="razers3.sort-order" />
+		</clielement>
+		<clielement optionIdentifier="--position-format" isList="false">
+			<mapping referenceName="razers3.position-format" />
+		</clielement>
+		<clielement optionIdentifier="--dont-shrink-alignments" isList="false">
+			<mapping referenceName="razers3.dont-shrink-alignments" />
+		</clielement>
+		<clielement optionIdentifier="--global-alignment" isList="false">
+			<mapping referenceName="razers3.global-alignment" />
+		</clielement>
+		<clielement optionIdentifier="--filter" isList="false">
+			<mapping referenceName="razers3.filter" />
+		</clielement>
+		<clielement optionIdentifier="--mutation-rate" isList="false">
+			<mapping referenceName="razers3.mutation-rate" />
+		</clielement>
+		<clielement optionIdentifier="--overlap-length" isList="false">
+			<mapping referenceName="razers3.overlap-length" />
+		</clielement>
+		<clielement optionIdentifier="--param-dir" isList="false">
+			<mapping referenceName="razers3.param-dir" />
+		</clielement>
+		<clielement optionIdentifier="--threshold" isList="false">
+			<mapping referenceName="razers3.threshold" />
+		</clielement>
+		<clielement optionIdentifier="--taboo-length" isList="false">
+			<mapping referenceName="razers3.taboo-length" />
+		</clielement>
+		<clielement optionIdentifier="--shape" isList="false">
+			<mapping referenceName="razers3.shape" />
+		</clielement>
+		<clielement optionIdentifier="--overabundance-cut" isList="false">
+			<mapping referenceName="razers3.overabundance-cut" />
+		</clielement>
+		<clielement optionIdentifier="--repeat-length" isList="false">
+			<mapping referenceName="razers3.repeat-length" />
+		</clielement>
+		<clielement optionIdentifier="--load-factor" isList="false">
+			<mapping referenceName="razers3.load-factor" />
+		</clielement>
+		<clielement optionIdentifier="--match-N" isList="false">
+			<mapping referenceName="razers3.match-N" />
+		</clielement>
+		<clielement optionIdentifier="--error-distr" isList="false">
+			<mapping referenceName="razers3.error-distr" />
+		</clielement>
+		<clielement optionIdentifier="--mismatch-file" isList="false">
+			<mapping referenceName="razers3.mismatch-file" />
+		</clielement>
+		<clielement optionIdentifier="--compact-mult" isList="false">
+			<mapping referenceName="razers3.compact-mult" />
+		</clielement>
+		<clielement optionIdentifier="--no-compact-frac" isList="false">
+			<mapping referenceName="razers3.no-compact-frac" />
+		</clielement>
+		<clielement optionIdentifier="--thread-count" isList="false">
+			<mapping referenceName="razers3.thread-count" />
+		</clielement>
+		<clielement optionIdentifier="--parallel-window-size" isList="false">
+			<mapping referenceName="razers3.parallel-window-size" />
+		</clielement>
+		<clielement optionIdentifier="--parallel-verification-size" isList="false">
+			<mapping referenceName="razers3.parallel-verification-size" />
+		</clielement>
+		<clielement optionIdentifier="--parallel-verification-max-package-count" isList="false">
+			<mapping referenceName="razers3.parallel-verification-max-package-count" />
+		</clielement>
+		<clielement optionIdentifier="--available-matches-memory-size" isList="false">
+			<mapping referenceName="razers3.available-matches-memory-size" />
+		</clielement>
+		<clielement optionIdentifier="--match-histo-start-threshold" isList="false">
+			<mapping referenceName="razers3.match-histo-start-threshold" />
+		</clielement>
+		<!-- Following clielements are arguments. You should consider providing a help text to ease understanding. -->
+		<clielement optionIdentifier="" isList="false">
+			<mapping referenceName="razers3.argument-0" />
+		</clielement>
+		<clielement optionIdentifier="" isList="true">
+			<mapping referenceName="razers3.argument-1" />
+		</clielement>
+	</cli>
+	<PARAMETERS  version="1.4" xsi:noNamespaceSchemaLocation="http://open-ms.sourceforge.net/schemas/Param_1_4.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<NODE name="razers3" description="Faster, fully sensitive read mapping">
+			<ITEM name="percent-identity" value="95" type="double" description="Percent identity threshold." restrictions="50:100"  />
+			<ITEM name="recognition-rate" value="99" type="double" description="Percent recognition rate." restrictions="80:100"  />
+			<ITEM name="no-gaps" value="false" type="string" description="Allow only mismatches, no indels. Default: allow both." restrictions="true,false"  />
+			<ITEM name="forward" value="false" type="string" description="Map reads only to forward strands." restrictions="true,false"  />
+			<ITEM name="reverse" value="false" type="string" description="Map reads only to reverse strands." restrictions="true,false"  />
+			<ITEM name="max-hits" value="100" type="int" description="Output only &lt;NUM&gt; of the best hits." restrictions="1:"  />
+			<ITEM name="unique" value="false" type="string" description="Output only unique best matches (-m 1 -dr 0 -pa)." restrictions="true,false"  />
+			<ITEM name="trim-reads" value="" type="int" description="Trim reads to given length. Default: off." restrictions="14:"  />
+			<ITEM name="output" value="" type="string" description="Mapping result filename. Default: &lt;READS FILE&gt;.razers." tags="output file" supported_formats="*razers,*eland,*fa,*fasta,*gff,*sam,*afg"  />
+			<ITEM name="verbose" value="false" type="string" description="Verbose mode." restrictions="true,false"  />
+			<ITEM name="vverbose" value="false" type="string" description="Very verbose mode." restrictions="true,false"  />
+			<ITEM name="library-length" value="220" type="int" description="Paired-end library length." restrictions="1:"  />
+			<ITEM name="library-error" value="50" type="int" description="Paired-end library length tolerance." restrictions="0:"  />
+			<ITEM name="alignment" value="false" type="string" description="Dump the alignment for each match (only razer or fasta format)." restrictions="true,false"  />
+			<ITEM name="purge-ambiguous" value="false" type="string" description="Purge reads with more than &lt;max-hits&gt; best matches." restrictions="true,false"  />
+			<ITEM name="distance-range" value="" type="int" description="Only consider matches with at most NUM more errors compared to the best. Default: output all."  />
+			<ITEM name="genome-naming" value="0" type="int" description="Select how genomes are named (see Naming section below)." restrictions="0:1"  />
+			<ITEM name="read-naming" value="0" type="int" description="Select how reads are named (see Naming section below)." restrictions="0:3"  />
+			<ITEM name="full-readid" value="false" type="string" description="Use the whole read id (don&apos;t clip after whitespace)." restrictions="true,false"  />
+			<ITEM name="sort-order" value="0" type="int" description="Select how matches are sorted (see Sorting section below)." restrictions="0:1"  />
+			<ITEM name="position-format" value="0" type="int" description="Select begin/end position numbering (see Coordinate section below)." restrictions="0:1"  />
+			<ITEM name="dont-shrink-alignments" value="false" type="string" description="Disable alignment shrinking in SAM.  This is required for generating a gold mapping for Rabema." restrictions="true,false"  />
+			<ITEM name="global-alignment" value="false" type="string" description="Compute global alignment (in SAM output)." tags="advanced" restrictions="true,false"  />
+			<ITEM name="filter" value="pigeonhole" type="string" description="Select k-mer filter." restrictions="pigeonhole,swift"  />
+			<ITEM name="mutation-rate" value="5" type="double" description="Set the percent mutation rate (pigeonhole)." restrictions="0:20"  />
+			<ITEM name="overlap-length" value="" type="int" description="Manually set the overlap length of adjacent k-mers (pigeonhole)." restrictions="0:"  />
+			<ITEM name="param-dir" value="" type="string" description="Read user-computed parameter files in the directory &lt;DIR&gt; (swift)."  />
+			<ITEM name="threshold" value="" type="int" description="Manually set minimum k-mer count threshold (swift)." restrictions="1:"  />
+			<ITEM name="taboo-length" value="1" type="int" description="Set taboo length (swift)." restrictions="1:"  />
+			<ITEM name="shape" value="" type="string" description="Manually set k-mer shape."  />
+			<ITEM name="overabundance-cut" value="1" type="int" description="Set k-mer overabundance cut ratio." restrictions="0:1"  />
+			<ITEM name="repeat-length" value="1000" type="int" description="Skip simple-repeats of length &lt;NUM&gt;." restrictions="1:"  />
+			<ITEM name="load-factor" value="1.6" type="double" description="Set the load factor for the open addressing k-mer index." restrictions="1:"  />
+			<ITEM name="match-N" value="false" type="string" description="N matches all other characters. Default: N matches nothing." restrictions="true,false"  />
+			<ITEM name="error-distr" value="" type="string" description="Write error distribution to FILE."  />
+			<ITEM name="mismatch-file" value="" type="string" description="Write mismatch patterns to FILE."  />
+			<ITEM name="compact-mult" value="2.2" type="double" description="Multiply compaction treshold by this value after reaching and compacting." restrictions="0:"  />
+			<ITEM name="no-compact-frac" value="0.05" type="double" description="Don&apos;t compact if in this last fraction of genome." restrictions="0:1"  />
+			<ITEM name="thread-count" value="1" type="int" description="Set the number of threads to use (0 to force sequential mode)." tags="advanced" restrictions="0:"  />
+			<ITEM name="parallel-window-size" value="500000" type="int" description="Collect candidates in windows of this length." restrictions="1:"  />
+			<ITEM name="parallel-verification-size" value="100" type="int" description="Verify candidates in packages of this size." restrictions="1:"  />
+			<ITEM name="parallel-verification-max-package-count" value="100" type="int" description="Largest number of packages to create for verification per thread-1." restrictions="1:"  />
+			<ITEM name="available-matches-memory-size" value="0" type="int" description="Bytes of main memory available for storing matches." restrictions="-1:"  />
+			<ITEM name="match-histo-start-threshold" value="5" type="int" description="When to start histogram." restrictions="1:"  />
+			<ITEM name="argument-0" value="" type="string" description="A reference genome file." tags="required,input file" supported_formats="*.fq,*.fastq,*.fa,*.fasta,*.faa,*.ffn,*.fna,*.frn,*.qseq"  />
+			<ITEMLIST name="argument-1"  type="string" description="Either one (single-end) or two (paired-end) read files." tags="required,input file" supported_formats="*.fq,*.fastq,*.fa,*.fasta,*.faa,*.ffn,*.fna,*.frn,*.qseq"  />
+		</NODE>
+	</PARAMETERS>
+</tool>

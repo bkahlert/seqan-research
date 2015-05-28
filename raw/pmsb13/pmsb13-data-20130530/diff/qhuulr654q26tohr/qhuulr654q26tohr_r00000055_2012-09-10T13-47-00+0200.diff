@@ -1,0 +1,96 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/include/seqan/readJaspar/readJaspar_base.h ./sandbox/robinson/include/seqan/readJaspar/readJaspar_base.h
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/include/seqan/readJaspar/readJaspar_base.h	2012-09-10 13:40:41.000000000 +0200
++++ ./sandbox/robinson/include/seqan/readJaspar/readJaspar_base.h	2012-09-10 13:46:44.623847660 +0200
+@@ -69,7 +69,8 @@
+ 
+ // struct Our_;
+ // typedef Tag<Our_> Our;
+-
++struct Jaspar_;
++typedef Tag<Jaspar_> Jaspar;
+ // template <typename TSpec = Our>
+ // class MyClass;
+ 
+@@ -146,6 +147,82 @@
+ //     return;
+ // }
+ 
++template<typename TStream, typename TPass>
++inline int readRecord(CharString & id, CharString & name,
++		String<ProfileChar<Dna> > & matrix,
++		RecordReader<TStream, TPass> & reader, // record splitten in id name matrix
++		Jaspar const & /*tag*/) {
++	// Jaspar records look like this:
++	//
++	// ><id> <name>
++	// A  [ x x x ... x ]
++	// C  [ x x x ... xx ]
++	// G  [xx x xx ... x ]
++	// T  [xx xx xx ... x ]
++
++	int res = 0;
++
++	// skip until record begin
++	res = skipUntilChar(reader, '>');
++	if (res != 0)
++		return res;
++
++	// <id>
++	if (goNext(reader)) // skip the '>'
++		return EOF_BEFORE_SUCCESS;
++
++	res = readUntilWhitespace(id, reader);
++	if (res != 0)
++		return res;
++
++	if (goNext(reader))
++		return EOF_BEFORE_SUCCESS;
++
++	// <name>
++	res = readLine(name, reader);
++	if (res != 0)
++		return res;
++
++	// <matrix>
++	for (int rowIndex = 0; rowIndex < 4; ++rowIndex) { // for 0 to 3 meaning for A, C, G, T
++
++		res = skipNCharsIgnoringWhitespace(reader, 2);
++		if (res != 0)
++			return res;
++
++		res = skipWhitespaces(reader);
++		if (res != 0)
++			return res;
++
++		int columnIndex = 0;
++		while (value(reader) != ']') {
++			CharString bufferString;
++
++			res = readUntilWhitespace(bufferString, reader);
++			if (res != 0)
++				return res;
++
++			if (rowIndex == 0)
++				resize(matrix, length(matrix) + 1);
++
++			if (!lexicalCast2<unsigned> (matrix[columnIndex].count[rowIndex],
++					bufferString))
++				return 1; // Could not cast or could not write into matrix!
++
++			res = skipWhitespaces(reader);
++			if (res != 0)
++				return res;
++
++			++columnIndex;
++		}  // while loop
++		res = skipLine(reader);
++				if (res != 0)
++					return res;
++	}  // for loop
++
++	return 0;
++}  // readRecord()
++
+ }  // namespace seqan
+ 
+ #endif  // SANDBOX_ROBINSON_INCLUDE_SEQAN_READJASPAR_READJASPAR_BASE_H_

@@ -1,0 +1,350 @@
+\begin{theindex}
+
+  \item {\discretionary {-}{}{}\_\discretionary {-}{}{}trim\discretionary {-}{}{}Read}
+    \subitem {read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{36}
+  \item {\discretionary {-}{}{}\_\discretionary {-}{}{}trim\discretionary {-}{}{}Reads}
+    \subitem {read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{36}
+
+  \indexspace
+
+  \item {a2count}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Stats}, 
+		\hyperpage{9}
+  \item {adapter1}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{8}
+  \item {adapter2}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{8}
+  \item {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}
+    \subitem {align\discretionary {-}{}{}Adapter}, \hyperpage{21}
+    \subitem {align\discretionary {-}{}{}Pair}, \hyperpage{21}
+    \subitem {count\discretionary {-}{}{}Total\discretionary {-}{}{}Gaps}, 
+		\hyperpage{21}
+    \subitem {get\discretionary {-}{}{}Insert\discretionary {-}{}{}Size}, 
+		\hyperpage{21}
+    \subitem {get\discretionary {-}{}{}Overlap}, \hyperpage{22}
+    \subitem {is\discretionary {-}{}{}Match}, \hyperpage{22}
+    \subitem {strip\discretionary {-}{}{}Adapter}, \hyperpage{23}
+    \subitem {strip\discretionary {-}{}{}Adapter\discretionary {-}{}{}Batch}, 
+		\hyperpage{23}
+    \subitem {strip\discretionary {-}{}{}Pair}, \hyperpage{23, 24}
+    \subitem {strip\discretionary {-}{}{}Pair\discretionary {-}{}{}Batch}, 
+		\hyperpage{24}
+    \subitem {strip\discretionary {-}{}{}Reverse\discretionary {-}{}{}Adapter\discretionary {-}{}{}Batch}, 
+		\hyperpage{25}
+  \item {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{7}
+    \subitem {adapter1}, \hyperpage{8}
+    \subitem {adapter2}, \hyperpage{8}
+    \subitem {mmode}, \hyperpage{8}
+    \subitem {mode}, \hyperpage{8}
+    \subitem {no\discretionary {-}{}{}Adapter}, \hyperpage{8}
+    \subitem {paired}, \hyperpage{8}
+    \subitem {run}, \hyperpage{8}
+    \subitem {stats}, \hyperpage{8}
+  \item {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Stats}, 
+		\hyperpage{8}
+    \subitem {a2count}, \hyperpage{9}
+    \subitem {max\discretionary {-}{}{}Overlap}, \hyperpage{9}
+    \subitem {overlap\discretionary {-}{}{}Sum}, \hyperpage{9}
+  \item {add\discretionary {-}{}{}Stream}
+    \subitem {Output\discretionary {-}{}{}Streams}, \hyperpage{14}
+  \item {add\discretionary {-}{}{}Streams}
+    \subitem {Output\discretionary {-}{}{}Streams}, \hyperpage{14}
+  \item {align\discretionary {-}{}{}Adapter}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{21}
+  \item {align\discretionary {-}{}{}Pair}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{21}
+  \item {approximate}
+    \subitem {Demultiplexing\discretionary {-}{}{}Params}, 
+		\hyperpage{10}
+  \item {Auto}, \hyperpage{9}
+
+  \indexspace
+
+  \item {B\discretionary {-}{}{}W\discretionary {-}{}{}A}, 
+		\hyperpage{10}
+  \item {barcode\discretionary {-}{}{}File}
+    \subitem {Demultiplexing\discretionary {-}{}{}Params}, 
+		\hyperpage{10}
+  \item {barcode\discretionary {-}{}{}Ids}
+    \subitem {Demultiplexing\discretionary {-}{}{}Params}, 
+		\hyperpage{10}
+  \item {barcodes}
+    \subitem {Demultiplexing\discretionary {-}{}{}Params}, 
+		\hyperpage{10}
+  \item {build\discretionary {-}{}{}Sets}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{27}
+
+  \indexspace
+
+  \item {check}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{28}
+  \item {clip\discretionary {-}{}{}Barcodes}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{28, 29}
+  \item {count\discretionary {-}{}{}Total\discretionary {-}{}{}Gaps}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{21}
+  \item {cutoff}
+    \subitem {Quality\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{15}
+
+  \indexspace
+
+  \item {D\discretionary {-}{}{}:/\discretionary {-}{}{}Seq\discretionary {-}{}{}An/\discretionary {-}{}{}Development/seqan-\/trunk/sandbox/my\discretionary {-}{}{}\_\discretionary {-}{}{}sandbox/apps/\discretionary {-}{}{}Seq\discretionary {-}{}{}D\discretionary {-}{}{}P\discretionary {-}{}{}T/adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{19}
+  \item {D\discretionary {-}{}{}:/\discretionary {-}{}{}Seq\discretionary {-}{}{}An/\discretionary {-}{}{}Development/seqan-\/trunk/sandbox/my\discretionary {-}{}{}\_\discretionary {-}{}{}sandbox/apps/\discretionary {-}{}{}Seq\discretionary {-}{}{}D\discretionary {-}{}{}P\discretionary {-}{}{}T/demultiplex.\discretionary {-}{}{}h}, 
+		\hyperpage{25}
+  \item {D\discretionary {-}{}{}:/\discretionary {-}{}{}Seq\discretionary {-}{}{}An/\discretionary {-}{}{}Development/seqan-\/trunk/sandbox/my\discretionary {-}{}{}\_\discretionary {-}{}{}sandbox/apps/\discretionary {-}{}{}Seq\discretionary {-}{}{}D\discretionary {-}{}{}P\discretionary {-}{}{}T/read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{34}
+  \item {demultiplex.\discretionary {-}{}{}h}
+    \subitem {build\discretionary {-}{}{}Sets}, \hyperpage{27}
+    \subitem {check}, \hyperpage{28}
+    \subitem {clip\discretionary {-}{}{}Barcodes}, \hyperpage{28, 29}
+    \subitem {Do\discretionary {-}{}{}All}, \hyperpage{29, 30}
+    \subitem {find\discretionary {-}{}{}All\discretionary {-}{}{}Approx}, 
+		\hyperpage{31}
+    \subitem {find\discretionary {-}{}{}All\discretionary {-}{}{}Exact\discretionary {-}{}{}Index}, 
+		\hyperpage{31}
+    \subitem {find\discretionary {-}{}{}Approx}, \hyperpage{31}
+    \subitem {find\discretionary {-}{}{}Exact\discretionary {-}{}{}Index}, 
+		\hyperpage{32}
+    \subitem {get\discretionary {-}{}{}Prefix}, \hyperpage{32}
+    \subitem {group}, \hyperpage{32}
+    \subitem {make\discretionary {-}{}{}Patterns}, \hyperpage{33}
+    \subitem {resize\discretionary {-}{}{}Groups}, \hyperpage{33}
+    \subitem {write\discretionary {-}{}{}Groups}, \hyperpage{33, 34}
+  \item {Demultiplexing\discretionary {-}{}{}Params}, \hyperpage{10}
+    \subitem {approximate}, \hyperpage{10}
+    \subitem {barcode\discretionary {-}{}{}File}, \hyperpage{10}
+    \subitem {barcode\discretionary {-}{}{}Ids}, \hyperpage{10}
+    \subitem {barcodes}, \hyperpage{10}
+    \subitem {hard\discretionary {-}{}{}Clip}, \hyperpage{11}
+    \subitem {multiplex}, \hyperpage{11}
+    \subitem {multiplex\discretionary {-}{}{}File}, \hyperpage{11}
+    \subitem {run}, \hyperpage{11}
+    \subitem {runx}, \hyperpage{11}
+  \item {Dna5\discretionary {-}{}{}Q\discretionary {-}{}{}Adapter}, 
+		\hyperpage{11}
+    \subitem {qual}, \hyperpage{12}
+    \subitem {seq}, \hyperpage{12}
+  \item {Do\discretionary {-}{}{}All}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{29, 30}
+  \item {drop\discretionary {-}{}{}Reads}
+    \subitem {read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{37}
+
+  \indexspace
+
+  \item {errors}
+    \subitem {User}, \hyperpage{18}
+  \item {exists}
+    \subitem {Output\discretionary {-}{}{}Streams}, \hyperpage{14}
+
+  \indexspace
+
+  \item {find\discretionary {-}{}{}All\discretionary {-}{}{}Approx}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{31}
+  \item {find\discretionary {-}{}{}All\discretionary {-}{}{}Exact\discretionary {-}{}{}Index}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{31}
+  \item {find\discretionary {-}{}{}Approx}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{31}
+  \item {find\discretionary {-}{}{}Exact\discretionary {-}{}{}Index}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{32}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}Insert\discretionary {-}{}{}Size}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{21}
+  \item {get\discretionary {-}{}{}Overlap}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{22}
+  \item {get\discretionary {-}{}{}Prefix}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{32}
+  \item {get\discretionary {-}{}{}Quality}
+    \subitem {read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{37, 38}
+  \item {group}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{32}
+
+  \indexspace
+
+  \item {hard\discretionary {-}{}{}Clip}
+    \subitem {Demultiplexing\discretionary {-}{}{}Params}, 
+		\hyperpage{11}
+
+  \indexspace
+
+  \item {is\discretionary {-}{}{}Match}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{22}
+
+  \indexspace
+
+  \item {make\discretionary {-}{}{}Patterns}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{33}
+  \item {max\discretionary {-}{}{}Overlap}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Stats}, 
+		\hyperpage{9}
+  \item {Mean}, \hyperpage{12}
+    \subitem {window}, \hyperpage{12}
+  \item {min\discretionary {-}{}{}\_\discretionary {-}{}{}length}
+    \subitem {Quality\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{15}
+    \subitem {User}, \hyperpage{18}
+  \item {mmode}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{8}
+  \item {Mode}, \hyperpage{12}
+  \item {mode}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{8}
+  \item {multiplex}
+    \subitem {Demultiplexing\discretionary {-}{}{}Params}, 
+		\hyperpage{11}
+  \item {multiplex\discretionary {-}{}{}File}
+    \subitem {Demultiplexing\discretionary {-}{}{}Params}, 
+		\hyperpage{11}
+
+  \indexspace
+
+  \item {no\discretionary {-}{}{}Adapter}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{8}
+
+  \indexspace
+
+  \item {Output\discretionary {-}{}{}Streams}, \hyperpage{13}
+    \subitem {add\discretionary {-}{}{}Stream}, \hyperpage{14}
+    \subitem {add\discretionary {-}{}{}Streams}, \hyperpage{14}
+    \subitem {exists}, \hyperpage{14}
+    \subitem {update\discretionary {-}{}{}Streams}, \hyperpage{14}
+    \subitem {write\discretionary {-}{}{}Seqs}, \hyperpage{14}
+  \item {overlap\discretionary {-}{}{}Sum}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Stats}, 
+		\hyperpage{9}
+
+  \indexspace
+
+  \item {paired}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{8}
+
+  \indexspace
+
+  \item {qual}
+    \subitem {Dna5\discretionary {-}{}{}Q\discretionary {-}{}{}Adapter}, 
+		\hyperpage{12}
+  \item {Quality\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{15}
+    \subitem {cutoff}, \hyperpage{15}
+    \subitem {min\discretionary {-}{}{}\_\discretionary {-}{}{}length}, 
+		\hyperpage{15}
+    \subitem {run}, \hyperpage{15}
+    \subitem {stats}, \hyperpage{15}
+    \subitem {trim\discretionary {-}{}{}\_\discretionary {-}{}{}mode}, 
+		\hyperpage{15}
+  \item {Quality\discretionary {-}{}{}Trimming\discretionary {-}{}{}Stats}, 
+		\hyperpage{16}
+
+  \indexspace
+
+  \item {read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}
+    \subitem {\discretionary {-}{}{}\_\discretionary {-}{}{}trim\discretionary {-}{}{}Read}, 
+		\hyperpage{36}
+    \subitem {\discretionary {-}{}{}\_\discretionary {-}{}{}trim\discretionary {-}{}{}Reads}, 
+		\hyperpage{36}
+    \subitem {drop\discretionary {-}{}{}Reads}, \hyperpage{37}
+    \subitem {get\discretionary {-}{}{}Quality}, \hyperpage{37, 38}
+    \subitem {remove\discretionary {-}{}{}Values}, \hyperpage{38}
+    \subitem {trim\discretionary {-}{}{}Batch}, \hyperpage{38}
+    \subitem {trim\discretionary {-}{}{}Pair\discretionary {-}{}{}Batch}, 
+		\hyperpage{38}
+    \subitem {trim\discretionary {-}{}{}Read}, \hyperpage{39}
+  \item {remove\discretionary {-}{}{}Values}
+    \subitem {read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{38}
+  \item {resize\discretionary {-}{}{}Groups}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{33}
+  \item {run}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{8}
+    \subitem {Demultiplexing\discretionary {-}{}{}Params}, 
+		\hyperpage{11}
+    \subitem {Quality\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{15}
+  \item {runx}
+    \subitem {Demultiplexing\discretionary {-}{}{}Params}, 
+		\hyperpage{11}
+
+  \indexspace
+
+  \item {seq}
+    \subitem {Dna5\discretionary {-}{}{}Q\discretionary {-}{}{}Adapter}, 
+		\hyperpage{12}
+  \item {seqan\discretionary {-}{}{}::\discretionary {-}{}{}Adapter\discretionary {-}{}{}Scoring\discretionary {-}{}{}Matrix}, 
+		\hyperpage{7}
+  \item {seqan\discretionary {-}{}{}::\discretionary {-}{}{}Scoring\discretionary {-}{}{}Matrix\discretionary {-}{}{}Data\discretionary {-}{}{}\_\discretionary {-}{}{}$<$ int, Dna5, Adapter\discretionary {-}{}{}Scoring\discretionary {-}{}{}Matrix $>$}, 
+		\hyperpage{16}
+  \item {stats}
+    \subitem {Adapter\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{8}
+    \subitem {Quality\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{15}
+  \item {strip\discretionary {-}{}{}Adapter}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{23}
+  \item {strip\discretionary {-}{}{}Adapter\discretionary {-}{}{}Batch}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{23}
+  \item {strip\discretionary {-}{}{}Pair}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{23, 24}
+  \item {strip\discretionary {-}{}{}Pair\discretionary {-}{}{}Batch}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{24}
+  \item {strip\discretionary {-}{}{}Reverse\discretionary {-}{}{}Adapter\discretionary {-}{}{}Batch}
+    \subitem {adapter\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{25}
+
+  \indexspace
+
+  \item {Tail}, \hyperpage{17}
+  \item {trim\discretionary {-}{}{}\_\discretionary {-}{}{}mode}
+    \subitem {Quality\discretionary {-}{}{}Trimming\discretionary {-}{}{}Params}, 
+		\hyperpage{15}
+  \item {trim\discretionary {-}{}{}Batch}
+    \subitem {read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{38}
+  \item {trim\discretionary {-}{}{}Pair\discretionary {-}{}{}Batch}
+    \subitem {read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{38}
+  \item {trim\discretionary {-}{}{}Read}
+    \subitem {read\discretionary {-}{}{}Trimming.\discretionary {-}{}{}h}, 
+		\hyperpage{39}
+
+  \indexspace
+
+  \item {update\discretionary {-}{}{}Streams}
+    \subitem {Output\discretionary {-}{}{}Streams}, \hyperpage{14}
+  \item {User}, \hyperpage{17}
+    \subitem {errors}, \hyperpage{18}
+    \subitem {min\discretionary {-}{}{}\_\discretionary {-}{}{}length}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {window}
+    \subitem {Mean}, \hyperpage{12}
+  \item {write\discretionary {-}{}{}Groups}
+    \subitem {demultiplex.\discretionary {-}{}{}h}, \hyperpage{33, 34}
+  \item {write\discretionary {-}{}{}Seqs}
+    \subitem {Output\discretionary {-}{}{}Streams}, \hyperpage{14}
+
+\end{theindex}

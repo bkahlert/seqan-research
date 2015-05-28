@@ -1,0 +1,14 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata/qhuulr654q26tohr_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_test/ws_test.cpp ./sandbox/robinson/apps/ws_test/ws_test.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/robinson/apps/ws_test/ws_test.cpp	2012-09-10 11:12:56.000000000 +0200
++++ ./sandbox/robinson/apps/ws_test/ws_test.cpp	2012-09-10 11:13:30.278379961 +0200
+@@ -13,8 +13,8 @@
+ {
+ 	ProfileChar<Dna> pc1;
+ 	ProfileChar<Dna, double> pc2;
+-	pc1.count[0]=3;
+-	pc2.count[0]=4;
++	pc1.count[0]=0.3;
++	pc2.count[0]=0.4;
+ 	cout << pc1.count[0] << endl;
+ 	cout << pc2.count[0] << endl;
+     return 0;

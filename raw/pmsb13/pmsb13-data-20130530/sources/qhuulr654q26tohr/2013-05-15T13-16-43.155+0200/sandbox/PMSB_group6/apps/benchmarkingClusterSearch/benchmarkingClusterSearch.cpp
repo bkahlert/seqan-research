@@ -1,0 +1,75 @@
+#include <seqan/GCluster.h>
+#include <seqan/GSearch.h>
+#include <seqan/GStructs/PerformanceSample.h>
+#include <seqan/GStructs/MemorySample.h>
+
+using namespace seqan;
+using namespace std;
+
+int main(int argc, char const ** argv) {
+	String<PerformanceSample> performance;
+	String<GMatch<int> > matches;
+	
+	
+	const char * inDataBasePath = "/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/unmutable/rfam.10K.fasta";
+	const char * inQueriesPath = "/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/unmutable/queries_rfam.fasta";
+	
+	String<const char *> clustDatabases;
+	appendValue(clustDatabases,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/clustered.rfam.CQ1.fasta");
+	appendValue(clustDatabases,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/clustered.rfam.CQ2.fasta");
+	appendValue(clustDatabases,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/clustered.rfam.CQ3.fasta"); 
+	
+	String<const char *> masterSequenceFiles;
+	appendValue(masterSequenceFiles,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/master.rfam.CQ1.fasta");
+	appendValue(masterSequenceFiles,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/master.rfam.CQ2.fasta");
+	appendValue(masterSequenceFiles,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/master.rfam.CQ3.fasta"); 
+	
+	String<const char *> clusterThresholds;
+	appendValue(clusterThresholds, "650");
+	appendValue(clusterThresholds, "750");
+	appendValue(clusterThresholds, "850");
+	
+	String<const char *> matchFiles;
+	appendValue(matchFiles,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/matches.rfam.CQ1.1.fasta");
+	appendValue(matchFiles,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/matches.rfam.CQ1.2.fasta");
+	appendValue(matchFiles,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/matches.rfam.CQ2.1.fasta");
+	appendValue(matchFiles,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/matches.rfam.CQ2.2.fasta");
+	appendValue(matchFiles,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/matches.rfam.CQ3.1.fasta");
+	appendValue(matchFiles,"/home/development/seqan-trunk/sandbox/PMSB_group6/tests/autoTestData/mutable/matches.rfam.CQ3.2.fasta");
+	
+	String<const char *> testRunNames;
+	appendValue(testRunNames,"matches.rfam.CQ1.1.fasta");
+	appendValue(testRunNames,"matches.rfam.CQ1.2.fasta");
+	appendValue(testRunNames,"matches.rfam.CQ2.1.fasta");
+	appendValue(testRunNames,"matches.rfam.CQ2.2.fasta");
+	appendValue(testRunNames,"matches.rfam.CQ3.1.fasta");
+	appendValue(testRunNames,"matches.rfam.CQ3.2.fasta");
+	
+	const char * scoreMode = "COMMON_QGRAM_MODE";
+	
+	for (int i=0; i<length(clustDatabases);++i){
+		const char * argvGCluster[] = {"./bin/GCluster",inDataBasePath,clustDatabases[i],masterSequenceFiles[i],"-t",clusterThresholds[i],"-m",scoreMode};
+		int argcGCluster = 8;
+		GCluster(performance, argcGCluster, argvGCluster);
+		cout << "ping" << endl;
+		const char * argvGSearch[] = {"./bin/GSearch",clustDatabases[i],inQueriesPath,matchFiles[(i*2)],"-M",masterSequenceFiles[i],"-m",scoreMode};
+		int argcGSearch = 8;
+		GSearch(matches, performance, argcGSearch, argvGSearch);
+		performance[length(performance)-1].name=testRunNames[(i*2)];
+		cout << "ping" << endl;
+		const char * argvGSearch2[] = {"./bin/GSearch",clustDatabases[i],inQueriesPath,matchFiles[(i*2)+1],"-m",scoreMode};
+		GSearch(matches, performance, argcGSearch, argvGSearch2);
+		performance[length(performance)-1].name=testRunNames[(i*2)+1];
+		
+		double sens;
+		double spec;
+		//comp
+		cout << "Sensitivität:\t" << sens << endl;
+		cout << "Spezifität:\t" << spec << endl;
+	}
+	
+	for (int i=0; i<length(performance);++i) {
+		performance[i].printToStdout();
+	}
+	return 0;
+}
