@@ -1,0 +1,43 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp	2012-09-05 14:18:37.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp	2012-09-05 14:19:21.511078045 +0200
+@@ -59,7 +59,7 @@
+ 	int counter = 0;
+ 	
+ 	while(goDown(it)){
+-		if(getType(it) != "gene"){
++		if(getType(it) == "gene"){
+ 			++counterGene;
+ 		}	
+ 	}
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~	2012-09-05 14:13:57.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~	2012-09-05 14:18:37.067076201 +0200
+@@ -52,10 +52,18 @@
+ 	int counterAllExon = 0;
+ 	int counterRna = 0;
+ 	int counterLengthAll = 0;
++	int counterGene = 0;
++	
++
+      do{
+ 	int counter = 0;
+ 	
+-	while(goDown(it));
++	while(goDown(it)){
++		if(getType(it) != "gene"){
++			++counterGene;
++		}	
++	}
++
+ 	++counter;
+ 
+ 	while(goRight(it)){
+@@ -86,5 +94,7 @@
+ 
+ 	std::cout << "Average exonNum per mRna: " << (counterAllExon/counterRna) << '\n';
+ 	std::cout << "Average exonLength: " << (counterLengthAll/counterAllExon) << '\n';
++	std::cout << "Average number of rnas per gene: " << (counterRna/counterGene) << '\n';
++
+     return 0;
+ }

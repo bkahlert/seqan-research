@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp ./sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp	2012-09-05 14:57:28.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp	2012-09-05 14:57:45.747032767 +0200
+@@ -7,7 +7,7 @@
+     Index<DnaString, IndexQGram<OneGappedShape> > index("CATGATTACATA");
+ //  Index<DnaString, IndexQGram<GenericShape> > index("CATGATTACATA");
+     stringToShape(indexShape(index), "1101");
+-    hash(indexShape(index), "ATA");
++    hash(indexShape(index), "AT");
+     for (unsigned i = 0; i < length(getOccurrences(index, indexShape(index))); ++i)
+         std::cout << getOccurrences(index, indexShape(index))[i] << std::endl;
+     return 0;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp~ ./sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp~	2012-09-05 14:56:55.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indexIteratorsApp/indexIteratorsApp.cpp~	2012-09-05 14:57:28.523031850 +0200
+@@ -7,7 +7,7 @@
+     Index<DnaString, IndexQGram<OneGappedShape> > index("CATGATTACATA");
+ //  Index<DnaString, IndexQGram<GenericShape> > index("CATGATTACATA");
+     stringToShape(indexShape(index), "1101");
+-    hash(indexShape(index), "ATCAA");
++    hash(indexShape(index), "ATA");
+     for (unsigned i = 0; i < length(getOccurrences(index, indexShape(index))); ++i)
+         std::cout << getOccurrences(index, indexShape(index))[i] << std::endl;
+     return 0;

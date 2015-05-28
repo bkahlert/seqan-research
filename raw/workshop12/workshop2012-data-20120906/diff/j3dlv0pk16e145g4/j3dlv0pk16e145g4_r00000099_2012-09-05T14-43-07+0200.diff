@@ -1,0 +1,33 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp	2012-09-05 14:42:45.000000000 +0200
++++ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp	2012-09-05 14:43:06.101518844 +0200
+@@ -134,7 +134,7 @@
+     int offset = entriesIt->physicalPosition - entriesIt->virtualPosition;
+     while(value(upper) < entriesIt->physicalPosition + entriesIt->length)
+     {
+-        hitTarget.appendValue(value(upper)+offset);
++        appendValue(hitTarget, value(upper)+offset);
+     }
+     // [D] Store all hits that are found in the region of the reference which is covered by this node.
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp~ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp~	2012-09-05 14:42:07.000000000 +0200
++++ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp~	2012-09-05 14:42:45.449416444 +0200
+@@ -109,12 +109,12 @@
+         {   // Find a possible hit in the current source vertex.
+             _findInOriginalNode(hitTarget, it, pattern, refHits);
+         }
+-        if (it->segmentSource == SOURCE_PATCH)
+-        {  // Search for pattern within the patch node.
+-            _findInPatchNode(hitTarget, it, journal, pattern);
+-        }
++//        if (it->segmentSource == SOURCE_PATCH)
++//        {  // Search for pattern within the patch node.
++//            _findInPatchNode(hitTarget, it, journal, pattern);
++//        }
+         // Scan the border for a possible match.
+-        _searchAtBorder(hitTarget, it, journal, pattern);
++//        _searchAtBorder(hitTarget, it, journal, pattern);
+         ++it;
+     }
+ }

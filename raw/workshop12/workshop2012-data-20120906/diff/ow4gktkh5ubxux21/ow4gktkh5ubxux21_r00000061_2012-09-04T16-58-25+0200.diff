@@ -1,0 +1,45 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 16:53:29.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 16:58:21.711249852 +0200
+@@ -13,7 +13,7 @@
+ typedef TAnnotation::TId                        TId;
+ typedef TAnnotation::TId                        TPos;
+ typedef IntervalAndCargo<TPos, TId>             TInterval;
+-
++typedef IntervalTree<TPos, TId>                 TIntervalTree;
+ 
+ // define options
+ struct Options
+@@ -85,7 +85,7 @@
+ //
+ // 3. Extract intervals from gene annotations (grouped by contigId)
+ //
+-void extractGeneIntervals(String<String<TInterval> > & intervals, TStore & store)
++void extractGeneIntervals(String<String<TInterval> > & intervals, TStore const & store)
+ {
+    // extract intervals from gene annotations (grouped by contigId)
+     resize(intervals, length(store.contigStore));
+@@ -108,6 +108,22 @@
+ }
+ 
+ 
++
++//
++// 4. Construct interval trees
++//
++void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
++{
++    resize(intervalTrees,length(intervals)); 
++    Iterator<String<String<TInterval> > > >::Type it = begin(intervals);
++    while(!atEnd(it)){
++        
++
++    }
++    
++
++}
++
+ int main(int argc, char const * argv[])
+ {
+     Options options;
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp	2012-09-05 11:46:02.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp	2012-09-05 11:47:05.712665406 +0200
+@@ -89,7 +89,7 @@
+ 		if(!goDown(it) && !goRight(it)){
+ 			while(goUp(it) && !goRight(it));
+ 		}
+-	}while(!root(it));
++	}while(!isRoot(it));
+ 
+ 
+     return 0;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~ ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~	2012-09-05 11:45:37.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indices_tutorial/indices_tutorial.cpp~	2012-09-05 11:46:02.856662800 +0200
+@@ -89,7 +89,7 @@
+ 		if(!goDown(it) && !goRight(it)){
+ 			while(goUp(it) && !goRight(it));
+ 		}
+-	}while(!root(it))
++	}while(!root(it));
+ 
+ 
+     return 0;

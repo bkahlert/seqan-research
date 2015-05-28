@@ -1,0 +1,23 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp ./sandbox/my_sandbox/apps/second_app/second_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp	2012-09-04 16:18:15.000000000 +0200
++++ ./sandbox/my_sandbox/apps/second_app/second_app.cpp	2012-09-04 16:19:31.661594501 +0200
+@@ -71,7 +71,7 @@
+         unsigned beginPosition = alignPosList[i];
+         unsigned endPosition = beginPosition + length(readList[i]);
+         // Genome fragment
+-        DnaString genomeFragment;
++        //DnaString genomeFragment;
+         // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
+         /* for (unsigned j = 0; j < length(readList[i]); ++j)
+             appendValue(genomeFragment, chr1[beginPosition+j]);*/
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp~ ./sandbox/my_sandbox/apps/second_app/second_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp~	2012-09-04 16:17:01.000000000 +0200
++++ ./sandbox/my_sandbox/apps/second_app/second_app.cpp~	2012-09-04 16:18:15.485592400 +0200
+@@ -75,6 +75,7 @@
+         // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
+         /* for (unsigned j = 0; j < length(readList[i]); ++j)
+             appendValue(genomeFragment, chr1[beginPosition+j]);*/
++         Infix<DnaString>::Type genomeFragment= infix(chr1, beginPosition, endPosition);
+         
+ 
+         // Call of our function to print the simple alignment

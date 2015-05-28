@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 14:19:14.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 14:19:49.492177676 +0200
+@@ -1,9 +1,9 @@
+ // Copy the code into your current file and encapsulate the print instructions.
+ 
+ #include <iostream>
+-#include <seqan/score.h>
+ #include <seqan/file.h>
+ #include <seqan/sequence.h>
++#include <seqan/score.h>
+ 
+ template <typename TSubText, typename TPattern>
+ int computeLocalScore(TSubText const & subText, TPattern const & pattern)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-04 14:19:03.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-04 14:19:14.892176724 +0200
+@@ -1,7 +1,7 @@
+ // Copy the code into your current file and encapsulate the print instructions.
+ 
+ #include <iostream>
+-#include <>
++#include <seqan/score.h>
+ #include <seqan/file.h>
+ #include <seqan/sequence.h>
+ 

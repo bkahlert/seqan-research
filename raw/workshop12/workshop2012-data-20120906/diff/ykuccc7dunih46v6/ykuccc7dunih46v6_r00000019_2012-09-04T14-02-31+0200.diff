@@ -1,0 +1,23 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn2/.assgn2.cpp.swp and ./sandbox/my_sandbox/apps/assgn2/.assgn2.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn2/assgn2.cpp ./sandbox/my_sandbox/apps/assgn2/assgn2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn2/assgn2.cpp	2012-09-04 13:59:36.000000000 +0200
++++ ./sandbox/my_sandbox/apps/assgn2/assgn2.cpp	2012-09-04 14:02:27.258010700 +0200
+@@ -43,7 +43,7 @@
+ // Functions
+ // ==========================================================================
+ 
+-int computeLocalScore(const seqan::String<char> & subText, const seqan::String<char> & const pattern)
++int computeLocalScore(const seqan::String<char> & subText, const seqan::String<char> & pattern)
+ {
+     int localScore = 0;
+     for (unsigned i = 0; i < seqan::length(pattern); ++i)
+@@ -51,7 +51,8 @@
+             ++localScore;
+     return localScore;
+ }
+-seqan::String<int> computeScore(const seqan::String<char> & text, const seqan::String<char> & const pattern)
++template <typename Ttxt, typename Tpat>
++seqan::String<int> computeScore(const Ttxt & text, const Tpat & pattern)
+ {
+     seqan::String<int> score;
+     seqan::resize(score, seqan::length(text), 0);

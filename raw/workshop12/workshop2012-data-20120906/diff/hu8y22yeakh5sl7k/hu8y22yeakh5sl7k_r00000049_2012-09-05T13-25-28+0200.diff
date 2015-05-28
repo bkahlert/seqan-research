@@ -1,0 +1,157 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp	2012-09-05 13:16:42.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp	2012-09-05 13:22:56.114937694 +0200
+@@ -48,6 +48,15 @@
+     Iterator<FragmentStore<>, AnnotationTree<> >::Type it;
+     it = begin(store, AnnotationTree<>());
+     // Move iterator one node down
+-    goDown(it);
++	int counter = 0;    
++	while(goDown(it));
++
++	counter++;
++
++	while(goRight(it)){
++		counter++;	
++	}
++
++	std::cout << "Counted: " << counter << '\n';
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~	2012-09-05 13:00:36.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~	2012-09-05 13:16:42.502922205 +0200
+@@ -32,119 +32,22 @@
+ // Author: Your Name <your.email@example.net>
+ // ==========================================================================
+ 
+-#include <seqan/basic.h>
++#include <fstream>
++#include <iostream>
+ #include <seqan/sequence.h>
++#include <seqan/file.h>
++#include <seqan/store.h>
+ 
+-#include <seqan/arg_parse.h>
+-
+-// ==========================================================================
+-// Classes
+-// ==========================================================================
+-
+-// --------------------------------------------------------------------------
+-// Class AppOptions
+-// --------------------------------------------------------------------------
+-
+-// This struct stores the options from the command line.
+-//
+-// You might want to rename this to reflect the name of your app.
+-
+-struct AppOptions
+-{
+-    // Verbosity level.  0 -- quiet, 1 -- normal, 2 -- verbose, 3 -- very verbose.
+-    int verbosity;
+-
+-    // The first (and only) argument of the program is stored here.
+-    seqan::CharString text;
+-
+-    AppOptions() :
+-        verbosity(1)
+-    {}
+-};
+-
+-// ==========================================================================
+-// Functions
+-// ==========================================================================
+-
+-// --------------------------------------------------------------------------
+-// Function parseCommandLine()
+-// --------------------------------------------------------------------------
+-
+-seqan::ArgumentParser::ParseResult
+-parseCommandLine(AppOptions & options, int argc, char const ** argv)
+-{
+-    // Setup ArgumentParser.
+-    seqan::ArgumentParser parser("fragmentStore_tutorial");
+-    // Set short description, version, and date.
+-    setShortDescription(parser, "Put a Short Description Here");
+-    setVersion(parser, "0.1");
+-    setDate(parser, "July 2012");
+-
+-    // Define usage line and long description.
+-    addUsageLine(parser, "[\\fIOPTIONS\\fP] \"\\fITEXT\\fP\"");
+-    addDescription(parser, "This is the application skelleton and you should modify this string.");
+-
+-    // We require one argument.
+-    addArgument(parser, seqan::ArgParseArgument(seqan::ArgParseArgument::STRING, "TEXT"));
+-
+-    addOption(parser, seqan::ArgParseOption("q", "quiet", "Set verbosity to a minimum."));
+-    addOption(parser, seqan::ArgParseOption("v", "verbose", "Enable verbose output."));
+-    addOption(parser, seqan::ArgParseOption("vv", "very-verbose", "Enable very verbose output."));
+-
+-    // Add Examples Section.
+-    addTextSection(parser, "Examples");
+-    addListItem(parser, "\\fBfragmentStore_tutorial\\fP \\fB-v\\fP \\fItext\\fP",
+-                "Call with \\fITEXT\\fP set to \"text\" with verbose output.");
+-
+-    // Parse command line.
+-    seqan::ArgumentParser::ParseResult res = seqan::parse(parser, argc, argv);
+-
+-    // Only extract  options if the program will continue after parseCommandLine()
+-    if (res != seqan::ArgumentParser::PARSE_OK)
+-        return res;
+-
+-    // Extract option values.
+-    if (isSet(parser, "quiet"))
+-        options.verbosity = 0;
+-    if (isSet(parser, "verbose"))
+-        options.verbosity = 2;
+-    if (isSet(parser, "very-verbose"))
+-        options.verbosity = 3;
+-    seqan::getArgumentValue(options.text, parser, 0);
+-
+-    return seqan::ArgumentParser::PARSE_OK;
+-}
+-
+-// --------------------------------------------------------------------------
+-// Function main()
+-// --------------------------------------------------------------------------
+-
+-// Program entry point.
+-
+-int main(int argc, char const ** argv)
++using namespace seqan;
++int main()
+ {
+-    // Parse the command line.
+-    seqan::ArgumentParser parser;
+-    AppOptions options;
+-    seqan::ArgumentParser::ParseResult res = parseCommandLine(options, argc, argv);
+-
+-    // If there was an error parsing or built-in argument parser functionality
+-    // was triggered then we exit the program.  The return code is 1 if there
+-    // were errors and 0 if there were none.
+-    if (res != seqan::ArgumentParser::PARSE_OK)
+-        return res == seqan::ArgumentParser::PARSE_ERROR;
+-
+-    std::cout << "EXAMPLE PROGRAM\n"
+-              << "===============\n\n";
+-    
+-    // Print the command line arguments back to the user.
+-    if (options.verbosity > 0)
+-    {
+-        std::cout << "__OPTIONS____________________________________________________________________\n"
+-                  << '\n'
+-                  << "VERBOSITY\t" << options.verbosity << '\n'
+-                  << "TEXT     \t" << options.text << "\n\n";
+-    }
+-
++    FragmentStore<> store;
++    std::ifstream file("assignment_annotations.gtf", std::ios_base::in | std::ios_base::binary);
++    read(file, store, Gtf());
++    // Create AnnotationTree iterator
++    Iterator<FragmentStore<>, AnnotationTree<> >::Type it;
++    it = begin(store, AnnotationTree<>());
++    // Move iterator one node down
++    goDown(it);
+     return 0;
+ }

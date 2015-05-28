@@ -1,0 +1,73 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/ass1/ass1.cpp ./sandbox/my_rob/apps/ass1/ass1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/ass1/ass1.cpp	2012-09-04 14:10:03.000000000 +0200
++++ ./sandbox/my_rob/apps/ass1/ass1.cpp	2012-09-04 14:21:27.949296194 +0200
+@@ -1,8 +1,20 @@
++// Provide a generic print function which is used when the input type is not String<int>.
++
+ #include <iostream>
+ #include <seqan/file.h>
+ #include <seqan/sequence.h>
++#include <seqan/score.h>
++
++template <typename TText>
++int computeLocalScore(TText const &subText , seqan::String<seqan::AminoAcid> const & pattern)
++{
++    int localScore = 0;
++    for (unsigned i = 0; i < seqan::length(pattern); ++i)
++        localScore += seqan::score(seqan::Blosum62(), subText[i], pattern[i]);
++    return localScore;
++}
+ template <typename TText, typename TPattern>
+-const int computeLocalScore(seqan::String<char> subText, seqan::String<char>  pattern)
++int computeLocalScore(TText const & subText, TPattern const & pattern)
+ {
+     int localScore = 0;
+     for (unsigned i = 0; i < seqan::length(pattern); ++i)
+@@ -10,9 +22,8 @@
+             ++localScore;
+     return localScore;
+ }
+-
+ template <typename TText, typename TPattern>
+-seqan::String<int> computeScore(seqan::String<char> const & text, seqan::String<char> const & pattern)
++seqan::String<int> computeScore(TText const & text, TPattern const & pattern)
+ {
+     seqan::String<int> score;
+     seqan::resize(score, seqan::length(text), 0);
+@@ -20,22 +31,28 @@
+         score[i] = computeLocalScore(infix(text, i, i + seqan::length(pattern)), pattern);
+     return score;
+ }
+-
+-void print(String<int> const & score){
+-	 for (unsigned i = 0; i < seqan::length(text); ++i)
++template <typename TText>
++void print(TText const & text)
++{
++    std::cout << text << std::endl;
++}
++void print(seqan::String<int> const & text)
++{
++    for (unsigned i = 0; i < seqan::length(text); ++i)
+         std::cout << text[i] << " ";
+     std::cout << std::endl;
+ }
+-
+-
+ int main()
+ {
+     seqan::String<char> text = "This is an awesome tutorial to get to now SeqAn!";
+     seqan::String<char> pattern = "tutorial";
+     seqan::String<int> score = computeScore(text, pattern);
+-    for (unsigned i = 0; i < seqan::length(score); ++i)
+-        std::cout << score[i] << " ";
+-    std::cout << std::endl;
++    print(text);
++    // > This is an awesome tutorial to get to now SeqAn!
++    print(pattern);
++    // > tutorial
+     print(score);
++    // > 1 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 8 0 1 0 0 0 0 2 0 1 0 0 1 0 3 0 1 1 0 0 0 0 0 0 0 0 0 0 0
++
+     return 0;
+ }

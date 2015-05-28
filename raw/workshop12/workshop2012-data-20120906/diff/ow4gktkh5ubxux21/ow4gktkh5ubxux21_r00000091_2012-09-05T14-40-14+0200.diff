@@ -1,0 +1,59 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-05 14:14:14.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-05 14:38:27.662197869 +0200
+@@ -113,6 +113,54 @@
+ }
+ 
+ 
++template <typename TValue, typename THostSpec, typename TJournalSpec, typename TBufferSpec, typename TPattern>
++void findPatternInJournalString(String<int> & hitTarget,
++                           String<TValue, Journaled<THostSpec, TJournalSpec, TBufferSpec> > const & journal,
++                           TPattern const & pattern,
++                           String<int> const & refHits)
++{
++    typedef String<TValue, Journaled<THostSpec, TJournalSpec, TBufferSpec> > const TJournal;
++    typedef typename JournalType<TJournal>::Type TJournalEntries;
++    typedef typename Iterator<TJournalEntries>::Type TJournalEntriesIterator;
++    if (length(pattern) > length(journal))
++        return;
++    TJournalEntriesIterator it = begin(journal._journalEntries);
++    TJournalEntriesIterator itEnd = findInJournalEntries(journal._journalEntries, length(journal) - length(pattern) + 1) + 1;
++    
++
++   while(it != itEnd)
++    {
++        if (it->segmentSource == SOURCE_ORIGINAL)
++        {   // Find a possible hit in the current source vertex.
++            _findInOriginalNode(hitTarget, it, pattern, refHits);
++        }
++        if (it->segmentSource == SOURCE_PATCH)
++        {  // Search for pattern within the patch node.
++            _findInPatchNode(hitTarget, it, journal, pattern);
++        }
++        // Scan the border for a possible match.
++        _searchAtBorder(hitTarget, it, journal, pattern);
++        ++it;
++    }
++}     
++
++
++template <typename TJournalEntriesIterator, typename TPattern>
++void _findInOriginalNode(String<int> & hits, TJournalEntriesIterator & it, TPattern const & pattern, String<int> const & refHits) {
++
++    for (int i = 0; i < length(refHits); ++i) {
++        int hitPos = refHits[i];
++
++        if (hitPos >= it->physicalPostion && hitPos <= it->physicalPosition + it->length - length(patttern)) {
++            int hostPos = hitPos + it->physicalPos - it->virtualPos;
++            append(hits, hostPos );            
++        } 
++
++    } 
++
++}
++
++
+ 
+ int main()
+ {
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

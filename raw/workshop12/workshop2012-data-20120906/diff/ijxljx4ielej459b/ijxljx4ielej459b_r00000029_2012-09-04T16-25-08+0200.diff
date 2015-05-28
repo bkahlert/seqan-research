@@ -1,0 +1,14 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 16:18:24.207798900 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 16:25:07.379859000 +0200
+@@ -65,4 +65,9 @@
+         printAlign(inf, readList[i]);
+     
+     return 1;
++}
++
++
++
++
+ }
+\ No newline at end of file

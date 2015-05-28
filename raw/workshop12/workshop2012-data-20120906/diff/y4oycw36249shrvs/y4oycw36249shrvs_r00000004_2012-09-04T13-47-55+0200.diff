@@ -1,0 +1,25 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/ass1/ass1.cpp ./sandbox/my_rob/apps/ass1/ass1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/ass1/ass1.cpp	2012-09-04 13:25:10.000000000 +0200
++++ ./sandbox/my_rob/apps/ass1/ass1.cpp	2012-09-04 13:47:17.601265428 +0200
+@@ -18,6 +18,14 @@
+         score[i] = computeLocalScore(infix(text, i, i + seqan::length(pattern)), pattern);
+     return score;
+ }
++
++void print(String<int> score){
++	 for (unsigned i = 0; i < seqan::length(text); ++i)
++        std::cout << text[i] << " ";
++    std::cout << std::endl;
++}
++
++
+ int main()
+ {
+     seqan::String<char> text = "This is an awesome tutorial to get to now SeqAn!";
+@@ -26,5 +34,6 @@
+     for (unsigned i = 0; i < seqan::length(score); ++i)
+         std::cout << score[i] << " ";
+     std::cout << std::endl;
++    print(score);
+     return 0;
+ }

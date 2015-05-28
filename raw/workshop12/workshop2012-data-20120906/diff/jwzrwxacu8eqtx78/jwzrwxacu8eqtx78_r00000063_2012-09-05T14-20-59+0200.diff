@@ -1,0 +1,109 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp ./sandbox/jtr/apps/workshop_app/workshop_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-05 13:48:23.000000000 +0200
++++ ./sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-05 13:59:32.000000000 +0200
+@@ -327,44 +327,71 @@
+ 
+ 
+ #include <iostream>
+-#include <seqan/file.h>
++#include <seqan/seq_io.h>
+ #include <seqan/journaled_set.h>
+-#include <seqan/stream.h>
+ 
+ using namespace seqan;
+-int main()
++template <typename TString, typename TStream, typename TSpec>
++inline int
++loadAndJoin(StringSet<TString, Owner<JournaledSet> > & journalSet,
++            TStream & stream,
++            JoinConfig<TSpec> const & joinConfig)
+ {
+-    typedef String<char, Journaled<Alloc<>, SortedArray, Alloc<> > > TJournalString;
+-    typedef Host<TJournalString>::Type THost;
+-    typedef StringSet<TJournalString, Owner<JournaledSet> > TJournaledSet;
+-    TJournaledSet journaledSet;
+-    THost reference = "DPKKPRGKMSSYAFFVQTSREEHKKKHPDASVNFSEFSKKCSERWKTMSAKEKGKFEDMAKADKARYEREMKTYIPPKGE";
+-    THost seq0 = "DPKKPRGKMVNSPPAFFVQTSREEHKKKHPDASVFSKKCSERWKTMSAKEKGKFEDMAKARYEREMKTTYIPKGETYIPPKGE";
+-    THost seq1 = "DPHHPPKPRGKMVNSPPAFFVQTSREEHKPDASVFSKKCSERRMPNHHTMSAKEKGKFEDMAKARYEREMKTTYIPKGETYIPPKGE";
+-    THost seq2 = "DPKKPRGKMSSYAFFVQTSREEHKKKHPKKCDEFSKKCSERWKTMSAKEKGKFEDARYEREMKTYIPPKGE";
+-
+-	setGlobalReference(journaledSet, reference);
+-	    appendValue(journaledSet, seq0);
+-	    appendValue(journaledSet, seq1);
+-	    appendValue(journaledSet, seq2);
+-	
+-		join(journaledSet, 0, JoinConfig<GlobalAlign<JournaledManhatten> >());  // Simply inserts the
+-		    join(journaledSet, 1, JoinConfig<GlobalAlign<JournaledCompact> >());     // Uses default scoring scheme to compute compact journal.
+-		    JoinConfig<GlobalAlign<JournaledCompact> > joinConfig;
+-		    setScoringScheme(joinConfig, Score<int, BiAffine>(0,-1,-1));    // Note the mismatch score is forbidden internally when used in the context of journaling.
+-		    join(journaledSet, 2, joinConfig);  // Compute journal using Levenshtein distance.
+-
+-		    ::std::cout << "Reference: " << globalReference(journaledSet) << ::std::endl;
+-		    for(unsigned i = 0; i < length(journaledSet); ++i)
+-		        ::std::cout << "Journaled Sequence " << i << ": " << value(journaledSet,i) << ::std::endl;
+-		
+-		
+-		
+-
++    typedef typename Host<TString>::Type THost;
++    // Define the RecordReader.
++    RecordReader<std::ifstream, SinglePass<> > reader(stream);
++    // [A]
++    clear(journalSet);
++    // Construct the temporary buffers for the read id and sequence.
++    String<char> tempSeqId;
++    THost tempSeq;
++    // No sequences in the fasta file!
++    if (atEnd(reader))
++    {
++        std::cerr << "Empty FASTA file." << std::endl;
++        return -1;
++    }
++    // First read sequence for reference sequence.
++    if (readRecord(tempSeqId, tempSeq, reader, Fasta()) != 0)
++    {
++        std::cerr << "ERROR reading FASTA." << std::endl;
++        return 1;
++    }
++    // [B]
++    createGlobalReference(journalSet, tempSeq);  // When using create we copy the reference instead of storing a pointer.
++
++    // Read remaining sequences.
++    while (!atEnd(reader))
++    {
++        if (readRecord(tempSeqId, tempSeq, reader, Fasta()) != 0)
++        {
++            std::cerr << "ERROR reading FASTA." << std::endl;
++            return 1;
++        }
++        // [C]
++        appendValue(journalSet, tempSeq);  // First we append the sequence to the set.
++        join(journalSet, length(journalSet) - 1, joinConfig); // Second we join it to the set.
++    }
++    return 0;
+ }
+-
+-int loadAndJoin(TJournaledSet &jset, stream &fs){
+-	
++int main()
++{
++    // Definition of the used types.
++    typedef String<Dna,Alloc<> > TSequence;
++    typedef String<Dna,Journaled<Alloc<>,SortedArray,Alloc<> > > TJournal;
++    typedef StringSet< TJournal, Owner<JournaledSet> > TJournaledSet;
++    // Open the stream to the file containing the sequences.
++    String<char> seqDatabasePath = "/path/to/your/fasta/file/sequences.fasta";
++    std::ifstream databaseFile(toCString(seqDatabasePath), std::ios_base::in);
++    if(!databaseFile.good())
++    {
++        std::cerr << "Cannot open file <" << seqDatabasePath << ">!" << std::endl;
++    }
++    // Reading each sequence and journal them.
++    TJournaledSet journalSet;
++    JoinConfig<GlobalAlign<JournaledCompact> > joinConfig;
++    loadAndJoin(journalSet, databaseFile, joinConfig);
++    databaseFile.close();
++    return 0;
+ }
+ 
+-

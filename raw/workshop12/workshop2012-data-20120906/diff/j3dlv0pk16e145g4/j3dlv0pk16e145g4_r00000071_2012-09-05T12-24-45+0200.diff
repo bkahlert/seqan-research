@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/qgram_app/qgram_app.cpp ./sandbox/my_sandbox/apps/qgram_app/qgram_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/qgram_app/qgram_app.cpp	2012-09-05 12:24:07.000000000 +0200
++++ ./sandbox/my_sandbox/apps/qgram_app/qgram_app.cpp	2012-09-05 12:24:41.941706494 +0200
+@@ -7,7 +7,7 @@
+     typedef Index<DnaString, IndexQGram< OneGappedShape > > TIndex;
+     TIndex index("CATGATTACATA");
+     stringToShape(indexShape(index), "1101");
+-    hash(indexShape(index), "ATCA");
++    hash(indexShape(index), "AT");
+     for (unsigned i = 0; i < length(getOccurrences(index, indexShape(index))); ++i)
+         std::cout << getOccurrences(index, indexShape(index))[i] << std::endl;
+     return 0;

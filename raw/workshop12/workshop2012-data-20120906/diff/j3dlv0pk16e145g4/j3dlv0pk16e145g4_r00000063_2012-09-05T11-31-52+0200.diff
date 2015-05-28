@@ -1,0 +1,41 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp ./sandbox/my_sandbox/apps/index_app/index_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp	2012-09-05 11:30:10.000000000 +0200
++++ ./sandbox/my_sandbox/apps/index_app/index_app.cpp	2012-09-05 11:31:50.685981084 +0200
+@@ -11,7 +11,7 @@
+     String<char> text = "tobeornottobe";
+     TIndex index(text);
+     TIter it(index);
+-    do
++    while (true)
+     {
+         if (goDown(it))
+         {
+@@ -28,8 +28,7 @@
+             }
+             std::cout << representative(it) << std::endl;
+         }
+-    } while(!isRoot(it));
+-    
+-    return 0;
++    }
++    return 1;
+ }
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp~ ./sandbox/my_sandbox/apps/index_app/index_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp~	2012-09-05 11:28:28.000000000 +0200
++++ ./sandbox/my_sandbox/apps/index_app/index_app.cpp~	2012-09-05 11:30:10.929486428 +0200
+@@ -19,9 +19,12 @@
+         }
+         else
+         {
+-            while (!isRoot(it) && !goRight(it))
++            while (!goRight(it))
+             {
+-                goUp(it);
++                if (!goUp(it))
++                {
++                    return 0;
++                }
+             }
+             std::cout << representative(it) << std::endl;
+         }

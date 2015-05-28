@@ -1,0 +1,46 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 16:51:40.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 16:53:44.471508999 +0200
+@@ -15,9 +15,10 @@
+ 
+ using namespace seqan;
+ 
+-template <typename TIter, typename TAlph >
+-void search(TIter & it, StringSet<String<TAlph> > const & pattern)
++template <typename TIter, typename TStringSet >
++void search(TIter & it, TStringSet const & pattern)
+ {
++    typedef Value<Value<TStingSet>::Type>::Type TAlph;
+     for (unsigned i=0; i < length(pattern); ++i)
+     {
+         unsigned j=length(pattern[i])-1 ;
+@@ -30,8 +31,8 @@
+         {
+             aprox = it;
+             if(!goDown(aprox, c))
+-                continue
+-            while(goDown(aprox, pattern[i][j] && j >= 0)
++                continue;
++            while(goDown(aprox, pattern[i][j]) && j >= 0)
+                 --j;
+             if (j==0)
+             {
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 16:50:49.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 16:52:23.015105084 +0200
+@@ -26,12 +26,12 @@
+         if (j>=length(pattern/2))
+             continue;
+         TIter aprox;
+-        for (char c=MinValue<TAlph>::Value; c<ValueSize<TAlph>; ++c)
++        for (char c=MinValue<TAlph>::VALUE; c<ValueSize<TAlph>::VALUE; ++c)
+         {
+             aprox = it;
+             if(!goDown(aprox, c))
+-                continue
+-            while(goDown(aprox, pattern[i][j] && j >= 0)
++                continue;
++            while(goDown(aprox, pattern[i][j]) && j >= 0)
+                 --j;
+             if (j==0)
+             {

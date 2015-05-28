@@ -1,0 +1,23 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 12:02:19.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 12:02:58.059177936 +0200
+@@ -18,7 +18,7 @@
+   	appendValue(seq,"HIKKPLNAFMLYMKEMRANVVAESTLKESAAINQILGRRWHALSREEQAKYYELARKERQLHMQLYPGWSARDNYGKKKKRKREK");
+ 	
+ 	TAlignGraph alignG(seq);
+-	int score = globalMSAAlignment(align, Blosum62(-1,-11));
++	globalMSAAlignment(align, Blosum62(-1,-11));
+ 	
+ 	std::cout << "Global MSA alignment:" << std::endl;
+ 	std::cout << alignG << std::endl;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 12:01:49.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 12:02:19.175175867 +0200
+@@ -1,6 +1,6 @@
+ #include <iostream>
+ #include <seqan/align.h>
+-
++#include <seqan/graph_msa.h>
+ 
+ using namespace seqan;
+ 

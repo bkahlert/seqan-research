@@ -1,0 +1,42 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp ./sandbox/jtr/apps/workshop_app/workshop_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-05 16:05:26.000000000 +0200
++++ ./sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-05 16:12:41.000000000 +0200
+@@ -414,10 +414,14 @@
+ 
+ using namespace seqan;
+ 
+-void search() {
++template <typename TIter, typename TStringSet>
++void search(TIter &it, TStringSet const &pattern){
++	
++	typedef typename Iterator<TStringSet const, Standard>::Type TPatternIter;
+ 	
+ }
+ 
++
+ int main(int argc, char *argv[]) 
+ {
+     // type definitions
+@@ -452,7 +456,7 @@
+ 	TIndex fmIndex(text);
+ 	TIter it(fmIndex);
+ 	
+-	search();
++	search(it, text);
+     clear(fmIndex);
+     clear(it);
+     
+@@ -462,11 +466,11 @@
+ 	fmIndex = TIndex(text);
+     it = TIter(fmIndex);
+ 	
+-    search();
++    search(it, text);
+ 	clear(fmIndex);
+     clear(it);
+ 
+-   reverse(text);
++    reverse(text);
+     reverse(fragStore.readSeqStore);
+ 
+ 	fmIndex = TIndex(text);

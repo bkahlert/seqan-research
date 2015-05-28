@@ -1,0 +1,56 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 16:04:16.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 16:09:29.573972137 +0200
+@@ -49,7 +49,7 @@
+     
+   DnaString bsChr1;
+   resize(bsChr1,length(chr1))
+-  for (i=0,i<length(chr1),i++){
++  for (unsigned i=0,i<length(chr1),i++){
+     if (chr1[i]='C')
+       bsChr1[i]='T';
+     else 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata/zsrreplh0s7rggp4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/gabriel/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-04 16:04:16.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-04 16:09:29.549971306 +0200
+@@ -43,26 +43,33 @@
+   appendValue(alignPosList,172);
+   appendValue(alignPosList,272);
+    
+-  
+   // Optional
+     // Bisulfite conversion
+     // Assume chr1 is beeing bisulfate treated: Copy chr1 to a new genome bsChr1 and exchange every 'C' with a 'T'
+-    DnaString bsChr1;
+-  
++    
++  DnaString bsChr1;
++  resize(bsChr1,length(chr1))
++  for (i=0,i<length(chr1),i++){
++    if (chr1[i]='C')
++      bsChr1[i]='T';
++    else 
++      bsChr1[i]=chr1[i];
++  }  
++      
+     // Print alignments of the reads with chr1 (or bsChr1) sequence using the function printAlign
+     // and the positions in alignPosList.
+-    // To do that, you have to create a copy of the fragment in chr1 (bsChr1) that is aligned to the read.
++    // To do that, you have to create a copy of the fragment in chr1 (bsChr1) that is aligned to the rea
+     std::cout << " \n Print alignment: " << std::endl;
+     for(unsigned i = 0; i < length(readList); ++i)
+     {
+         // Temporary copy of begin position (beginPosition) from alignPosList
+         // of a given alignment between the read and the genome
+-       
++       zbsigned beginPosition = alignPosList[i];
+         // Genome fragment
+         DnaString genomeFragment;
+         // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
+-       
+-
++     for (unsigned j = 0; j < length(readList[i]); ++j)
++            appendValue(genomeFragment, chr1[beginPosition+j]);
+         // Call of our function to print the simple alignment
+         printAlign(genomeFragment, readList[i]);
+     }

@@ -1,0 +1,72 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 14:11:27.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 14:19:14.892176724 +0200
+@@ -1,6 +1,7 @@
+ // Copy the code into your current file and encapsulate the print instructions.
+ 
+ #include <iostream>
++#include <seqan/score.h>
+ #include <seqan/file.h>
+ #include <seqan/sequence.h>
+ 
+@@ -14,6 +15,16 @@
+     return localScore;
+ }
+ 
++template <typename TText>
++int computeLocalScore(TText const & subText, seqan::String<AminoAcid> const & pattern)
++{
++    int localScore = 0;
++    for (unsigned i = 0; i < seqan::length(pattern); ++i)
++        localScore += seqan::score(seqan::Blosum62(), subText[i], pattern[i]);
++    
++    return localScore;
++}
++
+ template <typename TText, typename TPattern>
+ seqan::String<int> computeScore(TText const & text, TPattern const & pattern)
+ {
+@@ -24,7 +35,6 @@
+     return score;
+ }
+ 
+-
+ void print(seqan::String<int> const & text)
+ {
+     for (unsigned i = 0; i < seqan::length(text); ++i)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-04 14:11:03.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp~	2012-09-04 14:19:03.884176419 +0200
+@@ -1,6 +1,7 @@
+ // Copy the code into your current file and encapsulate the print instructions.
+ 
+ #include <iostream>
++#include <>
+ #include <seqan/file.h>
+ #include <seqan/sequence.h>
+ 
+@@ -14,6 +15,16 @@
+     return localScore;
+ }
+ 
++template <typename TText>
++int computeLocalScore(TText const & subText, seqan::String<AminoAcid> const & pattern)
++{
++    int localScore = 0;
++    for (unsigned i = 0; i < seqan::length(pattern); ++i)
++        localScore += seqan::score(seqan::Blosum62(), subText[i], pattern[i]);
++    
++    return localScore;
++}
++
+ template <typename TText, typename TPattern>
+ seqan::String<int> computeScore(TText const & text, TPattern const & pattern)
+ {
+@@ -23,6 +34,7 @@
+         score[i] = computeLocalScore(infix(text, i, i + seqan::length(pattern)), pattern);
+     return score;
+ }
++
+ void print(seqan::String<int> const & text)
+ {
+     for (unsigned i = 0; i < seqan::length(text); ++i)

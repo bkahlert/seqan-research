@@ -1,0 +1,20 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 17:01:26.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 17:03:54.711253897 +0200
+@@ -115,13 +115,8 @@
+ void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
+ {
+     resize(intervalTrees,length(intervals)); 
+-    Iterator< String<String<TInterval> > > >::Type it = begin(intervals);
+-    /*while(!atEnd(it)){
+-        
+-
+-    }*/
+-    
+-
++    for (unsigned i = 0; i < length(intervals); ++i)
++        createIntervalTree(intervalTrees[i], intervals[i]);
+ }
+ 
+ int main(int argc, char const * argv[])
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

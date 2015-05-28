@@ -1,0 +1,13 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn1/.assgn1.cpp.swp and ./sandbox/my_sandbox/apps/assgn1/.assgn1.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn1/assgn1.cpp ./sandbox/my_sandbox/apps/assgn1/assgn1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/assgn1/assgn1.cpp	2012-09-04 13:30:56.000000000 +0200
++++ ./sandbox/my_sandbox/apps/assgn1/assgn1.cpp	2012-09-04 13:31:54.026016528 +0200
+@@ -128,7 +128,7 @@
+     seqan::String<char> pattern = "tutorial";
+     seqan::String<int> score;
+     resize(score, length(text));
+-    resize(42, 42);
++    seqan::resize(42, 42);
+     // Computation of the similarities
+     // Iteration over the text (outer loop)
+     for (unsigned i = 0; i < seqan::length(text) - seqan::length(pattern) + 1; ++i)

@@ -1,0 +1,15 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 15:02:32.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 15:03:12.041165876 +0200
+@@ -47,8 +47,8 @@
+     
+     cout << "Time building index: " << (t2 - t1) / 1000 << endl;
+     
+-    /*int res = write(faiIndex, "/home/kokonech/tmp/hg19.fa.fai");
+-    if (res != 0)
++    int res = write(faiIndex, "/home/kokonech/tmp/hg19.fa.fai");
++    /*if (res != 0)
+         std::cerr << "ERROR: Could not write the index to file!\n";
+     */
+     unsigned idx = 0;
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

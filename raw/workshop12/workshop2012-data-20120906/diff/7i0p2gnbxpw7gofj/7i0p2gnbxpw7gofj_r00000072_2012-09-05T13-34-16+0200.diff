@@ -1,0 +1,19 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7i0p2gnbxpw7gofj_stats.txt -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7i0p2gnbxpw7gofj_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragstore/fragstore.cpp ./sandbox/my_sandbox/apps/fragstore/fragstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragstore/fragstore.cpp	2012-09-05 13:31:04.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragstore/fragstore.cpp	2012-09-05 13:34:13.000000000 +0200
+@@ -59,12 +59,13 @@
+     while (goDown(it));
+ 
+ 
+-    while (goNext(it)) {
++    do {
+       unsigned n = 1;
+       while (goRight(it)) n++;
++      goUp(it);
+       
+       cout << "n= " << n << endl;
+-    }
++    } while (goRight(it));
+ 
+     return 0;
+ }

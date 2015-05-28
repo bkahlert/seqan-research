@@ -1,0 +1,58 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp ./sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp	2012-09-05 16:54:39.000000000 +0200
++++ ./sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp	2012-09-05 17:03:03.234024073 +0200
+@@ -18,29 +18,33 @@
+ template <typename TIter, typename TStringSet>
+ int search(TIter & it, TStringSet const & pattern){
+ 
+-  //search of the exact pattern half
+-  typedef typename Iterator<TStringSet const, Standard>::Type TPatternIter;
+-  for (TPatternIter pIt = begin(pattern, Standard()); pIt != end(pattern, Standard()); ++pIt)
+-  {
+-    unsigned startApproxSearch = length(value(pIt)) / 2;
+-    goDown(it, infix(value(pIt), startApproxSearch + 1, length(value(pIt))));
+-    goRoot(it);
+-    for (unsigned i = startApproxSearch; i<=0;--i)
++    typedef typename Iterator<TStringSet const, Standard>::Type TPatternIter;
++    for (TPatternIter patternIt = begin(pattern, Standard()); patternIt != end(pattern, Standard()); ++patternIt)
+     {
+-      for (DNA5 c=MinValue<DNA>::value;c<ValueSize<DNA>::Value;c++)
+-      {
+-          if (goDown(it, c))
+-          {
+-              if (goDown(it, infix(value(pIt),0,i)))
+-              {
+-                  //HIT
+-              }
+-              goRoot(it);
+-          }
+-      }
++        unsigned startApproxSearch = length(value(patternIt)) / 2;
++        if (goDown(it, infix(value(patternIt), startApproxSearch + 1, length(value(patternIt)))))
++        {
++            for (unsigned i = startApproxSearch; ; --i)
++            {
++                for (Dna5 c = MinValue<Dna>::VALUE; c < +ValueSize<Dna>::VALUE; ++c)
++                {
++                    TIter localIt = it;
++                    if (goDown(localIt, c))
++                    {
++                        if (goDown(localIt, infix(value(patternIt), 0, i)))
++                        {
++                            // HIT
++                        }
++                    }
++                }
++                if (i == 0 || !goDown(it, getValue(patternIt)[i]))
++                {
++                    break;
++                }
++            }
++        }
++        goRoot(it);
+     }
+-  }
+-
+   return 0;
+ }
+ 

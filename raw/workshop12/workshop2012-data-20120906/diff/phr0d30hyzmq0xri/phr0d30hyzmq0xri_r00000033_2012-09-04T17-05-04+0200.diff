@@ -1,0 +1,15 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/rna_seq.cpp ./sandbox/lienhard/apps/rna_seq/rna_seq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/rna_seq.cpp	2012-09-04 17:03:03.000000000 +0200
++++ ./sandbox/lienhard/apps/rna_seq/rna_seq.cpp	2012-09-04 17:04:58.236673243 +0200
+@@ -12,9 +12,11 @@
+ typedef TAnnotation::TId TPos;
+ typedef IntervalAndCargo<TPos, TId> TInterval;
+ typedef IntervalTree<TPos, TId> TIntervalTree;
++typedef Value<TStore::TAlignedReadStore>::Type  TAlignedRead;
+ String<TIntervalTree> intervalTrees;
+ String<String<TInterval> > intervals;
+ 
++
+ // define options
+ struct Options
+ {

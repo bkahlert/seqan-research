@@ -1,0 +1,56 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_app/sam_app.cpp ./sandbox/my_sandbox/apps/sam_app/sam_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_app/sam_app.cpp	2012-09-04 14:53:37.000000000 +0200
++++ ./sandbox/my_sandbox/apps/sam_app/sam_app.cpp	2012-09-04 14:58:57.037429160 +0200
+@@ -18,8 +18,16 @@
+     seqan::BamAlignmentRecord record;
+     while (!atEnd(bamStreamIn))
+     {
+-        readRecord(record, bamStreamIn);
+-        writeRecord(bamStreamOut, record);
++        if (readRecord(record, bamStreamIn) != 0)
++        {
++            std::cerr << "ERROR: Could not read record." << std::endl;
++            return 1;
++        }
++        if (writeRecord(bamStreamOut, record) != 0)
++        {
++            std::cerr << "ERROR: Could not write record." << std::endl;
++            return 1;
++        }
+     }
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_app/sam_app.cpp~ ./sandbox/my_sandbox/apps/sam_app/sam_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/sam_app/sam_app.cpp~	2012-09-04 14:52:54.000000000 +0200
++++ ./sandbox/my_sandbox/apps/sam_app/sam_app.cpp~	2012-09-04 14:58:49.089389743 +0200
+@@ -6,7 +6,10 @@
+     // Open input stream, BamStream can read SAM and BAM files.
+     seqan::BamStream bamStreamIn("/home/felix/test.sam");
+     if (!isGood(bamStreamIn))
+-    
++    {
++        std::cerr << "ERROR: Could not open test.sam.";
++        return 1;
++    }
+     // Open output stream, "-" means stdin on if reading, else stdout.
+     seqan::BamStream bamStreamOut("-", seqan::BamStream::WRITE);
+     // Copy header.  The header is automatically written out before
+@@ -15,8 +18,16 @@
+     seqan::BamAlignmentRecord record;
+     while (!atEnd(bamStreamIn))
+     {
+-        readRecord(record, bamStreamIn);
+-        writeRecord(bamStreamOut, record);
++        if (readRecord(record, bamStreamIn) != 0)
++        {
++            std::cerr << "ERROR: Could not read record." << std::endl;
++            return 1;
++        }
++        if (writeRecord(bamStreamOut, record) != 0)
++        {
++            std::cerr << "ERROR: Could not write record." << std::endl;
++            return 1;
++        }
+     }
+     return 0;
+ }

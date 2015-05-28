@@ -1,0 +1,47 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/aln/aln.cpp ./sandbox/my_rob/apps/aln/aln.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/aln/aln.cpp	2012-09-05 11:24:42.000000000 +0200
++++ ./sandbox/my_rob/apps/aln/aln.cpp	2012-09-05 11:39:53.995665686 +0200
+@@ -23,6 +23,26 @@
+   std::cout << align << std::endl;
+ }
+ 
++void localAln(){
++  typedef String<Dna> TString;
++  typedef Align<TString> TAlign;
++  TString seq1 = "ataaGcgtctcg";
++  TString seq2 = "tcatagagttgc";
++  
++  TAlign align;
++  resize(rows(align),2);
++  assignSource(row(align,0),seq1);
++  assignSource(row(align,1),seq2);
++  
++  Score<int,Simple> scoring(2,-1,-2,0);
++  int score=localAlignment(align,scoring,AlignConfig<true,true,true,true>());
++  std::cout << "Local_alignment:" << std::endl;
++  std::cout << score << std::endl;
++  std::cout << align << std::endl;
++}
++
++
++
+ int main (){
+   typedef String<char> TString;
+   typedef Align<TString,ArrayGaps> TAlign;
+@@ -32,7 +52,7 @@
+   TAlign align;
+   resize (rows(align),2);
+   assignSource(row(align,0),seq1);
+-  assignSource(row(align,1),seq2);
++  assignSource(row(align,1),seq2); 	
+   
+   insertGap(row(align,0),2);
+   insertGaps(row(align,0),5,2);
+@@ -59,6 +79,7 @@
+   std::cout << std::endl;
+   
+   globalAln();
++  localAln();
+   return 1;
+   
+ }

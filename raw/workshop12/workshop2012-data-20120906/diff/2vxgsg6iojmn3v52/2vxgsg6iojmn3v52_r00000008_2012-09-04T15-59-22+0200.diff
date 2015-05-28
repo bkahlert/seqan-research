@@ -1,0 +1,14 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/2vxgsg6iojmn3v52_stats.txt -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/userdata/2vxgsg6iojmn3v52_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/Stroehli/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/seq_iter/seq_iter.cpp ./sandbox/my_sandbox/apps/seq_iter/seq_iter.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/seq_iter/seq_iter.cpp	2012-09-04 15:57:46.000000000 +0200
++++ ./sandbox/my_sandbox/apps/seq_iter/seq_iter.cpp	2012-09-04 15:59:21.000000000 +0200
+@@ -40,8 +40,8 @@
+     
+     // Print readlist
+     std::cout << " \n Read list: " << std::endl;
+-    for(unsigned i = 0; i < length(alignPosList); ++i)
+-        std::cout << alignPosList[i] << std::endl;
++    for(unsigned i = 0; i < length(readList); ++i)
++        std::cout << readList[i] << std::endl;
+     
+     std::cout << " \n Read list: " << std::endl;
+     for(unsigned i = 0; i < length(alignPosList); ++i)

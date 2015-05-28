@@ -1,0 +1,60 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-05 13:55:21.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-05 14:09:39.412176850 +0200
+@@ -68,6 +68,55 @@
+ 
+     return 0;
+ }
++
++
++template <typename TString, typename TPattern>
++void searchPattern(StringSet<String<int> > & hitSet,
++                   StringSet<TString, Owner<JournaledSet> > const & journalSet,
++                   TPattern const & pattern)
++{
++    typedef typename Host<TString>::Type THost;
++    // Check for valid initial state.
++    if (empty(globalReference(journalSet)))
++    {
++        ::std::cout << "No reference set. Aborted search!" << std::endl;
++        return;
++    }
++    // Reset the hitSet to avoid phantom hits coming from a previous search.
++    clear(hitSet);
++    resize(hitSet, length(journalSet) + 1);
++
++     // Access the reference sequence.
++    THost & globalRef = globalReference(journalSet);
++    // Search for pattern in the reference sequence.
++    findPatternInReference(hitSet[0], globalRef, pattern);
++    
++        
++
++
++}
++
++
++template <typename TString, typename TPattern>
++void findPatternInReference(String<int>& hits, TString const & ref, TPattern& const pattern) {
++    
++    int last_index = length(ref) - length(pattern) ;
++    for (int i = 0; i < last_index; ++i) {
++        bool match = true;
++        for (int j = 0; j < length(pattern); ++j) {
++            if (ref[i + j] != pattern[j]) {
++                match = false;
++                break;
++            }
++        }
++        if (match) {
++            append(hits, i);       
++        }
++    }
++}
++
++
++
+ int main()
+ {
+     // Definition of the used types.
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

@@ -1,0 +1,216 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata/lmlucd3w6tzrgr57_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/grunert/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp ./sandbox/grunert/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/grunert/apps/first_app/first_app.cpp	2012-09-04 13:21:55.000000000 +0200
++++ ./sandbox/grunert/apps/first_app/first_app.cpp	2012-09-04 14:26:07.000000000 +0200
+@@ -1,150 +1,71 @@
+-// ==========================================================================
+-//                                 first_app
+-// ==========================================================================
+-// Copyright (c) 2006-2012, Knut Reinert, FU Berlin
+-// All rights reserved.
+-//
+-// Redistribution and use in source and binary forms, with or without
+-// modification, are permitted provided that the following conditions are met:
+-//
+-//     * Redistributions of source code must retain the above copyright
+-//       notice, this list of conditions and the following disclaimer.
+-//     * Redistributions in binary form must reproduce the above copyright
+-//       notice, this list of conditions and the following disclaimer in the
+-//       documentation and/or other materials provided with the distribution.
+-//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
+-//       its contributors may be used to endorse or promote products derived
+-//       from this software without specific prior written permission.
+-//
+-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+-// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+-// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+-// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
+-// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+-// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+-// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+-// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+-// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+-// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+-// DAMAGE.
+-//
+-// ==========================================================================
+-// Author: Your Name <your.email@example.net>
+-// ==========================================================================
+-
+-#include <seqan/basic.h>
++#include <iostream>
++#include <seqan/file.h>
++#include <seqan/score.h>
+ #include <seqan/sequence.h>
+ 
+-#include <seqan/arg_parse.h>
+ 
+-// ==========================================================================
+-// Classes
+-// ==========================================================================
+-
+-// --------------------------------------------------------------------------
+-// Class AppOptions
+-// --------------------------------------------------------------------------
+-
+-// This struct stores the options from the command line.
+-//
+-// You might want to rename this to reflect the name of your app.
+-
+-struct AppOptions
+-{
+-    // Verbosity level.  0 -- quiet, 1 -- normal, 2 -- verbose, 3 -- very verbose.
+-    int verbosity;
+-
+-    // The first (and only) argument of the program is stored here.
+-    seqan::CharString text;
+-
+-    AppOptions() :
+-        verbosity(1)
+-    {}
+-};
+-
+-// ==========================================================================
+-// Functions
+-// ==========================================================================
+-
+-// --------------------------------------------------------------------------
+-// Function parseCommandLine()
+-// --------------------------------------------------------------------------
+-
+-seqan::ArgumentParser::ParseResult
+-parseCommandLine(AppOptions & options, int argc, char const ** argv)
+-{
+-    // Setup ArgumentParser.
+-    seqan::ArgumentParser parser("first_app");
+-    // Set short description, version, and date.
+-    setShortDescription(parser, "Put a Short Description Here");
+-    setVersion(parser, "0.1");
+-    setDate(parser, "July 2012");
+-
+-    // Define usage line and long description.
+-    addUsageLine(parser, "[\\fIOPTIONS\\fP] \"\\fITEXT\\fP\"");
+-    addDescription(parser, "This is the application skelleton and you should modify this string.");
+-
+-    // We require one argument.
+-    addArgument(parser, seqan::ArgParseArgument(seqan::ArgParseArgument::STRING, "TEXT"));
+-
+-    addOption(parser, seqan::ArgParseOption("q", "quiet", "Set verbosity to a minimum."));
+-    addOption(parser, seqan::ArgParseOption("v", "verbose", "Enable verbose output."));
+-    addOption(parser, seqan::ArgParseOption("vv", "very-verbose", "Enable very verbose output."));
+-
+-    // Add Examples Section.
+-    addTextSection(parser, "Examples");
+-    addListItem(parser, "\\fBfirst_app\\fP \\fB-v\\fP \\fItext\\fP",
+-                "Call with \\fITEXT\\fP set to \"text\" with verbose output.");
+-
+-    // Parse command line.
+-    seqan::ArgumentParser::ParseResult res = seqan::parse(parser, argc, argv);
+-
+-    // Only extract  options if the program will continue after parseCommandLine()
+-    if (res != seqan::ArgumentParser::PARSE_OK)
+-        return res;
+-
+-    // Extract option values.
+-    if (isSet(parser, "quiet"))
+-        options.verbosity = 0;
+-    if (isSet(parser, "verbose"))
+-        options.verbosity = 2;
+-    if (isSet(parser, "very-verbose"))
+-        options.verbosity = 3;
+-    seqan::getArgumentValue(options.text, parser, 0);
+ 
+-    return seqan::ArgumentParser::PARSE_OK;
++template <typename TText, typename TPattern>
++int computeLocalScore(TText const & subText, TPattern const & pattern)
++{
++    int localScore = 0;
++    for (unsigned i = 0; i < seqan::length(pattern); ++i)
++        if (subText[i] == pattern[i])
++            ++localScore;
++    return localScore;
+ }
+ 
+-// --------------------------------------------------------------------------
+-// Function main()
+-// --------------------------------------------------------------------------
+-
+-// Program entry point.
+-
+-int main(int argc, char const ** argv)
+-{
+-    // Parse the command line.
+-    seqan::ArgumentParser parser;
+-    AppOptions options;
+-    seqan::ArgumentParser::ParseResult res = parseCommandLine(options, argc, argv);
+-
+-    // If there was an error parsing or built-in argument parser functionality
+-    // was triggered then we exit the program.  The return code is 1 if there
+-    // were errors and 0 if there were none.
+-    if (res != seqan::ArgumentParser::PARSE_OK)
+-        return res == seqan::ArgumentParser::PARSE_ERROR;
+ 
+-    std::cout << "EXAMPLE PROGRAM\n"
+-              << "===============\n\n";
++template <typename TText>
++int computeLocalScore(TText const & subText, seqan::String<seqan::AminoAcid> const & pattern)
++{
++    int localScore = 0;
++    for (unsigned i = 0; i < seqan::length(pattern); ++i)
++        localScore += seqan::score(seqan::Blosum62(), subText[i], pattern[i]);
+     
+-    // Print the command line arguments back to the user.
+-    if (options.verbosity > 0)
+-    {
+-        std::cout << "__OPTIONS____________________________________________________________________\n"
+-                  << '\n'
+-                  << "VERBOSITY\t" << options.verbosity << '\n'
+-                  << "TEXT     \t" << options.text << "\n\n";
+-    }
++    return localScore;
++}
+ 
+-    return 0;
++
++template <typename TText, typename TPattern>
++seqan::String<int> computeScore(TText const & text, TPattern const & pattern)
++{
++    seqan::String<int> score;
++    seqan::resize(score, seqan::length(text), 0);
++    for (unsigned i = 0; i < seqan::length(text) - seqan::length(pattern) + 1; ++i)
++            score[i] = computeLocalScore(infix(text, i, i + seqan::length(pattern)), pattern);
++    return score;
++}
++
++
++
++void printout(seqan::String<int> const & text)
++{
++    for (unsigned i = 0; i < seqan::length(text); ++i)
++        std::cout << text[i] << " ";
++        
++    std::cout << std::endl;
+ }
++
++
++template <typename TText>
++void printout(TText const & text)
++{
++    for (unsigned i = 0; i < seqan::length(text); ++i)
++        std::cout << text[i] << " ";
++    
++    std::cout << std::endl;
++}
++
++
++
++int main()
++{
++    seqan::String<char> text = "This is an awesome tutorial to get to now SeqAn!";
++    seqan::String<char> pattern = "tutorial";
++    seqan::String<int> score = computeScore(text, pattern);
++    
++    printout (score);
++    
++    return 0;
++}
+\ No newline at end of file

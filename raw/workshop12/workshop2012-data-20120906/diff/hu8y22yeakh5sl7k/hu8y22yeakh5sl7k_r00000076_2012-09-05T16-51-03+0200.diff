@@ -1,0 +1,45 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp ./sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp	2012-09-05 16:49:54.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp	2012-09-05 16:51:00.534777844 +0200
+@@ -61,8 +61,8 @@
+ 
+ 				if(goDown(it,c)){
+ 					TIter itCopy = it;
+-					if (goDown(it, pattern[0..i - 1])){
+-		
++					if (goDown(it, infix(pattern,0,i-1))){
++						//Hit
+ 					}
+ 					it = itCopy;	
+ 				}
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp~ ./sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp~	2012-09-05 16:48:26.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp~	2012-09-05 16:50:48.250777334 +0200
+@@ -47,7 +47,7 @@
+ void search(TIter & it, TStringSet const & pattern){
+ 		
+ 	typedef typename Iterator<TStringSet const, Standard>::Type TPatternIter;
+-	TIter itCopy = it;
++	//TIter itCopy = it;
+     	for (TPatternIter patternIt = begin(pattern, Standard()); patternIt != end(pattern, Standard()); ++patternIt)
+     	{
+ 		
+@@ -56,14 +56,15 @@
+ 		for(unsigned int i =startApproxSearch; i >= 0; --i){
+ 			for(unsigned int posi = 0; posi < length(alphabet);++posi){
+ 				
+-				it = itCopy;
++				//it = itCopy;
+ 				char c = infix(alphabet,posi,posi+1);
+ 
+ 				if(goDown(it,c)){
+-					if (goDown(it, pattern[0..i - 1])){
++					TIter itCopy = it;
++					if (goDown(it, infix(pattern,0,i-1))){
+ 		
+ 					}
+-
++					it = itCopy;	
+ 				}
+ 			}
+ 		}

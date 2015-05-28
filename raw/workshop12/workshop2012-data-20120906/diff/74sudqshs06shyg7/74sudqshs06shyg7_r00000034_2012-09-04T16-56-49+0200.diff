@@ -1,0 +1,74 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/third_app/third_app.cpp ./sandbox/my_sandbox/apps/third_app/third_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/third_app/third_app.cpp	2012-09-04 16:49:46.000000000 +0200
++++ ./sandbox/my_sandbox/apps/third_app/third_app.cpp	2012-09-04 16:56:37.749655879 +0200
+@@ -15,6 +15,15 @@
+     DnaString str4 = "AGTGTCA"; 
+ 
+     // Your code
++    StringSet<DnaString> stringSet;
++ 
++    appendValue(stringSet, str0);
++    appendValue(stringSet, str1);
++    
++    for(unsigned i = 0; i < length(stringSet); ++i)
++    	for(unsigned j = 0; j < length(stringSet[i]); ++j)
++        	std::cout << stringSet[i][j];
++        std::cout << std::endl;
+ 
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/third_app/third_app.cpp~ ./sandbox/my_sandbox/apps/third_app/third_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/third_app/third_app.cpp~	2012-09-04 16:12:33.000000000 +0200
++++ ./sandbox/my_sandbox/apps/third_app/third_app.cpp~	2012-09-04 16:56:25.173655532 +0200
+@@ -3,32 +3,27 @@
+ #include <seqan/file.h>
+ 
+ using namespace seqan;
+-// Function to print simple alignment between two sequences with the same length
+-// .. for two sequences of the same type
+ 
+-template <typename TText>
+-void printAlign(TText const & genomeFragment, TText const & read)
+-{
+-        std::cout <<  "Alignment " << std::endl;
+-        std::cout << "  genome : ";
+-        std::cout << genomeFragment << std::endl;
+-        std::cout << "  read   : ";
+-        std::cout << read << std::endl;
+-}
++
+ int main()
+ {
+-    // We have given a genome sequence
+-    Dna5String genome = "ATGGTTTCAACGTAATGCTGAACATGTCGCGT";
+-    // A read sequence
+-    Dna5String read = "TGGTNTCA";
+-    // And the begin position of a given alignment between the read and the genome
+-    unsigned beginPosition = 1;
+-    Dna5String genomeFragment;
+-    // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
+-    for (unsigned i = 0; i < length(read); ++i){
+-        appendValue(genomeFragment, genome[beginPosition+i]);
+-    }
+-    // Call of our function to print the simple alignment
+-    printAlign(genomeFragment, read);
++    // Build strings
++    DnaString str0 = "TATA";
++    DnaString str1 = "CGCG"; 
++    DnaString str2 = "TTAAGGCC"; 
++    DnaString str3 = "ATGC"; 
++    DnaString str4 = "AGTGTCA"; 
++
++    // Your code
++    StringSet<DnaString> stringSet;
++ 
++    appendValue(stringSet, str0);
++    appendValue(stringSet, str1);
++    
++    for(unsigned i = 0; i < length(stringSet); ++i)
++    	for(unsigned j = 0; j < length(stringSet[i]); ++j)
++        	std::cout << stringSet[i][j];
++        std::cout << std::endl
++
+     return 0;
+ }

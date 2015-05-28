@@ -1,0 +1,26 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/parse/parse.cpp ./sandbox/my_rob/apps/parse/parse.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/parse/parse.cpp	2012-09-05 16:08:56.000000000 +0200
++++ ./sandbox/my_rob/apps/parse/parse.cpp	2012-09-05 16:16:39.135092294 +0200
+@@ -11,6 +11,7 @@
+     }
+     seqan::CharString id;
+     seqan::Dna5String seq;
++    seqan::CharString qual;
+     seqan::SequenceStream seqStream(argv[1]);
+     if (!isGood(seqStream))
+     {
+@@ -19,12 +20,12 @@
+     }
+     while (!atEnd(seqStream))
+     {
+-        if (readRecord(id, seq, seqStream) != 0)
++        if (readRecord(id, seq, qual, seqStream) != 0)
+         {
+             std::cerr << "ERROR: Could not read from example.fa!\n";
+             return 1;
+         }
+-        std::cout << id << '\t' << seq << '\n';
++        std::cout << id << '\t' << seq << qual << '\n';
+     }
+     return 0;
+ }

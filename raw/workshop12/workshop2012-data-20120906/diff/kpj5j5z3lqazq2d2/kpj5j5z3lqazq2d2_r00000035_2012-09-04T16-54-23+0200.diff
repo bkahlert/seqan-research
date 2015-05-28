@@ -1,0 +1,44 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp and ./sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 16:53:02.000000000 +0200
++++ ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 16:54:21.000000000 +0200
+@@ -11,6 +11,8 @@
+ typedef TAnnotation::TId TId;
+ typedef TAnnotation::TId TPos;
+ typedef IntervalAndCargo<TPos, TId> TInterval;
++typedef IntervalTree<TPos, TId>                 TIntervalTree;
++
+ // define options
+ struct Options
+ {
+@@ -84,11 +86,22 @@
+ 
+ }
+ 
++//
++// 4. Construct interval trees
++//
++void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
++{
++    // INSERT YOUR CODE HERE ...
++    //
++}
++
+ int main(int argc, char const * argv[])
+ {
+     Options options;
+     TStore store;
+     String<String<TInterval> > intervals;
++    String<TIntervalTree> intervalTrees;
++    
+ 
+     ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
+     if (res != ArgumentParser::PARSE_OK)
+@@ -97,6 +110,7 @@
+         return 1;
+ 
+     extractGeneIntervals(intervals, store);
++    constructIntervalTrees(intervalTrees, intervals);
+ 
+     return 0;
+ }

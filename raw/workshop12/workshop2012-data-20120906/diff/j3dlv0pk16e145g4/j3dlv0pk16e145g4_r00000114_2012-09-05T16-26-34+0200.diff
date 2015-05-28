@@ -1,0 +1,65 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 16:19:48.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 16:26:00.555258095 +0200
+@@ -54,7 +54,7 @@
+     // forward search
+     TIndex fmIndex(text);
+     TIter it(fmIndex);
+-    search(it, fmIndex);
++    search(it, fragStore.readSeqStore);
+     // reversing the sequences for backward search
+     reverse(text);
+     reverse(fragStore.readSeqStore);
+@@ -63,7 +63,7 @@
+     fmIndex = TIndex(text);
+     clear(it);
+     it = TIter(fmIndex);
+-    search(it, fmIndex);
++    search(it, fragStore.readSeqStore);
+     clear(fmIndex);
+     fmIndex = TIndex(text);
+     clear(it);
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 16:18:18.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 16:19:48.845414875 +0200
+@@ -54,7 +54,7 @@
+     // forward search
+     TIndex fmIndex(text);
+     TIter it(fmIndex);
+-    search();
++    search(it, fmIndex);
+     // reversing the sequences for backward search
+     reverse(text);
+     reverse(fragStore.readSeqStore);
+@@ -63,7 +63,7 @@
+     fmIndex = TIndex(text);
+     clear(it);
+     it = TIter(fmIndex);
+-    search();
++    search(it, fmIndex);
+     clear(fmIndex);
+     fmIndex = TIndex(text);
+     clear(it);
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt ./sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt	2012-09-05 16:24:06.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt	2012-09-05 16:26:32.539416694 +0200
+@@ -1,7 +1,7 @@
+ cmake_minimum_required (VERSION 2.6)
+ project (sandbox_my_sandbox_apps_bowtie_app)
+ 
+-add_definition("-Wno-packed")
++
+ 
+ # Update the list of file names below if you add source files to your application.
+ seqan_add_executable(bowtie_app bowtie_app.cpp)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt~ ./sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt~	2012-09-05 15:35:43.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/CMakeLists.txt~	2012-09-05 16:24:06.298691516 +0200
+@@ -1,5 +1,7 @@
+ cmake_minimum_required (VERSION 2.6)
+ project (sandbox_my_sandbox_apps_bowtie_app)
+ 
++add_definition("-Wno-packed")
++
+ # Update the list of file names below if you add source files to your application.
+ seqan_add_executable(bowtie_app bowtie_app.cpp)

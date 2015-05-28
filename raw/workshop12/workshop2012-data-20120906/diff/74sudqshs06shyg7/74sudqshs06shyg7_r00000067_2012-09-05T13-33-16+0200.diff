@@ -1,0 +1,31 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indecesApp/indecesApp.cpp ./sandbox/my_sandbox/apps/indecesApp/indecesApp.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indecesApp/indecesApp.cpp	2012-09-05 13:30:52.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indecesApp/indecesApp.cpp	2012-09-05 13:33:12.782762887 +0200
+@@ -1,4 +1,4 @@
+-#include <seqan/string.h>
++#include <seqan/sequence.h>
+ #include <seqan/index.h>
+ 
+ using namespace seqan;
+@@ -6,7 +6,7 @@
+ int main()
+ {
+     String<Dna5> genome = "TTATTAAGCGTATAGCCCTATAAATATAA";
+-    Index<String<Dna5>, FirstIndex> DnaIndex(genome); 
++    Index< String<Dna5>, FirstIndex > DnaIndex(genome); 
+     Finder< Index<String<Dna5>, IndexEsa> > DnaFinder(DnaIndex);
+ 
+     find(DnaFinder, "TATA");
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indecesApp/indecesApp.cpp~ ./sandbox/my_sandbox/apps/indecesApp/indecesApp.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/indecesApp/indecesApp.cpp~	2012-09-05 13:30:07.000000000 +0200
++++ ./sandbox/my_sandbox/apps/indecesApp/indecesApp.cpp~	2012-09-05 13:30:52.522755426 +0200
+@@ -10,6 +10,8 @@
+     Finder< Index<String<Dna5>, IndexEsa> > DnaFinder(DnaIndex);
+ 
+     find(DnaFinder, "TATA");
+-    position(esaFinder);
++    int pos=position(DnaFinder);
++    
++    std::cout << pos << std::endl;
+     
+ }

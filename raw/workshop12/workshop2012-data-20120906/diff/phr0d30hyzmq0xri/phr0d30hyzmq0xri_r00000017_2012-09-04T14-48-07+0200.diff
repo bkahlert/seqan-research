@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_bam/io_bam.cpp ./sandbox/lienhard/apps/io_bam/io_bam.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_bam/io_bam.cpp	2012-09-04 14:46:32.000000000 +0200
++++ ./sandbox/lienhard/apps/io_bam/io_bam.cpp	2012-09-04 14:48:02.394989348 +0200
+@@ -67,7 +67,7 @@
+         options.verbosity = 2;
+     if (isSet(parser, "very-verbose"))
+         options.verbosity = 3;
+-    seqan::getArgumentValue(options.text, parser, 0);
++    seqan::getArgumentValue(options.file, parser, 0);
+ 
+     return seqan::ArgumentParser::PARSE_OK;
+ }

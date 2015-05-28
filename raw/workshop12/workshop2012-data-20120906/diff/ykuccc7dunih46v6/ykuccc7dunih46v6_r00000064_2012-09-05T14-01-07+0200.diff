@@ -1,0 +1,33 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutfrag/.tutfrag.cpp.swp and ./sandbox/my_sandbox/apps/tutfrag/.tutfrag.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp ./sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp	2012-09-05 13:46:19.000000000 +0200
++++ ./sandbox/my_sandbox/apps/tutfrag/tutfrag.cpp	2012-09-05 14:00:58.238816688 +0200
+@@ -16,12 +16,28 @@
+     Iterator<FragmentStore<>, AnnotationTree<> >::Type it;
+     it = begin(store, AnnotationTree<>());
+     // Move iterator one node down 
++/*
+     while (goDown(it)) ;
+ 
+     int count = 1;
+     while (goRight(it))
+         ++count;
+     std::cout << "n=" << count << std::endl;
++    */
++    while (goDown(it)) ;
++    while (!atEnd(it)){
++        ++count;
++        // Iterate over all siblings and count
++        while (goRight(it))
++            ++count;
++        std::cout << count << std::endl;
++        count = 0;
++        // Jump to the next mRNA or gene, go down to its first leaf and count it
++        if (!atEnd(it)) {
++            goNext(it);
++            if (!atEnd(it)) while(goDown(it)) ;
++        }
++    }
+  
+     return 0;
+ }

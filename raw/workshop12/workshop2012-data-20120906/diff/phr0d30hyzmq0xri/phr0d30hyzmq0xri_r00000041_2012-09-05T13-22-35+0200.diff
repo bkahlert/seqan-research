@@ -1,0 +1,20 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 13:19:12.000000000 +0200
++++ ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 13:22:18.623618828 +0200
+@@ -5,7 +5,7 @@
+ #include <iostream>
+ #include <seqan/file.h>
+ #include <seqan/store.h>
+-
++using namespace seqan;
+ // ==========================================================================
+ // Classes
+ // ==========================================================================
+@@ -107,6 +107,7 @@
+               << "===============\n\n";
+     
+     // Print the command line arguments back to the user.
++
+     if (options.verbosity > 1)
+     {
+         std::cout << "__OPTIONS____________________________________________________________________\n"

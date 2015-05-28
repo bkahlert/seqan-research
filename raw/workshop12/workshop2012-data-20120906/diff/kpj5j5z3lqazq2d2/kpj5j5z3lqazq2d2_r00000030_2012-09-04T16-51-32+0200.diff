@@ -1,0 +1,16 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp and ./sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 16:50:50.000000000 +0200
++++ ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 16:51:30.000000000 +0200
+@@ -76,8 +76,9 @@
+     if (atEnd(it))
+ 	return;
+     do {
+-	TPos beginPos = beginPos(getAnnotation(it));
+-	TPos endPos   = endPos(getAnnotation(it));
++	TPos beginPos = getAnnotation(it).beginPos;
++	TPos endPos   = getAnnotation(it).endPos;
++	TId  contigId = getAnnotation(it).contigId;
+ 	if (endPos < beginPos)
+ 	    std::swap(beginPos, endPos);
+ 	appendValue(intervals[getContigId(*it)], TInterval(beginPos, endPos, value(*it))); 

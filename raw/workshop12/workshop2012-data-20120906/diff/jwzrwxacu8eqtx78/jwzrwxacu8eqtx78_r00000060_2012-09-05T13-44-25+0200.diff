@@ -1,0 +1,299 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/jwzrwxacu8eqtx78_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/jtr/Develop/c/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp ./sandbox/jtr/apps/workshop_app/workshop_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-04 17:05:28.000000000 +0200
++++ ./sandbox/jtr/apps/workshop_app/workshop_app.cpp	2012-09-05 13:44:15.000000000 +0200
+@@ -193,133 +193,177 @@
+ 
+ 
+ 
+-#include <iostream>
+-#include <seqan/store.h>
+-#include <seqan/arg_parse.h>
+-#include <seqan/misc/misc_interval_tree.h>
+-#include <seqan/parallel.h>
+-#include <seqan/file.h>
+ 
+-using namespace seqan;
++// #include <iostream>
++// #include <seqan/store.h>
++// #include <seqan/arg_parse.h>
++// #include <seqan/misc/misc_interval_tree.h>
++// #include <seqan/parallel.h>
++// #include <seqan/file.h>
++// 
++// using namespace seqan;
++// 
++// // define used types
++// typedef FragmentStore<>                         TStore;
++// typedef Value<TStore::TAnnotationStore>::Type   TAnnotation;
++// typedef TAnnotation::TId                        TId;
++// typedef TAnnotation::TId                        TPos;
++// typedef IntervalAndCargo<TPos, TId>             TInterval;
++// 
++// // define options
++// struct Options
++// {
++//     std::string annotationFileName;
++//     std::string alignmentFileName;
++// };
++// 
++// // 1. Parse command line and fill Options object
++// //
++// ArgumentParser::ParseResult parseOptions(Options & options, int argc, char const * argv[])
++// {
++//     ArgumentParser parser("gene_quant");
++//     setShortDescription(parser, "A simple gene quantification tool");
++//     setVersion(parser, "1.0");
++//     setDate(parser, "Sep 2012");
++//     addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
++//     addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
++//     addUsageLine(parser, "[\\fIOPTIONS\\fP] <\\fIANNOTATION FILE\\fP> <\\fIREAD ALIGNMENT FILE\\fP>");
++//     // Parse command line
++//     ArgumentParser::ParseResult res = parse(parser, argc, argv);
++//     if (res == ArgumentParser::PARSE_OK)
++//     {
++//         // Extract option values
++//         getArgumentValue(options.annotationFileName, parser, 0);
++//         getArgumentValue(options.alignmentFileName, parser, 1);
++//     }
++//     return res;
++// }
++// 
++// // 2. Load annotations and alignments from files
++// //
++// bool loadFiles(TStore & store, Options const & options)
++// {
++//     // INSERT YOUR CODE HERE ...
++//     //
++// 	std::ifstream alignmentFile(options.alignmentFileName.c_str());
++// 	    if (!alignmentFile.good())
++// 	    {
++// 	        std::cerr << "Couldn't open alignment file " << options.alignmentFileName << std::endl;
++// 	        return false;
++// 	    }
++// 	    std::cerr << "Loading read alignments ..... " << std::flush;
++// 	    read(alignmentFile, store, Sam());
++// 	    std::cerr << "[" << length(store.alignedReadStore) << "]" << std::endl;
++// 	    // load annotations
++// 	    std::ifstream annotationFile(options.annotationFileName.c_str());
++// 	    if (!annotationFile.good())
++// 	    {
++// 	        std::cerr << "Couldn't open annotation file" << options.annotationFileName << std::endl;
++// 	        return false;
++// 	    }
++// 	    std::cerr << "Loading genome annotation ... " << std::flush;
++// 	    read(annotationFile, store, Gtf());
++// 	    std::cerr << "[" << length(store.annotationStore) << "]" << std::endl;
++// 	    return true;	
++// 	
++// }
++// 
++// //
++// // 3. Extract intervals from gene annotations (grouped by contigId)
++// //
++// void extractGeneIntervals(String<String<TInterval> > & intervals, TStore const & store)
++// {
++//     // extract intervals from gene annotations (grouped by contigId)
++//     resize(intervals, length(store.contigStore));
++//     Iterator<TStore const, AnnotationTree<> >::Type it = begin(store, AnnotationTree<>());
++//     if (!goDown(it))
++//         return;
++//     do
++//     {
++//         SEQAN_ASSERT_EQ(getType(it), "gene");
++//         TPos beginPos = getAnnotation(it).beginPos;
++//         TPos endPos = getAnnotation(it).endPos;
++//         TId contigId = getAnnotation(it).contigId;
++//         if (beginPos > endPos)
++//             std::swap(beginPos, endPos);
++//         // insert forward-strand interval of the gene and its annotation id
++//         appendValue(intervals[contigId], TInterval(beginPos, endPos, value(it)));
++//     }
++//     while (goRight(it));
++// }
++// 
++// //
++// // 4. Construct interval trees
++// //
++// void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
++// {
++//     resize(intervalTrees, length(intervals));
++//     SEQAN_OMP_PRAGMA(parallel for)
++//     for (unsigned i = 0; i < length(intervals); ++i)
++//         createIntervalTree(intervalTrees[i], intervals[i]);
++// }
++// 
++// int main(int argc, char const * argv[])
++// {
++//     Options options;
++//     TStore store;
++// 	String<String<TInterval> > intervals;
++// 	
++//     ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
++//     if (res != ArgumentParser::PARSE_OK)
++//         return res == ArgumentParser::PARSE_ERROR;
++// 
++// 	if (!loadFiles(store, options))
++// 	        return 1;
++// 	
++// 	extractGeneIntervals(intervals, store);
++// 	
++// 	typedef IntervalTree<TPos, TId> TIntervalTree;
++// 	String<TIntervalTree> intervalTrees;
++// 	
++//     return 0;
++// }
++// 
+ 
+-// define used types
+-typedef FragmentStore<>                         TStore;
+-typedef Value<TStore::TAnnotationStore>::Type   TAnnotation;
+-typedef TAnnotation::TId                        TId;
+-typedef TAnnotation::TId                        TPos;
+-typedef IntervalAndCargo<TPos, TId>             TInterval;
+ 
+-// define options
+-struct Options
+-{
+-    std::string annotationFileName;
+-    std::string alignmentFileName;
+-};
+-
+-// 1. Parse command line and fill Options object
+-//
+-ArgumentParser::ParseResult parseOptions(Options & options, int argc, char const * argv[])
+-{
+-    ArgumentParser parser("gene_quant");
+-    setShortDescription(parser, "A simple gene quantification tool");
+-    setVersion(parser, "1.0");
+-    setDate(parser, "Sep 2012");
+-    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
+-    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
+-    addUsageLine(parser, "[\\fIOPTIONS\\fP] <\\fIANNOTATION FILE\\fP> <\\fIREAD ALIGNMENT FILE\\fP>");
+-    // Parse command line
+-    ArgumentParser::ParseResult res = parse(parser, argc, argv);
+-    if (res == ArgumentParser::PARSE_OK)
+-    {
+-        // Extract option values
+-        getArgumentValue(options.annotationFileName, parser, 0);
+-        getArgumentValue(options.alignmentFileName, parser, 1);
+-    }
+-    return res;
+-}
++#include <iostream>
++#include <seqan/file.h>
++#include <seqan/journaled_set.h>
+ 
+-// 2. Load annotations and alignments from files
+-//
+-bool loadFiles(TStore & store, Options const & options)
++using namespace seqan;
++int main()
+ {
+-    // INSERT YOUR CODE HERE ...
+-    //
+-	std::ifstream alignmentFile(options.alignmentFileName.c_str());
+-	    if (!alignmentFile.good())
+-	    {
+-	        std::cerr << "Couldn't open alignment file " << options.alignmentFileName << std::endl;
+-	        return false;
+-	    }
+-	    std::cerr << "Loading read alignments ..... " << std::flush;
+-	    read(alignmentFile, store, Sam());
+-	    std::cerr << "[" << length(store.alignedReadStore) << "]" << std::endl;
+-	    // load annotations
+-	    std::ifstream annotationFile(options.annotationFileName.c_str());
+-	    if (!annotationFile.good())
+-	    {
+-	        std::cerr << "Couldn't open annotation file" << options.annotationFileName << std::endl;
+-	        return false;
+-	    }
+-	    std::cerr << "Loading genome annotation ... " << std::flush;
+-	    read(annotationFile, store, Gtf());
+-	    std::cerr << "[" << length(store.annotationStore) << "]" << std::endl;
+-	    return true;	
++    typedef String<char, Journaled<Alloc<>, SortedArray, Alloc<> > > TJournalString;
++    typedef Host<TJournalString>::Type THost;
++    typedef StringSet<TJournalString, Owner<JournaledSet> > TJournaledSet;
++    TJournaledSet journaledSet;
++    THost reference = "DPKKPRGKMSSYAFFVQTSREEHKKKHPDASVNFSEFSKKCSERWKTMSAKEKGKFEDMAKADKARYEREMKTYIPPKGE";
++    THost seq0 = "DPKKPRGKMVNSPPAFFVQTSREEHKKKHPDASVFSKKCSERWKTMSAKEKGKFEDMAKARYEREMKTTYIPKGETYIPPKGE";
++    THost seq1 = "DPHHPPKPRGKMVNSPPAFFVQTSREEHKPDASVFSKKCSERRMPNHHTMSAKEKGKFEDMAKARYEREMKTTYIPKGETYIPPKGE";
++    THost seq2 = "DPKKPRGKMSSYAFFVQTSREEHKKKHPKKCDEFSKKCSERWKTMSAKEKGKFEDARYEREMKTYIPPKGE";
++
++	setGlobalReference(journaledSet, reference);
++	    appendValue(journaledSet, seq0);
++	    appendValue(journaledSet, seq1);
++	    appendValue(journaledSet, seq2);
+ 	
+-}
++		join(journaledSet, 0, JoinConfig<GlobalAlign<JournaledManhatten> >());  // Simply inserts the
++		    join(journaledSet, 1, JoinConfig<GlobalAlign<JournaledCompact> >());     // Uses default scoring scheme to compute compact journal.
++		    JoinConfig<GlobalAlign<JournaledCompact> > joinConfig;
++		    setScoringScheme(joinConfig, Score<int, BiAffine>(0,-1,-1));    // Note the mismatch score is forbidden internally when used in the context of journaling.
++		    join(journaledSet, 2, joinConfig);  // Compute journal using Levenshtein distance.
++
++		    ::std::cout << "Reference: " << globalReference(journaledSet) << ::std::endl;
++		    for(unsigned i = 0; i < length(journaledSet); ++i)
++		        ::std::cout << "Journaled Sequence " << i << ": " << value(journaledSet,i) << ::std::endl;
++		
++		
++		
+ 
+-//
+-// 3. Extract intervals from gene annotations (grouped by contigId)
+-//
+-void extractGeneIntervals(String<String<TInterval> > & intervals, TStore const & store)
+-{
+-    // extract intervals from gene annotations (grouped by contigId)
+-    resize(intervals, length(store.contigStore));
+-    Iterator<TStore const, AnnotationTree<> >::Type it = begin(store, AnnotationTree<>());
+-    if (!goDown(it))
+-        return;
+-    do
+-    {
+-        SEQAN_ASSERT_EQ(getType(it), "gene");
+-        TPos beginPos = getAnnotation(it).beginPos;
+-        TPos endPos = getAnnotation(it).endPos;
+-        TId contigId = getAnnotation(it).contigId;
+-        if (beginPos > endPos)
+-            std::swap(beginPos, endPos);
+-        // insert forward-strand interval of the gene and its annotation id
+-        appendValue(intervals[contigId], TInterval(beginPos, endPos, value(it)));
+-    }
+-    while (goRight(it));
+ }
+ 
+-//
+-// 4. Construct interval trees
+-//
+-void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
+-{
+-    resize(intervalTrees, length(intervals));
+-    SEQAN_OMP_PRAGMA(parallel for)
+-    for (unsigned i = 0; i < length(intervals); ++i)
+-        createIntervalTree(intervalTrees[i], intervals[i]);
+-}
+-
+-int main(int argc, char const * argv[])
+-{
+-    Options options;
+-    TStore store;
+-	String<String<TInterval> > intervals;
+-	
+-    ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
+-    if (res != ArgumentParser::PARSE_OK)
+-        return res == ArgumentParser::PARSE_ERROR;
+-
+-	if (!loadFiles(store, options))
+-	        return 1;
+-	
+-	extractGeneIntervals(intervals, store);
++void loadAndJoin(TJournaledSet &jset, stream &fs){
+ 	
+-	typedef IntervalTree<TPos, TId> TIntervalTree;
+-	String<TIntervalTree> intervalTrees;
+-	
+-    return 0;
+ }
+ 
++

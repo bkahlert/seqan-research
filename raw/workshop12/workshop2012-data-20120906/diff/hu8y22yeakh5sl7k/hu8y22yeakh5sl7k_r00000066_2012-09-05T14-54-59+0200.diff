@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp	2012-09-05 14:49:56.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp	2012-09-05 14:54:47.791166196 +0200
+@@ -64,7 +64,7 @@
+ 
+ 	while(goRight(it)){
+ 		++counter;
+-		counterLengthAll += getAnnotation(it).endPos -getAnnotation(it).beginPos;	
++		counterLengthAll += abs(getAnnotation(it).endPos -getAnnotation(it).beginPos);	
+ 	}
+ 	
+ 	while(goUp(it)){
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~	2012-09-05 14:36:13.000000000 +0200
++++ ./sandbox/my_sandbox/apps/fragmentStore_tutorial/fragmentStore_tutorial.cpp~	2012-09-05 14:49:56.675154128 +0200
+@@ -42,7 +42,7 @@
+ int main()
+ {
+     FragmentStore<> store;
+-    std::ifstream file("/home/franzi/SeqAn/assignment_annotations.gtf", std::ios_base::in | std::ios_base::binary);
++    std::ifstream file("/home/franzi/SeqAn/Mus_musculus.ucsc.MM9.gtf", std::ios_base::in | std::ios_base::binary);
+     read(file, store, Gtf());
+     // Create AnnotationTree iterator
+     Iterator<FragmentStore<>, AnnotationTree<> >::Type it;

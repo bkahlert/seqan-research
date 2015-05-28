@@ -1,0 +1,24 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app2/io_app2.cpp ./sandbox/my_sandbox/apps/io_app2/io_app2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app2/io_app2.cpp	2012-09-04 14:15:49.000000000 +0200
++++ ./sandbox/my_sandbox/apps/io_app2/io_app2.cpp	2012-09-04 14:18:04.885269590 +0200
+@@ -10,7 +10,7 @@
+         return 1;
+     }
+     seqan::SequenceStream seqStream(argv[1], seqan::SequenceStream::WRITE,
+-                                    seqan::SequenceStream::FileFormat::FASTA);
++                                    seqan::SequenceStream::FASTA);
+     if (!isGood(seqStream))
+     {
+         std::cerr << "ERROR: Could not open the file.\n";
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app2/io_app2.cpp~ ./sandbox/my_sandbox/apps/io_app2/io_app2.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/io_app2/io_app2.cpp~	2012-09-04 14:15:18.000000000 +0200
++++ ./sandbox/my_sandbox/apps/io_app2/io_app2.cpp~	2012-09-04 14:15:49.392597713 +0200
+@@ -10,7 +10,7 @@
+         return 1;
+     }
+     seqan::SequenceStream seqStream(argv[1], seqan::SequenceStream::WRITE,
+-                                    seqan::SequenceStreamcoloncolonFileFormat::FASTA());
++                                    seqan::SequenceStream::FileFormat::FASTA);
+     if (!isGood(seqStream))
+     {
+         std::cerr << "ERROR: Could not open the file.\n";

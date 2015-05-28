@@ -1,0 +1,107 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp	2012-09-04 17:06:02.000000000 +0200
++++ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp	2012-09-04 17:21:34.532888982 +0200
+@@ -12,6 +12,7 @@
+ typedef TAnnotation::TId                        TPos;
+ typedef IntervalAndCargo<TPos, TId>             TInterval;
+ typedef IntervalTree<TPos, TId>                 TIntervalTree;
++typedef Value<TStore::TAlignedReadStore>::Type  TAlignedRead;
+ 
+ // define options
+ struct Options
+@@ -99,6 +100,29 @@
+         createIntervalTree(intervalTrees[i], intervals[i]);
+ }
+ 
++//
++// 5. Count reads per gene
++//
++void countReadsPerGene(String<unsigned> & readsPerGene, String<TIntervalTree> const & intervalTrees, TStore const & store)
++{
++    resize(readsPerGene, length(store.annotationStore);
++    for (unsigned i = 0; i < length(store.contigStore); ++i)
++    {
++        Iterator<TStore, TAlignedRead>::Type it = begin(store, TAlignedRead);
++        while(!atEnd(it))
++        {
++            String<TId> overlapping;
++            findintervals(intervallTrees[getValue(it).contigId],
++                          getValue(it).beginPos,
++                          getValue(it).endPos);
++             Iterator<Sting<TId> >::Type rIt = begin(overlapping);
++             while(!atEnd(rIt))
++             {
++                countReadsPerGene[getValue(rIt)] += 1;
++             }
++        }
++    }
++}
+ 
+ int main(int argc, char const * argv[])
+ {
+@@ -106,6 +130,7 @@
+     TStore store;
+     String<String<TInterval> > intervals;
+     String<TIntervalTree> intervalTrees;
++    String<unsigned> readsPerGene;
+     
+     ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
+     if (res != ArgumentParser::PARSE_OK)
+@@ -114,5 +139,6 @@
+         return 1;
+     extractGeneIntervals(intervals, store);
+     constructIntervalTrees(intervalTrees, intervals);
++    countReadsPerGene(readsPerGene, intervalTrees, store);
+     return 0;
+ }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~	2012-09-04 17:04:45.000000000 +0200
++++ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~	2012-09-04 17:10:27.005578891 +0200
+@@ -12,6 +12,7 @@
+ typedef TAnnotation::TId                        TPos;
+ typedef IntervalAndCargo<TPos, TId>             TInterval;
+ typedef IntervalTree<TPos, TId>                 TIntervalTree;
++typedef Value<TStore::TAlignedReadStore>::Type  TAlignedRead;
+ 
+ // define options
+ struct Options
+@@ -93,13 +94,19 @@
+ //
+ void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
+ {
+-    typename Iterator<String<String<TInterval> > >::Type iit = begin(intervals);
+-    do
+-    {
+-        appendValue(intervalTrees, TIntervalTree(getValue(iit)));
+-    } while (iit.goNext())
++    resize(intervalTrees, length(intervals));
++    SEQAN_OMP_PRAGMA(parallel for)
++    for (unsigned i = 0; i < length(intervals); ++i)
++        createIntervalTree(intervalTrees[i], intervals[i]);
+ }
+ 
++//
++// 5. Count reads per gene
++//
++void countReadsPerGene(String<unsigned> & readsPerGene, String<TIntervalTree> const & intervalTrees, TStore const & store)
++{
++    
++}
+ 
+ int main(int argc, char const * argv[])
+ {
+@@ -107,6 +114,7 @@
+     TStore store;
+     String<String<TInterval> > intervals;
+     String<TIntervalTree> intervalTrees;
++    String<unsigned> readsPerGene;
+     
+     ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
+     if (res != ArgumentParser::PARSE_OK)
+@@ -115,5 +123,6 @@
+         return 1;
+     extractGeneIntervals(intervals, store);
+     constructIntervalTrees(intervalTrees, intervals);
++    countReadsPerGene(readsPerGene, intervalTrees, store);
+     return 0;
+ }

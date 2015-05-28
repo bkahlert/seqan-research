@@ -1,0 +1,392 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/rna_seq.cpp ./sandbox/my_sandbox/apps/simple/rna_seq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/rna_seq.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/simple/rna_seq.cpp	2012-09-05 13:11:24.052134378 +0200
+@@ -0,0 +1,166 @@
++#include <iostream>
++#include <seqan/store.h>
++#include <seqan/arg_parse.h>
++#include <seqan/misc/misc_interval_tree.h>
++#include <seqan/parallel.h>
++
++using namespace seqan;
++
++
++// define used types
++typedef FragmentStore<> TStore;
++typedef Value<TStore::TAnnotationStore>::Type   TAnnotation;
++typedef TAnnotation::TId                        TId;
++typedef TAnnotation::TId                        TPos;
++typedef IntervalAndCargo<TPos, TId>             TInterval;
++typedef IntervalTree<TPos, TId>                 TIntervalTree;
++typedef Value<TStore::TAlignedReadStore>::Type  TAlignedRead;
++
++// define options
++struct Options
++{
++    std::string annotationFileName;
++    std::string alignmentFileName;
++};
++
++
++//
++// 1. Parse command line and fill Options object
++//
++ArgumentParser::ParseResult parseOptions(Options & options, int argc, char const * argv[])
++{
++    ArgumentParser parser("gene_quant");
++    setShortDescription(parser, "A simple gene quantification tool");
++    setVersion(parser, "1.0");
++    setDate(parser, "Sep 2012");
++
++    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
++    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
++    addUsageLine(parser, "[\\fIOPTIONS\\fP] <\\fIANNOTATION FILE\\fP> <\\fIREAD ALIGNMENT FILE\\fP>");
++
++    // Parse command line
++    ArgumentParser::ParseResult res = parse(parser, argc, argv);
++
++    if (res == ArgumentParser::PARSE_OK)
++    {
++        // Extract option values
++        getArgumentValue(options.annotationFileName, parser, 0);
++        getArgumentValue(options.alignmentFileName, parser, 1);
++    }
++
++    return res;
++}
++
++
++//
++// 2. Load annotations and alignments from files
++//
++bool loadFiles(TStore & store, Options const & options)
++{
++  
++
++std::ifstream alignmentFile(options.alignmentFileName.c_str());
++    if (!alignmentFile.good())
++    {
++        std::cerr << "Couldn't open alignment file " << options.alignmentFileName << std::endl;
++        return false;
++    }
++    std::cerr << "Loading read alignments ..... " << std::flush;
++    read(alignmentFile, store, Sam());
++    std::cerr << "[" << length(store.alignedReadStore) << "]" << std::endl;
++    // load annotations
++    std::ifstream annotationFile(options.annotationFileName.c_str());
++    if (!annotationFile.good())
++    {
++        std::cerr << "Couldn't open annotation file" << options.annotationFileName << std::endl;
++        return false;
++    }
++    std::cerr << "Loading genome annotation ... " << std::flush;
++    read(annotationFile, store, Gtf());
++    std::cerr << "[" << length(store.annotationStore) << "]" << std::endl;
++    return true;
++
++
++ }
++
++//
++// 3. Extract intervals from gene annotations (grouped by contigId)
++//
++void extractGeneIntervals(String<String<TInterval> > & intervals, TStore const & store)
++{
++   // extract intervals from gene annotations (grouped by contigId)
++    resize(intervals, length(store.contigStore));
++    Iterator<TStore const, AnnotationTree<> >::Type it = begin(store, AnnotationTree<>());
++    if (!goDown(it))
++        return;
++    do
++    {
++        SEQAN_ASSERT_EQ(getType(it), "gene");
++        TPos beginPos = getAnnotation(it).beginPos;
++        TPos endPos = getAnnotation(it).endPos;
++        TId contigId = getAnnotation(it).contigId;
++        if (beginPos > endPos)
++            std::swap(beginPos, endPos);
++        // insert forward-strand interval of the gene and its annotation id
++        appendValue(intervals[contigId], TInterval(beginPos, endPos, value(it)));
++    }
++    while (goRight(it));
++    
++}
++
++
++
++
++//
++// 4. Construct interval trees
++//
++void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
++{
++    resize(intervalTrees,length(intervals)); 
++    for (unsigned i = 0; i < length(intervals); ++i)
++        createIntervalTree(intervalTrees[i], intervals[i]);
++}
++
++
++//
++// 5. Count reads per gene
++//
++void countReadsPerGene(String<unsigned> & readsPerGene, String<TIntervalTree> & intervalTrees, TStore const & store)
++{
++
++    resize(readsPerGene, length(store.annotationStore), 0);
++    
++    for (int j = 0; j < length(store.alignedReadStore); ++j ) {
++        TAlignedRead read = store.alignedReadStore[j];    
++        String<TId> results;
++        TIntervalTree& intervalTree = intervalTrees[read.contigId]; 
++        findIntervals(intervalTree, read.startPos, read.endPos, results);
++        for (int i = 0; i < length(results); ++i) {
++            readsPerGene[ results[i] ]++;
++        }
++    
++    }    
++
++
++}
++
++int main(int argc, char const * argv[])
++{
++    Options options;
++    TStore store;
++
++    ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
++    if (res != ArgumentParser::PARSE_OK)
++        return res == ArgumentParser::PARSE_ERROR;
++
++    if (!loadFiles(store, options))
++        return 1;
++    
++    String<String<TInterval> > intervals;
++
++    extractGeneIntervals(intervals, store);
++
++
++    return 0;
++}
++
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 17:26:43.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-05 13:34:30.172151212 +0200
+@@ -1,166 +1,70 @@
++
+ #include <iostream>
+-#include <seqan/store.h>
+-#include <seqan/arg_parse.h>
+-#include <seqan/misc/misc_interval_tree.h>
+-#include <seqan/parallel.h>
++#include <seqan/seq_io.h>
++#include <seqan/journaled_set.h>
+ 
+ using namespace seqan;
+-
+-
+-// define used types
+-typedef FragmentStore<> TStore;
+-typedef Value<TStore::TAnnotationStore>::Type   TAnnotation;
+-typedef TAnnotation::TId                        TId;
+-typedef TAnnotation::TId                        TPos;
+-typedef IntervalAndCargo<TPos, TId>             TInterval;
+-typedef IntervalTree<TPos, TId>                 TIntervalTree;
+-typedef Value<TStore::TAlignedReadStore>::Type  TAlignedRead;
+-
+-// define options
+-struct Options
+-{
+-    std::string annotationFileName;
+-    std::string alignmentFileName;
+-};
+-
+-
+-//
+-// 1. Parse command line and fill Options object
+-//
+-ArgumentParser::ParseResult parseOptions(Options & options, int argc, char const * argv[])
+-{
+-    ArgumentParser parser("gene_quant");
+-    setShortDescription(parser, "A simple gene quantification tool");
+-    setVersion(parser, "1.0");
+-    setDate(parser, "Sep 2012");
+-
+-    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
+-    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
+-    addUsageLine(parser, "[\\fIOPTIONS\\fP] <\\fIANNOTATION FILE\\fP> <\\fIREAD ALIGNMENT FILE\\fP>");
+-
+-    // Parse command line
+-    ArgumentParser::ParseResult res = parse(parser, argc, argv);
+-
+-    if (res == ArgumentParser::PARSE_OK)
+-    {
+-        // Extract option values
+-        getArgumentValue(options.annotationFileName, parser, 0);
+-        getArgumentValue(options.alignmentFileName, parser, 1);
+-    }
+-
+-    return res;
+-}
+-
+-
+-//
+-// 2. Load annotations and alignments from files
+-//
+-bool loadFiles(TStore & store, Options const & options)
+-{
+-  
+-
+-std::ifstream alignmentFile(options.alignmentFileName.c_str());
+-    if (!alignmentFile.good())
++template <typename TString, typename TStream, typename TSpec>
++inline int
++loadAndJoin(StringSet<TString, Owner<JournaledSet> > & /*journalSet*/,
++            TStream & stream,
++            JoinConfig<TSpec> const & /*joinConfig*/)
++{
++    typedef typename Host<TString>::Type THost;
++    // Define the RecordReader.
++    RecordReader<std::ifstream, SinglePass<> > reader(stream);
++    // [A] Ensure the Journal Set is not occupied by other sequences.
++
++    // Construct the temporary buffers for the read id and sequence.
++    String<char> tempSeqId;
++    THost tempSeq;
++    // No sequences in the fasta file!
++    if (atEnd(reader))
+     {
+-        std::cerr << "Couldn't open alignment file " << options.alignmentFileName << std::endl;
+-        return false;
++        std::cerr << "Empty FASTA file." << std::endl;
++        return -1;
+     }
+-    std::cerr << "Loading read alignments ..... " << std::flush;
+-    read(alignmentFile, store, Sam());
+-    std::cerr << "[" << length(store.alignedReadStore) << "]" << std::endl;
+-    // load annotations
+-    std::ifstream annotationFile(options.annotationFileName.c_str());
+-    if (!annotationFile.good())
++    // First read sequence for reference sequence.
++    if (readRecord(tempSeqId, tempSeq, reader, Fasta()) != 0)
+     {
+-        std::cerr << "Couldn't open annotation file" << options.annotationFileName << std::endl;
+-        return false;
++        std::cerr << "ERROR reading FASTA." << std::endl;
++        return 1;
+     }
+-    std::cerr << "Loading genome annotation ... " << std::flush;
+-    read(annotationFile, store, Gtf());
+-    std::cerr << "[" << length(store.annotationStore) << "]" << std::endl;
+-    return true;
+-
++    // [B] Set the reference sequence to the Journal Set
+ 
+- }
+-
+-//
+-// 3. Extract intervals from gene annotations (grouped by contigId)
+-//
+-void extractGeneIntervals(String<String<TInterval> > & intervals, TStore const & store)
+-{
+-   // extract intervals from gene annotations (grouped by contigId)
+-    resize(intervals, length(store.contigStore));
+-    Iterator<TStore const, AnnotationTree<> >::Type it = begin(store, AnnotationTree<>());
+-    if (!goDown(it))
+-        return;
+-    do
++    // Read remaining sequences.
++    while (!atEnd(reader))
+     {
+-        SEQAN_ASSERT_EQ(getType(it), "gene");
+-        TPos beginPos = getAnnotation(it).beginPos;
+-        TPos endPos = getAnnotation(it).endPos;
+-        TId contigId = getAnnotation(it).contigId;
+-        if (beginPos > endPos)
+-            std::swap(beginPos, endPos);
+-        // insert forward-strand interval of the gene and its annotation id
+-        appendValue(intervals[contigId], TInterval(beginPos, endPos, value(it)));
++        if (readRecord(tempSeqId, tempSeq, reader, Fasta()) != 0)
++        {
++            std::cerr << "ERROR reading FASTA." << std::endl;
++            return 1;
++        }
++        // [C] Append and join the current read sequence.
+     }
+-    while (goRight(it));
+-    
+-}
+-
+-
+-
+-
+-//
+-// 4. Construct interval trees
+-//
+-void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
+-{
+-    resize(intervalTrees,length(intervals)); 
+-    for (unsigned i = 0; i < length(intervals); ++i)
+-        createIntervalTree(intervalTrees[i], intervals[i]);
++    return 0;
+ }
+-
+-
+-//
+-// 5. Count reads per gene
+-//
+-void countReadsPerGene(String<unsigned> & readsPerGene, String<TIntervalTree> & intervalTrees, TStore const & store)
++int main()
+ {
+-
+-    resize(readsPerGene, length(store.annotationStore), 0);
++    // Definition of the used types.
++    typedef String<Dna,Alloc<> > TSequence;
++    typedef String<Dna,Journaled<Alloc<>,SortedArray,Alloc<> > > TJournal;
++    typedef StringSet< TJournal, Owner<JournaledSet> > TJournaledSet;
++    // Open the stream to the file containing the sequences.
++    String<char> seqDatabasePath = "/home/kokonech/tmp/sequences.fasta";
++    std::ifstream databaseFile(toCString(seqDatabasePath), std::ios_base::in);
++    if(!databaseFile.good())
++    {
++        std::cerr << "Cannot open file <" << seqDatabasePath << ">!" << std::endl;
++    }
++    // Reading each sequence and journal them.
+     
+-    for (int j = 0; j < length(store.alignedReadStore); ++j ) {
+-        TAlignedRead read = store.alignedReadStore[j];    
+-        String<TId> results;
+-        TIntervalTree& intervalTree = intervalTrees[read.contigId]; 
+-        findIntervals(intervalTree, read.startPos, read.endPos, results);
+-        for (int i = 0; i < length(results); ++i) {
+-            readsPerGene[ results[i] ]++;
+-        }
+     
+-    }    
+-
++    // [D] Construct Journaled Set and call loadAndJoin
+ 
++    databaseFile.close();
++    return 0;
+ }
+ 
+-int main(int argc, char const * argv[])
+-{
+-    Options options;
+-    TStore store;
+-
+-    ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
+-    if (res != ArgumentParser::PARSE_OK)
+-        return res == ArgumentParser::PARSE_ERROR;
+ 
+-    if (!loadFiles(store, options))
+-        return 1;
+-    
+-    String<String<TInterval> > intervals;
+-
+-    extractGeneIntervals(intervals, store);
+-
+-
+-    return 0;
+-}
+ 
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

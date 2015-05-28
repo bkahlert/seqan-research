@@ -1,0 +1,35 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp	2012-09-05 14:41:05.000000000 +0200
++++ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp	2012-09-05 14:41:45.641119869 +0200
+@@ -131,8 +131,8 @@
+     goPrevious(upper);
+     if (value(upper) < entriesIt->physicalPosition)
+         goNext(upper);
+-    int offset = entrieIt->physicalPosition - entrieIt->virtualPosition;
+-    while(value(upper) < entriesIt->physicalPosition + entriesIt->length)
++    int offset = entriesIt->physicalPosition - entriesIt->virtualPosition;
++    while(value(upper) < entriessIt->physicalPosition + entriesIt->length)
+     {
+         hitTarget.appendValue(value(upper)+offset);
+     }
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp~ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/journal_app/journal_app.cpp~	2012-09-05 14:40:41.000000000 +0200
++++ ./sandbox/my_sandbox/apps/journal_app/journal_app.cpp~	2012-09-05 14:41:43.453109017 +0200
+@@ -125,14 +125,14 @@
+                          TPattern const & pattern,
+                          String<int> const & refHits)
+ {
+-    if (length(refTargets)==0)
++    if (length(refHits)==0)
+         return;
+     Iterator<String<int> >::Type upper = ::std::upper_bound(begin(refHits), end(refHits), entriesIt->physicalPosition);
+     goPrevious(upper);
+     if (value(upper) < entriesIt->physicalPosition)
+         goNext(upper);
+-    int offset = entrieIt->physicalPosition - entrieIt->virtualPosition;
+-    while(value(upper) < entriesIt->physicalPosition + entriesIt->length)
++    int offset = entriesIt->physicalPosition - entriesIt->virtualPosition;
++    while(value(upper) < entriessIt->physicalPosition + entriesIt->length)
+     {
+         hitTarget.appendValue(value(upper)+offset);
+     }

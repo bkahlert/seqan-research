@@ -1,0 +1,20 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/rna_seq.cpp ./sandbox/lienhard/apps/rna_seq/rna_seq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/rna_seq.cpp	2012-09-04 17:07:16.000000000 +0200
++++ ./sandbox/lienhard/apps/rna_seq/rna_seq.cpp	2012-09-04 17:15:30.867810291 +0200
+@@ -139,7 +139,7 @@
+     Iterator<TStore const, AnnotationTree<> >::Type transIt = begin(store, AnnotationTree<>());
+     Iterator<TStore const, AnnotationTree<> >::Type exonIt;
+     double millionMappedReads = length(store.alignedReadStore) / 1000000.0;
+-    std::cout << "#gene name\tRPKM value" << std::endl;
++    std::cout << "#gene name\tcount\tRPKM value" << std::endl;
+     for (unsigned j = 0; j < length(readsPerGene); ++j)
+     {
+         if (readsPerGene[j] == 0)
+@@ -167,6 +167,7 @@
+         // RPKM is number of reads mapped to a gene divided by its gene length in kbps
+         // and divided by millions of total mapped reads
+         std::cout << store.annotationNameStore[j] << '\t';
++	std::cout << readsPerGene[j] << "\t";
+         std::cout << readsPerGene[j] / (mRNALengthMax / 1000.0) / millionMappedReads << std::endl;
+     }
+ }

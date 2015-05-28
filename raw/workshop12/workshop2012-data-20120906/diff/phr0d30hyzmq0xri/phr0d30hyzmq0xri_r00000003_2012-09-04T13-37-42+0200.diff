@@ -1,0 +1,82 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_fasta/io_fasta.cpp ./sandbox/lienhard/apps/io_fasta/io_fasta.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_fasta/io_fasta.cpp	2012-09-04 13:29:54.000000000 +0200
++++ ./sandbox/lienhard/apps/io_fasta/io_fasta.cpp	2012-09-04 13:37:27.909991649 +0200
+@@ -1,61 +1,15 @@
+-// ==========================================================================
+-//                                  io_fasta
+-// ==========================================================================
+-// Copyright (c) 2006-2012, Knut Reinert, FU Berlin
+-// All rights reserved.
+-//
+-// Redistribution and use in source and binary forms, with or without
+-// modification, are permitted provided that the following conditions are met:
+-//
+-//     * Redistributions of source code must retain the above copyright
+-//       notice, this list of conditions and the following disclaimer.
+-//     * Redistributions in binary form must reproduce the above copyright
+-//       notice, this list of conditions and the following disclaimer in the
+-//       documentation and/or other materials provided with the distribution.
+-//     * Neither the name of Knut Reinert or the FU Berlin nor the names of
+-//       its contributors may be used to endorse or promote products derived
+-//       from this software without specific prior written permission.
+-//
+-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+-// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+-// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+-// ARE DISCLAIMED. IN NO EVENT SHALL KNUT REINERT OR THE FU BERLIN BE LIABLE
+-// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+-// DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+-// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+-// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+-// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+-// OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+-// DAMAGE.
+-//
+-// ==========================================================================
+-// Author: Your Name <your.email@example.net>
+-// ==========================================================================
+-
+ #include <seqan/basic.h>
+ #include <seqan/sequence.h>
+ 
+ #include <seqan/arg_parse.h>
+ 
+-// ==========================================================================
+-// Classes
+-// ==========================================================================
+-
+-// --------------------------------------------------------------------------
+-// Class AppOptions
+-// --------------------------------------------------------------------------
+-
+-// This struct stores the options from the command line.
+-//
+-// You might want to rename this to reflect the name of your app.
+-
+ struct AppOptions
+ {
+     // Verbosity level.  0 -- quiet, 1 -- normal, 2 -- verbose, 3 -- very verbose.
+     int verbosity;
+ 
+     // The first (and only) argument of the program is stored here.
+-    seqan::CharString text;
++    seqan::CharString file;
+ 
+     AppOptions() :
+         verbosity(1)
+@@ -76,13 +30,13 @@
+     // Setup ArgumentParser.
+     seqan::ArgumentParser parser("io_fasta");
+     // Set short description, version, and date.
+-    setShortDescription(parser, "Put a Short Description Here");
++    setShortDescription(parser, "reads fastA file");
+     setVersion(parser, "0.1");
+     setDate(parser, "July 2012");
+ 
+     // Define usage line and long description.
+     addUsageLine(parser, "[\\fIOPTIONS\\fP] \"\\fITEXT\\fP\"");
+-    addDescription(parser, "This is the application skelleton and you should modify this string.");
++    addDescription(parser, "IO tutorial example");
+ 
+     // We require one argument.
+     addArgument(parser, seqan::ArgParseArgument(seqan::ArgParseArgument::STRING, "TEXT"));

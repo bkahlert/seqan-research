@@ -1,0 +1,16 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/index.cpp ./sandbox/my_rob/apps/index/index.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/index/index.cpp	2012-09-05 14:00:51.000000000 +0200
++++ ./sandbox/my_rob/apps/index/index.cpp	2012-09-05 14:01:31.763793211 +0200
+@@ -7,10 +7,10 @@
+     TIndex index("dsfjsdaoijfosaj");
+     Iterator< TIndex, TopDown<ParentLinks<> > >::Type it(index);
+     std::cout << "JJJJJ"<< std::endl;
+-    do{
++    while (!isRoot(it)){
+ 		std::cout << representative(it) << "gggg" << std::endl;
+         if (!goDown(it) && !goRight(it))	
+ 		  while(goUp(it) && !goRight(it));
+-	}while (!isRoot(it);
++	};
+     return 0;
+ }

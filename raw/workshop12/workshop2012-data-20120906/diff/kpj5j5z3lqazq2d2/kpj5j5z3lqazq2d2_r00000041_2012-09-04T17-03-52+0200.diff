@@ -1,0 +1,15 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp and ./sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 17:02:50.000000000 +0200
++++ ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 17:03:50.000000000 +0200
+@@ -94,8 +94,8 @@
+ void constructIntervalTrees(String<TIntervalTree> & intervalTrees, String<String<TInterval> > const & intervals)
+ {
+     resize(intervalTrees, length(intervals));
+-    for (Iterator<String<String<TInterval> > const, Rooted>::Type conIt = begin(intervals); !atEnd(intervals); goNext(intervals)) {
+-	createIntervalTree(intervalTrees[position(conIt)], *conIt);
++    for (unsigned i=0; i<length(intervals); ++i) {
++	createIntervalTree(intervalTrees[i], intervals[i] );
+     }
+ }
+ 

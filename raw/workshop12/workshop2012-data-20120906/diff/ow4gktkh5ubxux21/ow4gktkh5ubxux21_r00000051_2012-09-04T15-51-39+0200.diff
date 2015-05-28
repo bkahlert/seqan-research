@@ -1,0 +1,351 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 15:07:23.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 15:51:22.741200999 +0200
+@@ -1,145 +1,76 @@
+ #include <iostream>
+-#include <time.h>
+-
+-#include <seqan/basic.h>
+-#include <seqan/sequence.h>
+-//#include <seqan/file.h>      // For printing SeqAn Strings.
+-
+-//#include <seqan/stream.h>
+-#include <seqan/bam_io.h>
++#include <seqan/store.h>
+ #include <seqan/arg_parse.h>
+-#include <seqan/seq_io.h>
++#include <seqan/misc/misc_interval_tree.h>
++#include <seqan/parallel.h>
+ 
+ using namespace seqan;
+-using namespace std;
+ 
+-/* 
+-    
+-void setupArgumentParser(ArgumentParser & parser)
++
++// define used types
++typedef FragmentStore<> TStore;
++
++
++// define options
++struct Options
++{
++    std::string annotationFileName;
++    std::string alignmentFileName;
++};
++
++
++//
++// 1. Parse command line and fill Options object
++//
++ArgumentParser::ParseResult parseOptions(Options & options, int argc, char const * argv[])
+ {
++    ArgumentParser parser("gene_quant");
++    setShortDescription(parser, "A simple gene quantification tool");
+     setVersion(parser, "1.0");
+-    setShortDescription(parser, "42");
++    setDate(parser, "Sep 2012");
+ 
+-    addUsageLine(parser, "simple [OPTIONS]");
+-    
+-	addSection(parser, "Options");
+-    addOption(parser, ArgParseOption("v", "verbose", "Enable verbose mode (show steps).") );
+-    addOption(parser, ArgParseOption("i", "input-file", "Path to input file.", ArgParseArgument::STRING ));
+-    //setRequired(parser, "i", true);
+-    addOption(parser, ArgParseOption("o", "output-file", "Path to output file.", ArgParseArgument::STRING ));
+-    addOption(parser, ArgParseOption("t", "threshold", "Max eshold.", ArgParseArgument::INTEGER ));
+-    setMinValue(parser, "t", "1");
+-    
+-    addTextSection(parser, "References");
+-    addText(parser, "k00k <okonechnikov@mpiib-berlin.mpg.de>");
+-}
+-*/
++    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
++    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
++    addUsageLine(parser, "[\\fIOPTIONS\\fP] <\\fIANNOTATION FILE\\fP> <\\fIREAD ALIGNMENT FILE\\fP>");
+ 
+-void funWithIndex () {
+-    
+-    FaiIndex faiIndex;
+-
+-    double t1 = clock();
+-    if (! build(faiIndex, "/data/genomes/hg19.fa")) {
+-        cout << "ERROR: Could not build the index!\n";
++    // Parse command line
++    ArgumentParser::ParseResult res = parse(parser, argc, argv);
++
++    if (res == ArgumentParser::PARSE_OK)
++    {
++        // Extract option values
++        getArgumentValue(options.annotationFileName, parser, 0);
++        getArgumentValue(options.alignmentFileName, parser, 1);
+     }
+-    double t2 = clock();
+-    
+-    cout << "Time building index: " << (t2 - t1) / 1000 << endl;
+-   
+-    CharString fileName = "/home/kokonech/tmp/hg19.fa.fai";
+-    int res = write(faiIndex, toCString(fileName));
+-    /*if (res != 0)
+-        std::cerr << "ERROR: Could not write the index to file!\n";
+-    
+-    unsigned idx = 0;
+-    if (!getIdByName(faiIndex, "1", idx))
+-        std::cerr << "ERROR: FAI index does not know about chr1.\n";
+-    
+-    unsigned seqLength = sequenceLength(faiIndex, idx);
+-    cout << "Sequence length is " << seqLength;    
+-
+-    // Load first 1000 characters of chr1.
+-    seqan::CharString seqRegion;
+-    if (readRegion(seqRegion, faiIndex, idx, 0, 1000) != 0)
+-        std::cerr << "ERROR: Could not load chr1.\n";
+-    
+-    cout << "First 1000 bases:\n" << seqRegion << endl;
+-    */
+-
+-    // Load all of chr1.
+-   //aseqan::CharString seqChr1;
+-    //if (readSequence(seqChr1, faiIdx, idx) != 0)
+-    //    std::cerr << "ERROR: Could not load chr1.\n";
+-    
+ 
++    return res;
++}
+ 
+ 
+-}
++//
++// 2. Load annotations and alignments from files
++//
++bool loadFiles(TStore & store, Options const & options)
++{
++    // INSERT YOUR CODE HERE ...
++    //
+ 
++    return true;
++}
+ 
+ 
+-int main(int argc, char const ** argv)
++int main(int argc, char const * argv[])
+ {
+-    funWithIndex(); 
+-/*    ArgumentParser parser("simple");
+-    setupArgumentParser(parser);
+-    
+-    ArgumentParser::ParseResult res = parse(parser, argc, argv);
+-    if (res != ArgumentParser::PARSE_OK) {
+-        return 1;
+-    }
++    Options options;
++    TStore store;
+ 
+-    CharString inFile, outFile;
+-    int threshold = 0;
+-    bool verbose = false;
+-
+-    getOptionValue(inFile, parser, "i");
+-    getOptionValue(outFile, parser, "o");
+-    getOptionValue(threshold, parser, "t");
+-    getOptionValue(verbose, parser, "v");
+-
+-    cerr << "Options" << endl;
+-    cerr << "Input file:  " << inFile << endl;
+-    cerr << "Output file: " << outFile << endl;
+-    cerr << "Max coverage threshold: " << threshold << endl;
+-    cerr << "Verbose: " << verbose << endl;
+-*/
+-/*    if (argc < 2) {
+-        cerr << " Not enought parameters" << endl;
+-        return -1;    
+-    }   
+-        
+-
+-    CharString id;
+-    Dna5String seq;
+-    cout << "Openning " << argv[1] << endl;
+-    SequenceStream seqStream(argv[1]);
+-    SequenceStream outStream("out.fa", SequenceStream::WRITE);    
++    ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
++    if (res != ArgumentParser::PARSE_OK)
++        return res == ArgumentParser::PARSE_ERROR;
+ 
+-    if (!isGood(seqStream))
+-    {
+-        std::cerr << "ERROR: Could not open the file.\n";
++    if (!loadFiles(store, options))
+         return 1;
+-    }
+-    
+-    StringSet<Dna5String> stringSet;
+-    StringSet<CharString> ids;
+-    cout << "File is OK" << endl;
+-    seqan::CharString qual;
+-    while(!atEnd(seqStream)) {
+-        readRecord(id, seq, qual, seqStream); // != 0 ) {
+-            std::cout << id << '\t' << seq <<  "\t" << qual << '\n';
+-      //  }
+-        appendValue(seqs, seq);
+-        appendValue(ids, id);
+-    }
+-
+-    
+-    writeAll(outStream, ids, seqs);
+-  */  
+ 
+     return 0;
+ }
+ 
+-
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp.back ./sandbox/my_sandbox/apps/simple/simple.cpp.back
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp.back	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp.back	2012-09-04 15:48:56.691199229 +0200
+@@ -0,0 +1,145 @@
++#include <iostream>
++#include <time.h>
++
++#include <seqan/basic.h>
++#include <seqan/sequence.h>
++//#include <seqan/file.h>      // For printing SeqAn Strings.
++
++//#include <seqan/stream.h>
++#include <seqan/bam_io.h>
++#include <seqan/arg_parse.h>
++#include <seqan/seq_io.h>
++
++using namespace seqan;
++using namespace std;
++
++/* 
++    
++void setupArgumentParser(ArgumentParser & parser)
++{
++    setVersion(parser, "1.0");
++    setShortDescription(parser, "42");
++
++    addUsageLine(parser, "simple [OPTIONS]");
++    
++	addSection(parser, "Options");
++    addOption(parser, ArgParseOption("v", "verbose", "Enable verbose mode (show steps).") );
++    addOption(parser, ArgParseOption("i", "input-file", "Path to input file.", ArgParseArgument::STRING ));
++    //setRequired(parser, "i", true);
++    addOption(parser, ArgParseOption("o", "output-file", "Path to output file.", ArgParseArgument::STRING ));
++    addOption(parser, ArgParseOption("t", "threshold", "Max eshold.", ArgParseArgument::INTEGER ));
++    setMinValue(parser, "t", "1");
++    
++    addTextSection(parser, "References");
++    addText(parser, "k00k <okonechnikov@mpiib-berlin.mpg.de>");
++}
++*/
++
++void funWithIndex () {
++    
++    FaiIndex faiIndex;
++
++    double t1 = clock();
++    if (! build(faiIndex, "/data/genomes/hg19.fa")) {
++        cout << "ERROR: Could not build the index!\n";
++    }
++    double t2 = clock();
++    
++    cout << "Time building index: " << (t2 - t1) / 1000 << endl;
++   
++    CharString fileName = "/home/kokonech/tmp/hg19.fa.fai";
++    int res = write(faiIndex, toCString(fileName));
++    /*if (res != 0)
++        std::cerr << "ERROR: Could not write the index to file!\n";
++    
++    unsigned idx = 0;
++    if (!getIdByName(faiIndex, "1", idx))
++        std::cerr << "ERROR: FAI index does not know about chr1.\n";
++    
++    unsigned seqLength = sequenceLength(faiIndex, idx);
++    cout << "Sequence length is " << seqLength;    
++
++    // Load first 1000 characters of chr1.
++    seqan::CharString seqRegion;
++    if (readRegion(seqRegion, faiIndex, idx, 0, 1000) != 0)
++        std::cerr << "ERROR: Could not load chr1.\n";
++    
++    cout << "First 1000 bases:\n" << seqRegion << endl;
++    */
++
++    // Load all of chr1.
++   //aseqan::CharString seqChr1;
++    //if (readSequence(seqChr1, faiIdx, idx) != 0)
++    //    std::cerr << "ERROR: Could not load chr1.\n";
++    
++
++
++
++}
++
++
++
++int main(int argc, char const ** argv)
++{
++    funWithIndex(); 
++/*    ArgumentParser parser("simple");
++    setupArgumentParser(parser);
++    
++    ArgumentParser::ParseResult res = parse(parser, argc, argv);
++    if (res != ArgumentParser::PARSE_OK) {
++        return 1;
++    }
++
++    CharString inFile, outFile;
++    int threshold = 0;
++    bool verbose = false;
++
++    getOptionValue(inFile, parser, "i");
++    getOptionValue(outFile, parser, "o");
++    getOptionValue(threshold, parser, "t");
++    getOptionValue(verbose, parser, "v");
++
++    cerr << "Options" << endl;
++    cerr << "Input file:  " << inFile << endl;
++    cerr << "Output file: " << outFile << endl;
++    cerr << "Max coverage threshold: " << threshold << endl;
++    cerr << "Verbose: " << verbose << endl;
++*/
++/*    if (argc < 2) {
++        cerr << " Not enought parameters" << endl;
++        return -1;    
++    }   
++        
++
++    CharString id;
++    Dna5String seq;
++    cout << "Openning " << argv[1] << endl;
++    SequenceStream seqStream(argv[1]);
++    SequenceStream outStream("out.fa", SequenceStream::WRITE);    
++
++    if (!isGood(seqStream))
++    {
++        std::cerr << "ERROR: Could not open the file.\n";
++        return 1;
++    }
++    
++    StringSet<Dna5String> stringSet;
++    StringSet<CharString> ids;
++    cout << "File is OK" << endl;
++    seqan::CharString qual;
++    while(!atEnd(seqStream)) {
++        readRecord(id, seq, qual, seqStream); // != 0 ) {
++            std::cout << id << '\t' << seq <<  "\t" << qual << '\n';
++      //  }
++        appendValue(seqs, seq);
++        appendValue(ids, id);
++    }
++
++    
++    writeAll(outStream, ids, seqs);
++  */  
++
++    return 0;
++}
++
++
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

@@ -1,0 +1,30 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 14:34:04.000000000 +0200
++++ ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 14:36:30.109692576 +0200
+@@ -135,21 +135,23 @@
+     }
+     std::cout << "In mRNA " << getParentName(it) << " gibt es " << counter <<" Exons\n";
+     unsigned sum=counter;
++    goNext(it); 
+     while(! atEnd(it)){
+-      goNext(it); 
++     
+       std::cout << "next\n";  
+       while(goDown(it));
+       counter=0;
+       if(getType(it) == "exon")
+         ++counter;
+       else std::cout <<"-" << getType(it) <<"-\n";
+-      while(goRight(it))
++      while(goRight(it)){
+         if(getType(it)=="exon")
+ 	  ++counter;
+ 	else std::cout << "-" << getType(it) <<"-\n";
+-      
++      }
+       std::cout << "In mRNA " << getParentName(it) << " gibt es " << counter <<" Exons\n";
+       sum+=counter;
++      goNext(it); 
+     }
+     std::cout << "Insgesammt: " << sum <<" Exons\n";
+    

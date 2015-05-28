@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/2ur8t8dx88n4v6ef_stats.txt -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata/2ur8t8dx88n4v6ef_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie/bowtie.cpp ./sandbox/my_sandbox/apps/bowtie/bowtie.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie/bowtie.cpp	2012-09-05 16:27:07.859375000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie/bowtie.cpp	2012-09-05 16:28:12.078125000 +0200
+@@ -19,7 +19,7 @@
+ void search(TIter & it, TStringSet const & pattern)
+ {
+ 	typedef typename Iterator<TStringSet const, Standard>::Type TPatternIter;
+-	for(TPatternIter patIt = atBegin(pattern); patIt != atEnd(pattern); ++patIt){
++	for(TPatternIter patIt = begin(pattern); patIt != end(pattern); ++patIt){
+ 		unsigned l = length(patIt);
+ 		goDown(it,infix(value(patIt),l/2,l));
+ 		

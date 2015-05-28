@@ -1,0 +1,70 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 15:59:51.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp	2012-09-05 16:18:18.496966869 +0200
+@@ -15,7 +15,19 @@
+ 
+ using namespace seqan;
+ 
+-void search() {}
++template <typename TIter, typename TStringSet>
++void search(TIter & it, TStringSet const & pattern)
++{
++    for (unsigned i=0; i < length(pattern); ++i)
++    {
++        unsigned j=length(pattern[i]-1);
++        while(goDown(it, pattern[i][j]) && j>= length(pattern)/2)
++        {
++            --j;
++        }
++        goRoot(it);
++    }
++}
+ 
+ int main(int argc, char *argv[]) 
+ {
+@@ -53,6 +65,10 @@
+     it = TIter(fmIndex);
+     search();
+     clear(fmIndex);
++    fmIndex = TIndex(text);
++    clear(it);
++    it = TIter(fmIndex);
++    clear(fmIndex);
+     clear(it);
+ 
+     return 0;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 15:59:24.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_app/bowtie_app.cpp~	2012-09-05 16:16:21.704387722 +0200
+@@ -15,7 +15,19 @@
+ 
+ using namespace seqan;
+ 
+-void search() {};
++template <typename TIter, typename TStringSet>
++void search(TIter & it, TStringSet const & pattern)
++{
++    for (unsigned i=0; i < length(pattern); ++i)
++    {
++        for (unsigned j=length(pattern[i]-1); j >= length(pattern)/2; --j)
++        {
++            if (!goDown(it, pattern[i][j]))
++                break;
++        }
++        goRoot(it);
++    }
++}
+ 
+ int main(int argc, char *argv[]) 
+ {
+@@ -53,6 +65,10 @@
+     it = TIter(fmIndex);
+     search();
+     clear(fmIndex);
++    fmIndex = TIndex(text);
++    clear(it);
++    it = TIter(fmIndex);
++    clear(fmIndex);
+     clear(it);
+ 
+     return 0;

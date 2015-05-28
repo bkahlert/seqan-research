@@ -1,0 +1,32 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/kielbasa/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/nhujs8lup1jadajj_stats.txt -x /Users/kielbasa/Development/seqan-trunk/misc/seqan_instrumentation/userdata/nhujs8lup1jadajj_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/kielbasa/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/kielbasa/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/kielbasa/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/kielbasa/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/kielbasa/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/test1_app.cpp ./test1_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/test1_app.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./test1_app.cpp	2012-09-04 13:41:11.000000000 +0200
+@@ -0,0 +1,28 @@
++#include <fstream>
++#include <iostream>
++
++#include <seqan/seq_io.h>
++#include <seqan/sequence.h>
++
++int main(int argc, char const ** argv)
++{
++    if (argc != 2)
++        return 1;  // Invalid number of arguments.
++    
++    // Open file and create RecordReader.
++    std::fstream in(argv[1], std::ios::binary | std::ios::in);
++    seqan::RecordReader<std::fstream, seqan::SinglePass<> > reader(in);
++    
++    // Read file record-wise.
++    seqan::CharString id;
++    seqan::Dna5String seq;
++    while (!atEnd(reader))
++    {
++        if (readRecord(id, seq, reader, seqan::Fasta()) != 0)
++            return 1;  // Could not record from file.
++        
++        std::cout << id << "\t" << seq << "\n";
++    }
++    
++    return 0;
++}

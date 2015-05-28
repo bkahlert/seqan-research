@@ -1,0 +1,34 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp ./sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp	2012-09-05 16:21:55.000000000 +0200
++++ ./sandbox/lienhard/apps/mini_bowtie/mini_bowtie.cpp	2012-09-05 16:50:51.410395154 +0200
+@@ -16,9 +16,28 @@
+ using namespace seqan;
+ template <typename TIter, typename TStringSet>
+ int search(TIter & it, TStringSet const & pattern){
+-//  typedef typename Iterator<TStringSet const, Standard>::Type TPatternIter;
+-//  TPatternIter it2;
+ 
++  //search of the exact pattern half
++  typedef typename Iterator<TStringSet const, Standard>::Type TPatternIter;
++  for (TPatternIter pIt = begin(pattern, Standard()); pIt != end(pattern, Standard()); ++pIt)
++  {
++    unsigned startApproxSearch = length(value(pIt)) / 2;
++    goDown(it, infix(value(pIt), startApproxSearch + 1, length(value(pIt))));
++    goRoot(it);
++    for (int i = startApproxSearch; i<=0;--i)
++    {
++      for (DNA5 c=MinValue<DNA>::value;c<ValueSize<DNA>::Value;c++)
++      {
++          if (goDown(it, c))
++          {
++              if (goDown(it, infix(value(pIt),0,i)))
++              {
++                  //HIT
++              }
++              goRoot(it);
++          }
++      }
++  }
+ 
+   return 0;
+ }

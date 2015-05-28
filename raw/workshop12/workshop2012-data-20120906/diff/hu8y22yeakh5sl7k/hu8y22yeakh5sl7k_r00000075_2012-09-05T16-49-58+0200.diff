@@ -1,0 +1,91 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp ./sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp	2012-09-05 16:30:00.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp	2012-09-05 16:49:54.490775106 +0200
+@@ -45,17 +45,33 @@
+ 
+ template <typename TIter, typename TStringSet>
+ void search(TIter & it, TStringSet const & pattern){
++		
+ 	typedef typename Iterator<TStringSet const, Standard>::Type TPatternIter;
+-	TPatternIter patIt(pattern);
+-	
+-	while(!atEnd(patIt)){
+-		String<Dna5> read = value(patIt);
+-		String<Dna5> readHalf = infix(read,length(read)/2,length(read));
++	//TIter itCopy = it;
++    	for (TPatternIter patternIt = begin(pattern, Standard()); patternIt != end(pattern, Standard()); ++patternIt)
++    	{
++		
++        	unsigned startApproxSearch = length(value(patternIt)) / 2;
++		String<Dna5> alphabet = "ACGTN";
++		for(unsigned int i =startApproxSearch; i >= 0; --i){
++			for(unsigned int posi = 0; posi < length(alphabet);++posi){
++				
++				//it = itCopy;
++				char c = infix(alphabet,posi,posi+1);
++
++				if(goDown(it,c)){
++					TIter itCopy = it;
++					if (goDown(it, pattern[0..i - 1])){
++		
++					}
++					it = itCopy;	
++				}
++			}
++		}
+ 		
+-		goDown(it,readHalf);
+-	
+-		goNext(patIt);
+-	}
++        	//goDown(it, infix(value(patternIt), startApproxSearch + 1, length(value(patternIt))));
++        	//goRoot(it);
++    	}
+ 
+ }	
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata/hu8y22yeakh5sl7k_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/franzi/SeqAn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp~ ./sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp~	2012-09-05 16:29:11.000000000 +0200
++++ ./sandbox/my_sandbox/apps/bowtie_tutorial/bowtie_tutorial.cpp~	2012-09-05 16:48:26.094771441 +0200
+@@ -45,17 +45,32 @@
+ 
+ template <typename TIter, typename TStringSet>
+ void search(TIter & it, TStringSet const & pattern){
++		
+ 	typedef typename Iterator<TStringSet const, Standard>::Type TPatternIter;
+-	TPatternIter patIt(pattern);
+-	
+-	while(!atEnd(patIt)){
+-		String<Dna5> read = value(patIt);
+-		String<Dna5> readHalf = infix(read,lenght(read)/2,length(read));
++	TIter itCopy = it;
++    	for (TPatternIter patternIt = begin(pattern, Standard()); patternIt != end(pattern, Standard()); ++patternIt)
++    	{
++		
++        	unsigned startApproxSearch = length(value(patternIt)) / 2;
++		String<Dna5> alphabet = "ACGTN";
++		for(unsigned int i =startApproxSearch; i >= 0; --i){
++			for(unsigned int posi = 0; posi < length(alphabet);++posi){
++				
++				it = itCopy;
++				char c = infix(alphabet,posi,posi+1);
++
++				if(goDown(it,c)){
++					if (goDown(it, pattern[0..i - 1])){
++		
++					}
++
++				}
++			}
++		}
+ 		
+-		goDown(it,readHalf);
+-	
+-		goNext(patIt);
+-	}
++        	//goDown(it, infix(value(patternIt), startApproxSearch + 1, length(value(patternIt))));
++        	//goRoot(it);
++    	}
+ 
+ }	
+ 

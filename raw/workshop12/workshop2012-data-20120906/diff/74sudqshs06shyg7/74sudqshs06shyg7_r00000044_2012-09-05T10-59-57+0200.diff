@@ -1,0 +1,34 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 10:58:44.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp	2012-09-05 10:59:51.354976485 +0200
+@@ -19,7 +19,7 @@
+ 	assignSource( row(align,1), seq2 );
+ 	
+ 	insertGap( row(align,0), 2 );
+-	insertGap( row(align,0), 5, 2 );
++	insertGaps( row(align,0), 5, 2 );
+ 	
+ 	std::cout << align << std::endl;
+ 
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 10:53:09.000000000 +0200
++++ ./sandbox/my_sandbox/apps/alignment2/alignment2.cpp~	2012-09-05 10:58:44.422972924 +0200
+@@ -10,7 +10,7 @@
+ 	typedef Align<TString, ArrayGaps> TAlign;
+ 	
+ 	TString seq1="CDFGDC";
+-	TString seq2="CDFGGAHGC";
++	TString seq2="CDEFGAHGC";
+ 
+ 	TAlign align;
+ 	
+@@ -18,6 +18,9 @@
+ 	assignSource( row(align,0), seq1 );
+ 	assignSource( row(align,1), seq2 );
+ 	
++	insertGap( row(align,0), 2 );
++	insertGap( row(align,0), 5, 2 );
++	
+ 	std::cout << align << std::endl;
+ 
+ }

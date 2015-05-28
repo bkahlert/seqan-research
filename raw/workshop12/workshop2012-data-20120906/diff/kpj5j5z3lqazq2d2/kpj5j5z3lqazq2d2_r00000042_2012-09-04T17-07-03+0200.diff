@@ -1,0 +1,43 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp and ./sandbox/lkuchenb/apps/rnaseq/.rnaseq.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata/kpj5j5z3lqazq2d2_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/caba/repos/workshop-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 17:03:50.000000000 +0200
++++ ./sandbox/lkuchenb/apps/rnaseq/rnaseq.cpp	2012-09-04 17:07:02.000000000 +0200
+@@ -12,6 +12,7 @@
+ typedef TAnnotation::TId TPos;
+ typedef IntervalAndCargo<TPos, TId> TInterval;
+ typedef IntervalTree<TPos, TId>                 TIntervalTree;
++typedef Value<TStore::TAlignedReadStore>::Type TAlignedRead;
+ 
+ // define options
+ struct Options
+@@ -99,12 +100,22 @@
+     }
+ }
+ 
++//
++// 5. Count reads per gene
++//
++void countReadsPerGene(String<unsigned> & readsPerGene, String<TIntervalTree> const & intervalTrees, TStore const & store)
++{
++    // INSERT YOUR CODE HERE ...
++    //
++}
++
+ int main(int argc, char const * argv[])
+ {
+     Options options;
+     TStore store;
+     String<String<TInterval> > intervals;
+     String<TIntervalTree> intervalTrees;
++    String<unsigned> readsPerGene;
+     
+ 
+     ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
+@@ -115,6 +126,7 @@
+ 
+     extractGeneIntervals(intervals, store);
+     constructIntervalTrees(intervalTrees, intervals);
++    countReadsPerGene(readsPerGene, intervalTrees, store);
+ 
+     return 0;
+ }

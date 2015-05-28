@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_fasta/io_fasta.cpp ./sandbox/lienhard/apps/io_fasta/io_fasta.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_fasta/io_fasta.cpp	2012-09-04 13:52:40.000000000 +0200
++++ ./sandbox/lienhard/apps/io_fasta/io_fasta.cpp	2012-09-04 13:54:47.587147148 +0200
+@@ -102,7 +102,7 @@
+     }
+     seqan::CharString id;
+     seqan::Dna5String seq;
+-    seqan::SequenceStream seqStream(options.file);
++    seqan::SequenceStream seqStream((char *)options.file);
+     readRecord(id, seq, seqStream);
+     std::cout << id << '\t' << seq << '\n';
+     return 0;

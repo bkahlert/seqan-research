@@ -1,0 +1,34 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp	2012-09-04 16:27:03.000000000 +0200
++++ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp	2012-09-04 16:27:29.956799922 +0200
+@@ -48,7 +48,7 @@
+     if (alnFile.good())
+     {
+         std::cerr << "ERROR: Could not open alignment file." << std::endl;
+-        return false
++        return false;
+     }
+     read(alnFile, store, Sam());
+     alnFile.close();
+@@ -56,7 +56,7 @@
+     if (!annotationFile.good)
+     {
+         std::cerr << "ERROR: Could not open annotation file." << std::endl;
+-        return false
++        return false;
+     }
+     read(annotationFile, store, Gtf());
+     annotationFile.close();
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x /home/felix/seqan/misc/seqan_instrumentation/userdata/j3dlv0pk16e145g4_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/felix/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/felix/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/felix/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~	2012-09-04 16:26:26.000000000 +0200
++++ ./sandbox/my_sandbox/apps/rnaseq_app/rnaseq_app.cpp~	2012-09-04 16:27:03.800670294 +0200
+@@ -68,8 +68,7 @@
+ //
+ void extractGeneIntervals(String<String<TInterval> > & intervals, TStore const & store)
+ {
+-    // INSERT YOUR CODE HERE ...
+-    //
++    
+ }
+ 
+ int main(int argc, char const * argv[])

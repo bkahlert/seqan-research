@@ -1,0 +1,30 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata/y4oycw36249shrvs_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/robert/SeqAn/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/ass1/ass1.cpp ./sandbox/my_rob/apps/ass1/ass1.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_rob/apps/ass1/ass1.cpp	2012-09-04 13:47:17.000000000 +0200
++++ ./sandbox/my_rob/apps/ass1/ass1.cpp	2012-09-04 13:53:45.453271249 +0200
+@@ -2,7 +2,7 @@
+ #include <seqan/file.h>
+ #include <seqan/sequence.h>
+ 
+-int computeLocalScore(seqan::String<char> subText, seqan::String<char> pattern)
++int computeLocalScore(seqan::String<char> const & subText, seqan::String<char> const &  pattern)
+ {
+     int localScore = 0;
+     for (unsigned i = 0; i < seqan::length(pattern); ++i)
+@@ -10,7 +10,7 @@
+             ++localScore;
+     return localScore;
+ }
+-seqan::String<int> computeScore(seqan::String<char> text, seqan::String<char> pattern)
++seqan::String<int> computeScore(seqan::String<char> const & text, seqan::String<char> const & pattern)
+ {
+     seqan::String<int> score;
+     seqan::resize(score, seqan::length(text), 0);
+@@ -19,7 +19,7 @@
+     return score;
+ }
+ 
+-void print(String<int> score){
++void print(String<int> const & score){
+ 	 for (unsigned i = 0; i < seqan::length(text); ++i)
+         std::cout << text[i] << " ";
+     std::cout << std::endl;

@@ -1,0 +1,59 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 16:10:59.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-04 16:17:27.371220024 +0200
+@@ -52,32 +52,31 @@
+ //
+ bool loadFiles(TStore & store, Options const & options)
+ {
+-    
+-
+-   BamStream stream(options.alignmentFileName);
+-
+-   // Stream through file, getting alignment and dumping it.
+-   Align<Dna5String> align;
+-   BamAlignmentRecord record;
+-   while (!atEnd(stream))
+-   {
+-      clear(record);
+-      if (readRecord(record, stream) != 0)
+-      {
+-          std::cerr << "[ERROR] Error reading alignment!" << std::endl;
+-          return 1;
+-      }
+-
+-         // Convert BAM record to alignment.
+-         bamRecordToAlignment(align, seqs[record.rId], record);
+-       appendAlignedRead(store, align);
+-   }     
+-        
++  
+ 
++std::ifstream alignmentFile(options.alignmentFileName.c_str());
++    if (!alignmentFile.good())
++    {
++        std::cerr << "Couldn't open alignment file " << options.alignmentFileName << std::endl;
++        return false;
++    }
++    std::cerr << "Loading read alignments ..... " << std::flush;
++    read(alignmentFile, store, Sam());
++    std::cerr << "[" << length(store.alignedReadStore) << "]" << std::endl;
++    // load annotations
++    std::ifstream annotationFile(options.annotationFileName.c_str());
++    if (!annotationFile.good())
++    {
++        std::cerr << "Couldn't open annotation file" << options.annotationFileName << std::endl;
++        return false;
++    }
++    std::cerr << "Loading genome annotation ... " << std::flush;
++    read(annotationFile, store, Gtf());
++    std::cerr << "[" << length(store.annotationStore) << "]" << std::endl;
++    return true;
+ 
+ 
+-    return true;
+-}
++ }
+ 
+ 
+ int main(int argc, char const * argv[])
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

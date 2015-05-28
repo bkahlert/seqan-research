@@ -1,0 +1,39 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/2ur8t8dx88n4v6ef_stats.txt -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata/2ur8t8dx88n4v6ef_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Software/SeqAn/seqan/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp ./sandbox/my_sandbox/apps/index_app/index_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/index_app/index_app.cpp	2012-09-05 11:01:12.625000000 +0200
++++ ./sandbox/my_sandbox/apps/index_app/index_app.cpp	2012-09-05 11:23:51.140625000 +0200
+@@ -3,17 +3,27 @@
+ #include <seqan/index_fm.h>
+ using namespace seqan;
+ 
++typedef Index<String<char>, IndexEsa<> > charIndex;
++
++int traverse(Iterator< charIndex, TopDown<> >::Type & iter){
++	while(goRight(iter)){
++		std::cout << representative(iter) << std::endl;
++		if(goDown(iter)){
++			traverse(iter);
++			goUp(iter);
++		}
++	}
++}
++
+ int main()
+ {
+-    String<Dna5> text = "TTATTAAGCGTATAGCCCTATAAATATAA";
+-    Index<String<Dna5>, IndexEsa<> > index(text);
++	
++    String<char> text = "tobeornottobe";
++    charIndex index(text);
++
++	Iterator< charIndex, TopDown<> >::Type it(index);
+ 
+-	Finder<Index<String<Dna5>, IndexEsa<> > > fmfinder ( index );
+-	String<Dna5> pattern = "TATAA";
+ 
+-	while(find(fmfinder, pattern)){
+-		std::cout << "Found position " << position(fmfinder) << std::endl;
+-	}
+ 
+     return 0;
+ }
+\ No newline at end of file

@@ -1,0 +1,12 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/7i0p2gnbxpw7gofj_stats.txt -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata/7i0p2gnbxpw7gofj_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /Users/fjribeiro/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 13:18:35.000000000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 13:19:16.000000000 +0200
+@@ -126,7 +126,7 @@
+     // Initialization
+     seqan::String<char> text = "This is an awesome tutorial to get to know SeqAn!";
+     seqan::String<char> pattern = "tutorial";
+-    seqan::String<int> score(length(text));
++    seqan::String<int> score(seqan::length(text));
+     //resize(score, seqan::length(text));
+     // Computation of the similarities
+     // Iteration over the text (outer loop)

@@ -1,0 +1,21 @@
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutio/.tutio.cpp.swp and ./sandbox/my_sandbox/apps/tutio/.tutio.cpp.swp differ
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata/ykuccc7dunih46v6_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /data/seqan/svn/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutio/tutio.cpp ./sandbox/my_sandbox/apps/tutio/tutio.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/tutio/tutio.cpp	2012-09-05 15:59:59.000000000 +0200
++++ ./sandbox/my_sandbox/apps/tutio/tutio.cpp	2012-09-05 16:07:48.359742821 +0200
+@@ -42,10 +42,16 @@
+ 		return 1;
+     seqan::CharString id;
+     seqan::Dna5String seq;
++    seqan::CharString qual;
+     seqan::SequenceStream seqStream(argv[1]);
+     while (!atEnd(seqStream)) {
++#if 0
+ 	    readRecord(id, seq, seqStream);
+ 	    std::cout << id << '\t' << seq << '\n';
++#else
++	    readRecord(id, seq, qual, seqStream);
++	    std::cout << id << '\t' << seq << '\t' << qual << '\n';
++#endif
+     }
+ 
+ 

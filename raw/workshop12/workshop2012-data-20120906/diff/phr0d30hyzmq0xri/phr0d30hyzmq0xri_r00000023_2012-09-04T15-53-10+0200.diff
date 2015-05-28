@@ -1,0 +1,96 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/CMakeLists.txt ./sandbox/lienhard/apps/rna_seq/CMakeLists.txt
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/CMakeLists.txt	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/lienhard/apps/rna_seq/CMakeLists.txt	2012-09-04 15:51:50.798917124 +0200
+@@ -0,0 +1,5 @@
++cmake_minimum_required (VERSION 2.6)
++project (sandbox_lienhard_apps_rna_seq)
++
++# Update the list of file names below if you add source files to your application.
++seqan_add_executable(rna_seq rna_seq.cpp)
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/INFO ./sandbox/lienhard/apps/rna_seq/INFO
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/INFO	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/lienhard/apps/rna_seq/INFO	2012-09-04 15:51:50.798917124 +0200
+@@ -0,0 +1,21 @@
++Name: rna_seq
++Author: Your Name <your.email@example.net>
++Maintainer: Your Name <your.email@example.net>
++License: GPL v3
++Copyright: 2008-2012, FU Berlin
++Status: under development
++Description: One-line description for app rna_seq.
++ This is the long text description for the app.  You should wrap text to 78
++ characters and you have to wrap it to 80 characters.  The lines must have one
++ leading space.  Successive lines in this format will be word-wrapped when
++ displayed.  Leading space is stripped off.
++ .
++ Use empty lines with one dot to insert an empty line / break paragraphs.
++ .
++  Start lines with two spaces to make them display verbatim.  Lines that
++  cannot be displayed horizontally will be hard-wrapped (not at word bor-
++  ders), so maybe do your own hyphenation.
++ .
++ Do not use tab characters, their effect is not predictable.
++ .
++ The INFO file format is oriented after the Debian controfields format.
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/rna_seq.cpp ./sandbox/lienhard/apps/rna_seq/rna_seq.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/rna_seq/rna_seq.cpp	1970-01-01 01:00:00.000000000 +0100
++++ ./sandbox/lienhard/apps/rna_seq/rna_seq.cpp	2012-09-04 15:52:35.083136712 +0200
+@@ -0,0 +1,58 @@
++#include <iostream>
++#include <seqan/store.h>
++#include <seqan/arg_parse.h>
++#include <seqan/misc/misc_interval_tree.h>
++#include <seqan/parallel.h>
++
++using namespace seqan;
++// define used types
++typedef FragmentStore<> TStore;
++// define options
++struct Options
++{
++    std::string annotationFileName;
++    std::string alignmentFileName;
++};
++//
++// 1. Parse command line and fill Options object
++//
++ArgumentParser::ParseResult parseOptions(Options & options, int argc, char const * argv[])
++{
++    ArgumentParser parser("gene_quant");
++    setShortDescription(parser, "A simple gene quantification tool");
++    setVersion(parser, "1.0");
++    setDate(parser, "Sep 2012");
++    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
++    addArgument(parser, ArgParseArgument(ArgParseArgument::INPUTFILE));
++    addUsageLine(parser, "[\\fIOPTIONS\\fP] <\\fIANNOTATION FILE\\fP> <\\fIREAD ALIGNMENT FILE\\fP>");
++    // Parse command line
++    ArgumentParser::ParseResult res = parse(parser, argc, argv);
++    if (res == ArgumentParser::PARSE_OK)
++    {
++        // Extract option values
++        getArgumentValue(options.annotationFileName, parser, 0);
++        getArgumentValue(options.alignmentFileName, parser, 1);
++    }
++    return res;
++}
++//
++// 2. Load annotations and alignments from files
++//
++bool loadFiles(TStore & store, Options const & options)
++{
++    // INSERT YOUR CODE HERE ...
++    //
++
++    return true;
++}
++int main(int argc, char const * argv[])
++{
++    Options options;
++    TStore store;
++    ArgumentParser::ParseResult res = parseOptions(options, argc, argv);
++    if (res != ArgumentParser::PARSE_OK)
++        return res == ArgumentParser::PARSE_ERROR;
++    if (!loadFiles(store, options))
++        return 1;
++    return 0;
++}

@@ -1,0 +1,27 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata/ijxljx4ielej459b_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x C:/Users/Vikas/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp ./sandbox/my_sandbox/apps/first_app/first_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 15:48:28.915114000 +0200
++++ ./sandbox/my_sandbox/apps/first_app/first_app.cpp	2012-09-04 16:00:38.445840800 +0200
+@@ -20,6 +20,14 @@
+     // Build List containing all reads
+     typedef String<DnaString> TDnaList;
+     TDnaList readList;
++	String<int> pos;
++	resize(pos,4);
++	pos[0]= 7;
++	pos[1]= 100;
++	pos[2]= 172;
++	pos[3]= 272;
++
++
+     resize(readList, 4);
+     readList[0] = "TTGCTATCGCGATATCGCTAGCTAGCTACGGATTATGCGCTCTGCGATATATCGCGCT";
+     readList[1] = "TCGATTAGCGTCGATCATCGATCTATATTAGCGCGCGGTATCGGACGATCATATTAGCGGTCTAGCATT";
+@@ -42,7 +50,7 @@
+     // Bisulfite conversion
+     // Assume chr1 is beeing bisulfate treated: Copy chr1 to a new genome bsChr1 and exchange every 'C' with a 'T'
+     DnaString bsChr1;
+-  
++    printAlign(pos);
+     // Print alignments of the reads with chr1 (or bsChr1) sequence using the function printAlign
+     // and the positions in alignPosList.
+     // To do that, you have to create a copy of the fragment in chr1 (bsChr1) that is aligned to the read.

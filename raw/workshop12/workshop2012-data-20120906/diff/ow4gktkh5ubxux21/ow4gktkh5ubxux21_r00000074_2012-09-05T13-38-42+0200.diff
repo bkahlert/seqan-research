@@ -1,0 +1,51 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata/ow4gktkh5ubxux21_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/kokonech/playgrnd/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp ./sandbox/my_sandbox/apps/simple/simple.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-05 13:34:30.000000000 +0200
++++ ./sandbox/my_sandbox/apps/simple/simple.cpp	2012-09-05 13:38:39.862154247 +0200
+@@ -6,14 +6,18 @@
+ using namespace seqan;
+ template <typename TString, typename TStream, typename TSpec>
+ inline int
+-loadAndJoin(StringSet<TString, Owner<JournaledSet> > & /*journalSet*/,
++loadAndJoin(StringSet<TString, Owner<JournaledSet> > & journalSet,
+             TStream & stream,
+-            JoinConfig<TSpec> const & /*joinConfig*/)
++            JoinConfig<TSpec> const & joinConfig)
+ {
+     typedef typename Host<TString>::Type THost;
+     // Define the RecordReader.
+     RecordReader<std::ifstream, SinglePass<> > reader(stream);
+     // [A] Ensure the Journal Set is not occupied by other sequences.
++    
++    if (length(journalSet) > 0 ) {
++        return -1;
++    }    
+ 
+     // Construct the temporary buffers for the read id and sequence.
+     String<char> tempSeqId;
+@@ -30,7 +34,10 @@
+         std::cerr << "ERROR reading FASTA." << std::endl;
+         return 1;
+     }
++    
+     // [B] Set the reference sequence to the Journal Set
++    setGlobalReference(journaledSet, reference);
++    
+ 
+     // Read remaining sequences.
+     while (!atEnd(reader))
+@@ -40,8 +47,14 @@
+             std::cerr << "ERROR reading FASTA." << std::endl;
+             return 1;
+         }
++
++        
+         // [C] Append and join the current read sequence.
+     }
++
++    
++    
++
+     return 0;
+ }
+ int main()
+Binary files ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/simple/.simple.cpp.swp and ./sandbox/my_sandbox/apps/simple/.simple.cpp.swp differ

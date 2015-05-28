@@ -1,0 +1,27 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 14:06:39.000000000 +0200
++++ ./sandbox/lienhard/apps/fragmentstore/fragmentstore.cpp	2012-09-05 14:07:52.369174698 +0200
+@@ -131,9 +131,9 @@
+       std::cout << getType(it) << "\n";
+     }
+     unsigned counter=0;
+-    if(std::strcmp(getType(it),"exon")){++counter}
++    if(strcmp(getType(it),"exon")){++counter}
+     while(goRight(it)){
+-      if(std::strcmp(getType(it),"exon")){counter++}
++      if(strcmp(getType(it),"exon")){counter++}
+     }
+     std::cout << "Es gibt " << counter <<" Exons\n";
+     unsigned sum=counter;
+@@ -141,9 +141,9 @@
+       goNext(it);    
+       while(goDown(it));
+       counter=0;
+-      if(std::strcmp(getType(it),"exon")){counter++}
++      if(strcmp(getType(it),"exon")){counter++}
+       while(goRight(it)){
+-        if(std::strcmp(getType(it),"exon")){counter++}
++        if(strcmp(getType(it),"exon")){counter++}
+       }
+       std::cout << "Es gibt " << counter <<" Exons\n";
+       sum+=counter;

@@ -1,0 +1,23 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata/phr0d30hyzmq0xri_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/matthias/seqan/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_fasta/io_fasta.cpp ./sandbox/lienhard/apps/io_fasta/io_fasta.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/lienhard/apps/io_fasta/io_fasta.cpp	2012-09-04 13:40:18.000000000 +0200
++++ ./sandbox/lienhard/apps/io_fasta/io_fasta.cpp	2012-09-04 13:45:30.948386926 +0200
+@@ -47,8 +47,8 @@
+ 
+     // Add Examples Section.
+     addTextSection(parser, "Examples");
+-    addListItem(parser, "\\fBio_fasta\\fP \\fB-v\\fP \\fItext\\fP",
+-                "Call with \\fITEXT\\fP set to \"text\" with verbose output.");
++    addListItem(parser, "\\fBio_fasta\\fP \\fB-v\\fP \\fItest.fa\\fP",
++                "read \\fItest.fa\\fP set to \"test.fa\" with verbose output.");
+ 
+     // Parse command line.
+     seqan::ArgumentParser::ParseResult res = seqan::parse(parser, argc, argv);
+@@ -97,7 +97,7 @@
+         std::cout << "__OPTIONS____________________________________________________________________\n"
+                   << '\n'
+                   << "VERBOSITY\t" << options.verbosity << '\n'
+-                  << "TEXT     \t" << options.file << "\n\n";
++                  << "file.fasta\t" << options.file << "\n\n";
+     }
+ 
+     return 0;

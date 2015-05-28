@@ -1,0 +1,38 @@
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp ./sandbox/my_sandbox/apps/second_app/second_app.cpp
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp	2012-09-04 15:55:23.000000000 +0200
++++ ./sandbox/my_sandbox/apps/second_app/second_app.cpp	2012-09-04 15:56:34.305556523 +0200
+@@ -39,7 +39,7 @@
+     // Assume we have mapped the 4 reads to chr1 (and chr2) and now have the mapping start positions (no gaps).
+     // Store the start position in a String alignPosList: 7, 100, 172, 272
+     
+-    String alignPosList;
++    String<unsigned> alignPosList;
+     resize(alignPosList, 4);
+     
+     alignPosList[0]=7;
+diff -u -r -N -x '*.o' -x Thumbs.db -x .DS_Store -x CMakeCache.txt -x misc/seqan_instrumentation/userdata/id.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/id.txt -x misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata/74sudqshs06shyg7_stats.txt -x .svn -x bin -x build -x util -x misc -x docs -x docs2 -x extras -x core -x misc/seqan_instrumentation/bin -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/bin -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/last_revision_copy -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/last_revision_copy -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata -x misc/seqan_instrumentation/userdata -x /home/teo/Development/seqan-trunk/misc/seqan_instrumentation/userdata ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp~ ./sandbox/my_sandbox/apps/second_app/second_app.cpp~
+--- ./misc/seqan_instrumentation/last_revision_copy/sandbox/my_sandbox/apps/second_app/second_app.cpp~	2012-09-04 15:53:00.000000000 +0200
++++ ./sandbox/my_sandbox/apps/second_app/second_app.cpp~	2012-09-04 15:55:23.049554557 +0200
+@@ -38,11 +38,17 @@
+ 
+     // Assume we have mapped the 4 reads to chr1 (and chr2) and now have the mapping start positions (no gaps).
+     // Store the start position in a String alignPosList: 7, 100, 172, 272
+-    string alignPosList;
+-    append( alignPosList,"7");
+-    append( alignPosList,"100");
+-    append( alignPosList,"172");
+-    append( alignPosList,"272");
++    
++    String alignPosList;
++    resize(alignPosList, 4);
++    
++    alignPosList[0]=7;
++    alignPosList[1]=100;
++    alignPosList[2]=172;
++    alignPosList[3]=272;
++    
++    
++    
+     // Optional
+     // Bisulfite conversion
+     // Assume chr1 is beeing bisulfate treated: Copy chr1 to a new genome bsChr1 and exchange every 'C' with a 'T'
