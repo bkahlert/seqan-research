@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import "/Users/bkahlert/development/reps/com.bkahlert.nebula/src/com/bkahlert/nebula/widgets/composer/html/style.css";
+body {
+  font-size: 150%;
+}
+li {
+  list-style-image: none;
+}
+.instances:not(:empty),
+.memo:not(:empty) {
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #666;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+.instances:not(:empty):before,
+.memo:not(:empty):before {
+  display: inline-block;
+  position: absolute;
+  background-color: #666;
+  border-bottom-left-radius: 4px;
+  top: 0;
+  right: 0;
+  padding: 0.15em 0.2em 0.2em 0.3em;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #fff;
+}
+.instances:not(:empty) {
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+.instances:not(:empty):before {
+  content: "Instances";
+}
+.memo:not(:empty) {
+  padding: 1em;
+}
+.memo:not(:empty):before {
+  content: "Memo";
+}
+.memo:not(:empty) li {
+  margin: auto;
+}
+.memo h1 {
+  font-size: 1.5em;
+}
+.memo h2 {
+  font-size: 1.35em;
+}
+.memo h3 {
+  font-size: 1.1em;
+}
+.memo h4,
+.memo h5,
+.memo h6 {
+  font-size: 1.0em;
+}
+img {
+  max-width: 100%;
+}

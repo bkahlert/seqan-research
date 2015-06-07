@@ -22728,87 +22728,6 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
   </memos>
   <episodes>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:01:20.000+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315907019000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315908159000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1358856080000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T14:04:44.000+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315908302000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315909852000</time>
-            <timezone>GMT-05:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1358859884000</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:38:21.310+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315919740000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315921687000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Alignments A2 - Semi-Global Alignment</caption>
-      <creation>
-        <calendar>
-          <time>1363048701310</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
       <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-25T16:04:43.093+01:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
         <id>5lpcjqhy0b9yfech</id>
@@ -22836,28 +22755,153 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/0meio6dzt3eo1wj7/2012-08-20T23:14:00.000+02:00</uri>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:56:38.764+01:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>0meio6dzt3eo1wj7</id>
+        <id>5lpcjqhy0b9yfech</id>
       </identifier>
       <range>
         <startDate>
           <calendar>
-            <time>1315653978000</time>
+            <time>1315915186000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315916319203</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Sequences A6 - Using Iterators</caption>
+      <creation>
+        <calendar>
+          <time>1363020998764</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:10:49.263+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315909293000</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </startDate>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[2]/range/startDate"/>
+      </range>
+      <caption>Sequences A2 - All Strings of a given length</caption>
+      <creation>
+        <calendar>
+          <time>1363018249263</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:06:26.805+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315908476000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315909293000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>Sequences A1 - Generic Character Counting</caption>
+      <creation>
+        <calendar>
+          <time>1363017986805</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:01:20.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315907019000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate>
+          <calendar>
+            <time>1315908159000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358856080000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T12:55:39.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315905604720</time>
             <timezone>Europe/Berlin</timezone>
           </calendar>
         </startDate>
         <endDate>
           <calendar>
-            <time>1315908238000</time>
-            <timezone>Europe/Berlin</timezone>
+            <time>1315907019000</time>
+            <timezone>GMT-05:00</timezone>
           </calendar>
         </endDate>
       </range>
-      <caption>I Alphabets</caption>
+      <caption></caption>
       <creation>
         <calendar>
-          <time>1345497240000</time>
+          <time>1358855739000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:52:11.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate>
+          <calendar>
+            <time>1315907019000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </startDate>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[5]/range/endDate"/>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358859131000</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -22874,29 +22918,17 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
             <timezone>Europe/Berlin</timezone>
           </calendar>
         </startDate>
-        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[3]/range/startDate"/>
+        <endDate>
+          <calendar>
+            <time>1315919740000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
       </range>
       <caption>Alignments A1 - Global Alignment</caption>
       <creation>
         <calendar>
           <time>1363048425391</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:59:17.000+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
-      </identifier>
-      <range>
-        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode/range/endDate"/>
-        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[2]/range/startDate"/>
-      </range>
-      <caption></caption>
-      <creation>
-        <calendar>
-          <time>1358859557000</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -22913,12 +22945,7 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
             <timezone>GMT+02:00</timezone>
           </calendar>
         </startDate>
-        <endDate>
-          <calendar>
-            <time>1315908476000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
+        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[4]/range/startDate"/>
       </range>
       <caption>Sequences A1 - Character Counting</caption>
       <creation>
@@ -22956,33 +22983,6 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:10:49.263+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate>
-          <calendar>
-            <time>1315909293000</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
-        <endDate>
-          <calendar>
-            <time>1315915186000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Sequences A2 - All Strings of a given length</caption>
-      <creation>
-        <calendar>
-          <time>1363018249263</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
       <uri>apiua://episode/20xjp6c6gjzthtye/2013-04-02T01:03:32.032+02:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
         <id>20xjp6c6gjzthtye</id>
@@ -23010,64 +23010,15 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:56:38.764+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[10]/range/endDate"/>
-        <endDate>
-          <calendar>
-            <time>1315916319203</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Sequences A6 - Using Iterators</caption>
-      <creation>
-        <calendar>
-          <time>1363020998764</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-11T17:06:26.805+01:00</uri>
-      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>5lpcjqhy0b9yfech</id>
-      </identifier>
-      <range>
-        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[8]/range/endDate"/>
-        <endDate>
-          <calendar>
-            <time>1315909293000</time>
-            <timezone>GMT+02:00</timezone>
-          </calendar>
-        </endDate>
-      </range>
-      <caption>Sequences A1 - Generic Character Counting</caption>
-      <creation>
-        <calendar>
-          <time>1363017986805</time>
-          <timezone>Europe/Berlin</timezone>
-        </calendar>
-      </creation>
-    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T12:55:39.000+01:00</uri>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:59:17.000+01:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
         <id>20xjp6c6gjzthtye</id>
       </identifier>
       <range>
-        <startDate>
-          <calendar>
-            <time>1315905604720</time>
-            <timezone>Europe/Berlin</timezone>
-          </calendar>
-        </startDate>
+        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[5]/range/endDate"/>
         <endDate>
           <calendar>
-            <time>1315907019000</time>
+            <time>1315908302000</time>
             <timezone>GMT-05:00</timezone>
           </calendar>
         </endDate>
@@ -23075,34 +23026,78 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       <caption></caption>
       <creation>
         <calendar>
-          <time>1358855739000</time>
+          <time>1358859557000</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/7uqc7v3iz0sdm7d7/2013-04-04T21:42:28.957+02:00</uri>
+      <uri>apiua://episode/0meio6dzt3eo1wj7/2012-08-20T23:14:00.000+02:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>7uqc7v3iz0sdm7d7</id>
+        <id>0meio6dzt3eo1wj7</id>
       </identifier>
       <range>
         <startDate>
           <calendar>
-            <time>1315995442000</time>
-            <timezone>GMT+02:00</timezone>
+            <time>1315653978000</time>
+            <timezone>Europe/Berlin</timezone>
           </calendar>
         </startDate>
         <endDate>
           <calendar>
-            <time>1315996677000</time>
+            <time>1315908238000</time>
+            <timezone>Europe/Berlin</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption>I Alphabets</caption>
+      <creation>
+        <calendar>
+          <time>1345497240000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T14:04:44.000+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>20xjp6c6gjzthtye</id>
+      </identifier>
+      <range>
+        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[12]/range/endDate"/>
+        <endDate>
+          <calendar>
+            <time>1315909852000</time>
+            <timezone>GMT-05:00</timezone>
+          </calendar>
+        </endDate>
+      </range>
+      <caption></caption>
+      <creation>
+        <calendar>
+          <time>1358859884000</time>
+          <timezone>Europe/Berlin</timezone>
+        </calendar>
+      </creation>
+    </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+    <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
+      <uri>apiua://episode/5lpcjqhy0b9yfech/2013-03-12T01:38:21.310+01:00</uri>
+      <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
+        <id>5lpcjqhy0b9yfech</id>
+      </identifier>
+      <range>
+        <startDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode[8]/range/endDate"/>
+        <endDate>
+          <calendar>
+            <time>1315921687000</time>
             <timezone>GMT+02:00</timezone>
           </calendar>
         </endDate>
       </range>
-      <caption>Ursprüngliche Dateien fehlen; nur Aus- u. Einkommentieren von wenigen Zeilen</caption>
+      <caption>Alignments A2 - Semi-Global Alignment</caption>
       <creation>
         <calendar>
-          <time>1365104548957</time>
+          <time>1363048701310</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
@@ -23135,23 +23130,28 @@ Beginnt mit Lösung von http://trac.seqan.de/wiki/Tutorial/Basics Task 1 d</stri
       </creation>
     </de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
     <de.fu__berlin.imp.apiua.groundedtheory.model.Episode>
-      <uri>apiua://episode/20xjp6c6gjzthtye/2013-01-22T13:52:11.000+01:00</uri>
+      <uri>apiua://episode/7uqc7v3iz0sdm7d7/2013-04-04T21:42:28.957+02:00</uri>
       <identifier class="de.fu_berlin.imp.apiua.core.model.identifier.ID">
-        <id>20xjp6c6gjzthtye</id>
+        <id>7uqc7v3iz0sdm7d7</id>
       </identifier>
       <range>
         <startDate>
           <calendar>
-            <time>1315907019000</time>
-            <timezone>GMT-05:00</timezone>
+            <time>1315995442000</time>
+            <timezone>GMT+02:00</timezone>
           </calendar>
         </startDate>
-        <endDate reference="../../../de.fu__berlin.imp.apiua.groundedtheory.model.Episode/range/endDate"/>
+        <endDate>
+          <calendar>
+            <time>1315996677000</time>
+            <timezone>GMT+02:00</timezone>
+          </calendar>
+        </endDate>
       </range>
-      <caption></caption>
+      <caption>Ursprüngliche Dateien fehlen; nur Aus- u. Einkommentieren von wenigen Zeilen</caption>
       <creation>
         <calendar>
-          <time>1358859131000</time>
+          <time>1365104548957</time>
           <timezone>Europe/Berlin</timezone>
         </calendar>
       </creation>
