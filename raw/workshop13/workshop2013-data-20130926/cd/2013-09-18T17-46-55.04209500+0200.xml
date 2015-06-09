@@ -1,2 +1,32 @@
-<?xml version="1.0"?>
-<cd><profile><studies>Bioinformatik</studies><workStyle>pragmatic</workStyle><usageDurationNumber>4</usageDurationNumber><usageDurationUnit>years</usageDurationUnit><proficiency>nein, ich verwende es zu selten</proficiency><similiarSystems>Biopython</similiarSystems><mainPurpose>Im Moment gar nicht, f&#xFC;r meine Bachelorarbeit und in geringerem Umfang f&#xFC;r meine Masterarbeit</mainPurpose><typicalProducts>ein kleines Tool, dass ich als Teil einer Pipeline verwende</typicalProducts><durability>temporary</durability><exploringPercentageTime>40</exploringPercentageTime><implementingPercentageTime>10</implementingPercentageTime><understandingPercentageTime>40</understandingPercentageTime><reorganisingPercentageTime>10</reorganisingPercentageTime><viscosity>Dinge die sich auf Datenstrukturen oder Module beziehen, die ich noch nie bzw. nur oberfl&#xE4;chlich benutzt habe.</viscosity><workStepUnit>F&#xFC;r sehr spezifische Aufgaben, wie zB Alignment oder laden von GTF files passiert sehr viel in eine Zeile code. Das erzeugen von Iteratoren dagegen erfordert mehr code als vern&#xFC;nftig erscheint.</workStepUnit><hardMentalOperations>Das erstellen der richtigen Typen mit Hilge von Metafunktionen kann sehr kompliziert sein.</hardMentalOperations><errorProneness>besonders h&#xE4;ufig mache ich Fehler die mit const zu tun haben oder bei denen ich template parameter nicht richtig gesetzt habe</errorProneness><domainCorrespondence></domainCorrespondence><roleExpressiveness>Es ist oft schwierig heraus zu finden welche Funktionen auf welche Objekte angewendet werden k&#xF6;nnen und was dann die richtige Funktionssiganatur ist. Metafunktionen kopiere ich oft nur ohne wirklich zu verstehen was sie tun.</roleExpressiveness><progressiveEvaluation>Meistens lassen sich Dinge nicht &#xFC;berpr&#xFC;fen, weil der Code nicht kompiliert. Das Prototypen von Dingen f&#xE4;llt mir oft sehr schwer.</progressiveEvaluation><provisionality>Mir f&#xE4;llt es sehr schwer zu experimentieren, weil das handling von Ein- und Ausgabe schwierig ist und darum Zwischenergebnise sich nicht immer leicht &#xFC;berpr&#xFC;fen lassen.</provisionality><prematureCommitment>Oft m&#xFC;ssen Entscheidungen &#xFC;ber Typen fr&#xFC;h getroffen werden oder sp&#xE4;ter immer wieder ge&#xE4;ndert werden.</prematureCommitment><consistency></consistency><abstractionLevel></abstractionLevel><learningStyle>Die Tutorial sind zum gr&#xF6;&#xDF;ten Teil gut. Das Suchen in der API Doku ist aber sehr umst&#xE4;ndlich.</learningStyle><personal>Viele Dinge lassen sich auf sehr verschiedene Arten erledigen (zB zugriff auf Detein mit File Objekte oder c-Streams) das schafft Verwirrung.</personal><questionnaire>Nein, weil ich SeqAn nur &#xE4;u&#xDF;erst selten benutze und viele der Antworten sich damit haupts&#xE4;chlich auf den Workshop beziehn bzw. spezifische Probleme, die ich in den letzen zwei Tagen hattte.</questionnaire></profile></cd>
+<?xml version="1.0" encoding="UTF-8"?>
+<cd>
+   <profile>
+      <studies>Bioinformatik</studies>
+      <workStyle>pragmatic</workStyle>
+      <usageDurationNumber>4</usageDurationNumber>
+      <usageDurationUnit>years</usageDurationUnit>
+      <proficiency>nein, ich verwende es zu selten</proficiency>
+      <similiarSystems>Biopython</similiarSystems>
+      <mainPurpose>Im Moment gar nicht, für meine Bachelorarbeit und in geringerem Umfang für meine Masterarbeit</mainPurpose>
+      <typicalProducts>ein kleines Tool, dass ich als Teil einer Pipeline verwende</typicalProducts>
+      <durability>temporary</durability>
+      <exploringPercentageTime>40</exploringPercentageTime>
+      <implementingPercentageTime>10</implementingPercentageTime>
+      <understandingPercentageTime>40</understandingPercentageTime>
+      <reorganisingPercentageTime>10</reorganisingPercentageTime>
+      <viscosity>Dinge die sich auf Datenstrukturen oder Module beziehen, die ich noch nie bzw. nur oberflächlich benutzt habe.</viscosity>
+      <workStepUnit>Für sehr spezifische Aufgaben, wie zB Alignment oder laden von GTF files passiert sehr viel in eine Zeile code. Das erzeugen von Iteratoren dagegen erfordert mehr code als vernünftig erscheint.</workStepUnit>
+      <hardMentalOperations>Das erstellen der richtigen Typen mit Hilge von Metafunktionen kann sehr kompliziert sein.</hardMentalOperations>
+      <errorProneness>besonders häufig mache ich Fehler die mit const zu tun haben oder bei denen ich template parameter nicht richtig gesetzt habe</errorProneness>
+      <domainCorrespondence />
+      <roleExpressiveness>Es ist oft schwierig heraus zu finden welche Funktionen auf welche Objekte angewendet werden können und was dann die richtige Funktionssiganatur ist. Metafunktionen kopiere ich oft nur ohne wirklich zu verstehen was sie tun.</roleExpressiveness>
+      <progressiveEvaluation>Meistens lassen sich Dinge nicht überprüfen, weil der Code nicht kompiliert. Das Prototypen von Dingen fällt mir oft sehr schwer.</progressiveEvaluation>
+      <provisionality>Mir fällt es sehr schwer zu experimentieren, weil das handling von Ein- und Ausgabe schwierig ist und darum Zwischenergebnise sich nicht immer leicht überprüfen lassen.</provisionality>
+      <prematureCommitment>Oft müssen Entscheidungen über Typen früh getroffen werden oder später immer wieder geändert werden.</prematureCommitment>
+      <consistency />
+      <abstractionLevel />
+      <learningStyle>Die Tutorial sind zum größten Teil gut. Das Suchen in der API Doku ist aber sehr umständlich.</learningStyle>
+      <personal>Viele Dinge lassen sich auf sehr verschiedene Arten erledigen (zB zugriff auf Detein mit File Objekte oder c-Streams) das schafft Verwirrung.</personal>
+      <questionnaire>Nein, weil ich SeqAn nur äußerst selten benutze und viele der Antworten sich damit hauptsächlich auf den Workshop beziehn bzw. spezifische Probleme, die ich in den letzen zwei Tagen hattte.</questionnaire>
+   </profile>
+</cd>

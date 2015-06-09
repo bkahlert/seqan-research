@@ -1,6 +1,36 @@
-<?xml version="1.0"?>
-<cd><profile><studies>Bioinformatik</studies><workStyle>pragmatic</workStyle><usageDurationNumber>2</usageDurationNumber><usageDurationUnit>days</usageDurationUnit><proficiency>Anf&#xE4;nger</proficiency><similiarSystems>Boost, cityhash</similiarSystems><mainPurpose>Bisher f&#xFC;r noch nichts. Hoffe bald f&#xFC;r Development im Berreich genome assembly</mainPurpose><typicalProducts></typicalProducts><durability>temporary</durability><exploringPercentageTime>30</exploringPercentageTime><implementingPercentageTime>30</implementingPercentageTime><understandingPercentageTime>30</understandingPercentageTime><reorganisingPercentageTime>10</reorganisingPercentageTime><viscosity>Bisher viel es mir nicht schwer, wenn der Code einmal lief, ihn nochmal zu &#xE4;ndern</viscosity><workStepUnit>Sehr viel. Aber ich denke wenig Code ist auch nicht immer die beste L&#xF6;sung.&#xD;
-Bei seqAn finde ich es etwas zu wenig, da ich als Anf&#xE4;nger die Schritte nicht sehe die in einer Zeile stecken und es mir dadurch schwer f&#xE4;llt nachzuvollziehen was hier genau passiert.</workStepUnit><hardMentalOperations>Eingentlich nicht. Es braucht sicher etwas &#xDC;bung. Aber daf&#xFC;r sind die guten Assignments sehr Hilfreich.</hardMentalOperations><errorProneness></errorProneness><domainCorrespondence>Das passt gut.</domainCorrespondence><roleExpressiveness>Das f&#xE4;llt mir in der Tat noch recht schwer. Es ist recht schlecht Dokumentiert welche Funktionen welche R&#xFC;ckgabewerte besitzen, so das ich z.B. nicht wei&#xDF;, ob der Iterator bewegt wird oder ein neuer erzeugt, usw.</roleExpressiveness><progressiveEvaluation>Ja</progressiveEvaluation><provisionality>Es ist mir durchaus m&#xF6;glich. </provisionality><prematureCommitment>Gerade seqAn erlaubt es, Entscheidungen sp&#xE4;ter zu f&#xE4;llen, auf Grund der globalen Funktionen, g&#xFC;ltig f&#xFC;r alle daf&#xFC;r gedachten Klassen. Dies ist &#xFC;beraus hilfreich und erlaubt schnelles Testen der Programme und ggf, ver&#xE4;ndern.</prematureCommitment><consistency>Ist mir bisher nicht auf gefallen</consistency><abstractionLevel>Ich finde die machen duraus Sinn und versuchen auch sehr konsistent zu sein.</abstractionLevel><learningStyle>Der Einstieg fiel mir eigentlich recht leicht. Uch habe die Assignments gemacht und viel in die Dokumentation geschaut.&#xD;
+<?xml version="1.0" encoding="UTF-8"?>
+<cd>
+   <profile>
+      <studies>Bioinformatik</studies>
+      <workStyle>pragmatic</workStyle>
+      <usageDurationNumber>2</usageDurationNumber>
+      <usageDurationUnit>days</usageDurationUnit>
+      <proficiency>Anfänger</proficiency>
+      <similiarSystems>Boost, cityhash</similiarSystems>
+      <mainPurpose>Bisher für noch nichts. Hoffe bald für Development im Berreich genome assembly</mainPurpose>
+      <typicalProducts />
+      <durability>temporary</durability>
+      <exploringPercentageTime>30</exploringPercentageTime>
+      <implementingPercentageTime>30</implementingPercentageTime>
+      <understandingPercentageTime>30</understandingPercentageTime>
+      <reorganisingPercentageTime>10</reorganisingPercentageTime>
+      <viscosity>Bisher viel es mir nicht schwer, wenn der Code einmal lief, ihn nochmal zu ändern</viscosity>
+      <workStepUnit>Sehr viel. Aber ich denke wenig Code ist auch nicht immer die beste Lösung.&#xD;
+Bei seqAn finde ich es etwas zu wenig, da ich als Anfänger die Schritte nicht sehe die in einer Zeile stecken und es mir dadurch schwer fällt nachzuvollziehen was hier genau passiert.</workStepUnit>
+      <hardMentalOperations>Eingentlich nicht. Es braucht sicher etwas Übung. Aber dafür sind die guten Assignments sehr Hilfreich.</hardMentalOperations>
+      <errorProneness />
+      <domainCorrespondence>Das passt gut.</domainCorrespondence>
+      <roleExpressiveness>Das fällt mir in der Tat noch recht schwer. Es ist recht schlecht Dokumentiert welche Funktionen welche Rückgabewerte besitzen, so das ich z.B. nicht weiß, ob der Iterator bewegt wird oder ein neuer erzeugt, usw.</roleExpressiveness>
+      <progressiveEvaluation>Ja</progressiveEvaluation>
+      <provisionality>Es ist mir durchaus möglich.</provisionality>
+      <prematureCommitment>Gerade seqAn erlaubt es, Entscheidungen später zu fällen, auf Grund der globalen Funktionen, gültig für alle dafür gedachten Klassen. Dies ist überaus hilfreich und erlaubt schnelles Testen der Programme und ggf, verändern.</prematureCommitment>
+      <consistency>Ist mir bisher nicht auf gefallen</consistency>
+      <abstractionLevel>Ich finde die machen duraus Sinn und versuchen auch sehr konsistent zu sein.</abstractionLevel>
+      <learningStyle>Der Einstieg fiel mir eigentlich recht leicht. Uch habe die Assignments gemacht und viel in die Dokumentation geschaut.&#xD;
 &#xD;
-Die Dokumentation m&#xFC;sste noch etwas verbessert werden:&#xD;
-- In der Suche nach Begriffen zuerst die Klassen anzeigen, sonst sucht man ewig in der Treffer Liste bis man diese findet.  </learningStyle><personal>Um erstmal zu lernen sollte die Dokumentation &#xFC;bersichtlicher gestalltet werden. Es ist schwer danach zu suchen. Au&#xDF;erdem findet man nicht von welchem Datentyp die Funktionen sind.</personal><questionnaire>Anstrengend. Mann muss zu sehr &#xFC;berlegen.</questionnaire></profile></cd>
+Die Dokumentation müsste noch etwas verbessert werden:&#xD;
+- In der Suche nach Begriffen zuerst die Klassen anzeigen, sonst sucht man ewig in der Treffer Liste bis man diese findet.</learningStyle>
+      <personal>Um erstmal zu lernen sollte die Dokumentation übersichtlicher gestalltet werden. Es ist schwer danach zu suchen. Außerdem findet man nicht von welchem Datentyp die Funktionen sind.</personal>
+      <questionnaire>Anstrengend. Mann muss zu sehr überlegen.</questionnaire>
+   </profile>
+</cd>
